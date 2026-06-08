@@ -323,19 +323,19 @@ function describeAutomation(service, text, summary) {
     return {
       category: profile.category,
       summaryZh: translatedSummary,
-      capabilityZh: `${translatedSummary} 具体能调用哪些对象和动作，以授权后搜索到的当前工具 schema 为准。`,
+      capabilityZh: `${service} 的上游说明只写到可通过 Rube MCP 自动化任务，没有列出更细的对象和动作。安装后先让 Claude 查询 Rube 返回的 ${service} 工具列表，再按实际 schema 执行。`,
       audienceZh: profile.audience,
       scenariosZh: profile.scenarios.map(item => item.replaceAll("{service}", service)),
-      usageZh: `安装前建议先确认 ${service} 的实际用途、授权方式和可用工具；确认后可在 Claude Code 中明确说“使用 ${service}”并给出具体任务。`
+      usageZh: `安装后先完成 ${service} 在 Rube/Composio 中的授权，再让 Claude Code 查询当前可用工具；不要假设固定 API 参数。`
     };
   }
   return {
     category: profile.category,
     summaryZh: translatedSummary,
-    capabilityZh: `${translatedSummary} 按源仓库说明，它会先搜索当前工具 schema，再根据授权后的 ${service} 工具执行对应任务。`,
+    capabilityZh: `${service} 这类任务通常围绕${profile.objects}，可做${profile.actions}。执行前会先查询 Rube 当前工具 schema，实际能力取决于你的授权范围和 Rube 返回的工具列表。`,
     audienceZh: profile.audience,
     scenariosZh: profile.scenarios.map(item => item.replaceAll("{service}", service)),
-    usageZh: `安装后先在 Rube/Composio 中授权 ${service}，然后直接说清楚你要处理的对象和动作，例如“查询今天的记录”“创建一个客户”“同步最近的订单”。`
+    usageZh: `安装后先在 Rube/Composio 中授权 ${service}，再直接说明对象和动作，例如查询记录、创建条目、同步最近数据或导出结果。`
   };
 }
 
@@ -610,7 +610,7 @@ function automationProfile(service, text) {
     objects: `${service} 相关资源`,
     actions: "调用、查询或同步",
     audience: `已经在使用 ${service}，并希望把它接入 Claude Code 的用户。`,
-    scenarios: [`原始仓库没有给出足够清晰的中文用途说明`, `需要在私有后台补充 ${service} 的具体对象和场景`, `确认用途后再推荐给普通用户安装`]
+    scenarios: [`让 Claude 查询 ${service} 当前可用的 Rube 工具`, `按返回的 schema 调用 ${service} 完成具体任务`, `把 ${service} 的执行结果整理成摘要或后续待办`]
   };
 }
 
