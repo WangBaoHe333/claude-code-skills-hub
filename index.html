@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claude Code Skills 安装台</title>
+    <meta name="description" content="搜索、选择、批量复制安装命令，并导出 ccswitch 可导入的 skills ZIP。" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="control-panel" aria-label="筛选和批量操作">
+        <section class="brand-block">
+          <div class="brand-mark" aria-hidden="true">CC</div>
+          <div>
+            <h1 data-i18n="brandTitle">Skills 安装台</h1>
+            <p data-i18n="brandSubtitle">搜索、勾选、复制命令，或导出 ccswitch ZIP。</p>
+          </div>
+        </section>
+
+        <section class="language-box" aria-label="语言">
+          <button id="lang-zh" class="soft-button is-active" type="button">中文</button>
+          <button id="lang-en" class="soft-button" type="button">English</button>
+        </section>
+
+        <section class="stats" aria-label="数据统计">
+          <div><b id="stat-total">0</b><span data-i18n="statTotal">全库</span></div>
+          <div><b id="stat-selected">0</b><span data-i18n="statSelected">已选</span></div>
+          <div><b id="stat-repos">4</b><span data-i18n="statRepos">仓库</span></div>
+        </section>
+
+        <section class="search-stack" aria-label="搜索筛选">
+          <label class="field-label" for="search-input" data-i18n="searchLabel">搜索</label>
+          <div class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="search-input" type="search" placeholder="名称、用途、场景、仓库..." autocomplete="off" data-i18n-placeholder="searchPlaceholder" />
+          </div>
+
+          <label class="field-label" for="repo-filter" data-i18n="repoLabel">仓库</label>
+          <select id="repo-filter" aria-label="按仓库筛选">
+            <option value="all" data-i18n="allRepos">全部仓库</option>
+          </select>
+
+          <label class="field-label" for="tag-filter" data-i18n="tagLabel">标签</label>
+          <select id="tag-filter" aria-label="按标签筛选">
+            <option value="all" data-i18n="allTags">全部标签</option>
+          </select>
+
+          <label class="field-label" for="sort-filter" data-i18n="sortLabel">排序</label>
+          <select id="sort-filter" aria-label="排序方式">
+            <option value="common" data-i18n="sortCommon">常用优先</option>
+            <option value="selected" data-i18n="sortSelected">已选优先</option>
+            <option value="name" data-i18n="sortName">名称 A-Z</option>
+          </select>
+        </section>
+
+        <section class="selection-box" aria-label="选择操作">
+          <div>
+            <strong id="result-count">0 个结果</strong>
+            <span id="selection-hint">先勾选，再导出或复制命令</span>
+          </div>
+          <button id="select-visible" class="soft-button" type="button">选中筛选结果</button>
+          <button id="select-all" class="soft-button" type="button">全选全库</button>
+          <button id="toggle-checked-only" class="soft-button" type="button" data-i18n="checkedOnly">只看已选</button>
+          <button id="clear-selection" class="soft-button muted" type="button" data-i18n="clearSelection">清空选择</button>
+        </section>
+
+        <section class="export-box" aria-label="导出和安装">
+          <button id="copy-selected" class="primary-button" type="button" data-i18n="copySelected">复制已选安装命令</button>
+          <button id="copy-all-install" class="primary-button danger" type="button" data-i18n="copyAllInstall">复制全库安装命令</button>
+          <button id="download-zip" class="primary-button dark" type="button" data-i18n="downloadZip">导出 ccswitch ZIP</button>
+        </section>
+      </aside>
+
+      <section class="catalog-panel" aria-label="Skills 列表">
+        <div id="skills-list" class="skills-list"></div>
+      </section>
+
+      <aside id="detail-panel" class="detail-panel" aria-live="polite">
+        <div class="detail-empty">
+          <h2 data-i18n="emptyTitle">选择一个 skill</h2>
+          <p data-i18n="emptyBody">右侧固定显示当前 skill 的核心说明和操作按钮。</p>
+        </div>
+      </aside>
+    </main>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>

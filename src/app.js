@@ -1,0 +1,868 @@
+const state = {
+  skills: [],
+  filtered: [],
+  selectedId: null,
+  checked: new Set(),
+  checkedOnly: false,
+  lang: localStorage.getItem("ccskills-lang") === "en" ? "en" : "zh",
+  query: "",
+  repo: "all",
+  tag: "all",
+  sort: "common"
+};
+
+const els = {
+  total: document.querySelector("#stat-total"),
+  selected: document.querySelector("#stat-selected"),
+  repos: document.querySelector("#stat-repos"),
+  search: document.querySelector("#search-input"),
+  repoFilter: document.querySelector("#repo-filter"),
+  tagFilter: document.querySelector("#tag-filter"),
+  sortFilter: document.querySelector("#sort-filter"),
+  resultCount: document.querySelector("#result-count"),
+  selectionHint: document.querySelector("#selection-hint"),
+  list: document.querySelector("#skills-list"),
+  detail: document.querySelector("#detail-panel"),
+  selectVisible: document.querySelector("#select-visible"),
+  selectAll: document.querySelector("#select-all"),
+  clearSelection: document.querySelector("#clear-selection"),
+  copySelected: document.querySelector("#copy-selected"),
+  copyAllInstall: document.querySelector("#copy-all-install"),
+  downloadZip: document.querySelector("#download-zip"),
+  checkedOnly: document.querySelector("#toggle-checked-only"),
+  langZh: document.querySelector("#lang-zh"),
+  langEn: document.querySelector("#lang-en"),
+  toast: document.querySelector("#toast")
+};
+
+const i18n = {
+  zh: {
+    brandTitle: "Skills 安装台",
+    brandSubtitle: "搜索、勾选、复制命令，或导出 ccswitch ZIP。",
+    statTotal: "全库",
+    statSelected: "已选",
+    statRepos: "仓库",
+    searchLabel: "搜索",
+    searchPlaceholder: "名称、用途、场景、仓库...",
+    repoLabel: "仓库",
+    allRepos: "全部仓库",
+    tagLabel: "标签",
+    allTags: "全部标签",
+    sortLabel: "排序",
+    sortCommon: "常用优先",
+    sortSelected: "已选优先",
+    sortName: "名称 A-Z",
+    checkedOnly: "只看已选",
+    clearSelection: "清空选择",
+    copySelected: "复制已选安装命令",
+    copyAllInstall: "复制全库安装命令",
+    downloadZip: "导出 ccswitch ZIP",
+    emptyTitle: "选择一个 skill",
+    emptyBody: "右侧固定显示当前 skill 的核心说明和操作按钮。",
+    noSelectedTitle: "没有选中的 skill",
+    noSelectedBody: "请调整搜索或筛选条件。",
+    noResults: "没有匹配结果。换个关键词，或取消“只看已选”。",
+    addToBatch: "加入批量选择",
+    removeFromBatch: "从批量选择中移除",
+    copyInstall: "复制安装命令",
+    exportSingleZip: "导出单个 ZIP",
+    capability: "能做什么",
+    audience: "适合谁",
+    scenarios: "典型场景",
+    installPath: "安装位置",
+    copy: "复制",
+    selectedHintEmpty: "先勾选，再导出或复制命令",
+    selectedHint: count => `已选择 ${formatNumber(count)} 个，可复制命令或导出 ccswitch ZIP`,
+    resultCount: count => `${formatNumber(count)} 个结果`,
+    checkedCount: count => `${formatNumber(count)} 个已选`,
+    selectVisible: count => `选中筛选结果 ${formatNumber(count)}`,
+    checkedVisible: count => `已显示全部已选 ${formatNumber(count)}`,
+    selectAll: count => `全选全库 ${formatNumber(count)}`,
+    selectedVisibleToast: count => `已选中当前 ${formatNumber(count)} 个结果`,
+    selectedAllToast: "已全选全库 skills",
+    clearToast: "已清空选择",
+    needSelect: "请先选择至少一个 skill",
+    copiedSingle: "已复制单个安装命令",
+    copiedBulk: count => `已复制 ${formatNumber(count)} 个 skills 的批量安装命令`,
+    zipDone: count => `已导出 ${formatNumber(count)} 个 skill 文件夹 ZIP`,
+    loadFailed: message => `数据加载失败：${message}`
+  },
+  en: {
+    brandTitle: "Skills Console",
+    brandSubtitle: "Search, select, copy install commands, or export a ccswitch ZIP.",
+    statTotal: "Skills",
+    statSelected: "Selected",
+    statRepos: "Repos",
+    searchLabel: "Search",
+    searchPlaceholder: "Name, purpose, scenario, repo...",
+    repoLabel: "Repository",
+    allRepos: "All repositories",
+    tagLabel: "Tag",
+    allTags: "All tags",
+    sortLabel: "Sort",
+    sortCommon: "Common first",
+    sortSelected: "Selected first",
+    sortName: "Name A-Z",
+    checkedOnly: "Selected only",
+    clearSelection: "Clear",
+    copySelected: "Copy selected install command",
+    copyAllInstall: "Copy all install commands",
+    downloadZip: "Export ccswitch ZIP",
+    emptyTitle: "Select a skill",
+    emptyBody: "The fixed detail panel shows the current skill summary and actions.",
+    noSelectedTitle: "No skill selected",
+    noSelectedBody: "Adjust search or filters.",
+    noResults: "No matching results. Try another keyword or turn off Selected only.",
+    addToBatch: "Add to batch",
+    removeFromBatch: "Remove from batch",
+    copyInstall: "Copy install command",
+    exportSingleZip: "Export single ZIP",
+    capability: "What it does",
+    audience: "Best for",
+    scenarios: "Use cases",
+    installPath: "Install path",
+    copy: "Copy",
+    selectedHintEmpty: "Select skills, then export or copy commands",
+    selectedHint: count => `${formatNumber(count)} selected. Copy commands or export a ccswitch ZIP.`,
+    resultCount: count => `${formatNumber(count)} results`,
+    checkedCount: count => `${formatNumber(count)} selected`,
+    selectVisible: count => `Select filtered ${formatNumber(count)}`,
+    checkedVisible: count => `Showing ${formatNumber(count)} selected`,
+    selectAll: count => `Select all ${formatNumber(count)}`,
+    selectedVisibleToast: count => `Selected ${formatNumber(count)} current results`,
+    selectedAllToast: "Selected all skills",
+    clearToast: "Selection cleared",
+    needSelect: "Select at least one skill first",
+    copiedSingle: "Copied single install command",
+    copiedBulk: count => `Copied batch install command for ${formatNumber(count)} skills`,
+    zipDone: count => `Exported ${formatNumber(count)} skill folders as ZIP`,
+    loadFailed: message => `Failed to load data: ${message}`
+  }
+};
+
+async function init() {
+  try {
+    const response = await fetch(assetUrl("data/skills.json"));
+    const payload = await response.json();
+    state.skills = (payload.skills || []).map(normalizeSkill);
+    state.selectedId = state.skills[0]?.id || null;
+    populateFilters();
+    bindEvents();
+    applyLanguage();
+    applyFilters();
+  } catch (error) {
+    els.list.innerHTML = `<div class="empty-results">${escapeHtml(t("loadFailed", error.message))}</div>`;
+  }
+}
+
+function bindEvents() {
+  els.search.addEventListener("input", event => {
+    state.query = event.target.value.trim().toLowerCase();
+    applyFilters();
+  });
+
+  els.repoFilter.addEventListener("change", event => {
+    state.repo = event.target.value;
+    applyFilters();
+  });
+
+  els.tagFilter.addEventListener("change", event => {
+    state.tag = event.target.value;
+    applyFilters();
+  });
+
+  els.sortFilter.addEventListener("change", event => {
+    state.sort = event.target.value;
+    applyFilters();
+  });
+
+  els.selectVisible.addEventListener("click", () => {
+    state.filtered.forEach(skill => state.checked.add(skill.id));
+    updateSelection();
+    renderList();
+    showToast(t("selectedVisibleToast", state.filtered.length));
+  });
+
+  els.selectAll.addEventListener("click", () => {
+    state.skills.forEach(skill => state.checked.add(skill.id));
+    updateSelection();
+    renderList();
+    showToast(t("selectedAllToast"));
+  });
+
+  els.clearSelection.addEventListener("click", () => {
+    state.checked.clear();
+    state.checkedOnly = false;
+    updateSelection();
+    applyFilters();
+    showToast(t("clearToast"));
+  });
+
+  els.checkedOnly.addEventListener("click", () => {
+    state.checkedOnly = !state.checkedOnly;
+    els.checkedOnly.classList.toggle("is-active", state.checkedOnly);
+    applyFilters();
+  });
+
+  els.langZh.addEventListener("click", () => setLanguage("zh"));
+  els.langEn.addEventListener("click", () => setLanguage("en"));
+
+  els.copySelected.addEventListener("click", () => copyBulkInstall(getCheckedSkills()));
+  els.copyAllInstall.addEventListener("click", () => copyBulkInstall(state.skills));
+  els.downloadZip.addEventListener("click", () => downloadCcsZip(getCheckedSkills()));
+}
+
+function populateFilters() {
+  const repos = [...new Set(state.skills.map(skill => skill.source.repo))].sort();
+  const tags = [...new Set(state.skills.flatMap(skill => skill.tags || []))].sort();
+
+  els.repoFilter.innerHTML = `<option value="all">${escapeHtml(t("allRepos"))}</option>`;
+  els.tagFilter.innerHTML = `<option value="all">${escapeHtml(t("allTags"))}</option>`;
+  repos.forEach(repo => els.repoFilter.append(new Option(repoLabel(repo), repo)));
+  tags.forEach(tag => els.tagFilter.append(new Option(tagLabel(tag), tag)));
+  els.repoFilter.value = state.repo;
+  els.tagFilter.value = state.tag;
+
+  els.total.textContent = formatNumber(state.skills.length);
+  els.repos.textContent = formatNumber(repos.length);
+}
+
+function applyFilters() {
+  const query = state.query;
+
+  state.filtered = state.checkedOnly
+    ? state.skills.filter(skill => state.checked.has(skill.id))
+    : state.skills.filter(skill => {
+      const matchesRepo = state.repo === "all" || skill.source.repo === state.repo;
+      const matchesTag = state.tag === "all" || (skill.tags || []).includes(state.tag);
+      const haystack = [
+        skill.name,
+        skill.displayName,
+        skill.summary,
+        skill.summaryZh,
+        skill.summaryEn,
+        skill.capabilityZh,
+        skill.capabilityEn,
+        skill.audienceZh,
+        skill.audienceEn,
+        skill.usageZh,
+        skill.usageEn,
+        skill.source.repo,
+        skill.source.path,
+        ...(skill.scenariosZh || []),
+        ...(skill.scenariosEn || []),
+        ...(skill.tags || [])
+      ].join(" ").toLowerCase();
+      return matchesRepo && matchesTag && (!query || haystack.includes(query));
+    });
+
+  sortFiltered();
+
+  if (!state.filtered.some(skill => skill.id === state.selectedId)) {
+    state.selectedId = state.filtered[0]?.id || null;
+  }
+
+  renderList();
+  renderDetail();
+  updateSelection();
+}
+
+function renderList() {
+  els.resultCount.textContent = state.checkedOnly
+    ? t("checkedCount", state.filtered.length)
+    : t("resultCount", state.filtered.length);
+  els.selectVisible.textContent = state.checkedOnly
+    ? t("checkedVisible", state.filtered.length)
+    : t("selectVisible", state.filtered.length);
+  els.selectAll.textContent = t("selectAll", state.skills.length);
+
+  if (state.filtered.length === 0) {
+    els.list.innerHTML = `<div class="empty-results">${escapeHtml(t("noResults"))}</div>`;
+    return;
+  }
+
+  els.list.innerHTML = state.filtered.map(skill => {
+    const checked = state.checked.has(skill.id);
+    return `
+      <div class="skill-row ${skill.id === state.selectedId ? "is-active" : ""} ${checked ? "is-checked" : ""}" data-id="${escapeAttribute(skill.id)}">
+        <label class="check-wrap" aria-label="选择 ${escapeAttribute(skill.displayName)}">
+          <input class="skill-check" type="checkbox" ${checked ? "checked" : ""} />
+          <span></span>
+        </label>
+        <button class="row-main" type="button">
+          <span class="row-title">${escapeHtml(skill.displayName)}</span>
+          <span class="row-summary">${escapeHtml(skillText(skill, "summary"))}</span>
+          <span class="row-meta">
+            <span class="pill">${escapeHtml(repoLabel(skill.source.repo))}</span>
+            ${(skill.tags || []).slice(0, 3).map(tag => `<span class="pill">${escapeHtml(tagLabel(tag))}</span>`).join("")}
+          </span>
+        </button>
+        <button class="quick-button" type="button">${escapeHtml(t("copy"))}</button>
+      </div>
+    `;
+  }).join("");
+
+  els.list.querySelectorAll(".skill-row").forEach(row => {
+    const id = row.dataset.id;
+    row.querySelector(".row-main").addEventListener("click", () => {
+      state.selectedId = id;
+      renderList();
+      renderDetail();
+    });
+    row.querySelector(".skill-check").addEventListener("change", event => {
+      if (event.target.checked) state.checked.add(id);
+      else state.checked.delete(id);
+      updateSelection();
+      row.classList.toggle("is-checked", event.target.checked);
+    });
+    row.querySelector(".quick-button").addEventListener("click", () => {
+      const skill = state.skills.find(item => item.id === id);
+      copyBulkInstall([skill]);
+    });
+  });
+}
+
+function sortFiltered() {
+  const comparators = {
+    common: (a, b) => commonScore(b) - commonScore(a) || a.displayName.localeCompare(b.displayName),
+    selected: (a, b) => Number(state.checked.has(b.id)) - Number(state.checked.has(a.id)) || commonScore(b) - commonScore(a),
+    name: (a, b) => a.displayName.localeCompare(b.displayName)
+  };
+  state.filtered.sort(comparators[state.sort] || comparators.common);
+}
+
+function commonScore(skill) {
+  const name = `${skill.name} ${skill.displayName} ${skill.category || ""} ${(skill.tags || []).join(" ")}`.toLowerCase();
+  const text = `${name} ${skill.summaryZh || ""} ${skill.capabilityZh || ""}`.toLowerCase();
+  const categoryScore = [
+    [["pdf", "docx", "word", "xlsx", "spreadsheet", "ppt", "slide", "markdown"], 1000],
+    [["browser", "playwright", "web"], 920],
+    [["github", "gitlab", "jira", "linear"], 880],
+    [["gmail", "email", "calendar", "slack", "notion"], 850],
+    [["airtable", "sheets", "drive", "dropbox"], 820],
+    [["figma", "canva", "image", "youtube", "transcript"], 760],
+    [["quickbooks", "stripe", "shopify", "hubspot", "salesforce"], 700]
+  ].find(([needles]) => needles.some(needle => text.includes(needle)))?.[1] || 420;
+  const officialScore = skill.source.repo === "anthropics/skills" ? 120 : 0;
+  const curatedScore = skill.source.repo === "JimLiu/baoyu-skills" ? 70 : 0;
+  const selectedScore = state.checked.has(skill.id) ? 80 : 0;
+  const automationPenalty = name.includes("automation") ? -120 : 0;
+  const obscurePenalty = name.startsWith("-") ? -120 : 0;
+  return categoryScore + officialScore + curatedScore + selectedScore + automationPenalty + obscurePenalty;
+}
+
+function renderDetail() {
+  const skill = getSelectedSkill();
+
+  if (!skill) {
+    els.detail.innerHTML = `
+      <div class="detail-empty">
+        <h2>${escapeHtml(t("noSelectedTitle"))}</h2>
+        <p>${escapeHtml(t("noSelectedBody"))}</p>
+      </div>
+    `;
+    return;
+  }
+
+  const checked = state.checked.has(skill.id);
+  els.detail.innerHTML = `
+    <div class="detail-actions">
+      <button id="detail-check" class="primary-button ${checked ? "alt" : ""}" type="button">${escapeHtml(checked ? t("removeFromBatch") : t("addToBatch"))}</button>
+      <button id="detail-install" class="primary-button dark" type="button">${escapeHtml(t("copyInstall"))}</button>
+      <button id="detail-zip" class="primary-button" type="button">${escapeHtml(t("exportSingleZip"))}</button>
+    </div>
+    <header class="detail-title">
+      <span>${escapeHtml(repoLabel(skill.source.repo))}</span>
+      <h2>${escapeHtml(skill.displayName)}</h2>
+      <p>${escapeHtml(skillText(skill, "summary"))}</p>
+    </header>
+    <div class="detail-grid">
+      <section class="detail-section">
+        <h3>${escapeHtml(t("capability"))}</h3>
+        <p>${escapeHtml(skillText(skill, "capability"))}</p>
+      </section>
+      <section class="detail-section">
+        <h3>${escapeHtml(t("audience"))}</h3>
+        <p>${escapeHtml(skillText(skill, "audience"))}</p>
+      </section>
+      <section class="detail-section wide">
+        <h3>${escapeHtml(t("scenarios"))}</h3>
+        <ul>${skillScenarios(skill).map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+      </section>
+      <section class="detail-section wide">
+        <h3>${escapeHtml(t("installPath"))}</h3>
+        <p><code>~/.claude/skills/${escapeHtml(skill.folderName)}</code></p>
+      </section>
+    </div>
+  `;
+
+  document.querySelector("#detail-check").addEventListener("click", () => {
+    if (state.checked.has(skill.id)) state.checked.delete(skill.id);
+    else state.checked.add(skill.id);
+    updateSelection();
+    renderList();
+    renderDetail();
+  });
+
+  document.querySelector("#detail-install").addEventListener("click", () => copyBulkInstall([skill]));
+  document.querySelector("#detail-zip").addEventListener("click", () => downloadCcsZip([skill]));
+}
+
+function updateSelection() {
+  const count = state.checked.size;
+  els.selected.textContent = formatNumber(count);
+  els.selectionHint.textContent = count > 0 ? t("selectedHint", count) : t("selectedHintEmpty");
+  const disabled = count === 0;
+  els.copySelected.disabled = disabled;
+  els.downloadZip.disabled = disabled;
+}
+
+function setLanguage(lang) {
+  if (!["zh", "en"].includes(lang) || state.lang === lang) return;
+  state.lang = lang;
+  localStorage.setItem("ccskills-lang", lang);
+  applyLanguage();
+  populateFilters();
+  applyFilters();
+}
+
+function applyLanguage() {
+  document.documentElement.lang = state.lang === "zh" ? "zh-CN" : "en";
+  els.langZh.classList.toggle("is-active", state.lang === "zh");
+  els.langEn.classList.toggle("is-active", state.lang === "en");
+  document.querySelectorAll("[data-i18n]").forEach(node => {
+    node.textContent = t(node.dataset.i18n);
+  });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(node => {
+    node.placeholder = t(node.dataset.i18nPlaceholder);
+  });
+  els.checkedOnly.classList.toggle("is-active", state.checkedOnly);
+  updateSelection();
+}
+
+function t(key, value) {
+  const entry = (i18n[state.lang] || i18n.zh)[key] ?? i18n.zh[key] ?? key;
+  return typeof entry === "function" ? entry(value) : entry;
+}
+
+function formatNumber(value) {
+  return Number(value || 0).toLocaleString(state.lang === "zh" ? "zh-CN" : "en-US");
+}
+
+async function copyBulkInstall(skills) {
+  if (!skills.length) return showToast(t("needSelect"));
+  await navigator.clipboard.writeText(generateBulkInstall(skills));
+  showToast(skills.length === 1 ? t("copiedSingle") : t("copiedBulk", skills.length));
+}
+
+async function downloadCcsZip(skills) {
+  if (!skills.length) return showToast(t("needSelect"));
+  const files = {};
+
+  for (const skill of skills) {
+    const packageFiles = await loadSkillFiles(skill);
+    files[`${skill.folderName}/`] = new Uint8Array();
+    for (const file of packageFiles) {
+      const directPath = sanitizeZipPath(`${skill.folderName}/${file.path}`);
+      files[directPath] = decodePackagedFile(file);
+    }
+  }
+
+  const blob = await makeZip(files);
+  const filename = skills.length === 1 ? `${skills[0].folderName}.zip` : "ccswitch-skills-batch.zip";
+  downloadBlob(filename, blob, "application/zip");
+  showToast(t("zipDone", skills.length));
+}
+
+async function loadSkillFiles(skill) {
+  try {
+    if (!skill.packageUrl) throw new Error("missing packageUrl");
+    const response = await fetch(assetUrl(skill.packageUrl));
+    if (!response.ok) throw new Error(`package ${response.status}`);
+    const payload = await response.json();
+    if (Array.isArray(payload.files) && payload.files.length > 0) return payload.files;
+  } catch (error) {
+    console.warn(`使用兜底 SKILL.md：${skill.displayName}`, error);
+  }
+  return [{ path: "SKILL.md", encoding: "utf8", content: fallbackSkillMd(skill) }];
+}
+
+function fallbackSkillMd(skill) {
+  return [
+    "---",
+    `name: ${skill.folderName}`,
+    `description: ${skill.summaryZh}`,
+    "---",
+    "",
+    `# ${skill.displayName}`,
+    "",
+    skill.capabilityZh || skill.summaryZh,
+    "",
+    "## 使用场景",
+    ...(skill.scenariosZh || []).map(item => `- ${item}`)
+  ].join("\n");
+}
+
+function decodePackagedFile(file) {
+  if (file.encoding === "base64") return base64ToBytes(file.content);
+  return file.content || "";
+}
+
+function assetUrl(path) {
+  const base = import.meta.env.BASE_URL || "/";
+  const cleanBase = base.endsWith("/") ? base : `${base}/`;
+  const cleanPath = String(path || "").replace(/^\/+/, "");
+  return `${cleanBase}${cleanPath}`;
+}
+
+function sanitizeZipPath(path) {
+  return path
+    .split("/")
+    .filter(part => part && part !== "." && part !== "..")
+    .join("/");
+}
+
+function generateBulkInstall(skills) {
+  const groups = new Map();
+  skills.forEach(skill => {
+    if (!groups.has(skill.source.repo)) groups.set(skill.source.repo, []);
+    groups.get(skill.source.repo).push(skill);
+  });
+
+  const lines = [
+    "mkdir -p \"$HOME/.claude/skills\"",
+    "workdir=\"$(mktemp -d)\"",
+    "trap 'rm -rf \"$workdir\"' EXIT"
+  ];
+
+  for (const [repo, items] of groups) {
+    const repoDir = repo.replaceAll("/", "__");
+    lines.push("");
+    lines.push(`# ${repo}`);
+    lines.push(`git clone --depth 1 ${shellQuote(`https://github.com/${repo}.git`)} "$workdir/${repoDir}"`);
+    items.forEach(skill => {
+      lines.push(`rm -rf "$HOME/.claude/skills/${skill.folderName}"`);
+      lines.push(`cp -R "$workdir/${repoDir}/${skill.source.path}" "$HOME/.claude/skills/${skill.folderName}"`);
+    });
+  }
+
+  return lines.join("\n");
+}
+
+function getSelectedSkill() {
+  return state.skills.find(skill => skill.id === state.selectedId);
+}
+
+function getCheckedSkills() {
+  return state.skills.filter(skill => state.checked.has(skill.id));
+}
+
+function normalizeSkill(skill) {
+  const displayName = cleanName(skill.name);
+  const summaryZh = skill.summaryZh || chineseSummary(skill.summary, displayName);
+  const summaryEn = englishSummary(skill.summary, displayName);
+  return {
+    ...skill,
+    displayName,
+    folderName: folderName(displayName),
+    sourceType: skill.source?.type || "unknown",
+    sourceStars: Number(skill.source?.stars || 0),
+    summaryZh,
+    summaryEn,
+    capabilityZh: skill.capabilityZh || capabilityText(skill, displayName, summaryZh),
+    capabilityEn: skill.capabilityEn || englishCapability(skill, displayName, summaryEn),
+    audienceZh: skill.audienceZh || chineseAudience(skill.audience, displayName),
+    audienceEn: skill.audienceEn || englishAudience(skill.audience, displayName),
+    scenariosZh: skill.scenariosZh || chineseScenarios(skill.scenarios, displayName, summaryZh),
+    scenariosEn: skill.scenariosEn || englishScenarios(skill.scenarios, displayName, summaryEn),
+    usageEn: skill.usageEn || `Install the skill, then ask Claude Code to use ${displayName} for the specific task, file, or service you want to work with.`
+  };
+}
+
+function skillText(skill, field) {
+  if (state.lang === "en") {
+    const en = skill[`${field}En`];
+    if (en) return en;
+  }
+  return skill[`${field}Zh`] || skill[field] || "";
+}
+
+function skillScenarios(skill) {
+  const scenarios = state.lang === "en" ? skill.scenariosEn : skill.scenariosZh;
+  return Array.isArray(scenarios) && scenarios.length ? scenarios : [skillText(skill, "summary")];
+}
+
+function cleanName(name) {
+  return String(name || "skill")
+    .replace(/^-+/, "")
+    .replace(/-automation$/i, "")
+    .replace(/\s+automation$/i, "")
+    .replace(/[-_]+/g, " ")
+    .trim() || "skill";
+}
+
+function folderName(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "skill";
+}
+
+function chineseSummary(summary, name) {
+  const text = String(summary || "").trim();
+  const automate = text.match(/^Automate\s+(.+?)\s+tasks\s+via\s+Rube MCP\s+\(Composio\)\./i);
+  if (automate) return `自动化 ${cleanName(automate[1])} 的常见任务，可在 Claude Code 中连接相关服务并执行查询、创建、更新等操作。`;
+  if (/^Create, edit,/.test(text)) return "创建、编辑和整理相关文件，让 Claude Code 能处理更完整的办公和内容工作流。";
+  if (/download|transcript|subtitle/i.test(text)) return "下载和整理视频字幕、章节、封面等内容，适合做笔记、摘要和知识库整理。";
+  if (/markdown|html/i.test(text)) return "把 Markdown 内容转换成可发布的 HTML 页面，适合文章排版和内容发布。";
+  if (/browser|web/i.test(text)) return "控制浏览器或网页流程，适合本地页面验证、网页操作和自动化测试。";
+  if (/^[\x00-\x7F]+$/.test(text)) return `${name} 相关能力扩展，适合把对应工具或流程接入 Claude Code。`;
+  return text || `${name} 相关能力扩展。`;
+}
+
+function englishSummary(summary, name) {
+  const text = String(summary || "").replace(/\s+/g, " ").trim();
+  if (text && isMostlyEnglish(text)) return text;
+  return `${name} is a Claude Code skill for connecting the related tool or workflow.`;
+}
+
+function capabilityText(skill, name, summary) {
+  if ((skill.tags || []).includes("automation")) return `${summary} 你可以把它理解成一个面向 ${name} 的自动化连接器。`;
+  if ((skill.tags || []).includes("documents")) return `${summary} 它主要帮助你减少手工打开、复制、整理文档的时间。`;
+  return summary;
+}
+
+function englishCapability(skill, name, summary) {
+  if ((skill.tags || []).includes("automation")) {
+    return `${summary} It acts as an automation connector for ${name}, usually through Composio / Rube when the source skill uses that integration.`;
+  }
+  if ((skill.tags || []).includes("documents")) {
+    return `${summary} It helps Claude Code read, create, edit, or organize files with less manual copying.`;
+  }
+  return summary;
+}
+
+function chineseAudience(audience, name) {
+  const text = String(audience || "");
+  if (/财务|运营|团队|用户|开发者/.test(text)) return text;
+  if (/finance|invoice|expense/i.test(text)) return "财务、运营、创业团队，以及需要自动处理账单和费用流程的人。";
+  if (/document|pdf|docx/i.test(text)) return "需要处理合同、报告、论文、发票或知识资料的人。";
+  return `需要使用 ${name} 或相关工具，并希望减少重复操作的 Claude Code 用户。`;
+}
+
+function englishAudience(audience, name) {
+  const text = String(audience || "").replace(/\s+/g, " ").trim();
+  if (text && isMostlyEnglish(text)) return text;
+  if (/pdf|doc|document/i.test(`${name} ${text}`)) return "People who need Claude Code to work with documents, reports, contracts, or knowledge files.";
+  if (/browser|web|test/i.test(`${name} ${text}`)) return "Developers, testers, and product teams who need to inspect or automate web workflows.";
+  return `Claude Code users who already use ${name} or the related workflow and want to reduce repetitive manual work.`;
+}
+
+function chineseScenarios(scenarios, name, summary) {
+  const base = Array.isArray(scenarios) ? scenarios : [];
+  const zh = base
+    .map(item => String(item || ""))
+    .filter(item => item && !/^[\x00-\x7F\s.,:;()/-]+$/.test(item))
+    .slice(0, 3);
+  while (zh.length < 3) {
+    const candidates = [
+      `批量处理 ${name} 相关任务`,
+      "把外部工具接入 Claude Code 工作流",
+      summary
+    ];
+    zh.push(candidates[zh.length]);
+  }
+  return zh.slice(0, 3);
+}
+
+function englishScenarios(scenarios, name, summary) {
+  const base = Array.isArray(scenarios) ? scenarios : [];
+  const en = base
+    .map(item => String(item || "").replace(/\s+/g, " ").trim())
+    .filter(item => item && isMostlyEnglish(item))
+    .slice(0, 3);
+  while (en.length < 3) {
+    const candidates = [
+      `Use ${name} for related Claude Code tasks`,
+      "Connect an external tool or workflow to Claude Code",
+      summary
+    ];
+    en.push(candidates[en.length]);
+  }
+  return en.slice(0, 3);
+}
+
+function isMostlyEnglish(value) {
+  const text = String(value || "").trim();
+  if (!text) return false;
+  const ascii = text.replace(/[^\x00-\x7F]/g, "").length;
+  return ascii / text.length > 0.88;
+}
+
+function repoLabel(repo) {
+  const labels = {
+    zh: {
+      "ComposioHQ/awesome-claude-skills": "Composio 自动化库",
+      "JimLiu/baoyu-skills": "宝玉 Skills",
+      "anthropics/skills": "Anthropic 官方",
+      "stellarlinkco/myclaude": "myclaude 配置"
+    },
+    en: {
+      "ComposioHQ/awesome-claude-skills": "Composio automation",
+      "JimLiu/baoyu-skills": "Baoyu Skills",
+      "anthropics/skills": "Anthropic official",
+      "stellarlinkco/myclaude": "myclaude config"
+    }
+  };
+  return labels[state.lang]?.[repo] || repo;
+}
+
+function tagLabel(tag) {
+  const labels = {
+    zh: {
+      skill: "通用",
+      automation: "自动化",
+      documents: "文档",
+      spreadsheets: "表格",
+      presentations: "幻灯片",
+      browser: "浏览器",
+      testing: "测试",
+      image: "图片",
+      video: "视频",
+      api: "API",
+      github: "GitHub"
+    },
+    en: {
+      skill: "Skill",
+      automation: "Automation",
+      documents: "Documents",
+      spreadsheets: "Spreadsheets",
+      presentations: "Presentations",
+      browser: "Browser",
+      testing: "Testing",
+      image: "Image",
+      video: "Video",
+      api: "API",
+      github: "GitHub"
+    }
+  };
+  return labels[state.lang]?.[tag] || tag;
+}
+
+function downloadBlob(filename, content, type) {
+  const blob = content instanceof Blob ? content : new Blob([content], { type });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
+async function makeZip(files) {
+  const encoder = new TextEncoder();
+  const fileRecords = [];
+  let offset = 0;
+  const chunks = [];
+
+  for (const [name, content] of Object.entries(files)) {
+    const nameBytes = encoder.encode(name);
+    const data = toBytes(content, encoder);
+    const crc = crc32(data);
+    const isDirectory = name.endsWith("/");
+    const local = concatBytes(
+      u32(0x04034b50), u16(20), u16(0), u16(0), u16(0), u16(0),
+      u32(crc), u32(data.length), u32(data.length), u16(nameBytes.length), u16(0),
+      nameBytes, data
+    );
+    chunks.push(local);
+    fileRecords.push({ nameBytes, crc, size: data.length, offset, isDirectory });
+    offset += local.length;
+  }
+
+  const central = [];
+  for (const record of fileRecords) {
+    central.push(concatBytes(
+      u32(0x02014b50), u16(20), u16(20), u16(0), u16(0), u16(0), u16(0),
+      u32(record.crc), u32(record.size), u32(record.size), u16(record.nameBytes.length),
+      u16(0), u16(0), u16(0), u16(0), u32(record.isDirectory ? 0x10 : 0), u32(record.offset), record.nameBytes
+    ));
+  }
+  const centralBlob = concatBytes(...central);
+  const end = concatBytes(
+    u32(0x06054b50), u16(0), u16(0), u16(fileRecords.length), u16(fileRecords.length),
+    u32(centralBlob.length), u32(offset), u16(0)
+  );
+
+  return new Blob([concatBytes(...chunks, centralBlob, end)], { type: "application/zip" });
+}
+
+function toBytes(content, encoder) {
+  if (typeof content === "string") return encoder.encode(content);
+  if (content instanceof Uint8Array) return content;
+  return new Uint8Array(content);
+}
+
+function base64ToBytes(value = "") {
+  const binary = atob(value);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i += 1) bytes[i] = binary.charCodeAt(i);
+  return bytes;
+}
+
+function crc32(bytes) {
+  let crc = -1;
+  for (const byte of bytes) {
+    crc ^= byte;
+    for (let i = 0; i < 8; i += 1) crc = (crc >>> 1) ^ (0xedb88320 & -(crc & 1));
+  }
+  return (crc ^ -1) >>> 0;
+}
+
+function u16(value) {
+  const bytes = new Uint8Array(2);
+  new DataView(bytes.buffer).setUint16(0, value, true);
+  return bytes;
+}
+
+function u32(value) {
+  const bytes = new Uint8Array(4);
+  new DataView(bytes.buffer).setUint32(0, value, true);
+  return bytes;
+}
+
+function concatBytes(...parts) {
+  const total = parts.reduce((sum, part) => sum + part.length, 0);
+  const result = new Uint8Array(total);
+  let offset = 0;
+  parts.forEach(part => {
+    result.set(part, offset);
+    offset += part.length;
+  });
+  return result;
+}
+
+function shellQuote(value) {
+  return `'${String(value).replaceAll("'", "'\\''")}'`;
+}
+
+function showToast(message) {
+  els.toast.textContent = message;
+  els.toast.classList.add("is-visible");
+  window.setTimeout(() => els.toast.classList.remove("is-visible"), 1800);
+}
+
+function escapeHtml(value = "") {
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#039;"
+  })[char]);
+}
+
+function escapeAttribute(value = "") {
+  return escapeHtml(value).replace(/`/g, "&#096;");
+}
+
+init();

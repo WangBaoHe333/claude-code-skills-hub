@@ -1,0 +1,10 @@
+{
+  "id": "composiohq-awesome-claude-skills-template-skill",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: template-skill\ndescription: Replace with description of the skill and when Claude should use it.\n---\n\n# Insert instructions below\n"
+    }
+  ]
+}

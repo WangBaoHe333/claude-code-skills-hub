@@ -1,0 +1,19 @@
+{
+  "name": "claude-code-skills-platform",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "sync": "node scripts/sync-skills.mjs",
+    "sync:build": "npm run sync && npm run build",
+    "discover": "node scripts/discover-skill-sources.mjs",
+    "discover:promote": "node scripts/discover-skill-sources.mjs --promote",
+    "admin": "node scripts/admin-server.mjs"
+  },
+  "devDependencies": {
+    "vite": "^5.4.11"
+  }
+}

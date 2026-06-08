@@ -1,0 +1,24 @@
+{
+  "sources": [
+    {
+      "repo": "ComposioHQ/awesome-claude-skills",
+      "url": "https://github.com/ComposioHQ/awesome-claude-skills.git",
+      "type": "official-source"
+    },
+    {
+      "repo": "JimLiu/baoyu-skills",
+      "url": "https://github.com/JimLiu/baoyu-skills.git",
+      "type": "curated-source"
+    },
+    {
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills.git",
+      "type": "official-source"
+    },
+    {
+      "repo": "stellarlinkco/myclaude",
+      "url": "https://github.com/stellarlinkco/myclaude.git",
+      "type": "curated-source"
+    }
+  ]
+}

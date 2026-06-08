@@ -1,0 +1,37 @@
+name: Discover candidate skill sources
+
+on:
+  schedule:
+    - cron: "36 20 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Discover candidates
+        run: npm run discover:promote
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          AUTO_PROMOTE_MIN_STARS: "1000"
+
+      - name: Commit candidate list
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: discover skill source candidates"
+          file_pattern: "data/sources.json data/source-candidates.json"

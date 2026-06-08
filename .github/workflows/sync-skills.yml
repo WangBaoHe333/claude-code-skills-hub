@@ -1,0 +1,37 @@
+name: Sync skills data
+
+on:
+  schedule:
+    - cron: "18 20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync skills
+        run: npm run sync
+
+      - name: Verify build
+        run: npm run build
+
+      - name: Commit updated data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: sync skills data"
+          file_pattern: "data/sources.json data/skills.json public/data/skills.json public/skill-files/*.json"
