@@ -607,13 +607,16 @@ function folderName(name) {
 
 function chineseSummary(summary, name) {
   const text = String(summary || "").trim();
-  const automate = text.match(/^Automate\s+(.+?)\s+tasks\s+via\s+Rube MCP\s+\(Composio\)\./i);
-  if (automate) return `自动化 ${cleanName(automate[1])} 的常见任务，可在 Claude Code 中连接相关服务并执行查询、创建、更新等操作。`;
+  const automate = text.match(/^Automate\s+(.+?)\s+tasks\s+via\s+Rube MCP\s+\(Composio\)\.?\s*(Always search tools first for current schemas\.)?/i);
+  if (automate) {
+    const suffix = automate[2] ? "使用前始终先搜索工具，获取当前可用的参数和 schema。" : "";
+    return `通过 Rube MCP（Composio）自动化 ${cleanName(automate[1])} 任务。${suffix}`.trim();
+  }
   if (/^Create, edit,/.test(text)) return "创建、编辑和整理相关文件，让 Claude Code 能处理更完整的办公和内容工作流。";
   if (/download|transcript|subtitle/i.test(text)) return "下载和整理视频字幕、章节、封面等内容，适合做笔记、摘要和知识库整理。";
   if (/markdown|html/i.test(text)) return "把 Markdown 内容转换成可发布的 HTML 页面，适合文章排版和内容发布。";
   if (/browser|web/i.test(text)) return "控制浏览器或网页流程，适合本地页面验证、网页操作和自动化测试。";
-  if (/^[\x00-\x7F]+$/.test(text)) return `${name} 相关能力扩展，适合把对应工具或流程接入 Claude Code。`;
+  if (/^[\x00-\x7F]+$/.test(text)) return `${name} 的原始英文说明为：${text}`;
   return text || `${name} 相关能力扩展。`;
 }
 
@@ -624,7 +627,7 @@ function englishSummary(summary, name) {
 }
 
 function capabilityText(skill, name, summary) {
-  if ((skill.tags || []).includes("automation")) return `${summary} 你可以把它理解成一个面向 ${name} 的自动化连接器。`;
+  if ((skill.tags || []).includes("automation")) return `${summary} 具体能调用哪些对象和动作，以授权后搜索到的当前工具 schema 为准。`;
   if ((skill.tags || []).includes("documents")) return `${summary} 它主要帮助你减少手工打开、复制、整理文档的时间。`;
   return summary;
 }

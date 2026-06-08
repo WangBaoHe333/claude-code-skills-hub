@@ -278,7 +278,7 @@ function describeSkill({ name, summary, body, source, skillPath }) {
   const text = `${name} ${summary} ${body} ${skillPath}`.toLowerCase();
 
   if (skillPath.includes("composio-skills/") || /-automation$/i.test(name)) {
-    return describeAutomation(displayName, `${name} ${skillPath}`.toLowerCase());
+    return describeAutomation(displayName, `${name} ${skillPath}`.toLowerCase(), summary);
   }
 
   if (/pdf/.test(text)) {
@@ -316,13 +316,14 @@ function describeSkill({ name, summary, body, source, skillPath }) {
   return fixedProfile(displayName, "通用工具", `${displayName} 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。`, [`使用 ${displayName} 完成相关任务`, "减少手工复制、整理和重复操作", "把固定流程交给 Claude Code 执行"]);
 }
 
-function describeAutomation(service, text) {
+function describeAutomation(service, text, summary) {
   const profile = automationProfile(service, text);
+  const translatedSummary = translateEnglishSummary(summary, service);
   if (profile.category === "待补充") {
     return {
       category: profile.category,
-      summaryZh: `${service} 的原始 skill 信息不足，当前只能确认它是 Claude Code 可调用的外部服务连接。`,
-      capabilityZh: `这个 skill 连接 ${service}，但源仓库没有提供足够清楚的对象、动作和使用场景。建议先在私有后台补全具体用途，再展示给普通用户作为推荐项。`,
+      summaryZh: translatedSummary,
+      capabilityZh: `${translatedSummary} 具体能调用哪些对象和动作，以授权后搜索到的当前工具 schema 为准。`,
       audienceZh: profile.audience,
       scenariosZh: profile.scenarios.map(item => item.replaceAll("{service}", service)),
       usageZh: `安装前建议先确认 ${service} 的实际用途、授权方式和可用工具；确认后可在 Claude Code 中明确说“使用 ${service}”并给出具体任务。`
@@ -330,12 +331,28 @@ function describeAutomation(service, text) {
   }
   return {
     category: profile.category,
-    summaryZh: `用 Claude Code 操作 ${service}：${profile.objects}，并执行${profile.actions}。`,
-    capabilityZh: `这个 skill 通过 Composio / Rube 连接 ${service}。它会先搜索当前可用工具和参数，再对 ${profile.objects} 做${profile.actions}，避免你手动查 API、拼请求或来回登录后台。`,
+    summaryZh: translatedSummary,
+    capabilityZh: `${translatedSummary} 按源仓库说明，它会先搜索当前工具 schema，再根据授权后的 ${service} 工具执行对应任务。`,
     audienceZh: profile.audience,
     scenariosZh: profile.scenarios.map(item => item.replaceAll("{service}", service)),
     usageZh: `安装后先在 Rube/Composio 中授权 ${service}，然后直接说清楚你要处理的对象和动作，例如“查询今天的记录”“创建一个客户”“同步最近的订单”。`
   };
+}
+
+function translateEnglishSummary(summary, fallbackName) {
+  const text = String(summary || "").replace(/\s+/g, " ").trim();
+  const composio = text.match(/^Automate\s+(.+?)\s+tasks\s+via\s+Rube MCP\s+\(Composio\)\.?\s*(Always search tools first for current schemas\.)?/i);
+  if (composio) {
+    const service = cleanServiceName(composio[1] || fallbackName);
+    const suffix = composio[2] ? "使用前始终先搜索工具，获取当前可用的参数和 schema。" : "";
+    return `通过 Rube MCP（Composio）自动化 ${service} 任务。${suffix}`.trim();
+  }
+  if (/^Create, edit,/i.test(text)) return "创建、编辑并整理相关文件，让 Claude Code 能处理更完整的办公和内容工作流。";
+  if (/download|transcript|subtitle/i.test(text)) return "下载并整理视频字幕、章节、封面等内容，适合做笔记、摘要和知识库整理。";
+  if (/markdown|html/i.test(text)) return "把 Markdown 内容转换成可发布的 HTML 页面，适合文章排版和内容发布。";
+  if (/browser|playwright|web/i.test(text)) return "控制浏览器或网页流程，适合本地页面验证、网页操作和自动化测试。";
+  if (/^[\x00-\x7F]+$/.test(text)) return `${cleanServiceName(fallbackName)} 的原始英文说明为：${text}`;
+  return text || `${cleanServiceName(fallbackName)} 相关能力扩展。`;
 }
 
 function fixedProfile(name, category, summary, scenarios) {

@@ -231,6 +231,7 @@ select:focus {
   border-radius: 0;
   padding: 0 11px;
   white-space: nowrap;
+  line-height: 1.15;
 }
 
 .primary-button {
@@ -413,11 +414,20 @@ select:focus {
 
 .detail-actions {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
   padding: 10px;
   border-bottom: 1px solid var(--line);
   background: var(--panel);
+}
+
+.detail-actions .primary-button {
+  min-width: 0;
+  min-height: 42px;
+  padding: 6px 8px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 12px;
 }
 
 .detail-title {
