@@ -1,7 +1,16 @@
 {
-  "name": "claude-code-skills-platform",
+  "name": "claude-code-skills-hub",
   "version": "0.1.0",
   "private": true,
+  "description": "A bilingual Claude Code skills browser, batch installer, and ccswitch ZIP exporter.",
+  "keywords": [
+    "claude-code",
+    "claude-skills",
+    "skills",
+    "ccswitch",
+    "composio",
+    "vite"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
@@ -14,6 +23,6 @@
     "admin": "node scripts/admin-server.mjs"
   },
   "devDependencies": {
-    "vite": "^5.4.11"
+    "vite": "^8.0.16"
   }
 }
