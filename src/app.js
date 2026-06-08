@@ -70,6 +70,11 @@ const i18n = {
     audience: "适合谁",
     scenarios: "典型场景",
     installPath: "安装位置",
+    sourceInfo: "来源标注",
+    sourceRepo: "来源仓库",
+    sourcePath: "仓库路径",
+    originalDescription: "原始说明",
+    licenseNotice: "许可提示",
     copy: "复制",
     selectedHintEmpty: "先勾选，再导出或复制命令",
     selectedHint: count => `已选择 ${formatNumber(count)} 个，可复制命令或导出 ccswitch ZIP`,
@@ -121,6 +126,11 @@ const i18n = {
     audience: "Best for",
     scenarios: "Use cases",
     installPath: "Install path",
+    sourceInfo: "Source",
+    sourceRepo: "Repository",
+    sourcePath: "Path",
+    originalDescription: "Original description",
+    licenseNotice: "License note",
     copy: "Copy",
     selectedHintEmpty: "Select skills, then export or copy commands",
     selectedHint: count => `${formatNumber(count)} selected. Copy commands or export a ccswitch ZIP.`,
@@ -392,6 +402,27 @@ function renderDetail() {
       <section class="detail-section wide">
         <h3>${escapeHtml(t("installPath"))}</h3>
         <p><code>~/.claude/skills/${escapeHtml(skill.folderName)}</code></p>
+      </section>
+      <section class="detail-section wide source-section">
+        <h3>${escapeHtml(t("sourceInfo"))}</h3>
+        <dl>
+          <div>
+            <dt>${escapeHtml(t("sourceRepo"))}</dt>
+            <dd><a href="${escapeAttribute(skill.source.url)}" target="_blank" rel="noreferrer">${escapeHtml(skill.source.repo)}</a></dd>
+          </div>
+          <div>
+            <dt>${escapeHtml(t("sourcePath"))}</dt>
+            <dd><code>${escapeHtml(skill.source.path)}</code></dd>
+          </div>
+          <div>
+            <dt>${escapeHtml(t("originalDescription"))}</dt>
+            <dd>${escapeHtml(skill.summary || "-")}</dd>
+          </div>
+          <div>
+            <dt>${escapeHtml(t("licenseNotice"))}</dt>
+            <dd>${escapeHtml(sourceLicenseNote(skill.source.repo))}</dd>
+          </div>
+        </dl>
       </section>
     </div>
   `;
@@ -747,6 +778,24 @@ function tagLabel(tag) {
     }
   };
   return labels[state.lang]?.[tag] || tag;
+}
+
+function sourceLicenseNote(repo) {
+  const notes = {
+    zh: {
+      "ComposioHQ/awesome-claude-skills": "第三方 skill 内容来自 ComposioHQ/awesome-claude-skills；部分 skill 目录包含独立 LICENSE.txt，请以原仓库为准。",
+      "JimLiu/baoyu-skills": "第三方 skill 内容来自 JimLiu/baoyu-skills；未检测到统一顶层许可，请以原仓库声明为准。",
+      "anthropics/skills": "第三方 skill 内容来自 anthropics/skills；部分 skill 目录包含独立 LICENSE.txt，请以原仓库为准。",
+      "stellarlinkco/myclaude": "第三方 skill 内容来自 stellarlinkco/myclaude；原仓库包含 AGPL-3.0 许可声明。"
+    },
+    en: {
+      "ComposioHQ/awesome-claude-skills": "Third-party skill content from ComposioHQ/awesome-claude-skills. Some skill folders include their own LICENSE.txt; check upstream.",
+      "JimLiu/baoyu-skills": "Third-party skill content from JimLiu/baoyu-skills. No unified top-level license was detected; check upstream.",
+      "anthropics/skills": "Third-party skill content from anthropics/skills. Some skill folders include their own LICENSE.txt; check upstream.",
+      "stellarlinkco/myclaude": "Third-party skill content from stellarlinkco/myclaude. The upstream repository declares AGPL-3.0."
+    }
+  };
+  return notes[state.lang]?.[repo] || (state.lang === "zh" ? "第三方 skill 内容，请以原仓库许可为准。" : "Third-party skill content. Check the upstream license.");
 }
 
 function downloadBlob(filename, content, type) {

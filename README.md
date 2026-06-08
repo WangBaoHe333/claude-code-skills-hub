@@ -6,6 +6,8 @@ Claude Code Skills Hub 是一个面向 Claude Code 用户的 skills 搜索、浏
 
 [http://39.104.27.129/skills/](http://39.104.27.129/skills/)
 
+普通用户不需要本地部署，直接访问线上站即可。这个仓库公开出来主要是为了让开发者一起改进网站、同步规则、描述质量和导出逻辑。
+
 ## 为什么做
 
 Claude Code skills 很有用，但普通用户经常遇到四个问题：
@@ -28,10 +30,11 @@ Claude Code skills 很有用，但普通用户经常遇到四个问题：
 - 支持复制单个、已选、全库安装命令
 - 支持导出 ccswitch 可导入 ZIP
 - ZIP 内保证每个 skill 文件夹包含 `SKILL.md`
+- 每个 skill 详情页标注来源仓库、路径、原始描述和许可提示
 - 支持私有审核后台，手动修正描述和收录高星仓库
 - 支持 GitHub Actions 自动同步上游仓库
 
-## 数据来源
+## 数据来源与标注
 
 当前聚合以下仓库：
 
@@ -39,6 +42,10 @@ Claude Code skills 很有用，但普通用户经常遇到四个问题：
 - [JimLiu/baoyu-skills](https://github.com/JimLiu/baoyu-skills)
 - [anthropics/skills](https://github.com/anthropics/skills)
 - [stellarlinkco/myclaude](https://github.com/stellarlinkco/myclaude)
+
+详情见 [THIRD_PARTY_SOURCES.md](./THIRD_PARTY_SOURCES.md) 和 [NOTICE.md](./NOTICE.md)。
+
+这个项目是索引、聚合和安装工具，不声明拥有第三方 skill 内容。第三方 skill 文件、名称、说明和源码归原仓库作者所有，并遵循各自上游许可或声明。
 
 同步后会生成：
 
@@ -48,7 +55,9 @@ Claude Code skills 很有用，但普通用户经常遇到四个问题：
 
 前端只依赖静态数据文件，所以部署后用户即使不能访问 GitHub，也可以完整搜索和浏览。
 
-## 本地运行
+## 开发者本地运行
+
+普通用户不需要执行下面的命令。只有在你要参与开发、修页面、改同步脚本或优化描述时，才需要本地运行。
 
 ```bash
 npm install
@@ -244,3 +253,12 @@ npm run build -- --base=/skills/
 - 高星候选发现
 - 服务器部署
 
+## 参与贡献
+
+见 [CONTRIBUTING.md](./CONTRIBUTING.md)。
+
+## License
+
+平台代码按 AGPL-3.0-only 开源，见 [LICENSE](./LICENSE)。
+
+第三方 skill 内容不属于本项目原创内容，按各自上游仓库的 license、terms 或声明处理。来源和标注见 [THIRD_PARTY_SOURCES.md](./THIRD_PARTY_SOURCES.md) 与 [NOTICE.md](./NOTICE.md)。

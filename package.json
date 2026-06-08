@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "A bilingual Claude Code skills browser, batch installer, and ccswitch ZIP exporter.",
+  "license": "AGPL-3.0-only",
   "keywords": [
     "claude-code",
     "claude-skills",
