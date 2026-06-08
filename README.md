@@ -1,12 +1,14 @@
 # Claude Code Skills Hub
 
-Claude Code Skills Hub 是一个面向 Claude Code 用户的 skills 搜索、浏览、批量安装和 ccswitch 导入平台。
+Claude Code Skills Hub 是一个面向 Claude Code 用户的 skills 聚合和 ccswitch 批量导入平台。
+
+它的核心能力很简单：把分散在多个仓库里的 Claude Code skills 聚合起来，让用户搜索、勾选，然后一次性导出 ccswitch 可导入的 ZIP。
 
 在线访问：
 
 [http://39.104.27.129/skills/](http://39.104.27.129/skills/)
 
-普通用户不需要本地部署，直接访问线上站即可。这个仓库公开出来主要是为了让开发者一起改进网站、同步规则、描述质量和导出逻辑。
+普通用户不需要本地部署，直接访问线上站即可。这个仓库公开出来主要是为了透明标注来源、方便反馈问题，也方便开发者提交具体修复。生产站点和收录来源仍由项目维护者审核。
 
 ## 为什么做
 
@@ -17,7 +19,7 @@ Claude Code skills 很有用，但普通用户经常遇到四个问题：
 - 不知道怎么安装和配置
 - 访问 GitHub 不方便，拿不到完整信息
 
-这个项目把分散在 GitHub 仓库里的 skills 聚合成一个可搜索、可筛选、可批量导出的网页，让用户不用翻仓库也能直接找到并安装需要的 skill。
+这个项目把分散在 GitHub 仓库里的 skills 聚合成一个可搜索、可筛选、可批量导出的网页。用户不用翻仓库，也不用一个一个安装，选好后直接导出 ZIP 导入 ccswitch。
 
 ## 功能亮点
 
@@ -28,7 +30,7 @@ Claude Code skills 很有用，但普通用户经常遇到四个问题：
 - 支持常用优先、已选优先、名称排序
 - 支持跨筛选批量选择、只看已选、清空选择
 - 支持复制单个、已选、全库安装命令
-- 支持导出 ccswitch 可导入 ZIP
+- 支持把已选 skills 批量打包成 ccswitch 可导入 ZIP
 - ZIP 内保证每个 skill 文件夹包含 `SKILL.md`
 - 每个 skill 详情页标注来源仓库、路径、原始描述和许可提示
 - 支持私有审核后台，手动修正描述和收录高星仓库
@@ -256,6 +258,8 @@ npm run build -- --base=/skills/
 ## 参与贡献
 
 见 [CONTRIBUTING.md](./CONTRIBUTING.md)。
+
+建议优先开 issue 反馈描述错误、来源问题、ZIP 导入问题或值得收录的仓库。PR 可以提交具体修复，但上线和收录由维护者审核。
 
 ## License
 

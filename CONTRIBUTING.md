@@ -2,9 +2,21 @@
 
 Thanks for helping improve Claude Code Skills Hub.
 
+This is a maintainer-led project. The public repository is open so others can inspect the code, report issues, and propose improvements, but the production site and source list are maintained by the project owner.
+
 Most users do not need to deploy this project locally. The public site is intended to be the main product surface:
 
 [http://39.104.27.129/skills/](http://39.104.27.129/skills/)
+
+Most contributions should start as an issue:
+
+- wrong or unclear skill description
+- missing source attribution
+- ccswitch ZIP import issue
+- useful Claude Code skills repository to consider
+- UI bug or mobile layout issue
+
+Pull requests are welcome for concrete fixes, but they will be reviewed before merge. Do not add new third-party sources without attribution and a clear reason.
 
 Use local setup only if you want to improve the website, sync logic, descriptions, source discovery, or ccswitch export behavior.
 
@@ -53,4 +65,3 @@ When adding or changing sources, update:
 - `data/sources.json`
 - `THIRD_PARTY_SOURCES.md`
 - UI license/source notes if needed
-

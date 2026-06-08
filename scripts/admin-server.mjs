@@ -5,10 +5,12 @@ import { URL } from "node:url";
 const host = process.env.ADMIN_HOST || "127.0.0.1";
 const port = Number(process.env.ADMIN_PORT || 8787);
 const token = process.env.ADMIN_TOKEN || "";
+const basePath = normalizeBasePath(process.env.ADMIN_BASE_PATH || "");
 
 const server = createServer(async (request, response) => {
   try {
     const url = new URL(request.url || "/", `http://${request.headers.host}`);
+    stripBasePath(url);
     if (!authorized(request, url)) return send(response, 401, { error: "Unauthorized" });
 
     if (request.method === "GET" && url.pathname === "/") return html(response, adminHtml());
@@ -26,8 +28,22 @@ const server = createServer(async (request, response) => {
 
 server.listen(port, host, () => {
   const suffix = token ? `?token=${encodeURIComponent(token)}` : "";
-  console.log(`Admin review server: http://${host}:${port}/${suffix}`);
+  console.log(`Admin review server: http://${host}:${port}${basePath || "/" }${suffix}`);
 });
+
+function normalizeBasePath(value) {
+  const clean = String(value || "").trim().replace(/\/+$/, "");
+  if (!clean || clean === "/") return "";
+  return clean.startsWith("/") ? clean : `/${clean}`;
+}
+
+function stripBasePath(url) {
+  if (!basePath) return;
+  if (url.pathname === basePath) url.pathname = "/";
+  if (url.pathname.startsWith(`${basePath}/`)) {
+    url.pathname = url.pathname.slice(basePath.length) || "/";
+  }
+}
 
 function authorized(request, url) {
   if (!token) return true;
@@ -198,9 +214,11 @@ function adminHtml() {
 <script>
 let state = { candidates: [], sources: [], rejected: [], skills: [], overrides: {} };
 let mode = 'candidates';
+const basePath = '${basePath}';
 const params = new URLSearchParams(location.search);
 async function api(path, body){
-  const url = params.get('token') ? path + '?token=' + encodeURIComponent(params.get('token')) : path;
+  const target = basePath + path;
+  const url = params.get('token') ? target + '?token=' + encodeURIComponent(params.get('token')) : target;
   const res = await fetch(url, body ? {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)} : undefined);
   if(!res.ok) throw new Error(await res.text());
   return res.json();
