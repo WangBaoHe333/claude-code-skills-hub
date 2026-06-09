@@ -21,7 +21,7 @@
     "sync:build": "npm run sync && npm run build",
     "discover": "node scripts/discover-skill-sources.mjs",
     "discover:promote": "node scripts/discover-skill-sources.mjs --promote",
-    "admin": "node scripts/admin-server.mjs"
+    "admin": "node scripts/review-server.mjs"
   },
   "devDependencies": {
     "vite": "^8.0.16"

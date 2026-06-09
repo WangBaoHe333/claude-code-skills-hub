@@ -32,6 +32,10 @@ const els = {
   checkedOnly: document.querySelector("#toggle-checked-only"),
   langZh: document.querySelector("#lang-zh"),
   langEn: document.querySelector("#lang-en"),
+  openSubmit: document.querySelector("#open-submit"),
+  closeSubmit: document.querySelector("#close-submit"),
+  submitModal: document.querySelector("#submit-modal"),
+  submitForm: document.querySelector("#submit-form"),
   toast: document.querySelector("#toast")
 };
 
@@ -57,6 +61,16 @@ const i18n = {
     copySelected: "复制已选安装命令",
     copyAllInstall: "复制全库安装命令",
     downloadZip: "导出 ccswitch ZIP",
+    submitSkill: "提交 skill",
+    submitTitle: "提交候选 skill",
+    submitRepo: "GitHub 仓库",
+    submitPath: "Skill 路径（可选）",
+    submitDescription: "这个 skill 能做什么",
+    submitWhy: "为什么值得收录",
+    submitProof: "完成任务截图（可选）",
+    submitContact: "联系方式（可选，不公开）",
+    submitSend: "提交审核",
+    submitNote: "提交后只进入维护者审核队列，不会直接发布。",
     emptyTitle: "选择一个 skill",
     emptyBody: "右侧固定显示当前 skill 的核心说明和操作按钮。",
     noSelectedTitle: "没有选中的 skill",
@@ -90,6 +104,8 @@ const i18n = {
     copiedSingle: "已复制单个安装命令",
     copiedBulk: count => `已复制 ${formatNumber(count)} 个 skills 的批量安装命令`,
     zipDone: count => `已导出 ${formatNumber(count)} 个 skill 文件夹 ZIP`,
+    submitDone: "已提交，等待维护者审核",
+    submitFailed: message => `提交失败：${message}`,
     loadFailed: message => `数据加载失败：${message}`
   },
   en: {
@@ -113,6 +129,16 @@ const i18n = {
     copySelected: "Copy selected install command",
     copyAllInstall: "Copy all install commands",
     downloadZip: "Export ccswitch ZIP",
+    submitSkill: "Submit skill",
+    submitTitle: "Submit a skill",
+    submitRepo: "GitHub repository",
+    submitPath: "Skill path (optional)",
+    submitDescription: "What this skill does",
+    submitWhy: "Why it should be included",
+    submitProof: "Task proof screenshot (optional)",
+    submitContact: "Contact (optional, private)",
+    submitSend: "Submit for review",
+    submitNote: "Submissions enter the maintainer review queue and are never published directly.",
     emptyTitle: "Select a skill",
     emptyBody: "The fixed detail panel shows the current skill summary and actions.",
     noSelectedTitle: "No skill selected",
@@ -146,6 +172,8 @@ const i18n = {
     copiedSingle: "Copied single install command",
     copiedBulk: count => `Copied batch install command for ${formatNumber(count)} skills`,
     zipDone: count => `Exported ${formatNumber(count)} skill folders as ZIP`,
+    submitDone: "Submitted for maintainer review",
+    submitFailed: message => `Submission failed: ${message}`,
     loadFailed: message => `Failed to load data: ${message}`
   }
 };
@@ -220,6 +248,19 @@ function bindEvents() {
   els.copySelected.addEventListener("click", () => copyBulkInstall(getCheckedSkills()));
   els.copyAllInstall.addEventListener("click", () => copyBulkInstall(state.skills));
   els.downloadZip.addEventListener("click", () => downloadCcsZip(getCheckedSkills()));
+  els.openSubmit.addEventListener("click", () => {
+    els.submitModal.hidden = false;
+    document.querySelector("#submit-repo").focus();
+  });
+  els.closeSubmit.addEventListener("click", () => closeSubmitModal());
+  els.submitModal.addEventListener("click", event => {
+    if (event.target === els.submitModal) closeSubmitModal();
+  });
+  els.submitForm.addEventListener("submit", submitCandidateSkill);
+}
+
+function closeSubmitModal() {
+  els.submitModal.hidden = true;
 }
 
 function populateFilters() {
@@ -503,6 +544,62 @@ async function downloadCcsZip(skills) {
   const filename = skills.length === 1 ? `${skills[0].folderName}.zip` : "ccswitch-skills-batch.zip";
   downloadBlob(filename, blob, "application/zip");
   showToast(t("zipDone", skills.length));
+}
+
+async function submitCandidateSkill(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const submitButton = form.querySelector("button[type='submit']");
+  submitButton.disabled = true;
+  try {
+    const proofInput = document.querySelector("#submit-proof");
+    const proofFile = proofInput.files?.[0] || null;
+    const proof = proofFile ? await proofToPayload(proofFile) : null;
+    const payload = {
+      repoUrl: document.querySelector("#submit-repo").value,
+      skillPath: document.querySelector("#submit-path").value,
+      description: document.querySelector("#submit-description").value,
+      whyUseful: document.querySelector("#submit-why").value,
+      contact: document.querySelector("#submit-contact").value,
+      proof
+    };
+    const response = await fetch(submissionApiUrl(), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.ok) throw new Error(result.error || `HTTP ${response.status}`);
+    form.reset();
+    closeSubmitModal();
+    showToast(t("submitDone"));
+  } catch (error) {
+    showToast(t("submitFailed", error.message));
+  } finally {
+    submitButton.disabled = false;
+  }
+}
+
+function submissionApiUrl() {
+  if (window.CCSKILLS_SUBMIT_API) return window.CCSKILLS_SUBMIT_API;
+  return "/skills-api/submit";
+}
+
+function proofToPayload(file) {
+  return new Promise((resolve, reject) => {
+    if (!["image/png", "image/jpeg", "image/webp"].includes(file.type)) {
+      reject(new Error("Only PNG, JPEG, or WebP screenshots are supported"));
+      return;
+    }
+    if (file.size > 1_200_000) {
+      reject(new Error("Screenshot must be smaller than 1.2 MB"));
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => resolve({ name: file.name, type: file.type, dataUrl: reader.result });
+    reader.onerror = () => reject(new Error("Failed to read screenshot"));
+    reader.readAsDataURL(file);
+  });
 }
 
 async function loadSkillFiles(skill) {

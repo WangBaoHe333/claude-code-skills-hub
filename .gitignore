@@ -4,3 +4,6 @@ dist/
 *.log
 
 .secrets/
+data/submissions.json
+data/ai-reviews.json
+data/uploaded-proofs/
