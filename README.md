@@ -261,6 +261,12 @@ npm run build -- --base=/skills/
 
 建议优先开 issue 反馈描述错误、来源问题、ZIP 导入问题或值得收录的仓库。PR 可以提交具体修复，但上线和收录由维护者审核。
 
+## 后续 AI 审核规划
+
+后续会把 DeepSeek AI 审核、用户提交、截图证明和人工审核做成私有后端，不直接放进公开静态站里。规划见 [ROADMAP_AI_REVIEW.md](./ROADMAP_AI_REVIEW.md)。
+
+安全边界见 [SECURITY.md](./SECURITY.md)。当前后台不暴露公网，只能通过 SSH tunnel 访问。
+
 ## License
 
 平台代码按 AGPL-3.0-only 开源，见 [LICENSE](./LICENSE)。
