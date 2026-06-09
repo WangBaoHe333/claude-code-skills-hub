@@ -265,7 +265,11 @@ function closeSubmitModal() {
 
 function populateFilters() {
   const repos = [...new Set(state.skills.map(skill => skill.source.repo))].sort();
-  const tags = [...new Set(state.skills.flatMap(skill => skill.tags || []))].sort();
+  const tags = [...new Set(state.skills.flatMap(skill => skill.tags || []))].sort((a, b) => {
+    if (a === "common") return -1;
+    if (b === "common") return 1;
+    return tagLabel(a).localeCompare(tagLabel(b), state.lang === "zh" ? "zh-CN" : "en-US");
+  });
 
   els.repoFilter.innerHTML = `<option value="all">${escapeHtml(t("allRepos"))}</option>`;
   els.tagFilter.innerHTML = `<option value="all">${escapeHtml(t("allTags"))}</option>`;
@@ -690,6 +694,8 @@ function normalizeSkill(skill) {
   const displayName = cleanName(skill.name);
   const summaryZh = skill.summaryZh || chineseSummary(skill.summary, displayName);
   const summaryEn = englishSummary(skill.summary, displayName);
+  const tags = new Set(skill.tags || []);
+  if (isCommonSkill({ ...skill, displayName, summaryZh })) tags.add("common");
   return {
     ...skill,
     displayName,
@@ -704,8 +710,24 @@ function normalizeSkill(skill) {
     audienceEn: skill.audienceEn || englishAudience(skill.audience, displayName),
     scenariosZh: skill.scenariosZh || chineseScenarios(skill.scenarios, displayName, summaryZh),
     scenariosEn: skill.scenariosEn || englishScenarios(skill.scenarios, displayName, summaryEn),
+    tags: [...tags],
     usageEn: skill.usageEn || `Install the skill, then ask Claude Code to use ${displayName} for the specific task, file, or service you want to work with.`
   };
+}
+
+function isCommonSkill(skill) {
+  const text = `${skill.name} ${skill.displayName} ${skill.category || ""} ${skill.summaryZh || ""}`.toLowerCase();
+  const coreNames = [
+    "pdf", "docx", "xlsx", "pptx", "browser", "frontend-design", "skill-creator",
+    "baoyu-translate", "baoyu-url-to-markdown", "baoyu-youtube-transcript",
+    "baoyu-markdown-to-html", "baoyu-format-markdown", "baoyu-image-gen",
+    "baoyu-cover-image", "baoyu-compress-image", "github", "slack", "notion",
+    "gmail", "google-drive", "google-calendar", "googledocs", "googlesheets"
+  ];
+  if (skill.source?.repo === "anthropics/skills") return true;
+  if (coreNames.some(name => text.includes(name))) return true;
+  if (/文档处理|表格处理|演示文稿|内容整理|内容发布|网页自动化|翻译|视觉素材|代码 \/ Agent/.test(skill.category || "")) return true;
+  return false;
 }
 
 function skillText(skill, field) {
@@ -849,6 +871,7 @@ function repoLabel(repo) {
 function tagLabel(tag) {
   const labels = {
     zh: {
+      common: "常用推荐",
       skill: "通用",
       automation: "自动化",
       documents: "文档",
@@ -862,6 +885,7 @@ function tagLabel(tag) {
       github: "GitHub"
     },
     en: {
+      common: "Recommended",
       skill: "Skill",
       automation: "Automation",
       documents: "Documents",
