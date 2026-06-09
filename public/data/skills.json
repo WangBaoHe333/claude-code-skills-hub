@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T03:40:32.611Z",
+  "generatedAt": "2026-06-09T22:00:01.342Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -3319,7 +3319,7 @@
     {
       "id": "jimliu-baoyu-skills-baoyu-image-gen",
       "name": "baoyu-image-gen",
-      "summary": "AI image generation with OpenAI GPT Image 2, Azure OpenAI, Google, OpenRouter, DashScope, Z.AI GLM-Image, MiniMax, Jimeng, Seedream and Replicate APIs. Supports text-to-image, ref…",
+      "summary": "AI image generation with OpenAI GPT Image 2, Azure OpenAI, Google, OpenRouter, DashScope, Z.AI GLM-Image, MiniMax, Jimeng, Seedream, Replicate and Agnes APIs. Supports text-to-ima…",
       "summaryZh": "Baoyu Image Gen 用来生成或整理图片、插画、封面、漫画或信息图，适合内容发布和视觉素材制作。",
       "capabilityZh": "Baoyu Image Gen 用来生成或整理图片、插画、封面、漫画或信息图，适合内容发布和视觉素材制作。",
       "audience": "需要使用 Baoyu Image Gen 处理具体工作流的 Claude Code 用户。",
@@ -13612,26 +13612,27 @@
     {
       "id": "anthropics-skills-frontend-design",
       "name": "frontend-design",
-      "summary": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applica…",
-      "summaryZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
-      "capabilityZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
-      "audience": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
-      "audienceZh": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "summary": "Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't re…",
+      "summaryZh": "Frontend Design 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Frontend Design 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Frontend Design 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Frontend Design 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "渲染代码高亮、数学公式和 Mermaid 图",
-        "把长文转成可发布 HTML",
-        "套用主题生成统一风格页面"
+        "使用 Frontend Design 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "渲染代码高亮、数学公式和 Mermaid 图",
-        "把长文转成可发布 HTML",
-        "套用主题生成统一风格页面"
+        "使用 Frontend Design 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Frontend Design”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Frontend Design”，再给出文件、链接或要完成的任务。",
-      "category": "内容发布",
+      "category": "通用工具",
       "tags": [
-        "skill"
+        "skill",
+        "api"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/anthropics__skills'\ngit clone --depth 1 'https://github.com/anthropics/skills.git' '/tmp/anthropics__skills'\ncp -R '/tmp/anthropics__skills/skills/frontend-design' \"$HOME/.claude/skills/frontend-design\"\nrm -rf '/tmp/anthropics__skills'"
