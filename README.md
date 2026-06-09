@@ -2,39 +2,35 @@
 
 Claude Code Skills Hub 是一个面向 Claude Code 用户的 skills 聚合和 ccswitch 批量导入平台。
 
-它的核心能力很简单：把分散在多个仓库里的 Claude Code skills 聚合起来，让用户搜索、勾选，然后一次性导出 ccswitch 可导入的 ZIP。
+核心能力：把分散在多个仓库里的 Claude Code skills 聚合起来，让用户搜索、勾选，然后一次性导出 ccswitch 可导入的 ZIP。
 
 在线访问：
 
 [http://39.104.27.129/skills/](http://39.104.27.129/skills/)
 
-普通用户不需要本地部署，直接访问线上站即可。这个仓库公开出来主要是为了透明标注来源、方便反馈问题，也方便开发者提交具体修复。生产站点和收录来源仍由项目维护者审核。
-
 ## 为什么做
 
-Claude Code skills 很有用，但普通用户经常遇到四个问题：
+Claude Code skills 很有用，但普通用户经常遇到这些问题：
 
 - 不知道 skills 存在
 - 不知道每个 skill 能做什么
 - 不知道怎么安装和配置
-- 访问 GitHub 不方便，拿不到完整信息
+- 访问 GitHub 不方便
+- ccswitch 逐个导入不够省事
 
-这个项目把分散在 GitHub 仓库里的 skills 聚合成一个可搜索、可筛选、可批量导出的网页。用户不用翻仓库，也不用一个一个安装，选好后直接导出 ZIP 导入 ccswitch。
+这个项目把分散的 skills 聚合成一个可搜索、可筛选、可批量导出的网页。用户不用翻仓库，也不用一个一个安装，选好后直接导出 ZIP 导入 ccswitch。
 
 ## 功能亮点
 
 - 聚合 898 个 Claude Code skills
 - 支持中文 / English 双语界面
-- 中文描述优先根据英文原始说明直译，避免乱写用途
 - 支持按名称、用途、场景、仓库、标签搜索
-- 支持常用优先、已选优先、名称排序
 - 支持跨筛选批量选择、只看已选、清空选择
 - 支持复制单个、已选、全库安装命令
 - 支持把已选 skills 批量打包成 ccswitch 可导入 ZIP
 - ZIP 内保证每个 skill 文件夹包含 `SKILL.md`
 - 每个 skill 详情页标注来源仓库、路径、原始描述和许可提示
-- 支持私有审核后台，手动修正描述和收录高星仓库
-- 支持 GitHub Actions 自动同步上游仓库
+- 由维护者审核来源、描述和推荐排序
 
 ## 数据来源与标注
 
@@ -49,226 +45,34 @@ Claude Code skills 很有用，但普通用户经常遇到四个问题：
 
 这个项目是索引、聚合和安装工具，不声明拥有第三方 skill 内容。第三方 skill 文件、名称、说明和源码归原仓库作者所有，并遵循各自上游许可或声明。
 
-同步后会生成：
+## 维护方式
 
-- `data/skills.json`
-- `public/data/skills.json`
-- `public/skill-files/*.json`
+这个项目目前由维护者自行维护。
 
-前端只依赖静态数据文件，所以部署后用户即使不能访问 GitHub，也可以完整搜索和浏览。
+如果你发现：
 
-## 开发者本地运行
+- skill 描述错误
+- 来源标注错误
+- ccswitch ZIP 导入问题
+- 值得收录的新 skill 仓库
+- 页面功能问题
 
-普通用户不需要执行下面的命令。只有在你要参与开发、修页面、改同步脚本或优化描述时，才需要本地运行。
+可以在 GitHub issue 里反馈。是否收录、是否推荐、是否同步到线上站，由维护者审核决定。
 
-```bash
-npm install
-npm run dev
-```
+## 后续计划
 
-构建：
+后续会加入私有 AI 审核流程，用于辅助维护者检查：
 
-```bash
-npm run build
-```
+- skill 是否真实可用
+- 描述是否准确
+- 来源和许可是否清楚
+- 是否适合作为常用/推荐 skill
 
-部署到子路径 `/skills/`：
-
-```bash
-npm run build -- --base=/skills/
-```
-
-## 同步 skills
-
-```bash
-npm run sync
-```
-
-同步并构建：
-
-```bash
-npm run sync:build
-```
-
-同步脚本会读取 `data/sources.json`，拉取每个仓库中的 `SKILL.md`、README 和目录内容，生成前端数据和可导入包。
-
-## 添加新的仓库
-
-编辑 `data/sources.json`：
-
-```json
-{
-  "repo": "owner/repo",
-  "url": "https://github.com/owner/repo.git",
-  "type": "curated-source"
-}
-```
-
-然后运行：
-
-```bash
-npm run sync:build
-```
-
-## 发现高星候选仓库
-
-生成候选清单：
-
-```bash
-npm run discover
-```
-
-如果 GitHub API 限速，带上 token：
-
-```bash
-GITHUB_TOKEN=你的_token npm run discover
-```
-
-自动收录高星且结构真实的候选：
-
-```bash
-GITHUB_TOKEN=你的_token npm run discover:promote
-```
-
-默认自动加入条件：
-
-- stars >= `1000`
-- 明确包含 Claude Skills / Claude Code 相关信号
-- 仓库里真实存在 `SKILL.md` 或 `.claude/skills`
-
-可以调整阈值：
-
-```bash
-AUTO_PROMOTE_MIN_STARS=500 GITHUB_TOKEN=你的_token npm run discover:promote
-```
-
-## 私有审核后台
-
-启动：
-
-```bash
-npm run admin
-```
-
-默认地址：
-
-```text
-http://127.0.0.1:8787
-```
-
-可以设置访问 token：
-
-```bash
-ADMIN_TOKEN=你的密码 npm run admin
-```
-
-访问：
-
-```text
-http://127.0.0.1:8787/?token=你的密码
-```
-
-后台能力：
-
-- 查看高星候选源
-- 一键加入正式库
-- 一键拒绝候选源
-- 搜索当前 skills
-- 修正中文摘要、分类、能力、人群和典型场景
-- 保存人工覆盖到 `data/description-overrides.json`
-
-人工修正会优先于自动生成描述，后续同步不会冲掉。
-
-## 自动更新
-
-项目内置 GitHub Actions：
-
-- `.github/workflows/sync-skills.yml`
-- `.github/workflows/discover-sources.yml`
-
-作用：
-
-- 每天同步正式来源
-- 每周发现高星候选仓库
-- 数据变化后自动提交
-
-如果部署在服务器，也可以用 cron：
-
-```cron
-0 4 * * * cd /opt/claude-code-skills-hub && git pull && npm ci && npm run sync:build
-```
-
-## ccswitch ZIP 格式
-
-导出的 ZIP 结构类似：
-
-```text
-ccswitch-skills-batch.zip
-├── pdf/
-│   └── SKILL.md
-├── xlsx/
-│   └── SKILL.md
-└── browser/
-    └── SKILL.md
-```
-
-每个 skill 都是独立文件夹，且包含 `SKILL.md`，可用于 ccswitch 导入。
-
-## Nginx 子路径部署示例
-
-```nginx
-location = /skills {
-    return 301 /skills/;
-}
-
-location /skills/ {
-    alias /opt/claude-code-skills-hub/dist/;
-    index index.html;
-    try_files $uri $uri/ /skills/index.html;
-}
-```
-
-构建命令：
-
-```bash
-npm run build -- --base=/skills/
-```
-
-## 技术栈
-
-- Vite
-- 原生 JavaScript
-- 静态 JSON 数据
-- Node.js 同步脚本
-- GitHub Actions
-- Nginx 静态部署
-
-## 项目状态
-
-当前版本已完成：
-
-- 898 个 skills 聚合
-- 双语 UI
-- 批量安装命令
-- ccswitch ZIP 导出
-- 私有审核后台
-- 高星候选发现
-- 服务器部署
-
-## 参与贡献
-
-见 [CONTRIBUTING.md](./CONTRIBUTING.md)。
-
-建议优先开 issue 反馈描述错误、来源问题、ZIP 导入问题或值得收录的仓库。PR 可以提交具体修复，但上线和收录由维护者审核。
-
-## 后续 AI 审核规划
-
-后续会把 DeepSeek AI 审核、用户提交、截图证明和人工审核做成私有后端，不直接放进公开静态站里。规划见 [ROADMAP_AI_REVIEW.md](./ROADMAP_AI_REVIEW.md)。
-
-安全边界见 [SECURITY.md](./SECURITY.md)。当前后台不暴露公网，只能通过 SSH tunnel 访问。
+AI 审核、用户提交、截图证明、后台审核、API key 和审核日志都不会放在公开仓库中。
 
 ## License
 
 平台代码按 AGPL-3.0-only 开源，见 [LICENSE](./LICENSE)。
 
 第三方 skill 内容不属于本项目原创内容，按各自上游仓库的 license、terms 或声明处理。来源和标注见 [THIRD_PARTY_SOURCES.md](./THIRD_PARTY_SOURCES.md) 与 [NOTICE.md](./NOTICE.md)。
+
