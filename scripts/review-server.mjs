@@ -1,8 +1,11 @@
 import { createServer } from "node:http";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { exec } from "node:child_process";
 import { createHash, randomUUID } from "node:crypto";
+import { promisify } from "node:util";
 import { URL } from "node:url";
 
+const execAsync = promisify(exec);
 const host = process.env.ADMIN_HOST || "127.0.0.1";
 const port = Number(process.env.ADMIN_PORT || 8787);
 const token = process.env.ADMIN_TOKEN || "";
@@ -14,6 +17,7 @@ const reviewPath = process.env.AI_REVIEWS_FILE || "data/ai-reviews.json";
 const proofDir = process.env.PROOF_UPLOAD_DIR || "data/uploaded-proofs";
 const deepseekBaseUrl = (process.env.DEEPSEEK_BASE_URL || "https://api.deepseek.com").replace(/\/+$/, "");
 const deepseekModel = process.env.DEEPSEEK_MODEL || "deepseek-chat";
+const publishCommand = process.env.PUBLISH_COMMAND || "";
 const rateBuckets = new Map();
 
 const server = createServer(async (request, response) => {
@@ -126,6 +130,7 @@ async function decideSubmission(payload) {
   item.maintainerNote = cleanText(payload.note, 1000);
   item.updatedAt = new Date().toISOString();
 
+  let publish = { published: false };
   if (decision === "approved") {
     const sources = await readJson("data/sources.json", { sources: [] });
     if (!sources.sources.some(source => source.repo === item.repo)) {
@@ -138,10 +143,26 @@ async function decideSubmission(payload) {
       });
       await writeJson("data/sources.json", sources);
     }
+    publish = await publishApprovedChanges();
   }
 
   await writeJson(dataPath, data);
-  return { ok: true, id, status: item.status };
+  return { ok: true, id, status: item.status, publish };
+}
+
+async function publishApprovedChanges() {
+  if (!publishCommand) return { published: false, reason: "PUBLISH_COMMAND is not configured" };
+  const { stdout, stderr } = await execAsync(publishCommand, {
+    cwd: process.cwd(),
+    timeout: Number(process.env.PUBLISH_TIMEOUT_MS || 600_000),
+    maxBuffer: 1024 * 1024 * 4,
+    shell: "/bin/bash"
+  });
+  return {
+    published: true,
+    stdout: stdout.slice(-1200),
+    stderr: stderr.slice(-1200)
+  };
 }
 
 async function runAiReview(payload) {
