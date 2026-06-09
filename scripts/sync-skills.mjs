@@ -275,10 +275,35 @@ function inferTags(name, summary) {
 
 function describeSkill({ name, summary, body, source, skillPath }) {
   const displayName = cleanServiceName(name);
-  const text = `${name} ${summary} ${body} ${skillPath}`.toLowerCase();
+  const text = `${name} ${summary} ${skillPath}`.toLowerCase();
+  const bodyHint = String(body || "").slice(0, 1200).toLowerCase();
 
-  if (skillPath.includes("composio-skills/") || /-automation$/i.test(name)) {
-    return describeAutomation(displayName, `${name} ${skillPath}`.toLowerCase(), summary);
+  if (skillPath.includes("composio-skills/") || /(?:-|\s)automation$/i.test(name)) {
+    return describeAutomation(displayName, `${name} ${summary} ${skillPath}`.toLowerCase(), summary);
+  }
+
+  if (/algorithmic-art|image-gen|image-enhancer|cover-image|article-illustrator|infographic|comic|diagram|theme-factory|xhs-images|canvas-design/.test(text)) {
+    return fixedProfile(displayName, "视觉素材", `${displayName} 用来生成或整理图片、插画、封面、漫画或信息图，适合内容发布和视觉素材制作。`, [`用 ${displayName} 生成文章配图或封面`, "把文字内容整理成图文素材", "生成适合社媒、博客或演示使用的视觉内容"]);
+  }
+
+  if (/translate/.test(text)) {
+    return fixedProfile(displayName, "翻译 / 本地化", `${displayName} 用来翻译和润色文本，适合把文章、说明、界面文案或资料转换成目标语言。`, ["翻译 Markdown、文章或说明文档", "保留原文结构并润色译文", "把技术内容改写成更自然的中文或英文"]);
+  }
+
+  if (/url-to-markdown|x-to-markdown|youtube-transcript|wechat-summary|fetch/.test(text)) {
+    return fixedProfile(displayName, "内容整理", `${displayName} 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。`, ["把链接内容转成 Markdown", "提取视频字幕或社媒正文", "把外部资料整理成摘要和后续待办"]);
+  }
+
+  if (/post-to-wechat|post-to-weibo|post-to-x/.test(text)) {
+    return fixedProfile(displayName, "内容发布", `${displayName} 用来把准备好的内容发布到指定平台，适合减少复制、排版和发布流程里的重复操作。`, ["把文章内容整理后发布", "按平台格式调整标题、正文和附件", "把发布结果记录成可追踪的工作流"]);
+  }
+
+  if (/format-markdown/.test(text)) {
+    return fixedProfile(displayName, "内容发布", `${displayName} 用来清理和规范 Markdown 排版，适合技术文章、教程、说明文档和知识库。`, ["统一标题、列表、代码块和链接格式", "清理复制粘贴带来的混乱排版", "把 Markdown 调整成更适合发布的结构"]);
+  }
+
+  if (/claude-api|skill-creator|managed-agents|codeagent|developer|dev$|agent/.test(text)) {
+    return fixedProfile(displayName, "代码 / Agent 开发", `${displayName} 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。`, ["生成或修改 Claude Code skill", "整理 Agent/API 使用说明和开发步骤", "把工程任务拆成可执行的代码工作流"]);
   }
 
   if (/pdf/.test(text)) {
@@ -305,11 +330,11 @@ function describeSkill({ name, summary, body, source, skillPath }) {
     return fixedProfile(displayName, "演示文稿", "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。", ["生成完整 PPTX 结构", "修改已有幻灯片内容和版式", "导出可预览、可交付的演示文件"]);
   }
 
-  if (/markdown|html/.test(text)) {
+  if (/markdown|html/.test(text) || (/markdown|html/.test(bodyHint) && /markdown|html/.test(summary.toLowerCase()))) {
     return fixedProfile(displayName, "内容发布", "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。", ["渲染代码高亮、数学公式和 Mermaid 图", "把长文转成可发布 HTML", "套用主题生成统一风格页面"]);
   }
 
-  if (/browser|playwright|web/.test(text)) {
+  if (/browser|playwright|webapp|web-/.test(text)) {
     return fixedProfile(displayName, "网页自动化", "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。", ["打开 localhost 页面做交互检查", "填写表单、点击按钮并读取页面结果", "截图验证页面布局和状态"]);
   }
 
@@ -322,7 +347,7 @@ function describeAutomation(service, text, summary) {
   if (profile.category === "待补充") {
     return {
       category: profile.category,
-      summaryZh: translatedSummary,
+      summaryZh: `通过 Rube MCP（Composio）自动化 ${service} 相关任务。`,
       capabilityZh: `${service} 的上游说明只写到可通过 Rube MCP 自动化任务，没有列出更细的对象和动作。安装后先让 Claude 查询 Rube 返回的 ${service} 工具列表，再按实际 schema 执行。`,
       audienceZh: profile.audience,
       scenariosZh: profile.scenarios.map(item => item.replaceAll("{service}", service)),
@@ -331,7 +356,7 @@ function describeAutomation(service, text, summary) {
   }
   return {
     category: profile.category,
-    summaryZh: translatedSummary,
+    summaryZh: `自动化 ${service} 中的${profile.objects}。`,
     capabilityZh: `${service} 这类任务通常围绕${profile.objects}，可做${profile.actions}。执行前会先查询 Rube 当前工具 schema，实际能力取决于你的授权范围和 Rube 返回的工具列表。`,
     audienceZh: profile.audience,
     scenariosZh: profile.scenarios.map(item => item.replaceAll("{service}", service)),
@@ -394,7 +419,7 @@ function automationProfile(service, text) {
     },
     {
       category: "代码 / DevOps",
-      keywords: ["github", "gitlab", "bitbucket", "vercel", "netlify", "sentry", "datadog", "pagerduty", "circleci", "buildkite", "jenkins", "cloudflare", "docker", "kubernetes", "linear", "appcircle", "appveyor", "better-stack", "bugbug", "bugherd", "bugsnag", "bunnycdn", "browserbase", "browserhub"],
+      keywords: ["github", "gitlab", "bitbucket", "vercel", "netlify", "sentry", "datadog", "new-relic", "new relic", "pagerduty", "circleci", "buildkite", "jenkins", "cloudflare", "docker", "kubernetes", "linear", "appcircle", "appveyor", "better-stack", "bugbug", "bugherd", "bugsnag", "bunnycdn", "browserbase", "browserhub"],
       objects: "仓库、Issue、Pull Request、提交、部署、告警、日志和运行状态",
       actions: "查询、创建、更新、触发、评论、关闭和同步",
       audience: "开发者、DevOps、SRE 和需要自动处理工程协作流程的团队。",
@@ -410,7 +435,7 @@ function automationProfile(service, text) {
     },
     {
       category: "电商 / 订单",
-      keywords: ["shopify", "woocommerce", "magento", "bigcommerce", "etsy", "amazon", "ebay", "bestbuy", "baselinker", "brightpearl", "booqable", "shippo", "shipstation", "aftership", "printful", "stripe"],
+      keywords: ["shopify", "woocommerce", "magento", "bigcommerce", "etsy", "amazon", "ebay", "gumroad", "bestbuy", "baselinker", "brightpearl", "booqable", "shippo", "shipstation", "aftership", "printful", "stripe"],
       objects: "商品、订单、客户、库存、物流、退款、折扣和店铺数据",
       actions: "查询、创建、更新、发货、退款、同步和导出",
       audience: "电商运营、客服、店主和需要自动处理订单与库存的人。",
@@ -426,11 +451,11 @@ function automationProfile(service, text) {
     },
     {
       category: "营销 / 增长",
-      keywords: ["adrapid", "appsflyer", "ayrshare", "campayn", "callpage", "callingly", "mailchimp", "active-campaign", "klaviyo", "sendgrid", "brevo", "constant-contact", "customer.io", "campaign", "marketo", "facebook", "linkedin", "google-ads", "tiktok", "buffer", "hootsuite"],
-      objects: "联系人、受众、营销活动、邮件列表、广告、素材、表单和转化数据",
-      actions: "查询、创建、更新、发送、同步、统计和导出",
+      keywords: ["adrapid", "appsflyer", "ayrshare", "campayn", "callpage", "callingly", "mailchimp", "active-campaign", "klaviyo", "sendgrid", "brevo", "constant-contact", "customer.io", "campaign", "marketo", "facebook", "linkedin", "google-ads", "microsoft-clarity", "clarity", "tiktok", "buffer", "hootsuite"],
+      objects: "联系人、受众、营销活动、广告、素材、行为数据、转化数据和分析报表",
+      actions: "查询、创建、更新、发送、同步、统计、分群和导出",
       audience: "市场、增长、内容运营和需要自动化触达或统计营销效果的团队。",
-      scenarios: ["查询 {service} 的联系人、活动和投放数据", "创建或更新邮件活动、受众列表和素材", "整理转化、打开率、点击率或广告表现"]
+      scenarios: ["查询 {service} 的联系人、活动、行为和投放数据", "创建或更新营销活动、受众列表和素材", "整理转化、打开率、点击率、热力图或广告表现"]
     },
     {
       category: "数据 / 表格",
@@ -514,11 +539,11 @@ function automationProfile(service, text) {
     },
     {
       category: "文档识别 / OCR",
-      keywords: ["affinda", "algodocs", "api2pdf", "carbone", "docsumo", "docparser", "ocr", "pdf.co", "nanonets", "craftmypdf", "boldsign", "better-proposals", "bidsketch", "certifier"],
-      objects: "PDF、发票、简历、合同、表单、扫描件和结构化字段",
-      actions: "上传、识别、提取、校验、分类、导出和同步",
-      audience: "财务、HR、运营、法务和需要从文档里批量提取字段的人。",
-      scenarios: ["从 {service} 识别发票、合同或简历字段", "把扫描件和 PDF 转成结构化数据", "校验提取结果并导出到表格或系统"]
+      keywords: ["affinda", "algodocs", "api2pdf", "carbone", "docsumo", "docparser", "ocr", "pdf.co", "nanonets", "craftmypdf", "boldsign", "better-proposals", "bidsketch", "pandadoc", "certifier"],
+      objects: "PDF、发票、简历、合同、提案、模板、签署状态和结构化字段",
+      actions: "上传、识别、创建、提取、校验、分类、导出和同步",
+      audience: "财务、HR、运营、法务、销售和需要批量处理业务文档的人。",
+      scenarios: ["从 {service} 识别发票、合同或简历字段", "创建或跟踪合同、提案、模板和签署状态", "校验提取结果并导出到表格或系统"]
     },
     {
       category: "实时通信 / 开发者服务",

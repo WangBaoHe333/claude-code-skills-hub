@@ -561,6 +561,7 @@ async function submitCandidateSkill(event) {
       description: document.querySelector("#submit-description").value,
       whyUseful: document.querySelector("#submit-why").value,
       contact: document.querySelector("#submit-contact").value,
+      website: document.querySelector("#submit-website").value,
       proof
     };
     const response = await fetch(submissionApiUrl(), {

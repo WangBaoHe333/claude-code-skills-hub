@@ -4,7 +4,7 @@
     {
       "path": "SKILL.md",
       "encoding": "utf8",
-      "content": "---\nname: codeagent-wrapper\ndescription: \"[English](README.md) | [中文](README_CN.md)\"\n---\n\n# codeagent wrapper\n\n[English](README.md) | [中文](README_CN.md)\n\n## 中文说明\n\n创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。\n\n## 典型场景\n- 生成带标题、段落和列表的 Word 文档\n- 读取已有 .docx 并提取关键信息\n- 修改文档内容、结构和格式后重新导出"
+      "content": "---\nname: codeagent-wrapper\ndescription: \"[English](README.md) | [中文](README_CN.md)\"\n---\n\n# codeagent wrapper\n\n[English](README.md) | [中文](README_CN.md)\n\n## 中文说明\n\nCodeagent Wrapper 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。\n\n## 典型场景\n- 生成或修改 Claude Code skill\n- 整理 Agent/API 使用说明和开发步骤\n- 把工程任务拆成可执行的代码工作流"
     },
     {
       "path": ".github/workflows/ci.yml",

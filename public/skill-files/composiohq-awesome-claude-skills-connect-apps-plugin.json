@@ -4,7 +4,7 @@
     {
       "path": "SKILL.md",
       "encoding": "utf8",
-      "content": "---\nname: connect-apps-plugin\ndescription: \"Let Claude perform real actions in 500+ apps. Handles auth and connections using Composio under the hood.\"\n---\n\n# connect apps plugin\n\nLet Claude perform real actions in 500+ apps. Handles auth and connections using Composio under the hood.\n\n## 中文说明\n\n读取、分析、修改和生成电子表格，适合数据清洗、报表整理和表格自动化。\n\n## 典型场景\n- 批量读写单元格和工作表\n- 整理 CSV/XLSX 数据并生成统计结果\n- 制作可直接打开的表格文件"
+      "content": "---\nname: connect-apps-plugin\ndescription: \"Let Claude perform real actions in 500+ apps. Handles auth and connections using Composio under the hood.\"\n---\n\n# connect apps plugin\n\nLet Claude perform real actions in 500+ apps. Handles auth and connections using Composio under the hood.\n\n## 中文说明\n\nConnect Apps Plugin 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Connect Apps Plugin 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
     },
     {
       "path": ".claude-plugin/plugin.json",

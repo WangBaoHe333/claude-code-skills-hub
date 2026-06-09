@@ -4,7 +4,7 @@
     {
       "path": "SKILL.md",
       "encoding": "utf8",
-      "content": "---\nname: skills\ndescription: \"This directory contains agent skills (each skill lives in its own folder with a `SKILL.md`).\"\n---\n\n# skills\n\nThis directory contains agent skills (each skill lives in its own folder with a `SKILL.md`).\n\n## 中文说明\n\nSkills 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Skills 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+      "content": "---\nname: skills\ndescription: \"This directory contains agent skills (each skill lives in its own folder with a `SKILL.md`).\"\n---\n\n# skills\n\nThis directory contains agent skills (each skill lives in its own folder with a `SKILL.md`).\n\n## 中文说明\n\nSkills 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。\n\n## 典型场景\n- 生成或修改 Claude Code skill\n- 整理 Agent/API 使用说明和开发步骤\n- 把工程任务拆成可执行的代码工作流"
     },
     {
       "path": "README.md",

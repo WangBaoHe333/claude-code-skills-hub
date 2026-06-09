@@ -19,6 +19,7 @@ const deepseekBaseUrl = (process.env.DEEPSEEK_BASE_URL || "https://api.deepseek.
 const deepseekModel = process.env.DEEPSEEK_MODEL || "deepseek-chat";
 const publishCommand = process.env.PUBLISH_COMMAND || "";
 const rateBuckets = new Map();
+let aiBatchRunning = false;
 
 const server = createServer(async (request, response) => {
   try {
@@ -42,7 +43,9 @@ const server = createServer(async (request, response) => {
     if (request.method === "POST" && url.pathname === "/api/reject") return send(response, 200, await reject(await jsonBody(request)));
     if (request.method === "POST" && url.pathname === "/api/description") return send(response, 200, await saveDescription(await jsonBody(request)));
     if (request.method === "POST" && url.pathname === "/api/ai-review") return send(response, 200, await runAiReview(await jsonBody(request)));
+    if (request.method === "POST" && url.pathname === "/api/ai-review-pending") return send(response, 200, await runPendingAiReviews(await jsonBody(request)));
     if (request.method === "POST" && url.pathname === "/api/submission-decision") return send(response, 200, await decideSubmission(await jsonBody(request)));
+    if (request.method === "POST" && url.pathname === "/api/publish") return send(response, 200, await publishApprovedChanges());
 
     return send(response, 404, { error: "Not found" });
   } catch (error) {
@@ -80,9 +83,12 @@ async function createSubmission(request) {
   const ip = clientIp(request);
   enforceRateLimit(ip);
   const payload = await jsonBody(request, maxBodyBytes);
+  if (cleanText(payload.website, 200)) throw badRequest("Invalid submission");
   const repo = parseRepo(payload.repoUrl || payload.repo || "");
   const now = new Date().toISOString();
   const submissions = await readJson(dataPath, { submissions: [] });
+  const ipHash = hashIp(ip);
+  enforcePersistentRateLimit(ipHash, submissions);
   const duplicate = submissions.submissions.find(item =>
     item.repo === repo.full && item.status === "pending" && Date.now() - Date.parse(item.createdAt) < 24 * 60 * 60 * 1000
   );
@@ -101,9 +107,10 @@ async function createSubmission(request) {
     status: "pending",
     createdAt: now,
     updatedAt: now,
-    ipHash: hashIp(ip),
+    ipHash,
     userAgent: cleanText(request.headers["user-agent"], 260)
   };
+  if (item.description.length < 8) throw badRequest("Description is too short");
   if (!item.description && !item.skillPath) throw badRequest("Need description or skill path");
   submissions.submissions.unshift(item);
   await writeJson(dataPath, submissions);
@@ -184,6 +191,33 @@ async function runAiReview(payload) {
   };
   await writeJson(reviewPath, reviews);
   return { ok: true, review: reviews.reviews[id] };
+}
+
+async function runPendingAiReviews(payload = {}) {
+  if (aiBatchRunning) throw Object.assign(new Error("AI review batch is already running"), { status: 409 });
+  aiBatchRunning = true;
+  try {
+    const limit = Math.min(Math.max(Number(payload.limit || 5), 1), 10);
+    const force = Boolean(payload.force);
+    const submissions = await readJson(dataPath, { submissions: [] });
+    const reviews = await readJson(reviewPath, { reviews: {} });
+    const targets = (submissions.submissions || [])
+      .filter(item => ["pending", "needs_edit"].includes(item.status))
+      .filter(item => force || !reviews.reviews?.[item.id])
+      .slice(0, limit);
+    const results = [];
+    for (const item of targets) {
+      try {
+        const result = await runAiReview({ id: item.id });
+        results.push({ id: item.id, repo: item.repo, ok: true, risk: result.review?.review?.risk || "" });
+      } catch (error) {
+        results.push({ id: item.id, repo: item.repo, ok: false, error: error.message });
+      }
+    }
+    return { ok: true, count: results.length, results };
+  } finally {
+    aiBatchRunning = false;
+  }
 }
 
 async function collectEvidence(submission) {
@@ -447,6 +481,18 @@ function enforceRateLimit(ip) {
   rateBuckets.set(ip, recent);
 }
 
+function enforcePersistentRateLimit(ipHash, submissions) {
+  const now = Date.now();
+  const hourLimit = Number(process.env.SUBMIT_PERSISTENT_RATE_LIMIT_PER_HOUR || 8);
+  const dayLimit = Number(process.env.SUBMIT_PERSISTENT_RATE_LIMIT_PER_DAY || 24);
+  const entries = (submissions.submissions || []).filter(item => item.ipHash === ipHash);
+  const lastHour = entries.filter(item => now - Date.parse(item.createdAt || 0) < 60 * 60 * 1000).length;
+  const lastDay = entries.filter(item => now - Date.parse(item.createdAt || 0) < 24 * 60 * 60 * 1000).length;
+  if (lastHour >= hourLimit || lastDay >= dayLimit) {
+    throw Object.assign(new Error("Too many submissions, try later"), { status: 429 });
+  }
+}
+
 function clientIp(request) {
   const forwarded = String(request.headers["x-forwarded-for"] || "").split(",")[0].trim();
   return forwarded || request.socket.remoteAddress || "unknown";
@@ -587,13 +633,14 @@ function adminHtml() {
     .stat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}.stat div{border:1px solid #d8d0bf;padding:10px;background:#fbf7ed}.stat b{display:block;font-size:22px}
     .card{border:1px solid #d8d0bf;background:#fffdf8;margin:0 0 12px;padding:14px;display:grid;gap:8px}
     .meta{display:flex;gap:6px;flex-wrap:wrap}.pill{border:1px solid #d8d0bf;padding:2px 7px;color:#68645d;font-size:12px}
-    button{min-height:36px;border:1px solid #171717;background:#fffdf8;cursor:pointer;padding:6px 10px}button.primary{background:#0f5f4a;color:white}button.danger{background:#b9472f;color:white}
+    button{min-height:36px;border:1px solid #171717;background:#fffdf8;cursor:pointer;padding:6px 10px}button.primary{background:#0f5f4a;color:white}button.danger{background:#b9472f;color:white}button:disabled{opacity:.5;cursor:not-allowed}
     .actions{display:flex;gap:8px;flex-wrap:wrap}.accepted{background:#dff3ea}.rejected{opacity:.55}
     input,textarea,select{width:100%;border:1px solid #171717;padding:8px 10px;background:white;font:inherit} input,select{height:38px} textarea{min-height:76px;resize:vertical}
     .tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}.tabs button.active{background:#0f5f4a;color:white}
     .edit{display:grid;grid-template-columns:1fr 1fr;gap:10px}.edit label{font-size:12px;color:#68645d}.edit .full{grid-column:1/-1}
     pre{white-space:pre-wrap;background:#171717;color:#fffdf8;padding:12px;max-height:360px;overflow:auto}
     img{max-width:360px;max-height:240px;border:1px solid #d8d0bf}
+    .toolbar{display:grid;gap:8px;margin:12px 0}.status-low{border-color:#0f5f4a;color:#0f5f4a}.status-medium{border-color:#b7791f;color:#8a5600}.status-high{border-color:#b9472f;color:#b9472f}.muted{color:#68645d}
   </style>
 </head>
 <body>
@@ -603,10 +650,21 @@ function adminHtml() {
     <p>后台只应该通过本机或 SSH tunnel 访问。公开用户只能提交候选，不能查看审核数据。</p>
     <div class="tabs"><button id="tabSubmissions" class="active" onclick="mode='submissions'; render()">用户提交</button><button id="tabCandidates" onclick="mode='candidates'; render()">候选源</button></div>
     <div class="tabs"><button id="tabDescriptions" onclick="mode='descriptions'; render()">描述修正</button><button onclick="load()">刷新</button></div>
+    <div class="toolbar">
+      <select id="statusFilter" onchange="render()">
+        <option value="all">全部状态</option>
+        <option value="pending">只看待审</option>
+        <option value="needs_edit">只看需修改</option>
+        <option value="approved">只看已通过</option>
+        <option value="rejected">只看已拒绝</option>
+      </select>
+      <button class="primary" onclick="aiReviewPending()">AI 审核待审（最多 5 条）</button>
+      <button onclick="publishSite()">手动发布站点</button>
+    </div>
     <input id="q" placeholder="搜索 repo / skill / 描述">
     <div class="stat">
       <div><b id="submissionCount">0</b><span>提交</span></div>
-      <div><b id="candidateCount">0</b><span>候选</span></div>
+      <div><b id="pendingCount">0</b><span>待审</span></div>
       <div><b id="sourceCount">0</b><span>已收录</span></div>
     </div>
   </aside>
@@ -634,7 +692,7 @@ function render(){
   tabCandidates.classList.toggle('active', mode==='candidates');
   tabDescriptions.classList.toggle('active', mode==='descriptions');
   submissionCount.textContent = state.submissions.length;
-  candidateCount.textContent = state.candidates.length;
+  pendingCount.textContent = state.submissions.filter(s => s.status === 'pending').length;
   sourceCount.textContent = state.sources.length;
   if(mode==='descriptions') return renderDescriptions();
   if(mode==='candidates') return renderCandidates();
@@ -642,17 +700,24 @@ function render(){
 }
 function renderSubmissions(){
   const query = q.value.toLowerCase();
+  const status = statusFilter.value;
   list.innerHTML = state.submissions
+    .filter(s => status === 'all' || s.status === status)
     .filter(s => !query || (s.repo + ' ' + s.description + ' ' + s.whyUseful + ' ' + s.status).toLowerCase().includes(query))
+    .sort((a,b) => statusRank(a.status)-statusRank(b.status) || new Date(b.createdAt)-new Date(a.createdAt))
     .map(s => {
       const r = state.reviews[s.id];
+      const review = r && r.review ? r.review : null;
+      const risk = review ? String(review.risk || '') : '';
+      const approve = review ? String(review.shouldApprove) : '';
       return '<div class="card">'+
         '<strong>'+escapeHtml(s.repo)+'</strong>'+
-        '<div class="meta"><span class="pill">'+escapeHtml(s.status)+'</span><span class="pill">'+escapeHtml(s.createdAt)+'</span><span class="pill">'+escapeHtml(s.skillPath||'未填路径')+'</span></div>'+
+        '<div class="meta"><span class="pill">'+escapeHtml(s.status)+'</span><span class="pill">'+escapeHtml(s.createdAt)+'</span><span class="pill">'+escapeHtml(s.skillPath||'未填路径')+'</span>'+(risk?'<span class="pill status-'+escapeAttr(risk)+'">risk: '+escapeHtml(risk)+'</span>':'')+(approve?'<span class="pill">AI建议通过: '+escapeHtml(approve)+'</span>':'')+'</div>'+
         '<p><b>提交说明：</b>'+escapeHtml(s.description||'-')+'</p>'+
         '<p><b>为什么有用：</b>'+escapeHtml(s.whyUseful||'-')+'</p>'+
+        (s.contact ? '<p><b>联系方式：</b>'+escapeHtml(s.contact)+'</p>' : '')+
         (s.proof ? '<img src="'+basePath+'/api/proof?id='+encodeURIComponent(s.proof.id)+(params.get('token')?'&token='+encodeURIComponent(params.get('token')):'')+'">' : '')+
-        (r ? '<pre>'+escapeHtml(JSON.stringify(r.review, null, 2))+'</pre>' : '<p>还没有 AI 审核。</p>')+
+        (review ? '<pre>'+escapeHtml(JSON.stringify(review, null, 2))+'</pre>' : '<p class="muted">还没有 AI 审核。</p>')+
         '<div class="actions"><button class="primary" onclick="aiReview(\\''+escapeAttr(s.id)+'\\')">AI 审核</button><button class="primary" onclick="decide(\\''+escapeAttr(s.id)+'\\',\\'approved\\')">通过并加入来源</button><button onclick="decide(\\''+escapeAttr(s.id)+'\\',\\'needs_edit\\')">需要修改</button><button class="danger" onclick="decide(\\''+escapeAttr(s.id)+'\\',\\'rejected\\')">拒绝</button><button onclick="window.open(\\'https://github.com/'+escapeAttr(s.repo)+'\\')">打开 GitHub</button></div>'+
       '</div>';
     }).join('');
@@ -705,7 +770,10 @@ async function saveDesc(id){
 async function approve(repo){ const c=state.candidates.find(x=>x.repo===repo); await api('/api/approve', c); await load(); }
 async function rejectRepo(repo){ const c=state.candidates.find(x=>x.repo===repo); await api('/api/reject', c); await load(); }
 async function aiReview(id){ await api('/api/ai-review', {id}); await load(); }
-async function decide(id, decision){ const note = prompt('审核备注（可空）') || ''; await api('/api/submission-decision', {id, decision, note}); await load(); }
+async function aiReviewPending(){ const result = await api('/api/ai-review-pending', {limit:5}); alert('已审核 '+result.count+' 条'); await load(); }
+async function publishSite(){ const result = await api('/api/publish', {}); alert(result.published ? '发布完成' : ('未发布：'+(result.reason||''))); await load(); }
+async function decide(id, decision){ const note = prompt('审核备注（可空）') || ''; const result = await api('/api/submission-decision', {id, decision, note}); if(result.publish?.published) alert('已通过并发布站点'); await load(); }
+function statusRank(status){ return ({pending:0, needs_edit:1, approved:2, rejected:3})[status] ?? 9; }
 function escapeHtml(v){return String(v||'').replace(/[&<>"']/g, ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch]));}
 function escapeAttr(v){return String(v||'').replace(/['\\\\]/g,'');}
 q.addEventListener('input', render);

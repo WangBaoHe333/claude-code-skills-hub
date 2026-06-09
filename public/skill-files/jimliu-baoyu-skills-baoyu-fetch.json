@@ -4,7 +4,7 @@
     {
       "path": "SKILL.md",
       "encoding": "utf8",
-      "content": "---\nname: baoyu-fetch\ndescription: \"English | [简体中文](./README.zh-CN.md) | [Changelog](./CHANGELOG.md) | [中文更新日志](./CHANGELOG.zh-CN.md)\"\n---\n\n# baoyu fetch\n\nEnglish | [简体中文](./README.zh-CN.md) | [Changelog](./CHANGELOG.md) | [中文更新日志](./CHANGELOG.zh-CN.md)\n\n## 中文说明\n\n下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。\n\n## 典型场景\n- 按视频链接抓取字幕\n- 生成章节摘要和重点列表\n- 保存封面图和视频基础信息"
+      "content": "---\nname: baoyu-fetch\ndescription: \"English | [简体中文](./README.zh-CN.md) | [Changelog](./CHANGELOG.md) | [中文更新日志](./CHANGELOG.zh-CN.md)\"\n---\n\n# baoyu fetch\n\nEnglish | [简体中文](./README.zh-CN.md) | [Changelog](./CHANGELOG.md) | [中文更新日志](./CHANGELOG.zh-CN.md)\n\n## 中文说明\n\nBaoyu Fetch 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。\n\n## 典型场景\n- 把链接内容转成 Markdown\n- 提取视频字幕或社媒正文\n- 把外部资料整理成摘要和后续待办"
     },
     {
       "path": ".changeset/README.md",

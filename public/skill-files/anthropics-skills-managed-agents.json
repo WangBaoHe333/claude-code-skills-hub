@@ -4,7 +4,7 @@
     {
       "path": "SKILL.md",
       "encoding": "utf8",
-      "content": "---\nname: managed-agents\ndescription: \"> **Bindings not shown here:** This README covers the most common managed-agents flows for TypeScript. If you need a class, method, namespace, field, or behavior that isn't shown,…\"\n---\n\n# managed agents\n\n> **Bindings not shown here:** This README covers the most common managed-agents flows for TypeScript. If you need a class, method, namespace, field, or behavior that isn't shown, WebFetch the TypeScript SDK repo **or the relevant docs page** from `shared/live-sources.md` rather than guess. Do not extrapolate from cURL shapes or another language's SDK.\n\n## 中文说明\n\n制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。\n\n## 典型场景\n- 生成 Slack 可用的表情或动图\n- 验证 GIF 文件大小和动画限制\n- 把多段动画组合成可发送的 GIF"
+      "content": "---\nname: managed-agents\ndescription: \"> **Bindings not shown here:** This README covers the most common managed-agents flows for TypeScript. If you need a class, method, namespace, field, or behavior that isn't shown,…\"\n---\n\n# managed agents\n\n> **Bindings not shown here:** This README covers the most common managed-agents flows for TypeScript. If you need a class, method, namespace, field, or behavior that isn't shown, WebFetch the TypeScript SDK repo **or the relevant docs page** from `shared/live-sources.md` rather than guess. Do not extrapolate from cURL shapes or another language's SDK.\n\n## 中文说明\n\nManaged Agents 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。\n\n## 典型场景\n- 把链接内容转成 Markdown\n- 提取视频字幕或社媒正文\n- 把外部资料整理成摘要和后续待办"
     },
     {
       "path": "README.md",
