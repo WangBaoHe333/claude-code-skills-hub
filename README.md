@@ -30,7 +30,6 @@ Claude Code skills 很有用，但普通用户经常遇到这些问题：
 - 支持把已选 skills 批量打包成 ccswitch 可导入 ZIP
 - ZIP 内保证每个 skill 文件夹包含 `SKILL.md`
 - 每个 skill 详情页标注来源仓库、路径、原始描述和许可提示
-- 由维护者审核来源、描述和推荐排序
 
 ## 数据来源与标注
 
@@ -45,34 +44,8 @@ Claude Code skills 很有用，但普通用户经常遇到这些问题：
 
 这个项目是索引、聚合和安装工具，不声明拥有第三方 skill 内容。第三方 skill 文件、名称、说明和源码归原仓库作者所有，并遵循各自上游许可或声明。
 
-## 维护方式
-
-这个项目目前由维护者自行维护。
-
-如果你发现：
-
-- skill 描述错误
-- 来源标注错误
-- ccswitch ZIP 导入问题
-- 值得收录的新 skill 仓库
-- 页面功能问题
-
-可以在 GitHub issue 里反馈。是否收录、是否推荐、是否同步到线上站，由维护者审核决定。
-
-## 后续计划
-
-后续会加入私有 AI 审核流程，用于辅助维护者检查：
-
-- skill 是否真实可用
-- 描述是否准确
-- 来源和许可是否清楚
-- 是否适合作为常用/推荐 skill
-
-AI 审核、用户提交、截图证明、后台审核、API key 和审核日志都不会放在公开仓库中。
-
 ## License
 
 平台代码按 AGPL-3.0-only 开源，见 [LICENSE](./LICENSE)。
 
 第三方 skill 内容不属于本项目原创内容，按各自上游仓库的 license、terms 或声明处理。来源和标注见 [THIRD_PARTY_SOURCES.md](./THIRD_PARTY_SOURCES.md) 与 [NOTICE.md](./NOTICE.md)。
-
