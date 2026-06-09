@@ -8,7 +8,54 @@ const state = {
   query: "",
   repo: "all",
   tag: "all",
-  sort: "common"
+  sort: "common",
+  queryTerms: []
+};
+
+const SEARCH_ALIASES = {
+  "常用": ["推荐", "必装", "基础", "common", "recommended"],
+  "文档": ["doc", "docs", "docx", "word", "pdf", "报告", "合同", "材料", "文件"],
+  "pdf": ["文档", "合同", "论文", "发票", "扫描件"],
+  "word": ["doc", "docx", "文档", "报告", "合同"],
+  "表格": ["excel", "xlsx", "sheet", "spreadsheet", "csv", "数据", "报表"],
+  "excel": ["excle", "xlsx", "sheet", "spreadsheet", "表格", "报表"],
+  "ppt": ["pptx", "slide", "presentation", "幻灯片", "演示", "汇报"],
+  "图片": ["image", "photo", "cover", "poster", "视觉", "封面", "插画", "海报", "图像"],
+  "图像": ["image", "图片", "照片", "视觉", "封面"],
+  "压缩": ["compress", "resize", "压缩图片", "图片压缩", "变小"],
+  "翻译": ["translate", "translation", "英文", "中文", "本地化"],
+  "网页": ["web", "website", "browser", "playwright", "浏览器", "页面", "站点"],
+  "浏览器": ["browser", "playwright", "web", "网页", "网站", "页面"],
+  "测试": ["test", "testing", "qa", "检查", "验证", "验收"],
+  "字幕": ["transcript", "subtitle", "youtube", "视频", "转录"],
+  "视频": ["youtube", "transcript", "subtitle", "字幕", "转录"],
+  "发布": ["post", "publish", "wechat", "weibo", "x", "公众号", "微博"],
+  "公众号": ["wechat", "微信", "发布", "文章"],
+  "代码": ["code", "github", "git", "dev", "api", "开发", "编程"],
+  "开发": ["code", "dev", "github", "api", "代码", "agent"],
+  "自动化": ["automation", "automate", "rube", "composio", "接口", "api"],
+  "接口": ["api", "automation", "自动化"],
+  "邮件": ["email", "mail", "gmail", "outlook", "邮箱"],
+  "日历": ["calendar", "meeting", "会议", "预约"],
+  "会议": ["meeting", "calendar", "日历", "预约"],
+  "任务": ["task", "project", "todo", "jira", "linear", "项目"],
+  "项目": ["project", "task", "jira", "linear", "任务"],
+  "客服": ["support", "ticket", "工单", "客户"],
+  "工单": ["ticket", "support", "客服"],
+  "销售": ["sales", "crm", "lead", "客户", "线索"],
+  "线索": ["lead", "prospect", "sales", "销售"],
+  "财务": ["finance", "invoice", "payment", "发票", "付款", "账单"],
+  "发票": ["invoice", "财务", "账单", "pdf"],
+  "设计": ["design", "figma", "canva", "图片", "视觉"],
+  "爬虫": ["scrape", "crawler", "抓取", "网页"],
+  "抓取": ["scrape", "crawler", "爬虫", "提取"],
+  "知识库": ["knowledge", "search", "docs", "检索", "搜索"],
+  "搜索": ["search", "find", "检索", "查询"],
+  "github": ["git", "代码", "仓库", "issue", "pr"],
+  "slack": ["消息", "团队", "通知", "chat"],
+  "notion": ["笔记", "知识库", "文档"],
+  "figma": ["设计", "design", "原型"],
+  "canva": ["设计", "海报", "图片"]
 };
 
 const els = {
@@ -196,6 +243,7 @@ async function init() {
 function bindEvents() {
   els.search.addEventListener("input", event => {
     state.query = event.target.value.trim().toLowerCase();
+    state.queryTerms = expandQueryTerms(state.query);
     applyFilters();
   });
 
@@ -283,32 +331,14 @@ function populateFilters() {
 }
 
 function applyFilters() {
-  const query = state.query;
+  const queryTerms = state.queryTerms;
 
   state.filtered = state.checkedOnly
     ? state.skills.filter(skill => state.checked.has(skill.id))
     : state.skills.filter(skill => {
       const matchesRepo = state.repo === "all" || skill.source.repo === state.repo;
       const matchesTag = state.tag === "all" || (skill.tags || []).includes(state.tag);
-      const haystack = [
-        skill.name,
-        skill.displayName,
-        skill.summary,
-        skill.summaryZh,
-        skill.summaryEn,
-        skill.capabilityZh,
-        skill.capabilityEn,
-        skill.audienceZh,
-        skill.audienceEn,
-        skill.usageZh,
-        skill.usageEn,
-        skill.source.repo,
-        skill.source.path,
-        ...(skill.scenariosZh || []),
-        ...(skill.scenariosEn || []),
-        ...(skill.tags || [])
-      ].join(" ").toLowerCase();
-      return matchesRepo && matchesTag && (!query || haystack.includes(query));
+      return matchesRepo && matchesTag && (!queryTerms.length || searchScore(skill, queryTerms) > 0);
     });
 
   sortFiltered();
@@ -383,7 +413,12 @@ function sortFiltered() {
     selected: (a, b) => Number(state.checked.has(b.id)) - Number(state.checked.has(a.id)) || commonScore(b) - commonScore(a),
     name: (a, b) => a.displayName.localeCompare(b.displayName)
   };
-  state.filtered.sort(comparators[state.sort] || comparators.common);
+  const baseComparator = comparators[state.sort] || comparators.common;
+  if (state.queryTerms.length) {
+    state.filtered.sort((a, b) => searchScore(b, state.queryTerms) - searchScore(a, state.queryTerms) || baseComparator(a, b));
+    return;
+  }
+  state.filtered.sort(baseComparator);
 }
 
 function commonScore(skill) {
@@ -404,6 +439,129 @@ function commonScore(skill) {
   const automationPenalty = name.includes("automation") ? -120 : 0;
   const obscurePenalty = name.startsWith("-") ? -120 : 0;
   return categoryScore + officialScore + curatedScore + selectedScore + automationPenalty + obscurePenalty;
+}
+
+function searchScore(skill, queryTerms) {
+  if (!queryTerms.length) return 1;
+  const text = skill.searchText || "";
+  const tokens = skill.searchTokens || [];
+  let score = 0;
+
+  for (const term of queryTerms) {
+    if (!term) continue;
+    if (text.includes(term)) {
+      score += term.length >= 4 ? 12 : 8;
+      if (normalizeSearchText(skill.displayName).includes(term)) score += 16;
+      if (normalizeSearchText(skill.category).includes(term)) score += 8;
+      continue;
+    }
+    if (isAsciiTerm(term) && fuzzyTokenHit(term, tokens)) score += 4;
+  }
+
+  return score;
+}
+
+function expandQueryTerms(query) {
+  const normalized = normalizeSearchText(query);
+  if (!normalized) return [];
+  const terms = new Set();
+  const compactQuery = normalized.replace(/\s+/g, "");
+  addSearchTerm(terms, normalized);
+  addSearchTerm(terms, compactQuery);
+
+  for (const token of normalized.split(/\s+/)) addSearchTerm(terms, token);
+
+  for (const [key, aliases] of Object.entries(SEARCH_ALIASES)) {
+    const normalizedKey = normalizeSearchText(key);
+    const all = [normalizedKey, ...aliases.map(normalizeSearchText)];
+    if (all.some(item => item && (normalized.includes(item) || compactQuery.includes(item.replace(/\s+/g, ""))))) {
+      all.forEach(item => addSearchTerm(terms, item));
+    }
+  }
+
+  return [...terms].filter(term => term.length > 1);
+}
+
+function buildSearchText(skill) {
+  const base = [
+    skill.name,
+    skill.displayName,
+    skill.summary,
+    skill.summaryZh,
+    skill.summaryEn,
+    skill.capabilityZh,
+    skill.capabilityEn,
+    skill.audienceZh,
+    skill.audienceEn,
+    skill.usageZh,
+    skill.usageEn,
+    skill.category,
+    skill.source?.repo,
+    skill.source?.path,
+    ...(skill.scenariosZh || []),
+    ...(skill.scenariosEn || []),
+    ...(skill.tags || [])
+  ].join(" ");
+  const normalized = normalizeSearchText(base);
+  const expanded = new Set([normalized]);
+
+  for (const [key, aliases] of Object.entries(SEARCH_ALIASES)) {
+    const all = [key, ...aliases].map(normalizeSearchText);
+    if (all.some(item => item && normalized.includes(item))) {
+      all.forEach(item => addSearchTerm(expanded, item));
+    }
+  }
+
+  return [...expanded].join(" ");
+}
+
+function searchTokens(text) {
+  return [...new Set(normalizeSearchText(text).split(/\s+/).filter(item => item.length > 1))];
+}
+
+function addSearchTerm(terms, term) {
+  const normalized = normalizeSearchText(term);
+  if (normalized && normalized.length > 1) terms.add(normalized);
+}
+
+function normalizeSearchText(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[_/\\.-]+/g, " ")
+    .replace(/[^\p{L}\p{N}\u4e00-\u9fff]+/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function isAsciiTerm(term) {
+  return /^[a-z0-9]+$/.test(term) && term.length >= 4;
+}
+
+function fuzzyTokenHit(term, tokens) {
+  return tokens.some(token => {
+    if (!isAsciiTerm(token)) return false;
+    if (Math.abs(token.length - term.length) > 2) return false;
+    const limit = term.length > 7 ? 2 : 1;
+    return editDistanceWithin(term, token, limit);
+  });
+}
+
+function editDistanceWithin(a, b, limit) {
+  if (Math.abs(a.length - b.length) > limit) return false;
+  let previous = Array.from({ length: b.length + 1 }, (_, index) => index);
+  for (let i = 1; i <= a.length; i += 1) {
+    const current = [i];
+    let rowMin = current[0];
+    for (let j = 1; j <= b.length; j += 1) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      const value = Math.min(previous[j] + 1, current[j - 1] + 1, previous[j - 1] + cost);
+      current[j] = value;
+      rowMin = Math.min(rowMin, value);
+    }
+    if (rowMin > limit) return false;
+    previous = current;
+  }
+  return previous[b.length] <= limit;
 }
 
 function renderDetail() {
@@ -696,7 +854,7 @@ function normalizeSkill(skill) {
   const summaryEn = englishSummary(skill.summary, displayName);
   const tags = new Set(skill.tags || []);
   if (isCommonSkill({ ...skill, displayName, summaryZh })) tags.add("common");
-  return {
+  const normalized = {
     ...skill,
     displayName,
     folderName: folderName(displayName),
@@ -713,6 +871,9 @@ function normalizeSkill(skill) {
     tags: [...tags],
     usageEn: skill.usageEn || `Install the skill, then ask Claude Code to use ${displayName} for the specific task, file, or service you want to work with.`
   };
+  normalized.searchText = buildSearchText(normalized);
+  normalized.searchTokens = searchTokens(normalized.searchText);
+  return normalized;
 }
 
 function isCommonSkill(skill) {
