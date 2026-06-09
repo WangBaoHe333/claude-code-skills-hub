@@ -23,10 +23,11 @@ const rateBuckets = new Map();
 const server = createServer(async (request, response) => {
   try {
     const url = new URL(request.url || "/", `http://${request.headers.host || "localhost"}`);
+    const originalPath = url.pathname;
     stripBasePath(url);
 
     if (request.method === "OPTIONS") return options(response);
-    if (request.method === "POST" && url.pathname === publicSubmitPath) {
+    if (request.method === "POST" && originalPath === publicSubmitPath) {
       return send(response, 200, await createSubmission(request));
     }
 
@@ -52,7 +53,7 @@ const server = createServer(async (request, response) => {
 server.listen(port, host, () => {
   const suffix = token ? "?token=PRIVATE_TOKEN" : "";
   console.log(`Skill review server: http://${host}:${port}${basePath || "/"}${suffix}`);
-  console.log(`Public submit endpoint: ${basePath}${publicSubmitPath}`);
+  console.log(`Local public submit endpoint: http://${host}:${port}${publicSubmitPath}`);
 });
 
 function normalizeBasePath(value) {
