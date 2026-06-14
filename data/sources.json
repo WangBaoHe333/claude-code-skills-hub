@@ -19,6 +19,190 @@
       "repo": "stellarlinkco/myclaude",
       "url": "https://github.com/stellarlinkco/myclaude.git",
       "type": "curated-source"
+    },
+    {
+      "repo": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC.git",
+      "type": "auto-promoted-high-star",
+      "stars": 215443,
+      "discoveredAt": "2026-06-14T21:53:56.644Z",
+      "reason": "215443 stars, 868 SKILL.md, 4 skill README hints, has skills directory"
+    },
+    {
+      "repo": "nexu-io/open-design",
+      "url": "https://github.com/nexu-io/open-design.git",
+      "type": "auto-promoted-high-star",
+      "stars": 64767,
+      "discoveredAt": "2026-06-14T21:53:56.644Z",
+      "reason": "64767 stars, 513 SKILL.md, 2 skill README hints, has skills directory"
+    },
+    {
+      "repo": "ruvnet/ruflo",
+      "url": "https://github.com/ruvnet/ruflo.git",
+      "type": "auto-promoted-high-star",
+      "stars": 59462,
+      "discoveredAt": "2026-06-14T21:53:56.644Z",
+      "reason": "59462 stars, 321 SKILL.md, 2 skill README hints, has skills directory"
+    },
+    {
+      "repo": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything.git",
+      "type": "auto-promoted-high-star",
+      "stars": 43034,
+      "discoveredAt": "2026-06-14T21:53:56.644Z",
+      "reason": "43034 stars, 150 SKILL.md, 2 skill README hints, has skills directory"
+    },
+    {
+      "repo": "code-yeongyu/oh-my-openagent",
+      "url": "https://github.com/code-yeongyu/oh-my-openagent.git",
+      "type": "auto-promoted-high-star",
+      "stars": 62215,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "62215 stars, 60 SKILL.md, 50 skill README hints, has skills directory"
+    },
+    {
+      "repo": "garrytan/gstack",
+      "url": "https://github.com/garrytan/gstack.git",
+      "type": "auto-promoted-high-star",
+      "stars": 110114,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "110114 stars, 59 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills.git",
+      "type": "auto-promoted-high-star",
+      "stars": 128710,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "128710 stars, 29 SKILL.md, 6 skill README hints, has skills directory"
+    },
+    {
+      "repo": "bytedance/deer-flow",
+      "url": "https://github.com/bytedance/deer-flow.git",
+      "type": "auto-promoted-high-star",
+      "stars": 71160,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "71160 stars, 25 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills.git",
+      "type": "auto-promoted-high-star",
+      "stars": 59408,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "59408 stars, 24 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "abhigyanpatwari/GitNexus",
+      "url": "https://github.com/abhigyanpatwari/GitNexus.git",
+      "type": "auto-promoted-high-star",
+      "stars": 42116,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "42116 stars, 24 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem.git",
+      "type": "auto-promoted-high-star",
+      "stars": 82253,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "82253 stars, 19 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers.git",
+      "type": "auto-promoted-high-star",
+      "stars": 227753,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "227753 stars, 14 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "JuliusBrussee/caveman",
+      "url": "https://github.com/JuliusBrussee/caveman.git",
+      "type": "auto-promoted-high-star",
+      "stars": 72472,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "72472 stars, 11 SKILL.md, 7 skill README hints, has skills directory"
+    },
+    {
+      "repo": "Leonxlnx/taste-skill",
+      "url": "https://github.com/Leonxlnx/taste-skill.git",
+      "type": "auto-promoted-high-star",
+      "stars": 43634,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "43634 stars, 13 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "shanraisshan/claude-code-best-practice",
+      "url": "https://github.com/shanraisshan/claude-code-best-practice.git",
+      "type": "auto-promoted-high-star",
+      "stars": 57701,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "57701 stars, 9 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "browser-use/browser-use",
+      "url": "https://github.com/browser-use/browser-use.git",
+      "type": "auto-promoted-high-star",
+      "stars": 98815,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "98815 stars, 5 SKILL.md, 2 skill README hints, has skills directory"
+    },
+    {
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git",
+      "type": "auto-promoted-high-star",
+      "stars": 91613,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "91613 stars, 7 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "microsoft/playwright",
+      "url": "https://github.com/microsoft/playwright.git",
+      "type": "auto-promoted-high-star",
+      "stars": 90947,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "90947 stars, 4 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "shareAI-lab/learn-claude-code",
+      "url": "https://github.com/shareAI-lab/learn-claude-code.git",
+      "type": "auto-promoted-high-star",
+      "stars": 66493,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "66493 stars, 4 SKILL.md, 1 skill README hints, has skills directory"
+    },
+    {
+      "repo": "cline/cline",
+      "url": "https://github.com/cline/cline.git",
+      "type": "auto-promoted-high-star",
+      "stars": 63285,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "63285 stars, 4 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "github/spec-kit",
+      "url": "https://github.com/github/spec-kit.git",
+      "type": "auto-promoted-high-star",
+      "stars": 112137,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "112137 stars, 1 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "safishamsi/graphify",
+      "url": "https://github.com/safishamsi/graphify.git",
+      "type": "auto-promoted-high-star",
+      "stars": 67112,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "67112 stars, 1 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "multica-ai/andrej-karpathy-skills",
+      "url": "https://github.com/multica-ai/andrej-karpathy-skills.git",
+      "type": "auto-promoted-high-star",
+      "stars": 175313,
+      "discoveredAt": "2026-06-14T21:53:56.645Z",
+      "reason": "175313 stars, 1 SKILL.md, has skills directory"
     }
   ]
 }
