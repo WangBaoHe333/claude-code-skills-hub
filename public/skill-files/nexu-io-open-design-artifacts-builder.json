@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-artifacts-builder",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: artifacts-builder\ndescription: |\n  Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui).\ntriggers:\n  - \"artifacts builder\"\n  - \"html artifact\"\n  - \"multi component artifact\"\n  - \"react artifact\"\nod:\n  mode: prototype\n  category: web-artifacts\n  upstream: \"https://github.com/ComposioHQ/awesome-claude-skills/tree/master/artifacts-builder\"\n---\n\n# artifacts-builder\n\n> Curated from ComposioHQ awesome-claude-skills.\n\n## What it does\n\nSuite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui).\n\n## Source\n\n- Upstream: https://github.com/ComposioHQ/awesome-claude-skills/tree/master/artifacts-builder\n- Category: `web-artifacts`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/ComposioHQ/awesome-claude-skills/tree/master/artifacts-builder\n```\n\nThen ask the agent to invoke this skill by name (`artifacts-builder`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

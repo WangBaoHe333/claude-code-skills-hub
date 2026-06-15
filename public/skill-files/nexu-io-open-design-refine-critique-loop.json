@@ -1,0 +1,15 @@
+{
+  "id": "nexu-io-open-design-refine-critique-loop",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: refine-critique-loop\ndescription: Use this plugin when the user has an existing Open Design artifact and wants targeted critique, patching, brand tightening, responsive fixes, or quality improvement without starting over.\nlicense: MIT\nmetadata:\n  author: open-design-spec\n  version: \"0.1.0\"\n---\n\n# Refine Critique Loop\n\n## Workflow\n\n1. Read the existing artifact and identify the user's refinement goal.\n2. Run a structured critique for hierarchy, fit, accessibility, responsiveness, and artifact-specific quality.\n3. Apply the smallest useful patch.\n4. Re-run critique and stop when quality converges or the iteration limit is reached.\n5. Return a diff summary and what changed.\n\n## Output Contract\n\nPatch the existing artifact and produce `refine-summary.md`.\n\n"
+    },
+    {
+      "path": "open-design.json",
+      "encoding": "utf8",
+      "content": "{\n  \"$schema\": \"https://open-design.ai/schemas/plugin.v1.json\",\n  \"specVersion\": \"1.0.0\",\n  \"name\": \"refine-critique-loop\",\n  \"title\": \"Critique And Refine\",\n  \"version\": \"0.1.0\",\n  \"description\": \"Review, patch, and improve an existing Open Design artifact.\",\n  \"license\": \"MIT\",\n  \"tags\": [\"refine\", \"critique\", \"review\", \"patch-edit\", \"tune-collab\"],\n  \"compat\": {\n    \"agentSkills\": [{ \"path\": \"./SKILL.md\" }]\n  },\n  \"od\": {\n    \"kind\": \"skill\",\n    \"taskKind\": \"tune-collab\",\n    \"mode\": \"refine\",\n    \"scenario\": \"critique\",\n    \"useCase\": {\n      \"query\": \"Refine the current artifact with focus on {{focus}}.\"\n    },\n    \"context\": {\n      \"skills\": [{ \"path\": \"./SKILL.md\" }],\n      \"atoms\": [\"file-read\", \"critique-theater\", \"patch-edit\", \"diff-review\"]\n    },\n    \"pipeline\": {\n      \"stages\": [\n        { \"id\": \"inspect\", \"atoms\": [\"file-read\"] },\n        {\n          \"id\": \"critique\",\n          \"atoms\": [\"critique-theater\"],\n          \"repeat\": true,\n          \"until\": \"critique.score>=4 || iterations>=3\"\n        },\n        { \"id\": \"patch\", \"atoms\": [\"patch-edit\", \"diff-review\"] }\n      ]\n    },\n    \"inputs\": [\n      { \"name\": \"focus\", \"type\": \"string\", \"required\": false, \"label\": \"Focus\", \"default\": \"visual polish, responsive behavior, and text fit\" }\n    ],\n    \"capabilities\": [\"prompt:inject\", \"fs:read\", \"fs:write\"]\n  }\n}\n\n"
+    }
+  ]
+}

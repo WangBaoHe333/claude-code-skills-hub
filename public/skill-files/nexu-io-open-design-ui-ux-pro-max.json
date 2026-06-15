@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-ui-ux-pro-max",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: ui-ux-pro-max\ndescription: |\n  Catalog-only UI/UX Pro Max entry. The full upstream templates, data, and search workflow are not bundled in Open Design.\ntriggers:\n  - \"ui ux patterns\"\n  - \"design patterns\"\n  - \"ux heuristics\"\n  - \"usability\"\nod:\n  mode: design-system\n  category: design-systems\n  upstream: \"https://github.com/nextlevelbuilder/ui-ux-pro-max-skill\"\n---\n\n# ui-ux-pro-max\n\n> Curated from @nextlevelbuilder.\n\n## What it does\n\nCatalog-only UI/UX Pro Max entry. The full upstream templates, data, and search workflow are not bundled in Open Design.\n\n## Current Open Design scope\n\nOpen Design currently ships this entry as discovery metadata only. If this `SKILL.md`\nis the only file under `skills/ui-ux-pro-max/`, the upstream UI/UX Pro Max\nworkflow is not available locally.\n\nThe full upstream workflow expects additional assets such as the searchable\n`data` CSVs, the `scripts/search.py` helper, reference material, templates, and\nrelated upstream skill instructions. Without those files, do not tell users that\nthe full UI/UX Pro Max pattern library or template search is active.\n\n## Source\n\n- Upstream: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill\n- Category: `design-systems`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/nextlevelbuilder/ui-ux-pro-max-skill\n```\n\nThen ask the agent to invoke this skill by name (`ui-ux-pro-max`) or with\none of the trigger phrases listed in this skill's frontmatter.\n\nIf those upstream files are not installed, explain that Open Design only has the\ncatalog entry for this skill and ask whether to continue with Open Design's\ndefault design-system guidance instead.\n"
+    }
+  ]
+}

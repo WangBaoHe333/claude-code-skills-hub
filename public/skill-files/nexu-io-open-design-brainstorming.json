@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-brainstorming",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: brainstorming\ndescription: |\n  Transform rough ideas into fully-formed designs through structured questioning and alternative exploration. Useful early in concept work.\ntriggers:\n  - \"brainstorm\"\n  - \"ideation\"\n  - \"concept exploration\"\n  - \"rough ideas\"\n  - \"design alternatives\"\nod:\n  mode: design-system\n  category: creative-direction\n  upstream: \"https://github.com/obra/superpowers\"\n---\n\n# brainstorming\n\n> Curated from @obra.\n\n## What it does\n\nTransform rough ideas into fully-formed designs through structured questioning and alternative exploration. Useful early in concept work.\n\n## Source\n\n- Upstream: https://github.com/obra/superpowers\n- Category: `creative-direction`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/obra/superpowers\n```\n\nThen ask the agent to invoke this skill by name (`brainstorming`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

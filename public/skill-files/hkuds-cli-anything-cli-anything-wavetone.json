@@ -1,0 +1,10 @@
+{
+  "id": "hkuds-cli-anything-cli-anything-wavetone",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: \"cli-anything-wavetone\"\ndescription: \"Control WaveTone 2.61 workflows through a JSON manifest and launch the real Windows WaveTone executable.\"\n---\n\n# cli-anything-wavetone\n\nUse this skill when an agent needs to prepare, inspect, and launch WaveTone 2.61\naudio transcription workflows.\n\n## Requirements\n\n- Windows host.\n- WaveTone 2.61 extracted locally.\n- Set `WAVETONE_EXE` to `wavetone.exe` or `WAVETONE_HOME` to the extracted\n  WaveTone directory when the default portable path is not used.\n\n## Core Commands\n\nAll commands support the top-level `--json` flag.\n\n```bash\ncli-anything-wavetone --json wavetone doctor\ncli-anything-wavetone --json project new input.wav -o project.wt.json\ncli-anything-wavetone --project project.wt.json --json audio probe\ncli-anything-wavetone --project project.wt.json --json project set-tempo --bpm 120 --meter 4/4\ncli-anything-wavetone --project project.wt.json --json project add-label chorus --time 64.0\ncli-anything-wavetone --project project.wt.json --json wavetone launch\n```\n\n## Command Groups\n\n- `project`: create manifests, set tempo, add labels, update intended analysis\n  settings, and attach a WFD saved from WaveTone.\n- `audio`: probe audio metadata before opening it in WaveTone.\n- `wavetone`: run `doctor`, list supported formats, or launch the real GUI.\n- `session`: record lightweight event logs for multi-step agent workflows.\n- `defaults`: show default analysis settings.\n\n## Agent Guidance\n\nThe JSON project manifest is not a WaveTone WFD file. It is an agent-facing plan\nfor the source audio, intended analysis settings, labels, and tempo metadata.\nUse WaveTone itself to perform analysis and save WFD/MIDI/text/WAVE outputs.\n\nWhen running in automated checks, use:\n\n```bash\ncli-anything-wavetone --json wavetone launch input.wav --wait 1 --terminate\n```\n\nThis confirms that the real backend can be started without leaving a persistent\nGUI process behind.\n"
+    }
+  ]
+}

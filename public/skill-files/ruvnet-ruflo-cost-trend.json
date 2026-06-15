@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-cost-trend",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: cost-trend\ndescription: Read every docs/benchmarks/runs/*.json and surface drift in win rate, latency, escalation rate, and LLM-baseline cost over time\nargument-hint: \"\"\nallowed-tools: Bash\n---\n\n# Cost Trend\n\nThe smoke gate is binary (`winRate ≥ 0.80` → pass/fail). The corpus benchmarks captured over time form a curve — and curves catch regressions the gate misses (win rate slowly creeping from 100% to 85% is \"still passing\" by smoke but a real degradation).\n\nThis skill reads every persisted run in `docs/benchmarks/runs/*.json` and reports first→last deltas plus a per-run series, flagging regressions in win rate or latency.\n\n## When to use\n\n- Before a release — check that the speedup hasn't drifted.\n- After expanding the corpus — verify older runs still hit the same win rate on the new corpus *they* reflected.\n- After upgrading `agent-booster` — surface latency / strategy changes.\n\n## Steps\n\n1. **Run the trend script** from the project root:\n\n   ```bash\n   node plugins/ruflo-cost-tracker/scripts/trend.mjs\n   ```\n\n   Optional env:\n   - `TREND_FORMAT=json` — emit JSON instead of markdown\n   - `TREND_LIMIT=10` — consider only the most recent N runs\n\n2. **Inspect the drift summary** — first vs last on win rate, avg latency, p99, escalation rate, speedup vs Gemini.\n\n3. **Inspect the per-run series** — one row per run, including Sonnet 4.6 + Opus 4.7 baseline latencies if those were enabled (`BENCH_ANTHROPIC=1` at run time).\n\n4. **Regression flags** — the script emits `> ⚠ Regression` callouts when:\n   - Win rate dropped between first and last run\n   - Avg latency rose ≥ 1.5× from first run\n\n## Cross-references\n\n- `cost-benchmark` — the producer of the run JSONs this skill consumes\n- `bench/booster-corpus.json` — the corpus version is recorded in each run, so trends across corpus versions remain interpretable\n- `docs/benchmarks/runs/latest.json` — the most-recent run; smoke step 23 gates on `winRate ≥ 0.80` from this file\n"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "thedotmack-claude-mem-how-it-works",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: how-it-works\ndescription: Explain how claude-mem captures observations, when memory injection kicks in, and where data lives. Use when the user asks \"how does claude-mem work?\" or \"what is this thing doing?\".\n---\n\n# How claude-mem works\n\n## What it does\n\nEvery Read, Edit, and Bash that Claude makes turns into a compressed observation. Observations get summarized at session end. Relevant ones get auto-injected into future prompts so the next session starts with context from the last one — no re-explaining the codebase, no re-discovering decisions.\n\n## When it kicks in\n\nMemory injection starts on your second session in a project.\n\nThe first session in a fresh project seeds memory; subsequent sessions receive auto-injected context for relevant past work. Run `/learn-codebase` if you want to front-load the entire repo into memory in a single pass (~5 minutes, optional).\n\n## Where data lives\n\nEverything stays in ~/.claude-mem on this machine.\n\nNothing leaves your machine except calls to whichever AI provider you configured for compression (Claude / OpenRouter / Gemini). The SQLite database, vector index, logs, and settings all live under that directory and are removed cleanly on `npx claude-mem uninstall`.\n"
+    },
+    {
+      "path": "onboarding-explainer.md",
+      "encoding": "utf8",
+      "content": "# How claude-mem works\n\n## What it does\n\nEvery Read, Edit, and Bash that Claude makes turns into a compressed observation. Observations get summarized at session end. Relevant ones get auto-injected into future prompts so the next session starts with context from the last one — no re-explaining the codebase, no re-discovering decisions.\n\n## When it kicks in\n\nMemory injection starts on your second session in a project.\n\nThe first session in a fresh project seeds memory; subsequent sessions receive auto-injected context for relevant past work. Run `/learn-codebase` if you want to front-load the entire repo into memory in a single pass (~5 minutes, optional).\n\n## Where data lives\n\nEverything stays in ~/.claude-mem on this machine.\n\nNothing leaves your machine except calls to whichever AI provider you configured for compression (Claude / OpenRouter / Gemini). The SQLite database, vector index, logs, and settings all live under that directory and are removed cleanly on `npx claude-mem uninstall`.\n"
+    }
+  ]
+}

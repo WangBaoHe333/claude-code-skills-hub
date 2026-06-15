@@ -1,0 +1,15 @@
+{
+  "id": "nexu-io-open-design-share-github-pr",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: share-github-pr\ndescription: Use this plugin when the user wants to package an accepted plugin or artifact as a GitHub pull request for Open Design or another target repository.\nlicense: MIT\nmetadata:\n  author: open-design-spec\n  version: \"0.1.0\"\n---\n\n# Share GitHub PR\n\n## Workflow\n\n1. Confirm the target repository, branch, and PR intent before making externally visible changes.\n2. Read the changed artifact or plugin folder and create a concise PR summary.\n3. Run available validation commands.\n4. Stage only relevant files.\n5. Open or prepare the PR and report the URL or exact next command.\n\n## Output Contract\n\nProduce `pr-summary.md` and a PR URL or prepared branch summary.\n\n"
+    },
+    {
+      "path": "open-design.json",
+      "encoding": "utf8",
+      "content": "{\n  \"$schema\": \"https://open-design.ai/schemas/plugin.v1.json\",\n  \"specVersion\": \"1.0.0\",\n  \"name\": \"share-github-pr\",\n  \"title\": \"Share as GitHub PR\",\n  \"version\": \"0.1.0\",\n  \"description\": \"Package an accepted artifact or plugin folder as a GitHub pull request.\",\n  \"license\": \"MIT\",\n  \"tags\": [\"share\", \"github-pr\", \"pull-request\", \"spec-plugin\"],\n  \"compat\": {\n    \"agentSkills\": [{ \"path\": \"./SKILL.md\" }]\n  },\n  \"od\": {\n    \"kind\": \"skill\",\n    \"taskKind\": \"tune-collab\",\n    \"mode\": \"share\",\n    \"scenario\": \"github-pr\",\n    \"useCase\": {\n      \"query\": \"Prepare a GitHub PR for {{targetRepo}} from the accepted artifact or plugin folder.\"\n    },\n    \"context\": {\n      \"skills\": [{ \"path\": \"./SKILL.md\" }],\n      \"atoms\": [\"file-read\", \"todo-write\", \"handoff\", \"connector\"]\n    },\n    \"pipeline\": {\n      \"stages\": [\n        { \"id\": \"inspect\", \"atoms\": [\"file-read\", \"todo-write\"] },\n        { \"id\": \"confirm\", \"atoms\": [\"connector\"] },\n        { \"id\": \"handoff\", \"atoms\": [\"handoff\"] }\n      ]\n    },\n    \"connectors\": {\n      \"required\": [\n        { \"id\": \"github\", \"tools\": [\"create-pull-request\"] }\n      ]\n    },\n    \"genui\": {\n      \"surfaces\": [\n        {\n          \"id\": \"confirm-pr\",\n          \"kind\": \"confirmation\",\n          \"persist\": \"run\",\n          \"trigger\": { \"stageId\": \"confirm\", \"atom\": \"connector\" },\n          \"prompt\": \"Open a GitHub PR with the prepared branch and summary?\"\n        }\n      ]\n    },\n    \"inputs\": [\n      { \"name\": \"targetRepo\", \"type\": \"string\", \"required\": true, \"label\": \"Target repository\", \"placeholder\": \"nexu-io/open-design\" }\n    ],\n    \"capabilities\": [\"prompt:inject\", \"fs:read\", \"connector\", \"connector:github\", \"network\"]\n  }\n}\n\n"
+    }
+  ]
+}

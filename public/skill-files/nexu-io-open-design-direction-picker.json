@@ -1,0 +1,15 @@
+{
+  "id": "nexu-io-open-design-direction-picker",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: direction-picker\ndescription: 3-5 direction picker that lets the user choose before final generation.\nod:\n  scenario: general\n  mode: planning\n---\n\n# Direction picker\n\nGenerative work benefits from explicit divergence before it converges.\nThe direction-picker atom asks the agent to draft 3-5 distinct\ndirections (visual / structural / tonal) and surface them via a\nGenUI `choice` surface so the user picks the winning direction before\nthe expensive generation pass.\n\n## Convergence\n\nThe atom completes when the user resolves the `choice` surface with a\ndirection id. The agent's next turn must lock onto that direction —\nbacktracking forces a fresh devloop iteration of the picker stage.\n\n## Anti-patterns the prompt fragment forbids\n\n- More than 5 directions on one turn (decision fatigue).\n- Two directions that are minor variations of each other.\n- Locking the user into a single direction with cosmetic alternates\n  (every direction must be a defensible standalone bet).\n"
+    },
+    {
+      "path": "open-design.json",
+      "encoding": "utf8",
+      "content": "{\n  \"$schema\": \"https://open-design.ai/schemas/plugin.v1.json\",\n  \"specVersion\": \"1.0.0\",\n  \"name\": \"direction-picker\",\n  \"title\": \"Direction picker\",\n  \"version\": \"0.1.0\",\n  \"description\": \"3-5 direction picker that lets the user choose before final generation.\",\n  \"license\": \"MIT\",\n  \"author\": {\n    \"name\": \"Open Design\",\n    \"url\": \"https://github.com/nexu-io\"\n  },\n  \"homepage\": \"https://github.com/nexu-io/open-design/tree/main/plugins/_official/atoms/direction-picker\",\n  \"tags\": [\n    \"atom\",\n    \"first-party\",\n    \"planning\"\n  ],\n  \"compat\": {\n    \"agentSkills\": [\n      {\n        \"path\": \"./SKILL.md\"\n      }\n    ]\n  },\n  \"od\": {\n    \"kind\": \"atom\",\n    \"scenario\": \"general\",\n    \"mode\": \"planning\",\n    \"capabilities\": [\n      \"prompt:inject\"\n    ]\n  }\n}\n"
+    }
+  ]
+}

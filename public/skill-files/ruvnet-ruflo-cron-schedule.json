@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-cron-schedule",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: cron-schedule\ndescription: Schedule persistent background workers via CronCreate\nargument-hint: \"<worker-name> [--interval CRON]\"\nallowed-tools: CronCreate CronList CronDelete mcp__claude-flow__hooks_worker-dispatch\n---\nUse `CronCreate` for workers that must survive session restarts:\n\n`CronCreate({ schedule: \"*/15 * * * *\", prompt: \"Run security audit worker via mcp__claude-flow__hooks_worker-dispatch\" })`\n\n### Recommended Schedules\n\n| Worker | Cron | Description |\n|--------|------|-------------|\n| audit | `*/15 * * * *` | Security scanning |\n| optimize | `*/30 * * * *` | Performance optimization |\n| consolidate | `0 * * * *` | Memory consolidation |\n| map | `*/30 * * * *` | Codebase mapping |\n| testgaps | `*/15 * * * *` | Test coverage analysis |\n| document | `0 */2 * * *` | API documentation |\n\n### When to Use Cron vs Loop\n\n- **`/loop`**: In-session, cache-aware, self-pacing. Use for active development.\n- **CronCreate**: Persistent, survives restarts. Use for CI/monitoring.\n"
+    }
+  ]
+}

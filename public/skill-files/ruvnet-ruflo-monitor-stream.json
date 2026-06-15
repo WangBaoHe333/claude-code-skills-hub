@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-monitor-stream",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: monitor-stream\ndescription: Stream live swarm events using the Monitor tool for real-time observability\nargument-hint: \"\"\nallowed-tools: Bash(npx *) mcp__claude-flow__swarm_status mcp__claude-flow__swarm_health Monitor\n---\nUse the Monitor tool to stream swarm events in real time instead of polling:\n\nRun via Monitor: `npx @claude-flow/cli@latest swarm watch --stream`\n\nThis streams NDJSON events for agent spawns, task completions, memory writes, and health checks. Each stdout line triggers a notification.\n\nFor one-shot status, use MCP: `mcp__claude-flow__swarm_status` or `mcp__claude-flow__swarm_health`.\n\nPrefer Monitor over polling `swarm status` in a loop. See ADR-091 for rationale.\n"
+    }
+  ]
+}

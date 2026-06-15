@@ -1,0 +1,65 @@
+{
+  "id": "cline-cline-configs",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: configs\ndescription: \"Each subdirectory here is a **Cline config directory** used by one or more test suites. Tests point to a config via `clineEnv(\\\"<name>\\\")` in `tests/e2e/cli/helpers/env.ts`.\"\n---\n\n# configs\n\nEach subdirectory here is a **Cline config directory** used by one or more test suites. Tests point to a config via `clineEnv(\"<name>\")` in `tests/e2e/cli/helpers/env.ts`.\n\n## 中文说明\n\nConfigs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Configs 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Test Fixture Configs\n\nEach subdirectory here is a **Cline config directory** used by one or more test suites.\nTests point to a config via `clineEnv(\"<name>\")` in `tests/e2e/cli/helpers/env.ts`.\n\n## Available fixtures\n\n| Directory | Purpose |\n|-----------|---------|\n| `default/` | Minimal config used for local/non-live CLI TUI tests. |\n| `unauthenticated/` | Explicitly empty config (no provider or API keys). |\n\n## Adding a new fixture\n\n1. Create `configs/<name>/data/globalState.json` with the desired state.\n2. Create `configs/<name>/data/settings/cline_mcp_settings.json` (can be `{ \"mcpServers\": {} }`).\n3. Reference it in tests with `clineEnv(\"<name>\")`.\n\n## Secrets\n\nAPI keys and secrets should never be committed.\nIf you create authenticated fixtures locally, keep `data/secrets.json` untracked or fill it with mock data\n"
+    },
+    {
+      "path": "claude-sonnet-4.6/data/cache/remote_config_org-01JZPE4CHW5XTP73W95762121Y.json",
+      "encoding": "utf8",
+      "content": "{\n\t\"version\": \"v1\",\n\t\"providerSettings\": {},\n\t\"telemetryEnabled\": true,\n\t\"mcpMarketplaceEnabled\": true,\n\t\"yoloModeAllowed\": true,\n\t\"openTelemetryEnabled\": false,\n\t\"openTelemetryOtlpInsecure\": false,\n\t\"enterpriseTelemetry\": {\n\t\t\"promptUploading\": {\n\t\t\t\"enabled\": true,\n\t\t\t\"type\": \"s3_access_keys\",\n\t\t\t\"s3AccessSettings\": {\n\t\t\t\t\"bucket\": \"cline-tasks\",\n\t\t\t\t\"accessKeyId\": \"fake\",\n\t\t\t\t\"secretAccessKey\": \"fake\",\n\t\t\t\t\"region\": \"us-west-2\"\n\t\t\t}\n\t\t}\n\t}\n}\n"
+    },
+    {
+      "path": "claude-sonnet-4.6/data/globalState.json",
+      "encoding": "utf8",
+      "content": "{\n\t\"remoteRulesToggles\": {},\n\t\"remoteWorkflowToggles\": {},\n\t\"welcomeViewCompleted\": true,\n\t\"actModeOpenRouterModelInfo\": {\n\t\t\"name\": \"Anthropic: Claude Sonnet 4.6\",\n\t\t\"maxTokens\": 128000,\n\t\t\"contextWindow\": 200000,\n\t\t\"supportsImages\": true,\n\t\t\"supportsPromptCache\": true,\n\t\t\"inputPrice\": 3,\n\t\t\"outputPrice\": 15,\n\t\t\"cacheWritesPrice\": 3.75,\n\t\t\"cacheReadsPrice\": 0.3,\n\t\t\"description\": \"Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, end-to-end project management with memory, polished document creation, and confident computer use for web QA and workflow automation.\",\n\t\t\"thinkingConfig\": {\n\t\t\t\"maxBudget\": 6000\n\t\t}\n\t},\n\t\"planModeOpenRouterModelInfo\": {\n\t\t\"name\": \"Anthropic: Claude Sonnet 4.6\",\n\t\t\"maxTokens\": 128000,\n\t\t\"contextWindow\": 200000,\n\t\t\"supportsImages\": true,\n\t\t\"supportsPromptCache\": true,\n\t\t\"inputPrice\": 3,\n\t\t\"outputPrice\": 15,\n\t\t\"cacheWritesPrice\": 3.75,\n\t\t\"cacheReadsPrice\": 0.3,\n\t\t\"description\": \"Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, end-to-end project management with memory, polished document creation, and confident computer use for web QA and workflow automation.\",\n\t\t\"thinkingConfig\": {\n\t\t\t\"maxBudget\": 6000\n\t\t}\n\t},\n\t\"actModeApiProvider\": \"cline\",\n\t\"planModeApiProvider\": \"cline\",\n\t\"actModeClineModelId\": \"anthropic/claude-sonnet-4.6\",\n\t\"planModeClineModelId\": \"anthropic/claude-sonnet-4.6\",\n\t\"openAiHeaders\": {},\n\t\"sapAiCoreUseOrchestrationMode\": true,\n\t\"ocaMode\": \"internal\",\n\t\"globalClineRulesToggles\": {},\n\t\"globalWorkflowToggles\": {}\n}\n"
+    },
+    {
+      "path": "claude-sonnet-4.6/data/settings/cline_mcp_settings.json",
+      "encoding": "utf8",
+      "content": "{\n\t\"mcpServers\": {}\n}\n"
+    },
+    {
+      "path": "claude-sonnet-4.6/data/settings/providers.json",
+      "encoding": "utf8",
+      "content": "{\n\t\"version\": 1,\n\t\"lastUsedProvider\": \"cline\",\n\t\"providers\": {\n\t\t\"cline\": {\n\t\t\t\"settings\": {\n\t\t\t\t\"provider\": \"cline\",\n\t\t\t\t\"auth\": {\n\t\t\t\t\t\"accessToken\": \"workos:eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiJ0ZXN0SWQiLCJleHRlcm5hbF9pZCI6InRlc3RJZCIsImVtYWlsIjoidGVzdEBjbGluZS5ib3QiLCJuYW1lIjoiVGVzdCBVc2VyIiwiZXhwIjoxODk5NTc4OTI0LCJpYXQiOjE3NzMzNDQzODQsInNpZCI6InRlc3Qtc2Vzc2lvbi1pZCJ9.\",\n\t\t\t\t\t\"refreshToken\": \"testRefreshToken\",\n\t\t\t\t\t\"expiresAt\": 1899578924000,\n\t\t\t\t\t\"accountId\": \"testId\"\n\t\t\t\t},\n\t\t\t\t\"model\": \"anthropic/claude-sonnet-4.6\"\n\t\t\t},\n\t\t\t\"updatedAt\": \"2026-03-24T21:55:22.629Z\",\n\t\t\t\"tokenSource\": \"oauth\"\n\t\t}\n\t}\n}\n"
+    },
+    {
+      "path": "claude-sonnet-4.6/data/workspaces/43962aa4/workspaceState.json",
+      "encoding": "utf8",
+      "content": "{\n\t\"localClineRulesToggles\": {},\n\t\"localWindsurfRulesToggles\": {},\n\t\"localCursorRulesToggles\": {},\n\t\"localAgentsRulesToggles\": {},\n\t\"workflowToggles\": {}\n}\n"
+    },
+    {
+      "path": "default/data/globalState.json",
+      "encoding": "utf8",
+      "content": "{\n\t\"remoteRulesToggles\": {},\n\t\"remoteWorkflowToggles\": {},\n\t\"actModeOpenRouterModelInfo\": {\n\t\t\"name\": \"Anthropic: Claude Sonnet 4.6\",\n\t\t\"maxTokens\": 128000,\n\t\t\"contextWindow\": 200000,\n\t\t\"supportsImages\": true,\n\t\t\"supportsPromptCache\": true,\n\t\t\"inputPrice\": 3,\n\t\t\"outputPrice\": 15,\n\t\t\"cacheWritesPrice\": 3.75,\n\t\t\"cacheReadsPrice\": 0.3,\n\t\t\"description\": \"Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, end-to-end project management with memory, polished document creation, and confident computer use for web QA and workflow automation.\",\n\t\t\"thinkingConfig\": {\n\t\t\t\"maxBudget\": 6000\n\t\t}\n\t},\n\t\"planModeOpenRouterModelInfo\": {\n\t\t\"name\": \"Anthropic: Claude Sonnet 4.6\",\n\t\t\"maxTokens\": 128000,\n\t\t\"contextWindow\": 200000,\n\t\t\"supportsImages\": true,\n\t\t\"supportsPromptCache\": true,\n\t\t\"inputPrice\": 3,\n\t\t\"outputPrice\": 15,\n\t\t\"cacheWritesPrice\": 3.75,\n\t\t\"cacheReadsPrice\": 0.3,\n\t\t\"description\": \"Sonnet 4.6 is Anthropic's most capable Sonnet-class model yet, with frontier performance across coding, agents, and professional work. It excels at iterative development, complex codebase navigation, end-to-end project management with memory, polished document creation, and confident computer use for web QA and workflow automation.\",\n\t\t\"thinkingConfig\": {\n\t\t\t\"maxBudget\": 6000\n\t\t}\n\t},\n\t\"actModeApiProvider\": \"cline\",\n\t\"planModeApiProvider\": \"cline\",\n\t\"actModeClineModelId\": \"anthropic/claude-sonnet-4.6\",\n\t\"planModeClineModelId\": \"anthropic/claude-sonnet-4.6\",\n\t\"welcomeViewCompleted\": true,\n\t\"actModeThinkingBudgetTokens\": 0,\n\t\"planModeThinkingBudgetTokens\": 0,\n\t\"autoApprovalSettings\": {\n\t\t\"version\": 19,\n\t\t\"enabled\": true,\n\t\t\"favorites\": [],\n\t\t\"maxRequests\": 20,\n\t\t\"actions\": {\n\t\t\t\"readFiles\": true,\n\t\t\t\"readFilesExternally\": false,\n\t\t\t\"editFiles\": false,\n\t\t\t\"editFilesExternally\": false,\n\t\t\t\"executeSafeCommands\": true,\n\t\t\t\"executeAllCommands\": false,\n\t\t\t\"useBrowser\": false,\n\t\t\t\"useMcp\": true\n\t\t},\n\t\t\"enableNotifications\": false\n\t},\n\t\"primaryRootIndex\": 0,\n\t\"globalWorkflowToggles\": {},\n\t\"globalClineRulesToggles\": {},\n\t\"isNewUser\": false,\n\t\"subagentsEnabled\": true\n}\n"
+    },
+    {
+      "path": "default/data/settings/cline_mcp_settings.json",
+      "encoding": "utf8",
+      "content": "{\n\t\"mcpServers\": {}\n}\n"
+    },
+    {
+      "path": "default/data/settings/providers.json",
+      "encoding": "utf8",
+      "content": "{\n\t\"version\": 1,\n\t\"lastUsedProvider\": \"cline\",\n\t\"providers\": {\n\t\t\"cline\": {\n\t\t\t\"settings\": {\n\t\t\t\t\"provider\": \"cline\",\n\t\t\t\t\"auth\": {\n\t\t\t\t\t\"accessToken\": \"workos:eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiJ0ZXN0SWQiLCJleHRlcm5hbF9pZCI6InRlc3RJZCIsImVtYWlsIjoidGVzdEBjbGluZS5ib3QiLCJuYW1lIjoiVGVzdCBVc2VyIiwiZXhwIjoxODk5NTc4OTI0LCJpYXQiOjE3NzMzNDQzODQsInNpZCI6InRlc3Qtc2Vzc2lvbi1pZCJ9.\",\n\t\t\t\t\t\"refreshToken\": \"testRefreshToken\",\n\t\t\t\t\t\"expiresAt\": 1899578924000,\n\t\t\t\t\t\"accountId\": \"testId\"\n\t\t\t\t},\n\t\t\t\t\"model\": \"anthropic/claude-sonnet-4.6\"\n\t\t\t},\n\t\t\t\"updatedAt\": \"2026-01-01T00:00:00.000Z\",\n\t\t\t\"tokenSource\": \"oauth\"\n\t\t}\n\t}\n}\n"
+    },
+    {
+      "path": "unauthenticated/data/globalState.json",
+      "encoding": "utf8",
+      "content": "{\n\t\"apiProvider\": null,\n\t\"apiKey\": null,\n\t\"openRouterApiKey\": null,\n\t\"awsAccessKey\": null,\n\t\"awsSecretKey\": null,\n\t\"awsSessionToken\": null,\n\t\"awsRegion\": null,\n\t\"vertexProjectId\": null,\n\t\"vertexRegion\": null,\n\t\"openAiBaseUrl\": null,\n\t\"openAiApiKey\": null,\n\t\"openAiModelId\": null,\n\t\"ollamaModelId\": null,\n\t\"ollamaBaseUrl\": null,\n\t\"lmStudioModelId\": null,\n\t\"lmStudioBaseUrl\": null,\n\t\"anthropicBaseUrl\": null,\n\t\"geminiApiKey\": null,\n\t\"openAiNativeApiKey\": null,\n\t\"deepSeekApiKey\": null,\n\t\"mistralApiKey\": null,\n\t\"unboundApiKey\": null,\n\t\"requestyApiKey\": null,\n\t\"togetherApiKey\": null,\n\t\"qwenApiKey\": null,\n\t\"doubaoApiKey\": null,\n\t\"liteLlmBaseUrl\": null,\n\t\"liteLlmApiKey\": null,\n\t\"liteLlmModelId\": null,\n\t\"clineApiKey\": null,\n\t\"taskHistory\": [],\n\t\"remoteRulesToggles\": {},\n\t\"remoteWorkflowToggles\": {},\n\t\"actModeThinkingBudgetTokens\": 0,\n\t\"planModeThinkingBudgetTokens\": 0,\n\t\"welcomeViewCompleted\": false\n}\n"
+    },
+    {
+      "path": "unauthenticated/data/settings/cline_mcp_settings.json",
+      "encoding": "utf8",
+      "content": "{\n\t\"mcpServers\": {}\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "hkuds-cli-anything-cli-anything-intelwatch",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: \"cli-anything-intelwatch\"\ndescription: >-\n  Zero friction. Full context. Competitive intelligence, M&A due diligence, and OSINT directly from your terminal. Uses Node.js/npx.\n---\n\n# cli-anything-intelwatch\n\nIntelwatch bridges the gap between hacker OSINT and B2B Sales/M&A data. It executes complex financial data aggregation, technology stack detection, and AI-powered due diligence in seconds.\n\n## Installation\n\nThis CLI is installed as part of the cli-anything-intelwatch package:\n\n```bash\npip install cli-anything-intelwatch\n```\n\n**Prerequisites:**\n- Node.js >=18 must be installed and accessible via `npx`\n- Run `node -v` and `npx -v` to ensure your system meets the requirements\n\n## Usage\n\n### Basic Commands\n\n```bash\n# Show help\ncli-anything-intelwatch --help\n\n# Generate a deep profile for a company\ncli-anything-intelwatch profile kpmg.fr\n\n# Generate a profile with AI Due Diligence\ncli-anything-intelwatch profile kpmg.fr --ai\n```\n\n## For AI Agents\n\nWhen using this CLI programmatically:\n\n1. Provide the domain name (e.g., `doctolib.fr`)\n2. Use the `--ai` flag to let Intelwatch perform due diligence automatically\n3. The output is human-readable and provides a deep breakdown of the company\n4. Ensure `npx` is available on the machine\n\n## Example Scenarios\n\n- **M&A Due Diligence:** `cli-anything-intelwatch profile company-name.com --ai`\n- **Sales Intelligence:** `cli-anything-intelwatch profile target-client.com`\n"
+    }
+  ]
+}

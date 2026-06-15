@@ -1,0 +1,10 @@
+{
+  "id": "hkuds-cli-anything-cli-anything-dify-workflow",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: \"cli-anything-dify-workflow\"\ndescription: Wrapper for the Dify workflow DSL CLI. Create, inspect, validate, edit, and export Dify workflow files through a CLI-Anything harness.\n---\n\n# Dify Workflow CLI Skill\n\n## Installation\n\nInstall the upstream Dify workflow CLI first:\n\n```bash\npython -m pip install \"dify-ai-workflow-tools @ git+https://github.com/Akabane71/dify-workflow-cli.git@main\"\n```\n\nThen install the CLI-Anything harness:\n\n```bash\npip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=dify-workflow/agent-harness\n```\n\n## Usage\n\nThe harness forwards to the upstream `dify-workflow` CLI.\n\n```bash\ncli-anything-dify-workflow guide\ncli-anything-dify-workflow list-node-types\ncli-anything-dify-workflow create -o workflow.yaml --mode workflow --template llm\ncli-anything-dify-workflow inspect workflow.yaml -j\ncli-anything-dify-workflow validate workflow.yaml -j\ncli-anything-dify-workflow edit add-node -f workflow.yaml --type code --title \"Process\"\ncli-anything-dify-workflow config set-model -f app.yaml --provider openai --name gpt-4o\n```\n\n## Command Groups\n\n- `guide`\n- `list-node-types`\n- `create`\n- `inspect`\n- `validate`\n- `checklist`\n- `edit add-node|remove-node|update-node|add-edge|remove-edge|set-title`\n- `config set-model|set-prompt|add-variable|set-opening|add-question|add-tool|remove-tool`\n- `export`\n- `import`\n- `diff`\n- `layout`\n\n## Agent Guidance\n\n- Prefer `-j` / `--json-output` on upstream commands when available.\n- The harness itself is a wrapper. Real workflow logic is provided by the upstream project.\n- If `dify-workflow` is not on PATH but the `dify_workflow` Python package is installed, the wrapper falls back to `python -m dify_workflow.cli`.\n- All operations are local file edits on Dify YAML/JSON DSL files.\n"
+    }
+  ]
+}

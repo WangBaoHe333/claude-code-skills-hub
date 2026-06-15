@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-ruflo-doctor",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: ruflo-doctor\ndescription: Run health checks on the Ruflo installation and fix common issues\nargument-hint: \"[--fix]\"\nallowed-tools: Bash(npx *)\n---\nRun `npx @claude-flow/cli@latest doctor --fix` to diagnose and auto-repair common issues.\n\nChecks: Node.js 20+, npm 9+, git, config validity, daemon status, memory database, API keys, MCP servers, disk space, TypeScript.\n\nTargeted fixes:\n- Memory: `npx @claude-flow/cli@latest memory init --force`\n- Daemon: `npx @claude-flow/cli@latest daemon start`\n- Config: `npx @claude-flow/cli@latest config reset`\n"
+    }
+  ]
+}

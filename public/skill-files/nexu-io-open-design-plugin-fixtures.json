@@ -1,0 +1,25 @@
+{
+  "id": "nexu-io-open-design-plugin-fixtures",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: plugin-fixtures\ndescription: \"apps/daemon/tests/fixtures/plugin-fixtures\"\n---\n\n# plugin fixtures\n\napps/daemon/tests/fixtures/plugin-fixtures\n\n## 中文说明\n\nPlugin Fixtures 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Plugin Fixtures 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# apps/daemon/tests/fixtures/plugin-fixtures\n\nDeclarative plugin fixtures used by Phase 1 plugin-system tests\n(`docs/plans/plugins-implementation.md` Phase 1 e2e-1).\n\nEach subfolder is a self-contained Open Design plugin (per\n`docs/plugins-spec.md` §5) ready to be passed to\n`od plugin install --source <path>`.\n\n- `sample-plugin/` — minimal `open-design.json` + companion `SKILL.md`.\n  The sidecar has primary precedence; the `SKILL.md` exists so the\n  daemon's compat adapter can be tested in isolation by deleting\n  `open-design.json`.\n"
+    },
+    {
+      "path": "sample-plugin/SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: sample-plugin\ndescription: Phase 1 sample plugin synthesizing a SKILL.md frontmatter for backwards-compat tests.\nod:\n  kind: skill\n  taskKind: new-generation\n  preview:\n    type: deck\n---\n\n# Sample Plugin\n\nThis is the SKILL.md half of the Phase 1 e2e fixture. The companion\n`open-design.json` sidecar carries the canonical Open Design plugin\nmanifest fields; this file proves the SKILL-only adapter path stays\nhonest when an install lacks an explicit sidecar (just delete\n`open-design.json` to test the legacy compat tier).\n\n## Workflow\n\n1. Acknowledge the user's brief via the discovery question form atom.\n2. Use TodoWrite to plan the brief.\n3. Emit the brief as a deck artifact.\n"
+    },
+    {
+      "path": "sample-plugin/open-design.json",
+      "encoding": "utf8",
+      "content": "{\n  \"$schema\": \"https://open-design.ai/schemas/plugin.v1.json\",\n  \"specVersion\": \"1.0.0\",\n  \"name\": \"sample-plugin\",\n  \"title\": \"Sample Plugin\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Phase 1 e2e fixture used by od plugin install/apply walkthroughs.\",\n  \"license\": \"MIT\",\n  \"tags\": [\"sample\", \"phase1\"],\n  \"od\": {\n    \"kind\": \"skill\",\n    \"taskKind\": \"new-generation\",\n    \"useCase\": {\n      \"query\": \"Generate a {{topic}} brief for {{audience}}.\"\n    },\n    \"context\": {\n      \"skills\": [{ \"ref\": \"open-design-landing\" }],\n      \"atoms\": [\"todo-write\", \"discovery-question-form\"]\n    },\n    \"inputs\": [\n      { \"name\": \"topic\", \"type\": \"string\", \"required\": true, \"label\": \"Topic\" },\n      { \"name\": \"audience\", \"type\": \"select\", \"options\": [\"VC pitch\", \"general\"], \"default\": \"general\" }\n    ],\n    \"capabilities\": [\"prompt:inject\"]\n  }\n}\n"
+    }
+  ]
+}

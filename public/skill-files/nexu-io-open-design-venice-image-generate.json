@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-venice-image-generate",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: venice-image-generate\ndescription: |\n  Image generation endpoints and available styles via the Venice.ai API.\ntriggers:\n  - \"venice image\"\n  - \"venice generate\"\n  - \"venice ai image\"\nod:\n  mode: image\n  category: image-generation\n  upstream: \"https://github.com/veniceai/skills\"\n---\n\n# venice-image-generate\n\n> Curated from the Venice.ai team.\n\n## What it does\n\nImage generation endpoints and available styles via the Venice.ai API.\n\n## Source\n\n- Upstream: https://github.com/veniceai/skills\n- Category: `image-generation`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/veniceai/skills\n```\n\nThen ask the agent to invoke this skill by name (`venice-image-generate`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

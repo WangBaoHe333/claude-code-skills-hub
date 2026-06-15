@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-fal-train",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: fal-train\ndescription: |\n  Train custom AI models (LoRA) on fal.ai for personalized image generation tailored to a brand, character, or style.\ntriggers:\n  - \"fal train\"\n  - \"train lora\"\n  - \"custom model\"\n  - \"personalized image gen\"\n  - \"brand lora\"\nod:\n  mode: image\n  category: image-generation\n  upstream: \"https://github.com/fal-ai-community/skills\"\n---\n\n# fal-train\n\n> Curated from the fal.ai community team.\n\n## What it does\n\nTrain custom AI models (LoRA) on fal.ai for personalized image generation tailored to a brand, character, or style.\n\n## Source\n\n- Upstream: https://github.com/fal-ai-community/skills\n- Category: `image-generation`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/fal-ai-community/skills\n```\n\nThen ask the agent to invoke this skill by name (`fal-train`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

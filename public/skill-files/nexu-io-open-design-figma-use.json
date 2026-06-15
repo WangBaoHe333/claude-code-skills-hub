@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-figma-use",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: figma-use\ndescription: |\n  Run Figma Plugin API scripts for canvas writes, inspections, variables, and design-system work. Prerequisite for every other Figma skill in this catalogue.\ntriggers:\n  - \"figma use\"\n  - \"figma plugin api\"\n  - \"figma canvas\"\n  - \"figma scripts\"\nod:\n  mode: design-system\n  category: figma\n  upstream: \"https://github.com/figma/skills\"\n---\n\n# figma-use\n\n> Curated from Figma's MCP server guide.\n\n## What it does\n\nRun Figma Plugin API scripts for canvas writes, inspections, variables, and design-system work. Prerequisite for every other Figma skill in this catalogue.\n\n## Source\n\n- Upstream: https://github.com/figma/skills\n- Category: `figma`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/figma/skills\n```\n\nThen ask the agent to invoke this skill by name (`figma-use`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

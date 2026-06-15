@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-api-docs",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: api-docs\ndescription: Generate API documentation from source code with JSDoc and OpenAPI support\nargument-hint: \"<source-path>\"\nallowed-tools: Bash(npx *) mcp__claude-flow__hooks_worker-dispatch Read Write Grep\n---\nGenerate API documentation from TypeScript/JavaScript source:\n\n1. **Scan exports**: Find all public functions, classes, and interfaces\n2. **Extract JSDoc**: Parse `@param`, `@returns`, `@throws`, `@example` annotations\n3. **Generate missing docs**: Add JSDoc for undocumented public APIs\n4. **OpenAPI spec**: For HTTP endpoints, generate OpenAPI 3.0 definitions\n\nDispatch via MCP: `mcp__claude-flow__hooks_worker-dispatch({ trigger: \"document\", scope: \"api\" })`\n\nConventions:\n- Every public export must have a JSDoc comment\n- Include `@param` with type and description\n- Include `@returns` with type and description\n- Include `@throws` for known error conditions\n- Include `@example` for non-obvious usage\n"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "nexu-io-open-design-create-video-storyboard",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: create-video-storyboard\ndescription: Use this plugin when the user wants a video concept, storyboard, shot list, prompt pack, or render-ready motion brief for a product, campaign, or explainer.\nlicense: MIT\nmetadata:\n  author: open-design-spec\n  version: \"0.1.0\"\nod:\n  mode: video\n  scenario: marketing\n---\n\n# Create Video Storyboard\n\n## Workflow\n\n1. Clarify duration, audience, platform, visual style, and call to action.\n2. Create a scene-by-scene beat sheet with timings.\n3. Generate a storyboard prompt pack and optional video generation prompt.\n4. Save a shot list with motion, camera, typography, and audio notes.\n5. Critique for pacing, clarity, and whether each shot can be produced.\n\n## Output Contract\n\nProduce `storyboard.md` and any generated video prompt or media asset.\n\n"
+    },
+    {
+      "path": "open-design.json",
+      "encoding": "utf8",
+      "content": "{\n  \"$schema\": \"https://open-design.ai/schemas/plugin.v1.json\",\n  \"specVersion\": \"1.0.0\",\n  \"name\": \"create-video-storyboard\",\n  \"title\": \"Video Storyboard\",\n  \"version\": \"0.1.0\",\n  \"description\": \"Create a video storyboard, shot list, and render-ready prompt pack.\",\n  \"license\": \"MIT\",\n  \"tags\": [\"create\", \"video\", \"storyboard\", \"marketing\"],\n  \"compat\": {\n    \"agentSkills\": [{ \"path\": \"./SKILL.md\" }]\n  },\n  \"od\": {\n    \"kind\": \"skill\",\n    \"taskKind\": \"new-generation\",\n    \"mode\": \"video\",\n    \"scenario\": \"marketing\",\n    \"useCase\": {\n      \"query\": \"Create a {{duration}} video storyboard for {{product}} aimed at {{audience}} on {{platform}}.\"\n    },\n    \"context\": {\n      \"skills\": [{ \"path\": \"./SKILL.md\" }],\n      \"atoms\": [\"discovery-question-form\", \"todo-write\", \"media-video\", \"file-write\", \"critique-theater\"]\n    },\n    \"pipeline\": {\n      \"stages\": [\n        { \"id\": \"discovery\", \"atoms\": [\"discovery-question-form\"] },\n        { \"id\": \"plan\", \"atoms\": [\"todo-write\"] },\n        { \"id\": \"generate\", \"atoms\": [\"media-video\", \"file-write\"] },\n        {\n          \"id\": \"critique\",\n          \"atoms\": [\"critique-theater\"],\n          \"repeat\": true,\n          \"until\": \"critique.score>=4 || iterations>=2\"\n        }\n      ]\n    },\n    \"inputs\": [\n      { \"name\": \"product\", \"type\": \"string\", \"required\": true, \"label\": \"Product\" },\n      { \"name\": \"audience\", \"type\": \"string\", \"required\": true, \"label\": \"Audience\" },\n      { \"name\": \"platform\", \"type\": \"select\", \"required\": false, \"label\": \"Platform\", \"options\": [\"website\", \"YouTube\", \"TikTok\", \"LinkedIn\"], \"default\": \"website\" },\n      { \"name\": \"duration\", \"type\": \"string\", \"required\": false, \"label\": \"Duration\", \"default\": \"15 seconds\" }\n    ],\n    \"capabilities\": [\"prompt:inject\", \"fs:write\"]\n  }\n}\n\n"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "nexu-io-open-design-create-image-campaign",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: create-image-campaign\ndescription: Use this plugin when the user wants image assets, posters, social visuals, ad concepts, or a small campaign image system from a creative brief.\nlicense: MIT\nmetadata:\n  author: open-design-spec\n  version: \"0.1.0\"\nod:\n  mode: image\n  scenario: marketing\n---\n\n# Create Image Campaign\n\n## Workflow\n\n1. Clarify audience, product, visual subject, channel, and aspect ratio.\n2. Write a concise creative direction with composition, lighting, palette, and constraints.\n3. Generate or prepare image prompts and asset variants.\n4. Save prompt notes and produced assets with clear filenames.\n5. Critique for brand fit, legibility, and channel suitability.\n\n## Output Contract\n\nProduce image assets or render-ready prompts plus `campaign-directions.md`.\n\n"
+    },
+    {
+      "path": "open-design.json",
+      "encoding": "utf8",
+      "content": "{\n  \"$schema\": \"https://open-design.ai/schemas/plugin.v1.json\",\n  \"specVersion\": \"1.0.0\",\n  \"name\": \"create-image-campaign\",\n  \"title\": \"Image Campaign\",\n  \"version\": \"0.1.0\",\n  \"description\": \"Generate image campaign assets and prompts from a structured creative brief.\",\n  \"license\": \"MIT\",\n  \"tags\": [\"create\", \"image\", \"campaign\", \"marketing\"],\n  \"compat\": {\n    \"agentSkills\": [{ \"path\": \"./SKILL.md\" }]\n  },\n  \"od\": {\n    \"kind\": \"skill\",\n    \"taskKind\": \"new-generation\",\n    \"mode\": \"image\",\n    \"scenario\": \"marketing\",\n    \"useCase\": {\n      \"query\": \"Create {{count}} image campaign concepts for {{product}} aimed at {{audience}} in {{aspectRatio}}.\"\n    },\n    \"context\": {\n      \"skills\": [{ \"path\": \"./SKILL.md\" }],\n      \"atoms\": [\"discovery-question-form\", \"direction-picker\", \"media-image\", \"file-write\", \"critique-theater\"]\n    },\n    \"pipeline\": {\n      \"stages\": [\n        { \"id\": \"discovery\", \"atoms\": [\"discovery-question-form\"] },\n        { \"id\": \"direction\", \"atoms\": [\"direction-picker\"] },\n        { \"id\": \"generate\", \"atoms\": [\"media-image\", \"file-write\"] },\n        {\n          \"id\": \"critique\",\n          \"atoms\": [\"critique-theater\"],\n          \"repeat\": true,\n          \"until\": \"critique.score>=4 || iterations>=2\"\n        }\n      ]\n    },\n    \"inputs\": [\n      { \"name\": \"product\", \"type\": \"string\", \"required\": true, \"label\": \"Product\" },\n      { \"name\": \"audience\", \"type\": \"string\", \"required\": true, \"label\": \"Audience\" },\n      { \"name\": \"aspectRatio\", \"type\": \"select\", \"required\": false, \"label\": \"Aspect ratio\", \"options\": [\"1:1\", \"16:9\", \"9:16\", \"4:3\"], \"default\": \"1:1\" },\n      { \"name\": \"count\", \"type\": \"number\", \"required\": false, \"label\": \"Concept count\", \"default\": 3 }\n    ],\n    \"capabilities\": [\"prompt:inject\", \"fs:write\"]\n  }\n}\n\n"
+    }
+  ]
+}

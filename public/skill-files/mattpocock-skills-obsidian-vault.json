@@ -1,0 +1,10 @@
+{
+  "id": "mattpocock-skills-obsidian-vault",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: obsidian-vault\ndescription: Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize notes in Obsidian.\n---\n\n# Obsidian Vault\n\n## Vault location\n\n`/mnt/d/Obsidian Vault/AI Research/`\n\nMostly flat at root level.\n\n## Naming conventions\n\n- **Index notes**: aggregate related topics (e.g., `Ralph Wiggum Index.md`, `Skills Index.md`, `RAG Index.md`)\n- **Title case** for all note names\n- No folders for organization - use links and index notes instead\n\n## Linking\n\n- Use Obsidian `[[wikilinks]]` syntax: `[[Note Title]]`\n- Notes link to dependencies/related notes at the bottom\n- Index notes are just lists of `[[wikilinks]]`\n\n## Workflows\n\n### Search for notes\n\n```bash\n# Search by filename\nfind \"/mnt/d/Obsidian Vault/AI Research/\" -name \"*.md\" | grep -i \"keyword\"\n\n# Search by content\ngrep -rl \"keyword\" \"/mnt/d/Obsidian Vault/AI Research/\" --include=\"*.md\"\n```\n\nOr use Grep/Glob tools directly on the vault path.\n\n### Create a new note\n\n1. Use **Title Case** for filename\n2. Write content as a unit of learning (per vault rules)\n3. Add `[[wikilinks]]` to related notes at the bottom\n4. If part of a numbered sequence, use the hierarchical numbering scheme\n\n### Find related notes\n\nSearch for `[[Note Title]]` across the vault to find backlinks:\n\n```bash\ngrep -rl \"\\\\[\\\\[Note Title\\\\]\\\\]\" \"/mnt/d/Obsidian Vault/AI Research/\"\n```\n\n### Find index notes\n\n```bash\nfind \"/mnt/d/Obsidian Vault/AI Research/\" -name \"*Index*\"\n```\n"
+    }
+  ]
+}

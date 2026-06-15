@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-frontend-skill",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: frontend-skill\ndescription: |\n  Create visually strong landing pages, websites, and app UIs with restrained composition. OpenAI's production frontend playbook.\ntriggers:\n  - \"landing page\"\n  - \"frontend playbook\"\n  - \"ui composition\"\n  - \"restrained ui\"\nod:\n  mode: design-system\n  category: design-systems\n  upstream: \"https://github.com/openai/skills\"\n---\n\n# frontend-skill\n\n> Curated from OpenAI's skills repository.\n\n## What it does\n\nCreate visually strong landing pages, websites, and app UIs with restrained composition. OpenAI's production frontend playbook.\n\n## Source\n\n- Upstream: https://github.com/openai/skills\n- Category: `design-systems`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/openai/skills\n```\n\nThen ask the agent to invoke this skill by name (`frontend-skill`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

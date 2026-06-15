@@ -1,0 +1,75 @@
+{
+  "id": "affaan-m-ecc-legacy-command-shims",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: legacy-command-shims\ndescription: \"These slash-entry shims are no longer loaded by the default plugin command surface.\"\n---\n\n# legacy command shims\n\nThese slash-entry shims are no longer loaded by the default plugin command surface.\n\n## 中文说明\n\nLegacy Command Shims 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Legacy Command Shims 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Legacy Command Shims\n\nThese slash-entry shims are no longer loaded by the default plugin command surface.\n\nThey remain here for users who still need short-term migration compatibility with old muscle-memory commands such as `/tdd`, `/eval`, or `/verify`.\n\nPrefer the canonical skills or maintained commands referenced inside each shim. If you need one of these shims locally, copy the individual Markdown file into your project-level or user-level Claude commands directory instead of enabling the full archive by default.\n"
+    },
+    {
+      "path": "commands/agent-sort.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: Legacy slash-entry shim for the agent-sort skill. Prefer the skill directly.\n---\n\n# Agent Sort (Legacy Shim)\n\nUse this only if you still invoke `/agent-sort`. The maintained workflow lives in `skills/agent-sort/SKILL.md`.\n\n## Canonical Surface\n\n- Prefer the `agent-sort` skill directly.\n- Keep this file only as a compatibility entry point.\n\n## Arguments\n\n`$ARGUMENTS`\n\n## Delegation\n\nApply the `agent-sort` skill.\n- Classify ECC surfaces with concrete repo evidence.\n- Keep the result to DAILY vs LIBRARY.\n- If an install change is needed afterward, hand off to `configure-ecc` instead of re-implementing install logic here.\n"
+    },
+    {
+      "path": "commands/claw.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: Legacy slash-entry shim for the nanoclaw-repl skill. Prefer the skill directly.\n---\n\n# Claw Command (Legacy Shim)\n\nUse this only if you still reach for `/claw` from muscle memory. The maintained implementation lives in `skills/nanoclaw-repl/SKILL.md`.\n\n## Canonical Surface\n\n- Prefer the `nanoclaw-repl` skill directly.\n- Keep this file only as a compatibility entry point while command-first usage is retired.\n\n## Arguments\n\n`$ARGUMENTS`\n\n## Delegation\n\nApply the `nanoclaw-repl` skill and keep the response focused on operating or extending `scripts/claw.js`.\n- If the user wants to run it, use `node scripts/claw.js` or `npm run claw`.\n- If the user wants to extend it, preserve the zero-dependency and markdown-backed session model.\n- If the request is really about long-running orchestration rather than NanoClaw itself, redirect to `dmux-workflows` or `autonomous-agent-harness`.\n"
+    },
+    {
+      "path": "commands/context-budget.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: Legacy slash-entry shim for the context-budget skill. Prefer the skill directly.\n---\n\n# Context Budget Optimizer (Legacy Shim)\n\nUse this only if you still invoke `/context-budget`. The maintained workflow lives in `skills/context-budget/SKILL.md`.\n\n## Canonical Surface\n\n- Prefer the `context-budget` skill directly.\n- Keep this file only as a compatibility entry point.\n\n## Arguments\n\n$ARGUMENTS\n\n## Delegation\n\nApply the `context-budget` skill.\n- Pass through `--verbose` if the user supplied it.\n- Assume a 200K context window unless the user specified otherwise.\n- Return the skill's inventory, issue detection, and prioritized savings report without re-implementing the scan here.\n"
+    },
+    {
+      "path": "commands/devfleet.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: Legacy slash-entry shim for the claude-devfleet skill. Prefer the skill directly.\n---\n\n# DevFleet (Legacy Shim)\n\nUse this only if you still call `/devfleet`. The maintained workflow lives in `skills/claude-devfleet/SKILL.md`.\n\n## Canonical Surface\n\n- Prefer the `claude-devfleet` skill directly.\n- Keep this file only as a compatibility entry point while command-first usage is retired.\n\n## Arguments\n\n`$ARGUMENTS`\n\n## Delegation\n\nApply the `claude-devfleet` skill.\n- Plan from the user's description, show the DAG, and get approval before dispatch unless the user already said to proceed.\n- Prefer polling status over blocking waits for long missions.\n- Report mission IDs, files changed, failures, and next steps from structured mission reports.\n"
+    },
+    {
+      "path": "commands/docs.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: Legacy slash-entry shim for the documentation-lookup skill. Prefer the skill directly.\n---\n\n# Docs Command (Legacy Shim)\n\nUse this only if you still reach for `/docs`. The maintained workflow lives in `skills/documentation-lookup/SKILL.md`.\n\n## Canonical Surface\n\n- Prefer the `documentation-lookup` skill directly.\n- Keep this file only as a compatibility entry point.\n\n## Arguments\n\n`$ARGUMENTS`\n\n## Delegation\n\nApply the `documentation-lookup` skill.\n- If the library or the question is missing, ask for the missing part.\n- Use live documentation through Context7 instead of training data.\n- Return only the current answer and the minimum code/example surface needed.\n"
+    },
+    {
+      "path": "commands/e2e.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: Legacy slash-entry shim for the e2e-testing skill. Prefer the skill directly.\n---\n\n# E2E Command (Legacy Shim)\n\nUse this only if you still invoke `/e2e`. The maintained workflow lives in `skills/e2e-testing/SKILL.md`.\n\n## Canonical Surface\n\n- Prefer the `e2e-testing` skill directly.\n- Keep this file only as a compatibility entry point.\n\n## Arguments\n\n`$ARGUMENTS`\n\n## Delegation\n\nApply the `e2e-testing` skill.\n- Generate or update Playwright coverage for the requested user flow.\n- Run only the relevant tests unless the user explicitly asked for the entire suite.\n- Capture the usual artifacts and report failures, flake risk, and next fixes without duplicating the full skill body here.\n"
+    },
+    {
+      "path": "commands/eval.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: Legacy slash-entry shim for the eval-harness skill. Prefer the skill directly.\n---\n\n# Eval Command (Legacy Shim)\n\nUse this only if you still invoke `/eval`. The maintained workflow lives in `skills/eval-harness/SKILL.md`.\n\n## Canonical Surface\n\n- Prefer the `eval-harness` skill directly.\n- Keep this file only as a compatibility entry point.\n\n## Arguments\n\n`$ARGUMENTS`\n\n## Delegation\n\nApply the `eval-harness` skill.\n- Support the same user intents as before: define, check, report, list, and cleanup.\n- Keep evals capability-first, regression-backed, and evidence-based.\n- Use the skill as the canonical evaluator instead of maintaining a separate command-specific playbook.\n"
+    },
+    {
+      "path": "commands/orchestrate.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: Legacy slash-entry shim for dmux-workflows and autonomous-agent-harness. Prefer the skills directly.\n---\n\n# Orchestrate Command (Legacy Shim)\n\nUse this only if you still invoke `/orchestrate`. The maintained orchestration guidance lives in `skills/dmux-workflows/SKILL.md` and `skills/autonomous-agent-harness/SKILL.md`.\n\n## Canonical Surface\n\n- Prefer `dmux-workflows` for parallel panes, worktrees, and multi-agent splits.\n- Prefer `autonomous-agent-harness` for longer-running loops, governance, scheduling, and control-plane style execution.\n- Keep this file only as a compatibility entry point.\n\n## Arguments\n\n`$ARGUMENTS`\n\n## Delegation\n\nApply the orchestration skills instead of maintaining a second workflow spec here.\n- Start with `dmux-workflows` for split/parallel execution.\n- Pull in `autonomous-agent-harness` when the user is really asking for persistent loops, governance, or operator-layer behavior.\n- Keep handoffs structured, but let the skills define the maintained sequencing rules.\n"
+    },
+    {
+      "path": "commands/prompt-optimize.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: Legacy slash-entry shim for the prompt-optimizer skill. Prefer the skill directly.\n---\n\n# Prompt Optimize (Legacy Shim)\n\nUse this only if you still invoke `/prompt-optimize`. The maintained workflow lives in `skills/prompt-optimizer/SKILL.md`.\n\n## Canonical Surface\n\n- Prefer the `prompt-optimizer` skill directly.\n- Keep this file only as a compatibility entry point.\n\n## Arguments\n\n`$ARGUMENTS`\n\n## Delegation\n\nApply the `prompt-optimizer` skill.\n- Keep it advisory-only: optimize the prompt, do not execute the task.\n- Return the recommended ECC components plus a ready-to-run prompt.\n- If the user actually wants direct execution, say so and tell them to make a normal task request instead of staying inside the shim.\n"
+    },
+    {
+      "path": "commands/rules-distill.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: Legacy slash-entry shim for the rules-distill skill. Prefer the skill directly.\n---\n\n# Rules Distill (Legacy Shim)\n\nUse this only if you still invoke `/rules-distill`. The maintained workflow lives in `skills/rules-distill/SKILL.md`.\n\n## Canonical Surface\n\n- Prefer the `rules-distill` skill directly.\n- Keep this file only as a compatibility entry point.\n\n## Arguments\n\n`$ARGUMENTS`\n\n## Delegation\n\nApply the `rules-distill` skill and follow its inventory, cross-read, and verdict workflow instead of duplicating that logic here.\n"
+    },
+    {
+      "path": "commands/tdd.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: Legacy slash-entry shim for the tdd-workflow skill. Prefer the skill directly.\n---\n\n# TDD Command (Legacy Shim)\n\nUse this only if you still invoke `/tdd`. The maintained workflow lives in `skills/tdd-workflow/SKILL.md`.\n\n## Canonical Surface\n\n- Prefer the `tdd-workflow` skill directly.\n- Keep this file only as a compatibility entry point.\n\n## Arguments\n\n`$ARGUMENTS`\n\n## Delegation\n\nApply the `tdd-workflow` skill.\n- Stay strict on RED -> GREEN -> REFACTOR.\n- Keep tests first, coverage explicit, and checkpoint evidence clear.\n- Use the skill as the maintained TDD body instead of duplicating the playbook here.\n"
+    },
+    {
+      "path": "commands/verify.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: Legacy slash-entry shim for the verification-loop skill. Prefer the skill directly.\n---\n\n# Verification Command (Legacy Shim)\n\nUse this only if you still invoke `/verify`. The maintained workflow lives in `skills/verification-loop/SKILL.md`.\n\n## Canonical Surface\n\n- Prefer the `verification-loop` skill directly.\n- Keep this file only as a compatibility entry point.\n\n## Arguments\n\n`$ARGUMENTS`\n\n## Delegation\n\nApply the `verification-loop` skill.\n- Choose the right verification depth for the user's requested mode.\n- Run build, types, lint, tests, security/log checks, and diff review in the right order for the current repo.\n- Report only the verdicts and blockers instead of maintaining a second verification checklist here.\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-slack-gif-creator",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: slack-gif-creator\ndescription: |\n  Create animated GIFs optimized for Slack with validators for size constraints and composable animation primitives.\ntriggers:\n  - \"slack gif\"\n  - \"animated gif\"\n  - \"reaction gif\"\n  - \"tiny gif\"\nod:\n  mode: image\n  category: image-generation\n  upstream: \"https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator\"\n---\n\n# slack-gif-creator\n\n> Curated from Anthropic's official skills repository.\n\n## What it does\n\nCreate animated GIFs optimized for Slack with validators for size constraints and composable animation primitives.\n\n## Source\n\n- Upstream: https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator\n- Category: `image-generation`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator\n```\n\nThen ask the agent to invoke this skill by name (`slack-gif-creator`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-slides",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: slides\ndescription: |\n  Create and edit .pptx presentation decks with PptxGenJS. Useful for sales decks, kickoff briefs, and design-system showcases.\ntriggers:\n  - \"slides\"\n  - \"pptxgenjs\"\n  - \"sales deck\"\n  - \"design showcase deck\"\nod:\n  mode: deck\n  category: slides\n  upstream: \"https://github.com/openai/skills\"\n---\n\n# slides\n\n> Curated from OpenAI's skills repository.\n\n## What it does\n\nCreate and edit .pptx presentation decks with PptxGenJS. Useful for sales decks, kickoff briefs, and design-system showcases.\n\n## Source\n\n- Upstream: https://github.com/openai/skills\n- Category: `slides`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/openai/skills\n```\n\nThen ask the agent to invoke this skill by name (`slides`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

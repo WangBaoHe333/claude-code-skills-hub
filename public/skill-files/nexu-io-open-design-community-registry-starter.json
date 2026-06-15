@@ -1,0 +1,15 @@
+{
+  "id": "nexu-io-open-design-community-registry-starter",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: community-registry-starter\ndescription: A small community registry starter plugin used to verify Open Design marketplace install flows.\n---\n\n# Community Registry Starter\n\nUse this plugin as a minimal community example when validating registry search,\ninstall, and provenance flows.\n\n"
+    },
+    {
+      "path": "open-design.json",
+      "encoding": "utf8",
+      "content": "{\n  \"$schema\": \"https://open-design.ai/schemas/plugin.v1.json\",\n  \"specVersion\": \"1.0.0\",\n  \"name\": \"community-registry-starter\",\n  \"title\": \"Community Registry Starter\",\n  \"version\": \"0.1.0\",\n  \"description\": \"A minimal community plugin that exercises the default registry source and install provenance path.\",\n  \"license\": \"MIT\",\n  \"author\": {\n    \"name\": \"Open Design Community\",\n    \"url\": \"https://open-design.ai/marketplace/community\"\n  },\n  \"homepage\": \"https://github.com/nexu-io/open-design/tree/main/plugins/community/registry-starter\",\n  \"plugin\": {\n    \"repo\": \"https://github.com/nexu-io/open-design/tree/main/plugins/community/registry-starter\"\n  },\n  \"tags\": [\n    \"community\",\n    \"registry\",\n    \"starter\"\n  ],\n  \"od\": {\n    \"kind\": \"scenario\",\n    \"taskKind\": \"new-generation\",\n    \"mode\": \"prototype\",\n    \"useCase\": {\n      \"query\": {\n        \"en\": \"Create a compact status card that explains how a community Open Design plugin flows from Available to Installed.\",\n        \"zh-CN\": \"创建一个紧凑状态卡片，说明社区 Open Design 插件如何从 Available 安装到 Installed。\"\n      }\n    },\n    \"capabilities\": [\n      \"prompt:inject\"\n    ]\n  }\n}\n\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-full-page-screenshot",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: full-page-screenshot\ndescription: |\n  Capture full-page screenshots of web pages via Chrome DevTools Protocol with zero dependencies. Useful for portfolios, case studies, and audit reports.\ntriggers:\n  - \"full page screenshot\"\n  - \"long screenshot\"\n  - \"devtools screenshot\"\n  - \"web capture\"\nod:\n  mode: image\n  category: screenshots\n  upstream: \"https://github.com/LewisLiu007/full-page-screenshot\"\n---\n\n# full-page-screenshot\n\n> Curated from @LewisLiu007.\n\n## What it does\n\nCapture full-page screenshots of web pages via Chrome DevTools Protocol with zero dependencies. Useful for portfolios, case studies, and audit reports.\n\n## Source\n\n- Upstream: https://github.com/LewisLiu007/full-page-screenshot\n- Category: `screenshots`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/LewisLiu007/full-page-screenshot\n```\n\nThen ask the agent to invoke this skill by name (`full-page-screenshot`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

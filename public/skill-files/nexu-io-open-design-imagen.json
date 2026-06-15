@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-imagen",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: imagen\ndescription: |\n  Generate images using Google Gemini's image generation API for UI mockups, icons, illustrations, and visual assets.\ntriggers:\n  - \"gemini image\"\n  - \"imagen\"\n  - \"google image gen\"\n  - \"illustration\"\n  - \"icon\"\nod:\n  mode: image\n  category: image-generation\n  upstream: \"https://github.com/sanjay3290/imagen\"\n---\n\n# imagen\n\n> Curated from @sanjay3290.\n\n## What it does\n\nGenerate images using Google Gemini's image generation API for UI mockups, icons, illustrations, and visual assets.\n\n## Source\n\n- Upstream: https://github.com/sanjay3290/imagen\n- Category: `image-generation`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/sanjay3290/imagen\n```\n\nThen ask the agent to invoke this skill by name (`imagen`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

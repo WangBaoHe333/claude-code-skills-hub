@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-diff-analyze",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: diff-analyze\ndescription: Analyze git diffs for risk scoring, reviewer recommendations, and change classification\nargument-hint: \"[--branch BRANCH] [--pr PR#]\"\nallowed-tools: mcp__claude-flow__analyze_diff mcp__claude-flow__analyze_diff-risk mcp__claude-flow__analyze_diff-classify mcp__claude-flow__analyze_diff-reviewers mcp__claude-flow__analyze_diff-stats mcp__claude-flow__analyze_file-risk Bash\n---\n\n# Diff Analysis\n\nAnalyze git diffs for risk, complexity, and reviewer assignment.\n\n## When to use\n\nBefore submitting a PR or after making significant changes, analyze the diff to understand risk level, get reviewer recommendations, and classify the type of change.\n\n## Steps\n\n1. **Analyze diff** — call `mcp__claude-flow__analyze_diff` with the diff content for a comprehensive analysis\n2. **Risk score** — call `mcp__claude-flow__analyze_diff-risk` for a quantified risk assessment\n3. **Classify changes** — call `mcp__claude-flow__analyze_diff-classify` to categorize (feature, bugfix, refactor, etc.)\n4. **Get reviewers** — call `mcp__claude-flow__analyze_diff-reviewers` for recommended reviewers based on code ownership\n5. **Diff stats** — call `mcp__claude-flow__analyze_diff-stats` for line counts, file counts, complexity metrics\n6. **File-level risk** — call `mcp__claude-flow__analyze_file-risk` for per-file risk breakdown\n\n## Risk factors\n\n- Files with high churn history\n- Security-sensitive paths (auth, crypto, permissions)\n- Large diffs (>500 lines)\n- Cross-module changes\n- Database migration files\n"
+    }
+  ]
+}

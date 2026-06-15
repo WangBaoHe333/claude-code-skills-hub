@@ -1,0 +1,10 @@
+{
+  "id": "code-yeongyu-oh-my-openagent-rules",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: rules\ndescription: Use when the user asks about Codex Rules behavior, injected project rules, supported rule file locations, matching, or environment configuration.\n---\n\n# Codex Rules\n\nCodex Rules is automatic once the plugin is enabled. It injects:\n\n- static project instructions on `SessionStart` and `UserPromptSubmit`\n- matching file-specific rules after Codex `apply_patch` by default\n\nDynamic `PostToolUse` output is injected as additional context and is deduplicated per plugin data session. Codex Rules does not rewrite tool output.\n\nSupported project sources:\n\n- `CONTEXT.md`\n- `.omo/rules/**/*.md`\n- `.claude/rules/**/*.md`\n- `.cursor/rules/**/*.md`\n- `.github/instructions/**/*.md`\n- `.github/copilot-instructions.md`\n\nSupported environment knobs:\n\n- `CODEX_RULES_DISABLED=1`\n- `CODEX_RULES_MODE=both|static|dynamic|off`\n- `CODEX_RULES_MAX_RULE_CHARS=<number>`\n- `CODEX_RULES_MAX_RESULT_CHARS=<number>`\n- `CODEX_RULES_ENABLED_SOURCES=CONTEXT.md,.omo/rules`\n\nThe legacy `PI_RULES_*` variables are accepted as fallbacks for users migrating from `pi-rules`.\n"
+    }
+  ]
+}

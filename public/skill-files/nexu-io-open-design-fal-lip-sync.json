@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-fal-lip-sync",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: fal-lip-sync\ndescription: |\n  Create talking head videos and lip sync audio to video via fal.ai. Useful for explainer avatars, multilingual dubbing previews, and social cuts.\ntriggers:\n  - \"lip sync\"\n  - \"talking head\"\n  - \"audio to video\"\n  - \"avatar video\"\n  - \"fal lipsync\"\nod:\n  mode: video\n  category: video-generation\n  upstream: \"https://github.com/fal-ai-community/skills\"\n---\n\n# fal-lip-sync\n\n> Curated from the fal.ai community team.\n\n## What it does\n\nCreate talking head videos and lip sync audio to video via fal.ai. Useful for explainer avatars, multilingual dubbing previews, and social cuts.\n\n## Source\n\n- Upstream: https://github.com/fal-ai-community/skills\n- Category: `video-generation`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/fal-ai-community/skills\n```\n\nThen ask the agent to invoke this skill by name (`fal-lip-sync`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

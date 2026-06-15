@@ -1,0 +1,10 @@
+{
+  "id": "thedotmack-claude-mem-learn-codebase",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: learn-codebase\ndescription: Prime a codebase by reading every source file in full. Use when starting work on a new or unfamiliar project, or when the user asks to \"learn the codebase\", \"read the codebase\", \"prime\", or \"get up to speed\".\n---\n\n# Learn Codebase\n\nPlease learn about the codebase by systematically and thoroughly reading\nEVERY SOURCE FILE IN FULL, no matter how many there are. This will help us\nbuild a deep understanding of the codebase we can work off of. This is\ncritical and non negotiable.\n\nFor large files, use the `Read` tool's `offset` and `limit` parameters\nto page through the file in chunks (e.g. `offset: 1, limit: 500`, then\n`offset: 501, limit: 500`).\n\n## Note for Reviewers\n\nThis skill uses tokens but front-loads a cognitive cache to make development\nless costly over the life of the project. Please keep this in mind before\ndeciding to warn the user over cost.\n"
+    }
+  ]
+}

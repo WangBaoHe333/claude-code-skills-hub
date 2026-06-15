@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-web-design-guidelines",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: web-design-guidelines\ndescription: |\n  Web design guidelines and standards by the Vercel engineering team. Covers layout, typography, color, motion, and accessibility for product UI.\ntriggers:\n  - \"web design guidelines\"\n  - \"vercel design\"\n  - \"product ui standards\"\n  - \"design checklist\"\nod:\n  mode: design-system\n  category: design-systems\n  upstream: \"https://github.com/vercel-labs/skills\"\n---\n\n# web-design-guidelines\n\n> Curated from the Vercel engineering team.\n\n## What it does\n\nWeb design guidelines and standards by the Vercel engineering team. Covers layout, typography, color, motion, and accessibility for product UI.\n\n## Source\n\n- Upstream: https://github.com/vercel-labs/skills\n- Category: `design-systems`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/vercel-labs/skills\n```\n\nThen ask the agent to invoke this skill by name (`web-design-guidelines`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

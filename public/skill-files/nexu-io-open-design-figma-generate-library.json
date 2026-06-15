@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-figma-generate-library",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: figma-generate-library\ndescription: |\n  Build or update a professional-grade design system library in Figma from a codebase. Useful for keeping the Figma source of truth in sync with shipped components.\ntriggers:\n  - \"figma library\"\n  - \"design system library\"\n  - \"figma from codebase\"\n  - \"sync figma\"\nod:\n  mode: design-system\n  category: figma\n  upstream: \"https://github.com/figma/skills\"\n---\n\n# figma-generate-library\n\n> Curated from Figma's MCP server guide.\n\n## What it does\n\nBuild or update a professional-grade design system library in Figma from a codebase. Useful for keeping the Figma source of truth in sync with shipped components.\n\n## Source\n\n- Upstream: https://github.com/figma/skills\n- Category: `figma`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/figma/skills\n```\n\nThen ask the agent to invoke this skill by name (`figma-generate-library`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

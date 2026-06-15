@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-trader-risk",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: trader-risk\ndescription: Assess portfolio risk using npx neural-trader — VaR, CVaR, Sharpe, position sizing, circuit breaker status\nallowed-tools: Bash Read mcp__claude-flow__memory_store mcp__claude-flow__memory_search\nargument-hint: \"[--symbol TICKER] [--portfolio NAME]\"\n---\nAssess portfolio and position risk using neural-trader's risk engine.\n\nSteps:\n1. Ensure neural-trader is available:\n   `npm ls neural-trader 2>/dev/null || npm install --ignore-scripts neural-trader`\n2. Run risk assessment:\n   ```bash\n   # Single position\n   npx neural-trader --risk assess --symbol TICKER\n   npx neural-trader --var --symbol TICKER --investment 10000\n\n   # Portfolio-wide\n   npx neural-trader --risk assess --portfolio NAME\n   npx neural-trader --correlation --portfolio NAME --flag-threshold 0.8\n   ```\n3. Calculate position sizing:\n   ```bash\n   npx neural-trader --risk-tolerance 0.02 --symbol TICKER\n   npx neural-trader --position-sizing kelly --symbol TICKER\n   ```\n4. Check circuit breaker status:\n   - Daily loss limit (3%), weekly loss limit (5%)\n   - Correlation spike (>0.85), volatility regime (VIX > 2x)\n   - Max positions, single-name concentration (>10%)\n5. Present: risk metrics, position sizing recommendation, active breakers, alerts\n6. Store assessment:\n   `mcp__claude-flow__memory_store({ key: \"risk-TICKER-DATE\", value: \"RISK_METRICS\", namespace: \"trading-risk\" })`\n"
+    }
+  ]
+}

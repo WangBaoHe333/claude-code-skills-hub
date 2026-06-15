@@ -1,0 +1,15 @@
+{
+  "id": "nexu-io-open-design-export-nextjs-handoff",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: export-nextjs-handoff\ndescription: Use this plugin when the user wants an accepted Open Design artifact converted into a Next.js App Router handoff with clean components, styles, assets, and implementation notes.\nlicense: MIT\nmetadata:\n  author: open-design-spec\n  version: \"0.1.0\"\n---\n\n# Export Next.js Handoff\n\n## Workflow\n\n1. Read the accepted artifact and identify components, assets, layout tokens, and interactions.\n2. Generate a Next.js App Router folder with page, component, and style boundaries.\n3. Preserve visual fidelity while using maintainable component names and accessible markup.\n4. Run available typecheck or build commands when a package is present.\n5. Return a diff summary and handoff notes.\n\n## Output Contract\n\nProduce `nextjs-handoff/` and `handoff-summary.md`.\n\n"
+    },
+    {
+      "path": "open-design.json",
+      "encoding": "utf8",
+      "content": "{\n  \"$schema\": \"https://open-design.ai/schemas/plugin.v1.json\",\n  \"specVersion\": \"1.0.0\",\n  \"name\": \"export-nextjs-handoff\",\n  \"title\": \"Next.js Handoff\",\n  \"version\": \"0.1.0\",\n  \"description\": \"Export an accepted artifact into a Next.js App Router handoff.\",\n  \"license\": \"MIT\",\n  \"tags\": [\"export\", \"nextjs\", \"react\", \"handoff\", \"downstream-export\"],\n  \"compat\": {\n    \"agentSkills\": [{ \"path\": \"./SKILL.md\" }]\n  },\n  \"od\": {\n    \"kind\": \"skill\",\n    \"taskKind\": \"code-migration\",\n    \"mode\": \"export\",\n    \"scenario\": \"handoff\",\n    \"useCase\": {\n      \"query\": \"Export the accepted artifact to a Next.js App Router handoff for {{destination}}.\"\n    },\n    \"context\": {\n      \"skills\": [{ \"path\": \"./SKILL.md\" }],\n      \"atoms\": [\"file-read\", \"rewrite-plan\", \"file-write\", \"build-test\", \"diff-review\", \"handoff\"]\n    },\n    \"pipeline\": {\n      \"stages\": [\n        { \"id\": \"inspect\", \"atoms\": [\"file-read\", \"rewrite-plan\"] },\n        { \"id\": \"write\", \"atoms\": [\"file-write\"] },\n        { \"id\": \"verify\", \"atoms\": [\"build-test\", \"diff-review\"] },\n        { \"id\": \"handoff\", \"atoms\": [\"handoff\"] }\n      ]\n    },\n    \"inputs\": [\n      { \"name\": \"destination\", \"type\": \"string\", \"required\": false, \"label\": \"Destination\", \"default\": \"nextjs-handoff\" }\n    ],\n    \"capabilities\": [\"prompt:inject\", \"fs:read\", \"fs:write\", \"bash\"]\n  }\n}\n\n"
+    }
+  ]
+}

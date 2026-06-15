@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-autopilot-predict",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: autopilot-predict\ndescription: Use learned patterns and current state to predict the optimal next action\nargument-hint: \"\"\nallowed-tools: mcp__claude-flow__autopilot_predict mcp__claude-flow__autopilot_progress mcp__claude-flow__autopilot_learn mcp__claude-flow__autopilot_history\n---\nPredict what to work on next using Ruflo autopilot intelligence:\n\n1. Call `mcp__claude-flow__autopilot_predict` for the recommended next action\n2. If confidence > 0.7, execute the prediction directly\n3. If confidence < 0.7, check `mcp__claude-flow__autopilot_progress` for task breakdown\n4. Pick the highest-priority incomplete task\n5. After completing work, call `mcp__claude-flow__autopilot_learn` to update patterns\n\n### Learning Pipeline\n\n- `mcp__claude-flow__autopilot_learn` -- discover success patterns from completed tasks\n- `mcp__claude-flow__autopilot_history({ query: \"KEYWORD\" })` -- search past completions\n- Patterns are stored in AgentDB for cross-session recall\n\n### Integration with /loop\n\nWhen running inside a `/loop`, the predict skill guides each iteration:\n- High confidence prediction -> execute immediately\n- Low confidence -> fall back to task list priority order\n- No tasks remaining -> disable autopilot and exit loop\n"
+    }
+  ]
+}

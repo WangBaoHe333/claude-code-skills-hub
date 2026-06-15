@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-federation-init",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: federation-init\ndescription: Initialize federation on this node — generate keypair and configure peers\nallowed-tools: Bash(npx *) mcp__claude-flow__memory_store mcp__claude-flow__hooks_post-task Read Write\nargument-hint: \"[--compliance hipaa|soc2|gdpr|none]\"\n---\nInitialize this node for federation. Generates an ed25519 keypair, creates the federation config, and optionally sets a compliance mode.\n\nSteps:\n1. `npx -y -p @claude-flow/plugin-agent-federation@latest ruflo-federation init`\n2. If a compliance mode is specified, configure it: `npx -y -p @claude-flow/plugin-agent-federation@latest ruflo-federation config --compliance MODE`\n3. Show the node's public key and endpoint for sharing with peers\n\nStore init event:\n`mcp__claude-flow__memory_store({ key: \"federation-init\", value: \"Node initialized\", namespace: \"federation\" })`\n"
+    }
+  ]
+}

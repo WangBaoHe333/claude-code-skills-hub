@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-security-scan",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: security-scan\ndescription: Run full security scans on the codebase using Ruflo security tools\nallowed-tools: Bash(npx *) mcp__claude-flow__memory_store mcp__claude-flow__hooks_post-task Read Grep\nargument-hint: \"[depth: quick|standard|full]\"\n---\nRun a security scan at the specified depth.\n\nVia CLI:\n```bash\nnpx @claude-flow/cli@latest security scan --depth DEPTH\nnpx @claude-flow/cli@latest security cve --check\nnpx @claude-flow/cli@latest security report --format markdown\n```\n\n| Depth | Checks |\n|-------|--------|\n| quick | Dependencies, known CVEs |\n| standard | + Input validation, path traversal, secrets |\n| full | + Threat modeling, injection vectors, auth flows |\n\nStore findings via MCP: `mcp__claude-flow__memory_store({ key: \"scan-findings\", value: \"SUMMARY\", namespace: \"security\" })`\n\nTrain patterns: `mcp__claude-flow__hooks_post-task({ taskId: \"security-scan\", success: true, storeResults: true })`\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-pptx-generator",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: pptx-generator\ndescription: |\n  Create and edit PowerPoint presentations from scratch with PptxGenJS — MiniMax's production-tested deck pipeline.\ntriggers:\n  - \"pptx generator\"\n  - \"minimax ppt\"\n  - \"deck generator\"\n  - \"auto pptx\"\nod:\n  mode: deck\n  category: slides\n  upstream: \"https://github.com/MiniMax-AI/skills\"\n---\n\n# pptx-generator\n\n> Curated from the MiniMax AI team.\n\n## What it does\n\nCreate and edit PowerPoint presentations from scratch with PptxGenJS — MiniMax's production-tested deck pipeline.\n\n## Source\n\n- Upstream: https://github.com/MiniMax-AI/skills\n- Category: `slides`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/MiniMax-AI/skills\n```\n\nThen ask the agent to invoke this skill by name (`pptx-generator`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

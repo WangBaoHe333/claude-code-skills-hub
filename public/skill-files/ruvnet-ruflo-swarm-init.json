@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-swarm-init",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: swarm-init\ndescription: Initialize a multi-agent swarm with anti-drift configuration\nargument-hint: \"[--topology hierarchical|mesh|ring]\"\nallowed-tools: Bash(npx *) mcp__claude-flow__swarm_init mcp__claude-flow__swarm_status Agent\n---\nInitialize a hierarchical swarm for coordinated multi-agent work.\n\nVia MCP: `mcp__claude-flow__swarm_init({ topology: \"hierarchical\", maxAgents: 8, strategy: \"specialized\" })`\n\nOr via CLI:\n```bash\nnpx @claude-flow/cli@latest swarm init --topology hierarchical --max-agents 8 --strategy specialized\n```\n\nThen create a Claude Code team via `TeamCreate` and spawn agents using the `Agent` tool with `isolation: \"worktree\"` for git-safe parallel work. Use `SendMessage` for inter-agent coordination.\n\nFor larger teams (10+), use hierarchical-mesh topology:\n```bash\nnpx @claude-flow/cli@latest swarm init --topology hierarchical-mesh --max-agents 15 --strategy specialized\n```\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-apple-hig",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: apple-hig\ndescription: |\n  Apple Human Interface Guidelines as 14 agent skills covering platforms, foundations, components, patterns, inputs, and technologies for iOS, macOS, visionOS, watchOS, and tvOS.\ntriggers:\n  - \"apple hig\"\n  - \"human interface\"\n  - \"ios design\"\n  - \"macos design\"\n  - \"visionos design\"\nod:\n  mode: design-system\n  category: design-systems\n  upstream: \"https://github.com/raintree-technology/apple-hig-skills\"\n---\n\n# apple-hig\n\n> Curated from raintree-technology.\n\n## What it does\n\nApple Human Interface Guidelines as 14 agent skills covering platforms, foundations, components, patterns, inputs, and technologies for iOS, macOS, visionOS, watchOS, and tvOS.\n\n## Source\n\n- Upstream: https://github.com/raintree-technology/apple-hig-skills\n- Category: `design-systems`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/raintree-technology/apple-hig-skills\n```\n\nThen ask the agent to invoke this skill by name (`apple-hig`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

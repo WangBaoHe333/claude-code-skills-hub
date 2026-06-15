@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-cost-conversation",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: cost-conversation\ndescription: Per-conversation cost view — list every session in cost-tracking with started-at, message count, top model, and total cost\nargument-hint: \"\"\nallowed-tools: Bash\n---\n\n# Cost per Conversation\n\n`cost-report` and `cost-optimize` aggregate by **agent** and **model**. This skill aggregates by **conversation (session)** — a different lens that surfaces *which conversations cost the most*. Useful for retrospectives (\"which sessions ran long on Opus?\") and for evaluating whether a given project's session pattern is sustainable.\n\n## When to use\n\n- After multiple sessions, to see total spend per conversation.\n- Before scoping a long session, to understand typical cost-per-conversation.\n- For per-project rollups via `CONV_NAMESPACE=cost-tracking-<project>`.\n\n## Steps\n\n1. **Run the script** from anywhere:\n\n   ```bash\n   node plugins/ruflo-cost-tracker/scripts/conversation.mjs\n   ```\n\n   Optional env:\n   - `CONV_FORMAT=json` — emit JSON instead of markdown\n   - `CONV_LIMIT=20` — show only the most recent N conversations\n   - `CONV_NAMESPACE=cost-tracking` — override target namespace\n\n2. **Inspect the markdown table** — total cost across all conversations, per-tier rollup, then a per-session table (started-at, sessionId prefix, message count, top model, cost).\n\n## Cross-references\n\n- `cost-track` — the producer that populates `cost-tracking:session-*`\n- `cost-report` — same data, per-agent / per-model lens\n- `cost-trend` — drift across bench runs (different axis: corpus runs vs conversations)\n- `cost-budget-check` — sums across conversations to evaluate the budget threshold\n"
+    }
+  ]
+}

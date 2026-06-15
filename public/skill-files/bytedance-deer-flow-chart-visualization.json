@@ -1,0 +1,145 @@
+{
+  "id": "bytedance-deer-flow-chart-visualization",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: chart-visualization\ndescription: This skill should be used when the user wants to visualize data. It intelligently selects the most suitable chart type from 26 available options, extracts parameters based on detailed specifications, and generates a chart image using a JavaScript script.\ncompatibility:\n  nodejs: \">=18.0.0\"\n---\n\n# Chart Visualization Skill\n\nThis skill provides a comprehensive workflow for transforming data into visual charts. It handles chart selection, parameter extraction, and image generation.\n\n## Workflow\n\nTo visualize data, follow these steps:\n\n### 1. Intelligent Chart Selection\nAnalyze the user's data features to determine the most appropriate chart type. Use the following guidelines (and consult `references/` for detailed specs):\n\n- **Time Series**: Use `generate_line_chart` (trends) or `generate_area_chart` (accumulated trends). Use `generate_dual_axes_chart` for two different scales.\n- **Comparisons**: Use `generate_bar_chart` (categorical) or `generate_column_chart`. Use `generate_histogram_chart` for frequency distributions.\n- **Part-to-Whole**: Use `generate_pie_chart` or `generate_treemap_chart` (hierarchical).\n- **Relationships & Flow**: Use `generate_scatter_chart` (correlation), `generate_sankey_chart` (flow), or `generate_venn_chart` (overlap).\n- **Maps**: Use `generate_district_map` (regions), `generate_pin_map` (points), or `generate_path_map` (routes).\n- **Hierarchies & Trees**: Use `generate_organization_chart` or `generate_mind_map`.\n- **Specialized**:\n    - `generate_radar_chart`: Multi-dimensional comparison.\n    - `generate_funnel_chart`: Process stages.\n    - `generate_liquid_chart`: Percentage/Progress.\n    - `generate_word_cloud_chart`: Text frequency.\n    - `generate_boxplot_chart` or `generate_violin_chart`: Statistical distribution.\n    - `generate_network_graph`: Complex node-edge relationships.\n    - `generate_fishbone_diagram`: Cause-effect analysis.\n    - `generate_flow_diagram`: Process flow.\n    - `generate_spreadsheet`: Tabular data or pivot tables for structured data display and cross-tabulation.\n\n### 2. Parameter Extraction\nOnce a chart type is selected, read the corresponding file in the `references/` directory (e.g., `references/generate_line_chart.md`) to identify the required and optional fields.\nExtract the data from the user's input and map it to the expected `args` format.\n\n### 3. Chart Generation\nInvoke the `scripts/generate.js` script with a JSON payload.\n\n**Payload Format:**\n```json\n{\n  \"tool\": \"generate_chart_type_name\",\n  \"args\": {\n    \"data\": [...],\n    \"title\": \"...\",\n    \"theme\": \"...\",\n    \"style\": { ... }\n  }\n}\n```\n\n**Execution Command:**\n```bash\nnode ./scripts/generate.js '<payload_json>'\n```\n\n### 4. Result Return\nThe script will output the URL of the generated chart image.\nReturn the following to the user:\n- The image URL.\n- The complete `args` (specification) used for generation.\n\n## Reference Material\nDetailed specifications for each chart type are located in the `references/` directory. Consult these files to ensure the `args` passed to the script match the expected schema.\n\n## License\n\nThis `SKILL.md` is provided by [antvis/chart-visualization-skills](https://github.com/antvis/chart-visualization-skills).\nLicensed under the [MIT License](https://github.com/antvis/chart-visualization-skills/blob/master/LICENSE)."
+    },
+    {
+      "path": "references/generate_area_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_area_chart — 面积图\n\n## 功能概述\n展示连续自变量（常为时间）下的数值趋势，可启用堆叠观察不同分组的累计贡献，适合 KPI、能源、产出等时间序列场景。\n\n## 输入字段\n### 必填\n- `data`: 数组，元素包含 `time`（string）与 `value`（number），堆叠时需补充 `group`（string），至少 1 条记录。\n\n### 可选\n- `stack`: boolean，默认 `false`，开启堆叠需确保每条数据都含 `group` 字段。\n- `style.backgroundColor`: string，设置图表背景色（如 `#fff`）。\n- `style.lineWidth`: number，自定义面积边界的线宽。\n- `style.palette`: string[]，传入调色板数组用于系列着色。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough` 以控制手绘质感。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`，控制图表宽度。\n- `height`: number，默认 `400`，控制图表高度。\n- `title`: string，默认空字符串，用于设置图表标题。\n- `axisXTitle`: string，默认空字符串，用于设置 X 轴标题。\n- `axisYTitle`: string，默认空字符串，用于设置 Y 轴标题。\n\n## 使用建议\n保证 `time` 字段格式统一（如 `YYYY-MM`）；堆叠模式下各组数据需覆盖相同的时间点，可先做缺失补值。\n\n## 返回结果\n- 返回图像 URL，并在 `_meta.spec` 中附带完整面积图配置，可供二次渲染或追踪。"
+    },
+    {
+      "path": "references/generate_bar_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_bar_chart — 条形图\n\n## 功能概述\n以横向条形比较不同类别或分组的指标表现，适合 Top-N 排行、不同地区或渠道对比。\n\n## 输入字段\n### 必填\n- `data`: array<object>，每条至少含 `category`（string）与 `value`（number），如需分组或堆叠需额外提供 `group`（string）。\n\n### 可选\n- `group`: boolean，默认 `false`，启用后以并排形式展示不同 `group`，并要求 `stack=false` 且数据含 `group` 字段。\n- `stack`: boolean，默认 `true`，启用后将不同 `group` 堆叠在同一条形上，并要求 `group=false` 且数据含 `group` 字段。\n- `style.backgroundColor`: string，自定义背景色（如 `#fff`）。\n- `style.palette`: string[]，设置系列颜色列表。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`，控制图表宽度。\n- `height`: number，默认 `400`，控制图表高度。\n- `title`: string，默认空字符串，用于设置图表标题。\n- `axisXTitle`: string，默认空字符串，设置 X 轴标题。\n- `axisYTitle`: string，默认空字符串，设置 Y 轴标题。\n\n## 使用建议\n类别名称保持简短；若系列数较多可改用堆叠或筛选重点项目，以免图表拥挤。\n\n## 返回结果\n- 返回条形图图像 URL，并在 `_meta.spec` 中给出完整配置以便复用。"
+    },
+    {
+      "path": "references/generate_boxplot_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_boxplot_chart — 箱型图\n\n## 功能概述\n展示各类别数据的分布范围（最值、四分位、异常值），用于质量监控、实验结果或群体分布比较。\n\n## 输入字段\n### 必填\n- `data`: array<object>，每条记录包含 `category`（string）与 `value`（number），可选 `group`（string）用于多组比较。\n\n### 可选\n- `style.backgroundColor`: string，设置背景色。\n- `style.palette`: string[]，定义配色列表。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n- `axisXTitle`: string，默认空字符串。\n- `axisYTitle`: string，默认空字符串。\n\n## 使用建议\n单个类别至少提供 5 个样本以保证统计意义；如需展示多批次，可通过 `group` 或拆分多次调用。\n\n## 返回结果\n- 返回箱型图 URL，并在 `_meta.spec` 中储存输入规格。"
+    },
+    {
+      "path": "references/generate_column_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_column_chart — 柱状图\n\n## 功能概述\n纵向柱状对比不同类别或时间段的指标，可分组或堆叠展示，常用于销量、营收、客流对比。\n\n## 输入字段\n### 必填\n- `data`: array<object>，每条至少含 `category`（string）与 `value`（number），如需分组或堆叠需补充 `group`（string）。\n\n### 可选\n- `group`: boolean，默认 `true`，用于按系列并排展示不同 `group`，开启时需确保 `stack=false` 且数据包含 `group`。\n- `stack`: boolean，默认 `false`，用于将不同 `group` 堆叠到同一柱子，开启时需确保 `group=false` 且数据包含 `group`。\n- `style.backgroundColor`: string，自定义背景色。\n- `style.palette`: string[]，定义配色列表。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n- `axisXTitle`: string，默认空字符串。\n- `axisYTitle`: string，默认空字符串。\n\n## 使用建议\n当类别较多（>12）时可按 Top-N 或聚合；堆叠模式要确保各记录都含 `group` 字段以免校验失败。\n\n## 返回结果\n- 返回柱状图 URL，并随 `_meta.spec` 提供配置详情。"
+    },
+    {
+      "path": "references/generate_district_map.md",
+      "encoding": "utf8",
+      "content": "# generate_district_map — 行政区地图（中国）\n\n## 功能概述\n生成中国境内省/市/区/县的覆盖或热力图，可展示指标区间、类别或区域组成，适用于区域销售、政策覆盖等场景。\n\n## 输入字段\n### 必填\n- `title`: string，必填且≤16 字，描述地图主题。\n- `data`: object，必填，承载行政区配置及指标信息。\n- `data.name`: string，必填，中国境内的行政区关键词，需明确到省/市/区/县。\n\n### 可选\n- `data.style.fillColor`: string，自定义无数据区域的填充色。\n- `data.colors`: string[]，枚举或连续色带，默认提供 10 色列表。\n- `data.dataType`: string，枚举 `number`/`enum`，决定颜色映射方式。\n- `data.dataLabel`: string，指标名称（如 `GDP`）。\n- `data.dataValue`: string，指标值或枚举标签。\n- `data.dataValueUnit`: string，指标单位（如 `万亿`）。\n- `data.showAllSubdistricts`: boolean，默认 `false`，是否展示全部下级行政区。\n- `data.subdistricts[]`: array<object>，用于下钻各子区域，元素至少含 `name`，可附 `dataValue` 与 `style.fillColor`。\n- `width`: number，默认 `1600`，设置图宽。\n- `height`: number，默认 `1000`，设置图高。\n\n## 使用建议\n名称必须精确到行政层级，避免模糊词；若配置 `subdistricts`，需同时开启 `showAllSubdistricts`；地图只支持中国境内且依赖高德数据。\n\n## 返回结果\n- 返回地图图像 URL，并在 `_meta.spec` 中保留完整输入；若配置了 `SERVICE_ID`，生成记录会同步到“我的地图”小程序。"
+    },
+    {
+      "path": "references/generate_dual_axes_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_dual_axes_chart — 双轴图\n\n## 功能概述\n在同一画布上叠加柱状与折线（或两条不同量纲曲线），用于同时展示趋势与对比，如营收 vs 利润、温度 vs 降雨。\n\n## 输入字段\n### 必填\n- `categories`: string[]，按顺序提供 X 轴刻度（如年份、月份、品类）。\n- `series`: array<object>，每项至少包含 `type`（`column`/`line`）与 `data`（number[]，长度与 `categories` 一致），可选 `axisYTitle`（string）描述该系列 Y 轴含义。\n\n### 可选\n- `style.backgroundColor`: string，自定义背景色。\n- `style.palette`: string[]，配置多系列配色。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n- `axisXTitle`: string，默认空字符串。\n\n## 使用建议\n仅在确有不同量纲或图例对比需求时使用；保持系列数量 ≤2 以免阅读复杂；若两曲线差值巨大可使用次坐标轴进行缩放。 \n\n## 返回结果\n- 返回双轴图图像 URL，并随 `_meta.spec` 给出详细参数。"
+    },
+    {
+      "path": "references/generate_fishbone_diagram.md",
+      "encoding": "utf8",
+      "content": "# generate_fishbone_diagram — 鱼骨图\n\n## 功能概述\n用于根因分析，将中心问题放在主干，左右分支展示不同类别的原因及其细化节点，常见于质量管理、流程优化。\n\n## 输入字段\n### 必填\n- `data`: object，必填，至少提供根节点 `name`，可通过 `children`（array<object>）递归拓展，最大建议 3 层。\n\n### 可选\n- `style.texture`: string，默认 `default`，可选 `default`/`rough` 以切换线条风格。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n\n## 使用建议\n主干节点描述问题陈述；一级分支命名原因类别（人、机、料、法等）；叶子节点写具体现象，保持短语式表达。\n\n## 返回结果\n- 返回鱼骨图 URL，并在 `_meta.spec` 中保存树形结构，便于后续增删节点。"
+    },
+    {
+      "path": "references/generate_flow_diagram.md",
+      "encoding": "utf8",
+      "content": "# generate_flow_diagram — 流程图\n\n## 功能概述\n以节点和连线展示业务流程、审批链或算法步骤，支持开始/判断/操作等多种节点类型。\n\n## 输入字段\n### 必填\n- `data`: object，必填，包含节点与连线定义。\n- `data.nodes`: array<object>，至少 1 条，节点需提供唯一 `name`。\n- `data.edges`: array<object>，至少 1 条，包含 `source` 与 `target`（string），可选 `name` 作为连线文本。\n\n### 可选\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n\n## 使用建议\n先罗列节点 `name` 并保持唯一，再建立连线；若需要描述条件，可在 `edges.name` 中填写；流程应保持单向或明确分支避免交叉。\n\n## 返回结果\n- 返回流程图 URL，并携带 `_meta.spec` 中的节点与边数据，方便下次调整。"
+    },
+    {
+      "path": "references/generate_funnel_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_funnel_chart — 漏斗图\n\n## 功能概述\n展示多阶段转化或流失情况，常用于销售管道、用户旅程等逐步筛选过程。\n\n## 输入字段\n### 必填\n- `data`: array<object>，需按流程顺序排列，每条包含 `category`（string）与 `value`（number）。\n\n### 可选\n- `style.backgroundColor`: string，设置背景色。\n- `style.palette`: string[]，定义各阶段颜色。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n\n## 使用建议\n阶段顺序需按实际流程排列；若数值为百分比应统一基准并在标题或备注中说明口径；避免阶段过多导致阅读困难（建议 ≤6）。\n\n## 返回结果\n- 返回漏斗图 URL，并附 `_meta.spec` 方便复用。"
+    },
+    {
+      "path": "references/generate_histogram_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_histogram_chart — 直方图\n\n## 功能概述\n通过分箱显示连续数值的频数或概率分布，便于识别偏态、离群与集中区间。\n\n## 输入字段\n### 必填\n- `data`: number[]，至少 1 条，用于构建频数分布。\n\n### 可选\n- `binNumber`: number，自定义分箱数量，未设置则自动估算。\n- `style.backgroundColor`: string，设置背景色。\n- `style.palette`: string[]，定义柱体颜色。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n- `axisXTitle`: string，默认空字符串。\n- `axisYTitle`: string，默认空字符串。\n\n## 使用建议\n清理空值/异常后再传入；样本量建议 ≥30；根据业务意义调整 `binNumber` 以兼顾细节与整体趋势。\n\n## 返回结果\n- 返回直方图 URL，并在 `_meta.spec` 存储参数。"
+    },
+    {
+      "path": "references/generate_line_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_line_chart — 折线图\n\n## 功能概述\n展示时间或连续自变量的趋势，可支持多系列对比，适合 KPI 监控、指标预测、走势分析。\n\n## 输入字段\n### 必填\n- `data`: array<object>，每条包含 `time`（string）与 `value`（number），多系列时附带 `group`（string）。\n\n### 可选\n- `style.lineWidth`: number，自定义折线线宽。\n- `style.backgroundColor`: string，设置背景色。\n- `style.palette`: string[]，指定系列颜色。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n- `axisXTitle`: string，默认空字符串。\n- `axisYTitle`: string，默认空字符串。\n\n## 使用建议\n所有系列的时间点应对齐；建议按 ISO 如 `2025-01-01` 或 `2025-W01` 格式化；对于高频数据可先聚合到日/周粒度避免过密。 \n\n## 返回结果\n- 返回折线图 URL，并附 `_meta.spec` 供后续编辑。"
+    },
+    {
+      "path": "references/generate_liquid_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_liquid_chart — 水波图\n\n## 功能概述\n以液面高度展示单一百分比或进度，视觉动效强，适合达成率、资源占用等指标。\n\n## 输入字段\n### 必填\n- `percent`: number，取值范围 [0,1]，表示当前百分比或进度。\n\n### 可选\n- `shape`: string，默认 `circle`，可选 `circle`/`rect`/`pin`/`triangle`。\n- `style.backgroundColor`: string，自定义背景色。\n- `style.color`: string，自定义水波颜色。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n\n## 使用建议\n确保百分比经过归一化；单图仅支持一个进度，如需多指标请并排生成多个水波图；标题可写“目标完成率 85%”。\n\n## 返回结果\n- 返回水波图 URL，并在 `_meta.spec` 中记录参数。"
+    },
+    {
+      "path": "references/generate_mind_map.md",
+      "encoding": "utf8",
+      "content": "# generate_mind_map — 思维导图\n\n## 功能概述\n围绕中心主题展开 2~3 级分支，帮助组织想法、计划或知识结构，常用于头脑风暴、方案规划。\n\n## 输入字段\n### 必填\n- `data`: object，必填，节点至少含 `name`，可通过 `children`（array<object>）递归扩展，建议深度 ≤3。\n\n### 可选\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n\n## 使用建议\n中心节点写主题，一级分支代表主要维度（目标、资源、风险等），叶子节点使用短语；如分支较多，可先分拆多张导图。\n\n## 返回结果\n- 返回思维导图 URL，并在 `_meta.spec` 中保留节点树以便后续优化。"
+    },
+    {
+      "path": "references/generate_network_graph.md",
+      "encoding": "utf8",
+      "content": "# generate_network_graph — 网络关系图\n\n## 功能概述\n以节点与连线呈现实体之间的连接关系，适合社交网络、系统依赖、知识图谱等场景。\n\n## 输入字段\n### 必填\n- `data`: object，必填，包含节点与连线。\n- `data.nodes`: array<object>，至少 1 条，需提供唯一 `name`。\n- `data.edges`: array<object>，至少 1 条，包含 `source` 与 `target`（string），可选 `name` 说明关系。\n\n### 可选\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n\n## 使用建议\n节点数量保持在 10~50 之间以避免拥挤；确保 `edges` 中的 `source/target` 对应已存在的节点；可在 `label` 中注明关系含义。\n\n## 返回结果\n- 返回网络图 URL，并提供 `_meta.spec` 以便后续增删节点。"
+    },
+    {
+      "path": "references/generate_organization_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_organization_chart — 组织架构图\n\n## 功能概述\n展示公司、团队或项目的层级关系，并可在节点上描述角色职责。\n\n## 输入字段\n### 必填\n- `data`: object，必填，节点至少含 `name`（string），可选 `description`（string），子节点通过 `children`（array<object>）嵌套，最大深度建议为 3。\n\n### 可选\n- `orient`: string，默认 `vertical`，可选 `horizontal`/`vertical`。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n\n## 使用建议\n节点名称使用岗位/角色，`description` 简要说明职责或人数；若组织较大可拆分多个子图或按部门分批展示。\n\n## 返回结果\n- 返回组织架构图 URL，并在 `_meta.spec` 保存结构便于日后迭代。"
+    },
+    {
+      "path": "references/generate_path_map.md",
+      "encoding": "utf8",
+      "content": "# generate_path_map — 路径地图（中国）\n\n## 功能概述\n基于高德地图展示中国境内的路线或行程，按顺序连接一系列 POI，适用于物流路线、旅游规划、配送轨迹等。\n\n## 输入字段\n### 必填\n- `title`: string，必填且≤16 字，描述路线主题。\n- `data`: array<object>，至少 1 个路线对象。\n- `data[].data`: string[]，必填，包含该路线上按顺序排列的中国境内 POI 名称。\n\n### 可选\n- `width`: number，默认 `1600`。\n- `height`: number，默认 `1000`。\n\n## 使用建议\nPOI 名称必须具体且位于中国（如“西安市钟楼”“杭州西湖苏堤春晓”）；若需多条线路，可在 `data` 中添加多段对象。\n\n## 返回结果\n- 返回路径地图 URL，并在 `_meta.spec` 中保留标题与 POI 列表；若配置 `SERVICE_ID`，还会记录到“我的地图”。"
+    },
+    {
+      "path": "references/generate_pie_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_pie_chart — 饼/环图\n\n## 功能概述\n展示整体与部分的占比，可通过内径形成环图，适用于市场份额、预算构成、用户群划分等。\n\n## 输入字段\n### 必填\n- `data`: array<object>，每条记录包含 `category`（string）与 `value`（number）。\n\n### 可选\n- `innerRadius`: number，范围 [0, 1]，默认 `0`，设为 `0.6` 等值可生成环图。\n- `style.backgroundColor`: string，设置背景色。\n- `style.palette`: string[]，定义配色列表。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n\n## 使用建议\n类别数量建议 ≤6，若更多可聚合为“其它”；确保数值单位统一（百分比或绝对值），必要时在标题中说明基数。\n\n## 返回结果\n- 返回饼/环图 URL，并附 `_meta.spec`。"
+    },
+    {
+      "path": "references/generate_pin_map.md",
+      "encoding": "utf8",
+      "content": "# generate_pin_map — 点标地图（中国）\n\n## 功能概述\n在中国地图上以标记展示多个 POI 位置，可配合弹窗显示图片或说明，适用于门店分布、资产布点等。\n\n## 输入字段\n### 必填\n- `title`: string，必填且≤16 字，概述点位集合。\n- `data`: string[]，必填，包含中国境内的 POI 名称列表。\n\n### 可选\n- `markerPopup.type`: string，固定为 `image`。\n- `markerPopup.width`: number，默认 `40`，图片宽度。\n- `markerPopup.height`: number，默认 `40`，图片高度。\n- `markerPopup.borderRadius`: number，默认 `8`，图片圆角。\n- `width`: number，默认 `1600`。\n- `height`: number，默认 `1000`。\n\n## 使用建议\nPOI 名称需包含足够的地理限定（城市+地标）；根据业务可在名称中附带属性，如“上海徐汇门店 A”；地图依赖高德数据，仅支持中国。\n\n## 返回结果\n- 返回点标地图 URL，并在 `_meta.spec` 中保存点位与弹窗配置。"
+    },
+    {
+      "path": "references/generate_radar_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_radar_chart — 雷达图\n\n## 功能概述\n在多维坐标系上比较单个对象或多对象的能力维度，常用于评测、产品对比、绩效画像。\n\n## 输入字段\n### 必填\n- `data`: array<object>，每条记录包含 `name`（string）与 `value`（number），可选 `group`（string）。\n\n### 可选\n- `style.backgroundColor`: string，设置背景色。\n- `style.lineWidth`: number，设置雷达线宽。\n- `style.palette`: string[]，定义系列颜色。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n\n## 使用建议\n维度数量控制在 4~8 之间；不同对象通过 `group` 区分并保证同一维度都给出数值；如量纲不同需先归一化。\n\n## 返回结果\n- 返回雷达图 URL，并附 `_meta.spec`。"
+    },
+    {
+      "path": "references/generate_sankey_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_sankey_chart — 桑基图\n\n## 功能概述\n展示资源、能量或用户流在不同节点之间的流向与数量，适合预算分配、流量路径、能耗分布等。\n\n## 输入字段\n### 必填\n- `data`: array<object>，每条记录包含 `source`（string）、`target`（string）与 `value`（number）。\n\n### 可选\n- `nodeAlign`: string，默认 `center`，可选 `left`/`right`/`justify`/`center`。\n- `style.backgroundColor`: string，设置背景色。\n- `style.palette`: string[]，定义节点配色。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n\n## 使用建议\n节点名称保持唯一，避免过多交叉；如存在环路需先打平为阶段流向；可按阈值过滤小流量以聚焦重点。\n\n## 返回结果\n- 返回桑基图 URL，并在 `_meta.spec` 存放节点与流量定义。"
+    },
+    {
+      "path": "references/generate_scatter_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_scatter_chart — 散点图\n\n## 功能概述\n展示两个连续变量之间的关系，可通过颜色/形状区分不同分组，适合相关性分析、聚类探索。\n\n## 输入字段\n### 必填\n- `data`: array<object>，每条记录包含 `x`（number）与 `y`（number），可选 `group`（string）。\n\n### 可选\n- `style.backgroundColor`: string，设置背景色。\n- `style.palette`: string[]，指定系列配色。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n- `axisXTitle`: string，默认空字符串。\n- `axisYTitle`: string，默认空字符串。\n\n## 使用建议\n在上传前可对不同量纲进行标准化；若数据量很大可先抽样；使用 `group` 区分不同类别或聚类结果以便阅读。\n\n## 返回结果\n- 返回散点图 URL，并附 `_meta.spec`。"
+    },
+    {
+      "path": "references/generate_spreadsheet.md",
+      "encoding": "utf8",
+      "content": "# generate_spreadsheet — 电子表格/数据透视表\n\n## 功能概述\n生成电子表格或数据透视表，用于展示结构化的表格数据。当提供 `rows` 或 `values` 字段时，渲染为数据透视表（交叉表）；否则渲染为常规表格。适合展示结构化数据、跨类别比较值以及创建数据汇总。\n\n## 输入字段\n### 必填\n- `data`: array<object>，表格数据数组，每个对象代表一行。键是列名，值可以是字符串、数字、null 或 undefined。例如：`[{ name: 'John', age: 30 }, { name: 'Jane', age: 25 }]`。\n\n### 可选\n- `rows`: array<string>，数据透视表的行标题字段。当提供 `rows` 或 `values` 时，电子表格将渲染为数据透视表。\n- `columns`: array<string>，列标题字段，用于指定列的顺序。对于常规表格，这决定列的顺序；对于数据透视表，用于列分组。\n- `values`: array<string>，数据透视表的值字段。当提供 `rows` 或 `values` 时，电子表格将渲染为数据透视表。\n- `theme`: string，默认 `default`，可选 `default`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n\n## 使用建议\n- 对于常规表格，只需提供 `data` 和可选的 `columns` 来控制列的顺序。\n- 对于数据透视表（交叉表），提供 `rows` 用于行分组，`columns` 用于列分组，`values` 用于聚合的值字段。\n- 确保数据中的字段名与 `rows`、`columns`、`values` 中指定的字段名一致。\n\n## 返回结果\n- 返回电子表格/数据透视表图片 URL，并附 `_meta.spec` 供后续编辑。"
+    },
+    {
+      "path": "references/generate_treemap_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_treemap_chart — 矩形树图\n\n## 功能概述\n以嵌套矩形展示层级结构及各节点权重，适合资产占比、市场份额、目录容量等。\n\n## 输入字段\n### 必填\n- `data`: array<object>，节点数组，每条含 `name`（string）与 `value`（number），可递归嵌套 `children`。\n\n### 可选\n- `style.backgroundColor`: string，设置背景色。\n- `style.palette`: string[]，定义配色列表。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n\n## 使用建议\n确保每个节点 `value` ≥0，并与子节点之和一致；树层级不宜过深，可按需要提前聚合；为提升可读性可在节点名中加上数值单位。 \n\n## 返回结果\n- 返回矩形树图 URL，并同步 `_meta.spec`。"
+    },
+    {
+      "path": "references/generate_venn_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_venn_chart — 维恩图\n\n## 功能概述\n展示多个集合之间的交集、并集与差异，适用于市场细分、特性覆盖、用户重叠分析。\n\n## 输入字段\n### 必填\n- `data`: array<object>，每条记录包含 `value`（number）与 `sets`（string[]），可选 `label`（string）。\n\n### 可选\n- `style.backgroundColor`: string，设置背景色。\n- `style.palette`: string[]，定义配色列表。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n\n## 使用建议\n集合数量建议 ≤4；若缺少精确权重可根据大致占比填写；集合命名保持简洁明确（如“移动端用户”）。\n\n## 返回结果\n- 返回维恩图 URL，并保存在 `_meta.spec` 中。"
+    },
+    {
+      "path": "references/generate_violin_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_violin_chart — 小提琴图\n\n## 功能概述\n结合核密度曲线与箱型统计展示不同类别的分布形态，适合对比多批次实验或群体表现。\n\n## 输入字段\n### 必填\n- `data`: array<object>，每条记录包含 `category`（string）与 `value`（number），可选 `group`（string）。\n\n### 可选\n- `style.backgroundColor`: string，设置背景色。\n- `style.palette`: string[]，定义配色列表。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n- `axisXTitle`: string，默认空字符串。\n- `axisYTitle`: string，默认空字符串。\n\n## 使用建议\n各类别样本量建议 ≥30 以确保密度估计稳定；如需要突出四分位信息，可与箱型图结合展示。\n\n## 返回结果\n- 返回小提琴图 URL，并在 `_meta.spec` 中保留配置。"
+    },
+    {
+      "path": "references/generate_word_cloud_chart.md",
+      "encoding": "utf8",
+      "content": "# generate_word_cloud_chart — 词云图\n\n## 功能概述\n根据词频或权重调节文字大小与位置，用于快速提炼文本主题、情绪或关键词热点。\n\n## 输入字段\n### 必填\n- `data`: array<object>，每条记录包含 `text`（string）与 `value`（number）。\n\n### 可选\n- `style.backgroundColor`: string，设置背景色。\n- `style.palette`: string[]，定义词云配色。\n- `style.texture`: string，默认 `default`，可选 `default`/`rough`。\n- `theme`: string，默认 `default`，可选 `default`/`academy`/`dark`。\n- `width`: number，默认 `600`。\n- `height`: number，默认 `400`。\n- `title`: string，默认空字符串。\n\n## 使用建议\n生成前去除停用词并合并同义词；统一大小写避免重复；如需突出情绪可按正负值映射配色。\n\n## 返回结果\n- 返回词云图 URL，并附 `_meta.spec`。"
+    },
+    {
+      "path": "scripts/generate.js",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env node\n\nconst fs = require(\"fs\");\n\n// Chart type mapping, consistent with src/utils/callTool.ts\nconst CHART_TYPE_MAP = {\n  generate_area_chart: \"area\",\n  generate_bar_chart: \"bar\",\n  generate_boxplot_chart: \"boxplot\",\n  generate_column_chart: \"column\",\n  generate_district_map: \"district-map\",\n  generate_dual_axes_chart: \"dual-axes\",\n  generate_fishbone_diagram: \"fishbone-diagram\",\n  generate_flow_diagram: \"flow-diagram\",\n  generate_funnel_chart: \"funnel\",\n  generate_histogram_chart: \"histogram\",\n  generate_line_chart: \"line\",\n  generate_liquid_chart: \"liquid\",\n  generate_mind_map: \"mind-map\",\n  generate_network_graph: \"network-graph\",\n  generate_organization_chart: \"organization-chart\",\n  generate_path_map: \"path-map\",\n  generate_pie_chart: \"pie\",\n  generate_pin_map: \"pin-map\",\n  generate_radar_chart: \"radar\",\n  generate_sankey_chart: \"sankey\",\n  generate_scatter_chart: \"scatter\",\n  generate_treemap_chart: \"treemap\",\n  generate_venn_chart: \"venn\",\n  generate_violin_chart: \"violin\",\n  generate_word_cloud_chart: \"word-cloud\",\n};\n\nfunction getVisRequestServer() {\n  return (\n    process.env.VIS_REQUEST_SERVER ||\n    \"https://antv-studio.alipay.com/api/gpt-vis\"\n  );\n}\n\nfunction getServiceIdentifier() {\n  return process.env.SERVICE_ID;\n}\n\nasync function httpPost(url, payload) {\n  const response = await fetch(url, {\n    method: \"POST\",\n    headers: {\n      \"Content-Type\": \"application/json\",\n    },\n    body: JSON.stringify(payload),\n  });\n\n  if (!response.ok) {\n    const text = await response.text();\n    throw new Error(`HTTP ${response.status}: ${text}`);\n  }\n\n  return response.json();\n}\n\nasync function generateChartUrl(chartType, options) {\n  const url = getVisRequestServer();\n  const payload = {\n    type: chartType,\n    source: \"chart-visualization-creator\",\n    ...options,\n  };\n\n  const data = await httpPost(url, payload);\n\n  if (!data.success) {\n    throw new Error(data.errorMessage || \"Unknown error\");\n  }\n\n  return data.resultObj;\n}\n\nasync function generateMap(tool, inputData) {\n  const url = getVisRequestServer();\n  const payload = {\n    serviceId: getServiceIdentifier(),\n    tool,\n    input: inputData,\n    source: \"chart-visualization-creator\",\n  };\n\n  const data = await httpPost(url, payload);\n\n  if (!data.success) {\n    throw new Error(data.errorMessage || \"Unknown error\");\n  }\n\n  return data.resultObj;\n}\n\nasync function main() {\n  if (process.argv.length < 3) {\n    console.error(\"Usage: node generate.js <spec_json_or_file>\");\n    process.exit(1);\n  }\n\n  const specArg = process.argv[2];\n  let spec;\n\n  try {\n    if (fs.existsSync(specArg)) {\n      const fileContent = fs.readFileSync(specArg, \"utf-8\");\n      spec = JSON.parse(fileContent);\n    } else {\n      spec = JSON.parse(specArg);\n    }\n  } catch (e) {\n    console.error(`Error parsing spec: ${e.message}`);\n    process.exit(1);\n  }\n\n  const specs = Array.isArray(spec) ? spec : [spec];\n\n  for (const item of specs) {\n    const tool = item.tool;\n    const args = item.args || {};\n\n    if (!tool) {\n      console.error(\n        `Error: 'tool' field missing in spec: ${JSON.stringify(item)}`,\n      );\n      continue;\n    }\n\n    const chartType = CHART_TYPE_MAP[tool];\n    if (!chartType) {\n      console.error(`Error: Unknown tool '${tool}'`);\n      continue;\n    }\n\n    const isMapChartTool = [\n      \"generate_district_map\",\n      \"generate_path_map\",\n      \"generate_pin_map\",\n    ].includes(tool);\n\n    try {\n      if (isMapChartTool) {\n        const result = await generateMap(tool, args);\n        if (result && result.content) {\n          for (const contentItem of result.content) {\n            if (contentItem.type === \"text\") {\n              console.log(contentItem.text);\n            }\n          }\n        } else {\n          console.log(JSON.stringify(result));\n        }\n      } else {\n        const url = await generateChartUrl(chartType, args);\n        console.log(url);\n      }\n    } catch (e) {\n      console.error(`Error generating chart for ${tool}: ${e.message}`);\n    }\n  }\n}\n\nif (require.main === module) {\n  main().catch((err) => {\n    console.error(err.message);\n    process.exit(1);\n  });\n}\n\n// Export functions for testing\nmodule.exports = { generateChartUrl, generateMap, httpPost, CHART_TYPE_MAP };\n"
+    }
+  ]
+}

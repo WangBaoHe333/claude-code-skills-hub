@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-plan-design-review",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: plan-design-review\ndescription: |\n  Senior Designer review: rates each design dimension 0-10, explains what a 10 looks like, and flags AI Slop signals. Useful as a gate before merging UI work.\ntriggers:\n  - \"plan design review\"\n  - \"senior designer review\"\n  - \"design rating\"\n  - \"ai slop check\"\nod:\n  mode: design-system\n  category: creative-direction\n  upstream: \"https://github.com/garrytan/gstack\"\n---\n\n# plan-design-review\n\n> Curated from Garry Tan (gstack).\n\n## What it does\n\nSenior Designer review: rates each design dimension 0-10, explains what a 10 looks like, and flags AI Slop signals. Useful as a gate before merging UI work.\n\n## Source\n\n- Upstream: https://github.com/garrytan/gstack\n- Category: `creative-direction`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/garrytan/gstack\n```\n\nThen ask the agent to invoke this skill by name (`plan-design-review`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "nexu-io-open-design-sample-plugin",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: sample-plugin\ndescription: Phase 1 sample plugin synthesizing a SKILL.md frontmatter for backwards-compat tests.\nod:\n  kind: skill\n  taskKind: new-generation\n  preview:\n    type: deck\n---\n\n# Sample Plugin\n\nThis is the SKILL.md half of the Phase 1 e2e fixture. The companion\n`open-design.json` sidecar carries the canonical Open Design plugin\nmanifest fields; this file proves the SKILL-only adapter path stays\nhonest when an install lacks an explicit sidecar (just delete\n`open-design.json` to test the legacy compat tier).\n\n## Workflow\n\n1. Acknowledge the user's brief via the discovery question form atom.\n2. Use TodoWrite to plan the brief.\n3. Emit the brief as a deck artifact.\n"
+    },
+    {
+      "path": "open-design.json",
+      "encoding": "utf8",
+      "content": "{\n  \"$schema\": \"https://open-design.ai/schemas/plugin.v1.json\",\n  \"specVersion\": \"1.0.0\",\n  \"name\": \"sample-plugin\",\n  \"title\": \"Sample Plugin\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Phase 1 e2e fixture used by od plugin install/apply walkthroughs.\",\n  \"license\": \"MIT\",\n  \"tags\": [\"sample\", \"phase1\"],\n  \"od\": {\n    \"kind\": \"skill\",\n    \"taskKind\": \"new-generation\",\n    \"useCase\": {\n      \"query\": \"Generate a {{topic}} brief for {{audience}}.\"\n    },\n    \"context\": {\n      \"skills\": [{ \"ref\": \"open-design-landing\" }],\n      \"atoms\": [\"todo-write\", \"discovery-question-form\"]\n    },\n    \"inputs\": [\n      { \"name\": \"topic\", \"type\": \"string\", \"required\": true, \"label\": \"Topic\" },\n      { \"name\": \"audience\", \"type\": \"select\", \"options\": [\"VC pitch\", \"general\"], \"default\": \"general\" }\n    ],\n    \"capabilities\": [\"prompt:inject\"]\n  }\n}\n"
+    }
+  ]
+}

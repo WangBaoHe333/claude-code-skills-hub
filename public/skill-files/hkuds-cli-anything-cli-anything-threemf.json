@@ -1,0 +1,10 @@
+{
+  "id": "hkuds-cli-anything-cli-anything-threemf",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: \"cli-anything-threemf\"\ndescription: \"3MF mesh geometry editor — detect and resize cylindrical holes, repair meshes, compare 3D printing files. Works with BambuStudio and PrusaSlicer 3MF files.\"\n---\n\n# cli-anything-3mf\n\n3MF mesh geometry editor for 3D printing files.\n\n## Installation\n\n```bash\npip install git+https://github.com/HKUDS/CLI-Anything.git#subdirectory=3MF/agent-harness\n```\n\n## Commands\n\n```bash\n# Show mesh info (vertices, faces, bounding box, watertight status, volume)\ncli-anything-3mf info <file.3mf>\n\n# Detect cylindrical holes (center, diameter, confidence)\ncli-anything-3mf inspect <file.3mf>\n\n# Resize holes to target diameter\ncli-anything-3mf resize <file.3mf> --hole 0 --hole 1 --diameter 4.2 -o output.3mf\n\n# Fix mesh issues (degenerate faces, duplicate vertices, normals)\ncli-anything-3mf repair <file.3mf> -o repaired.3mf\n\n# Compare two 3MF files\ncli-anything-3mf compare <file1.3mf> <file2.3mf>\n```\n\n## JSON Output\n\nAll commands support `--json` for machine-readable output:\n\n```bash\ncli-anything-3mf --json inspect model.3mf\n```\n\n## Key Features\n\n- Detects cylindrical holes via multi-plane cross-section analysis\n- Resizes holes by radial vertex scaling (preserves mesh topology)\n- Preserves slicer metadata (BambuStudio, PrusaSlicer) during file repack\n- Repairs degenerate faces and duplicate vertices after modification\n- Works with any 3MF file conforming to the 3MF Core Specification\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-init-project",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: init-project\ndescription: Initialize a new Ruflo project with MCP tools, hooks, and agent configuration\nargument-hint: \"[--preset standard|minimal|full]\"\nallowed-tools: Bash(npx *) Read Write Edit\n---\nRun `npx @claude-flow/cli@latest init --wizard` to set up the project interactively, or `npx @claude-flow/cli@latest init --preset standard` for defaults.\n\nThis creates CLAUDE.md, .claude/settings.json, and .claude-flow/ config with MCP server registration for the `ruflo` MCP tools.\n"
+    }
+  ]
+}

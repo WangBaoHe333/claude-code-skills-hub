@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-competitive-ads-extractor",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: competitive-ads-extractor\ndescription: |\n  Extract and analyze competitors' ads from ad libraries to understand messaging and creative approaches that resonate.\ntriggers:\n  - \"competitive ads\"\n  - \"ad library extract\"\n  - \"competitor creative\"\n  - \"ad teardown\"\nod:\n  mode: design-system\n  category: marketing-creative\n  upstream: \"https://github.com/ComposioHQ/awesome-claude-skills/tree/master/competitive-ads-extractor\"\n---\n\n# competitive-ads-extractor\n\n> Curated from ComposioHQ awesome-claude-skills.\n\n## What it does\n\nExtract and analyze competitors' ads from ad libraries to understand messaging and creative approaches that resonate.\n\n## Source\n\n- Upstream: https://github.com/ComposioHQ/awesome-claude-skills/tree/master/competitive-ads-extractor\n- Category: `marketing-creative`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/ComposioHQ/awesome-claude-skills/tree/master/competitive-ads-extractor\n```\n\nThen ask the agent to invoke this skill by name (`competitive-ads-extractor`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

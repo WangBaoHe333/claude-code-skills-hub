@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-pii-detect",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: pii-detect\ndescription: Detect and flag personally identifiable information (PII) in text, code, and configurations\nargument-hint: \"<input-text>\"\nallowed-tools: mcp__claude-flow__aidefence_has_pii mcp__claude-flow__aidefence_scan mcp__claude-flow__aidefence_analyze mcp__claude-flow__transfer_detect-pii Bash\n---\n\n# PII Detection\n\nDetect personally identifiable information before it enters logs, commits, or responses.\n\n## When to use\n\nBefore committing code, storing data, or sending responses that might contain PII (emails, phone numbers, SSNs, API keys, passwords).\n\n## Steps\n\n1. **Quick PII check** — call `mcp__claude-flow__aidefence_has_pii` with the text for a boolean result\n2. **Detailed scan** — call `mcp__claude-flow__transfer_detect-pii` for categorized PII findings\n3. **Full analysis** — call `mcp__claude-flow__aidefence_analyze` for context-aware PII detection\n4. If PII found, flag the specific locations and suggest redaction\n\n## PII categories detected\n\n- Email addresses, phone numbers\n- Social security numbers, tax IDs\n- Credit card numbers\n- API keys, tokens, passwords\n- Physical addresses\n- Names linked to sensitive data\n"
+    }
+  ]
+}

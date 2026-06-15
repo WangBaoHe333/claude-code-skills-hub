@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-autopilot-loop",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: autopilot-loop\ndescription: Run an autonomous /loop iteration -- check progress, work on next task, schedule next wake\nargument-hint: \"\"\nallowed-tools: mcp__claude-flow__autopilot_status mcp__claude-flow__autopilot_predict mcp__claude-flow__autopilot_log mcp__claude-flow__autopilot_progress mcp__claude-flow__autopilot_disable ScheduleWakeup Agent\n---\nRun one autopilot iteration using Claude Code's native /loop:\n\n1. Check status: `mcp__claude-flow__autopilot_status`\n2. If all tasks complete or max iterations reached, call `mcp__claude-flow__autopilot_disable` and stop\n3. Get prediction: `mcp__claude-flow__autopilot_predict` for the optimal next action\n4. Execute the predicted task (spawn agent, edit code, run tests, etc.)\n5. Log via `mcp__claude-flow__autopilot_log`\n6. Schedule next: `ScheduleWakeup({ delaySeconds: 270, reason: \"next autopilot iteration\" })`\n\n### Cache-Aware Scheduling\n\nAlways use delay 270s (under 300s cache TTL) to keep the prompt cache warm between iterations.\n\n### Task Sources\n\nAutopilot discovers tasks from:\n- **team-tasks**: Claude Code TaskList entries\n- **swarm-tasks**: MCP task_list entries\n- **file-checklist**: Markdown checkbox items in tracked files\n\nConfigure: `mcp__claude-flow__autopilot_config({ taskSources: [\"team-tasks\", \"swarm-tasks\"] })`\n"
+    }
+  ]
+}

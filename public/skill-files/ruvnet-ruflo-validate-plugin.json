@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-validate-plugin",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: validate-plugin\ndescription: Validate a Claude Code plugin structure, frontmatter, and MCP tool references\nargument-hint: \"[plugin-path]\"\nallowed-tools: mcp__claude-flow__transfer_plugin-info Bash Read Glob Grep\n---\n\n# Validate Plugin\n\nValidate that a plugin follows the correct Claude Code plugin format.\n\n## When to use\n\nAfter creating or modifying a plugin, run validation to catch structural issues before publishing.\n\n## Checks performed\n\n1. **Directory structure** — `.claude-plugin/plugin.json` exists at plugin root\n2. **plugin.json schema** — required fields present (name, description, version)\n3. **Skills** — each skill in `plugin.json.skills` has a matching `skills/<name>/SKILL.md`\n4. **Commands** — each command in `plugin.json.commands` has a matching `commands/<name>.md`\n5. **Agents** — each agent in `plugin.json.agents` has a matching `agents/<name>.md`\n6. **SKILL.md frontmatter** — each skill has `name`, `description`, and `allowed-tools`\n7. **Agent frontmatter** — each agent has `name`, `description`, and `model`\n8. **No files in wrong locations** — skills/commands/agents not inside `.claude-plugin/`\n9. **MCP tool references** — tools in `allowed-tools` are valid `mcp__claude-flow__*` identifiers\n\n## Steps\n\n1. Read the plugin's `plugin.json`\n2. For each skill, command, and agent declared, verify the file exists\n3. For each SKILL.md, verify frontmatter has required fields\n4. For each agent .md, verify frontmatter has required fields\n5. Report pass/fail for each check with actionable fix suggestions\n"
+    }
+  ]
+}

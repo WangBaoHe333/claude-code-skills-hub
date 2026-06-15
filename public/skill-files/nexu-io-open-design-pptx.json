@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-pptx",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: pptx\ndescription: |\n  Read, generate, and adjust PowerPoint slides, layouts, and templates. Useful for executive decks, training material, and product reviews.\ntriggers:\n  - \"pptx\"\n  - \"powerpoint\"\n  - \"slide deck\"\n  - \"create slides\"\n  - \"edit pptx\"\nod:\n  mode: deck\n  category: slides\n  upstream: \"https://github.com/anthropics/skills/tree/main/skills/pptx\"\n---\n\n# pptx\n\n> Curated from Anthropic's official skills repository.\n\n## What it does\n\nRead, generate, and adjust PowerPoint slides, layouts, and templates. Useful for executive decks, training material, and product reviews.\n\n## Source\n\n- Upstream: https://github.com/anthropics/skills/tree/main/skills/pptx\n- Category: `slides`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/anthropics/skills/tree/main/skills/pptx\n```\n\nThen ask the agent to invoke this skill by name (`pptx`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

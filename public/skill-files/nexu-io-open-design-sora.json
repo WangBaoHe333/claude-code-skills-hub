@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-sora",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: sora\ndescription: |\n  Generate, remix, and manage short video clips via OpenAI's Sora API. Useful for cinematic shots, b-roll, and rapid concept video iteration.\ntriggers:\n  - \"sora\"\n  - \"openai video\"\n  - \"short video\"\n  - \"b roll\"\n  - \"cinematic clip\"\nod:\n  mode: video\n  category: video-generation\n  upstream: \"https://github.com/openai/skills\"\n---\n\n# sora\n\n> Curated from OpenAI's skills repository.\n\n## What it does\n\nGenerate, remix, and manage short video clips via OpenAI's Sora API. Useful for cinematic shots, b-roll, and rapid concept video iteration.\n\n## Source\n\n- Upstream: https://github.com/openai/skills\n- Category: `video-generation`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/openai/skills\n```\n\nThen ask the agent to invoke this skill by name (`sora`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

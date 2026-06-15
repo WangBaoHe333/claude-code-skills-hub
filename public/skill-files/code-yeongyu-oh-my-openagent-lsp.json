@@ -1,0 +1,10 @@
+{
+  "id": "code-yeongyu-oh-my-openagent-lsp",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: lsp\ndescription: Use when Codex needs language-server diagnostics, definitions, references, symbols, or rename safety checks in the current workspace.\n---\n\n# Codex LSP\n\nCall `lsp` MCP tools through the tool interface; `lsp.*`/`mcp__lsp__*` are tool-call names, not shell commands.\n\n## Tools\n\n- `lsp.status`: list configured, installed, missing, disabled, and active language servers.\n- `lsp.diagnostics`: check one file or directory for LSP diagnostics. Prefer `severity: \"error\"` after edits.\n- `lsp.goto_definition`: locate a symbol definition from file, line, and character.\n- `lsp.find_references`: find usages of a symbol across the workspace.\n- `lsp.symbols`: inspect document symbols or search workspace symbols.\n- `lsp.prepare_rename`: check whether a rename is valid at a position.\n- `lsp.rename`: apply a language-server workspace edit for a rename.\n\n## Config\n\nProject config lives at `.codex/lsp-client.json`; user config lives at `~/.codex/lsp-client.json`.\n\n```json\n{\n\t\"lsp\": {\n\t\t\"typescript\": {\n\t\t\t\"command\": [\"typescript-language-server\", \"--stdio\"],\n\t\t\t\"extensions\": [\".ts\", \".tsx\", \".js\", \".jsx\"]\n\t\t}\n\t}\n}\n```\n\nUse `lsp.status` first when diagnostics report a missing language server.\n"
+    }
+  ]
+}

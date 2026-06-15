@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-loop-worker",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: loop-worker\ndescription: Run Ruflo background workers using Claude Code native /loop scheduling\nargument-hint: \"<worker-name>\"\nallowed-tools: Bash(npx *) mcp__claude-flow__hooks_worker-dispatch mcp__claude-flow__hooks_worker-status ScheduleWakeup\n---\nUse `/loop` for in-session periodic workers. Cache-aware delays keep prompt cache warm:\n- Delay formula: `min(270, cache_ttl * 0.9)` -- default 270s\n\nDispatch a worker via MCP: `mcp__claude-flow__hooks_worker-dispatch({ trigger: \"WORKER_NAME\" })`\n\nThen schedule the next iteration: `ScheduleWakeup({ delaySeconds: 270, reason: \"next WORKER_NAME iteration\" })`\n\n### Available Workers\n\n| Worker | Interval | Description |\n|--------|----------|-------------|\n| audit | 270s | Security analysis |\n| optimize | 270s | Performance optimization |\n| consolidate | 600s | Memory consolidation |\n| predict | 270s | Predictive preloading |\n| map | 600s | Codebase mapping |\n| testgaps | 270s | Test coverage analysis |\n| document | 600s | Auto-documentation |\n| benchmark | 600s | Performance benchmarking |\n\nMCP tool responses include `[LOOP_SUGGESTION]` and `[CRON_SUGGESTION]` hints -- follow them.\n"
+    }
+  ]
+}

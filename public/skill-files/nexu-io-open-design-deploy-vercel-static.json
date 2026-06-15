@@ -1,0 +1,15 @@
+{
+  "id": "nexu-io-open-design-deploy-vercel-static",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: deploy-vercel-static\ndescription: Use this plugin when the user wants to deploy an accepted static web artifact to Vercel or prepare an equivalent deployment handoff with preview and production URLs.\nlicense: MIT\nmetadata:\n  author: open-design-spec\n  version: \"0.1.0\"\n---\n\n# Deploy Vercel Static\n\n## Workflow\n\n1. Confirm the artifact path, project name, and whether this is preview-only or production.\n2. Validate that the artifact can run as a static web surface.\n3. Prepare deployment files if needed.\n4. Ask for confirmation before deployment.\n5. Deploy or produce exact deployment instructions and return links.\n\n## Output Contract\n\nProduce `deploy-summary.md` and a preview URL, production URL, or prepared command list.\n\n"
+    },
+    {
+      "path": "open-design.json",
+      "encoding": "utf8",
+      "content": "{\n  \"$schema\": \"https://open-design.ai/schemas/plugin.v1.json\",\n  \"specVersion\": \"1.0.0\",\n  \"name\": \"deploy-vercel-static\",\n  \"title\": \"Deploy To Vercel\",\n  \"version\": \"0.1.0\",\n  \"description\": \"Deploy an accepted static artifact to Vercel or prepare a deployment handoff.\",\n  \"license\": \"MIT\",\n  \"tags\": [\"deploy\", \"vercel\", \"static\", \"deployment\"],\n  \"compat\": {\n    \"agentSkills\": [{ \"path\": \"./SKILL.md\" }]\n  },\n  \"od\": {\n    \"kind\": \"skill\",\n    \"taskKind\": \"code-migration\",\n    \"mode\": \"deploy\",\n    \"scenario\": \"deployment\",\n    \"useCase\": {\n      \"query\": \"Deploy the accepted static artifact to Vercel as {{projectName}}.\"\n    },\n    \"context\": {\n      \"skills\": [{ \"path\": \"./SKILL.md\" }],\n      \"atoms\": [\"file-read\", \"build-test\", \"handoff\", \"connector\"]\n    },\n    \"pipeline\": {\n      \"stages\": [\n        { \"id\": \"inspect\", \"atoms\": [\"file-read\"] },\n        { \"id\": \"verify\", \"atoms\": [\"build-test\"] },\n        { \"id\": \"deploy\", \"atoms\": [\"connector\"] },\n        { \"id\": \"handoff\", \"atoms\": [\"handoff\"] }\n      ]\n    },\n    \"connectors\": {\n      \"optional\": [\n        { \"id\": \"vercel\", \"tools\": [\"deploy-project\"] }\n      ]\n    },\n    \"genui\": {\n      \"surfaces\": [\n        {\n          \"id\": \"confirm-deploy\",\n          \"kind\": \"confirmation\",\n          \"persist\": \"run\",\n          \"trigger\": { \"stageId\": \"deploy\", \"atom\": \"connector\" },\n          \"prompt\": \"Deploy this artifact to Vercel now?\"\n        }\n      ]\n    },\n    \"inputs\": [\n      { \"name\": \"projectName\", \"type\": \"string\", \"required\": true, \"label\": \"Project name\" }\n    ],\n    \"capabilities\": [\"prompt:inject\", \"fs:read\", \"bash\", \"connector\", \"connector:vercel\", \"network\"]\n  }\n}\n\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-gif-sticker-maker",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: gif-sticker-maker\ndescription: |\n  Convert photos into animated GIF stickers in Funko Pop / Pop Mart style via the MiniMax API. Useful for personalized chat stickers and avatar packs.\ntriggers:\n  - \"gif sticker\"\n  - \"funko sticker\"\n  - \"animated sticker\"\n  - \"pop mart\"\n  - \"表情包\"\nod:\n  mode: image\n  category: image-generation\n  upstream: \"https://github.com/MiniMax-AI/skills\"\n---\n\n# gif-sticker-maker\n\n> Curated from MiniMax AI team.\n\n## What it does\n\nConvert photos into animated GIF stickers in Funko Pop / Pop Mart style via the MiniMax API. Useful for personalized chat stickers and avatar packs.\n\n## Source\n\n- Upstream: https://github.com/MiniMax-AI/skills\n- Category: `image-generation`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/MiniMax-AI/skills\n```\n\nThen ask the agent to invoke this skill by name (`gif-sticker-maker`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

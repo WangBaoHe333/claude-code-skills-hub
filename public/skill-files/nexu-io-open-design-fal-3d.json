@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-fal-3d",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: fal-3d\ndescription: |\n  Generate 3D models from text or images via fal.ai. Useful for game assets, AR previews, product mockups, and concept sculpting.\ntriggers:\n  - \"fal 3d\"\n  - \"text to 3d\"\n  - \"image to 3d\"\n  - \"3d model gen\"\n  - \"game asset 3d\"\nod:\n  mode: image\n  category: 3d-shaders\n  upstream: \"https://github.com/fal-ai-community/skills\"\n---\n\n# fal-3d\n\n> Curated from the fal.ai community team.\n\n## What it does\n\nGenerate 3D models from text or images via fal.ai. Useful for game assets, AR previews, product mockups, and concept sculpting.\n\n## Source\n\n- Upstream: https://github.com/fal-ai-community/skills\n- Category: `3d-shaders`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/fal-ai-community/skills\n```\n\nThen ask the agent to invoke this skill by name (`fal-3d`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

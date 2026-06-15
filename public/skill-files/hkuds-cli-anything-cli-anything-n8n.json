@@ -1,0 +1,10 @@
+{
+  "id": "hkuds-cli-anything-cli-anything-n8n",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: \"cli-anything-n8n\"\ndescription: >-\n  Command-line interface for n8n workflow automation platform.\n  Manages workflows, executions, credentials, variables, and tags.\n  Based on n8n Public API v1.1.1 (n8n >= 1.0.0).\n---\n\n# cli-anything-n8n\n\nCLI harness for n8n workflow automation — built with the CLI-Anything pattern.\nVerified against n8n OpenAPI spec v1.1.1.\n\n## Installation\n\n```bash\npip install cli-anything-n8n\n```\n\n## Configuration\n\n```bash\ncli-anything-n8n config set base_url https://your-n8n-instance.com\ncli-anything-n8n config set api_key your-api-key\n\n# Or environment variables\nexport N8N_BASE_URL=https://your-n8n-instance.com\nexport N8N_API_KEY=your-api-key\nexport N8N_TIMEOUT=60  # optional, default 30s\n```\n\n## Command Groups\n\n| Group | Commands |\n|-------|----------|\n| workflow | list, get, create, update, delete, activate, deactivate, tags, set-tags, transfer |\n| execution | list, get, delete, retry |\n| credential | create, delete, schema, transfer |\n| variable | list, create, update, delete |\n| tag | list, get, create, update, delete |\n| config | show, set |\n\n## For AI Agents\n\n- Always use `--json` flag for structured output\n- Use `@file.json` to pass complex JSON from files\n- Check return codes: 0 = success, non-zero = error\n- All IDs are strings, not integers\n- API key is always masked in `config show` output\n- Not available in public API: data tables, credential listing, execution stop\n"
+    }
+  ]
+}

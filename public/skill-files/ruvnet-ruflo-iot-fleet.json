@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-iot-fleet",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: iot-fleet\ndescription: Create and manage Cognitum Seed device fleets with firmware policies\nallowed-tools: Bash(npx *) mcp__claude-flow__memory_store mcp__claude-flow__memory_search Read\nargument-hint: \"<create|list|add|remove|delete> [options]\"\n---\nManage device fleets. Parse subcommand from arguments.\n\n**create**: `npx -y -p @claude-flow/plugin-iot-cognitum@latest cognitum-iot fleet create --name NAME`\n**list**: `npx -y -p @claude-flow/plugin-iot-cognitum@latest cognitum-iot fleet list`\n**add**: `npx -y -p @claude-flow/plugin-iot-cognitum@latest cognitum-iot fleet add FLEET_ID DEVICE_ID`\n**remove**: `npx -y -p @claude-flow/plugin-iot-cognitum@latest cognitum-iot fleet remove FLEET_ID DEVICE_ID`\n**delete**: `npx -y -p @claude-flow/plugin-iot-cognitum@latest cognitum-iot fleet delete FLEET_ID`\n"
+    }
+  ]
+}

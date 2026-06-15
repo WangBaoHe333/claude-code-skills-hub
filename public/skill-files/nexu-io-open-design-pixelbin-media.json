@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-pixelbin-media",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: pixelbin-media\ndescription: |\n  Generate and edit images and videos with an 85+ API portfolio and build visually appealing website pages via Pixelbin.\ntriggers:\n  - \"pixelbin\"\n  - \"media generation\"\n  - \"image transform\"\n  - \"video transform\"\n  - \"cdn media\"\nod:\n  mode: image\n  category: image-generation\n  upstream: \"https://github.com/pixelbin-dev/skills\"\n---\n\n# pixelbin-media\n\n> Curated from Pixelbin.\n\n## What it does\n\nGenerate and edit images and videos with an 85+ API portfolio and build visually appealing website pages via Pixelbin.\n\n## Source\n\n- Upstream: https://github.com/pixelbin-dev/skills\n- Category: `image-generation`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/pixelbin-dev/skills\n```\n\nThen ask the agent to invoke this skill by name (`pixelbin-media`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-figma-generate-design",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: figma-generate-design\ndescription: |\n  Build or update screens in Figma from code or description using design system components. Translate app pages into Figma using design tokens.\ntriggers:\n  - \"figma generate design\"\n  - \"code to figma\"\n  - \"screen generation\"\n  - \"figma from code\"\nod:\n  mode: design-system\n  category: figma\n  upstream: \"https://github.com/figma/skills\"\n---\n\n# figma-generate-design\n\n> Curated from Figma's MCP server guide.\n\n## What it does\n\nBuild or update screens in Figma from code or description using design system components. Translate app pages into Figma using design tokens.\n\n## Source\n\n- Upstream: https://github.com/figma/skills\n- Category: `figma`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/figma/skills\n```\n\nThen ask the agent to invoke this skill by name (`figma-generate-design`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

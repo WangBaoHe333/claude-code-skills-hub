@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-platform-design",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: platform-design\ndescription: |\n  300+ design rules from Apple HIG, Material Design 3, and WCAG 2.2 for cross-platform apps. Useful when shipping a single design across iOS, Android, and the web.\ntriggers:\n  - \"platform design\"\n  - \"cross platform design\"\n  - \"material design\"\n  - \"hig rules\"\n  - \"wcag rules\"\nod:\n  mode: design-system\n  category: design-systems\n  upstream: \"https://github.com/ehmo/platform-design-skills\"\n---\n\n# platform-design\n\n> Curated from @ehmo.\n\n## What it does\n\n300+ design rules from Apple HIG, Material Design 3, and WCAG 2.2 for cross-platform apps. Useful when shipping a single design across iOS, Android, and the web.\n\n## Source\n\n- Upstream: https://github.com/ehmo/platform-design-skills\n- Category: `design-systems`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/ehmo/platform-design-skills\n```\n\nThen ask the agent to invoke this skill by name (`platform-design`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}

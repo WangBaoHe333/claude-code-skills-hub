@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-ai-music-album",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: ai-music-album\ndescription: |\n  Full-lifecycle AI music album production — concept, lyric drafting, track sequencing, and export. Useful for indie album experiments and brand soundtracks.\ntriggers:\n  - \"ai music\"\n  - \"music album\"\n  - \"lyric writing\"\n  - \"track sequencing\"\n  - \"album production\"\nod:\n  mode: audio\n  category: audio-music\n  upstream: \"https://github.com/bitwize-music-studio/claude-ai-music-skills\"\n---\n\n# ai-music-album\n\n> Curated from bitwize-music-studio.\n\n## What it does\n\nFull-lifecycle AI music album production — concept, lyric drafting, track sequencing, and export. Useful for indie album experiments and brand soundtracks.\n\n## Source\n\n- Upstream: https://github.com/bitwize-music-studio/claude-ai-music-skills\n- Category: `audio-music`\n\n## How to use\n\nThis catalogue entry advertises the skill in Open Design so the agent\ndiscovers it during planning. To run the full upstream workflow with\nits original assets, scripts, and references, install the upstream\nbundle into your active agent's skills directory:\n\n```bash\n# Inspect the upstream README for exact paths\nopen https://github.com/bitwize-music-studio/claude-ai-music-skills\n```\n\nThen ask the agent to invoke this skill by name (`ai-music-album`) or with\none of the trigger phrases listed in this skill's frontmatter.\n"
+    }
+  ]
+}
