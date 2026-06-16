@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T22:31:53.494Z",
+  "generatedAt": "2026-06-16T22:24:25.252Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -1989,43 +1989,6 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-agentql-automation.json"
-    },
-    {
-      "id": "addyosmani-agent-skills-agents",
-      "name": "agents",
-      "summary": "Specialist personas that play a single role with a single perspective. Each persona is a Markdown file consumed as a system prompt by your harness (Claude Code, Cursor, Copilot, e…",
-      "summaryZh": "Agents 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Agents 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 Agents 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Agents 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Agents”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Agents”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
-      "tags": [
-        "skill",
-        "api"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/addyosmani__agent-skills'\ngit clone --depth 1 'https://github.com/addyosmani/agent-skills.git' '/tmp/addyosmani__agent-skills'\ncp -R '/tmp/addyosmani__agent-skills/agents' \"$HOME/.claude/skills/agents\"\nrm -rf '/tmp/addyosmani__agent-skills'"
-      },
-      "source": {
-        "repo": "addyosmani/agent-skills",
-        "url": "https://github.com/addyosmani/agent-skills",
-        "path": "agents",
-        "type": "auto-promoted-high-star",
-        "stars": 59408
-      },
-      "packageUrl": "/skill-files/addyosmani-agent-skills-agents.json"
     },
     {
       "id": "cline-cline-agents",
@@ -4439,6 +4402,43 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-asin-data-api-automation.json"
+    },
+    {
+      "id": "code-yeongyu-oh-my-openagent-ast-grep",
+      "name": "ast grep",
+      "summary": "LLM-neutral skill for **AST-aware search and rewrite** across 25 languages. Wraps the [`ast-grep`](https://ast-grep.github.io/) (`sg`) CLI with offline pattern validation, the two…",
+      "summaryZh": "Ast Grep 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ast Grep 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ast Grep 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ast Grep 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ast Grep 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ast Grep 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ast Grep”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ast Grep”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "github"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/ast-grep' \"$HOME/.claude/skills/ast-grep\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/shared-skills/skills/ast-grep",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ast-grep.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-astica-ai-automation",
@@ -18157,6 +18157,42 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-corrently-automation.json"
     },
     {
+      "id": "ruvnet-ruflo-cost-anomaly",
+      "name": "cost-anomaly",
+      "summary": "MAD-based outlier detection on session spend. Robust to the very outliers it hunts (unlike mean+sigma). Surfaces specific anomalous sessions with modified-z scores; optional --ale…",
+      "summaryZh": "Cost Anomaly 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Cost Anomaly 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Cost Anomaly 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Cost Anomaly 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Cost Anomaly 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Cost Anomaly 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Cost Anomaly”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Cost Anomaly”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-cost-tracker/skills/cost-anomaly' \"$HOME/.claude/skills/cost-anomaly\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-cost-tracker/skills/cost-anomaly",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-cost-anomaly.json"
+    },
+    {
       "id": "affaan-m-ecc-cost-aware-llm-pipeline",
       "name": "cost-aware-llm-pipeline",
       "summary": "LLM APIの使用量のコスト最適化パターン — タスクの複雑さによるモデルルーティング、予算追跡、リトライロジック、プロンプトキャッシング。",
@@ -18340,6 +18376,43 @@
       "packageUrl": "/skill-files/ruvnet-ruflo-cost-budget-check.json"
     },
     {
+      "id": "ruvnet-ruflo-cost-burn",
+      "name": "cost-burn",
+      "summary": "Burn-rate trend over time with optional drift-alert exit code. Bins session spend into buckets, surfaces window-over-window delta, and can exit 1 when latest bucket exceeds prior …",
+      "summaryZh": "Cost Burn 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Cost Burn 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Cost Burn 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Cost Burn 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Cost Burn 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Cost Burn 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Cost Burn”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Cost Burn”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "testing"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-cost-tracker/skills/cost-burn' \"$HOME/.claude/skills/cost-burn\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-cost-tracker/skills/cost-burn",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-cost-burn.json"
+    },
+    {
       "id": "ruvnet-ruflo-cost-compact-context",
       "name": "cost-compact-context",
       "summary": "Wrap getTokenOptimizer().getCompactContext() to retrieve compacted ReasoningBank context for cost-analysis queries; report bridge-reported tokensSaved",
@@ -18410,6 +18483,78 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-cost-conversation.json"
+    },
+    {
+      "id": "ruvnet-ruflo-cost-counterfactual",
+      "name": "cost-counterfactual",
+      "summary": "Multi-baseline counterfactual cost analysis. Compares actual session spend to hypothetical always-haiku / always-sonnet / always-opus routing baselines. Answers \"is the routing ea…",
+      "summaryZh": "Cost Counterfactual 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Cost Counterfactual 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Cost Counterfactual 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Cost Counterfactual 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Cost Counterfactual 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Cost Counterfactual 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Cost Counterfactual”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Cost Counterfactual”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-cost-tracker/skills/cost-counterfactual' \"$HOME/.claude/skills/cost-counterfactual\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-cost-tracker/skills/cost-counterfactual",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-cost-counterfactual.json"
+    },
+    {
+      "id": "ruvnet-ruflo-cost-diff",
+      "name": "cost-diff",
+      "summary": "Snapshot delta between two cost-summary JSON outputs. PR-level cost regression detection — answers \"what changed between these two specific snapshots?\". Pairs with cost-summary's …",
+      "summaryZh": "Cost Diff 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Cost Diff 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Cost Diff 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Cost Diff 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Cost Diff 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Cost Diff 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Cost Diff”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Cost Diff”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-cost-tracker/skills/cost-diff' \"$HOME/.claude/skills/cost-diff\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-cost-tracker/skills/cost-diff",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-cost-diff.json"
     },
     {
       "id": "ruvnet-ruflo-cost-export",
@@ -18484,6 +18629,42 @@
       "packageUrl": "/skill-files/ruvnet-ruflo-cost-federation.json"
     },
     {
+      "id": "ruvnet-ruflo-cost-health",
+      "name": "cost-health",
+      "summary": "Composite CI gate — runs cost-budget-check + cost-burn + cost-anomaly + cost-projection in parallel and surfaces a single combined health status with max exit code. The operationa…",
+      "summaryZh": "Cost Health 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Cost Health 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Cost Health 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Cost Health 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Cost Health 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Cost Health 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Cost Health”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Cost Health”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-cost-tracker/skills/cost-health' \"$HOME/.claude/skills/cost-health\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-cost-tracker/skills/cost-health",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-cost-health.json"
+    },
+    {
       "id": "ruvnet-ruflo-cost-optimize",
       "name": "cost-optimize",
       "summary": "Analyze token usage patterns and recommend cost optimizations with estimated savings",
@@ -18518,6 +18699,42 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-cost-optimize.json"
+    },
+    {
+      "id": "ruvnet-ruflo-cost-projection",
+      "name": "cost-projection",
+      "summary": "Forward-looking spend extrapolation. Computes a USD-per-day rate from the recent measurement window, projects to 7d/30d/90d/365d horizons, and surfaces \"days until budget exhauste…",
+      "summaryZh": "Cost Projection 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Cost Projection 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Cost Projection 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Cost Projection 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Cost Projection 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Cost Projection 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Cost Projection”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Cost Projection”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-cost-tracker/skills/cost-projection' \"$HOME/.claude/skills/cost-projection\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-cost-tracker/skills/cost-projection",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-cost-projection.json"
     },
     {
       "id": "ruvnet-ruflo-cost-report",
@@ -18555,6 +18772,42 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-cost-report.json"
+    },
+    {
+      "id": "ruvnet-ruflo-cost-session",
+      "name": "cost-session",
+      "summary": "Per-message cost breakdown within a single session. The drill-down companion to cost-anomaly — when an outlier session is flagged, this surfaces the specific expensive messages so…",
+      "summaryZh": "Cost Session 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Cost Session 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Cost Session 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Cost Session 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Cost Session 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Cost Session 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Cost Session”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Cost Session”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-cost-tracker/skills/cost-session' \"$HOME/.claude/skills/cost-session\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-cost-tracker/skills/cost-session",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-cost-session.json"
     },
     {
       "id": "ruvnet-ruflo-cost-summary",
@@ -31028,12 +31281,12 @@
         "presentations"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/frontend-slides' \"$HOME/.claude/skills/frontend-slides\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/frontend-slides' \"$HOME/.claude/skills/frontend-slides\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/frontend-slides",
+        "path": "plugins/_official/examples/frontend-slides",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -31100,12 +31353,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/fs-creative-voltage' \"$HOME/.claude/skills/fs-creative-voltage\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/fs-creative-voltage' \"$HOME/.claude/skills/fs-creative-voltage\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/fs-creative-voltage",
+        "path": "plugins/_official/examples/fs-creative-voltage",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -31137,12 +31390,12 @@
         "presentations"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/fs-editorial-forest' \"$HOME/.claude/skills/fs-editorial-forest\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/fs-editorial-forest' \"$HOME/.claude/skills/fs-editorial-forest\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/fs-editorial-forest",
+        "path": "plugins/_official/examples/fs-editorial-forest",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -31173,12 +31426,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/fs-electric-studio' \"$HOME/.claude/skills/fs-electric-studio\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/fs-electric-studio' \"$HOME/.claude/skills/fs-electric-studio\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/fs-electric-studio",
+        "path": "plugins/_official/examples/fs-electric-studio",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -31210,12 +31463,12 @@
         "presentations"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/fs-emerald-editorial' \"$HOME/.claude/skills/fs-emerald-editorial\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/fs-emerald-editorial' \"$HOME/.claude/skills/fs-emerald-editorial\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/fs-emerald-editorial",
+        "path": "plugins/_official/examples/fs-emerald-editorial",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -31246,12 +31499,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/fs-notebook-tabs' \"$HOME/.claude/skills/fs-notebook-tabs\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/fs-notebook-tabs' \"$HOME/.claude/skills/fs-notebook-tabs\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/fs-notebook-tabs",
+        "path": "plugins/_official/examples/fs-notebook-tabs",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -32025,6 +32278,43 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-genderize-automation.json"
+    },
+    {
+      "id": "affaan-m-ecc-generating-python-installer",
+      "name": "generating-python-installer",
+      "summary": "Commercial-grade Python installer expert for Windows: Nuitka extreme compilation, dist slimming, DLL footprint analysis, and Inno Setup packaging to ship the smallest, fastest ins…",
+      "summaryZh": "Generating Python Installer 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Generating Python Installer 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Generating Python Installer 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Generating Python Installer 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Generating Python Installer 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Generating Python Installer 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Generating Python Installer”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Generating Python Installer”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "testing"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/generating-python-installer' \"$HOME/.claude/skills/generating-python-installer\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/generating-python-installer",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-generating-python-installer.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-geoapify-automation",
@@ -35192,7 +35482,7 @@
     {
       "id": "nexu-io-open-design-guizang-ppt",
       "name": "guizang ppt",
-      "summary": "Magazine Web PPT · 电子杂志风网页 PPT Skill",
+      "summary": "Magazine Web PPT · Editorial-Style Web Slide Deck Skill",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -35211,7 +35501,8 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Guizang Ppt”，再给出文件、链接或要完成的任务。",
       "category": "演示文稿",
       "tags": [
-        "skill"
+        "skill",
+        "presentations"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-templates/guizang-ppt' \"$HOME/.claude/skills/guizang-ppt\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -37005,12 +37296,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/hps-academic-paper' \"$HOME/.claude/skills/hps-academic-paper\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/hps-academic-paper' \"$HOME/.claude/skills/hps-academic-paper\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/hps-academic-paper",
+        "path": "plugins/_official/examples/hps-academic-paper",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -37041,12 +37332,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/hps-bauhaus' \"$HOME/.claude/skills/hps-bauhaus\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/hps-bauhaus' \"$HOME/.claude/skills/hps-bauhaus\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/hps-bauhaus",
+        "path": "plugins/_official/examples/hps-bauhaus",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -37077,12 +37368,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/hps-memphis-pop' \"$HOME/.claude/skills/hps-memphis-pop\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/hps-memphis-pop' \"$HOME/.claude/skills/hps-memphis-pop\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/hps-memphis-pop",
+        "path": "plugins/_official/examples/hps-memphis-pop",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -37115,12 +37406,12 @@
         "testing"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/hps-retro-tv' \"$HOME/.claude/skills/hps-retro-tv\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/hps-retro-tv' \"$HOME/.claude/skills/hps-retro-tv\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/hps-retro-tv",
+        "path": "plugins/_official/examples/hps-retro-tv",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -37153,12 +37444,12 @@
         "spreadsheets"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/hps-true-blueprint' \"$HOME/.claude/skills/hps-true-blueprint\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/hps-true-blueprint' \"$HOME/.claude/skills/hps-true-blueprint\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/hps-true-blueprint",
+        "path": "plugins/_official/examples/hps-true-blueprint",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -37190,12 +37481,12 @@
         "presentations"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/hps-y2k-chrome' \"$HOME/.claude/skills/hps-y2k-chrome\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/hps-y2k-chrome' \"$HOME/.claude/skills/hps-y2k-chrome\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/hps-y2k-chrome",
+        "path": "plugins/_official/examples/hps-y2k-chrome",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -39111,12 +39402,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/huashu-annual-letter' \"$HOME/.claude/skills/huashu-annual-letter\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/huashu-annual-letter' \"$HOME/.claude/skills/huashu-annual-letter\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/huashu-annual-letter",
+        "path": "plugins/_official/examples/huashu-annual-letter",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -39147,12 +39438,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/huashu-bento-insight' \"$HOME/.claude/skills/huashu-bento-insight\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/huashu-bento-insight' \"$HOME/.claude/skills/huashu-bento-insight\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/huashu-bento-insight",
+        "path": "plugins/_official/examples/huashu-bento-insight",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -39183,12 +39474,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/huashu-golden-circle' \"$HOME/.claude/skills/huashu-golden-circle\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/huashu-golden-circle' \"$HOME/.claude/skills/huashu-golden-circle\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/huashu-golden-circle",
+        "path": "plugins/_official/examples/huashu-golden-circle",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -39219,12 +39510,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/huashu-keynote-black' \"$HOME/.claude/skills/huashu-keynote-black\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/huashu-keynote-black' \"$HOME/.claude/skills/huashu-keynote-black\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/huashu-keynote-black",
+        "path": "plugins/_official/examples/huashu-keynote-black",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -39255,12 +39546,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/huashu-luxe-whitespace' \"$HOME/.claude/skills/huashu-luxe-whitespace\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/huashu-luxe-whitespace' \"$HOME/.claude/skills/huashu-luxe-whitespace\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/huashu-luxe-whitespace",
+        "path": "plugins/_official/examples/huashu-luxe-whitespace",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -39291,12 +39582,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/huashu-pentagram-grid' \"$HOME/.claude/skills/huashu-pentagram-grid\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/huashu-pentagram-grid' \"$HOME/.claude/skills/huashu-pentagram-grid\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/huashu-pentagram-grid",
+        "path": "plugins/_official/examples/huashu-pentagram-grid",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -39328,12 +39619,12 @@
         "presentations"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/huashu-slides' \"$HOME/.claude/skills/huashu-slides\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/huashu-slides' \"$HOME/.claude/skills/huashu-slides\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/huashu-slides",
+        "path": "plugins/_official/examples/huashu-slides",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -39364,12 +39655,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/huashu-sparkline-arc' \"$HOME/.claude/skills/huashu-sparkline-arc\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/huashu-sparkline-arc' \"$HOME/.claude/skills/huashu-sparkline-arc\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/huashu-sparkline-arc",
+        "path": "plugins/_official/examples/huashu-sparkline-arc",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -39400,12 +39691,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/huashu-takram-soft-tech' \"$HOME/.claude/skills/huashu-takram-soft-tech\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/huashu-takram-soft-tech' \"$HOME/.claude/skills/huashu-takram-soft-tech\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/huashu-takram-soft-tech",
+        "path": "plugins/_official/examples/huashu-takram-soft-tech",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -41026,12 +41317,12 @@
         "api"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/init-deep' \"$HOME/.claude/skills/init-deep\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-codex/plugin/skills/init-deep' \"$HOME/.claude/skills/init-deep\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
       },
       "source": {
         "repo": "code-yeongyu/oh-my-openagent",
         "url": "https://github.com/code-yeongyu/oh-my-openagent",
-        "path": "packages/shared-skills/skills/init-deep",
+        "path": "packages/omo-codex/plugin/skills/init-deep",
         "type": "auto-promoted-high-star",
         "stars": 62215
       },
@@ -46349,7 +46640,7 @@
     {
       "id": "nexu-io-open-design-magazine-web-ppt",
       "name": "magazine-web-ppt",
-      "summary": "生成\"电子杂志 × 电子墨水\"风格的横向翻页网页 PPT（单 HTML 文件），含 WebGL 流体背景、衬线标题 + 非衬线正文、章节幕封、数据大字报、图片网格等模板。当用户需要制作分享 / 演讲 / 发布会风格的网页 PPT，或提到\"杂志风 PPT\"、\"horizontal swipe deck\"、\"editorial magazine\"、\"e-ink…",
+      "summary": "Generates an \"editorial magazine × electronic ink\" style horizontal-swipe web deck (a single HTML file), with a WebGL fluid background, serif headlines + sans-serif body, act divi…",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -46368,7 +46659,8 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Magazine Web Ppt”，再给出文件、链接或要完成的任务。",
       "category": "演示文稿",
       "tags": [
-        "skill"
+        "skill",
+        "image"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-templates/guizang-ppt' \"$HOME/.claude/skills/magazine-web-ppt\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -74403,7 +74695,7 @@
     {
       "id": "obra-superpowers-using-superpowers",
       "name": "using-superpowers",
-      "summary": "Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions",
+      "summary": "Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions",
       "summaryZh": "Using Superpowers 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Using Superpowers 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Using Superpowers 处理具体工作流的 Claude Code 用户。",
@@ -74681,12 +74973,12 @@
         "presentations"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/ve-midnight-editorial' \"$HOME/.claude/skills/ve-midnight-editorial\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/ve-midnight-editorial' \"$HOME/.claude/skills/ve-midnight-editorial\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/ve-midnight-editorial",
+        "path": "plugins/_official/examples/ve-midnight-editorial",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -74719,12 +75011,12 @@
         "api"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/ve-terminal-mono' \"$HOME/.claude/skills/ve-terminal-mono\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/ve-terminal-mono' \"$HOME/.claude/skills/ve-terminal-mono\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/community/ve-terminal-mono",
+        "path": "plugins/_official/examples/ve-terminal-mono",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
