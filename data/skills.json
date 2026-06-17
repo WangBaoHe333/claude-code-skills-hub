@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T22:24:25.252Z",
+  "generatedAt": "2026-06-17T22:17:28.754Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -4402,6 +4402,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-asin-data-api-automation.json"
+    },
+    {
+      "id": "mattpocock-skills-ask-matt",
+      "name": "ask-matt",
+      "summary": "Ask which skill or flow fits your situation. A router over the user-invoked skills in this repo.",
+      "summaryZh": "Ask Matt 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ask Matt 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ask Matt 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ask Matt 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ask Matt 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ask Matt 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ask Matt”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ask Matt”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/ask-matt' \"$HOME/.claude/skills/ask-matt\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/engineering/ask-matt",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-ask-matt.json"
     },
     {
       "id": "code-yeongyu-oh-my-openagent-ast-grep",
@@ -10611,42 +10647,6 @@
       "packageUrl": "/skill-files/juliusbrussee-caveman-cavecrew.json"
     },
     {
-      "id": "mattpocock-skills-caveman",
-      "name": "caveman",
-      "summary": ">",
-      "summaryZh": "Caveman 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Caveman 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Caveman 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Caveman 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Caveman 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Caveman 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Caveman”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Caveman”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/productivity/caveman' \"$HOME/.claude/skills/caveman\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/productivity/caveman",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-caveman.json"
-    },
-    {
       "id": "juliusbrussee-caveman-caveman",
       "name": "caveman",
       "summary": ">",
@@ -11822,7 +11822,7 @@
     {
       "id": "thedotmack-claude-mem-claude-code-plugin-release",
       "name": "claude-code-plugin-release",
-      "summary": "Automated semantic versioning and release workflow for Claude Code plugins. Handles version increments across package.json, marketplace.json, plugin.json manifests, npm publishing…",
+      "summary": "Automated semantic versioning and release workflow for Claude Code plugins. Handles version increments across package.json, marketplace.json, plugin.json manifests, build verifica…",
       "summaryZh": "Claude Code Plugin Release 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Claude Code Plugin Release 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Claude Code Plugin Release 处理具体工作流的 Claude Code 用户。",
@@ -16034,6 +16034,43 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/stellarlinkco-myclaude-codeagent-wrapper.json"
+    },
+    {
+      "id": "mattpocock-skills-codebase-design",
+      "name": "codebase-design",
+      "summary": "Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code …",
+      "summaryZh": "Codebase Design 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Codebase Design 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Codebase Design 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Codebase Design 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Codebase Design 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Codebase Design 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Codebase Design”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Codebase Design”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "testing"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/codebase-design' \"$HOME/.claude/skills/codebase-design\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/engineering/codebase-design",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-codebase-design.json"
     },
     {
       "id": "affaan-m-ecc-codebase-onboarding",
@@ -21227,6 +21264,42 @@
       "packageUrl": "/skill-files/addyosmani-agent-skills-debugging-and-error-recovery.json"
     },
     {
+      "id": "mattpocock-skills-decision-mapping",
+      "name": "decision-mapping",
+      "summary": "Turn a loose idea into a sequenced map of investigation tickets, then drive them to resolution one at a time.",
+      "summaryZh": "Decision Mapping 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Decision Mapping 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Decision Mapping 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Decision Mapping 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Decision Mapping 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Decision Mapping 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Decision Mapping”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Decision Mapping”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/decision-mapping' \"$HOME/.claude/skills/decision-mapping\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/in-progress/decision-mapping",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-decision-mapping.json"
+    },
+    {
       "id": "nexu-io-open-design-deck-guizang-editorial",
       "name": "deck-guizang-editorial",
       "summary": "Editorial magazine meets e-ink: 10 layouts and 5 palettes (Ink, Indigo Porcelain, Forest Ink, Kraft Paper, Dune).",
@@ -22687,41 +22760,40 @@
       "packageUrl": "/skill-files/garrytan-gstack-devex-review.json"
     },
     {
-      "id": "mattpocock-skills-diagnose",
-      "name": "diagnose",
-      "summary": "Disciplined diagnosis loop for hard bugs and performance regressions. Reproduce → minimise → hypothesise → instrument → fix → regression-test. Use when user says \"diagnose this\" /…",
-      "summaryZh": "Diagnose 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Diagnose 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Diagnose 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Diagnose 处理具体工作流的 Claude Code 用户。",
+      "id": "mattpocock-skills-diagnosing-bugs",
+      "name": "diagnosing-bugs",
+      "summary": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow.",
+      "summaryZh": "Diagnosing Bugs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Diagnosing Bugs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Diagnosing Bugs 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Diagnosing Bugs 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "使用 Diagnose 完成相关任务",
+        "使用 Diagnosing Bugs 完成相关任务",
         "减少手工复制、整理和重复操作",
         "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "使用 Diagnose 完成相关任务",
+        "使用 Diagnosing Bugs 完成相关任务",
         "减少手工复制、整理和重复操作",
         "把固定流程交给 Claude Code 执行"
       ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Diagnose”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Diagnose”，再给出文件、链接或要完成的任务。",
+      "usage": "安装后在 Claude Code 中明确说“使用 Diagnosing Bugs”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Diagnosing Bugs”，再给出文件、链接或要完成的任务。",
       "category": "通用工具",
       "tags": [
-        "skill",
-        "testing"
+        "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/diagnose' \"$HOME/.claude/skills/diagnose\"\nrm -rf '/tmp/mattpocock__skills'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/diagnosing-bugs' \"$HOME/.claude/skills/diagnosing-bugs\"\nrm -rf '/tmp/mattpocock__skills'"
       },
       "source": {
         "repo": "mattpocock/skills",
         "url": "https://github.com/mattpocock/skills",
-        "path": "skills/engineering/diagnose",
+        "path": "skills/engineering/diagnosing-bugs",
         "type": "auto-promoted-high-star",
         "stars": 128710
       },
-      "packageUrl": "/skill-files/mattpocock-skills-diagnose.json"
+      "packageUrl": "/skill-files/mattpocock-skills-diagnosing-bugs.json"
     },
     {
       "id": "garrytan-gstack-diagram",
@@ -24618,6 +24690,42 @@
         "stars": 64767
       },
       "packageUrl": "/skill-files/nexu-io-open-design-docx.json"
+    },
+    {
+      "id": "mattpocock-skills-domain-modeling",
+      "name": "domain-modeling",
+      "summary": "Build and sharpen a project's domain model. Use when the user wants to pin down domain terminology or a ubiquitous language, record an architectural decision, or when another skil…",
+      "summaryZh": "Domain Modeling 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Domain Modeling 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Domain Modeling 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Domain Modeling 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Domain Modeling 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Domain Modeling 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Domain Modeling”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Domain Modeling”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/domain-modeling' \"$HOME/.claude/skills/domain-modeling\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/engineering/domain-modeling",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-domain-modeling.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-domain-name-brainstormer",
@@ -34752,7 +34860,7 @@
     {
       "id": "mattpocock-skills-grill-me",
       "name": "grill-me",
-      "summary": "Interview the user relentlessly about a plan or design until reaching shared understanding, resolving each branch of the decision tree. Use when user wants to stress-test a plan, …",
+      "summary": "A relentless interview to sharpen a plan or design.",
       "summaryZh": "Grill Me 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Grill Me 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Grill Me 处理具体工作流的 Claude Code 用户。",
@@ -34771,8 +34879,7 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Grill Me”，再给出文件、链接或要完成的任务。",
       "category": "通用工具",
       "tags": [
-        "skill",
-        "testing"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/productivity/grill-me' \"$HOME/.claude/skills/grill-me\"\nrm -rf '/tmp/mattpocock__skills'"
@@ -34789,7 +34896,7 @@
     {
       "id": "mattpocock-skills-grill-with-docs",
       "name": "grill-with-docs",
-      "summary": "Grilling session that challenges your plan against the existing domain model, sharpens terminology, and updates documentation (CONTEXT.md, ADRs) inline as decisions crystallise. U…",
+      "summary": "A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.",
       "summaryZh": "Grill With Docs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Grill With Docs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Grill With Docs 处理具体工作流的 Claude Code 用户。",
@@ -34809,8 +34916,7 @@
       "category": "通用工具",
       "tags": [
         "skill",
-        "documents",
-        "testing"
+        "documents"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/grill-with-docs' \"$HOME/.claude/skills/grill-with-docs\"\nrm -rf '/tmp/mattpocock__skills'"
@@ -34823,6 +34929,43 @@
         "stars": 128710
       },
       "packageUrl": "/skill-files/mattpocock-skills-grill-with-docs.json"
+    },
+    {
+      "id": "mattpocock-skills-grilling",
+      "name": "grilling",
+      "summary": "Interview the user relentlessly about a plan or design. Use when the user wants to stress-test a plan before building, or uses any 'grill' trigger phrases.",
+      "summaryZh": "Grilling 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Grilling 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Grilling 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Grilling 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Grilling 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Grilling 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Grilling”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Grilling”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "testing"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/productivity/grilling' \"$HOME/.claude/skills/grilling\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/productivity/grilling",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-grilling.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-griptape-automation",
@@ -35883,6 +36026,298 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/stellarlinkco-myclaude-harness.json"
+    },
+    {
+      "id": "ruvnet-ruflo-harness-drift-from-history",
+      "name": "harness-drift-from-history",
+      "summary": "One-command drift detection. Composes audit-list + oia-audit + audit-trend into a single primitive — finds the most recent audit in `metaharness-audit` namespace, runs a fresh aud…",
+      "summaryZh": "Harness Drift From History 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Harness Drift From History 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Harness Drift From History 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Harness Drift From History 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Harness Drift From History 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Harness Drift From History 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Harness Drift From History”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Harness Drift From History”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-metaharness/skills/harness-drift-from-history' \"$HOME/.claude/skills/harness-drift-from-history\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-metaharness/skills/harness-drift-from-history",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-harness-drift-from-history.json"
+    },
+    {
+      "id": "ruvnet-ruflo-harness-genome",
+      "name": "harness-genome",
+      "summary": "7-section repo readiness report from `metaharness genome <path>`. Returns repo_type / agent_topology / risk_score / mcp_surface / test_confidence / publish_readiness. Pure-read; d…",
+      "summaryZh": "Harness Genome 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Harness Genome 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Harness Genome 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Harness Genome 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Harness Genome”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Harness Genome”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "testing",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-metaharness/skills/harness-genome' \"$HOME/.claude/skills/harness-genome\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-metaharness/skills/harness-genome",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-harness-genome.json"
+    },
+    {
+      "id": "ruvnet-ruflo-harness-mcp-scan",
+      "name": "harness-mcp-scan",
+      "summary": "Static security scan of a harness's declared MCP surface via `harness mcp-scan <path>`. Reads `.mcp/servers.json` + `.harness/claims.json`. Pure-read, no dispatch. Exits 1 on find…",
+      "summaryZh": "Harness Mcp Scan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Harness Mcp Scan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Harness Mcp Scan 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Harness Mcp Scan 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Harness Mcp Scan 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Harness Mcp Scan 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Harness Mcp Scan”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Harness Mcp Scan”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-metaharness/skills/harness-mcp-scan' \"$HOME/.claude/skills/harness-mcp-scan\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-metaharness/skills/harness-mcp-scan",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-harness-mcp-scan.json"
+    },
+    {
+      "id": "ruvnet-ruflo-harness-mint",
+      "name": "harness-mint",
+      "summary": "Scaffold a custom AI agent harness via `metaharness new <name> --template <id> --host <id>`. Defaults to DRY-RUN (no writes) unless --confirm is passed. Refuses to write to the ca…",
+      "summaryZh": "Harness Mint 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Harness Mint 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Harness Mint 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Harness Mint 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Harness Mint”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Harness Mint”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-metaharness/skills/harness-mint' \"$HOME/.claude/skills/harness-mint\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-metaharness/skills/harness-mint",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-harness-mint.json"
+    },
+    {
+      "id": "ruvnet-ruflo-harness-oia-audit",
+      "name": "harness-oia-audit",
+      "summary": "Composite Phase-2 audit worker (ADR-150). Bundles harness oia-manifest + threat-model + mcp-scan into one timestamped audit record stored in the `metaharness-audit` memory namespa…",
+      "summaryZh": "Harness Oia Audit 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Harness Oia Audit 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Harness Oia Audit 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Harness Oia Audit 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Harness Oia Audit 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Harness Oia Audit 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Harness Oia Audit”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Harness Oia Audit”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-metaharness/skills/harness-oia-audit' \"$HOME/.claude/skills/harness-oia-audit\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-metaharness/skills/harness-oia-audit",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-harness-oia-audit.json"
+    },
+    {
+      "id": "ruvnet-ruflo-harness-score",
+      "name": "harness-score",
+      "summary": "5-dimension harness readiness scorecard from `metaharness score <path>`. Returns harnessFit / compileConfidence / taskCoverage / toolSafety / memoryUsefulness + estCostPerRunUsd +…",
+      "summaryZh": "Harness Score 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Harness Score 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Harness Score 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Harness Score 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Harness Score 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Harness Score 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Harness Score”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Harness Score”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-metaharness/skills/harness-score' \"$HOME/.claude/skills/harness-score\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-metaharness/skills/harness-score",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-harness-score.json"
+    },
+    {
+      "id": "ruvnet-ruflo-harness-similarity",
+      "name": "harness-similarity",
+      "summary": "ADR-152 — weighted similarity between two harness fingerprints (genome + score JSON). Returns overall score in [0,1] plus per-component breakdown (cosine over 9 numerics, categori…",
+      "summaryZh": "Harness Similarity 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Harness Similarity 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Harness Similarity 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Harness Similarity 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Harness Similarity”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Harness Similarity”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-metaharness/skills/harness-similarity' \"$HOME/.claude/skills/harness-similarity\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-metaharness/skills/harness-similarity",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-harness-similarity.json"
+    },
+    {
+      "id": "ruvnet-ruflo-harness-threat-model",
+      "name": "harness-threat-model",
+      "summary": "Enterprise-review-grade threat model from `harness threat-model <path>`. Categorizes MCP-surface threats; emits `worst: 'clean'|'low'|'medium'|'high'` + per-threat findings. Pure-…",
+      "summaryZh": "Harness Threat Model 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Harness Threat Model 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Harness Threat Model 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Harness Threat Model 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Harness Threat Model 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Harness Threat Model 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Harness Threat Model”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Harness Threat Model”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-metaharness/skills/harness-threat-model' \"$HOME/.claude/skills/harness-threat-model\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-metaharness/skills/harness-threat-model",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-harness-threat-model.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-harvest-automation",
@@ -40889,6 +41324,42 @@
       "packageUrl": "/skill-files/nexu-io-open-design-impeccable-design-polish.json"
     },
     {
+      "id": "mattpocock-skills-implement",
+      "name": "implement",
+      "summary": "Implement a piece of work based on a PRD or set of issues.",
+      "summaryZh": "Implement 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Implement 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Implement 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Implement 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Implement 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Implement 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Implement”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Implement”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/implement' \"$HOME/.claude/skills/implement\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/engineering/implement",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-implement.json"
+    },
+    {
       "id": "ruvnet-ruflo-implementation",
       "name": "implementation",
       "summary": "V3 Implementation Documentation",
@@ -41002,28 +41473,26 @@
     {
       "id": "mattpocock-skills-improve-codebase-architecture",
       "name": "improve-codebase-architecture",
-      "summary": "Find deepening opportunities in a codebase, informed by the domain language in CONTEXT.md and the decisions in docs/adr/. Use when the user wants to improve architecture, find ref…",
-      "summaryZh": "Improve Codebase Architecture 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Improve Codebase Architecture 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Improve Codebase Architecture 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Improve Codebase Architecture 处理具体工作流的 Claude Code 用户。",
+      "summary": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.",
+      "summaryZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
+      "capabilityZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
+      "audience": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "audienceZh": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
       "scenarios": [
-        "使用 Improve Codebase Architecture 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "渲染代码高亮、数学公式和 Mermaid 图",
+        "把长文转成可发布 HTML",
+        "套用主题生成统一风格页面"
       ],
       "scenariosZh": [
-        "使用 Improve Codebase Architecture 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "渲染代码高亮、数学公式和 Mermaid 图",
+        "把长文转成可发布 HTML",
+        "套用主题生成统一风格页面"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Improve Codebase Architecture”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Improve Codebase Architecture”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
+      "category": "内容发布",
       "tags": [
-        "skill",
-        "documents",
-        "testing"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/improve-codebase-architecture' \"$HOME/.claude/skills/improve-codebase-architecture\"\nrm -rf '/tmp/mattpocock__skills'"
@@ -57936,7 +58405,7 @@
     {
       "id": "mattpocock-skills-prototype",
       "name": "prototype",
-      "summary": "Build a throwaway prototype to flesh out a design before committing to it. Routes between two branches — a runnable terminal app for state/business-logic questions, or several rad…",
+      "summary": "Build a throwaway prototype to flesh out a design — a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one ro…",
       "summaryZh": "Prototype 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Prototype 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Prototype 处理具体工作流的 Claude Code 用户。",
@@ -60720,6 +61189,42 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-resend-automation.json"
     },
     {
+      "id": "mattpocock-skills-resolving-merge-conflicts",
+      "name": "resolving-merge-conflicts",
+      "summary": "Use when you need to resolve an in-progress git merge/rebase conflict.",
+      "summaryZh": "Resolving Merge Conflicts 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Resolving Merge Conflicts 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Resolving Merge Conflicts 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Resolving Merge Conflicts 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Resolving Merge Conflicts 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Resolving Merge Conflicts 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Resolving Merge Conflicts”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Resolving Merge Conflicts”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/resolving-merge-conflicts' \"$HOME/.claude/skills/resolving-merge-conflicts\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/engineering/resolving-merge-conflicts",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-resolving-merge-conflicts.json"
+    },
+    {
       "id": "composiohq-awesome-claude-skills-respond-io-automation",
       "name": "respond-io-automation",
       "summary": "Automate Respond IO tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -62341,6 +62846,43 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-ruflo-market-data.json"
+    },
+    {
+      "id": "ruvnet-ruflo-ruflo-metaharness",
+      "name": "ruflo metaharness",
+      "summary": "MetaHarness integration plugin for ruflo. Surfaces the upstream `metaharness` / `harness` CLIs through five ruflo skills, honoring [ADR-150](../../v3/docs/adr/ADR-150-metaharness-…",
+      "summaryZh": "Ruflo Metaharness 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ruflo Metaharness 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ruflo Metaharness 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ruflo Metaharness 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ruflo Metaharness 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ruflo Metaharness 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ruflo Metaharness”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ruflo Metaharness”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "documents"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-metaharness' \"$HOME/.claude/skills/ruflo-metaharness\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-metaharness",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-ruflo-metaharness.json"
     },
     {
       "id": "ruvnet-ruflo-ruflo-migrations",
@@ -65721,29 +66263,27 @@
     {
       "id": "mattpocock-skills-setup-matt-pocock-skills",
       "name": "setup-matt-pocock-skills",
-      "summary": "Sets up an `## Agent skills` block in AGENTS.md/CLAUDE.md and `docs/agents/` so the engineering skills know this repo's issue tracker (GitHub or local markdown), triage label voca…",
-      "summaryZh": "Setup Matt Pocock Skills 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Setup Matt Pocock Skills 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "summary": "Configure this repo for the engineering skills — set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skill…",
+      "summaryZh": "Setup Matt Pocock Skills 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Setup Matt Pocock Skills 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Setup Matt Pocock Skills 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 Setup Matt Pocock Skills 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "使用 Setup Matt Pocock Skills 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "使用 Setup Matt Pocock Skills 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Setup Matt Pocock Skills”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Setup Matt Pocock Skills”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
+      "category": "通用工具",
       "tags": [
         "skill",
-        "documents",
-        "github",
-        "api"
+        "documents"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/setup-matt-pocock-skills' \"$HOME/.claude/skills/setup-matt-pocock-skills\"\nrm -rf '/tmp/mattpocock__skills'"
@@ -70802,7 +71342,7 @@
     {
       "id": "mattpocock-skills-tdd",
       "name": "tdd",
-      "summary": "Test-driven development with red-green-refactor loop. Use when user wants to build features or fix bugs using TDD, mentions \"red-green-refactor\", wants integration tests, or asks …",
+      "summary": "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests.",
       "summaryZh": "Tdd 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Tdd 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Tdd 处理具体工作流的 Claude Code 用户。",
@@ -72499,7 +73039,7 @@
     {
       "id": "mattpocock-skills-to-issues",
       "name": "to-issues",
-      "summary": "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices. Use when user wants to convert a plan into issues,…",
+      "summary": "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices.",
       "summaryZh": "To Issues 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "To Issues 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 To Issues 处理具体工作流的 Claude Code 用户。",
@@ -72535,7 +73075,7 @@
     {
       "id": "mattpocock-skills-to-prd",
       "name": "to-prd",
-      "summary": "Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the current context.",
+      "summary": "Turn the current conversation into a PRD and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed.",
       "summaryZh": "To Prd 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "To Prd 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 To Prd 处理具体工作流的 Claude Code 用户。",
@@ -73413,7 +73953,7 @@
     {
       "id": "mattpocock-skills-triage",
       "name": "triage",
-      "summary": "Triage issues through a state machine driven by triage roles. Use when user wants to create an issue, triage issues, review incoming bugs or feature requests, prepare issues for a…",
+      "summary": "Move issues through a state machine of triage roles — categorise, reproduce, grill if needed, and write agent-ready briefs.",
       "summaryZh": "Triage 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Triage 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Triage 处理具体工作流的 Claude Code 用户。",
@@ -78637,6 +79177,43 @@
       "packageUrl": "/skill-files/ruvnet-ruflo-workflow-run.json"
     },
     {
+      "id": "github-spec-kit-workflows",
+      "name": "workflows",
+      "summary": "Workflows are multi-step, resumable automation pipelines defined in YAML. They orchestrate Spec Kit commands across integrations, evaluate control flow, and pause at human review …",
+      "summaryZh": "Workflows 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Workflows 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Workflows 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Workflows 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Workflows 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Workflows 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Workflows”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Workflows”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "automation"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/github__spec-kit'\ngit clone --depth 1 'https://github.com/github/spec-kit.git' '/tmp/github__spec-kit'\ncp -R '/tmp/github__spec-kit/workflows' \"$HOME/.claude/skills/workflows\"\nrm -rf '/tmp/github__spec-kit'"
+      },
+      "source": {
+        "repo": "github/spec-kit",
+        "url": "https://github.com/github/spec-kit",
+        "path": "workflows",
+        "type": "auto-promoted-high-star",
+        "stars": 112137
+      },
+      "packageUrl": "/skill-files/github-spec-kit-workflows.json"
+    },
+    {
       "id": "composiohq-awesome-claude-skills-workiom-automation",
       "name": "workiom-automation",
       "summary": "Automate Workiom tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -78822,43 +79399,6 @@
       "packageUrl": "/skill-files/nexu-io-open-design-wpds.json"
     },
     {
-      "id": "mattpocock-skills-write-a-skill",
-      "name": "write-a-skill",
-      "summary": "Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.",
-      "summaryZh": "Write A Skill 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Write A Skill 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 Write A Skill 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Write A Skill 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Write A Skill”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Write A Skill”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
-      "tags": [
-        "skill",
-        "api"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/productivity/write-a-skill' \"$HOME/.claude/skills/write-a-skill\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/productivity/write-a-skill",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-write-a-skill.json"
-    },
-    {
       "id": "composiohq-awesome-claude-skills-writer-automation",
       "name": "writer-automation",
       "summary": "Automate Writer tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -78967,6 +79507,42 @@
         "stars": 128710
       },
       "packageUrl": "/skill-files/mattpocock-skills-writing-fragments.json"
+    },
+    {
+      "id": "mattpocock-skills-writing-great-skills",
+      "name": "writing-great-skills",
+      "summary": "Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable.",
+      "summaryZh": "Writing Great Skills 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Writing Great Skills 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Writing Great Skills 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Writing Great Skills 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Writing Great Skills 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Writing Great Skills 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Writing Great Skills”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Writing Great Skills”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/productivity/writing-great-skills' \"$HOME/.claude/skills/writing-great-skills\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/productivity/writing-great-skills",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-writing-great-skills.json"
     },
     {
       "id": "obra-superpowers-writing-plans",
@@ -80074,43 +80650,6 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-zoho-mail-automation.json"
-    },
-    {
-      "id": "mattpocock-skills-zoom-out",
-      "name": "zoom-out",
-      "summary": "Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need to understand how it fits into the big…",
-      "summaryZh": "Zoom Out 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Zoom Out 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 Zoom Out 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Zoom Out 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Zoom Out”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Zoom Out”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
-      "tags": [
-        "skill",
-        "api"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/zoom-out' \"$HOME/.claude/skills/zoom-out\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/engineering/zoom-out",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-zoom-out.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-zoominfo-automation",

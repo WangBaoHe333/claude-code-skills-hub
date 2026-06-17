@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-harness-mcp-scan",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: harness-mcp-scan\ndescription: Static security scan of a harness's declared MCP surface via `harness mcp-scan <path>`. Reads `.mcp/servers.json` + `.harness/claims.json`. Pure-read, no dispatch. Exits 1 on findings at or above `--fail-on` severity.\nargument-hint: \"[--path .] [--fail-on low|medium|high] [--format table|json]\"\nallowed-tools: Bash\n---\n\nCalls `harness mcp-scan` to enumerate every declared MCP server + tool\nand flag policy / permission / dependency issues. Never executes any\ntool; pure static analysis.\n\n## Algorithm\n\nImplementation: [`scripts/mcp-scan.mjs`](../../scripts/mcp-scan.mjs).\n\n1. Shell `npx -p metaharness@latest harness mcp-scan <path> --json`.\n2. Parse `findings[]` with `{ severity, id, server, tool, message }`.\n3. `--fail-on <severity>`: exit 1 when any finding is at or above that\n   level. Default `high`.\n4. Output JSON (default) or markdown table.\n\n## Severity rank\n\n| Severity | Rank |\n|---|---:|\n| low | 1 |\n| medium | 2 |\n| high | 3 |\n\n`--fail-on high` (default) only fails on HIGH; `--fail-on medium` also\nfails on MEDIUM; `--fail-on low` fails on any finding.\n\n## CI integration\n\n```yaml\n- name: MCP static scan\n  run: node plugins/ruflo-metaharness/scripts/mcp-scan.mjs --fail-on high\n```\n\nThe exit code is the only thing CI watches; the JSON output goes to\nartifacts for human review.\n\n## Graceful degradation\n\nWhen `harness` binary is unavailable (no network, blocked registry),\nemits structured `{ degraded: true, reason: 'metaharness-not-available' }`\nand exits 0. Ruflo continues — ADR-150 architectural constraint.\n"
+    }
+  ]
+}
