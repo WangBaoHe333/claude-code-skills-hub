@@ -14,7 +14,7 @@
     {
       "path": "agents/openai.yaml",
       "encoding": "utf8",
-      "content": "interface:\n  display_name: \"ulw-loop (omo)\"\n  short_description: \"Goal-like ultrawork loop for systematic decomposition\"\n  search_terms:\n    - \"ulw-loop\"\n  default_prompt: \"Use $ulw-loop to break this work into a systematic ultrawork loop with evidence-backed checkpoints.\"\n"
+      "content": "interface:\n  display_name: \"(OmO) ulw-loop\"\n  short_description: \"Goal-like ultrawork loop for systematic decomposition\"\n  search_terms:\n    - \"ulw-loop\"\n  default_prompt: \"Use $ulw-loop to break this work into a systematic ultrawork loop with evidence-backed checkpoints.\"\n"
     },
     {
       "path": "references/full-workflow.md",

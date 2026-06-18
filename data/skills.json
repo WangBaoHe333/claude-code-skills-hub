@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-17T22:17:28.754Z",
+  "generatedAt": "2026-06-18T22:27:53.851Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -73953,7 +73953,7 @@
     {
       "id": "mattpocock-skills-triage",
       "name": "triage",
-      "summary": "Move issues through a state machine of triage roles — categorise, reproduce, grill if needed, and write agent-ready briefs.",
+      "summary": "Move issues and external PRs through a state machine of triage roles — categorise, verify, grill if needed, and write agent-ready briefs.",
       "summaryZh": "Triage 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Triage 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Triage 处理具体工作流的 Claude Code 用户。",
