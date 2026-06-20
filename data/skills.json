@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T21:38:45.670Z",
+  "generatedAt": "2026-06-20T21:42:42.885Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -58915,6 +58915,44 @@
         "stars": 128710
       },
       "packageUrl": "/skill-files/mattpocock-skills-qa.json"
+    },
+    {
+      "id": "browser-use-browser-use-qa",
+      "name": "qa",
+      "summary": "QA-test a website or web app and return a 1-5 quality score (5 = flawless, 1 = broken) with evidence. Use when the user wants to test, QA, evaluate, score, or \"check how good\" a s…",
+      "summaryZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
+      "capabilityZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
+      "audience": "开发者、测试人员、产品经理和需要验证网页流程的人。",
+      "audienceZh": "开发者、测试人员、产品经理和需要验证网页流程的人。",
+      "scenarios": [
+        "打开 localhost 页面做交互检查",
+        "填写表单、点击按钮并读取页面结果",
+        "截图验证页面布局和状态"
+      ],
+      "scenariosZh": [
+        "打开 localhost 页面做交互检查",
+        "填写表单、点击按钮并读取页面结果",
+        "截图验证页面布局和状态"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Qa”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Qa”，再给出文件、链接或要完成的任务。",
+      "category": "网页自动化",
+      "tags": [
+        "skill",
+        "browser",
+        "testing"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/browser-use__browser-use'\ngit clone --depth 1 'https://github.com/browser-use/browser-use.git' '/tmp/browser-use__browser-use'\ncp -R '/tmp/browser-use__browser-use/skills/qa' \"$HOME/.claude/skills/qa\"\nrm -rf '/tmp/browser-use__browser-use'"
+      },
+      "source": {
+        "repo": "browser-use/browser-use",
+        "url": "https://github.com/browser-use/browser-use",
+        "path": "skills/qa",
+        "type": "auto-promoted-high-star",
+        "stars": 98815
+      },
+      "packageUrl": "/skill-files/browser-use-browser-use-qa.json"
     },
     {
       "id": "garrytan-gstack-qa-only",
