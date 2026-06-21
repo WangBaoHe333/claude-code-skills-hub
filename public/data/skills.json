@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-20T21:42:42.885Z",
+  "generatedAt": "2026-06-21T21:45:27.053Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -1393,6 +1393,44 @@
         "stars": 43034
       },
       "packageUrl": "/skill-files/hkuds-cli-anything-agent-harness.json"
+    },
+    {
+      "id": "code-yeongyu-oh-my-openagent-agent-reach",
+      "name": "agent reach",
+      "summary": "> Part of the **ultimate-browsing** skill (Tier 1.5). Routing and tier-escalation live in [../../SKILL.md](../../SKILL.md). > Per-category guides in this folder: [search.md](searc…",
+      "summaryZh": "Agent Reach 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Agent Reach 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Agent Reach 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Agent Reach 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Agent Reach”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Agent Reach”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "video",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/ultimate-browsing/references/agent-reach' \"$HOME/.claude/skills/agent-reach\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/shared-skills/skills/ultimate-browsing/references/agent-reach",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-agent-reach.json"
     },
     {
       "id": "affaan-m-ecc-agent-architecture-audit",
@@ -41872,6 +41910,43 @@
       "packageUrl": "/skill-files/nexu-io-open-design-innovation.json"
     },
     {
+      "id": "code-yeongyu-oh-my-openagent-insane-search",
+      "name": "insane search",
+      "summary": "> Part of the **ultimate-browsing** skill (Tier 1). Routing and tier-escalation live in [../../SKILL.md](../../SKILL.md). > The engine package it drives is at [../../engine/](../.…",
+      "summaryZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
+      "capabilityZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
+      "audience": "开发者、测试人员、产品经理和需要验证网页流程的人。",
+      "audienceZh": "开发者、测试人员、产品经理和需要验证网页流程的人。",
+      "scenarios": [
+        "打开 localhost 页面做交互检查",
+        "填写表单、点击按钮并读取页面结果",
+        "截图验证页面布局和状态"
+      ],
+      "scenariosZh": [
+        "打开 localhost 页面做交互检查",
+        "填写表单、点击按钮并读取页面结果",
+        "截图验证页面布局和状态"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Insane Search”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Insane Search”，再给出文件、链接或要完成的任务。",
+      "category": "网页自动化",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/ultimate-browsing/references/insane-search' \"$HOME/.claude/skills/insane-search\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/shared-skills/skills/ultimate-browsing/references/insane-search",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-insane-search.json"
+    },
+    {
       "id": "composiohq-awesome-claude-skills-insighto-ai-automation",
       "name": "insighto-ai-automation",
       "summary": "Automate Insighto AI tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -74615,42 +74690,6 @@
       "packageUrl": "/skill-files/mattpocock-skills-ubiquitous-language.json"
     },
     {
-      "id": "code-yeongyu-oh-my-openagent-ui-ux-db",
-      "name": "ui ux db",
-      "summary": "UI/UX Pro Max - Design Intelligence",
-      "summaryZh": "Ui Ux Db 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Ui Ux Db 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Ui Ux Db 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Ui Ux Db 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Ui Ux Db 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Ui Ux Db 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Ui Ux Db”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Ui Ux Db”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/frontend/references/ui-ux-db' \"$HOME/.claude/skills/ui-ux-db\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
-      },
-      "source": {
-        "repo": "code-yeongyu/oh-my-openagent",
-        "url": "https://github.com/code-yeongyu/oh-my-openagent",
-        "path": "packages/shared-skills/skills/frontend/references/ui-ux-db",
-        "type": "auto-promoted-high-star",
-        "stars": 62215
-      },
-      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ui-ux-db.json"
-    },
-    {
       "id": "affaan-m-ecc-ui-demo",
       "name": "ui-demo",
       "summary": "Playwrightを使用して美しいUIデモ動画を録画する。ユーザーがWebアプリのデモ、ウォークスルー、スクリーン録画、またはチュートリアル動画の作成を求める場合に使用する。可視カーソル、自然なリズム、プロフェッショナルな仕上がりのWebM動画を生成する。",
@@ -74793,6 +74832,46 @@
         "stars": 64767
       },
       "packageUrl": "/skill-files/nexu-io-open-design-ui-ux-pro-max.json"
+    },
+    {
+      "id": "code-yeongyu-oh-my-openagent-ultimate-browsing",
+      "name": "ultimate-browsing",
+      "summary": "Escalation skill for blocked or hard-to-reach web access — load it when a normal browse/fetch is blocked (WAF, 403, Cloudflare, JS-only render, login-gated, or a platform a generi…",
+      "summaryZh": "Ultimate Browsing 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
+      "capabilityZh": "Ultimate Browsing 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
+      "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "audienceZh": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "scenarios": [
+        "把链接内容转成 Markdown",
+        "提取视频字幕或社媒正文",
+        "把外部资料整理成摘要和后续待办"
+      ],
+      "scenariosZh": [
+        "把链接内容转成 Markdown",
+        "提取视频字幕或社媒正文",
+        "把外部资料整理成摘要和后续待办"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ultimate Browsing”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ultimate Browsing”，再给出文件、链接或要完成的任务。",
+      "category": "内容整理",
+      "tags": [
+        "skill",
+        "browser",
+        "video",
+        "github",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/ultimate-browsing' \"$HOME/.claude/skills/ultimate-browsing\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/shared-skills/skills/ultimate-browsing",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ultimate-browsing.json"
     },
     {
       "id": "code-yeongyu-oh-my-openagent-ultraresearch",
@@ -78734,6 +78813,42 @@
         "stars": 64767
       },
       "packageUrl": "/skill-files/nexu-io-open-design-weread-year-in-review-video-template.json"
+    },
+    {
+      "id": "thedotmack-claude-mem-what-the",
+      "name": "what-the",
+      "summary": "What the? Use when the user wants a plain-English breakdown of something technical — the who, what, where, why, and when.",
+      "summaryZh": "What The 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "What The 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 What The 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 What The 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 What The 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 What The 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 What The”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 What The”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/plugin/skills/what-the' \"$HOME/.claude/skills/what-the\"\nrm -rf '/tmp/thedotmack__claude-mem'"
+      },
+      "source": {
+        "repo": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "path": "plugin/skills/what-the",
+        "type": "auto-promoted-high-star",
+        "stars": 82253
+      },
+      "packageUrl": "/skill-files/thedotmack-claude-mem-what-the.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-whautomate-automation",

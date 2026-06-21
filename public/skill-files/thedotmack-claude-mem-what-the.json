@@ -1,0 +1,10 @@
+{
+  "id": "thedotmack-claude-mem-what-the",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: what-the\ndescription: \"What the? Use when the user wants a plain-English breakdown of something technical — the who, what, where, why, and when.\"\n---\n\nthat sounds mad technical. explain to me the who, what, where, why, and when of this\n"
+    }
+  ]
+}
