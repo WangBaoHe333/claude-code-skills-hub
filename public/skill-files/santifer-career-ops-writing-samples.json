@@ -1,0 +1,15 @@
+{
+  "id": "santifer-career-ops-writing-samples",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: writing-samples\ndescription: \"Drop examples of your professional writing here. The more variety, the more accurately your voice can be captured.\"\n---\n\n# writing samples\n\nDrop examples of your professional writing here. The more variety, the more accurately your voice can be captured.\n\n## 中文说明\n\nWriting Samples 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Writing Samples 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Writing Samples\n\nDrop examples of your professional writing here. The more variety, the more accurately your voice can be captured.\n\n## What counts as a writing sample\n\nAnything you've written that sounds like you:\n\n- Emails or messages you were happy with\n- LinkedIn posts or articles\n- Cover letters from past applications\n- Blog posts or case studies\n- Slack or forum posts\n- Notes, memos, or internal docs\n- Social media posts\n- Anything else in your own words\n\nPlain text (`.txt`) and Markdown (`.md`) are preferred — they require no extraction and are read directly. Other formats like `.pdf` or `.docx` work too.\n\n## After adding samples\n\nTell Claude Code: \"recalibrate my writing style\" — it will re-scan the files and update your profile.\n"
+    }
+  ]
+}

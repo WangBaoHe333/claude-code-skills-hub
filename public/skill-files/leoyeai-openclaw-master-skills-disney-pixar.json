@@ -1,0 +1,20 @@
+{
+  "id": "leoyeai-openclaw-master-skills-disney-pixar",
+  "files": [
+    {
+      "path": ".clawhub/origin.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": 1,\n  \"registry\": \"https://clawhub.ai\",\n  \"slug\": \"disney-pixar\",\n  \"installedVersion\": \"1.0.0\",\n  \"installedAt\": 1777860305058\n}\n"
+    },
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: disney-pixar\nsummary: The creative partnership that revolutionized animation — from Toy Story to Inside Out — blending Pixar's technical genius with Disney's storytelling legacy.\nread_when:\n- Researching animation studio history and the Pixar-Disney acquisition\n- Studying the evolution of CGI animation and rendering technology\n- Analyzing franchise management in animated film (Toy Story, Cars, Finding Nemo)\n- Examining creative partnerships and post-acquisition studio dynamics\n---\n\n# Disney Pixar\n\n## Historical Timeline\n\n- 1979 — Pixar founded as the Graphics Group within Lucasfilm's computer division\n- 1986 — Steve Jobs purchases the Graphics Group for $10M, names it Pixar\n- 1995 — Toy Story becomes the first fully CGI-animated feature film ($361M box office)\n- 2001 — Monsters, Inc. proves Pixar's consistency; RenderMan technology matures\n- 2003 — Finding Nemo becomes highest-grossing animated film at the time ($940M)\n- 2006 — Disney acquires Pixar for $7.4B; John Lasseter becomes Chief Creative Officer\n- 2015 — Inside Out wins Best Animated Feature; $858M worldwide\n- 2019 — Toy Story 4 wins Best Animated Feature; Toy Story franchise exceeds $3B total\n- 2024 — Inside Out 2 becomes first animated film to cross $1.5B box office\n\n## Business Model\n\nPixar operates as Disney's premium animation studio, producing 1–2 feature films per year at budgets of $175–200M each. Each Pixar film generates $500M–$1.5B in box office revenue, plus extensive merchandising, theme park integration, and streaming value. Pixar's Braintrust creative process — where directors give each other candid notes — has achieved a perfect track record: every Pixar feature film has been profitable. The studio's RenderMan software is licensed to other studios.\n\n## Competitive Moat\n\nPixar's 27-film streak of profitability is unmatched in animation. The Pixar Braintrust process — a peer review system where filmmakers critique each other's work — creates a quality control mechanism no competitor has replicated. Technical moats include proprietary RenderMan software and decades of R&D in physics-based rendering. The Disney acquisition provided Pixar with distribution, merchandising, and theme park integration that amplified every film's revenue potential exponentially.\n\n## Key Data\n\n- **Acquisition**: $7.4B (Disney, 2006, all-stock)\n- **Films**: 27 feature films, all profitable\n- **Box office**: $23B+ cumulative worldwide\n- **Oscars**: 11 Academy Awards for Best Animated Feature (out of 16 nominations)\n- **Employees**: ~1,200 (Emeryville, California campus)\n\n## Interesting Facts\n\n- The Luxo Jr. lamp from Pixar's 1986 short film became the company's logo — it was the first CGI character to show personality without a face, proving animation could convey emotion through movement alone.\n- Pixar's campus in Emeryville was designed by Steve Jobs himself — the central atrium forces all employees to pass through one area, encouraging spontaneous collaboration between departments.\n"
+    },
+    {
+      "path": "_meta.json",
+      "encoding": "utf8",
+      "content": "{\n  \"ownerId\": \"kn783tv7jyap70kp5ap5wfq4rx82sqqg\",\n  \"slug\": \"disney-pixar\",\n  \"version\": \"1.0.0\",\n  \"publishedAt\": 1777856929246\n}"
+    }
+  ]
+}

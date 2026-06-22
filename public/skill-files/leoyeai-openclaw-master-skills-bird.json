@@ -1,0 +1,15 @@
+{
+  "id": "leoyeai-openclaw-master-skills-bird",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: bird\ndescription: X/Twitter CLI for reading, searching, and posting via cookies or Sweetistics.\nhomepage: https://bird.fast\nmetadata: {\"clawdbot\":{\"emoji\":\"🐦\",\"requires\":{\"bins\":[\"bird\"]},\"install\":[{\"id\":\"brew\",\"kind\":\"brew\",\"formula\":\"steipete/tap/bird\",\"bins\":[\"bird\"],\"label\":\"Install bird (brew)\"}]}}\n---\n\n# bird\n\nUse `bird` to read/search X and post tweets/replies.\n\nQuick start\n- `bird whoami`\n- `bird read <url-or-id>`\n- `bird thread <url-or-id>`\n- `bird search \"query\" -n 5`\n\nPosting (confirm with user first)\n- `bird tweet \"text\"`\n- `bird reply <id-or-url> \"text\"`\n\nAuth sources\n- Browser cookies (default: Firefox/Chrome)\n- Sweetistics API: set `SWEETISTICS_API_KEY` or use `--engine sweetistics`\n- Check sources: `bird check`\n"
+    },
+    {
+      "path": "_meta.json",
+      "encoding": "utf8",
+      "content": "{\n  \"owner\": \"steipete\",\n  \"slug\": \"bird\",\n  \"displayName\": \"Bird\",\n  \"latest\": {\n    \"version\": \"1.0.0\",\n    \"publishedAt\": 1767542738213,\n    \"commit\": \"https://github.com/clawdbot/skills/commit/563ff75c663bb948997195461ff2a2148a56b2bb\"\n  },\n  \"history\": []\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "leoyeai-openclaw-master-skills-plans",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: plans\ndescription: \"此目录用于保存 AI 学习规划文件。文件由 ai-learning-journal skill 自动生成。\"\n---\n\n# plans\n\n此目录用于保存 AI 学习规划文件。文件由 ai-learning-journal skill 自动生成。\n\n## 中文说明\n\nPlans 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Plans 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# 学习规划存储目录\n\n此目录用于保存 AI 学习规划文件。文件由 ai-learning-journal skill 自动生成。\n\n命名格式：`YYYY-MM-DD-规划主题.md`\n"
+    }
+  ]
+}

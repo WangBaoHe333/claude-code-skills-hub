@@ -1,0 +1,45 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-catalog",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: catalog\ndescription: \"This package owns detached catalog metadata for official VCO skills.\"\n---\n\n# catalog\n\nThis package owns detached catalog metadata for official VCO skills.\n\n## 中文说明\n\nCatalog 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Catalog 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Skill Catalog\n\nThis package owns detached catalog metadata for official VCO skills.\n\nIt is not a runtime owner.\nIt exists so installer and distribution layers can consume catalog descriptors without traversing bundled runtime topology.\n"
+    },
+    {
+      "path": "groups/index.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"vgo-skill-catalog.groups.v1\",\n  \"owner\": \"skill-catalog\",\n  \"groups\": [\n    {\n      \"group_id\": \"governed-core\",\n      \"skill_ids\": [\n        \"vibe\",\n        \"brainstorming\",\n        \"writing-plans\",\n        \"systematic-debugging\",\n        \"tdd-guide\"\n      ]\n    },\n    {\n      \"group_id\": \"compat-support\",\n      \"skill_ids\": [\n        \"cancel-ralph\",\n        \"dialectic\",\n        \"local-vco-roles\",\n        \"ralph-loop\",\n        \"spec-kit-vibe-compat\",\n        \"subagent-driven-development\",\n        \"superclaude-framework-compat\",\n        \"think-harder\"\n      ]\n    }\n  ]\n}\n"
+    },
+    {
+      "path": "metadata/index.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"vgo-skill-catalog.metadata.v1\",\n  \"owner\": \"skill-catalog\",\n  \"contract_index\": \"catalog/metadata/official-skill-contracts.json\",\n  \"notes\": \"Detached catalog metadata for installer/distribution consumption. Runtime semantics stay outside this package.\"\n}\n"
+    },
+    {
+      "path": "metadata/official-skill-contracts.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"vgo-skill-catalog.contracts.v1\",\n  \"owner\": \"skill-catalog\",\n  \"contracts\": [\n    {\n      \"skill_id\": \"vibe\",\n      \"canonical_contract_ref\": \"core/skill-contracts/v1/vibe.json\"\n    },\n    {\n      \"skill_id\": \"tdd-guide\",\n      \"canonical_contract_ref\": \"core/skill-contracts/v1/tdd-guide.json\"\n    },\n    {\n      \"skill_id\": \"systematic-debugging\",\n      \"canonical_contract_ref\": \"core/skill-contracts/v1/systematic-debugging.json\"\n    },\n    {\n      \"skill_id\": \"code-reviewer\",\n      \"canonical_contract_ref\": \"core/skill-contracts/v1/code-reviewer.json\"\n    },\n    {\n      \"skill_id\": \"brainstorming\",\n      \"canonical_contract_ref\": \"core/skill-contracts/v1/brainstorming.json\"\n    },\n    {\n      \"skill_id\": \"writing-plans\",\n      \"canonical_contract_ref\": \"core/skill-contracts/v1/writing-plans.json\"\n    },\n    {\n      \"skill_id\": \"subagent-driven-development\",\n      \"canonical_contract_ref\": \"core/skill-contracts/v1/subagent-driven-development.json\"\n    }\n  ]\n}\n"
+    },
+    {
+      "path": "profiles/full.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"vgo-skill-catalog.profile.v1\",\n  \"profile_id\": \"full\",\n  \"owner\": \"skill-catalog\",\n  \"selection_mode\": \"all_official_except_excluded\",\n  \"exclude_skill_ids\": [\n    \"vibe\"\n  ]\n}\n"
+    },
+    {
+      "path": "profiles/index.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"vgo-skill-catalog.profiles.v1\",\n  \"owner\": \"skill-catalog\",\n  \"profiles\": [\n    {\n      \"profile_id\": \"minimal\",\n      \"manifest\": \"catalog/profiles/minimal.json\"\n    },\n    {\n      \"profile_id\": \"full\",\n      \"manifest\": \"catalog/profiles/full.json\"\n    }\n  ]\n}\n"
+    },
+    {
+      "path": "profiles/minimal.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"vgo-skill-catalog.profile.v1\",\n  \"profile_id\": \"minimal\",\n  \"owner\": \"skill-catalog\",\n  \"selection_mode\": \"allowlist\",\n  \"skill_ids\": [\n    \"brainstorming\",\n    \"cancel-ralph\",\n    \"dialectic\",\n    \"local-vco-roles\",\n    \"ralph-loop\",\n    \"spec-kit-vibe-compat\",\n    \"subagent-driven-development\",\n    \"superclaude-framework-compat\",\n    \"systematic-debugging\",\n    \"tdd-guide\",\n    \"think-harder\",\n    \"writing-plans\"\n  ]\n}\n"
+    }
+  ]
+}

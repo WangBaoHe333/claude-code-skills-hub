@@ -1,0 +1,15 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-xan",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: xan\ndescription: High-performance CSV processing with xan CLI for large tabular datasets, streaming transformations, and low-memory pipelines.\n---\n\n# xan\n\nUse this skill when tabular work involves large CSV-like files and shell-oriented data pipelines.\n\n## When to Use\n\n- CSV/TSV files are large (size or rows) and Python/pandas style processing is too heavy.\n- You need fast CLI operations such as `filter`, `sort`, `dedup`, `groupby`, `frequency`, `join`.\n- You want low-memory streaming workflows in terminal pipelines.\n\n## Boundaries\n\n- Not for workbook semantics (`.xlsx` formula/layout preservation) — use `xlsx` or `excel-analysis`.\n- Not for ML model training pipelines — use `data-ml` skills.\n- This skill is a thin CLI wrapper; it does not implement custom parsing logic itself.\n\n## Script\n\n- Path: `scripts/xan.ps1`\n\n### Examples\n\n```powershell\npowershell -ExecutionPolicy Bypass -File \"$env:USERPROFILE\\.codex\\skills\\xan\\scripts\\xan.ps1\" count data.csv\npowershell -ExecutionPolicy Bypass -File \"$env:USERPROFILE\\.codex\\skills\\xan\\scripts\\xan.ps1\" filter \"score > 0.8\" data.csv\npowershell -ExecutionPolicy Bypass -File \"$env:USERPROFILE\\.codex\\skills\\xan\\scripts\\xan.ps1\" groupby category \"sum(amount) as total\" sales.csv\n```\n"
+    },
+    {
+      "path": "scripts/xan.ps1",
+      "encoding": "utf8",
+      "content": "param(\n    [Parameter(ValueFromRemainingArguments = $true)]\n    [string[]]$XanArgs\n)\n\n$ErrorActionPreference = \"Stop\"\n\nif (-not (Get-Command xan -ErrorAction SilentlyContinue)) {\n    Write-Error \"xan CLI not found. Install xan first (recommended on Windows: scoop install xan).\"\n    exit 127\n}\n\nif (-not $XanArgs -or $XanArgs.Count -eq 0) {\n    Write-Host \"Usage: xan.ps1 <xan-subcommand> [args...]\"\n    Write-Host \"Example: xan.ps1 count data.csv\"\n    exit 1\n}\n\n& xan @XanArgs\nexit $LASTEXITCODE\n"
+    }
+  ]
+}

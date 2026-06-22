@@ -1,0 +1,20 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-latex-submission-pipeline",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: latex-submission-pipeline\ndescription: \"Use when building a LaTeX manuscript submission pipeline with templates, latexmk, BibTeX/Biber, chktex, latexindent, CI PDF builds, compile debugging, and submission zip packaging.\"\nallowed-tools: [Read, Write, Edit, Bash, Grep, Glob]\n---\n\n# LaTeX Submission Pipeline（LaTeX 投稿工程链）\n\n## 适用\n\n当用户需要：\n- 套用期刊/会议 LaTeX 模板（ACM/IEEE/NeurIPS 等）\n- 解决编译错误、引用错误、字体缺失、图片格式不兼容\n- 接入 GitHub Actions 自动编译 PDF / 打包 submission zip\n- 做格式化（latexindent）与 lint（chktex）\n\n---\n\n## 最小流程（从 0 到可提交）\n\n### 1) 选择模板与约束\n\n先记录目标 venue 的官方模板或格式要求：\n- 页边距、双栏/单栏、匿名/非匿名、附录策略、页数限制\n\n### 2) 本地可复现构建\n\n推荐统一入口（任选其一）：\n- `latexmk -pdf -interaction=nonstopmode -halt-on-error`\n- 或在项目中提供 `scripts/build.ps1` / `scripts/build.sh`\n\n### 3) 引用稳定（BibTeX/Biber）\n\n元规则：\n- `.bib` 是 source-of-truth\n- 同一项目不要混用手工引用与 BibTeX（至少主文统一）\n\n### 4) 图表导出与兼容性\n\n对投稿系统最稳的组合：\n- 矢量：`PDF`（matplotlib 导出）\n- 栅格：`TIFF 600dpi`（显微/照片/heatmap 视情况）\n\n### 5) Lint + Format（可选但强烈建议）\n\n- Lint：`chktex`（常见 LaTeX 坑）\n- Format：`latexindent`（减少 diff 噪声）\n\n### 6) CI 自动编译（GitHub Actions）\n\n模板：`templates/github-actions-latex.yml`（参考 `xu-cheng/latex-action`）\n\n---\n\n## 常见失败点（速查）\n\n- 图像格式：EPS/PDF/PNG/TIFF 混用导致编译失败（优先统一 PDF）\n- 字体：投稿要求嵌入字体（PDF 检查）\n- Overfull box：大量警告影响排版质量（需要在关键位置修）\n- 参考文献缺字段：DOI/年份/期刊名缺失造成审稿人观感差\n"
+    },
+    {
+      "path": "templates/github-actions-latex.yml",
+      "encoding": "utf8",
+      "content": "name: build-latex\non:\n  push:\n    branches: [ main ]\n  pull_request:\n\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n\n      # Reference implementation: xu-cheng/latex-action\n      - name: Compile LaTeX\n        uses: xu-cheng/latex-action@v3\n        with:\n          root_file: manuscript/main.tex\n          args: -pdf -interaction=nonstopmode -halt-on-error -file-line-error\n\n      - name: Upload PDF artifact\n        uses: actions/upload-artifact@v4\n        with:\n          name: manuscript-pdf\n          path: manuscript/main.pdf\n\n"
+    },
+    {
+      "path": "templates/latexmkrc",
+      "encoding": "utf8",
+      "content": "# Minimal latexmk config (optional)\n$pdf_mode = 1;\n$interaction = 'nonstopmode';\n$halt_on_error = 1;\n$silent = 1;\n\n"
+    }
+  ]
+}

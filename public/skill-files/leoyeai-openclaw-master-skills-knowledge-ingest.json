@@ -1,0 +1,15 @@
+{
+  "id": "leoyeai-openclaw-master-skills-knowledge-ingest",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: knowledge-ingest\ndescription: \"从对话或文档中提取并存储结构化知识。支持文件和文本输入，自动执行知识提取、冲突检测和入库。\"\n---\n\n# KnowledgeIngestSkill — 知识摄入\n\n从对话、文档、代码中自动提取结构化知识，经冲突检测后存入知识库。\n\n## 触发词\n\n学习这个、记住、摄入知识、记住这个、把这段话存下来、从这篇文档提取知识、学习这个文件、保存到知识库、ingest、learn this、save knowledge、remember this、extract knowledge\n\n## 使用方式\n\n```bash\n# 从文件摄入\ntsx scripts/ingest.ts --file ./docs/design.md --source \"design-doc\"\n\n# 从文本摄入\ntsx scripts/ingest.ts --text \"用户偏好短答，先结论后证据\" --source \"conversation\"\n```\n\n## 核心路径\n\n`src/extraction/` → `src/pipeline/engine.ts` → `src/conflict/` → `src/repository/`\n"
+    },
+    {
+      "path": "scripts/ingest.ts",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env tsx\n/**\n * KnowledgeIngestSkill — 知识摄入入口\n *\n * 从对话或文档中提取并存储结构化知识。\n *\n * 用法:\n *   tsx ingest.ts --file <path> --source <label>\n *   tsx ingest.ts --text \"内容\" --source <label>\n */\n\nimport { readFileSync } from 'node:fs';\nimport { resolve } from 'node:path';\nimport { Kivo } from '../../../src/kivo.js';\n\nconst DB_PATH = resolve(process.cwd(), '.kivo/knowledge.db');\n\nfunction parseArgs() {\n  const args = process.argv.slice(2);\n  let file: string | undefined;\n  let text: string | undefined;\n  let source = 'cli';\n\n  for (let i = 0; i < args.length; i++) {\n    switch (args[i]) {\n      case '--file':\n        file = args[++i];\n        break;\n      case '--text':\n        text = args[++i];\n        break;\n      case '--source':\n        source = args[++i];\n        break;\n    }\n  }\n\n  if (!file && !text) {\n    console.error('用法: tsx ingest.ts --file <path> | --text \"内容\" [--source <label>]');\n    process.exit(1);\n  }\n\n  const content = file ? readFileSync(resolve(file), 'utf-8') : text!;\n  return { content, source };\n}\n\nasync function main() {\n  const { content, source } = parseArgs();\n\n  const kivo = new Kivo({ dbPath: DB_PATH });\n  await kivo.init();\n\n  try {\n    const result = await kivo.ingest(content, source);\n\n    console.log(`✓ 摄入完成`);\n    console.log(`  条目数: ${result.entries.length}`);\n    console.log(`  冲突数: ${result.conflicts.length}`);\n\n    if (result.entries.length > 0) {\n      console.log(`  条目列表:`);\n      for (const entry of result.entries) {\n        console.log(`    - [${entry.type}] ${entry.title}`);\n      }\n    }\n\n    if (result.conflicts.length > 0) {\n      console.log(`  冲突详情:`);\n      for (const c of result.conflicts) {\n        console.log(`    ⚠ ${c.incomingId} ↔ ${c.existingId} (${c.verdict})`);\n      }\n    }\n  } finally {\n    await kivo.shutdown();\n  }\n}\n\nmain().catch(err => {\n  console.error('摄入失败:', err.message);\n  process.exit(1);\n});\n"
+    }
+  ]
+}

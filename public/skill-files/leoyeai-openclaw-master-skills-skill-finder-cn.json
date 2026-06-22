@@ -1,0 +1,20 @@
+{
+  "id": "leoyeai-openclaw-master-skills-skill-finder-cn",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: skill-finder-cn\ndescription: \"Skill 查找器 | Skill Finder. 帮助发现和安装 ClawHub Skills | Discover and install ClawHub Skills. 回答'有什么技能可以X'、'找一个技能' | Answers 'what skill can X', 'find a skill'. 触发词：找 skill、find skill、搜索 skill.\"\nauthor: 赚钱小能手\nmetadata:\n  openclaw:\n    emoji: 🔍\n    requires:\n      bins: [clawhub]\n---\n\n# Skill 查找器\n\n帮助用户发现和安装 ClawHub 上的 Skills。\n\n## 功能\n\n当用户问：\n- \"有什么 skill 可以帮我...？\"\n- \"找一个能做 X 的 skill\"\n- \"有没有 skill 可以...\"\n- \"我需要一个能...的 skill\"\n\n这个 Skill 会帮助搜索 ClawHub 并推荐相关的 Skills。\n\n## 使用方法\n\n### 1. 搜索 Skills\n\n```bash\nclawhub search \"<用户需求>\"\n```\n\n### 2. 查看详情\n\n```bash\nclawhub inspect <skill-name>\n```\n\n### 3. 安装 Skill\n\n```bash\nclawhub install <skill-name>\n```\n\n## 工作流程\n\n```\n1. 理解用户需求\n2. 提取关键词\n3. 搜索 ClawHub\n4. 列出相关 Skills\n5. 提供安装建议\n```\n\n## 示例\n\n**用户**: \"有什么 skill 可以帮我监控加密货币价格？\"\n\n**搜索**: `clawhub search \"crypto price monitor\"`\n\n**返回**: 相关的 Skills 列表\n\n---\n\n*帮助用户发现需要的 Skills 🔍*\n"
+    },
+    {
+      "path": "package.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"skill-finder-cn\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Skill Finder CN | Skill 查找器\"\n}\n"
+    },
+    {
+      "path": "scripts/search.sh",
+      "encoding": "utf8",
+      "content": "#!/bin/bash\n# Skill 搜索脚本\n\nQUERY=\"$1\"\nLIMIT=\"${2:-10}\"\n\nif [ -z \"$QUERY\" ]; then\n    echo \"用法: search.sh <关键词> [数量]\"\n    exit 1\nfi\n\necho \"🔍 搜索: $QUERY\"\necho \"================================\"\n\nclawhub search \"$QUERY\" --limit \"$LIMIT\"\n"
+    }
+  ]
+}

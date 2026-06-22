@@ -1,0 +1,20 @@
+{
+  "id": "leoyeai-openclaw-master-skills-ebay-product-research",
+  "files": [
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# eBay Product Research - eBay 选品工具\n\n📦 数据驱动，选品无忧\n\n## 核心功能\n\n| 功能 | 说明 | 价值 |\n|------|------|------|\n| 销量分析 | 估算月销量 | 判断市场需求 |\n| 竞争评估 | 卖家数量、Listing 质量 | 避开红海 |\n| 利润计算 | 售价 - 成本 - 费用 | 确保盈利 |\n| 价格趋势 | 历史价格波动 | 把握入场时机 |\n| 季节性 | 淡旺季分析 | 规划库存 |\n\n## 利润计算公式\n\n```\n毛利润 = 售价 - 采购成本 - 头程运费\neBay 费用 = 成交费 (10-12%) + 支付处理费 (2.9%+$0.30)\n净利润 = 毛利润 - eBay 费用 - 广告费\n```\n\n## 定价\n\n- **单次使用**: ¥8\n- **套餐**: 10 次¥70（省¥10）\n- **免费试用**: 前 1 次免费\n\n## 示例\n\n```bash\n# 研究产品\n/ebay-product-research --category electronics --keyword \"wireless earbuds\"\n\n# 竞品分析\n/ebay-product-research --action competitor --seller \"top_seller\"\n\n# 利润计算\n/ebay-product-research --action profit --price 25 --cost 8\n```\n\n## 选品标准\n\n✅ 月销量 > 300\n✅ 竞争卖家 < 50\n✅ 利润率 > 30%\n✅ 无品牌垄断\n✅ 非季节性/全年可售\n\n---\n**SkillPay 收费 Skill** | 版本 1.0.0\n"
+    },
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "# eBay Product Research - eBay 选品工具\n\n## Description\n专业 eBay 选品分析工具，帮助卖家发现高利润、低竞争的产品。分析销量、价格趋势、竞争程度、利润空间，提供数据驱动的选品建议。\n\n## Usage\n```bash\n# 分析产品类别\n/ebay-product-research --category \"electronics\" --keyword \"wireless earbuds\"\n\n# 竞品分析\n/ebay-product-research --action \"competitor\" --seller \"top_seller_id\"\n\n# 利润计算\n/ebay-product-research --action \"profit\" --price 25 --cost 8 --fees auto\n```\n\n### 参数说明\n- `--category`: 产品类别\n- `--keyword`: 搜索关键词\n- `--action`: 分析类型 (research, competitor, profit, trend)\n- `--price`: 售价\n- `--cost`: 成本\n- `--marketplace`: 站点 (US, UK, DE, AU)\n\n## Pricing\n- **价格**: ¥8/次\n- **计费方式**: 按次收费\n- **免费试用**: 前 1 次免费\n\n## Features\n- ✅ 销量数据分析\n- ✅ 竞争程度评估\n- ✅ 利润空间计算\n- ✅ 价格趋势追踪\n- ✅ 季节性分析\n- ✅ 竞品监控\n"
+    },
+    {
+      "path": "index.js",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env node\n\n/**\n * eBay Product Research - eBay 选品工具\n * Price: ¥8\n */\n\nasync function main() {\n  const args = process.argv.slice(2);\n  \n  const params = {};\n  for (let i = 0; i < args.length; i++) {\n    if (args[i].startsWith('--')) {\n      const key = args[i].slice(2);\n      const value = args[i + 1] && !args[i + 1].startsWith('--') ? args[++i] : true;\n      params[key] = value;\n    }\n  }\n\n  console.log('📦 eBay 选品工具已启动');\n  console.log('━━━━━━━━━━━━━━━━━━━━');\n  \n  const { category, keyword, action, price, cost, marketplace } = params;\n  \n  if (!category && !keyword && !action) {\n    console.log('用法：/ebay-product-research --category <类别> --keyword <关键词> [选项]');\n    console.log('分析类型：research, competitor, profit, trend');\n    return;\n  }\n\n  console.log(`\\n🏷️  类别：${category || 'N/A'}`);\n  console.log(`🔍 关键词：${keyword || 'N/A'}`);\n  console.log(`📊 分析类型：${action || 'research'}`);\n  console.log(`🌍 站点：${marketplace || 'US'}`);\n  \n  if (action === 'profit' || price) {\n    console.log(`💰 售价：$${price || 'N/A'}`);\n    console.log(`💸 成本：$${cost || 'N/A'}`);\n  }\n  \n  console.log('\\n⏳ 正在分析数据...');\n  \n  console.log('\\n📈 分析维度:');\n  console.log('  ✓ 月销量估算');\n  console.log('  ✓ 平均售价');\n  console.log('  ✓ 竞争卖家数');\n  console.log('  ✓ Listing 质量分');\n  console.log('  ✓ 利润空间');\n  console.log('  ✓ 季节性趋势');\n  console.log('  ✓ eBay 费用估算');\n  \n  console.log('\\n✅ 分析完成！');\n  console.log('━━━━━━━━━━━━━━━━━━━━');\n  console.log('💰 本次消费：¥8');\n}\n\nmain().catch(console.error);\n"
+    }
+  ]
+}

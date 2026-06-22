@@ -1,0 +1,15 @@
+{
+  "id": "leoyeai-openclaw-master-skills-offer-positioning-auditor",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: offer-positioning-auditor\ndescription: Audit a product or service offer for clarity, differentiation, and buying friction. Use when improving positioning, promise, audience fit, and conversion before launching or selling.\nversion: 0.1.0\n---\n\n# Offer Positioning Auditor\n\nUse this skill to tighten an offer before trying to sell it.\n\n## Audit order\n\n1. who the offer is for\n2. what painful problem it solves\n3. why this is better than alternatives\n4. what makes buying feel risky or unclear\n5. the smallest change that could improve conversion\n\n## Output\n\nReturn:\n\n1. strongest current angle\n2. weakest positioning point\n3. a cleaner one-line offer\n4. 3 concrete edits to increase sales clarity\n\n## Good bias\n\n- clearer beats clever\n- narrower beats vague\n- plain language beats jargon\n- believable promise beats inflated promise\n"
+    },
+    {
+      "path": "references/checklist.md",
+      "encoding": "utf8",
+      "content": "# Checklist\n\n## Signs the offer is weak\n\n- audience is everyone\n- promise is abstract\n- no concrete outcome\n- sounds like a feature bundle instead of a result\n- pricing logic is unclear\n- buyer has to infer why it matters\n\n## Signs the offer is stronger\n\n- specific buyer\n- specific pain\n- specific outcome\n- believable mechanism\n- lower perceived risk\n- next step is obvious\n"
+    }
+  ]
+}

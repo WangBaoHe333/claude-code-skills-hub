@@ -1,0 +1,15 @@
+{
+  "id": "leoyeai-openclaw-master-skills-knowledge-query",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: knowledge-query\ndescription: \"检索知识库并返回相关知识条目。支持语义搜索，按相关性排序，可指定 token 预算控制返回量。\"\n---\n\n# KnowledgeQuerySkill — 知识查询\n\n基于语义搜索检索知识库，返回与查询最相关的知识条目。\n\n## 触发词\n\n查知识、搜索记忆、搜索知识库、你知道关于、查一下之前的决策、有没有相关经验、你还记得、recall、query knowledge、search knowledge、what do you know about\n\n## 使用方式\n\n```bash\n# 查询相关知识（默认 budget 2000 tokens）\ntsx scripts/query.ts --query \"用户的交付偏好\"\n\n# 指定 token 预算\ntsx scripts/query.ts --query \"架构决策\" --budget 4000\n```\n\n## 核心路径\n\n`src/search/semantic-search.ts` → `src/repository/knowledge-repository.ts`\n"
+    },
+    {
+      "path": "scripts/query.ts",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env tsx\n/**\n * KnowledgeQuerySkill — 知识查询入口\n *\n * 检索知识库并返回相关知识条目。\n * 使用 ContextInjector 进行语义检索 + 相关性评分。\n *\n * 用法:\n *   tsx query.ts --query \"查询文本\" [--budget <tokens>]\n */\n\nimport { resolve } from 'node:path';\nimport { ContextInjector } from '../../../src/injection/context-injector.js';\nimport { KnowledgeRepository } from '../../../src/repository/knowledge-repository.js';\nimport { SQLiteProvider } from '../../../src/repository/sqlite-provider.js';\n\nconst DB_PATH = resolve(process.cwd(), '.kivo/knowledge.db');\n\nfunction parseArgs() {\n  const args = process.argv.slice(2);\n  let query: string | undefined;\n  let budget = 2000;\n\n  for (let i = 0; i < args.length; i++) {\n    switch (args[i]) {\n      case '--query':\n        query = args[++i];\n        break;\n      case '--budget':\n        budget = parseInt(args[++i], 10);\n        break;\n    }\n  }\n\n  if (!query) {\n    console.error('用法: tsx query.ts --query \"查询文本\" [--budget <tokens>]');\n    process.exit(1);\n  }\n\n  return { query, budget };\n}\n\nasync function main() {\n  const { query, budget } = parseArgs();\n\n  const provider = new SQLiteProvider({ dbPath: DB_PATH });\n  const repository = new KnowledgeRepository(provider);\n  const injector = new ContextInjector({ repository });\n\n  try {\n    const response = await injector.inject({\n      userQuery: query,\n      tokenBudget: budget,\n    });\n\n    if (response.entries.length === 0) {\n      console.log('未找到相关知识条目。');\n      return;\n    }\n\n    console.log(`✓ 查询完成 — ${response.entries.length} 条匹配，${response.tokensUsed} tokens`);\n    if (response.truncated) {\n      console.log('  (结果已截断，可增大 --budget)');\n    }\n\n    console.log('\\n--- 条目摘要 ---');\n    for (const e of response.entries) {\n      console.log(`  [${e.type}] ${e.summary} (${e.entryId})`);\n    }\n  } finally {\n    await provider.close();\n  }\n}\n\nmain().catch(err => {\n  console.error('查询失败:', err.message);\n  process.exit(1);\n});\n"
+    }
+  ]
+}

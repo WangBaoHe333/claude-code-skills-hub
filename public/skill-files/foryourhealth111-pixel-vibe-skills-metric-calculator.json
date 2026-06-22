@@ -1,0 +1,10 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-metric-calculator",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: metric-calculator\ndescription: |\n  Compute well-defined metrics from existing formulas, datasets, or test outputs.\n  Use as an explicit/manual helper when the metric definition is already known, not for choosing the overall analysis owner or dashboard strategy.\nallowed-tools: Read, Write, Edit, Bash, Grep\nversion: 1.0.0\nlicense: MIT\nauthor: Jeremy Longshore <jeremy@intentsolutions.io>\n---\n\n# Metric Calculator\n\n## Positioning\n\nTreat this skill as an explicit/manual helper for narrow metric-computation work.\n\n## When to Use\n\nUse this skill when:\n- Calculating a named business, statistical, or QA metric from available data\n- Converting raw counts into rates, ratios, deltas, or scorecards\n- Verifying that a metric formula is implemented consistently across outputs\n\n## Not For / Boundaries\n\n- Model evaluation strategy selection: use `evaluating-machine-learning-models`\n- Full regression modeling ownership: use `scikit-learn`; causal analysis ownership: use `performing-causal-analysis`\n- Chart design or presentation decisions: use `creating-data-visualizations`\n\n## Typical Outputs\n\n- Metric definitions and formulas\n- Reproducible calculation steps\n- Sanity checks for units, denominators, and aggregation scope\n\n## Related Skills\n\n- `evaluating-machine-learning-models` for ML benchmark metrics\n- `creating-data-visualizations` after the numbers are finalized\n"
+    }
+  ]
+}

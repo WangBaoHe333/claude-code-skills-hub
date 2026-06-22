@@ -1,0 +1,10 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-think-harder",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: think-harder\ndescription: 4-phase structured analysis wrapper for vibe pre-routing (compatible with claude-code-settings think-harder semantics).\n---\n\n# think-harder (Codex Compatibility)\n\nUse this skill before implementation when the task needs deeper reasoning or tradeoff analysis.\n\n## 4-Phase Analysis\n\n1. Problem Clarification\n- Define the core question and constraints.\n- List assumptions and success criteria.\n- Identify ambiguities that must be resolved.\n\n2. Multi-Dimensional Analysis\n- Structural decomposition: break into components/dependencies.\n- Temporal impact: short-term vs long-term effects.\n- Causal links: key cause-effect and feedback loops.\n- Context factors: operational, team, and environmental constraints.\n\n3. Critical Evaluation\n- Challenge assumptions and possible bias.\n- Compare alternatives and opportunity costs.\n- Run pre-mortem: what can fail, how, and impact.\n- Mark uncertainty and confidence level explicitly.\n\n4. Synthesis\n- Summarize key insights and decision rationale.\n- Reconcile contradictions.\n- Produce actionable next steps.\n\n## Output Contract\n\n1. Problem reframing\n2. Key insights\n3. Reasoning chain\n4. Alternatives considered\n5. Uncertainties\n6. Actionable recommendations\n\n## Vibe Integration\n\n- M/L pre-routing analysis entry.\n- If code-risk analysis is required, pair with `code-reviewer`.\n"
+    }
+  ]
+}

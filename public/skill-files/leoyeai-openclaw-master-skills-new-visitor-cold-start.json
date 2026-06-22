@@ -1,0 +1,55 @@
+{
+  "id": "leoyeai-openclaw-master-skills-new-visitor-cold-start",
+  "files": [
+    {
+      "path": ".clawhub/origin.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": 1,\n  \"registry\": \"https://clawhub.ai\",\n  \"slug\": \"new-visitor-cold-start\",\n  \"installedVersion\": \"0.1.0\",\n  \"installedAt\": 1773626638583\n}\n"
+    },
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: new-visitor-cold-start\ndescription: Convert first-time store visitors with behavior-based personalization — browse path → preference segment → matched first-order incentive → popup timing including exit intent. Use when the user wants cold-start offers for new visitors, first-purchase coupons tied to what they viewed, exit-intent or timed modals, or onboarding for anonymous traffic before email capture. Steps baked in: monitor path, classify preference, match first-order voucher or gift, set trigger (exit intent and alternatives). Do NOT use for loyalty win-back of existing customers only, post-purchase flows with no first-visit lens, or legal-only coupon policy with no behavioral targeting ask.\ncompatibility:\n  required: []\n---\n\n# New visitor cold-start conversion\n\nYou turn **first session behavior** into a **single high-fit first-order offer** and **clear modal timing** so new visitors convert without generic blasts.\n\n## Core workflow (always in order)\n\n1. **Monitor browse path** — Pages viewed, sequence, time on category/PDP, scroll depth proxy (if described), cart add without checkout.\n2. **Classify user preference** — Segment from path (e.g. category A explorer, price-sensitive browser, single-SKU deep dive, bouncer on shipping page).\n3. **Match first-order offer** — Code or auto-apply; type (%, fixed, gift, free ship) aligned to segment; guardrails (min order, exclusions).\n4. **Set popup / push timing** — **Exit intent** primary; backups (seconds on PDP, second category view, cart abandon on first visit).\n\n## Gather context\n\n1. Catalog categories and margin-safe discount bands.\n2. Stack rules with other promos.\n3. Compliance: new-customer definition, consent for popup/email.\n\nRead `references/cold_start_playbook.md` for segment → offer → trigger map.\n\n## Mandatory outputs (full run)\n\n### A) Path → segment table\n\n| Observed path pattern | Preference label | Rationale |\n|----------------------|------------------|-----------|\n| e.g. 3 PDPs same category | Category intent | … |\n| e.g. cart + shipping page | Shipping sensitivity | … |\n\n### B) Segment → first-order offer\n\n| Segment | First-order offer | Min order / notes |\n|---------|-------------------|-------------------|\n| … | … | … |\n\n### C) Trigger spec\n\n| Trigger | When | Copy role |\n|---------|------|-----------|\n| **Exit intent** | Mouse leave viewport / mobile back intent proxy | Save offer + urgency light |\n| Backup 1 | e.g. 25s on PDP | Deep interest |\n| Backup 2 | e.g. second collection view | Broad interest |\n\nInclude **one modal headline + subline + CTA** per primary segment (or one adaptive template with dynamic category name).\n\n## Pushy when vague\n\nIf user only says \"better first-time conversion,\" still deliver **one full row chain**: path example → segment → offer → exit-intent line.\n\n## When NOT to use\n\n- Repeat-customer-only campaigns.\n- No first-visit or anonymous context.\n\n## Split with other skills\n\n- **LTV win-back** — lapsed buyers; this skill is **first session**.\n- **Cart bundle AOV** — add-ons; this skill is **cold start + first order**.\n"
+    },
+    {
+      "path": "_meta.json",
+      "encoding": "utf8",
+      "content": "{\n  \"ownerId\": \"kn71wknp4ts3rwptk250btmk6x829f41\",\n  \"slug\": \"new-visitor-cold-start\",\n  \"version\": \"0.1.0\",\n  \"publishedAt\": 1773626591972\n}"
+    },
+    {
+      "path": "assets/README.md",
+      "encoding": "utf8",
+      "content": "# Assets\n\nOptional: modal HTML copy blocks. Default: Markdown."
+    },
+    {
+      "path": "evals/README.md",
+      "encoding": "utf8",
+      "content": "# Evals\n\nSee `evals.json`. Benchmark: `new-visitor-cold-start-workspace/iteration-N/`."
+    },
+    {
+      "path": "evals/evals.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_name\": \"new-visitor-cold-start\",\n  \"evals\": [\n    {\n      \"id\": 1,\n      \"prompt\": \"We get lots of first-time visitors who browse skincare then leave. I want personalized first-order offers and exit-intent popups. Walk through path monitoring, segments, matched coupons, and timing.\",\n      \"expected_output\": \"Four steps explicit; path table; segment-offer table; exit intent + backup triggers; modal copy.\",\n      \"files\": [],\n      \"expectations\": [\n        \"Follows steps: browse path monitoring, preference classification, first-order offer match, popup timing including exit intent\",\n        \"Includes path or segment classification table or equivalent\",\n        \"Matches segments to distinct first-order offers or vouchers\",\n        \"Specifies exit intent as primary or co-primary trigger with at least one backup timing\",\n        \"Includes modal or push copy (headline/CTA) for first visit\",\n        \"First-time visitor / cold start focus\"\n      ]\n    },\n    {\n      \"id\": 2,\n      \"prompt\": \"New visitors often view running shoes PDP twice then bounce. Margin allows 10% first order. What segment, offer, and exit-intent message?\",\n      \"expected_output\": \"Concrete segment, 10% offer, exit copy, trigger.\",\n      \"files\": [],\n      \"expectations\": [\n        \"Identifies behavior preference from described path\",\n        \"First-order offer aligned to running shoes context\",\n        \"Exit intent or timing specified\",\n        \"Short personalized copy for popup\"\n      ]\n    },\n    {\n      \"id\": 3,\n      \"prompt\": \"Email our lapsed VIP list a win-back 20% code — draft only.\",\n      \"expected_output\": \"Win-back email; not full cold-start path workflow (should-not-trigger).\",\n      \"files\": [],\n      \"expectations\": [\n        \"Does not replace VIP win-back with full new-visitor path monitoring tables as mandatory output\",\n        \"Appropriate lapsed customer email\",\n        \"Cold-start skill depth optional at most one line\"\n      ]\n    }\n  ]\n}\n"
+    },
+    {
+      "path": "evals/files/README.md",
+      "encoding": "utf8",
+      "content": "# Eval files\n\nOptional: first-session path export; reference in `evals.json`."
+    },
+    {
+      "path": "references/README.md",
+      "encoding": "utf8",
+      "content": "# References\n\n- **cold_start_playbook.md** — Path→segment, exit intent notes, offer angles. Read when expanding triggers."
+    },
+    {
+      "path": "references/cold_start_playbook.md",
+      "encoding": "utf8",
+      "content": "# Cold-start path → offer → trigger playbook\n\nFor `new-visitor-cold-start`.\n\n---\n\n## 1. Path patterns → segments\n\n| Pattern | Segment | Offer angle |\n|---------|---------|-------------|\n| Single PDP long dwell | High intent on SKU | Small % off that SKU or collection |\n| Many categories, short views | Explorer | Free ship threshold or catalog % |\n| PDP → cart → abandon | Cart friction | Free ship or small fixed off first order |\n| Hits shipping/returns page | Risk-averse | Free returns callout + modest % |\n| Search same query twice | Search intent | Match query category coupon |\n\n---\n\n## 2. Exit intent\n\n- **Desktop**: mouse leaves top of viewport upward.\n- **Mobile**: no true exit intent — use **scroll up past threshold**, **time on site**, or **back-button intercept** (careful with UX/legal).\n\nAlways pair with **dismiss** and **don’t show again** cookie where appropriate.\n\n---\n\n## 3. First-order mechanics\n\n- One code per segment **or** dynamic Shopify/Woo auto-apply by URL param after segment detect (if stack allows).\n- **Cap** discount to protect margin on high-AOV accidental hits.\n\n---\n\n## 4. Copy tone\n\n- New visitor: welcome + **why this offer** (e.g. \"Because you’re browsing [Category]\").\n- Avoid creep — no \"we watched you\" language; use \"first visit\" or \"welcome.\"\n"
+    },
+    {
+      "path": "scripts/README.md",
+      "encoding": "utf8",
+      "content": "# Scripts\n\nOptional: segment by URL sequence from events. Document in SKILL.md if added."
+    }
+  ]
+}

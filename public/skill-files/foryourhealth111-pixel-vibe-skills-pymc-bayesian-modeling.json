@@ -1,0 +1,10 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-pymc-bayesian-modeling",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: pymc-bayesian-modeling\ndescription: Compatibility alias for the descriptive PyMC skill name. Delegate to the canonical local `pymc` payload while preserving route and README compatibility.\n---\n\n# pymc-bayesian-modeling (Compatibility Alias)\n\n## Purpose\n\nProvide a stable descriptive alias for Bayesian modeling workflows that are\ncanonically maintained under the sibling `pymc` skill directory.\n\nThis preserves:\n\n- README-facing descriptive naming\n- existing `skills-lock` and catalog entries\n- route compatibility for callers that still ask for `pymc-bayesian-modeling`\n\n## Resolution Order\n\n1. Use the canonical local `pymc` skill payload first.\n2. Reuse its assets, references, and scripts:\n   - `../pymc/SKILL.md`\n   - `../pymc/assets/**`\n   - `../pymc/references/**`\n   - `../pymc/scripts/**`\n3. Keep this alias thin and free of its own duplicated heavy payload.\n\n## Minimal Workflow\n\n1. Read `../pymc/SKILL.md` for the full PyMC workflow.\n2. Use the canonical templates and diagnostic scripts from `../pymc/`.\n3. Report results under the requested alias name only for user-facing continuity.\n"
+    }
+  ]
+}

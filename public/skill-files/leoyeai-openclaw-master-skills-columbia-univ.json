@@ -1,0 +1,20 @@
+{
+  "id": "leoyeai-openclaw-master-skills-columbia-univ",
+  "files": [
+    {
+      "path": ".clawhub/origin.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": 1,\n  \"registry\": \"https://clawhub.ai\",\n  \"slug\": \"columbia-univ\",\n  \"installedVersion\": \"1.0.0\",\n  \"installedAt\": 1777860303199\n}\n"
+    },
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: columbia-univ\nsummary: Ivy League institution in Manhattan's Morningside Heights — birthplace of FM radio, the atomic pile, and 103 Nobel laureates.\nread_when:\n- Researching Ivy League universities and their academic specializations\n- Studying the history of nuclear physics and the Manhattan Project\n- Analyzing university endowments and higher education finance in the US\n- Exploring journalism education (Pulitzer Prizes and Columbia Journalism School)\n---\n\n# Columbia Univ\n\n## Historical Timeline\n\n- 1754 — Founded as King's College by royal charter of George II\n- 1767 — Awards first medical degree in the American colonies\n- 1896 — Renamed Columbia University; moves to Morningside Heights\n- 1900 — Founding member of the Association of American Universities\n- 1917 — Ernest Rutherford achieves first artificial nuclear transmutation here\n- 1942 — Enrico Fermi's team creates first self-sustaining nuclear reaction (Chicago Pile-1 project led by Columbia faculty)\n- 1968 — Student protests occupy buildings; catalyst for national campus activism\n- 2003 — Pulitzer Prizes awarded from Columbia's Pulitzer Hall\n- 2024 — $14.2B endowment; 103 Nobel laureates affiliated\n\n## Business Model\n\nColumbia operates a $14.2B endowment generating ~$700M annually in investment income. Tuition and fees (~$70,000/year for undergraduates) generate ~$2.2B across its 20 schools. The university earns significant revenue from sponsored research ($1.1B in 2023), technology licensing, and the Columbia University Medical Center (one of NYC's largest employers). The Pulitzer Prize administration and summer programs generate additional income.\n\n## Competitive Moat\n\nColumbia's Manhattan location is irreplicable — no other Ivy League school sits in a global financial, cultural, and media capital. The Columbia Journalism School administers the Pulitzer Prizes, the highest honor in American journalism. Its 103 Nobel laureates rank it #5 globally. The School of International and Public Affairs (SIPA) and Columbia Business School produce disproportionate influence in global policy and finance.\n\n## Key Data\n\n- **Endowment**: $14.2B (2024)\n- **Nobel laureates**: 103 affiliated (5th globally among universities)\n- **Annual research**: $1.1B in sponsored research funding\n- **Students**: 36,000 total (8,800 undergrad, 27,000+ graduate)\n- **Campus**: 36-acre Morningside Heights campus + 180+ buildings in NYC\n\n## Interesting Facts\n\n- Columbia University administers the Pulitzer Prizes — journalism's highest honor — and the Pulitzer School of Journalism is the oldest in the United States.\n- The university's Low Memorial Library appears in multiple Spider-Man films as the fictional 'Empire State University' — Columbia stands in for the fictional campus.\n"
+    },
+    {
+      "path": "_meta.json",
+      "encoding": "utf8",
+      "content": "{\n  \"ownerId\": \"kn783tv7jyap70kp5ap5wfq4rx82sqqg\",\n  \"slug\": \"columbia-univ\",\n  \"version\": \"1.0.0\",\n  \"publishedAt\": 1777856906032\n}"
+    }
+  ]
+}

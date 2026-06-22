@@ -1,0 +1,15 @@
+{
+  "id": "leoyeai-openclaw-master-skills-images",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: images\ndescription: \"This folder should contain before/after comparison screenshots showcasing the HitPaw API enhancement capabilities.\"\n---\n\n# images\n\nThis folder should contain before/after comparison screenshots showcasing the HitPaw API enhancement capabilities.\n\n## 中文说明\n\nImages 用来生成或整理图片、插画、封面、漫画或信息图，适合内容发布和视觉素材制作。\n\n## 典型场景\n- 用 Images 生成文章配图或封面\n- 把文字内容整理成图文素材\n- 生成适合社媒、博客或演示使用的视觉内容"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Screenshots for HitPaw Skill\n\nThis folder should contain before/after comparison screenshots showcasing the HitPaw API enhancement capabilities.\n\n## Recommended Screenshots\n\n### Image Enhancement\n- `image-before.jpg` - Original low-quality image sample\n- `image-after.jpg` - Enhanced result using HitPaw API\n\n### Video Enhancement\n- `video-original.jpg` - Video frame before enhancement\n- `video-enhanced.jpg` - Video frame after enhancement\n\n### Model Comparisons (Optional)\n- `face-clear.jpg` / `face-natural.jpg` - Portrait model comparison\n- `general-upscale.jpg` - General upscaling example\n- `generative-portrait.jpg` - Generative model output\n\n## Sources for Screenshots\n\n1. **HitPaw Playground**: https://playground.hitpaw.com/\n   - Upload test images and capture before/after\n   - Try different models and save comparison screenshots\n\n2. **Official Documentation**:\n   - https://developer.hitpaw.com/image/available-models\n   - https://developer.hitpaw.com/video/available-models\n   - (Check for example images in the docs)\n\n## Image Requirements\n\n- Format: JPG or PNG\n- Resolution: 800px+ width recommended\n- Include watermarks or labels showing \"Before\" and \"After\"\n- Compress for web (keep under 500KB each)\n\n## Usage in Documentation\n\nThe README.md and SKILL.md reference these images using relative paths:\n\n```markdown\n![Before Example](images/image-before.jpg)\n```\n\nPlease add actual screenshot files before publishing the skill documentation publicly.\n"
+    }
+  ]
+}

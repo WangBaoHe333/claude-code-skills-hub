@@ -1,0 +1,10 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-propositional-logic",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: propositional-logic\ndescription: \"Problem-solving strategies for propositional logic in mathematical logic\"\nallowed-tools: [Bash, Read]\n---\n\n# Propositional Logic\n\n## When to Use\n\nUse this skill when working on propositional-logic problems in mathematical logic.\n\n## Decision Tree\n\n\n1. **Identify Formula Structure**\n   - Classify: tautology, contradiction, or contingent?\n   - Main connective: AND, OR, IMPLIES, NOT, IFF?\n   - `z3_solve.py sat \"formula\"` to check satisfiability\n\n2. **Truth Table Method**\n   - For small formulas (<=4 variables): enumerate all valuations\n   - `sympy_compute.py truthtable \"p & (p -> q) -> q\"`\n   - Tautology = all T, Contradiction = all F\n\n3. **Natural Deduction**\n   - Apply inference rules: Modus Ponens, Modus Tollens\n   - Conditional proof: assume antecedent, derive consequent\n   - `z3_solve.py prove \"Implies(And(p, Implies(p,q)), q)\"`\n\n4. **Semantic Tableaux**\n   - Build tree by decomposing formula\n   - Closed branches = contradictions\n   - All branches closed = valid argument\n\n\n## Tool Commands\n\n### Z3_Sat\n```bash\nuv run python -m runtime.harness scripts/z3_solve.py sat \"And(p, Implies(p, q), Not(q))\"\n```\n\n### Z3_Tautology\n```bash\nuv run python -m runtime.harness scripts/z3_solve.py prove \"Implies(And(p, Implies(p, q)), q)\"\n```\n\n### Sympy_Truthtable\n```bash\nuv run python -m runtime.harness scripts/sympy_compute.py truthtable \"p & (p >> q) >> q\"\n```\n\n### Z3_Modus_Ponens\n```bash\nuv run python -m runtime.harness scripts/z3_solve.py prove \"Implies(And(p, Implies(p,q)), q)\"\n```\n\n## Cognitive Tools Reference\n\nSee `.claude/skills/math-mode/SKILL.md` for full tool documentation.\n"
+    }
+  ]
+}

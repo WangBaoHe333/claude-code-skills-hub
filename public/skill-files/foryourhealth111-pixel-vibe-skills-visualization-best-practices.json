@@ -1,0 +1,10 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-visualization-best-practices",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: visualization-best-practices\ndescription: |\n  Review chart choice, labeling, accessibility, and storytelling quality for existing visualizations.\n  Use as an explicit/manual helper for critique and cleanup, not as the main owner for scientific figure production or general chart generation.\nallowed-tools: Read, Write, Edit, Bash, Grep\nversion: 1.0.0\nlicense: MIT\nauthor: Jeremy Longshore <jeremy@intentsolutions.io>\n---\n\n# Visualization Best Practices\n\n## Positioning\n\nTreat this skill as an explicit/manual review helper.\n\n## When to Use\n\nUse this skill when:\n- Reviewing whether an existing chart communicates clearly\n- Fixing labels, legends, scales, color choices, or accessibility issues\n- Deciding how to simplify a crowded dashboard or figure draft\n\n## Not For / Boundaries\n\n- Creating the chart from raw data: use `creating-data-visualizations`\n- Journal-ready, multi-panel, publication submission figures: use `scientific-visualization`\n- Schematics, flowcharts, or mechanism diagrams: use `scientific-schematics`\n\n## Typical Outputs\n\n- Critique of the current visualization problems\n- Concrete fixes for encodings, layout, and readability\n- A short checklist for accessibility and audience fit\n\n## Related Skills\n\n- `creating-data-visualizations` for general chart production\n- `scientific-visualization` when the figure must meet publication standards\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-speckit-taskstoissues",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: speckit-taskstoissues\ndescription: Convert tasks from tasks.md into GitHub issues. Use after task breakdown\n  to track work items in GitHub project management.\ncompatibility: Requires spec-kit project structure with .specify/ directory\nmetadata:\n  author: github-spec-kit\n  source: templates/commands/taskstoissues.md\n---\n\n# Speckit Taskstoissues Skill\n\n## User Input\n\n```text\n$ARGUMENTS\n```\n\nYou **MUST** consider the user input before proceeding (if not empty).\n\n## Outline\n\n1. Run `.specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks` from repo root and parse FEATURE_DIR and AVAILABLE_DOCS list. All paths must be absolute. For single quotes in args like \"I'm Groot\", use escape syntax: e.g 'I'\\''m Groot' (or double-quote if possible: \"I'm Groot\").\n1. From the executed script, extract the path to **tasks**.\n1. Get the Git remote by running:\n\n```bash\ngit config --get remote.origin.url\n```\n\n> [!CAUTION]\n> ONLY PROCEED TO NEXT STEPS IF THE REMOTE IS A GITHUB URL\n\n1. For each task in the list, use the GitHub MCP server to create a new issue in the repository that is representative of the Git remote.\n\n> [!CAUTION]\n> UNDER NO CIRCUMSTANCES EVER CREATE ISSUES IN REPOSITORIES THAT DO NOT MATCH THE REMOTE URL\n"
+    }
+  ]
+}

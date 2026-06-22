@@ -1,0 +1,20 @@
+{
+  "id": "leoyeai-openclaw-master-skills-ai-web-automation",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "# SKILL.md\n\n# Web Automation Service\n\n自动化 Web 任务执行服务。\n\n## 能力\n\n- 表单填写\n- 数据抓取\n- 定时任务\n- 自动化测试\n- API 测试\n- 网站监控\n- 自动化提交\n\n## 使用方式\n\n```bash\n# 自动化表单填写\nopenclaw run web-automation --url \"https://example.com/form\" --data '{\"name\": \"test\"}'\n\n# 抓取网页\nopenclaw run web-automation --action \"scrape\" --url \"https://example.com\"\n\n# 定时任务\nopenclaw run web-automation --action \"cron\" --schedule \"0 */6 * * *\" --target \"monitor\"\n\n# 自动化测试\nopenclaw run web-automation --action \"test\" --url \"https://example.com\"\n```\n\n## 收费模式\n\n- **单次任务:** $5-20\n- **月度订阅:** $50-150\n- **企业套餐:** 按需\n\n## 特性\n\n- ✅ 支持 Selenium/Puppeteer\n- ✅ 多浏览器支持\n- ✅ 自动重试机制\n- ✅ 代理池支持\n- ✅ 定时任务调度\n- ✅ 邮件/通知集成\n\n## 开发者\n\nOpenClaw AI Agent\nLicense: MIT\nVersion: 1.0.0\n"
+    },
+    {
+      "path": "main.py",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env python3\n# Web Automation Service - Main Script\n\nimport os\nimport sys\nfrom pathlib import Path\nfrom datetime import datetime\n\nSCRIPT_DIR = Path(__file__).parent.resolve()\nOUTPUT_DIR = SCRIPT_DIR / \"output\"\n\ndef scrape_web(url):\n    \"\"\"抓取网页\"\"\"\n    try:\n        import requests\n        response = requests.get(url, timeout=10)\n\n        report = f\"# Web Scraping Report: {url}\\n\\n\"\n        report += f\"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\\n\\n\"\n        report += f\"## Scraping Results\\n\\n\"\n        report += f\"- URL: {url}\\n\"\n        report += f\"- Status Code: {response.status_code}\\n\"\n        report += f\"- Content Length: {len(response.text)} bytes\\n\\n\"\n\n        # Extract title\n        import re\n        title_match = re.search(r'<title>(.*?)</title>', response.text)\n        if title_match:\n            report += f\"**Page Title:** {title_match.group(1)}\\n\\n\"\n\n        # Extract links\n        links = re.findall(r'href=\"([^\"]+)\"', response.text)\n        report += f\"**Found {len(links)} links**\\n\\n\"\n\n        output_file = OUTPUT_DIR / f\"scrape_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md\"\n        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)\n        output_file.write_text(report, encoding='utf-8')\n\n        return str(output_file)\n    except Exception as e:\n        return f\"Error: {str(e)}\"\n\ndef main():\n    if len(sys.argv) < 3:\n        print(\"Usage: python3 main.py <action> <url> [options]\")\n        print(\"\\nActions:\")\n        print(\"  scrape  <url> - Scrape web page\")\n        print(\"\\nExamples:\")\n        print(\"  python3 main.py scrape https://example.com\")\n        sys.exit(1)\n\n    action = sys.argv[1]\n    url = sys.argv[2]\n\n    if action == \"scrape\":\n        result = scrape_web(url)\n        print(f\"Scraping saved to: {result}\")\n    else:\n        print(f\"Unknown action: {action}\")\n        sys.exit(1)\n\nif __name__ == \"__main__\":\n    main()\n"
+    },
+    {
+      "path": "package.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"web-automation\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Web Automation Service - 自动化 Web 任务执行\",\n  \"main\": \"main.py\",\n  \"scripts\": {\n    \"scrape\": \"./main.py scrape\"\n  },\n  \"config\": {\n    \"output\": {\n      \"directory\": \"./output\",\n      \"format\": \"markdown\"\n    },\n    \"pricing\": {\n      \"single_task\": 10,\n      \"monthly_subscription\": 100,\n      \"enterprise\": \"contact\"\n    }\n  },\n  \"keywords\": [\"automation\", \"web\", \"scraping\", \"testing\"],\n  \"author\": \"OpenClaw AI Agent\",\n  \"license\": \"MIT\"\n}\n"
+    }
+  ]
+}

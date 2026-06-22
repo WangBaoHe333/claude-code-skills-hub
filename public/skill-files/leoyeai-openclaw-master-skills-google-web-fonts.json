@@ -1,0 +1,20 @@
+{
+  "id": "leoyeai-openclaw-master-skills-google-web-fonts",
+  "files": [
+    {
+      "path": ".clawhub/origin.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": 1,\n  \"registry\": \"https://clawhub.ai\",\n  \"slug\": \"google-web-fonts\",\n  \"installedVersion\": \"1.0.0\",\n  \"installedAt\": 1777860260268\n}\n"
+    },
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: google-web-fonts\ndescription: Use the Google Fonts API to add fonts to web pages.\n---\n\n# Google Web Fonts\n\n## Use Cases\n\n- Importing Google Fonts in HTML\n- Building font CSS URLs (family, style, weight, subset, text parameters)\n- Controlling font loading behavior with font-display\n- Applying font effects (Beta)\n\n## Quick Start\n\n### 1. Include the Font Stylesheet\n\n```html\n<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Font+Name\">\n```\n\n### 2. Use the Font in CSS\n\n```css\nbody {\n  font-family: 'Font Name', serif;\n}\n```\n\n## Building API Parameters\n\n### Basic Format\n\n```\nhttps://fonts.googleapis.com/css?family=Font+Name\n```\n\n### Multiple Fonts (separated by |)\n\n```\nhttps://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans\n```\n\n### Styles and Weights (separated by :)\n\n| Style | Specifier |\n|-------|-----------|\n| Italic | `italic` or `i` |\n| Bold | `bold` or `b`, or numeric value such as `700` |\n| Bold Italic | `bolditalic` or `bi` |\n\nExample:\n```\nhttps://fonts.googleapis.com/css?family=Cantarell:italic|Droid+Serif:bold\n```\n\n### font-display Control\n\n```\nhttps://fonts.googleapis.com/css?family=Roboto&display=swap\n```\n\n### Subsets (subset parameter)\n\n```\nhttps://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic,greek\n```\n\n### Performance Optimization (text parameter)\n\nSpecify the characters needed to reduce the font file size by up to 90%:\n\n```\nhttps://fonts.googleapis.com/css?family=Inconsolata&text=Hello%20World\n```\n\n### Font Effects (Beta)\n\n```\nhttps://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple\n```\n\nUsage:\n```html\n<div class=\"font-effect-shadow-multiple\">This is a font effect!</div>\n```\n\n## Common Effects List\n\n| Effect | API Name | Class Name |\n|--------|----------|------------|\n| 3D | `3d` | font-effect-3d |\n| 3D Float | `3d-float` | font-effect-3d-float |\n| Anaglyph | `anaglyph` | font-effect-anaglyph |\n| Neon | `neon` | font-effect-neon |\n| Shadow Multiple | `shadow-multiple` | font-effect-shadow-multiple |\n| Vintage | `vintage` | font-effect-vintage |"
+    },
+    {
+      "path": "_meta.json",
+      "encoding": "utf8",
+      "content": "{\n  \"ownerId\": \"kn75qrtb885pznwsjwsh18dvf1813bv0\",\n  \"slug\": \"google-web-fonts\",\n  \"version\": \"1.0.0\",\n  \"publishedAt\": 1777858700368\n}"
+    }
+  ]
+}

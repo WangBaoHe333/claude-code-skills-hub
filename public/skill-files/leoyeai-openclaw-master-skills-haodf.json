@@ -1,0 +1,20 @@
+{
+  "id": "leoyeai-openclaw-master-skills-haodf",
+  "files": [
+    {
+      "path": ".clawhub/origin.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": 1,\n  \"registry\": \"https://clawhub.ai\",\n  \"slug\": \"haodf\",\n  \"installedVersion\": \"1.0.0\",\n  \"installedAt\": 1773626680931\n}\n"
+    },
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: haodf\ndescription: Help patients find suitable doctors based on symptoms, specialty, location, and doctor ratings. Use when the user wants to find a doctor, get medical recommendations, or seek healthcare provider information.\n---\n\n# Haodf (好大夫)\n\nHelp patients find suitable doctors based on symptoms, specialty, location, and doctor ratings.\n\n## Triggers\n\nActivate on: \"找医生\", \"推荐医生\", \"看什么科\", \"医院\", \"专家\", \"挂号\", \"病症\", doctor search requests.\n\n**Before acting:** Clarify:\n- Symptoms or condition\n- Location preference (city/district)\n- Hospital preference (public vs private, general vs specialized)\n- Doctor level preference (resident, attending, chief physician)\n\n## Core Flow\n\n1. **Understand Symptoms** — What are the patient's symptoms or conditions?\n2. **Determine Specialty** — Map symptoms to appropriate medical specialty\n3. **Filter by Location** — Consider patient's location and travel preference\n4. **Evaluate Doctors** — Check ratings, experience, patient reviews\n5. **Recommend** — Provide 2-3 doctor options with reasoning\n\n## Specialty Mapping\n\n| Symptoms/Condition | Suggested Specialty |\n|-------------------|---------------------|\n| Fever, cold, flu | Internal Medicine / General Practice |\n| Stomach pain, digestion issues | Gastroenterology |\n| Headache, dizziness | Neurology |\n| Chest pain, palpitations | Cardiology |\n| Skin rash, allergies | Dermatology |\n| Bone/joint pain | Orthopedics |\n| Children's illness | Pediatrics |\n| Women's health | Gynecology |\n| Eye problems | Ophthalmology |\n| Ear/nose/throat | ENT (Otolaryngology) |\n| Dental issues | Dentistry |\n| Mental health concerns | Psychiatry / Psychology |\n\n## Doctor Evaluation Criteria\n\n**Essential factors:**\n- Specialty match with patient's condition\n- Hospital affiliation and reputation\n- Years of experience\n- Patient ratings and reviews\n\n**Additional considerations:**\n- Availability (appointment wait time)\n- Consultation fees\n- Languages spoken\n- Online consultation availability\n\n## Output Format\n\nFor each recommended doctor:\n\n**Doctor Name** - Specialty, Hospital\n- **Experience:** X years\n- **Rating:** ⭐⭐⭐⭐⭐ (X/5 from Y reviews)\n- **Expertise:** Key areas of specialization\n- **Location:** Hospital address\n- **Appointment:** How to book\n\n## Important Notes\n\n⚠️ **Medical Disclaimer:**\n- This skill helps find doctors but does NOT provide medical advice\n- For emergencies, call 120 or go to nearest ER immediately\n- Always consult a licensed physician for diagnosis and treatment\n- Online information may be outdated; verify with hospital directly\n\n## Example Interactions\n\n**User:** \"我头痛应该看什么科？\"\n**Response:** 头痛建议先看神经内科。如果伴随视力问题看眼科，外伤引起看神经外科。\n\n**User:** \"帮我找北京看胃病好的医生\"\n**Response:** [推荐消化内科医生列表，包含医院、专长、评价等]\n\n**User:** \"孩子发烧了挂什么号？\"\n**Response:** 建议挂儿科。如果高烧不退或精神萎靡，建议直接去儿童医院急诊。\n"
+    },
+    {
+      "path": "_meta.json",
+      "encoding": "utf8",
+      "content": "{\n  \"ownerId\": \"kn77zzg9p845zanvy6vrf76k7d81mcnm\",\n  \"slug\": \"haodf\",\n  \"version\": \"1.0.0\",\n  \"publishedAt\": 1773625886690\n}"
+    }
+  ]
+}

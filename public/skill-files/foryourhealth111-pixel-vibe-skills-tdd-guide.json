@@ -1,0 +1,10 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-tdd-guide",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: tdd-guide\ndescription: Test-first development route for TDD, writing failing tests first, RED -> GREEN -> REFACTOR, and behavior-changing feature/bug/refactor work. Do not use for already-failing test root-cause debugging, test-report packaging, or final completion evidence.\n---\n\n# tdd-guide (Codex Compatibility)\n\nUse this skill for all feature work, bug fixes, and refactors that change behavior.\n\n## Routing Boundary\n\nUse this skill when the user wants to build or change behavior through tests:\n- TDD / test-driven development\n- write failing tests first\n- test-first implementation\n- RED -> GREEN -> REFACTOR\n\nDo not use it when tests are already failing and the user wants root cause; route that to `systematic-debugging`. Do not use it when the user only wants a test/coverage report; route that to `generating-test-reports`.\n\n## Core Rule\n\nNo production code before a failing test.\n\n## Workflow\n\n1. RED\n- Write one failing test for one behavior.\n- Confirm the failure is expected.\n\n2. GREEN\n- Implement the minimal code to pass.\n- Re-run tests and keep scope narrow.\n\n3. REFACTOR\n- Improve structure/naming without changing behavior.\n- Keep all tests green.\n\n4. COVERAGE\n- Verify coverage target (recommended >=80% for lines/functions/branches).\n- Add missing tests for edge/error paths.\n\n## Minimum Test Set\n\n- Unit: public functions and core logic.\n- Integration: API/data/service boundaries.\n- E2E: critical user path only when relevant.\n\n## Required Edge Cases\n\n- Null/undefined input\n- Empty values\n- Invalid types\n- Boundary values\n- Error paths (network/DB/file)\n- Concurrency-sensitive behavior\n\n## Vibe Integration\n\n- Primary coding skill in M-grade flow.\n- Compatible fallback target for `everything-claude-code:tdd-guide`.\n- For richer TDD patterns, combine with `test-driven-development`.\n"
+    }
+  ]
+}

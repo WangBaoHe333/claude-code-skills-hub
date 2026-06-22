@@ -1,0 +1,160 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-core",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: core\ndescription: \"`core/` holds the first host-neutral skill contracts extracted from the current official runtime.\"\n---\n\n# core\n\n`core/` holds the first host-neutral skill contracts extracted from the current official runtime.\n\n## 中文说明\n\nCore 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Core 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Core Contract Layer\n\n`core/` holds the first host-neutral skill contracts extracted from the current official runtime.\n\n## Principles\n\n- additive only during early universalization\n- no replacement of runtime `SKILL.md`\n- canonical contract points back to bundled source truth\n- compatibility and degrade behavior are explicit\n\n## First Extraction Set\n\nThe first wave intentionally freezes only the smallest universalization-critical skills:\n\n- `vibe`\n- `tdd-guide`\n- `systematic-debugging`\n- `code-reviewer`\n- `brainstorming`\n- `writing-plans`\n- `subagent-driven-development`\n\nThese are enough to define routing, implementation, debugging, review, and planning entry behavior without trying to normalize the entire skill corpus in one batch.\n\n"
+    },
+    {
+      "path": "skill-contracts/index.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"skill-contract-index.v1\",\n  \"contracts\": [\n    {\n      \"skill_id\": \"vibe\",\n      \"status\": \"canonical\",\n      \"contract_path\": \"core/skill-contracts/v1/vibe.json\"\n    },\n    {\n      \"skill_id\": \"tdd-guide\",\n      \"status\": \"canonical\",\n      \"contract_path\": \"core/skill-contracts/v1/tdd-guide.json\"\n    },\n    {\n      \"skill_id\": \"systematic-debugging\",\n      \"status\": \"canonical\",\n      \"contract_path\": \"core/skill-contracts/v1/systematic-debugging.json\"\n    },\n    {\n      \"skill_id\": \"code-reviewer\",\n      \"status\": \"canonical\",\n      \"contract_path\": \"core/skill-contracts/v1/code-reviewer.json\"\n    },\n    {\n      \"skill_id\": \"brainstorming\",\n      \"status\": \"canonical\",\n      \"contract_path\": \"core/skill-contracts/v1/brainstorming.json\"\n    },\n    {\n      \"skill_id\": \"writing-plans\",\n      \"status\": \"canonical\",\n      \"contract_path\": \"core/skill-contracts/v1/writing-plans.json\"\n    },\n    {\n      \"skill_id\": \"subagent-driven-development\",\n      \"status\": \"canonical\",\n      \"contract_path\": \"core/skill-contracts/v1/subagent-driven-development.json\"\n    }\n  ]\n}\n\n"
+    },
+    {
+      "path": "skill-contracts/v1/brainstorming.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"skill-contract.v1\",\n  \"skill_id\": \"brainstorming\",\n  \"status\": \"canonical\",\n  \"sources\": {\n    \"skill_md\": {\n      \"primary\": \"bundled/skills/brainstorming/SKILL.md\",\n      \"alternates\": []\n    }\n  },\n  \"frontmatter\": {\n    \"required_keys\": [\n      \"name\",\n      \"description\"\n    ],\n    \"invariants\": {\n      \"name_equals_skill_id\": true\n    }\n  },\n  \"notes\": \"Batch A canonical contract (conservative): validate YAML frontmatter existence + name/description presence + name == skill_id.\"\n}\n\n"
+    },
+    {
+      "path": "skill-contracts/v1/code-reviewer.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"skill-contract.v1\",\n  \"skill_id\": \"code-reviewer\",\n  \"status\": \"canonical\",\n  \"sources\": {\n    \"skill_md\": {\n      \"primary\": \"bundled/skills/code-reviewer/SKILL.md\",\n      \"alternates\": []\n    }\n  },\n  \"frontmatter\": {\n    \"required_keys\": [\n      \"name\",\n      \"description\"\n    ],\n    \"invariants\": {\n      \"name_equals_skill_id\": true\n    }\n  },\n  \"notes\": \"Batch A canonical contract (conservative): validate YAML frontmatter existence + name/description presence + name == skill_id.\"\n}\n\n"
+    },
+    {
+      "path": "skill-contracts/v1/subagent-driven-development.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"skill-contract.v1\",\n  \"skill_id\": \"subagent-driven-development\",\n  \"status\": \"canonical\",\n  \"sources\": {\n    \"skill_md\": {\n      \"primary\": \"bundled/skills/subagent-driven-development/SKILL.md\",\n      \"alternates\": []\n    }\n  },\n  \"frontmatter\": {\n    \"required_keys\": [\n      \"name\",\n      \"description\"\n    ],\n    \"invariants\": {\n      \"name_equals_skill_id\": true\n    }\n  },\n  \"notes\": \"Batch A canonical contract (conservative): validate YAML frontmatter existence + name/description presence + name == skill_id.\"\n}\n\n"
+    },
+    {
+      "path": "skill-contracts/v1/systematic-debugging.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"skill-contract.v1\",\n  \"skill_id\": \"systematic-debugging\",\n  \"status\": \"canonical\",\n  \"sources\": {\n    \"skill_md\": {\n      \"primary\": \"bundled/skills/systematic-debugging/SKILL.md\",\n      \"alternates\": []\n    }\n  },\n  \"frontmatter\": {\n    \"required_keys\": [\n      \"name\",\n      \"description\"\n    ],\n    \"invariants\": {\n      \"name_equals_skill_id\": true\n    }\n  },\n  \"notes\": \"Batch A canonical contract (conservative): validate YAML frontmatter existence + name/description presence + name == skill_id.\"\n}\n\n"
+    },
+    {
+      "path": "skill-contracts/v1/tdd-guide.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"skill-contract.v1\",\n  \"skill_id\": \"tdd-guide\",\n  \"status\": \"canonical\",\n  \"sources\": {\n    \"skill_md\": {\n      \"primary\": \"bundled/skills/tdd-guide/SKILL.md\",\n      \"alternates\": []\n    }\n  },\n  \"frontmatter\": {\n    \"required_keys\": [\n      \"name\",\n      \"description\"\n    ],\n    \"invariants\": {\n      \"name_equals_skill_id\": true\n    }\n  },\n  \"notes\": \"Batch A canonical contract (conservative): validate YAML frontmatter existence + name/description presence + name == skill_id.\"\n}\n\n"
+    },
+    {
+      "path": "skill-contracts/v1/vibe.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"skill-contract.v1\",\n  \"skill_id\": \"vibe\",\n  \"status\": \"canonical\",\n  \"sources\": {\n    \"skill_md\": {\n      \"primary\": \"SKILL.md\",\n      \"alternates\": []\n    }\n  },\n  \"frontmatter\": {\n    \"required_keys\": [\n      \"name\",\n      \"description\"\n    ],\n    \"invariants\": {\n      \"name_equals_skill_id\": true\n    }\n  },\n  \"notes\": \"Governed runtime contract: validate host-syntax-neutral vibe entry, fixed six-stage runtime documentation, and canonical repo-root SKILL.md as the only tracked source of truth.\"\n}\n"
+    },
+    {
+      "path": "skill-contracts/v1/writing-plans.json",
+      "encoding": "utf8",
+      "content": "{\n  \"schema_version\": \"skill-contract.v1\",\n  \"skill_id\": \"writing-plans\",\n  \"status\": \"canonical\",\n  \"sources\": {\n    \"skill_md\": {\n      \"primary\": \"bundled/skills/writing-plans/SKILL.md\",\n      \"alternates\": []\n    }\n  },\n  \"frontmatter\": {\n    \"required_keys\": [\n      \"name\",\n      \"description\"\n    ],\n    \"invariants\": {\n      \"name_equals_skill_id\": true\n    }\n  },\n  \"notes\": \"Batch A canonical contract (conservative): validate YAML frontmatter existence + name/description presence + name == skill_id.\"\n}\n\n"
+    },
+    {
+      "path": "skills/brainstorming/compatibility.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"brainstorming\",\n  \"required_capabilities\": [\n    \"fs.read\"\n  ],\n  \"optional_capabilities\": [\n    \"doc.write\"\n  ],\n  \"degrade_rules\": [\n    {\n      \"when_missing\": \"doc.write\",\n      \"state\": \"degraded-but-supported\",\n      \"behavior\": \"design may be discussed, but formal design artifact must be written later\"\n    }\n  ]\n}\n\n"
+    },
+    {
+      "path": "skills/brainstorming/instruction.md",
+      "encoding": "utf8",
+      "content": "# brainstorming canonical instruction\n\nUse before creative work, new functionality, design changes, or behavior modification.\n\nCanonical rules:\n\n- implementation must not start before design approval\n- understanding and trade-off exploration come before plan creation\n- the next step after approval is implementation planning, not direct coding\n\n"
+    },
+    {
+      "path": "skills/brainstorming/skill.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"brainstorming\",\n  \"name\": \"brainstorming\",\n  \"version\": 1,\n  \"summary\": \"Design-first gate for creative or behavior-changing work.\",\n  \"instruction_path\": \"core/skills/brainstorming/instruction.md\",\n  \"compatibility_path\": \"core/skills/brainstorming/compatibility.json\",\n  \"source_of_truth\": {\n    \"kind\": \"bundled-skill\",\n    \"path\": \"bundled/skills/brainstorming/SKILL.md\"\n  },\n  \"tags\": [\n    \"design\",\n    \"planning\",\n    \"hard-gate\"\n  ]\n}\n\n"
+    },
+    {
+      "path": "skills/code-reviewer/compatibility.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"code-reviewer\",\n  \"required_capabilities\": [\n    \"fs.read\"\n  ],\n  \"optional_capabilities\": [\n    \"shell.exec\",\n    \"diff.read\",\n    \"security.scan\"\n  ],\n  \"degrade_rules\": [\n    {\n      \"when_missing\": \"diff.read\",\n      \"state\": \"degraded-but-supported\",\n      \"behavior\": \"review falls back to file-level analysis instead of diff-grounded review\"\n    }\n  ]\n}\n"
+    },
+    {
+      "path": "skills/code-reviewer/instruction.md",
+      "encoding": "utf8",
+      "content": "# code-reviewer canonical instruction\n\nUse for review tasks where findings must be surfaced before summaries.\n\nCanonical rules:\n\n- correctness and regression risk come before narrative polish\n- findings must be actionable\n- review automation may assist, but the review result must stay evidence-based\n\n"
+    },
+    {
+      "path": "skills/code-reviewer/skill.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"code-reviewer\",\n  \"name\": \"code-reviewer\",\n  \"version\": 1,\n  \"summary\": \"Structured review contract for correctness, quality, and actionable feedback.\",\n  \"instruction_path\": \"core/skills/code-reviewer/instruction.md\",\n  \"compatibility_path\": \"core/skills/code-reviewer/compatibility.json\",\n  \"source_of_truth\": {\n    \"kind\": \"bundled-skill\",\n    \"path\": \"bundled/skills/code-reviewer/SKILL.md\"\n  },\n  \"tags\": [\n    \"review\",\n    \"quality\",\n    \"safety\"\n  ]\n}\n\n"
+    },
+    {
+      "path": "skills/subagent-driven-development/compatibility.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"subagent-driven-development\",\n  \"required_capabilities\": [\n    \"fs.read\",\n    \"agent.spawn\"\n  ],\n  \"optional_capabilities\": [\n    \"shell.exec\",\n    \"test.runner\"\n  ],\n  \"degrade_rules\": [\n    {\n      \"when_missing\": \"agent.spawn\",\n      \"state\": \"unsupported\",\n      \"behavior\": \"this execution pattern cannot be claimed without subagent support\"\n    }\n  ]\n}\n\n"
+    },
+    {
+      "path": "skills/subagent-driven-development/instruction.md",
+      "encoding": "utf8",
+      "content": "# subagent-driven-development canonical instruction\n\nUse when an approved implementation plan contains mostly independent tasks that can be executed in-session with isolated subagents.\n\nCanonical rules:\n\n- use fresh subagent context per task\n- spec compliance review happens before quality review\n- do not mark a task complete while review issues remain open\n\n"
+    },
+    {
+      "path": "skills/subagent-driven-development/skill.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"subagent-driven-development\",\n  \"name\": \"subagent-driven-development\",\n  \"version\": 1,\n  \"summary\": \"Task-by-task execution pattern using isolated subagents with staged review.\",\n  \"instruction_path\": \"core/skills/subagent-driven-development/instruction.md\",\n  \"compatibility_path\": \"core/skills/subagent-driven-development/compatibility.json\",\n  \"source_of_truth\": {\n    \"kind\": \"bundled-skill\",\n    \"path\": \"bundled/skills/subagent-driven-development/SKILL.md\"\n  },\n  \"tags\": [\n    \"subagents\",\n    \"execution\",\n    \"review\"\n  ]\n}\n\n"
+    },
+    {
+      "path": "skills/systematic-debugging/compatibility.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"systematic-debugging\",\n  \"required_capabilities\": [\n    \"fs.read\",\n    \"shell.exec\"\n  ],\n  \"optional_capabilities\": [\n    \"log.capture\",\n    \"test.runner\"\n  ],\n  \"degrade_rules\": [\n    {\n      \"when_missing\": \"log.capture\",\n      \"state\": \"degraded-but-supported\",\n      \"behavior\": \"manual evidence capture is required\"\n    }\n  ]\n}\n\n"
+    },
+    {
+      "path": "skills/systematic-debugging/instruction.md",
+      "encoding": "utf8",
+      "content": "# systematic-debugging canonical instruction\n\nUse for any failure, bug, test break, integration issue, or unexpected behavior.\n\nCanonical rules:\n\n- no fixes before root-cause investigation\n- reproduce and gather evidence before proposing remediation\n- multi-component systems require boundary-level evidence collection\n\n"
+    },
+    {
+      "path": "skills/systematic-debugging/skill.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"systematic-debugging\",\n  \"name\": \"systematic-debugging\",\n  \"version\": 1,\n  \"summary\": \"Root-cause-first debugging contract for failures, bugs, and unexpected behavior.\",\n  \"instruction_path\": \"core/skills/systematic-debugging/instruction.md\",\n  \"compatibility_path\": \"core/skills/systematic-debugging/compatibility.json\",\n  \"source_of_truth\": {\n    \"kind\": \"bundled-skill\",\n    \"path\": \"bundled/skills/systematic-debugging/SKILL.md\"\n  },\n  \"tags\": [\n    \"debugging\",\n    \"root-cause\",\n    \"stability\"\n  ]\n}\n\n"
+    },
+    {
+      "path": "skills/tdd-guide/compatibility.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"tdd-guide\",\n  \"required_capabilities\": [\n    \"fs.read\",\n    \"fs.write\",\n    \"shell.exec\"\n  ],\n  \"optional_capabilities\": [\n    \"test.runner\"\n  ],\n  \"degrade_rules\": [\n    {\n      \"when_missing\": \"test.runner\",\n      \"state\": \"unsupported\",\n      \"behavior\": \"do not claim TDD execution without the ability to run tests\"\n    }\n  ]\n}\n\n"
+    },
+    {
+      "path": "skills/tdd-guide/instruction.md",
+      "encoding": "utf8",
+      "content": "# tdd-guide canonical instruction\n\nUse this skill for feature work, bug fixes, and refactors that change behavior.\n\nCanonical rules:\n\n- no production code before a failing test\n- scope stays minimal through RED, GREEN, REFACTOR\n- edge cases and coverage are mandatory quality follow-through\n\n"
+    },
+    {
+      "path": "skills/tdd-guide/skill.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"tdd-guide\",\n  \"name\": \"tdd-guide\",\n  \"version\": 1,\n  \"summary\": \"Behavior-preserving TDD wrapper enforcing RED, GREEN, REFACTOR discipline.\",\n  \"instruction_path\": \"core/skills/tdd-guide/instruction.md\",\n  \"compatibility_path\": \"core/skills/tdd-guide/compatibility.json\",\n  \"source_of_truth\": {\n    \"kind\": \"bundled-skill\",\n    \"path\": \"bundled/skills/tdd-guide/SKILL.md\"\n  },\n  \"tags\": [\n    \"coding\",\n    \"tdd\",\n    \"quality\"\n  ]\n}\n\n"
+    },
+    {
+      "path": "skills/vibe/compatibility.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"vibe\",\n  \"required_capabilities\": [\n    \"fs.read\",\n    \"shell.exec\"\n  ],\n  \"optional_capabilities\": [\n    \"agent.spawn\",\n    \"route.provider_call\",\n    \"mcp.client\"\n  ],\n  \"degrade_rules\": [\n    {\n      \"when_missing\": \"agent.spawn\",\n      \"state\": \"degraded-but-supported\",\n      \"behavior\": \"fall back from XL team execution to single-agent or staged execution\"\n    },\n    {\n      \"when_missing\": \"route.provider_call\",\n      \"state\": \"degraded-but-supported\",\n      \"behavior\": \"retain canonical routing in heuristic-only mode\"\n    }\n  ]\n}\n\n"
+    },
+    {
+      "path": "skills/vibe/instruction.md",
+      "encoding": "utf8",
+      "content": "# vibe canonical instruction\n\nUse `vibe` when the task needs the governed runtime across planning, coding, debugging, review, or multi-agent execution.\n\nCanonical rules:\n\n- `vibe` remains the runtime authority; the internal specialist recommender only suggests bounded specialist help\n- the user-facing runtime path is fixed to skeleton_check -> deep_interview -> requirement_doc -> xl_plan -> plan_execute -> phase_cleanup\n- `/vibe`, `$vibe`, and agent-invoked `vibe` are the same runtime contract\n- discoverable wrapper labels may request an earlier terminal stage, but they never create a second runtime authority\n- `M`, `L`, and `XL` are internal execution grades, not user-facing entry branches\n- provider-assisted intelligence may advise but must not replace `vibe` runtime authority\n- explicit user tool choice overrides routing\n- XL execution may use multi-agent orchestration, but must preserve requirement freeze, review, cleanup, and no-regression discipline\n"
+    },
+    {
+      "path": "skills/vibe/skill.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"vibe\",\n  \"name\": \"Vibe Code Orchestrator\",\n  \"version\": 1,\n  \"summary\": \"Canonical governed runtime entry for requirement freezing, XL-first planning, execution orchestration, verification, and cleanup.\",\n  \"instruction_path\": \"core/skills/vibe/instruction.md\",\n  \"compatibility_path\": \"core/skills/vibe/compatibility.json\",\n  \"source_of_truth\": {\n    \"kind\": \"canonical-skill\",\n    \"path\": \"SKILL.md\"\n  },\n  \"tags\": [\n    \"router\",\n    \"governance\",\n    \"orchestration\"\n  ]\n}\n"
+    },
+    {
+      "path": "skills/writing-plans/compatibility.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"writing-plans\",\n  \"required_capabilities\": [\n    \"fs.read\",\n    \"fs.write\"\n  ],\n  \"optional_capabilities\": [\n    \"shell.exec\"\n  ],\n  \"degrade_rules\": [\n    {\n      \"when_missing\": \"fs.write\",\n      \"state\": \"unsupported\",\n      \"behavior\": \"do not claim plan generation without writing the plan artifact\"\n    }\n  ]\n}\n\n"
+    },
+    {
+      "path": "skills/writing-plans/instruction.md",
+      "encoding": "utf8",
+      "content": "# writing-plans canonical instruction\n\nUse when approved requirements or design must be converted into an implementation plan.\n\nCanonical rules:\n\n- plans must use exact file paths and executable verification steps\n- work should be decomposed into small, testable steps\n- plans are handoff-safe for an engineer with minimal repo context\n\n"
+    },
+    {
+      "path": "skills/writing-plans/skill.json",
+      "encoding": "utf8",
+      "content": "{\n  \"skill_id\": \"writing-plans\",\n  \"name\": \"writing-plans\",\n  \"version\": 1,\n  \"summary\": \"Implementation planning contract for turning approved design into executable steps.\",\n  \"instruction_path\": \"core/skills/writing-plans/instruction.md\",\n  \"compatibility_path\": \"core/skills/writing-plans/compatibility.json\",\n  \"source_of_truth\": {\n    \"kind\": \"bundled-skill\",\n    \"path\": \"bundled/skills/writing-plans/SKILL.md\"\n  },\n  \"tags\": [\n    \"planning\",\n    \"execution\",\n    \"tdd\"\n  ]\n}\n\n"
+    }
+  ]
+}

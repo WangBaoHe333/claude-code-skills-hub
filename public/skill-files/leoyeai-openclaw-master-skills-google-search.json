@@ -1,0 +1,15 @@
+{
+  "id": "leoyeai-openclaw-master-skills-google-search",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: google-search\ndescription: Search the web using Google Custom Search Engine (PSE). Use this when you need live information, documentation, or to research topics and the built-in web_search is unavailable.\n---\n\n# Google Search Skill\n\nThis skill allows OpenClaw agents to perform web searches via Google's Custom Search API (PSE).\n\n## Setup\n\n1.  **Google Cloud Console:** Create a project and enable the \"Custom Search API\".\n2.  **API Key:** Generate an API Key.\n3.  **Search Engine ID (CX):** Create a Programmable Search Engine at [cse.google.com](https://cse.google.com/cse/all), and get your CX ID.\n4.  **Environment:** Store your credentials in a `.env` file in your workspace:\n    ```\n    GOOGLE_API_KEY=your_key_here\n    GOOGLE_CSE_ID=your_cx_id_here\n    ```\n\n## Workflow\n... (rest of file)\n\n## Example Usage\n\n```bash\nGOOGLE_API_KEY=xxx GOOGLE_CSE_ID=yyy python3 skills/google-search/scripts/search.py \"OpenClaw documentation\"\n```\n"
+    },
+    {
+      "path": "scripts/search.py",
+      "encoding": "utf8",
+      "content": "import sys\nimport json\nimport requests\nimport os\n\ndef google_search(query, api_key, cse_id, num_results=5):\n    url = \"https://www.googleapis.com/customsearch/v1\"\n    params = {\n        'q': query,\n        'key': api_key,\n        'cx': cse_id,\n        'num': num_results\n    }\n    response = requests.get(url, params=params)\n    response.raise_for_status()\n    return response.json()\n\nif __name__ == \"__main__\":\n    if len(sys.argv) < 2:\n        print(\"Usage: python google_search.py <query> [num_results]\")\n        sys.exit(1)\n\n    query = sys.argv[1]\n    num_results = int(sys.argv[2]) if len(sys.argv) > 2 else 5\n    \n    # We will pass these via env vars for security\n    api_key = os.getenv(\"GOOGLE_API_KEY\")\n    cse_id = os.getenv(\"GOOGLE_CSE_ID\")\n\n    if not api_key or not cse_id:\n        print(\"Error: GOOGLE_API_KEY and GOOGLE_CSE_ID must be set in environment.\")\n        sys.exit(1)\n\n    try:\n        results = google_search(query, api_key, cse_id, num_results)\n        print(json.dumps(results, indent=2))\n    except Exception as e:\n        print(f\"Error: {str(e)}\")\n        sys.exit(1)\n"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-submission-checklist",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: submission-checklist\ndescription: \"Stage-based submission checklists for papers/reports: pre-submission, submission, revision/rebuttal, camera-ready. Includes templates (cover letter, rebuttal matrix) and quality gates.\"\nallowed-tools: [Read, Write, Edit, Bash, Grep, Glob]\n---\n\n# Submission Checklist（投稿 / 返修 / 相机就绪清单）\n\n## 目标\n\n把“投稿”拆成可执行、可复用的清单，避免典型的“低级错误导致 desk reject / major revision”的情况。\n\n本 skill 不是写论文正文，而是为以下阶段提供**可执行 checklist + 模板**：\n- Pre-submission（投稿前自检）\n- Submission（提交包与系统填报）\n- Revision / Rebuttal（返修与回复审稿意见）\n- Camera-ready / Proof（相机就绪、校样阶段）\n\n模板文件在 `templates/`：\n- `pre-submission-checklist.md`\n- `rebuttal-response-matrix.md`\n- `camera-ready-checklist.md`\n- `cover-letter.md`\n\n---\n\n## 何时使用\n\n触发关键词：\n- `投稿`、`submission`、`cover letter`、`highlights`\n- `返修`、`revision`、`rebuttal`、`回复审稿意见`\n- `camera-ready`、`proof`、`校样`\n- `checklist`、`自检清单`\n\n---\n\n## 输入（最小信息）\n\n1) 投向（期刊/会议/出版社）\n2) 阶段（pre-submission / submission / revision / camera-ready）\n3) 文档格式（LaTeX/Word/Quarto）\n\n---\n\n## 核心元规则（最容易漏）\n\n### 1) Checklist 要“绑定产物”\n\n每条 checklist 不是“建议”，而是能指向某个文件/位置：\n- “图 2 导出 600dpi TIFF” → `figures/fig-02/out/fig-02.tiff`\n- “统计检验写清楚” → `manuscript/methods.md#统计` 或 `main.tex` 对应段落\n\n### 2) 返修回应要“可追踪”\n\n每条 reviewer comment 必须对应：\n1) 你做了什么改动（行动）\n2) 你怎么回应（回复）\n3) 改动在哪里（定位：页码/行号/章节）\n\n模板：`templates/rebuttal-response-matrix.md`\n\n---\n\n## 交付建议（落地）\n\n推荐固定输出一个 “submission bundle 目录”：\n- `submission/cover-letter.md`\n- `submission/highlights.md`\n- `submission/submission-manifest.yml`\n- `revision/rebuttal.md`（返修时）\n\n并在 `submission-manifest.yml` 记录每个关键检查项是否完成。\n\n"
+    },
+    {
+      "path": "templates/camera-ready-checklist.md",
+      "encoding": "utf8",
+      "content": "# Camera-ready / Proof Checklist（相机就绪 / 校样）\n\n## A. 版式与一致性\n- [ ] 所有图表编号与引用一致（Fig. 2 / Figure 2）\n- [ ] 所有缩写首次出现已定义\n- [ ] 单位/符号/变量记号全篇一致\n- [ ] 参考文献完整、无缺失字段（作者/年份/期刊/DOI）\n\n## B. 图表最终规格\n- [ ] 矢量图无栅格化（PDF/EPS/SVG）\n- [ ] TIFF 满足 300–600dpi（按期刊要求）\n- [ ] 颜色在灰度打印下仍可区分（必要时用不同线型/点型）\n\n## C. 构建与归档\n- [ ] 可复现构建命令记录（`make`/`latexmk`/`quarto render`）\n- [ ] 最终提交 zip 可在干净环境下解压并编译（LaTeX）\n- [ ] 归档：提交版本 tag、构建产物、投稿系统回执\n\n"
+    },
+    {
+      "path": "templates/cover-letter.md",
+      "encoding": "utf8",
+      "content": "# Cover Letter Template（投稿附信）\n\n> 说明：不同期刊对 cover letter 的期待不同，但核心结构相对稳定。\n\nDear Editor,\n\nWe are pleased to submit our manuscript entitled **\"[TITLE]\"** for consideration as a [Article Type] in **[JOURNAL / VENUE]**.\n\n## 1) Why this matters (Significance)\n- [1–2 sentences: broad context + why the problem matters]\n\n## 2) What we did (Approach)\n- [1 sentence: method / dataset / experiment design]\n\n## 3) What we found (Key results)\n- [2–3 bullet-like sentences, but keep as paragraphs in final letter]\n\n## 4) Why it fits the journal (Fit)\n- [Aims & Scope alignment]\n- [Potential audience]\n\n## 5) Compliance statements\n- Conflicts of interest: [None / details]\n- Data/code availability: [link or statement]\n- Ethics approval (if applicable): [details]\n\nThank you for your consideration.\n\nSincerely,  \n[Corresponding Author Name]  \nOn behalf of all authors  \n[Affiliation]  \n[Email]\n\n"
+    },
+    {
+      "path": "templates/pre-submission-checklist.md",
+      "encoding": "utf8",
+      "content": "# Pre-submission Checklist（投稿前自检）\n\n> 目标：减少 desk reject / 减少来回返工。  \n> 用法：逐条打勾，并在括号里填“证据路径/链接”。\n\n## A. 期刊/会议硬约束\n- [ ] 文章类型与范围匹配（对应 Aims & Scope）\n- [ ] 字数 / 图数 / 表数 / 补充材料限制符合\n- [ ] 版式模板已套用（LaTeX/Word/Quarto）（证据：`manuscript/`）\n\n## B. 结构与叙事（审稿人视角）\n- [ ] 研究问题明确（Introduction 首段能回答：为什么重要）\n- [ ] 贡献点明确（contributions 3 条以内，且可验证）\n- [ ] Results 与 Figures 一一对应（每张图有一个结论句）\n- [ ] Discussion 不重复 Results，只解释意义/局限/未来\n\n## C. 方法可复现\n- [ ] 数据来源/采集/纳入排除标准写清楚\n- [ ] 统计检验/模型设置/超参/随机种子写清楚\n- [ ] 代码与数据可用性声明（可公开/受限/需申请）\n\n## D. 图表（顶刊常见拒稿点）\n- [ ] 统一字体/字号/线宽（跨所有图一致）\n- [ ] 色盲友好（Okabe-Ito / colorcet / cmcrameri）\n- [ ] 导出格式符合：矢量优先（PDF/EPS/SVG），必要时 TIFF 600dpi\n- [ ] 图注自解释：样本量、重复次数、统计检验、误差定义（SD/SEM/CI）\n- [ ] 子图标注一致：A/B/C（位置、字号、间距统一）\n\n## E. 引用与伦理合规\n- [ ] 所有关键主张都有数据或引用支撑\n- [ ] 引用格式一致（BibTeX/EndNote/手工都可，但必须一致）\n- [ ] 伦理声明/利益冲突/资金来源/作者贡献（按期刊要求）\n\n## F. 最终打包\n- [ ] 主文 PDF 可打开、无缺字、无 overfull box（LaTeX）\n- [ ] 图片文件可被投稿系统识别（不含奇怪字符/空格）\n- [ ] 所有上传文件命名规范（无 `final_v7`）\n\n"
+    },
+    {
+      "path": "templates/rebuttal-response-matrix.md",
+      "encoding": "utf8",
+      "content": "# Rebuttal Response Matrix（回复审稿意见矩阵）\n\n> 用法：把每条 reviewer comment 拆成“可回答的问题”，逐条回应。  \n> 元规则：每条回应必须可追踪到“你改了哪里”。\n\n| Reviewer | Comment ID | Reviewer Comment | What we changed (Action) | Response (Polite + Evidence-based) | Location in Manuscript |\n|---|---:|---|---|---|---|\n| R1 | 1 |  |  |  |  |\n| R1 | 2 |  |  |  |  |\n| R2 | 1 |  |  |  |  |\n\n## 统一写作规范（强制）\n\n1) **先感谢 + 复述问题**：证明你理解对方在问什么  \n2) **说明行动**：我们增加了实验 / 改了图 / 补充了分析 / 澄清了方法  \n3) **给证据**：新的结果、图编号、表编号、或引用  \n4) **定位改动**：章节/页码/行号（至少一个定位信息）\n\n## 禁忌（高频踩雷）\n\n- 不要说“我们不同意”然后不解释  \n- 不要把情绪写进 rebuttal（哪怕审稿人很离谱）  \n- 不要用“it is obvious”/“clearly”/“obviously”压人  \n- 不要引用不存在的结果（审稿人会追问）\n\n"
+    }
+  ]
+}

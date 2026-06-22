@@ -1,0 +1,20 @@
+{
+  "id": "leoyeai-openclaw-master-skills-ai-prompt-generator",
+  "files": [
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# AI Prompt Generator - AI 提示词生成器\n\n🎯 让 AI 更懂你的意图\n\n## 为什么需要好提示词？\n\n好的提示词 = 10 倍更好的 AI 输出\n\n## 内置框架\n\n| 框架 | 适用场景 | 效果提升 |\n|------|---------|---------|\n| CoT 思维链 | 复杂推理 | +300% |\n| Role 角色扮演 | 专业内容 | +200% |\n| Few-Shot 少样本 | 格式要求 | +250% |\n| Chain 任务链 | 多步骤任务 | +180% |\n\n## 支持模型\n\n- GPT-4 / GPT-4o\n- Claude 3 / 3.5\n- Gemini Pro / Ultra\n- 通义千问\n- 其他主流模型\n\n## 定价\n\n- **单次使用**: ¥3\n- **免费试用**: 前 5 次免费\n- **套餐**: 20 次¥50（省¥10）\n\n## 示例\n\n```bash\n# 生成 CoT 提示词\n/ai-prompt-generator --task \"分析销售数据\" --template cot\n\n# 优化已有提示词\n/ai-prompt-generator --action optimize --input prompt.txt\n\n# 为特定模型生成\n/ai-prompt-generator --task \"写代码\" --model claude --style detailed\n```\n\n---\n**SkillPay 收费 Skill** | 版本 1.0.0\n"
+    },
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "# AI Prompt Generator - AI 提示词生成器\n\n## Description\n专业 AI 提示词生成工具，帮助用户创建高效、精准的 AI 提示词。内置多种框架和模板，让 AI 输出质量提升 10 倍。\n\n## Usage\n```bash\n# 生成提示词\n/ai-prompt-generator --task \"写博客\" --model \"gpt-4\" --style \"detailed\"\n\n# 使用模板\n/ai-prompt-generator --template \"cot\" --topic \"数据分析\"\n\n# 优化已有提示词\n/ai-prompt-generator --action \"optimize\" --input \"your-prompt.txt\"\n```\n\n### 参数说明\n- `--task`: 任务描述\n- `--model`: 目标 AI 模型 (gpt-4, claude, gemini, qwen)\n- `--style`: 提示词风格 (detailed, concise, creative, analytical)\n- `--template`: 使用模板 (cot, role, few-shot, chain)\n- `--action`: 操作类型 (generate, optimize, test)\n\n## Pricing\n- **价格**: ¥3/次\n- **计费方式**: 按次收费\n- **免费试用**: 前 5 次免费\n\n## Features\n- ✅ 多模型适配\n- ✅ 框架模板库\n- ✅ 质量评分\n- ✅ A/B 测试\n- ✅ 持续优化\n"
+    },
+    {
+      "path": "index.js",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env node\n\n/**\n * AI Prompt Generator - AI 提示词生成器\n * Price: ¥3\n */\n\nasync function main() {\n  const args = process.argv.slice(2);\n  \n  const params = {};\n  for (let i = 0; i < args.length; i++) {\n    if (args[i].startsWith('--')) {\n      const key = args[i].slice(2);\n      const value = args[i + 1] && !args[i + 1].startsWith('--') ? args[++i] : true;\n      params[key] = value;\n    }\n  }\n\n  console.log('🎯 AI 提示词生成器已启动');\n  console.log('━━━━━━━━━━━━━━━━━━━━');\n  \n  const { task, model, style, template, action } = params;\n  \n  if (!task && !template && !action) {\n    console.log('用法：/ai-prompt-generator --task <任务> [选项]');\n    console.log('模板：cot, role, few-shot, chain');\n    console.log('模型：gpt-4, claude, gemini, qwen');\n    return;\n  }\n\n  console.log(`\\n📋 任务：${task || '使用模板'}`);\n  console.log(`🤖 目标模型：${model || 'auto'}`);\n  console.log(`🎨 风格：${style || 'balanced'}`);\n  console.log(`📐 模板：${template || 'custom'}`);\n  \n  console.log('\\n⏳ 正在生成提示词...');\n  \n  // 提示词框架示例\n  const frameworks = {\n    cot: '思维链 (Chain of Thought)',\n    role: '角色扮演 (Role Play)',\n    fewshot: '少样本学习 (Few-Shot)',\n    chain: '任务链 (Task Chain)'\n  };\n  \n  console.log('\\n✅ 提示词生成完成！');\n  console.log(`📐 使用框架：${frameworks[template] || '自定义'}`);\n  console.log('━━━━━━━━━━━━━━━━━━━━');\n  console.log('💰 本次消费：¥3');\n}\n\nmain().catch(console.error);\n"
+    }
+  ]
+}

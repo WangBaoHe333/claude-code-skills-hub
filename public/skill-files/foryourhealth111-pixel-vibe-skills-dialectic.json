@@ -1,0 +1,10 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-dialectic",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: dialectic\ndescription: Minimal compatibility wrapper for vibe Dialectic Mode (multi-perspective design analysis).\n---\n\n# dialectic (Codex Compatibility)\n\nThin adapter for `/vibe` dialectic routing. Keep this skill lightweight and defer workflow logic to `vibe`.\n\n## Use Cases\n\n- User explicitly asks for the think-tank flow: \"使用辩证智囊团\", \"启用辩证智囊团\", \"`$vibe dialectic`\", or \"dialectic-design\".\n- Multiple viable design approaches need structured comparison.\n\n## Execution Contract\n\n1. Route to `vibe` Dialectic Mode:\n- `vibe/protocols/team.md` (Dialectic Mode section)\n- `vibe/references/team-templates.md` (Template 6: `dialectic-design`)\n- Optional Template 7 when `local-vco-roles` is available\n\n2. Produce concise output:\n- Consensus points\n- Key divergences + rationale\n- Blind spots\n- Recommended synthesis\n\n## Compatibility Notes\n\n- M grade: prefer lightweight self-check (no TeamCreate orchestration)\n- L grade: 2-perspective adaptation\n- XL grade: TeamCreate dialectic workflow\n"
+    }
+  ]
+}

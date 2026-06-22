@@ -1,0 +1,50 @@
+{
+  "id": "leoyeai-openclaw-master-skills-opencode-controller",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: opencode-controller\ndescription: Control and operate Opencode via slash commands. Use this skill to manage sessions, select models, switch agents (plan/build), and coordinate coding through Opencode.\n---\n\n# Opencode Controller\n\n## Core rule\n\nClawdbot does not write code.\nAll planning and coding happens inside Opencode.\n\n## Pre-flight\n\n- Ask the user which AI provider to use.\n- Ask how the provider should be authenticated.\n- Do not proceed without confirmation.\n\n## Session management\n\n- Start Opencode.\n- Open session selector using:\n  /sessions\n- If the current project already exists:\n  - Select the existing session.\n- Never create a new session without user approval.\n\n## Agent (mode) control\n\n- Open agent selector using:\n  /agents\n- Available agents:\n  - Plan\n  - Build\n- Always select Plan first.\n- Switch agents whenever required using `/agents`.\n\n## Model selection\n\n- Open model selector using:\n  /models\n- Select the user-requested provider.\n- If authentication is required:\n  - Copy the login link provided by Opencode.\n  - Send it to the user.\n  - Wait for confirmation before continuing.\n\n## Plan agent behavior\n\n- Ask Opencode to analyze the task.\n- Request a clear step-by-step plan.\n- Allow Opencode to ask clarification questions.\n- Review the plan carefully.\n- If the plan is incorrect or incomplete:\n  - Ask Opencode to revise it.\n- Do not allow code generation in Plan.\n\n## Build agent behavior\n\n- Switch to Build using `/agents`.\n- Ask Opencode to implement the approved plan.\n- If Opencode asks any question:\n  - Immediately switch back to Plan.\n  - Answer and confirm the plan.\n  - Switch back to Build.\n\n## Completion\n\n- Repeat the Plan → Build loop until all user requirements are satisfied.\n- Never skip Plan.\n- Never answer questions in Build.\n\n## Output format\n\n- Show all slash commands explicitly.\n- State which option is selected.\n- Provide login links verbatim.\n"
+    },
+    {
+      "path": "assets/operator-prompts.md",
+      "encoding": "utf8",
+      "content": "### Ask for provider\nWhich AI provider do you want to use in Opencode?\n\n### Ask for auth\nHow should Opencode authenticate (auth, key, local)?\n\n### Plan request\nAnalyze the task and propose a step-by-step plan. Ask clarification questions if needed.\n\n### Plan revision\nThe plan has issues. Please revise it.\n\n### Build request\nProceed with implementation based on the approved plan.\n"
+    },
+    {
+      "path": "references/command-cheatsheet.md",
+      "encoding": "utf8",
+      "content": "## Core Opencode commands\n\n- Start Opencode:\n  opencode\n\n- Session selection:\n  /sessions\n\n- Agent (mode) selection:\n  /agents\n\n- Model selection:\n  /models\n"
+    },
+    {
+      "path": "references/failure-handling.md",
+      "encoding": "utf8",
+      "content": "## Common failures and responses\n\n### Login link does not work\n- Ask the user to retry\n- Do not proceed without confirmation\n\n### Model not available\n- Inform the user\n- Ask for an alternative provider\n\n### Plan is unclear or contradictory\n- Ask Opencode to rewrite the plan\n- Do not switch to Build mode\n"
+    },
+    {
+      "path": "references/model-selection.md",
+      "encoding": "utf8",
+      "content": "## Model selection procedure\n\n- Open model selector with:\n  /models\n\n- Select the provider requested by the user\n\n### Auth-based providers (e.g. OpenAI)\n\n- Opencode will generate a login URL\n- Copy the URL exactly\n- Send it to the user\n- Wait for confirmation before continuing\n\nNever assume authentication is complete.\n"
+    },
+    {
+      "path": "references/plan-vs-build.md",
+      "encoding": "utf8",
+      "content": "## Plan mode\n\n- Thinking only\n- Planning\n- Asking questions\n- Revising approach\n- No code generation\n\n## Build mode\n\n- Code implementation\n- Execution of approved plan\n\n### Mode switching\n\n- Use the Tab key to toggle modes\n- Always start in Plan mode\n"
+    },
+    {
+      "path": "references/question-handling.md",
+      "encoding": "utf8",
+      "content": "## Handling questions from Opencode\n\n- If Opencode asks a question:\n  - Switch to Plan mode immediately\n  - Answer carefully\n  - Confirm or revise the plan\n\nNever answer questions in Build mode.\n"
+    },
+    {
+      "path": "references/session-management.md",
+      "encoding": "utf8",
+      "content": "## Session rules\n\n- Opencode keeps a history of projects\n- The same project must always use the same session\n- Reusing sessions preserves context and decisions\n- Starting a new session is allowed only if the user explicitly asks\n- Open session selector using:\n  /sessions\n\nIf unsure, ask the user before creating a new session.\n"
+    },
+    {
+      "path": "references/workflow.md",
+      "encoding": "utf8",
+      "content": "## Standard workflow\n\n1. Confirm AI provider and auth method with the user\n2. Start Opencode\n3. Reuse existing project session if present\n4. Select AI model using `/models`\n5. Ensure Plan mode\n6. Generate and validate plan\n7. Switch to Build mode\n8. Implement\n9. Handle interruptions by returning to Plan mode\n10. Repeat until finished\n"
+    }
+  ]
+}

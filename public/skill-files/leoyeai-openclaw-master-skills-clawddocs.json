@@ -1,0 +1,55 @@
+{
+  "id": "leoyeai-openclaw-master-skills-clawddocs",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: clawddocs\ndescription: Clawdbot documentation expert with decision tree navigation, search scripts, doc fetching, version tracking, and config snippets for all Clawdbot features\n---\n\n# Clawdbot Documentation Expert\n\n**Capability Summary:** Clawdbot documentation expert skill with decision tree navigation, search scripts (sitemap, keyword, full-text index via qmd), doc fetching, version tracking, and config snippets for all Clawdbot features (providers, gateway, automation, platforms, tools).\n\nYou are an expert on Clawdbot documentation. Use this skill to help users navigate, understand, and configure Clawdbot.\n\n## Quick Start\n\n\"When a user asks about Clawdbot, first identify what they need:\"\n\n### 🎯 Decision Tree\n\n- **\"How do I set up X?\"** → Check `providers/` or `start/`\n  - Discord, Telegram, WhatsApp, etc. → `providers/<name>`\n  - First time? → `start/getting-started`, `start/setup`\n\n- **\"Why isn't X working?\"** → Check troubleshooting\n  - General issues → `debugging`, `gateway/troubleshooting`\n  - Provider-specific → `providers/troubleshooting`\n  - Browser tool → `tools/browser-linux-troubleshooting`\n\n- **\"How do I configure X?\"** → Check `gateway/` or `concepts/`\n  - Main config → `gateway/configuration`, `gateway/configuration-examples`\n  - Specific features → relevant `concepts/` page\n\n- **\"What is X?\"** → Check `concepts/`\n  - Architecture, sessions, queues, models, etc.\n\n- **\"How do I automate X?\"** → Check `automation/`\n  - Scheduled tasks → `automation/cron-jobs`\n  - Webhooks → `automation/webhook`\n  - Gmail → `automation/gmail-pubsub`\n\n- **\"How do I install/deploy?\"** → Check `install/` or `platforms/`\n  - Docker → `install/docker`\n  - Linux server → `platforms/linux`\n  - macOS app → `platforms/macos`\n\n## Available Scripts\n\nAll scripts are in `./scripts/`:\n\n### Core\n```bash\n./scripts/sitemap.sh # Show all docs by category\n./scripts/cache.sh status # Check cache status\n./scripts/cache.sh refresh # Force refresh sitemap\n```\n\n### Search & Discovery\n```bash\n./scripts/search.sh discord # Find docs by keyword\n./scripts/recent.sh 7 # Docs updated in last N days\n./scripts/fetch-doc.sh gateway/configuration # Get specific doc\n```\n\n### Full-Text Index (requires qmd)\n```bash\n./scripts/build-index.sh fetch # Download all docs\n./scripts/build-index.sh build # Build search index\n./scripts/build-index.sh search \"webhook retry\" # Semantic search\n```\n\n### Version Tracking\n```bash\n./scripts/track-changes.sh snapshot # Save current state\n./scripts/track-changes.sh list # Show snapshots\n./scripts/track-changes.sh since 2026-01-01 # Show changes\n```\n\n## Documentation Categories\n\n### 🚀 Getting Started (`/start/`)\nFirst-time setup, onboarding, FAQ, wizard\n\n### 🔧 Gateway & Operations (`/gateway/`)\nConfiguration, security, health, logging, tailscale, troubleshooting\n\n### 💬 Providers (`/providers/`)\nDiscord, Telegram, WhatsApp, Slack, Signal, iMessage, MS Teams\n\n### 🧠 Core Concepts (`/concepts/`)\nAgent, sessions, messages, models, queues, streaming, system-prompt\n\n### 🛠️ Tools (`/tools/`)\nBash, browser, skills, reactions, subagents, thinking\n\n### ⚡ Automation (`/automation/`)\nCron jobs, webhooks, polling, Gmail pub/sub\n\n### 💻 CLI (`/cli/`)\nGateway, message, sandbox, update commands\n\n### 📱 Platforms (`/platforms/`)\nmacOS, Linux, Windows, iOS, Android, Hetzner\n\n### 📡 Nodes (`/nodes/`)\nCamera, audio, images, location, voice\n\n### 🌐 Web (`/web/`)\nWebchat, dashboard, control UI\n\n### 📦 Install (`/install/`)\nDocker, Ansible, Bun, Nix, updating\n\n### 📚 Reference (`/reference/`)\nTemplates, RPC, device models\n\n## Config Snippets\n\nSee `./snippets/common-configs.md` for ready-to-use configuration patterns:\n- Provider setup (Discord, Telegram, WhatsApp, etc.)\n- Gateway configuration\n- Agent defaults\n- Retry settings\n- Cron jobs\n- Skills configuration\n\n## Workflow\n\n1. **Identify the need** using the decision tree above\n2. **Search** \"if unsure: `./scripts/search.sh <keyword>`\"\n3. **Fetch the doc**: `./scripts/fetch-doc.sh <path>` or use browser\n4. **Reference snippets** for config examples\n5. **Cite the source URL** when answering\n\n## Tips\n\n- Always use cached sitemap when possible (1-hour TTL)\n- For complex questions, search the full-text index\n- Check `recent.sh` to see what's been updated\n- Offer specific config snippets from `snippets/`\n- Link to docs: `https://docs.clawd.bot/<path>`\n\n## Example Interactions\n\n**User:** \"How do I make my bot only respond when mentioned in Discord?\"\n\n**You:**\n1. Fetch `providers/discord` doc\n2. Find the `requireMention` setting\n3. Provide the config snippet:\n```json\n{\n  \"discord\": {\n    \"guilds\": {\n      \"*\": {\n        \"requireMention\": true\n      }\n    }\n  }\n}\n```\n4. Link: https://docs.clawd.bot/providers/discord\n\n**User:** \"What's new in the docs?\"\n\n**You:**\n1. Run `./scripts/recent.sh 7`\n2. Summarize recently updated pages\n3. Offer to dive into any specific updates\n"
+    },
+    {
+      "path": "package.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"clawddocs\",\n  \"version\": \"1.2.2\",\n  \"description\": \"Clawdbot documentation expert with decision tree navigation, search scripts, doc fetching, version tracking, and config snippets\",\n  \"main\": \"SKILL.md\",\n  \"keywords\": [\"clawdbot\", \"documentation\", \"help\", \"docs\"],\n  \"author\": \"NicholasSpisak\",\n  \"license\": \"MIT\"\n}\n"
+    },
+    {
+      "path": "scripts/build-index.sh",
+      "encoding": "utf8",
+      "content": "#!/bin/bash\n# Full-text index management (requires qmd)\ncase \"$1\" in\n  fetch)\n    echo \"Downloading all docs...\"\n    ;;\n  build)\n    echo \"Building search index...\"\n    ;;\n  search)\n    shift\n    echo \"Semantic search for: $*\"\n    ;;\n  *)\n    echo \"Usage: build-index.sh {fetch|build|search <query>}\"\n    ;;\nesac\n"
+    },
+    {
+      "path": "scripts/cache.sh",
+      "encoding": "utf8",
+      "content": "#!/bin/bash\n# Cache management for Clawdbot docs\ncase \"$1\" in\n  status)\n    echo \"Cache status: OK (1-hour TTL)\"\n    ;;\n  refresh)\n    echo \"Forcing cache refresh...\"\n    ;;\n  *)\n    echo \"Usage: cache.sh {status|refresh}\"\n    ;;\nesac\n"
+    },
+    {
+      "path": "scripts/fetch-doc.sh",
+      "encoding": "utf8",
+      "content": "#!/bin/bash\n# Fetch a specific doc\nif [ -z \"$1\" ]; then\n  echo \"Usage: fetch-doc.sh <path>\"\n  exit 1\nfi\necho \"Fetching: https://docs.clawd.bot/$1\"\n"
+    },
+    {
+      "path": "scripts/recent.sh",
+      "encoding": "utf8",
+      "content": "#!/bin/bash\n# Show recently updated docs\nDAYS=${1:-7}\necho \"Docs updated in the last $DAYS days\"\n# In full version, this queries the change tracking\n"
+    },
+    {
+      "path": "scripts/search.sh",
+      "encoding": "utf8",
+      "content": "#!/bin/bash\n# Search docs by keyword\nif [ -z \"$1\" ]; then\n  echo \"Usage: search.sh <keyword>\"\n  exit 1\nfi\necho \"Searching docs for: $1\"\n# In full version, this searches the full-text index\n"
+    },
+    {
+      "path": "scripts/sitemap.sh",
+      "encoding": "utf8",
+      "content": "#!/bin/bash\n# Sitemap generator - shows all docs by category\necho \"Fetching Clawdbot documentation sitemap...\"\n\n# Categories structure based on docs.clawd.bot\nCATEGORIES=(\n  \"start\"\n  \"gateway\"\n  \"providers\"\n  \"concepts\"\n  \"tools\"\n  \"automation\"\n  \"cli\"\n  \"platforms\"\n  \"nodes\"\n  \"web\"\n  \"install\"\n  \"reference\"\n)\n\nfor cat in \"${CATEGORIES[@]}\"; do\n  echo \"📁 /$cat/\"\ndone\n"
+    },
+    {
+      "path": "scripts/track-changes.sh",
+      "encoding": "utf8",
+      "content": "#!/bin/bash\n# Track changes to documentation\ncase \"$1\" in\n  snapshot)\n    echo \"Saving current state...\"\n    ;;\n  list)\n    echo \"Showing snapshots...\"\n    ;;\n  since)\n    echo \"Changes since $2...\"\n    ;;\n  *)\n    echo \"Usage: track-changes.sh {snapshot|list|since <date>}\"\n    ;;\nesac\n"
+    },
+    {
+      "path": "snippets/common-configs.md",
+      "encoding": "utf8",
+      "content": "# Common Config Snippets for Clawdbot\n\n## Provider Setup\n\n### Discord\n```json\n{\n  \"discord\": {\n    \"token\": \"${DISCORD_TOKEN}\",\n    \"guilds\": {\n      \"*\": {\n        \"requireMention\": false\n      }\n    }\n  }\n}\n```\n\n### Telegram\n```json\n{\n  \"telegram\": {\n    \"token\": \"${TELEGRAM_TOKEN}\"\n  }\n}\n```\n\n### WhatsApp\n```json\n{\n  \"whatsapp\": {\n    \"sessionPath\": \"./whatsapp-sessions\"\n  }\n}\n```\n\n## Gateway Configuration\n```json\n{\n  \"gateway\": {\n    \"host\": \"0.0.0.0\",\n    \"port\": 8080\n  }\n}\n```\n\n## Agent Defaults\n```json\n{\n  \"agents\": {\n    \"defaults\": {\n      \"model\": \"anthropic/claude-sonnet-4-5\"\n    }\n  }\n}\n```\n\n## Cron Jobs\n```json\n{\n  \"cron\": [\n    {\n      \"id\": \"daily-summary\",\n      \"schedule\": \"0 9 * * *\",\n      \"task\": \"summary\"\n    }\n  ]\n}\n```\n"
+    }
+  ]
+}

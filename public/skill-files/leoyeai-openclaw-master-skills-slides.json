@@ -1,0 +1,15 @@
+{
+  "id": "leoyeai-openclaw-master-skills-slides",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: slides\ndescription: \"Slides (frontend-slides delegated)\"\n---\n\n# slides\n\nSlides (frontend-slides delegated)\n\n## 中文说明\n\n创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。\n\n## 典型场景\n- 生成完整 PPTX 结构\n- 修改已有幻灯片内容和版式\n- 导出可预览、可交付的演示文件"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Slides (frontend-slides delegated)\n\nThis folder is intentionally structured for future slide scaffolding files\nthat are stored alongside the `saved-markdown` skill package.\n\nRight now, Slides Deck generation is delegated to the external\n`frontend-slides` skill (installed from):\n\n- https://github.com/zarazhangrui/frontend-slides\n\n### What the agent should do\n\nWhen the user requests a slide deck (a page with `contentType: \"slides\"`):\n\n1. Ensure `frontend-slides` is installed.\n2. Use `frontend-slides` to generate the Slides Deck DSL (plain text\n   starting with `slides`).\n3. Publish the resulting deck via `POST /api/pages` with\n   `contentType: \"slides\"`.\n\n### Future work\n\nLater, you can add slide-specific reference files here (for deck layout\nconstraints, naming conventions, and style rules) without changing the\ndelegation flow above.\n\n"
+    }
+  ]
+}

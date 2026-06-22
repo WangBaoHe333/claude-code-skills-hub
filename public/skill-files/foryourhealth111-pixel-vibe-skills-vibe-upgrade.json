@@ -1,0 +1,10 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-vibe-upgrade",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: vibe-upgrade\ndescription: Upgrade the local Vibe-Skills installation to the latest official default-branch state.\n---\n\nThis is an upgrade operation, not a normal staged `vibe` task.\n\nDo not run the router for this entry. Do not relaunch this request as `entry_id = vibe`.\nDo not freeze a requirement document or execution plan for this entry.\nDo not invoke TDD, specialist dispatch, or delivery-acceptance gates unless the upgrade backend itself reports a verification failure.\n\nRun the shared upgrade backend for the current host installation, then verify and report the before/after install state.\nUse the installed runtime root as `--repo-root`; the backend will resolve or prepare the official default-branch source checkout when needed.\n\nBash execution shape (preferred when the host tool surface is Bash-like):\n\n```bash\n# Set this to the host root that contains skills/vibe-upgrade/SKILL.md.\nTARGET_ROOT='<host-root>'\nREPO_ROOT=\"$TARGET_ROOT/skills/vibe\"\nPYTHONPATH=\"$REPO_ROOT/apps/vgo-cli/src\" py -3 -m vgo_cli.main upgrade --repo-root \"$REPO_ROOT\" --host <host-id> --target-root \"$TARGET_ROOT\" --frontend powershell --profile full\n```\n\nPowerShell execution shape:\n\n```powershell\n# Set this to the host root that contains skills\\vibe-upgrade\\SKILL.md.\n$targetRoot = '<host-root>'\n$repoRoot = Join-Path $targetRoot 'skills\\vibe'\n$env:PYTHONPATH = Join-Path $repoRoot 'apps\\vgo-cli\\src'\npy -3 -m vgo_cli.main upgrade --repo-root $repoRoot --host <host-id> --target-root $targetRoot --frontend powershell --profile full\n```\n\nIf the request is empty, default to upgrading the current host installation through shared `vgo-cli upgrade` and verify the result.\nIf the backend fails, report the exact backend error and do not fall back to ordinary `vibe` routing.\n\nRequest:\n$ARGUMENTS\n"
+    }
+  ]
+}

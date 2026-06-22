@@ -1,0 +1,270 @@
+{
+  "id": "leoyeai-openclaw-master-skills-sunsama-mcp",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: sunsama-mcp\ndescription: \"**App name:** `sunsama` **Base URL proxied:** MCP server\"\n---\n\n# sunsama mcp\n\n**App name:** `sunsama` **Base URL proxied:** MCP server\n\n## 中文说明\n\nSunsama Mcp 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Sunsama Mcp 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Sunsama MCP Routing Reference\n\n**App name:** `sunsama`\n**Base URL proxied:** MCP server\n\n## Connection Management\n\nManage MCP connections at `https://ctrl.maton.ai`.\n\n### List Connections\n\n```bash\nGET https://ctrl.maton.ai/connections?app=sunsama&method=MCP&status=ACTIVE\nAuthorization: Bearer $MATON_API_KEY\n```\n\n### Create Connection\n\n```bash\nPOST https://ctrl.maton.ai/connections\nContent-Type: application/json\nAuthorization: Bearer $MATON_API_KEY\n\n{\n  \"app\": \"sunsama\",\n  \"method\": \"MCP\"\n}\n```\n\n## API Path Pattern\n\n```\n/sunsama/{tool-name}\n```\n\n## MCP Reference\n\nAll MCP tools use `POST` method:\n\n| Tool | Description | Schema |\n|------|-------------|--------|\n| `search_tasks` | Search tasks by keyword | [schema](schemas/search_tasks.json) |\n| `create_task` | Create a new task | [schema](schemas/create_task.json) |\n| `edit_task_title` | Update task title | [schema](schemas/edit_task_title.json) |\n| `delete_task` | Delete a task | [schema](schemas/delete_task.json) |\n| `mark_task_as_completed` | Mark task complete | [schema](schemas/mark_task_as_completed.json) |\n| `mark_task_as_incomplete` | Mark task incomplete | [schema](schemas/mark_task_as_incomplete.json) |\n| `append_task_notes` | Add notes to task | [schema](schemas/append_task_notes.json) |\n| `edit_task_time_estimate` | Set time estimate | [schema](schemas/edit_task_time_estimate.json) |\n| `add_subtasks_to_task` | Add subtasks | [schema](schemas/add_subtasks_to_task.json) |\n| `get_backlog_tasks` | List backlog tasks | [schema](schemas/get_backlog_tasks.json) |\n| `move_task_to_backlog` | Move task to backlog | [schema](schemas/move_task_to_backlog.json) |\n| `move_task_from_backlog` | Move from backlog to day | [schema](schemas/move_task_from_backlog.json) |\n| `move_task_to_day` | Reschedule task | [schema](schemas/move_task_to_day.json) |\n| `create_calendar_event` | Create calendar event | [schema](schemas/create_calendar_event.json) |\n| `timebox_a_task_to_calendar` | Block time for task | [schema](schemas/timebox_a_task_to_calendar.json) |\n| `start_task_timer` | Start timer | [schema](schemas/start_task_timer.json) |\n| `stop_task_timer` | Stop timer | [schema](schemas/stop_task_timer.json) |\n| `create_weekly_objective` | Create weekly goal | [schema](schemas/create_weekly_objective.json) |\n| `create_braindump_task` | Create backlog task | [schema](schemas/create_braindump_task.json) |\n| `create_channel` | Create channel/context | [schema](schemas/create_channel.json) |\n\n## Common Endpoints\n\n### Search Tasks\n\n```bash\nPOST /sunsama/search_tasks\nContent-Type: application/json\n\n{\n  \"searchTerm\": \"meeting\"\n}\n```\n\n### Create Task\n\n```bash\nPOST /sunsama/create_task\nContent-Type: application/json\n\n{\n  \"title\": \"Review quarterly report\",\n  \"day\": \"2026-03-03\",\n  \"alreadyInTaskList\": false\n}\n```\n\n**Response:**\n```json\n{\n  \"content\": [\n    {\n      \"type\": \"text\",\n      \"text\": \"{\\\"success\\\":true,\\\"task\\\":{\\\"_id\\\":\\\"69a6bf3a04d3cd0001595308\\\",\\\"title\\\":\\\"Review quarterly report\\\",\\\"scheduledDate\\\":\\\"2026-03-03\\\",\\\"completed\\\":false}}\"\n    }\n  ],\n  \"isError\": false\n}\n```\n\n### Get Backlog Tasks\n\n```bash\nPOST /sunsama/get_backlog_tasks\nContent-Type: application/json\n\n{}\n```\n\n### Mark Task as Completed\n\n```bash\nPOST /sunsama/mark_task_as_completed\nContent-Type: application/json\n\n{\n  \"taskId\": \"69a6bf3a04d3cd0001595308\",\n  \"finishedDay\": \"2026-03-03\"\n}\n```\n\n### Create Braindump Task\n\n```bash\nPOST /sunsama/create_braindump_task\nContent-Type: application/json\n\n{\n  \"title\": \"Research new tools\",\n  \"timeBucket\": \"in the next month\"\n}\n```\n\n**Time bucket options:**\n- `\"in the next two weeks\"`\n- `\"in the next month\"`\n- `\"in the next quarter\"`\n- `\"in the next year\"`\n- `\"someday\"`\n- `\"never\"`\n\n### Timebox Task to Calendar\n\n```bash\nPOST /sunsama/timebox_a_task_to_calendar\nContent-Type: application/json\n\n{\n  \"taskId\": \"69a6bf3a04d3cd0001595308\",\n  \"startDate\": \"2026-03-03\",\n  \"startTime\": \"14:00\"\n}\n```\n\n## Notes\n\n- All task IDs are MongoDB ObjectIds (24-character hex strings)\n- Date format: `YYYY-MM-DD` for days, ISO 8601 for datetimes\n- MCP tool responses wrap content in `{\"content\": [{\"type\": \"text\", \"text\": \"...\"}], \"isError\": false}` format\n- The `text` field contains JSON-stringified data that should be parsed\n- If multiple Sunsama connections exist, specify which to use with `Maton-Connection` header\n\n## Resources\n\n- [Sunsama](https://sunsama.com)\n- [Maton Community](https://discord.com/invite/dBfFAcefs2)\n- [Maton Support](mailto:support@maton.ai)\n"
+    },
+    {
+      "path": "schemas/accept_meeting_invite.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"accept_meeting_invite\",\n  \"description\": \"Accept a calendar meeting invite\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"eventId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the calendar event\"\n      }\n    },\n    \"required\": [\"eventId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/add_subtasks_to_task.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"add_subtasks_to_task\",\n  \"description\": \"Add subtasks to an existing task\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the parent task\"\n      },\n      \"subtasks\": {\n        \"type\": \"array\",\n        \"description\": \"Array of subtasks to add\",\n        \"items\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"title\": {\n              \"type\": \"string\",\n              \"description\": \"The title of the subtask\"\n            }\n          },\n          \"required\": [\"title\"]\n        }\n      }\n    },\n    \"required\": [\"taskId\", \"subtasks\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/add_task_to_channel.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"add_task_to_channel\",\n  \"description\": \"Assign a task to a channel\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task\"\n      },\n      \"channel\": {\n        \"type\": \"string\",\n        \"description\": \"The channel name\"\n      }\n    },\n    \"required\": [\"taskId\", \"channel\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/align_task_with_objective.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"align_task_with_objective\",\n  \"description\": \"Link a task to a weekly objective\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task\"\n      },\n      \"objectiveId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the objective\"\n      }\n    },\n    \"required\": [\"taskId\", \"objectiveId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/append_task_notes.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"append_task_notes\",\n  \"description\": \"Append notes to a task\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task\"\n      },\n      \"notes\": {\n        \"type\": \"string\",\n        \"description\": \"The notes to append\"\n      }\n    },\n    \"required\": [\"taskId\", \"notes\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/change_backlog_folder.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"change_backlog_folder\",\n  \"description\": \"Change the folder for backlog tasks\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskIds\": {\n        \"oneOf\": [\n          { \"type\": \"string\" },\n          { \"type\": \"array\", \"items\": { \"type\": \"string\" } }\n        ],\n        \"description\": \"Task ID or array of task IDs\"\n      }\n    },\n    \"required\": [\"taskIds\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/create_braindump_task.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"create_braindump_task\",\n  \"description\": \"Create a task in the backlog with a time bucket\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"title\": {\n        \"type\": \"string\",\n        \"description\": \"The title of the task\"\n      },\n      \"timeBucket\": {\n        \"type\": \"string\",\n        \"description\": \"When to do the task\",\n        \"enum\": [\n          \"in the next two weeks\",\n          \"in the next month\",\n          \"in the next quarter\",\n          \"in the next year\",\n          \"someday\",\n          \"never\"\n        ]\n      }\n    },\n    \"required\": [\"title\", \"timeBucket\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/create_calendar_event.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"create_calendar_event\",\n  \"description\": \"Create a calendar event\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"title\": {\n        \"type\": \"string\",\n        \"description\": \"The title of the calendar event\"\n      },\n      \"startDate\": {\n        \"type\": \"string\",\n        \"description\": \"The start date/time (ISO 8601 format)\"\n      }\n    },\n    \"required\": [\"title\", \"startDate\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/create_channel.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"create_channel\",\n  \"description\": \"Create a new channel/context for tasks\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"channelName\": {\n        \"type\": \"string\",\n        \"description\": \"The name of the channel\"\n      }\n    },\n    \"required\": [\"channelName\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/create_follow_up_task_from_email.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"create_follow_up_task_from_email\",\n  \"description\": \"Create a follow-up task from an email thread\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"accountId\": {\n        \"type\": \"string\",\n        \"description\": \"The email account ID\"\n      },\n      \"accountService\": {\n        \"type\": \"string\",\n        \"description\": \"The email service (e.g., gmail, outlook)\"\n      },\n      \"threadId\": {\n        \"type\": \"string\",\n        \"description\": \"The email thread ID\"\n      }\n    },\n    \"required\": [\"accountId\", \"accountService\", \"threadId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/create_task.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"create_task\",\n  \"description\": \"Create a new task scheduled for a specific day\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"title\": {\n        \"type\": \"string\",\n        \"description\": \"The title of the task\"\n      },\n      \"day\": {\n        \"type\": \"string\",\n        \"description\": \"The date to schedule the task (YYYY-MM-DD format)\"\n      },\n      \"alreadyInTaskList\": {\n        \"type\": \"boolean\",\n        \"description\": \"Whether the task is already in the task list\"\n      }\n    },\n    \"required\": [\"title\", \"day\", \"alreadyInTaskList\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/create_weekly_objective.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"create_weekly_objective\",\n  \"description\": \"Create a weekly objective/goal\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"title\": {\n        \"type\": \"string\",\n        \"description\": \"The title of the objective\"\n      },\n      \"weekStartDay\": {\n        \"type\": \"string\",\n        \"description\": \"The start date of the week (YYYY-MM-DD format)\"\n      }\n    },\n    \"required\": [\"title\", \"weekStartDay\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/decline_meeting_invite.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"decline_meeting_invite\",\n  \"description\": \"Decline a calendar meeting invite\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"eventId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the calendar event\"\n      }\n    },\n    \"required\": [\"eventId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/delete_all_incomplete_recurring_task_instances.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"delete_all_incomplete_recurring_task_instances\",\n  \"description\": \"Delete all future instances of a recurring task\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the recurring task\"\n      }\n    },\n    \"required\": [\"taskId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/delete_calendar_event.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"delete_calendar_event\",\n  \"description\": \"Delete a calendar event\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"eventId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the calendar event\"\n      }\n    },\n    \"required\": [\"eventId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/delete_email_thread.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"delete_email_thread\",\n  \"description\": \"Delete an email thread\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"accountId\": {\n        \"type\": \"string\",\n        \"description\": \"The email account ID\"\n      },\n      \"accountService\": {\n        \"type\": \"string\",\n        \"description\": \"The email service (e.g., gmail, outlook)\"\n      },\n      \"threadId\": {\n        \"type\": \"string\",\n        \"description\": \"The email thread ID\"\n      }\n    },\n    \"required\": [\"accountId\", \"accountService\", \"threadId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/delete_task.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"delete_task\",\n  \"description\": \"Delete a task\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task to delete\"\n      }\n    },\n    \"required\": [\"taskId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/edit_subtask_title.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"edit_subtask_title\",\n  \"description\": \"Update the title of a subtask\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the parent task\"\n      },\n      \"subtaskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the subtask\"\n      },\n      \"newTitle\": {\n        \"type\": \"string\",\n        \"description\": \"The new title for the subtask\"\n      }\n    },\n    \"required\": [\"taskId\", \"subtaskId\", \"newTitle\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/edit_task_recurrence_rule.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"edit_task_recurrence_rule\",\n  \"description\": \"Set or update the recurrence rule for a task\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task\"\n      },\n      \"recurrenceRule\": {\n        \"type\": \"string\",\n        \"description\": \"The recurrence rule (e.g., RRULE format)\"\n      }\n    },\n    \"required\": [\"taskId\", \"recurrenceRule\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/edit_task_time_estimate.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"edit_task_time_estimate\",\n  \"description\": \"Set the time estimate for a task\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task\"\n      },\n      \"timeEstimate\": {\n        \"type\": \"number\",\n        \"description\": \"The time estimate in minutes\"\n      }\n    },\n    \"required\": [\"taskId\", \"timeEstimate\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/edit_task_title.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"edit_task_title\",\n  \"description\": \"Update the title of a task\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task\"\n      },\n      \"title\": {\n        \"type\": \"string\",\n        \"description\": \"The new title\"\n      }\n    },\n    \"required\": [\"taskId\", \"title\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/get_archived_tasks.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"get_archived_tasks\",\n  \"description\": \"List archived tasks\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {},\n    \"required\": []\n  }\n}\n"
+    },
+    {
+      "path": "schemas/get_backlog_tasks.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"get_backlog_tasks\",\n  \"description\": \"List all tasks in the backlog\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {},\n    \"required\": []\n  }\n}\n"
+    },
+    {
+      "path": "schemas/get_task_time_estimate.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"get_task_time_estimate\",\n  \"description\": \"Get AI-suggested time estimate for a task title\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"title\": {\n        \"type\": \"string\",\n        \"description\": \"The task title to estimate\"\n      }\n    },\n    \"required\": [\"title\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/import_task_from_calendar_event.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"import_task_from_calendar_event\",\n  \"description\": \"Create a task from a calendar event\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"eventId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the calendar event\"\n      }\n    },\n    \"required\": [\"eventId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/list_email_threads.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"list_email_threads\",\n  \"description\": \"List email threads from a connected account\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"accountId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the email account\"\n      }\n    },\n    \"required\": [\"accountId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/log_user_feedback.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"log_user_feedback\",\n  \"description\": \"Submit user feedback\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"feedback\": {\n        \"type\": \"string\",\n        \"description\": \"The feedback message\"\n      }\n    },\n    \"required\": [\"feedback\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/mark_email_thread_as_read.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"mark_email_thread_as_read\",\n  \"description\": \"Mark an email thread as read\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"accountId\": {\n        \"type\": \"string\",\n        \"description\": \"The email account ID\"\n      },\n      \"accountService\": {\n        \"type\": \"string\",\n        \"description\": \"The email service (e.g., gmail, outlook)\"\n      },\n      \"threadId\": {\n        \"type\": \"string\",\n        \"description\": \"The email thread ID\"\n      }\n    },\n    \"required\": [\"accountId\", \"accountService\", \"threadId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/mark_subtask_as_completed.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"mark_subtask_as_completed\",\n  \"description\": \"Mark a subtask as completed\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the parent task\"\n      },\n      \"subtaskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the subtask\"\n      }\n    },\n    \"required\": [\"taskId\", \"subtaskId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/mark_subtask_as_incomplete.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"mark_subtask_as_incomplete\",\n  \"description\": \"Mark a subtask as incomplete\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the parent task\"\n      },\n      \"subtaskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the subtask\"\n      }\n    },\n    \"required\": [\"taskId\", \"subtaskId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/mark_task_as_completed.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"mark_task_as_completed\",\n  \"description\": \"Mark a task as completed\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task to complete\"\n      },\n      \"finishedDay\": {\n        \"type\": \"string\",\n        \"description\": \"The date the task was finished (YYYY-MM-DD format)\"\n      }\n    },\n    \"required\": [\"taskId\", \"finishedDay\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/mark_task_as_incomplete.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"mark_task_as_incomplete\",\n  \"description\": \"Mark a task as incomplete\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task\"\n      }\n    },\n    \"required\": [\"taskId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/move_calendar_event.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"move_calendar_event\",\n  \"description\": \"Reschedule a calendar event\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"eventId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the calendar event\"\n      },\n      \"startDate\": {\n        \"type\": \"string\",\n        \"description\": \"The new start date/time\"\n      },\n      \"isAllDay\": {\n        \"type\": \"boolean\",\n        \"description\": \"Whether this is an all-day event\"\n      }\n    },\n    \"required\": [\"eventId\", \"startDate\", \"isAllDay\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/move_task_from_backlog.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"move_task_from_backlog\",\n  \"description\": \"Move a task from backlog to a specific day\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task\"\n      },\n      \"calendarDay\": {\n        \"type\": \"string\",\n        \"description\": \"The target date (YYYY-MM-DD format)\"\n      }\n    },\n    \"required\": [\"taskId\", \"calendarDay\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/move_task_to_backlog.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"move_task_to_backlog\",\n  \"description\": \"Move a task to the backlog\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task to move\"\n      }\n    },\n    \"required\": [\"taskId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/move_task_to_day.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"move_task_to_day\",\n  \"description\": \"Reschedule a task to a different day\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task to move\"\n      },\n      \"calendarDay\": {\n        \"type\": \"string\",\n        \"description\": \"The target date (YYYY-MM-DD format)\"\n      }\n    },\n    \"required\": [\"taskId\", \"calendarDay\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/reorder_tasks.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"reorder_tasks\",\n  \"description\": \"Reorder tasks for a specific day\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskIds\": {\n        \"type\": \"array\",\n        \"description\": \"Array of task IDs in the desired order\",\n        \"items\": {\n          \"type\": \"string\"\n        }\n      },\n      \"calendarDay\": {\n        \"type\": \"string\",\n        \"description\": \"The date (YYYY-MM-DD format)\"\n      }\n    },\n    \"required\": [\"taskIds\", \"calendarDay\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/reposition_task_in_backlog.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"reposition_task_in_backlog\",\n  \"description\": \"Move a backlog task to a different time bucket\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task\"\n      },\n      \"timeBucket\": {\n        \"type\": \"string\",\n        \"description\": \"The target time bucket\",\n        \"enum\": [\n          \"in the next two weeks\",\n          \"in the next month\",\n          \"in the next quarter\",\n          \"in the next year\",\n          \"someday\",\n          \"never\"\n        ]\n      }\n    },\n    \"required\": [\"taskId\", \"timeBucket\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/restore_task.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"restore_task\",\n  \"description\": \"Restore a deleted task\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task to restore\"\n      }\n    },\n    \"required\": [\"taskId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/schedule_next_call.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"schedule_next_call\",\n  \"description\": \"Schedule the next accountability call\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"nextCallDate\": {\n        \"type\": \"string\",\n        \"description\": \"The date of the next call (YYYY-MM-DD format)\"\n      },\n      \"hour\": {\n        \"type\": \"number\",\n        \"description\": \"The hour (0-23)\"\n      },\n      \"minute\": {\n        \"type\": \"string\",\n        \"description\": \"The minute\",\n        \"enum\": [\"15\", \"30\", \"45\", \"00\"]\n      }\n    },\n    \"required\": [\"nextCallDate\", \"hour\", \"minute\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/search_tasks.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"search_tasks\",\n  \"description\": \"Search for tasks by keyword\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"searchTerm\": {\n        \"type\": \"string\",\n        \"description\": \"The search term to find tasks\"\n      }\n    },\n    \"required\": [\"searchTerm\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/set_calendar_event_allow_task_projections.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"set_calendar_event_allow_task_projections\",\n  \"description\": \"Toggle whether tasks can be projected during this event\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"eventId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the calendar event\"\n      },\n      \"allowTasksProjectedAtSameTime\": {\n        \"type\": \"boolean\",\n        \"description\": \"Whether to allow tasks during this event\"\n      }\n    },\n    \"required\": [\"eventId\", \"allowTasksProjectedAtSameTime\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/set_shutdown_time.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"set_shutdown_time\",\n  \"description\": \"Set the shutdown time for a day\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"calendarDay\": {\n        \"type\": \"string\",\n        \"description\": \"The date (YYYY-MM-DD format)\"\n      },\n      \"hour\": {\n        \"type\": \"number\",\n        \"description\": \"The hour (0-23)\"\n      },\n      \"minute\": {\n        \"type\": \"number\",\n        \"description\": \"The minute (0-59)\"\n      }\n    },\n    \"required\": [\"calendarDay\", \"hour\", \"minute\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/start_task_timer.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"start_task_timer\",\n  \"description\": \"Start the timer for a task\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task\"\n      }\n    },\n    \"required\": [\"taskId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/stop_task_timer.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"stop_task_timer\",\n  \"description\": \"Stop the timer for a task\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task\"\n      }\n    },\n    \"required\": [\"taskId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/timebox_a_task_to_calendar.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"timebox_a_task_to_calendar\",\n  \"description\": \"Block time for a task on the calendar\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task to timebox\"\n      },\n      \"startDate\": {\n        \"type\": \"string\",\n        \"description\": \"The date (YYYY-MM-DD format)\"\n      },\n      \"startTime\": {\n        \"type\": \"string\",\n        \"description\": \"The start time (HH:MM format)\"\n      }\n    },\n    \"required\": [\"taskId\", \"startDate\", \"startTime\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/toggle_auto_import_events.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"toggle_auto_import_events\",\n  \"description\": \"Toggle automatic calendar event import\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"enabled\": {\n        \"type\": \"boolean\",\n        \"description\": \"Whether to enable auto-import\"\n      }\n    },\n    \"required\": [\"enabled\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/unarchive_task.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"unarchive_task\",\n  \"description\": \"Restore an archived task to a specific day\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the task to unarchive\"\n      },\n      \"calendarDay\": {\n        \"type\": \"string\",\n        \"description\": \"The date to restore the task to (YYYY-MM-DD format)\"\n      }\n    },\n    \"required\": [\"taskId\", \"calendarDay\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/update_all_incomplete_recurring_task_instances.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"update_all_incomplete_recurring_task_instances\",\n  \"description\": \"Update all future instances of a recurring task\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"taskId\": {\n        \"type\": \"string\",\n        \"description\": \"The ID of the recurring task\"\n      }\n    },\n    \"required\": [\"taskId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/update_calendar_preferences.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"update_calendar_preferences\",\n  \"description\": \"Update calendar preferences\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"calendarId\": {\n        \"type\": \"string\",\n        \"description\": \"The calendar ID to update preferences for\"\n      }\n    },\n    \"required\": [\"calendarId\"]\n  }\n}\n"
+    },
+    {
+      "path": "schemas/update_import_event_filters.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"update_import_event_filters\",\n  \"description\": \"Update event import filters\",\n  \"inputSchema\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"excludedEventFilters\": {\n        \"type\": \"array\",\n        \"description\": \"Array of event filters to exclude\",\n        \"items\": {\n          \"type\": \"string\"\n        }\n      }\n    },\n    \"required\": [\"excludedEventFilters\"]\n  }\n}\n"
+    }
+  ]
+}

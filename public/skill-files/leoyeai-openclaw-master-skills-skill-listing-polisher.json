@@ -1,0 +1,20 @@
+{
+  "id": "leoyeai-openclaw-master-skills-skill-listing-polisher",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: skill-listing-polisher\ndescription: Improve a skill's public listing before publish. Use when tightening title, description, tags, changelog, and scan-friendly packaging so the listing looks clearer and less suspicious.\nversion: 0.1.0\n---\n\n# Skill Listing Polisher\n\nUse this skill before publishing or updating a public ClawHub skill.\n\n## What to improve\n\n- title clarity\n- description length and truncation risk\n- tags that match the actual use case\n- changelog that says what changed in plain language\n- public package surface that looks normal in review\n\n## Review order\n\n1. shorten the public description if it gets cut off\n2. remove internal-only scripts and private identifiers\n3. tighten tags to actual buyer intent\n4. make the changelog specific and boring\n5. check that the package only contains user-facing files\n\n## Fast checks\n\nRun the bundled script:\n\n```bash\n./scripts/check-listing.sh /path/to/skill\n```\n\n## Output style\n\nWhen reviewing a skill, return:\n\n1. what weakens trust\n2. what weakens discoverability\n3. the smallest edit that improves both\n"
+    },
+    {
+      "path": "references/review-notes.md",
+      "encoding": "utf8",
+      "content": "# Review Notes\n\nSignals that hurt trust:\n\n- title sounds spammy\n- description reads like internal process notes\n- package includes maintenance scripts users never need\n- changelog sounds evasive or vague\n- tags are broad and mismatched\n\nSignals that help:\n\n- plain title\n- one-sentence description\n- few files, all user-facing\n- specific changelog\n- tags that match intent\n"
+    },
+    {
+      "path": "scripts/check-listing.sh",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env bash\n\nset -euo pipefail\n\nskill_dir=\"${1:-}\"\nif [[ -z \"$skill_dir\" || ! -d \"$skill_dir\" ]]; then\n  echo \"usage: $0 /path/to/skill\" >&2\n  exit 1\nfi\n\nskill_md=\"${skill_dir}/SKILL.md\"\nif [[ ! -f \"$skill_md\" ]]; then\n  echo \"missing SKILL.md\" >&2\n  exit 1\nfi\n\ndescription=\"$(python3 - <<'PY' \"$skill_md\"\nimport pathlib, re, sys\ntext = pathlib.Path(sys.argv[1]).read_text(encoding=\"utf-8\")\nm = re.search(r\"^description:\\s*(.+)$\", text, re.M)\nprint(m.group(1).strip() if m else \"\")\nPY\n)\"\n\necho \"description_length=${#description}\"\n\nif (( ${#description} > 140 )); then\n  echo \"warn: description is long and may truncate in listings\"\nfi\n\nif find \"$skill_dir\" -maxdepth 3 -type f | rg -q 'README\\.md|INSTALL|CHANGELOG|publish|watch|token|secret'; then\n  echo \"warn: package contains files or names that may look internal or noisy\"\nfi\n\nif rg -n '\\+?[0-9][0-9 ()-]{7,}|token|secret|password|api[_-]?key|private' \"$skill_dir\" >/dev/null; then\n  echo \"warn: possible private or sensitive strings found\"\nfi\n\necho \"done\"\n"
+    }
+  ]
+}

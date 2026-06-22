@@ -1,0 +1,15 @@
+{
+  "id": "leoyeai-openclaw-master-skills-context-inject",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: context-inject\ndescription: \"系统级 Skill：系统自动触发，非用户直接调用。为当前任务自动注入相关知识上下文。根据请求语义检索知识库，按注入策略格式化后注入 Agent 上下文窗口。\"\ntrigger-mode: system\n---\n\n# ContextInjectSkill — 上下文注入\n\n为 Agent 当前任务自动注入相关知识上下文，提升回答质量。\n\n## 触发词\n\nsystem:context-inject\n\n## 使用方式\n\n```bash\n# 为查询注入相关上下文\ntsx scripts/inject.ts --query \"当前用户请求\" [--budget <tokens>]\n\n# 指定注入格式\ntsx scripts/inject.ts --query \"设计决策\" --format markdown --budget 3000\n```\n\n## 核心路径\n\n`src/injection/context-injector.ts` → `src/injection/injection-policy.ts`\n"
+    },
+    {
+      "path": "scripts/inject.ts",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env tsx\n/**\n * ContextInjectSkill — 上下文注入入口\n *\n * 为当前任务自动注入相关知识上下文。\n *\n * 用法:\n *   tsx inject.ts --query \"当前请求\" [--budget <tokens>] [--format markdown|plain]\n */\n\nimport { resolve } from 'node:path';\nimport { ContextInjector } from '../../../src/injection/context-injector.js';\nimport { KnowledgeRepository } from '../../../src/repository/knowledge-repository.js';\nimport { SQLiteProvider } from '../../../src/repository/sqlite-provider.js';\n\nconst DB_PATH = resolve(process.cwd(), '.kivo/knowledge.db');\n\nfunction parseArgs() {\n  const args = process.argv.slice(2);\n  let query: string | undefined;\n  let budget = 2000;\n  let format: 'markdown' | 'plain' = 'markdown';\n\n  for (let i = 0; i < args.length; i++) {\n    switch (args[i]) {\n      case '--query':\n        query = args[++i];\n        break;\n      case '--budget':\n        budget = parseInt(args[++i], 10);\n        break;\n      case '--format':\n        format = args[++i] as 'markdown' | 'plain';\n        break;\n    }\n  }\n\n  if (!query) {\n    console.error('用法: tsx inject.ts --query \"当前请求\" [--budget <tokens>] [--format markdown|plain]');\n    process.exit(1);\n  }\n\n  return { query, budget, format };\n}\n\nasync function main() {\n  const { query, budget, format } = parseArgs();\n\n  const provider = new SQLiteProvider({ dbPath: DB_PATH });\n  const repository = new KnowledgeRepository(provider);\n  const injector = new ContextInjector({ repository });\n\n  try {\n    const response = await injector.inject({\n      userQuery: query,\n      tokenBudget: budget,\n    });\n\n    if (response.entries.length === 0) {\n      console.log('无相关知识可注入。');\n      return;\n    }\n\n    console.log(`✓ 注入完成 — ${response.entries.length} 条，${response.tokensUsed} tokens`);\n    if (response.truncated) {\n      console.log('  (结果已截断，可增大 --budget)');\n    }\n\n    console.log('\\n--- 注入上下文 ---\\n');\n    console.log(response.injectedContext);\n  } finally {\n    await provider.close();\n  }\n}\n\nmain().catch(err => {\n  console.error('注入失败:', err.message);\n  process.exit(1);\n});\n"
+    }
+  ]
+}

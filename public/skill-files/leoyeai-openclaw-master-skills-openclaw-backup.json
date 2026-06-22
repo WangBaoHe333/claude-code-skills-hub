@@ -1,0 +1,20 @@
+{
+  "id": "leoyeai-openclaw-master-skills-openclaw-backup",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: openclaw-backup\ndescription: Backup and restore OpenClaw data. Use when user asks to create backups, set up automatic backup schedules, restore from backup, or manage backup rotation. Handles ~/.openclaw directory archiving with proper exclusions.\n---\n\n# OpenClaw Backup\n\nBackup and restore OpenClaw configuration, credentials, and workspace.\n\n## Create Backup\n\nRun the backup script:\n\n```bash\n./scripts/backup.sh [backup_dir]\n```\n\nDefault backup location: `~/openclaw-backups/`\n\nOutput: `openclaw-YYYY-MM-DD_HHMM.tar.gz`\n\n## What Gets Backed Up\n\n- `openclaw.json` — main config\n- `credentials/` — API keys, tokens\n- `agents/` — agent configs, auth profiles\n- `workspace/` — memory, SOUL.md, user files\n- `telegram/` — session data\n- `cron/` — scheduled tasks\n\n## Excluded\n\n- `completions/` — cache, regenerated automatically\n- `*.log` — logs\n\n## Setup Daily Backup with Cron\n\nUse OpenClaw cron for daily backups with notification:\n\n```json\n{\n  \"name\": \"daily-backup\",\n  \"schedule\": {\"kind\": \"cron\", \"expr\": \"0 3 * * *\", \"tz\": \"UTC\"},\n  \"payload\": {\n    \"kind\": \"agentTurn\",\n    \"message\": \"Run ~/.openclaw/backup.sh and report result to user.\"\n  },\n  \"sessionTarget\": \"isolated\",\n  \"delivery\": {\"mode\": \"announce\"}\n}\n```\n\n## Restore\n\nSee [references/restore.md](references/restore.md) for step-by-step restore instructions.\n\nQuick restore:\n\n```bash\nopenclaw gateway stop\nmv ~/.openclaw ~/.openclaw-old\ntar -xzf ~/openclaw-backups/openclaw-YYYY-MM-DD_HHMM.tar.gz -C ~\nopenclaw gateway start\n```\n\n## Rotation\n\nScript keeps last 7 backups automatically.\n"
+    },
+    {
+      "path": "references/restore.md",
+      "encoding": "utf8",
+      "content": "# Restore OpenClaw from Backup\n\n## Quick Restore\n\n```bash\n# 1. Stop OpenClaw\nopenclaw gateway stop\n\n# 2. Backup current (safety)\nmv ~/.openclaw ~/.openclaw-old\n\n# 3. Extract backup\ncd ~\ntar -xzf ~/openclaw-backups/openclaw-YYYY-MM-DD_HHMM.tar.gz\n\n# 4. Start OpenClaw\nopenclaw gateway start\n\n# 5. Verify\nopenclaw status\n```\n\n## Rollback if Restore Fails\n\n```bash\nrm -rf ~/.openclaw\nmv ~/.openclaw-old ~/.openclaw\nopenclaw gateway start\n```\n\n## What's in a Backup\n\n```\n~/.openclaw/\n├── openclaw.json      # Main config\n├── credentials/       # API keys, tokens\n├── agents/            # Agent configs, auth\n├── workspace/         # Memory, SOUL.md, files\n├── telegram/          # Telegram session\n└── cron/              # Scheduled tasks\n```\n\n## Excluded from Backup\n\n- `completions/` — API response cache (regenerated)\n- `*.log` — Log files\n"
+    },
+    {
+      "path": "scripts/backup.sh",
+      "encoding": "utf8",
+      "content": "#!/bin/bash\n# OpenClaw Backup Script\n# Usage: ./backup.sh [backup_dir]\n\nBACKUP_DIR=\"${1:-$HOME/openclaw-backups}\"\nDATE=$(date +%Y-%m-%d_%H%M)\nBACKUP_FILE=\"$BACKUP_DIR/openclaw-$DATE.tar.gz\"\n\nmkdir -p \"$BACKUP_DIR\"\n\n# Create backup (exclude completions cache and logs)\ntar -czf \"$BACKUP_FILE\" \\\n    --exclude='completions' \\\n    --exclude='*.log' \\\n    -C \"$HOME\" .openclaw/ 2>/dev/null\n\nif [ $? -eq 0 ]; then\n    SIZE=$(du -h \"$BACKUP_FILE\" | cut -f1)\n    \n    # Rotate: keep only last 7 backups\n    ls -t \"$BACKUP_DIR\"/openclaw-*.tar.gz 2>/dev/null | tail -n +8 | xargs -r rm\n    \n    COUNT=$(ls \"$BACKUP_DIR\"/openclaw-*.tar.gz 2>/dev/null | wc -l)\n    \n    echo \"✅ Backup created: $BACKUP_FILE ($SIZE)\"\n    echo \"📁 Total backups: $COUNT\"\n    exit 0\nelse\n    echo \"❌ Backup failed\"\n    exit 1\nfi\n"
+    }
+  ]
+}

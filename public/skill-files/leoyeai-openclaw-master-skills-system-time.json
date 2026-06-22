@@ -1,0 +1,20 @@
+{
+  "id": "leoyeai-openclaw-master-skills-system-time",
+  "files": [
+    {
+      "path": ".clawhub/origin.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": 1,\n  \"registry\": \"https://clawhub.ai\",\n  \"slug\": \"hengheng-system-time\",\n  \"installedVersion\": \"1.0.0\",\n  \"installedAt\": 1773626694321\n}\n"
+    },
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: system-time\nversion: 1.0.0\ndescription: Get accurate system time in various formats and timezones. Use when the user needs to know the current time, date, timestamp, or wants to convert between timezones. Supports ISO 8601, Unix timestamp, human-readable formats, and timezone conversions.\n---\n\n# System Time\n\nGet accurate system time information in multiple formats.\n\n## Quick Usage\n\n### Current Time (Local)\n```bash\ndate                                    # Human readable\ndate -Iseconds                          # ISO 8601 with seconds\ndate +%s                                # Unix timestamp\n```\n\n### Current Time (UTC)\n```bash\ndate -u                                 # UTC human readable\ndate -u -Iseconds                       # UTC ISO 8601\ndate -u +%s                             # UTC Unix timestamp (same as local)\n```\n\n### Specific Timezone\n```bash\nTZ=Asia/Shanghai date                   # Shanghai time\nTZ=America/New_York date                # New York time\nTZ=Europe/London date                   # London time\n```\n\n## Common Formats\n\n| Format | Command | Example Output |\n|--------|---------|----------------|\n| ISO 8601 | `date -Iseconds` | 2024-03-11T16:30:00+08:00 |\n| Unix timestamp | `date +%s` | 1710145800 |\n| RFC 2822 | `date -R` | Mon, 11 Mar 2024 16:30:00 +0800 |\n| Custom | `date \"+%Y-%m-%d %H:%M:%S\"` | 2024-03-11 16:30:00 |\n\n## Timezone Conversion\n\nConvert from one timezone to another:\n```bash\n# Convert specific time from Shanghai to New York\nTZ=America/New_York date -d \"2024-03-11 16:30:00 CST\"\n\n# List available timezones\nls /usr/share/zoneinfo/\n```\n\n## Python Alternative (for scripting)\n\n```python\nfrom datetime import datetime, timezone\n\n# Current UTC time\nutc_now = datetime.now(timezone.utc)\nprint(utc_now.isoformat())\n\n# Current local time\nlocal_now = datetime.now()\nprint(local_now.isoformat())\n\n# Unix timestamp\nprint(int(utc_now.timestamp()))\n```\n\n## Notes\n\n- Unix timestamp is always UTC (timezone-independent)\n- ISO 8601 format includes timezone offset\n- Use `timedatectl` on Linux systems for system clock info\n"
+    },
+    {
+      "path": "_meta.json",
+      "encoding": "utf8",
+      "content": "{\n  \"ownerId\": \"kn7frkwc3mpdwdb2j3awxqf3q582986b\",\n  \"slug\": \"hengheng-system-time\",\n  \"version\": \"1.0.0\",\n  \"publishedAt\": 1773624345552\n}"
+    }
+  ]
+}

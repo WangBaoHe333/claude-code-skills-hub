@@ -1,0 +1,10 @@
+{
+  "id": "leoyeai-openclaw-master-skills-pdf-extract",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: pdf-extract\ndescription: \"Extract text from PDF files for LLM processing\"\nmetadata:\n  {\n    \"openclaw\":\n      {\n        \"emoji\": \"📄\",\n        \"requires\": { \"bins\": [\"pdftotext\"] },\n        \"install\":\n          [\n            {\n              \"id\": \"dnf\",\n              \"kind\": \"dnf\",\n              \"package\": \"poppler-utils\",\n              \"bins\": [\"pdftotext\"],\n              \"label\": \"Install via dnf\",\n            },\n          ],\n      },\n  }\n---\n\n# PDF Extract\n\nExtract text from PDF files for LLM processing. Uses `pdftotext` from the poppler-utils package to convert PDF documents into plain text.\n\n## Commands\n\n```bash\n# Extract all text from a PDF\npdf-extract \"document.pdf\"\n\n# Extract text from specific pages\npdf-extract \"document.pdf\" --pages 1-5\n```\n\n## Install\n\n```bash\nsudo dnf install poppler-utils\n```\n"
+    }
+  ]
+}

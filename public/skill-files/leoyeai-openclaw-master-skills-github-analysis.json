@@ -1,0 +1,10 @@
+{
+  "id": "leoyeai-openclaw-master-skills-github-analysis",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\r\nname: github-analysis\r\ndescription: |\r\n  GitHub repository code analysis. Uses local script\r\n  `skills/scripts/github_analyze.js` to convert a repo into an AI-friendly\r\n  Markdown snapshot. No external API required.\r\nmetadata:\r\n  author: NotevenDe\r\n  version: 1.2.0\r\n---\r\n\r\n# GitHub Analysis — Repository Inspection\r\n\r\n## Local Script\r\n\r\nScript path: `skills/scripts/github_analyze.js`\r\n\r\n### Functions\r\n\r\n| Function | Description |\r\n|----------|-------------|\r\n| `analyzeRepository(url, options?)` | Metadata, structure, README, languages, architecture, recent commits |\r\n| `convertToMarkdown(url, options?)` | Convert repo to a single AI-friendly Markdown document with file contents |\r\n| `parseGitHubUrl(url)` | Parse GitHub URL or `owner/repo` into `{ owner, repo }` |\r\n\r\n### Options\r\n\r\n| Option | Default | Description |\r\n|--------|---------|-------------|\r\n| `depth` | 2 | Directory depth limit (analyzeRepository only) |\r\n| `maxFiles` | 75 | Max files to include (convertToMarkdown only) |\r\n| `maxSize` | 30000 | Max size per file in bytes (convertToMarkdown only) |\r\n\r\n## Fallback Behavior\r\n\r\n| Scenario                     | Behavior                                  |\r\n|-----------------------------|-------------------------------------------|\r\n| Repo not found or private   | Skip, record a warning                    |\r\n"
+    }
+  ]
+}

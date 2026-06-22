@@ -1,0 +1,10 @@
+{
+  "id": "leoyeai-openclaw-master-skills-qmd",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: qmd\ndescription: Local search/indexing CLI (BM25 + vectors + rerank) with MCP mode.\nhomepage: https://tobi.lutke.com\nmetadata: {\"clawdbot\":{\"emoji\":\"📝\",\"requires\":{\"bins\":[\"qmd\"]},\"install\":[{\"id\":\"node\",\"kind\":\"node\",\"package\":\"https://github.com/tobi/qmd\",\"bins\":[\"qmd\"],\"label\":\"Install qmd (node)\"}]}}\n---\n\n# qmd\n\nUse `qmd` to index local files and search them.\n\nIndexing\n- Add collection: `qmd collection add /path --name docs --mask \"**/*.md\"`\n- Update index: `qmd update`\n- Status: `qmd status`\n\nSearch\n- BM25: `qmd search \"query\"`\n- Vector: `qmd vsearch \"query\"`\n- Hybrid: `qmd query \"query\"`\n- Get doc: `qmd get docs/path.md:10 -l 40`\n\nNotes\n- Embeddings/rerank use Ollama at `OLLAMA_URL` (default `http://localhost:11434`).\n- Index lives under `~/.cache/qmd` by default.\n- MCP mode: `qmd mcp`.\n"
+    }
+  ]
+}

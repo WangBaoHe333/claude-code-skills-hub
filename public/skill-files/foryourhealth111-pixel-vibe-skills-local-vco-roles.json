@@ -1,0 +1,45 @@
+{
+  "id": "foryourhealth111-pixel-vibe-skills-local-vco-roles",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: local-vco-roles\ndescription: Codex-local role pack for dialectic multi-agent reviews, designed to be compatible with the local vibe skill.\n---\n\n# local-vco-roles\n\nCodex-local role pack for dialectic multi-agent reviews, designed to be compatible with the local `vibe` skill.\n\n## When to Use\n\nUse this skill when:\n1. You run `/vibe` and need a stable role set for dialectic review.\n2. You want reproducible multi-role analysis using TeamCreate-style orchestration.\n3. You need standardized outputs across team-lead / bug / architecture / integration / usability roles.\n\n## Vibe Compatibility Contract (Must Follow)\n\n1. Grade handshake:\n- M/L: do NOT force TeamCreate orchestration.\n- XL: TeamCreate workflow is allowed.\n\n2. Rule-1 boundary:\n- Never mix multiple agent systems for the same task.\n- Follow `vibe` conflict rules first.\n\n3. Command priority:\n- User explicit command > `vibe` routing > this role pack defaults.\n\n4. Output severity:\n- Always use `CRITICAL > HIGH > MEDIUM > LOW`.\n\n5. Staged confirmation:\n- Keep major confirmation points aligned with `vibe` team protocol.\n\n6. Memory behavior:\n- Default state tracking via TodoWrite-style task state.\n- Optional enhancements (if available) must not become hard dependencies.\n\n## Role Prompt Library\n\n- Team lead: `references/role-prompts/team-lead.md`\n- Bug analyst: `references/role-prompts/bug-analyst.md`\n- Architecture critic: `references/role-prompts/arch-critic.md`\n- Integration analyst: `references/role-prompts/integration-analyst.md`\n- Usability analyst: `references/role-prompts/usability-analyst.md`\n\n## Recommended XL Workflow\n\n1. Read `references/vibe-compatibility.md`.\n2. Create 5 tasks (lead + 4 analysts).\n3. Assign each role using the prompt files above.\n4. Collect results and aggregate by severity.\n5. Produce one merged decision set (`keep / simplify / remove`).\n\n## Optional Utility\n\n- Run scaffold helper: `scripts/new-run.ps1 -Topic <name>`\n\n"
+    },
+    {
+      "path": "references/role-prompts/arch-critic.md",
+      "encoding": "utf8",
+      "content": "﻿# arch-critic Prompt\n\nRole goal:\nEvaluate complexity vs value and propose simplification with minimal capability loss.\n\nOutput requirements:\n1. `keep / simplify / remove` decision table.\n2. Cost-benefit rationale per item.\n3. Minimal viable architecture recommendation.\n\nCompletion gate:\n1. Overhead hotspots identified.\n2. Merge/remove candidates identified.\n3. Simplification path is executable.\n"
+    },
+    {
+      "path": "references/role-prompts/bug-analyst.md",
+      "encoding": "utf8",
+      "content": "﻿# bug-analyst Prompt\n\nRole goal:\nIdentify concrete defects, contradictions, dead references, and runtime breakpoints.\n\nOutput requirements:\n1. Severity-sorted findings.\n2. For each finding: location, symptom, impact, minimal fix.\n3. Mark whether issue is reproducible now.\n\nCompletion gate:\n1. Cross-file contradiction check completed.\n2. Dead-reference validation completed.\n3. Fallback loop/ambiguity check completed.\n"
+    },
+    {
+      "path": "references/role-prompts/integration-analyst.md",
+      "encoding": "utf8",
+      "content": "﻿# integration-analyst Prompt\n\nRole goal:\nAssess integration reliability across tools, hooks, MCP dependencies, and version drift.\n\nOutput requirements:\n1. Availability matrix: available / unavailable / degraded.\n2. Runtime failure points with practical mitigations.\n3. Drift risks and detection gaps.\n\nCompletion gate:\n1. Dependency checks completed.\n2. Breakpoint list is concrete.\n3. Fallback reliability assessed.\n"
+    },
+    {
+      "path": "references/role-prompts/team-lead.md",
+      "encoding": "utf8",
+      "content": "﻿# team-lead Prompt\n\nRole goal:\nCoordinate task assignment, reconcile role conflicts, and publish one actionable final synthesis.\n\nOutput requirements:\n1. Findings sorted by `CRITICAL > HIGH > MEDIUM > LOW`.\n2. Final decisions in `keep / simplify / remove` buckets.\n3. Explicit next actions and owners.\n\nCompletion gate:\n1. Confirm all role outputs are collected or marked missing.\n2. Resolve contradictions with rationale.\n3. Publish concise final package.\n"
+    },
+    {
+      "path": "references/role-prompts/usability-analyst.md",
+      "encoding": "utf8",
+      "content": "﻿# usability-analyst Prompt\n\nRole goal:\nEvaluate practical user friction, routing clarity, and return on complexity.\n\nOutput requirements:\n1. Severity-sorted user-facing issues.\n2. Trigger condition + mitigation per issue.\n3. Clear ROI statement.\n\nCompletion gate:\n1. Startup friction assessed.\n2. Grade clarity assessed.\n3. Tool-availability reality reflected in conclusions.\n"
+    },
+    {
+      "path": "references/vibe-compatibility.md",
+      "encoding": "utf8",
+      "content": "﻿# vibe Compatibility Notes for local-vco-roles\n\n## Purpose\n\nThis document defines how `local-vco-roles` integrates with local `vibe` behavior without conflicting with its routing model.\n\n## Compatibility Matrix\n\n| Condition | Action |\n|---|---|\n| `/vibe` + M | Use lightweight single-agent analysis. Do not run TeamCreate workflow. |\n| `/vibe` + L | Use design-first flow and limited role decomposition. |\n| `/vibe` + XL | Use full role pack with lead + 4 analysts. |\n| User explicit tool command | Bypass role pack defaults and respect user command. |\n\n## Required Shared Conventions\n\n1. Severity ordering: `CRITICAL > HIGH > MEDIUM > LOW`\n2. Decision format: `keep / simplify / remove`\n3. Evidence-first claims (no speculative completion statements)\n\n## Team Role Coverage\n\n1. team-lead: integration and final synthesis\n2. bug-analyst: defects, contradictions, dead references\n3. arch-critic: over-engineering and simplification\n4. integration-analyst: dependency and runtime integration risk\n5. usability-analyst: friction, routing clarity, user ROI\n\n## Failure Safety\n\nIf any analyst output is missing:\n1. Mark missing role explicitly.\n2. Continue with available roles.\n3. Downgrade confidence in final synthesis.\n\n"
+    },
+    {
+      "path": "scripts/new-run.ps1",
+      "encoding": "utf8",
+      "content": "﻿[CmdletBinding()]\nparam(\n  [Parameter(Mandatory = $true)]\n  [string]$Topic,\n  [string]$BaseDir = \"D:\\table\\luo2.20\\outputs\\agent-runs\"\n)\n\nSet-StrictMode -Version Latest\n$ErrorActionPreference = \"Stop\"\n\n$date = Get-Date -Format \"yyyyMMdd\"\n$dir = Join-Path $BaseDir (\"$date-\" + $Topic)\nNew-Item -ItemType Directory -Path $dir -Force | Out-Null\nNew-Item -ItemType Directory -Path (Join-Path $dir 'role-outputs') -Force | Out-Null\n\n\"# Input\" | Set-Content -LiteralPath (Join-Path $dir 'input.md') -Encoding UTF8\n\"# Task Board`nUse docs/agent-workflow/vco-dialectic-review/task-board.md as template.\" | Set-Content -LiteralPath (Join-Path $dir 'task-board.md') -Encoding UTF8\n\"# Final Summary\" | Set-Content -LiteralPath (Join-Path $dir 'final-summary.md') -Encoding UTF8\n\"# Verification\" | Set-Content -LiteralPath (Join-Path $dir 'verification.md') -Encoding UTF8\n\nWrite-Host \"Created run folder: $dir\"\n"
+    }
+  ]
+}

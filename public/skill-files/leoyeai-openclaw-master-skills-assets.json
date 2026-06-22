@@ -1,0 +1,15 @@
+{
+  "id": "leoyeai-openclaw-master-skills-assets",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: assets\ndescription: \"This directory contains visual assets for the Java Audit Skill project:\"\n---\n\n# assets\n\nThis directory contains visual assets for the Java Audit Skill project:\n\n## 中文说明\n\nAssets 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Assets 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Assets Directory\n\nThis directory contains visual assets for the Java Audit Skill project:\n\n- **Diagrams**: Architecture diagrams, flowcharts\n- **Images**: Screenshots, example outputs\n- **Charts**: Statistics, comparison charts\n\n## Contributing\n\nWhen adding assets, please:\n1. Use descriptive filenames (e.g., `phase2-flowchart.png`)\n2. Optimize image sizes for web viewing\n3. Add alt text descriptions in documentation when referencing images"
+    }
+  ]
+}
