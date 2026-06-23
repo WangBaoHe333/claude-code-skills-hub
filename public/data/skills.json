@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T22:20:30.544Z",
+  "generatedAt": "2026-06-23T21:55:32.320Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -41000,6 +41000,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-cross-ref.json"
+    },
+    {
+      "id": "abhigyanpatwari-gitnexus-cross-repo-trace",
+      "name": "cross repo trace",
+      "summary": "Cross-repo trace — end-to-end verification",
+      "summaryZh": "Cross Repo Trace 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Cross Repo Trace 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Cross Repo Trace 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Cross Repo Trace 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Cross Repo Trace 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Cross Repo Trace 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Cross Repo Trace”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Cross Repo Trace”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'\ngit clone --depth 1 'https://github.com/abhigyanpatwari/GitNexus.git' '/tmp/abhigyanpatwari__GitNexus'\ncp -R '/tmp/abhigyanpatwari__GitNexus/gitnexus/bench/cross-repo-trace' \"$HOME/.claude/skills/cross-repo-trace\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'"
+      },
+      "source": {
+        "repo": "abhigyanpatwari/GitNexus",
+        "url": "https://github.com/abhigyanpatwari/GitNexus",
+        "path": "gitnexus/bench/cross-repo-trace",
+        "type": "auto-promoted-high-star",
+        "stars": 42116
+      },
+      "packageUrl": "/skill-files/abhigyanpatwari-gitnexus-cross-repo-trace.json"
     },
     {
       "id": "affaan-m-ecc-crosspost",
@@ -98187,43 +98223,6 @@
       "packageUrl": "/skill-files/jetbrains-mps-mps-baselanguage.json"
     },
     {
-      "id": "jetbrains-mps-mps-bugfix",
-      "name": "mps-bugfix",
-      "summary": "Structured MPS bugfix workflow driven by a YouTrack issue ID — preflight tool checks, version/branch derivation, parallel-agent problem analysis, solution design, branch creation,…",
-      "summaryZh": "Mps Bugfix 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Mps Bugfix 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 Mps Bugfix 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Mps Bugfix 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Mps Bugfix”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Mps Bugfix”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
-      "tags": [
-        "skill",
-        "api"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JetBrains__MPS'\ngit clone --depth 1 'https://github.com/JetBrains/MPS.git' '/tmp/JetBrains__MPS'\ncp -R '/tmp/JetBrains__MPS/plugins/mcp-tools/resources/jetbrains/mps/agents/mcp/skills/mps-bugfix' \"$HOME/.claude/skills/mps-bugfix\"\nrm -rf '/tmp/JetBrains__MPS'"
-      },
-      "source": {
-        "repo": "JetBrains/MPS",
-        "url": "https://github.com/JetBrains/MPS",
-        "path": "plugins/mcp-tools/resources/jetbrains/mps/agents/mcp/skills/mps-bugfix",
-        "type": "auto-promoted-high-star",
-        "stars": 1648
-      },
-      "packageUrl": "/skill-files/jetbrains-mps-mps-bugfix.json"
-    },
-    {
       "id": "jetbrains-mps-mps-build-language",
       "name": "mps-build-language",
       "summary": ">-",
@@ -98259,6 +98258,43 @@
         "stars": 1648
       },
       "packageUrl": "/skill-files/jetbrains-mps-mps-build-language.json"
+    },
+    {
+      "id": "jetbrains-mps-mps-console",
+      "name": "mps-console",
+      "summary": ">-",
+      "summaryZh": "Mps Console 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Mps Console 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Mps Console 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Mps Console 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Mps Console”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Mps Console”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JetBrains__MPS'\ngit clone --depth 1 'https://github.com/JetBrains/MPS.git' '/tmp/JetBrains__MPS'\ncp -R '/tmp/JetBrains__MPS/plugins/mcp-tools/resources/jetbrains/mps/agents/mcp/skills/mps-console' \"$HOME/.claude/skills/mps-console\"\nrm -rf '/tmp/JetBrains__MPS'"
+      },
+      "source": {
+        "repo": "JetBrains/MPS",
+        "url": "https://github.com/JetBrains/MPS",
+        "path": "plugins/mcp-tools/resources/jetbrains/mps/agents/mcp/skills/mps-console",
+        "type": "auto-promoted-high-star",
+        "stars": 1648
+      },
+      "packageUrl": "/skill-files/jetbrains-mps-mps-console.json"
     },
     {
       "id": "jetbrains-mps-mps-distribution-build",
@@ -113677,6 +113713,42 @@
         "stars": 64767
       },
       "packageUrl": "/skill-files/nexu-io-open-design-pixelbin-media.json"
+    },
+    {
+      "id": "santifer-career-ops-pl",
+      "name": "pl",
+      "summary": "career-ops -- Tryby polskie (`modes/pl/`)",
+      "summaryZh": "Pl 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Pl 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Pl 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Pl 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Pl 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Pl 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Pl”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Pl”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/santifer__career-ops'\ngit clone --depth 1 'https://github.com/santifer/career-ops.git' '/tmp/santifer__career-ops'\ncp -R '/tmp/santifer__career-ops/modes/pl' \"$HOME/.claude/skills/pl\"\nrm -rf '/tmp/santifer__career-ops'"
+      },
+      "source": {
+        "repo": "santifer/career-ops",
+        "url": "https://github.com/santifer/career-ops",
+        "path": "modes/pl",
+        "type": "auto-promoted-high-star",
+        "stars": 55049
+      },
+      "packageUrl": "/skill-files/santifer-career-ops-pl.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-placekey-automation",
@@ -155146,44 +155218,6 @@
       "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ultimate-browsing.json"
     },
     {
-      "id": "code-yeongyu-oh-my-openagent-ultraresearch",
-      "name": "ultraresearch",
-      "summary": "Maximum-saturation research orchestration: parallel explore+librarian swarms across codebase, web, official docs, and OSS repos; a recursive EXPAND loop driven by leads workers re…",
-      "summaryZh": "读取、提取、拆分、合并和检查 PDF 页面内容，适合处理合同、论文、发票、报告和扫描资料。",
-      "capabilityZh": "读取、提取、拆分、合并和检查 PDF 页面内容，适合处理合同、论文、发票、报告和扫描资料。",
-      "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
-      "audienceZh": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
-      "scenarios": [
-        "提取 PDF 里的文字、表格和章节",
-        "检查页面渲染、页码、图片和版式是否正确",
-        "把多份 PDF 合并、拆分或整理成可交付文件"
-      ],
-      "scenariosZh": [
-        "提取 PDF 里的文字、表格和章节",
-        "检查页面渲染、页码、图片和版式是否正确",
-        "把多份 PDF 合并、拆分或整理成可交付文件"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Ultraresearch”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Ultraresearch”，再给出文件、链接或要完成的任务。",
-      "category": "文档处理",
-      "tags": [
-        "skill",
-        "pdf",
-        "documents"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/ultraresearch' \"$HOME/.claude/skills/ultraresearch\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
-      },
-      "source": {
-        "repo": "code-yeongyu/oh-my-openagent",
-        "url": "https://github.com/code-yeongyu/oh-my-openagent",
-        "path": "packages/shared-skills/skills/ultraresearch",
-        "type": "auto-promoted-high-star",
-        "stars": 62215
-      },
-      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ultraresearch.json"
-    },
-    {
       "id": "code-yeongyu-oh-my-openagent-ulw-loop",
       "name": "ulw loop",
       "summary": "[![ci](https://img.shields.io/badge/ci-pending-lightgrey.svg)](#) [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)",
@@ -155254,6 +155288,44 @@
         "stars": 62215
       },
       "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ulw-plan.json"
+    },
+    {
+      "id": "code-yeongyu-oh-my-openagent-ulw-research",
+      "name": "ulw-research",
+      "summary": "Maximum-saturation research orchestration: parallel explore+librarian swarms across codebase, web, official docs, and OSS repos; a recursive EXPAND loop driven by leads workers re…",
+      "summaryZh": "读取、提取、拆分、合并和检查 PDF 页面内容，适合处理合同、论文、发票、报告和扫描资料。",
+      "capabilityZh": "读取、提取、拆分、合并和检查 PDF 页面内容，适合处理合同、论文、发票、报告和扫描资料。",
+      "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
+      "audienceZh": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
+      "scenarios": [
+        "提取 PDF 里的文字、表格和章节",
+        "检查页面渲染、页码、图片和版式是否正确",
+        "把多份 PDF 合并、拆分或整理成可交付文件"
+      ],
+      "scenariosZh": [
+        "提取 PDF 里的文字、表格和章节",
+        "检查页面渲染、页码、图片和版式是否正确",
+        "把多份 PDF 合并、拆分或整理成可交付文件"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ulw Research”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ulw Research”，再给出文件、链接或要完成的任务。",
+      "category": "文档处理",
+      "tags": [
+        "skill",
+        "pdf",
+        "documents"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/ulw-research' \"$HOME/.claude/skills/ulw-research\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/shared-skills/skills/ulw-research",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ulw-research.json"
     },
     {
       "id": "foryourhealth111-pixel-vibe-skills-umap-learn",

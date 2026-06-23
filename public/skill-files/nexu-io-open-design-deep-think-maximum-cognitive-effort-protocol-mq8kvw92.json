@@ -14,7 +14,7 @@
     {
       "path": "references/source-1-mpj79mp4-deep-think.md",
       "encoding": "utf8",
-      "content": "# Original Inspiration Attribution\nThis plugin was originally inspired by the internal `/deep-think` workflow used in a private AI workspace. The original source document included workspace-specific business details, which have been abstracted away in this portable community version. \n\nFor the portable implementation that relies on generic Agent Skills, see the `SKILL.md` in the parent directory.\n"
+      "content": "# Original Inspiration Attribution\nThis plugin was originally inspired by the internal `/deep-think` workflow used in a private AI workspace. The original source document included workspace-specific business details, which have been abstracted away in this portable community version.\n\nFor the portable implementation that relies on generic Agent Skills, see the `SKILL.md` in the parent directory.\n"
     }
   ]
 }
