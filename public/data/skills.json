@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-24T21:53:08.391Z",
+  "generatedAt": "2026-06-25T21:57:31.234Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -14691,6 +14691,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-bankr.json"
     },
     {
+      "id": "nextlevelbuilder-ui-ux-pro-max-skill-banner-design",
+      "name": "banner-design",
+      "summary": "Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with AI-generated visuals. Actions: design, create, generate banne…",
+      "summaryZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
+      "capabilityZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
+      "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "audienceZh": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "scenarios": [
+        "按视频链接抓取字幕",
+        "生成章节摘要和重点列表",
+        "保存封面图和视频基础信息"
+      ],
+      "scenariosZh": [
+        "按视频链接抓取字幕",
+        "生成章节摘要和重点列表",
+        "保存封面图和视频基础信息"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Banner Design”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Banner Design”，再给出文件、链接或要完成的任务。",
+      "category": "内容整理",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ngit clone --depth 1 'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git' '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ncp -R '/tmp/nextlevelbuilder__ui-ux-pro-max-skill/cli/assets/skills/banner-design' \"$HOME/.claude/skills/banner-design\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'"
+      },
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+        "path": "cli/assets/skills/banner-design",
+        "type": "auto-promoted-high-star",
+        "stars": 91613
+      },
+      "packageUrl": "/skill-files/nextlevelbuilder-ui-ux-pro-max-skill-banner-design.json"
+    },
+    {
       "id": "composiohq-awesome-claude-skills-bannerbear-automation",
       "name": "bannerbear-automation",
       "summary": "Automate Bannerbear tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -19290,6 +19326,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-brainx-v5-the-first-brain-for-openclaw.json"
+    },
+    {
+      "id": "nextlevelbuilder-ui-ux-pro-max-skill-brand",
+      "name": "brand",
+      "summary": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style gui…",
+      "summaryZh": "Brand 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Brand 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Brand 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Brand 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Brand 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Brand 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Brand”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Brand”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ngit clone --depth 1 'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git' '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ncp -R '/tmp/nextlevelbuilder__ui-ux-pro-max-skill/cli/assets/skills/brand' \"$HOME/.claude/skills/brand\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'"
+      },
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+        "path": "cli/assets/skills/brand",
+        "type": "auto-promoted-high-star",
+        "stars": 91613
+      },
+      "packageUrl": "/skill-files/nextlevelbuilder-ui-ux-pro-max-skill-brand.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-brand-commercial-os",
@@ -42208,6 +42280,42 @@
       "packageUrl": "/skill-files/nexu-io-open-design-d3-visualization.json"
     },
     {
+      "id": "santifer-career-ops-da",
+      "name": "da",
+      "summary": "career-ops -- Danske modes (`modes/da/`)",
+      "summaryZh": "Da 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Da 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Da 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Da 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Da 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Da 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Da”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Da”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/santifer__career-ops'\ngit clone --depth 1 'https://github.com/santifer/career-ops.git' '/tmp/santifer__career-ops'\ncp -R '/tmp/santifer__career-ops/modes/da' \"$HOME/.claude/skills/da\"\nrm -rf '/tmp/santifer__career-ops'"
+      },
+      "source": {
+        "repo": "santifer/career-ops",
+        "url": "https://github.com/santifer/career-ops",
+        "path": "modes/da",
+        "type": "auto-promoted-high-star",
+        "stars": 55049
+      },
+      "packageUrl": "/skill-files/santifer-career-ops-da.json"
+    },
+    {
       "id": "ruvnet-ruflo-daa-agent",
       "name": "daa-agent",
       "summary": "Create and adapt Dynamic Agentic Architecture agents that learn and evolve",
@@ -45860,6 +45968,44 @@
       "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-design.json"
     },
     {
+      "id": "nextlevelbuilder-ui-ux-pro-max-skill-design",
+      "name": "design",
+      "summary": "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML pres…",
+      "summaryZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
+      "capabilityZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
+      "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "audienceZh": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "scenarios": [
+        "按视频链接抓取字幕",
+        "生成章节摘要和重点列表",
+        "保存封面图和视频基础信息"
+      ],
+      "scenariosZh": [
+        "按视频链接抓取字幕",
+        "生成章节摘要和重点列表",
+        "保存封面图和视频基础信息"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Design”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Design”，再给出文件、链接或要完成的任务。",
+      "category": "内容整理",
+      "tags": [
+        "skill",
+        "presentations",
+        "image"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ngit clone --depth 1 'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git' '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ncp -R '/tmp/nextlevelbuilder__ui-ux-pro-max-skill/cli/assets/skills/design' \"$HOME/.claude/skills/design\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'"
+      },
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+        "path": "cli/assets/skills/design",
+        "type": "auto-promoted-high-star",
+        "stars": 91613
+      },
+      "packageUrl": "/skill-files/nextlevelbuilder-ui-ux-pro-max-skill-design.json"
+    },
+    {
       "id": "nexu-io-open-design-design-systems",
       "name": "design systems",
       "summary": "Each subfolder is a portable design system in [`DESIGN.md`](../docs/spec.md) format. Pick one in the top-bar **Design system** dropdown and every skill will read it as part of its…",
@@ -46328,6 +46474,43 @@
         "stars": 215443
       },
       "packageUrl": "/skill-files/affaan-m-ecc-design-system.json"
+    },
+    {
+      "id": "nextlevelbuilder-ui-ux-pro-max-skill-design-system",
+      "name": "design-system",
+      "summary": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, s…",
+      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "scenarios": [
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
+      ],
+      "scenariosZh": [
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Design System”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Design System”，再给出文件、链接或要完成的任务。",
+      "category": "演示文稿",
+      "tags": [
+        "skill",
+        "presentations"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ngit clone --depth 1 'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git' '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ncp -R '/tmp/nextlevelbuilder__ui-ux-pro-max-skill/cli/assets/skills/design-system' \"$HOME/.claude/skills/design-system\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'"
+      },
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+        "path": "cli/assets/skills/design-system",
+        "type": "auto-promoted-high-star",
+        "stars": 91613
+      },
+      "packageUrl": "/skill-files/nextlevelbuilder-ui-ux-pro-max-skill-design-system.json"
     },
     {
       "id": "nexu-io-open-design-design-taste-frontend",
@@ -87823,6 +88006,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-lexoffice-automation.json"
+    },
+    {
+      "id": "nexu-io-open-design-library-curator",
+      "name": "library-curator",
+      "summary": "|",
+      "summaryZh": "Library Curator 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Library Curator 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Library Curator 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Library Curator 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Library Curator 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Library Curator 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Library Curator”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Library Curator”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/skills/library-curator' \"$HOME/.claude/skills/library-curator\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "skills/library-curator",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-library-curator.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-linear",
@@ -139854,6 +140073,43 @@
       "packageUrl": "/skill-files/nexu-io-open-design-slides.json"
     },
     {
+      "id": "nextlevelbuilder-ui-ux-pro-max-skill-slides",
+      "name": "slides",
+      "summary": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
+      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "scenarios": [
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
+      ],
+      "scenariosZh": [
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Slides”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Slides”，再给出文件、链接或要完成的任务。",
+      "category": "演示文稿",
+      "tags": [
+        "skill",
+        "presentations"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ngit clone --depth 1 'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git' '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ncp -R '/tmp/nextlevelbuilder__ui-ux-pro-max-skill/cli/assets/skills/slides' \"$HOME/.claude/skills/slides\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'"
+      },
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+        "path": "cli/assets/skills/slides",
+        "type": "auto-promoted-high-star",
+        "stars": 91613
+      },
+      "packageUrl": "/skill-files/nextlevelbuilder-ui-ux-pro-max-skill-slides.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-slides",
       "name": "slides",
       "summary": "Slides (frontend-slides delegated)",
@@ -155070,6 +155326,42 @@
       "packageUrl": "/skill-files/nexu-io-open-design-ui-skills.json"
     },
     {
+      "id": "nextlevelbuilder-ui-ux-pro-max-skill-ui-styling",
+      "name": "ui-styling",
+      "summary": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use whe…",
+      "summaryZh": "Ui Styling 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ui Styling 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ui Styling 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ui Styling 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ui Styling 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ui Styling 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ui Styling”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ui Styling”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ngit clone --depth 1 'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git' '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ncp -R '/tmp/nextlevelbuilder__ui-ux-pro-max-skill/cli/assets/skills/ui-styling' \"$HOME/.claude/skills/ui-styling\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'"
+      },
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+        "path": "cli/assets/skills/ui-styling",
+        "type": "auto-promoted-high-star",
+        "stars": 91613
+      },
+      "packageUrl": "/skill-files/nextlevelbuilder-ui-ux-pro-max-skill-ui-styling.json"
+    },
+    {
       "id": "affaan-m-ecc-ui-to-vue",
       "name": "ui-to-vue",
       "summary": "UIスクリーンショットやデザインエクスポートをVue 3コンポーネントに一括変換する際に使用。Vant、Element Plus、Ant Design Vueに対応。",
@@ -163957,6 +164249,114 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-winston-ai-automation.json"
     },
     {
+      "id": "nexu-io-open-design-wireframe-annotated",
+      "name": "wireframe-annotated",
+      "summary": "|",
+      "summaryZh": "Wireframe Annotated 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Wireframe Annotated 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Wireframe Annotated 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Wireframe Annotated 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Wireframe Annotated 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Wireframe Annotated 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Wireframe Annotated”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Wireframe Annotated”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-templates/wireframe-annotated' \"$HOME/.claude/skills/wireframe-annotated\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "design-templates/wireframe-annotated",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-wireframe-annotated.json"
+    },
+    {
+      "id": "nexu-io-open-design-wireframe-greybox",
+      "name": "wireframe-greybox",
+      "summary": "|",
+      "summaryZh": "Wireframe Greybox 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Wireframe Greybox 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Wireframe Greybox 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Wireframe Greybox 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Wireframe Greybox 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Wireframe Greybox 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Wireframe Greybox”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Wireframe Greybox”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-templates/wireframe-greybox' \"$HOME/.claude/skills/wireframe-greybox\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "design-templates/wireframe-greybox",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-wireframe-greybox.json"
+    },
+    {
+      "id": "nexu-io-open-design-wireframe-mobile-flow",
+      "name": "wireframe-mobile-flow",
+      "summary": "|",
+      "summaryZh": "Wireframe Mobile Flow 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Wireframe Mobile Flow 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Wireframe Mobile Flow 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Wireframe Mobile Flow 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Wireframe Mobile Flow 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Wireframe Mobile Flow 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Wireframe Mobile Flow”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Wireframe Mobile Flow”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-templates/wireframe-mobile-flow' \"$HOME/.claude/skills/wireframe-mobile-flow\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "design-templates/wireframe-mobile-flow",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-wireframe-mobile-flow.json"
+    },
+    {
       "id": "nexu-io-open-design-wireframe-sketch",
       "name": "wireframe-sketch",
       "summary": "|",
@@ -164988,7 +165388,7 @@
     {
       "id": "mattpocock-skills-writing-beats",
       "name": "writing-beats",
-      "summary": "Shape an article as a journey of beats, choose-your-own-adventure style. The user picks a starting beat from the raw material, you write only that beat, then offer options for whe…",
+      "summary": "Writing, exploit — assemble raw material into a journey of beats, grounding each term before a beat leans on it.",
       "summaryZh": "Writing Beats 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Writing Beats 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Writing Beats 处理具体工作流的 Claude Code 用户。",
@@ -165061,7 +165461,7 @@
     {
       "id": "mattpocock-skills-writing-fragments",
       "name": "writing-fragments",
-      "summary": "Grilling session that mines the user for fragments — heterogeneous nuggets of writing (claims, vignettes, sharp sentences, half-thoughts) — and appends them to a single document a…",
+      "summary": "Writing, explore — mine raw fragments, no structure yet.",
       "summaryZh": "Writing Fragments 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Writing Fragments 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Writing Fragments 处理具体工作流的 Claude Code 用户。",
@@ -165080,8 +165480,7 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Writing Fragments”，再给出文件、链接或要完成的任务。",
       "category": "通用工具",
       "tags": [
-        "skill",
-        "documents"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/writing-fragments' \"$HOME/.claude/skills/writing-fragments\"\nrm -rf '/tmp/mattpocock__skills'"
@@ -165242,24 +165641,24 @@
     {
       "id": "mattpocock-skills-writing-shape",
       "name": "writing-shape",
-      "summary": "Take a markdown file of raw material and shape it into an article through a conversational session — drafting candidate openings, growing the piece paragraph by paragraph, arguing…",
-      "summaryZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
-      "capabilityZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
-      "audience": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
-      "audienceZh": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "summary": "Writing, exploit — shape raw material into an article, paragraph by paragraph.",
+      "summaryZh": "Writing Shape 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Writing Shape 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Writing Shape 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Writing Shape 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "渲染代码高亮、数学公式和 Mermaid 图",
-        "把长文转成可发布 HTML",
-        "套用主题生成统一风格页面"
+        "使用 Writing Shape 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "渲染代码高亮、数学公式和 Mermaid 图",
-        "把长文转成可发布 HTML",
-        "套用主题生成统一风格页面"
+        "使用 Writing Shape 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Writing Shape”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Writing Shape”，再给出文件、链接或要完成的任务。",
-      "category": "内容发布",
+      "category": "通用工具",
       "tags": [
         "skill"
       ],
