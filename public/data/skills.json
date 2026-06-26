@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-25T21:57:31.234Z",
+  "generatedAt": "2026-06-26T21:46:45.217Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -708,43 +708,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-360guard.json"
-    },
-    {
-      "id": "nexu-io-open-design-3d-creator-portfolio",
-      "name": "3d-creator-portfolio",
-      "summary": "Use this plugin when the user wants a dark, premium 3D-creator / designer portfolio landing page: a full-viewport hero with a gradient-text headline and a mouse-following magnetic…",
-      "summaryZh": "3d Creator Portfolio 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "3d Creator Portfolio 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 3d Creator Portfolio 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 3d Creator Portfolio 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 3d Creator Portfolio 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 3d Creator Portfolio 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 3d Creator Portfolio”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 3d Creator Portfolio”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "image"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/3d-creator-portfolio' \"$HOME/.claude/skills/3d-creator-portfolio\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/3d-creator-portfolio",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-3d-creator-portfolio.json"
     },
     {
       "id": "nexu-io-open-design-8-bit-orbit-video-template",
@@ -1629,44 +1592,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-acp.json"
-    },
-    {
-      "id": "nexu-io-open-design-acreage-farming",
-      "name": "acreage-farming",
-      "summary": "Use this plugin when the user wants a premium precision-farming / agritech landing page: dark/light alternating sections, a fullscreen hero video background, an animated stats gri…",
-      "summaryZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
-      "capabilityZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
-      "audience": "需要使用 Acreage Farming 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Acreage Farming 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成 Slack 可用的表情或动图",
-        "验证 GIF 文件大小和动画限制",
-        "把多段动画组合成可发送的 GIF"
-      ],
-      "scenariosZh": [
-        "生成 Slack 可用的表情或动图",
-        "验证 GIF 文件大小和动画限制",
-        "把多段动画组合成可发送的 GIF"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Acreage Farming”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Acreage Farming”，再给出文件、链接或要完成的任务。",
-      "category": "视觉素材",
-      "tags": [
-        "skill",
-        "image",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/acreage-farming' \"$HOME/.claude/skills/acreage-farming\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/acreage-farming",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-acreage-farming.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-active-campaign-automation",
@@ -2804,43 +2729,6 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-aero-workflow-automation.json"
-    },
-    {
-      "id": "nexu-io-open-design-aerocore",
-      "name": "aerocore",
-      "summary": "Use this plugin when the user wants a premium dark-to-light aerospace / propulsion marketing site: a scroll-driven gradient hero with parallax wordmark and an engine still, a film…",
-      "summaryZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
-      "capabilityZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
-      "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
-      "audienceZh": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
-      "scenarios": [
-        "生成带标题、段落和列表的 Word 文档",
-        "读取已有 .docx 并提取关键信息",
-        "修改文档内容、结构和格式后重新导出"
-      ],
-      "scenariosZh": [
-        "生成带标题、段落和列表的 Word 文档",
-        "读取已有 .docx 并提取关键信息",
-        "修改文档内容、结构和格式后重新导出"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Aerocore”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Aerocore”，再给出文件、链接或要完成的任务。",
-      "category": "文档处理",
-      "tags": [
-        "skill",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/aerocore' \"$HOME/.claude/skills/aerocore\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/aerocore",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-aerocore.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-aeroleads-automation",
@@ -6987,43 +6875,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-ai-auto-dev.json"
-    },
-    {
-      "id": "nexu-io-open-design-ai-designer-portfolio",
-      "name": "ai-designer-portfolio",
-      "summary": "Use this plugin when the user wants a premium single-page creative-studio / designer portfolio landing page on a white background: serif-accented hero, an infinite GIF marquee, pa…",
-      "summaryZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
-      "capabilityZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
-      "audience": "需要使用 Ai Designer Portfolio 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Ai Designer Portfolio 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成 Slack 可用的表情或动图",
-        "验证 GIF 文件大小和动画限制",
-        "把多段动画组合成可发送的 GIF"
-      ],
-      "scenariosZh": [
-        "生成 Slack 可用的表情或动图",
-        "验证 GIF 文件大小和动画限制",
-        "把多段动画组合成可发送的 GIF"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Ai Designer Portfolio”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Ai Designer Portfolio”，再给出文件、链接或要完成的任务。",
-      "category": "视觉素材",
-      "tags": [
-        "skill",
-        "testing"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/ai-designer-portfolio' \"$HOME/.claude/skills/ai-designer-portfolio\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/ai-designer-portfolio",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-ai-designer-portfolio.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-ai-drama-prompt-factory",
@@ -25845,44 +25696,6 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-cincopa-automation.json"
     },
     {
-      "id": "nexu-io-open-design-cinematic-landing-page",
-      "name": "cinematic-landing-page",
-      "summary": "Use this plugin when the user wants a premium, GSAP-driven cinematic B2B landing page: a scroll-driven full-screen video slider hero with clip-path ellipse transitions, SplitText …",
-      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "scenarios": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
-      ],
-      "scenariosZh": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Cinematic Landing Page”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Cinematic Landing Page”，再给出文件、链接或要完成的任务。",
-      "category": "演示文稿",
-      "tags": [
-        "skill",
-        "presentations",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/cinematic-landing-page' \"$HOME/.claude/skills/cinematic-landing-page\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/cinematic-landing-page",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-cinematic-landing-page.json"
-    },
-    {
       "id": "leoyeai-openclaw-master-skills-cisco-firewall-audit",
       "name": "cisco-firewall-audit",
       "summary": ">-",
@@ -34389,43 +34202,6 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-codeinterpreter-automation.json"
     },
     {
-      "id": "nexu-io-open-design-codenest-coding-platform",
-      "name": "codenest-coding-platform",
-      "summary": "Use this plugin when the user wants a high-end, dark cinematic hero section for a coding-education / bootcamp landing page (CodeNest): full-screen HLS background video, liquid-gla…",
-      "summaryZh": "Codenest Coding Platform 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Codenest Coding Platform 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Codenest Coding Platform 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Codenest Coding Platform 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Codenest Coding Platform 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Codenest Coding Platform 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Codenest Coding Platform”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Codenest Coding Platform”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/codenest-coding-platform' \"$HOME/.claude/skills/codenest-coding-platform\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/codenest-coding-platform",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-codenest-coding-platform.json"
-    },
-    {
       "id": "composiohq-awesome-claude-skills-codereadr-automation",
       "name": "codereadr-automation",
       "summary": "Automate Codereadr tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -34752,6 +34528,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-coding-agent.json"
+    },
+    {
+      "id": "code-yeongyu-oh-my-openagent-coding-agent-sessions",
+      "name": "coding-agent-sessions",
+      "summary": "MUST USE when asked to find, read, list, search, inspect, fetch, export, or reconstruct coding-agent sessions across Codex, Claude Code/Desktop, OpenCode, Senpi/pi, OpenClaw, Fact…",
+      "summaryZh": "Coding Agent Sessions 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
+      "capabilityZh": "Coding Agent Sessions 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
+      "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "audienceZh": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "scenarios": [
+        "把链接内容转成 Markdown",
+        "提取视频字幕或社媒正文",
+        "把外部资料整理成摘要和后续待办"
+      ],
+      "scenariosZh": [
+        "把链接内容转成 Markdown",
+        "提取视频字幕或社媒正文",
+        "把外部资料整理成摘要和后续待办"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Coding Agent Sessions”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Coding Agent Sessions”，再给出文件、链接或要完成的任务。",
+      "category": "内容整理",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/coding-agent-sessions' \"$HOME/.claude/skills/coding-agent-sessions\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/shared-skills/skills/coding-agent-sessions",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-coding-agent-sessions.json"
     },
     {
       "id": "affaan-m-ecc-coding-standards",
@@ -42716,43 +42528,6 @@
         "stars": 215443
       },
       "packageUrl": "/skill-files/affaan-m-ecc-dashboard-builder.json"
-    },
-    {
-      "id": "nexu-io-open-design-dashboard-ui-glass",
-      "name": "dashboard-ui-glass",
-      "summary": "Use this plugin when the user wants a premium liquid-glassmorphism conference / meeting dashboard: dual fullscreen background videos swapped by theme, a 4x2 glass/solid card grid,…",
-      "summaryZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
-      "capabilityZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
-      "audience": "需要使用 Dashboard Ui Glass 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Dashboard Ui Glass 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成 Slack 可用的表情或动图",
-        "验证 GIF 文件大小和动画限制",
-        "把多段动画组合成可发送的 GIF"
-      ],
-      "scenariosZh": [
-        "生成 Slack 可用的表情或动图",
-        "验证 GIF 文件大小和动画限制",
-        "把多段动画组合成可发送的 GIF"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Dashboard Ui Glass”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Dashboard Ui Glass”，再给出文件、链接或要完成的任务。",
-      "category": "视觉素材",
-      "tags": [
-        "skill",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/dashboard-ui-glass' \"$HOME/.claude/skills/dashboard-ui-glass\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/dashboard-ui-glass",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-dashboard-ui-glass.json"
     },
     {
       "id": "foryourhealth111-pixel-vibe-skills-dask",
@@ -51167,44 +50942,6 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-draftable-automation.json"
     },
     {
-      "id": "nexu-io-open-design-dreamcore-landing",
-      "name": "dreamcore-landing",
-      "summary": "Use this plugin when the user wants a single-page immersive parallax landing page with a scroll-driven portal/curtain entrance and a curved arc card slider — a 'dreamcore' / 'reve…",
-      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "scenarios": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
-      ],
-      "scenariosZh": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Dreamcore Landing”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Dreamcore Landing”，再给出文件、链接或要完成的任务。",
-      "category": "演示文稿",
-      "tags": [
-        "skill",
-        "presentations",
-        "image"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/dreamcore-landing' \"$HOME/.claude/skills/dreamcore-landing\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/dreamcore-landing",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-dreamcore-landing.json"
-    },
-    {
       "id": "composiohq-awesome-claude-skills-dreamstudio-automation",
       "name": "dreamstudio-automation",
       "summary": "Automate Dreamstudio tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -55354,45 +55091,6 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-eventzilla-automation.json"
-    },
-    {
-      "id": "nexu-io-open-design-evergreen-finance",
-      "name": "evergreen-finance",
-      "summary": "Use this plugin when the user wants a premium 'Kova' fintech / banking landing page: a full-screen hero with a boomerang (forward/reverse) video background, animated FadeUp reveal…",
-      "summaryZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
-      "capabilityZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
-      "audience": "需要使用 Evergreen Finance 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Evergreen Finance 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成 Slack 可用的表情或动图",
-        "验证 GIF 文件大小和动画限制",
-        "把多段动画组合成可发送的 GIF"
-      ],
-      "scenariosZh": [
-        "生成 Slack 可用的表情或动图",
-        "验证 GIF 文件大小和动画限制",
-        "把多段动画组合成可发送的 GIF"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Evergreen Finance”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Evergreen Finance”，再给出文件、链接或要完成的任务。",
-      "category": "视觉素材",
-      "tags": [
-        "skill",
-        "testing",
-        "image",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/evergreen-finance' \"$HOME/.claude/skills/evergreen-finance\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/evergreen-finance",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-evergreen-finance.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-everhour-automation",
@@ -80209,43 +79907,6 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-inkos.json"
     },
     {
-      "id": "nexu-io-open-design-innovation",
-      "name": "innovation",
-      "summary": "Use this plugin when the user wants a premium dark editorial landing page with an Instrument-Serif headline, liquid-glass nav/cards, a crossfading fullscreen hero video, and scrol…",
-      "summaryZh": "Innovation 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Innovation 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Innovation 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Innovation 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Innovation 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Innovation 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Innovation”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Innovation”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/innovation' \"$HOME/.claude/skills/innovation\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/innovation",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-innovation.json"
-    },
-    {
       "id": "code-yeongyu-oh-my-openagent-insane-search",
       "name": "insane search",
       "summary": "> Part of the **ultimate-browsing** skill (Tier 1). Routing and tier-escalation live in [../../SKILL.md](../../SKILL.md). > The engine package it drives is at [../../engine/](../.…",
@@ -86836,43 +86497,6 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-launchfast-full-research-loop.json"
     },
     {
-      "id": "nexu-io-open-design-layered-depth",
-      "name": "layered-depth",
-      "summary": "Use this plugin when the user wants a cinematic, layered-parallax architecture-studio landing page (brand 'Qelora'): fullscreen background video, a giant center brand wordmark beh…",
-      "summaryZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
-      "capabilityZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
-      "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
-      "audienceZh": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
-      "scenarios": [
-        "生成带标题、段落和列表的 Word 文档",
-        "读取已有 .docx 并提取关键信息",
-        "修改文档内容、结构和格式后重新导出"
-      ],
-      "scenariosZh": [
-        "生成带标题、段落和列表的 Word 文档",
-        "读取已有 .docx 并提取关键信息",
-        "修改文档内容、结构和格式后重新导出"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Layered Depth”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Layered Depth”，再给出文件、链接或要完成的任务。",
-      "category": "文档处理",
-      "tags": [
-        "skill",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/layered-depth' \"$HOME/.claude/skills/layered-depth\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/layered-depth",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-layered-depth.json"
-    },
-    {
       "id": "leoyeai-openclaw-master-skills-laylatul-qadr-guide",
       "name": "laylatul qadr guide",
       "summary": "Laylatul Qadr Guide - OpenClaw Skill",
@@ -88525,43 +88149,6 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-linux-system-health.json"
     },
     {
-      "id": "nexu-io-open-design-liquid-glass-agency",
-      "name": "liquid-glass-agency",
-      "summary": "Use this plugin when the user wants a dark, luxury single-page landing for an AI web-design agency: cinematic video backgrounds, editorial Instrument Serif italic headings, liquid…",
-      "summaryZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
-      "capabilityZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
-      "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
-      "audienceZh": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
-      "scenarios": [
-        "生成带标题、段落和列表的 Word 文档",
-        "读取已有 .docx 并提取关键信息",
-        "修改文档内容、结构和格式后重新导出"
-      ],
-      "scenariosZh": [
-        "生成带标题、段落和列表的 Word 文档",
-        "读取已有 .docx 并提取关键信息",
-        "修改文档内容、结构和格式后重新导出"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Liquid Glass Agency”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Liquid Glass Agency”，再给出文件、链接或要完成的任务。",
-      "category": "文档处理",
-      "tags": [
-        "skill",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/liquid-glass-agency' \"$HOME/.claude/skills/liquid-glass-agency\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/liquid-glass-agency",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-liquid-glass-agency.json"
-    },
-    {
       "id": "affaan-m-ecc-liquid-glass-design",
       "name": "liquid-glass-design",
       "summary": "日本語翻訳：このファイルは liquid-glass-design 用の日本語翻訳が必要です",
@@ -90132,43 +89719,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-lunchtable-tcg.json"
-    },
-    {
-      "id": "nexu-io-open-design-luxury-botanical",
-      "name": "luxury-botanical",
-      "summary": "Use this plugin when the user wants a cinematic luxury-fragrance / botanical landing page: a fullscreen video hero, a scroll-driven elliptical clip-path reveal, an orbiting carous…",
-      "summaryZh": "Luxury Botanical 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Luxury Botanical 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Luxury Botanical 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Luxury Botanical 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Luxury Botanical 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Luxury Botanical 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Luxury Botanical”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Luxury Botanical”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/luxury-botanical' \"$HOME/.claude/skills/luxury-botanical\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/luxury-botanical",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-luxury-botanical.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-lygo-champion-cosmara",
@@ -95082,43 +94632,6 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-mindkeeper.json"
     },
     {
-      "id": "nexu-io-open-design-mindloop-landing",
-      "name": "mindloop-landing",
-      "summary": "Use this plugin when the user wants a dark, pure-monochrome newsletter / content-platform landing page (Mindloop): fullscreen video hero, Instrument-Serif italic accent words, liq…",
-      "summaryZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
-      "capabilityZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
-      "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
-      "audienceZh": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
-      "scenarios": [
-        "生成带标题、段落和列表的 Word 文档",
-        "读取已有 .docx 并提取关键信息",
-        "修改文档内容、结构和格式后重新导出"
-      ],
-      "scenariosZh": [
-        "生成带标题、段落和列表的 Word 文档",
-        "读取已有 .docx 并提取关键信息",
-        "修改文档内容、结构和格式后重新导出"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Mindloop Landing”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Mindloop Landing”，再给出文件、链接或要完成的任务。",
-      "category": "文档处理",
-      "tags": [
-        "skill",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/mindloop-landing' \"$HOME/.claude/skills/mindloop-landing\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/mindloop-landing",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-mindloop-landing.json"
-    },
-    {
       "id": "leoyeai-openclaw-master-skills-mindsdb-mcp-skill",
       "name": "mindsdb mcp skill",
       "summary": "一个基于MindsDB MCP服务器的Claude技能，支持通过自然语言操作200+企业级数据源。",
@@ -99738,42 +99251,6 @@
       "packageUrl": "/skill-files/affaan-m-ecc-mysql-patterns.json"
     },
     {
-      "id": "nexu-io-open-design-mythic-naturecore",
-      "name": "mythic-naturecore",
-      "summary": "Use this plugin when the user wants a cinematic mythic-naturecore landing page — the 'Reverie' template: a scroll-linked zoom-through-a-portal hero with mirrored opening curtains,…",
-      "summaryZh": "Mythic Naturecore 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Mythic Naturecore 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Mythic Naturecore 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Mythic Naturecore 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Mythic Naturecore 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Mythic Naturecore 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Mythic Naturecore”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Mythic Naturecore”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/mythic-naturecore' \"$HOME/.claude/skills/mythic-naturecore\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/mythic-naturecore",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-mythic-naturecore.json"
-    },
-    {
       "id": "hkuds-cli-anything-n8n",
       "name": "n8n",
       "summary": "[![PyPI](https://img.shields.io/pypi/v/cli-anything-n8n.svg)](https://pypi.org/project/cli-anything-n8n/) [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](htt…",
@@ -102121,43 +101598,6 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-nimble-web-tools.json"
     },
     {
-      "id": "nexu-io-open-design-nimbus-grid",
-      "name": "nimbus-grid",
-      "summary": "Use this plugin when the user wants a premium dark warm-gold single-page marketing site for a secure cloud-storage capacity product: a full-viewport shader hero with a live consol…",
-      "summaryZh": "Nimbus Grid 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Nimbus Grid 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Nimbus Grid 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Nimbus Grid 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Nimbus Grid 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Nimbus Grid 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Nimbus Grid”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Nimbus Grid”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "api"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/nimbus-grid' \"$HOME/.claude/skills/nimbus-grid\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/nimbus-grid",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-nimbus-grid.json"
-    },
-    {
       "id": "composiohq-awesome-claude-skills-ninox-automation",
       "name": "ninox-automation",
       "summary": "Automate Ninox tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -104179,6 +103619,42 @@
         "stars": 64767
       },
       "packageUrl": "/skill-files/nexu-io-open-design-od-tune-collab.json"
+    },
+    {
+      "id": "nexu-io-open-design-od-web-effect-extractor",
+      "name": "od-web-effect-extractor",
+      "summary": "Extract visual effects, animation systems, Canvas/WebGL/Shader behavior, and interaction details from a reference website, then rebuild them as an editable Open Design web artifac…",
+      "summaryZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
+      "capabilityZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
+      "audience": "需要使用 Od Web Effect Extractor 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Od Web Effect Extractor 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成 Slack 可用的表情或动图",
+        "验证 GIF 文件大小和动画限制",
+        "把多段动画组合成可发送的 GIF"
+      ],
+      "scenariosZh": [
+        "生成 Slack 可用的表情或动图",
+        "验证 GIF 文件大小和动画限制",
+        "把多段动画组合成可发送的 GIF"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Od Web Effect Extractor”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Od Web Effect Extractor”，再给出文件、链接或要完成的任务。",
+      "category": "视觉素材",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/scenarios/od-web-effect-extractor' \"$HOME/.claude/skills/od-web-effect-extractor\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/scenarios/od-web-effect-extractor",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-od-web-effect-extractor.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-odoo",
@@ -108767,43 +108243,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-oracle.json"
-    },
-    {
-      "id": "nexu-io-open-design-orbis-nft",
-      "name": "orbis-nft",
-      "summary": "Use this plugin when the user wants a dark, space-themed NFT collection landing page (\\\"Orbis.Nft\\\") with full-bleed CloudFront video backgrounds, a liquid-glass UI, Anton + Condi…",
-      "summaryZh": "Orbis Nft 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Orbis Nft 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Orbis Nft 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Orbis Nft 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Orbis Nft 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Orbis Nft 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Orbis Nft”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Orbis Nft”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/orbis-nft' \"$HOME/.claude/skills/orbis-nft\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/orbis-nft",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-orbis-nft.json"
     },
     {
       "id": "nexu-io-open-design-orbit-general",
@@ -116094,43 +115533,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-portfolio-manager.json"
-    },
-    {
-      "id": "nexu-io-open-design-portfolio-cosmic",
-      "name": "portfolio-cosmic",
-      "summary": "Use this plugin when the user wants a premium dark single-page portfolio landing: cinematic HLS hero video, Instrument-Serif italic display type, a loading screen counter, a bento…",
-      "summaryZh": "Portfolio Cosmic 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Portfolio Cosmic 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Portfolio Cosmic 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Portfolio Cosmic 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Portfolio Cosmic 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Portfolio Cosmic 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Portfolio Cosmic”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Portfolio Cosmic”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/portfolio-cosmic' \"$HOME/.claude/skills/portfolio-cosmic\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/portfolio-cosmic",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-portfolio-cosmic.json"
     },
     {
       "id": "nexu-io-open-design-poster-hero",
@@ -139487,43 +138889,6 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-skills.json"
     },
     {
-      "id": "nexu-io-open-design-skyelite-private-jets",
-      "name": "skyelite-private-jets",
-      "summary": "Use this plugin when the user wants a premium private-jet landing page hero: a fullscreen autoplay CloudFront video background, a max-w-7xl nav with a Lucide hamburger mobile drop…",
-      "summaryZh": "Skyelite Private Jets 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Skyelite Private Jets 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Skyelite Private Jets 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Skyelite Private Jets 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Skyelite Private Jets 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Skyelite Private Jets 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Skyelite Private Jets”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Skyelite Private Jets”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/skyelite-private-jets' \"$HOME/.claude/skills/skyelite-private-jets\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/skyelite-private-jets",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-skyelite-private-jets.json"
-    },
-    {
       "id": "composiohq-awesome-claude-skills-skyfire-automation",
       "name": "skyfire-automation",
       "summary": "Automate Skyfire tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -144392,44 +143757,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-steam-gaming-companion.json"
-    },
-    {
-      "id": "nexu-io-open-design-stellar-launch",
-      "name": "stellar-launch",
-      "summary": "Use this plugin when the user wants a premium awards / venture-prize landing page in the Launchex Awards style: an inset white card shell with rounded corners, a fullscreen video …",
-      "summaryZh": "Stellar Launch 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Stellar Launch 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Stellar Launch 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Stellar Launch 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Stellar Launch 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Stellar Launch 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Stellar Launch”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Stellar Launch”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "image",
-        "video"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/stellar-launch' \"$HOME/.claude/skills/stellar-launch\"\nrm -rf '/tmp/nexu-io__open-design'"
-      },
-      "source": {
-        "repo": "nexu-io/open-design",
-        "url": "https://github.com/nexu-io/open-design",
-        "path": "plugins/_official/examples/stellar-launch",
-        "type": "auto-promoted-high-star",
-        "stars": 64767
-      },
-      "packageUrl": "/skill-files/nexu-io-open-design-stellar-launch.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-steward-ops",
@@ -155544,6 +154871,42 @@
         "stars": 62215
       },
       "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ultimate-browsing.json"
+    },
+    {
+      "id": "code-yeongyu-oh-my-openagent-ultraresearch",
+      "name": "ultraresearch",
+      "summary": "Legacy alias for ulw-research. MUST USE when the user asks for ultraresearch, /ultraresearch, or $ultraresearch; immediately load and follow the ulw-research skill.",
+      "summaryZh": "Ultraresearch 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ultraresearch 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ultraresearch 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ultraresearch 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ultraresearch 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ultraresearch 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ultraresearch”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ultraresearch”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/ultraresearch' \"$HOME/.claude/skills/ultraresearch\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/shared-skills/skills/ultraresearch",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ultraresearch.json"
     },
     {
       "id": "code-yeongyu-oh-my-openagent-ulw-loop",
