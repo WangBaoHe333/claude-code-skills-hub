@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T21:46:45.217Z",
+  "generatedAt": "2026-06-27T21:35:18.327Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -43877,7 +43877,7 @@
     {
       "id": "ruvnet-ruflo-ddd-aggregate",
       "name": "ddd-aggregate",
-      "summary": "Scaffold an aggregate root with entity, value objects, repository interface, domain events, and test stubs",
+      "summary": "Scaffold an aggregate root with entity, value objects, repository interface, domain events, and test stubs. Use when adding a new aggregate to an existing bounded context, modelin…",
       "summaryZh": "Ddd Aggregate 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Ddd Aggregate 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Ddd Aggregate 处理具体工作流的 Claude Code 用户。",
@@ -43914,7 +43914,7 @@
     {
       "id": "ruvnet-ruflo-ddd-context",
       "name": "ddd-context",
-      "summary": "Create and manage a DDD bounded context with standard directory structure",
+      "summary": "Create and manage a DDD bounded context with standard directory structure. Use when starting a new subdomain, splitting a monolith into bounded contexts, or scaffolding the domain…",
       "summaryZh": "Ddd Context 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Ddd Context 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Ddd Context 处理具体工作流的 Claude Code 用户。",
@@ -43950,7 +43950,7 @@
     {
       "id": "ruvnet-ruflo-ddd-validate",
       "name": "ddd-validate",
-      "summary": "Validate domain boundaries -- detect cross-context import violations and aggregate invariant issues",
+      "summary": "Validate domain boundaries -- detect cross-context import violations and aggregate invariant issues. Use when auditing a DDD codebase for leaks between bounded contexts, before me…",
       "summaryZh": "Ddd Validate 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Ddd Validate 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Ddd Validate 处理具体工作流的 Claude Code 用户。",
@@ -45413,7 +45413,7 @@
     {
       "id": "ruvnet-ruflo-dependency-check",
       "name": "dependency-check",
-      "summary": "Scan project dependencies for known vulnerabilities and CVEs",
+      "summary": "Scan project dependencies for known vulnerabilities and CVEs. Use when auditing third-party packages, before releases, after `npm install`/lockfile changes, or when investigating …",
       "summaryZh": "Dependency Check 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Dependency Check 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Dependency Check 处理具体工作流的 Claude Code 用户。",
@@ -47318,7 +47318,7 @@
     {
       "id": "ruvnet-ruflo-diff-analyze",
       "name": "diff-analyze",
-      "summary": "Analyze git diffs for risk scoring, reviewer recommendations, and change classification",
+      "summary": "Analyze git diffs for risk scoring, reviewer recommendations, and change classification. Use when preparing a PR, reviewing a large or cross-module change, or before merging to as…",
       "summaryZh": "Diff Analyze 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Diff Analyze 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Diff Analyze 处理具体工作流的 Claude Code 用户。",
@@ -48742,7 +48742,7 @@
     {
       "id": "ruvnet-ruflo-doc-gen",
       "name": "doc-gen",
-      "summary": "Generate and maintain documentation with drift detection",
+      "summary": "Generate and maintain documentation with drift detection. Use when the user asks to write/update/refresh docs, detect doc drift against code, or schedule recurring documentation m…",
       "summaryZh": "Doc Gen 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Doc Gen 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Doc Gen 处理具体工作流的 Claude Code 用户。",
@@ -57977,26 +57977,27 @@
     {
       "id": "ruvnet-ruflo-federation-status",
       "name": "federation-status",
-      "summary": "Show federation health — peers, sessions, trust levels, and message metrics",
-      "summaryZh": "Federation Status 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Federation Status 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "summary": "Show federation health — peers, sessions, trust levels, and message metrics. Use when the user asks \"is federation healthy?\", \"show peers\", \"federation status\", or wants to inspec…",
+      "summaryZh": "Federation Status 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Federation Status 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Federation Status 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 Federation Status 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "使用 Federation Status 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "scenariosZh": [
-        "使用 Federation Status 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Federation Status”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Federation Status”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
+      "category": "代码 / Agent 开发",
       "tags": [
-        "skill"
+        "skill",
+        "api"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-federation/skills/federation-status' \"$HOME/.claude/skills/federation-status\"\nrm -rf '/tmp/ruvnet__ruflo'"
@@ -63997,7 +63998,7 @@
     {
       "id": "ruvnet-ruflo-gaia-debugging",
       "name": "gaia-debugging",
-      "summary": "Diagnose why a GAIA question failed — extract trace, classify failure mode, and propose a fix",
+      "summary": "Diagnose why a GAIA question failed — extract trace, classify failure mode, and propose a fix. Use when a GAIA benchmark run reports a failed/incorrect task_id and you need to roo…",
       "summaryZh": "Gaia Debugging 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Gaia Debugging 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Gaia Debugging 处理具体工作流的 Claude Code 用户。",
@@ -79835,7 +79836,7 @@
     {
       "id": "ruvnet-ruflo-init-project",
       "name": "init-project",
-      "summary": "Initialize a new Ruflo project with MCP tools, hooks, and agent configuration",
+      "summary": "Initialize a new Ruflo project with MCP tools, hooks, and agent configuration. Use when setting up Ruflo in a fresh repo, or when the user says \"init ruflo\", \"set up ruflo\", or as…",
       "summaryZh": "Init Project 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Init Project 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Init Project 处理具体工作流的 Claude Code 用户。",
@@ -81479,7 +81480,7 @@
     {
       "id": "ruvnet-ruflo-iot-anomalies",
       "name": "iot-anomalies",
-      "summary": "Detect and classify telemetry anomalies on Cognitum Seed devices",
+      "summary": "Detect and classify telemetry anomalies on Cognitum Seed devices. Use when investigating a device that's reporting odd metrics, before approving a firmware canary advancement, or …",
       "summaryZh": "Iot Anomalies 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Iot Anomalies 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Iot Anomalies 处理具体工作流的 Claude Code 用户。",
@@ -113043,26 +113044,28 @@
     {
       "id": "ruvnet-ruflo-pii-detect",
       "name": "pii-detect",
-      "summary": "Detect and flag personally identifiable information (PII) in text, code, and configurations",
-      "summaryZh": "Pii Detect 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Pii Detect 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Pii Detect 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Pii Detect 处理具体工作流的 Claude Code 用户。",
+      "summary": "Detect and flag personally identifiable information (PII) in text, code, and configurations. Use before committing code, writing logs, storing data, or sending model responses tha…",
+      "summaryZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
+      "capabilityZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
+      "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
+      "audienceZh": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
       "scenarios": [
-        "使用 Pii Detect 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成带标题、段落和列表的 Word 文档",
+        "读取已有 .docx 并提取关键信息",
+        "修改文档内容、结构和格式后重新导出"
       ],
       "scenariosZh": [
-        "使用 Pii Detect 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成带标题、段落和列表的 Word 文档",
+        "读取已有 .docx 并提取关键信息",
+        "修改文档内容、结构和格式后重新导出"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Pii Detect”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Pii Detect”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
+      "category": "文档处理",
       "tags": [
-        "skill"
+        "skill",
+        "email",
+        "api"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-aidefence/skills/pii-detect' \"$HOME/.claude/skills/pii-detect\"\nrm -rf '/tmp/ruvnet__ruflo'"
@@ -127518,7 +127521,7 @@
     {
       "id": "ruvnet-ruflo-ruflo-core",
       "name": "ruflo core",
-      "summary": "Foundation plugin. Registers the `ruflo` MCP server (300+ tools), provides three generalist agents (`coder`, `researcher`, `reviewer`), three first-run helpers (`init-project`, `r…",
+      "summary": "Foundation plugin. Registers the `ruflo` MCP server (314 tools), provides three generalist agents (`coder`, `researcher`, `reviewer`), three first-run helpers (`init-project`, `ru…",
       "summaryZh": "Ruflo Core 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Ruflo Core 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Ruflo Core 处理具体工作流的 Claude Code 用户。",
@@ -127997,7 +128000,7 @@
     {
       "id": "ruvnet-ruflo-ruflo-metaharness",
       "name": "ruflo metaharness",
-      "summary": "MetaHarness integration plugin for ruflo. Surfaces the upstream `metaharness` / `harness` CLIs through five ruflo skills, honoring [ADR-150](../../v3/docs/adr/ADR-150-metaharness-…",
+      "summary": "MetaHarness integration plugin for ruflo. Surfaces the upstream `metaharness` / `harness` / `@metaharness/darwin` CLIs through eleven ruflo skills, honoring [ADR-150](../../v3/doc…",
       "summaryZh": "Ruflo Metaharness 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Ruflo Metaharness 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Ruflo Metaharness 处理具体工作流的 Claude Code 用户。",
@@ -129824,7 +129827,7 @@
     {
       "id": "ruvnet-ruflo-safety-scan",
       "name": "safety-scan",
-      "summary": "Scan inputs for prompt injection, unsafe content, and adversarial attacks using AIDefence",
+      "summary": "Scan inputs for prompt injection, unsafe content, and adversarial attacks using AIDefence. Use when processing untrusted input (user submissions, API payloads, webhook data, tool …",
       "summaryZh": "Safety Scan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Safety Scan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Safety Scan 处理具体工作流的 Claude Code 用户。",
@@ -129843,7 +129846,8 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Safety Scan”，再给出文件、链接或要完成的任务。",
       "category": "通用工具",
       "tags": [
-        "skill"
+        "skill",
+        "api"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-aidefence/skills/safety-scan' \"$HOME/.claude/skills/safety-scan\"\nrm -rf '/tmp/ruvnet__ruflo'"
@@ -132638,7 +132642,7 @@
     {
       "id": "ruvnet-ruflo-security-scan",
       "name": "security-scan",
-      "summary": "Run full security scans on the codebase using Ruflo security tools",
+      "summary": "Run full security scans on the codebase using Ruflo security tools. Use when reviewing PRs for security regressions, auditing auth/input-handling code, before production deploys, …",
       "summaryZh": "Security Scan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Security Scan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Security Scan 处理具体工作流的 Claude Code 用户。",
@@ -141492,7 +141496,7 @@
     {
       "id": "ruvnet-ruflo-sparc-implement",
       "name": "sparc-implement",
-      "summary": "Run the SPARC Architecture and Implementation phases — design module boundaries, write pseudocode, implement code, and run tests",
+      "summary": "Run the SPARC Pseudocode and Architecture phases (2 and 3) — write algorithm pseudocode, design module boundaries and API contracts, then implement",
       "summaryZh": "Sparc Implement 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Sparc Implement 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Sparc Implement 处理具体工作流的 Claude Code 用户。",
@@ -141513,7 +141517,7 @@
       "tags": [
         "skill",
         "documents",
-        "testing"
+        "api"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-sparc/skills/sparc-implement' \"$HOME/.claude/skills/sparc-implement\"\nrm -rf '/tmp/ruvnet__ruflo'"
@@ -145588,7 +145592,7 @@
     {
       "id": "ruvnet-ruflo-swarm-init",
       "name": "swarm-init",
-      "summary": "Initialize a multi-agent swarm with anti-drift configuration",
+      "summary": "Initialize a multi-agent swarm with anti-drift configuration. Use when starting a complex multi-file task that needs 3+ coordinated agents (feature implementation, refactor across…",
       "summaryZh": "Swarm Init 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Swarm Init 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Swarm Init 处理具体工作流的 Claude Code 用户。",
@@ -148963,7 +148967,7 @@
     {
       "id": "ruvnet-ruflo-test-gaps",
       "name": "test-gaps",
-      "summary": "Detect missing test coverage and generate test suggestions",
+      "summary": "Detect missing test coverage and generate test suggestions. Use when the user asks about coverage gaps, untested code, or what tests to write next; also after adding a feature to …",
       "summaryZh": "Test Gaps 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Test Gaps 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Test Gaps 处理具体工作流的 Claude Code 用户。",
@@ -152610,7 +152614,7 @@
     {
       "id": "ruvnet-ruflo-trader-regime",
       "name": "trader-regime",
-      "summary": "Detect current market regime using npx neural-trader — bull/bear/ranging/volatile classification with recommended strategy",
+      "summary": "Detect current market regime using npx neural-trader — bull/bear/ranging/volatile classification with recommended strategy. Use when the user asks about market conditions, wants t…",
       "summaryZh": "Trader Regime 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Trader Regime 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Trader Regime 处理具体工作流的 Claude Code 用户。",
@@ -152629,7 +152633,8 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Trader Regime”，再给出文件、链接或要完成的任务。",
       "category": "通用工具",
       "tags": [
-        "skill"
+        "skill",
+        "testing"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-neural-trader/skills/trader-regime' \"$HOME/.claude/skills/trader-regime\"\nrm -rf '/tmp/ruvnet__ruflo'"
