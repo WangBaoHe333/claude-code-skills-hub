@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-27T21:35:18.327Z",
+  "generatedAt": "2026-06-28T21:34:51.898Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -160324,27 +160324,28 @@
     {
       "id": "code-yeongyu-oh-my-openagent-visual-qa",
       "name": "visual-qa",
-      "summary": "Rigorous visual QA for any UI you built or changed, across BOTH web/page UIs and TUI/terminal UIs. MUST USE after building or changing any UI to verify it visually before declarin…",
-      "summaryZh": "Visual Qa 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Visual Qa 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "summary": "MUST USE after building/changing any UI or when asked whether a page, component, or TUI looks right. Rigorous visual QA across web/page and terminal UIs. Prefer browser:control-in…",
+      "summaryZh": "Visual Qa 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Visual Qa 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Visual Qa 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 Visual Qa 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "使用 Visual Qa 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "scenariosZh": [
-        "使用 Visual Qa 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Visual Qa”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Visual Qa”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
+      "category": "代码 / Agent 开发",
       "tags": [
         "skill",
-        "image"
+        "browser",
+        "api"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/visual-qa' \"$HOME/.claude/skills/visual-qa\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
