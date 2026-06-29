@@ -1,0 +1,35 @@
+{
+  "id": "santifer-career-ops-career-ops-plugin-name",
+  "files": [
+    {
+      "path": "LICENSE",
+      "encoding": "utf8",
+      "content": "MIT License\n\nCopyright (c) the career-ops-plugin-{{NAME}} authors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# career-ops-plugin-{{NAME}}\n\nA community plugin for [career-ops](https://github.com/santifer/career-ops).\n\n## What it does\n\nTODO: one paragraph.\n\n## Install\n\n```bash\n# Once it's in the career-ops registry:\nnode plugins.mjs add {{NAME}}\n\n# Before listing (install directly from your repo at a pinned commit):\nnode plugins.mjs add <your-github-user>/career-ops-plugin-{{NAME}} --sha <40-hex-commit>\n```\n\nThen enable + consent:\n\n```bash\nnode plugins.mjs enable {{NAME}}            # shows the capability card\nnode plugins.mjs enable {{NAME}} --confirm  # grants it\n```\n\n## Configure\n\n- Secrets go in your `.env` (the names are in `manifest.json` → `requiredEnv`).\n- Non-secret options go in `config/plugins.yml` under `plugins.{{NAME}}`.\n\n## Get it listed as approved\n\nOpen a registry PR against career-ops (see\n[docs/PLUGINS.md](https://github.com/santifer/career-ops/blob/main/docs/PLUGINS.md)).\n\n## License\n\nMIT\n"
+    },
+    {
+      "path": "index.mjs",
+      "encoding": "utf8",
+      "content": "// @ts-check\n// {{NAME}} — a career-ops plugin.\n// Guide: https://github.com/santifer/career-ops/blob/main/docs/PLUGINS.md\n//\n// Rules the engine enforces for you:\n//  - Egress ONLY through ctx.fetch / ctx.fetchJson / ctx.fetchText (your manifest\n//    `allowedHosts` is applied + SSRF-guarded). Do NOT import node:http/net or\n//    call global fetch — community plugins are rejected for that.\n//  - Producers (provider/ingest/search) RETURN Job[] = { title, url, company, location };\n//    the engine writes them to the pipeline. Consumers (export/notify) push to\n//    the user's own store. There is no auto-submit hook.\n//  - Keys come from ctx.env (declare them in manifest.requiredEnv); non-secret\n//    settings come from ctx.settings (the user's config/plugins.yml block).\n\nexport default {\n  // Replace/add hooks to match manifest.hooks. Example ingest:\n  async ingest(ctx) {\n    // const data = await ctx.fetchJson('https://api.example.com/jobs');\n    // return data.results.map(j => ({ title: j.title, url: j.url, company: j.company, location: j.location || '' }));\n    return [];\n  },\n};\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"id\": \"{{NAME}}\",\n  \"name\": \"{{NAME}}\",\n  \"version\": \"0.1.0\",\n  \"apiVersion\": 1,\n  \"description\": \"TODO: one mission-framed line describing what this plugin does.\",\n  \"hooks\": [\"ingest\"],\n  \"requiredEnv\": [],\n  \"allowedHosts\": [],\n  \"skill\": \"skill.md\",\n  \"humanInTheLoop\": true,\n  \"homepage\": \"https://github.com/your-user/career-ops-plugin-{{NAME}}\"\n}\n"
+    },
+    {
+      "path": "skill.md",
+      "encoding": "utf8",
+      "content": "---\nname: career-ops-plugin-{{NAME}}\ndescription: How to use the {{NAME}} plugin and the data it produces.\nlicense: MIT\n---\n\n# {{NAME}}\n\n> This file teaches an AI agent how to drive THIS plugin. Keep it scoped to the\n> plugin's own domain — it must not instruct the agent to edit core files, change\n> scoring, or act outside the plugin's declared hooks.\n\n## How to run it\n\n- `node plugins.mjs run {{NAME}}` — runs the plugin's hook.\n\n## What it produces\n\nTODO: describe the data structure. For a producer hook, the `Job[]` fields you\nemit (title, url, company, location). For an export hook, what you push and where.\n\n## Settings\n\nTODO: any non-secret options the user sets in `config/plugins.yml` under\n`plugins.{{NAME}}` (these arrive as `ctx.settings`).\n"
+    },
+    {
+      "path": "test/smoke.mjs",
+      "encoding": "utf8",
+      "content": "// Zero-network smoke test: the entry imports cleanly and exposes only valid\n// hooks that match the manifest. Run by `plugins.mjs add` + the registry CI.\nimport assert from 'node:assert';\nimport { readFileSync } from 'node:fs';\nimport { fileURLToPath } from 'node:url';\nimport path from 'node:path';\n\nconst here = path.dirname(fileURLToPath(import.meta.url));\nconst KINDS = ['provider', 'ingest', 'search', 'notify', 'export'];\n\nconst manifest = JSON.parse(readFileSync(path.join(here, '..', 'manifest.json'), 'utf8'));\nconst mod = await import(path.join(here, '..', manifest.entry || 'index.mjs'));\nconst hooks = mod.default;\n\nassert(hooks && typeof hooks === 'object', 'default export must be an object of hooks');\nconst keys = Object.keys(hooks);\nassert(keys.length > 0, 'declare at least one hook');\nfor (const k of keys) assert(KINDS.includes(k), `unknown hook \"${k}\"`);\nfor (const h of manifest.hooks) assert(keys.includes(h), `manifest declares hook \"${h}\" but index.mjs does not export it`);\n\nconsole.log('✓ smoke ok:', keys.join(', '));\n"
+    }
+  ]
+}
