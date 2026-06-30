@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T21:49:16.066Z",
+  "generatedAt": "2026-06-30T21:52:01.005Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -46988,6 +46988,42 @@
       "packageUrl": "/skill-files/affaan-m-ecc-defi-amm-security.json"
     },
     {
+      "id": "affaan-m-ecc-delivery-gate",
+      "name": "delivery-gate",
+      "summary": "Stop hook that blocks Claude from finishing until quality checks pass. Detects rationalization patterns (surface text heuristics), stale learning logs (filesystem mtime), and low …",
+      "summaryZh": "Delivery Gate 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Delivery Gate 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Delivery Gate 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Delivery Gate 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Delivery Gate 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Delivery Gate 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Delivery Gate”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Delivery Gate”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/delivery-gate' \"$HOME/.claude/skills/delivery-gate\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/delivery-gate",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-delivery-gate.json"
+    },
+    {
       "id": "composiohq-awesome-claude-skills-demio-automation",
       "name": "demio-automation",
       "summary": "Automate Demio tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -53620,6 +53656,43 @@
         "stars": 215443
       },
       "packageUrl": "/skill-files/affaan-m-ecc-ecc-guide.json"
+    },
+    {
+      "id": "affaan-m-ecc-ecc-recipes",
+      "name": "ecc-recipes",
+      "summary": "Map a described workflow to the right ECC command-GROUP with run-order and stop condition, and browse all command-group recipe families. Adds a family-grouping + run-order + when-…",
+      "summaryZh": "Ecc Recipes 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ecc Recipes 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ecc Recipes 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ecc Recipes 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ecc Recipes 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ecc Recipes 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ecc Recipes”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ecc Recipes”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "documents"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/ecc-recipes' \"$HOME/.claude/skills/ecc-recipes\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/ecc-recipes",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-ecc-recipes.json"
     },
     {
       "id": "affaan-m-ecc-ecc-tools-cost-audit",
@@ -64665,7 +64738,7 @@
     {
       "id": "code-yeongyu-oh-my-openagent-frontend",
       "name": "frontend",
-      "summary": "MUST USE for ANY frontend, web UI, UX, or visual work — building, styling, or redesigning pages/components, React project setup, performance audits, design QA. Routes four ruleset…",
+      "summary": "MUST USE for frontend/web UI/UX/visual work: building, styling, redesigning pages/components, React setup, performance audits, visual QA, taste, and polish. Routes four rulesets: …",
       "summaryZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
       "capabilityZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
       "audience": "需要使用 Frontend 处理具体工作流的 Claude Code 用户。",
@@ -64684,8 +64757,7 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Frontend”，再给出文件、链接或要完成的任务。",
       "category": "视觉素材",
       "tags": [
-        "skill",
-        "documents"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-opencode/src/features/builtin-skills/frontend' \"$HOME/.claude/skills/frontend\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
@@ -71823,6 +71895,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-groqcloud-automation.json"
+    },
+    {
+      "id": "affaan-m-ecc-growth-log",
+      "name": "growth-log",
+      "summary": "Use after a complex task, failure, or when reviewing what was learned. Teaches how to write growth logs that extract reusable patterns — not diary entries.",
+      "summaryZh": "Growth Log 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Growth Log 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Growth Log 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Growth Log 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Growth Log 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Growth Log 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Growth Log”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Growth Log”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/growth-log' \"$HOME/.claude/skills/growth-log\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/growth-log",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-growth-log.json"
     },
     {
       "id": "nexu-io-open-design-gsap-core",
@@ -84587,6 +84695,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-issue-prioritizer.json"
     },
     {
+      "id": "santifer-career-ops-it",
+      "name": "it",
+      "summary": "career-ops -- Modalità in italiano (`modes/it/`)",
+      "summaryZh": "It 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "It 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 It 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 It 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 It 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 It 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 It”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 It”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/santifer__career-ops'\ngit clone --depth 1 'https://github.com/santifer/career-ops.git' '/tmp/santifer__career-ops'\ncp -R '/tmp/santifer__career-ops/modes/it' \"$HOME/.claude/skills/it\"\nrm -rf '/tmp/santifer__career-ops'"
+      },
+      "source": {
+        "repo": "santifer/career-ops",
+        "url": "https://github.com/santifer/career-ops",
+        "path": "modes/it",
+        "type": "auto-promoted-high-star",
+        "stars": 55049
+      },
+      "packageUrl": "/skill-files/santifer-career-ops-it.json"
+    },
+    {
       "id": "affaan-m-ecc-iterative-retrieval",
       "name": "iterative-retrieval",
       "summary": "サブエージェントのコンテキスト問題を解決するために、コンテキスト取得を段階的に洗練するパターン",
@@ -92059,6 +92203,43 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-loop.json"
     },
     {
+      "id": "affaan-m-ecc-loop-design-check",
+      "name": "loop-design-check",
+      "summary": "Design a goal-oriented agent loop, and review it for the ways loops go wrong — spinning and burning tokens, Goodhart-gaming the verifier, or running a wrong answer to completion. …",
+      "summaryZh": "Loop Design Check 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Loop Design Check 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Loop Design Check 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Loop Design Check 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Loop Design Check”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Loop Design Check”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/loop-design-check' \"$HOME/.claude/skills/loop-design-check\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/loop-design-check",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-loop-design-check.json"
+    },
+    {
       "id": "mattpocock-skills-loop-me",
       "name": "loop-me",
       "summary": "Grill me about specs for the workflows I want to build, within this workspace.",
@@ -93159,6 +93340,45 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-mailsoftly-automation.json"
+    },
+    {
+      "id": "affaan-m-ecc-mailtrap-email-integration",
+      "name": "mailtrap-email-integration",
+      "summary": "Guides agents through integrating transactional email sending via Mailtrap's Email API, including sandbox testing, domain verification, and API authentication. Use when implementi…",
+      "summaryZh": "Mailtrap Email Integration 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Mailtrap Email Integration 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Mailtrap Email Integration 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Mailtrap Email Integration 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Mailtrap Email Integration”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Mailtrap Email Integration”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "testing",
+        "email",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/mailtrap-email-integration' \"$HOME/.claude/skills/mailtrap-email-integration\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/mailtrap-email-integration",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-mailtrap-email-integration.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-main-image-editor",
@@ -118205,6 +118425,43 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-pnpm.json"
     },
     {
+      "id": "ruvnet-ruflo-pod-sales",
+      "name": "pod-sales",
+      "summary": "Run one tick of the sales business-pod (ADR-164 §4.1, Phase 2). Loads templates/sales.json, validates it against the pod-schema, resolves agents against ruflo's agent registry, re…",
+      "summaryZh": "Pod Sales 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Pod Sales 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Pod Sales 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Pod Sales 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Pod Sales”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Pod Sales”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-business-pods/skills/pod-sales' \"$HOME/.claude/skills/pod-sales\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-business-pods/skills/pod-sales",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-pod-sales.json"
+    },
+    {
       "id": "bytedance-deer-flow-podcast-generation",
       "name": "podcast-generation",
       "summary": "Use this skill when the user requests to generate, create, or produce podcasts from text content. Converts written content into a two-host conversational podcast audio format with…",
@@ -125460,6 +125717,44 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-react-native-best-practices.json"
+    },
+    {
+      "id": "affaan-m-ecc-react-native-patterns",
+      "name": "react-native-patterns",
+      "summary": "React Native and Expo app patterns — Expo Router navigation, state separation (server/client/route/form), TanStack Query data fetching with Zod, performant lists, NativeWind/Style…",
+      "summaryZh": "React Native Patterns 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
+      "capabilityZh": "React Native Patterns 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
+      "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "audienceZh": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "scenarios": [
+        "把链接内容转成 Markdown",
+        "提取视频字幕或社媒正文",
+        "把外部资料整理成摘要和后续待办"
+      ],
+      "scenariosZh": [
+        "把链接内容转成 Markdown",
+        "提取视频字幕或社媒正文",
+        "把外部资料整理成摘要和后续待办"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 React Native Patterns”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 React Native Patterns”，再给出文件、链接或要完成的任务。",
+      "category": "内容整理",
+      "tags": [
+        "skill",
+        "spreadsheets",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/react-native-patterns' \"$HOME/.claude/skills/react-native-patterns\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/react-native-patterns",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-react-native-patterns.json"
     },
     {
       "id": "affaan-m-ecc-react-patterns",
@@ -135347,6 +135642,42 @@
         "stars": 63285
       },
       "packageUrl": "/skill-files/cline-cline-sdk.json"
+    },
+    {
+      "id": "thedotmack-claude-mem-sdk-node",
+      "name": "sdk node",
+      "summary": "`claude-mem` SDK — Plain-Node Example",
+      "summaryZh": "Sdk Node 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Sdk Node 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Sdk Node 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Sdk Node 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Sdk Node 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Sdk Node 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Sdk Node”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Sdk Node”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/examples/sdk-node' \"$HOME/.claude/skills/sdk-node\"\nrm -rf '/tmp/thedotmack__claude-mem'"
+      },
+      "source": {
+        "repo": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "path": "examples/sdk-node",
+        "type": "auto-promoted-high-star",
+        "stars": 82253
+      },
+      "packageUrl": "/skill-files/thedotmack-claude-mem-sdk-node.json"
     },
     {
       "id": "foryourhealth111-pixel-vibe-skills-seaborn",

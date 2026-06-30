@@ -44,7 +44,7 @@
     {
       "path": "package.json",
       "encoding": "utf8",
-      "content": "{\n  \"name\": \"@playwright/extension\",\n  \"version\": \"0.2.1\",\n  \"description\": \"Playwright Browser Extension\",\n  \"private\": true,\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/microsoft/playwright.git\"\n  },\n  \"homepage\": \"https://playwright.dev\",\n  \"engines\": {\n    \"node\": \">=18\"\n  },\n  \"author\": {\n    \"name\": \"Microsoft Corporation\"\n  },\n  \"license\": \"Apache-2.0\"\n}\n"
+      "content": "{\n  \"name\": \"@playwright/extension\",\n  \"version\": \"0.2.1\",\n  \"description\": \"Playwright Browser Extension\",\n  \"private\": true,\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/microsoft/playwright.git\"\n  },\n  \"homepage\": \"https://playwright.dev\",\n  \"engines\": {\n    \"node\": \">=20\"\n  },\n  \"author\": {\n    \"name\": \"Microsoft Corporation\"\n  },\n  \"license\": \"Apache-2.0\"\n}\n"
     },
     {
       "path": "src/background.ts",
