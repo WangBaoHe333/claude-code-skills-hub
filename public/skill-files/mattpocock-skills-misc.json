@@ -4,12 +4,12 @@
     {
       "path": "SKILL.md",
       "encoding": "utf8",
-      "content": "---\nname: misc\ndescription: \"Tools I keep around but rarely use.\"\n---\n\n# misc\n\nTools I keep around but rarely use.\n\n## 中文说明\n\nMisc 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Misc 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+      "content": "---\nname: misc\ndescription: \"Tools I keep around but rarely use — not promoted in the plugin.\"\n---\n\n# misc\n\nTools I keep around but rarely use — not promoted in the plugin.\n\n## 中文说明\n\nMisc 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Misc 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
     },
     {
       "path": "README.md",
       "encoding": "utf8",
-      "content": "# Misc\n\nTools I keep around but rarely use.\n\n- **[git-guardrails-claude-code](./git-guardrails-claude-code/SKILL.md)** — Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute.\n- **[migrate-to-shoehorn](./migrate-to-shoehorn/SKILL.md)** — Migrate test files from `as` type assertions to @total-typescript/shoehorn.\n- **[scaffold-exercises](./scaffold-exercises/SKILL.md)** — Create exercise directory structures with sections, problems, solutions, and explainers.\n- **[setup-pre-commit](./setup-pre-commit/SKILL.md)** — Set up Husky pre-commit hooks with lint-staged, Prettier, type checking, and tests.\n"
+      "content": "# Misc\n\nTools I keep around but rarely use — not promoted in the plugin.\n\n- **[git-guardrails-claude-code](./git-guardrails-claude-code/SKILL.md)** — Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute.\n- **[migrate-to-shoehorn](./migrate-to-shoehorn/SKILL.md)** — Migrate test files from `as` type assertions to @total-typescript/shoehorn.\n- **[scaffold-exercises](./scaffold-exercises/SKILL.md)** — Create exercise directory structures with sections, problems, solutions, and explainers.\n- **[setup-pre-commit](./setup-pre-commit/SKILL.md)** — Set up Husky pre-commit hooks with lint-staged, Prettier, type checking, and tests.\n"
     },
     {
       "path": "git-guardrails-claude-code/SKILL.md",

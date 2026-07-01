@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T21:52:01.005Z",
+  "generatedAt": "2026-07-01T21:54:29.869Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -12967,7 +12967,7 @@
     {
       "id": "mattpocock-skills-ask-matt",
       "name": "ask-matt",
-      "summary": "Ask which skill or flow fits your situation. A router over the user-invoked skills in this repo.",
+      "summary": "Ask which skill or flow fits your situation. A router over the skills in this repo.",
       "summaryZh": "Ask Matt 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Ask Matt 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Ask Matt 处理具体工作流的 Claude Code 用户。",
@@ -21946,7 +21946,7 @@
     {
       "id": "browser-use-browser-use-browser-use",
       "name": "browser-use",
-      "summary": "Automates browser interactions for web testing, form filling, screenshots, and data extraction. Use when the user needs to navigate websites, interact with web pages, fill forms, …",
+      "summary": "Direct browser control via CDP for web interaction: automation, scraping, testing, screenshots, and site/app work.",
       "summaryZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
       "capabilityZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
       "audience": "开发者、测试人员、产品经理和需要验证网页流程的人。",
@@ -21967,15 +21967,17 @@
       "tags": [
         "skill",
         "browser",
-        "testing"
+        "testing",
+        "automation",
+        "api"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/browser-use__browser-use'\ngit clone --depth 1 'https://github.com/browser-use/browser-use.git' '/tmp/browser-use__browser-use'\ncp -R '/tmp/browser-use__browser-use/skills/browser-use' \"$HOME/.claude/skills/browser-use\"\nrm -rf '/tmp/browser-use__browser-use'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/browser-use__browser-use'\ngit clone --depth 1 'https://github.com/browser-use/browser-use.git' '/tmp/browser-use__browser-use'\ncp -R '/tmp/browser-use__browser-use/browser_use/skills/browser-use' \"$HOME/.claude/skills/browser-use\"\nrm -rf '/tmp/browser-use__browser-use'"
       },
       "source": {
         "repo": "browser-use/browser-use",
         "url": "https://github.com/browser-use/browser-use",
-        "path": "skills/browser-use",
+        "path": "browser_use/skills/browser-use",
         "type": "auto-promoted-high-star",
         "stars": 98815
       },
@@ -35232,6 +35234,44 @@
       "packageUrl": "/skill-files/nexu-io-open-design-code-import.json"
     },
     {
+      "id": "mattpocock-skills-code-review",
+      "name": "code-review",
+      "summary": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (do…",
+      "summaryZh": "Code Review 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Code Review 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Code Review 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Code Review 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Code Review”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Code Review”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "documents",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/code-review' \"$HOME/.claude/skills/code-review\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/engineering/code-review",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-code-review.json"
+    },
+    {
       "id": "shareai-lab-learn-claude-code-code-review",
       "name": "code-review",
       "summary": "Perform thorough code reviews with security, performance, and maintainability analysis. Use when user asks to review code, check for bugs, or audit a codebase.",
@@ -46254,42 +46294,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-decision-logger.json"
-    },
-    {
-      "id": "mattpocock-skills-decision-mapping",
-      "name": "decision-mapping",
-      "summary": "Turn a loose idea into a sequenced map of investigation tickets, then drive them to resolution one at a time.",
-      "summaryZh": "Decision Mapping 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Decision Mapping 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Decision Mapping 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Decision Mapping 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Decision Mapping 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Decision Mapping 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Decision Mapping”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Decision Mapping”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/decision-mapping' \"$HOME/.claude/skills/decision-mapping\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/in-progress/decision-mapping",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-decision-mapping.json"
     },
     {
       "id": "nexu-io-open-design-deck-guizang-editorial",
@@ -98257,7 +98261,7 @@
     {
       "id": "mattpocock-skills-misc",
       "name": "misc",
-      "summary": "Tools I keep around but rarely use.",
+      "summary": "Tools I keep around but rarely use — not promoted in the plugin.",
       "summaryZh": "Misc 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Misc 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Misc 处理具体工作流的 Claude Code 用户。",
@@ -129782,44 +129786,6 @@
       "packageUrl": "/skill-files/garrytan-gstack-review.json"
     },
     {
-      "id": "mattpocock-skills-review",
-      "name": "review",
-      "summary": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (do…",
-      "summaryZh": "Review 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Review 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 Review 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Review 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Review”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Review”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
-      "tags": [
-        "skill",
-        "documents",
-        "api"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/review' \"$HOME/.claude/skills/review\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/in-progress/review",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-review.json"
-    },
-    {
       "id": "leoyeai-openclaw-master-skills-review",
       "name": "review",
       "summary": "Analyze auto-memory for promotion candidates, stale entries, consolidation opportunities, and health metrics.",
@@ -141410,44 +141376,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-skeall.json"
-    },
-    {
-      "id": "browser-use-browser-use-skill-cli",
-      "name": "skill cli",
-      "summary": "Fast, persistent browser automation from the command line.",
-      "summaryZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
-      "capabilityZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
-      "audience": "开发者、测试人员、产品经理和需要验证网页流程的人。",
-      "audienceZh": "开发者、测试人员、产品经理和需要验证网页流程的人。",
-      "scenarios": [
-        "打开 localhost 页面做交互检查",
-        "填写表单、点击按钮并读取页面结果",
-        "截图验证页面布局和状态"
-      ],
-      "scenariosZh": [
-        "打开 localhost 页面做交互检查",
-        "填写表单、点击按钮并读取页面结果",
-        "截图验证页面布局和状态"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Skill Cli”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Skill Cli”，再给出文件、链接或要完成的任务。",
-      "category": "网页自动化",
-      "tags": [
-        "skill",
-        "browser",
-        "automation"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/browser-use__browser-use'\ngit clone --depth 1 'https://github.com/browser-use/browser-use.git' '/tmp/browser-use__browser-use'\ncp -R '/tmp/browser-use__browser-use/browser_use/skill_cli' \"$HOME/.claude/skills/skill-cli\"\nrm -rf '/tmp/browser-use__browser-use'"
-      },
-      "source": {
-        "repo": "browser-use/browser-use",
-        "url": "https://github.com/browser-use/browser-use",
-        "path": "browser_use/skill_cli",
-        "type": "auto-promoted-high-star",
-        "stars": 98815
-      },
-      "packageUrl": "/skill-files/browser-use-browser-use-skill-cli.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-skill-downloader",
@@ -166039,6 +165967,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-wave-accounting-automation.json"
+    },
+    {
+      "id": "mattpocock-skills-wayfinder",
+      "name": "wayfinder",
+      "summary": "Chart a route through a foggy problem — turn a loose idea into a map of investigation tickets and resolve them one at a time until the way to the goal is clear.",
+      "summaryZh": "Wayfinder 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Wayfinder 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Wayfinder 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Wayfinder 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Wayfinder 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Wayfinder 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Wayfinder”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Wayfinder”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/wayfinder' \"$HOME/.claude/skills/wayfinder\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/in-progress/wayfinder",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-wayfinder.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-weather",
