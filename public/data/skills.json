@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T21:54:29.869Z",
+  "generatedAt": "2026-07-02T21:39:09.397Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -28146,6 +28146,43 @@
         "stars": 215443
       },
       "packageUrl": "/skill-files/affaan-m-ecc-claude-devfleet.json"
+    },
+    {
+      "id": "mattpocock-skills-claude-handoff",
+      "name": "claude-handoff",
+      "summary": "Hand the current conversation off to a fresh background agent that picks up the work immediately.",
+      "summaryZh": "Claude Handoff 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Claude Handoff 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Claude Handoff 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Claude Handoff 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Claude Handoff”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Claude Handoff”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/claude-handoff' \"$HOME/.claude/skills/claude-handoff\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/in-progress/claude-handoff",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-claude-handoff.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-claude-skill",
@@ -83237,6 +83274,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-intervals-icu-api.json"
     },
     {
+      "id": "santifer-career-ops-interview",
+      "name": "interview",
+      "summary": "A set of reusable skills for end-to-end interview preparation.",
+      "summaryZh": "Interview 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Interview 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Interview 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Interview 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Interview 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Interview 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Interview”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Interview”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/santifer__career-ops'\ngit clone --depth 1 'https://github.com/santifer/career-ops.git' '/tmp/santifer__career-ops'\ncp -R '/tmp/santifer__career-ops/modes/interview' \"$HOME/.claude/skills/interview\"\nrm -rf '/tmp/santifer__career-ops'"
+      },
+      "source": {
+        "repo": "santifer/career-ops",
+        "url": "https://github.com/santifer/career-ops",
+        "path": "modes/interview",
+        "type": "auto-promoted-high-star",
+        "stars": 55049
+      },
+      "packageUrl": "/skill-files/santifer-career-ops-interview.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-interview-system-designer",
       "name": "interview system designer",
       "summary": "A comprehensive toolkit for designing, optimizing, and calibrating interview processes. This skill provides tools to create role-specific interview loops, generate competency-base…",
@@ -128583,6 +128656,44 @@
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-requesting-code-review.json"
     },
     {
+      "id": "mattpocock-skills-research",
+      "name": "research",
+      "summary": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts ga…",
+      "summaryZh": "Research 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Research 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Research 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Research 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Research”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Research”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "documents",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/research' \"$HOME/.claude/skills/research\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/engineering/research",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-research.json"
+    },
+    {
       "id": "leonxlnx-taste-skill-research",
       "name": "research",
       "summary": "Background research that informed the skills in this project. Each topic gets its own subfolder.",
@@ -165971,26 +166082,27 @@
     {
       "id": "mattpocock-skills-wayfinder",
       "name": "wayfinder",
-      "summary": "Chart a route through a foggy problem — turn a loose idea into a map of investigation tickets and resolve them one at a time until the way to the goal is clear.",
-      "summaryZh": "Wayfinder 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Wayfinder 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "summary": "Plan a huge chunk of work — more than one agent session can hold — as a shared map of investigation tickets on your issue tracker, and resolve them one at a time until the way to …",
+      "summaryZh": "Wayfinder 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Wayfinder 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Wayfinder 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 Wayfinder 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "使用 Wayfinder 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "scenariosZh": [
-        "使用 Wayfinder 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Wayfinder”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Wayfinder”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
+      "category": "代码 / Agent 开发",
       "tags": [
-        "skill"
+        "skill",
+        "api"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/wayfinder' \"$HOME/.claude/skills/wayfinder\"\nrm -rf '/tmp/mattpocock__skills'"
