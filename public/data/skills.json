@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-02T21:39:09.397Z",
+  "generatedAt": "2026-07-03T21:37:22.333Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -47545,6 +47545,42 @@
       "packageUrl": "/skill-files/nextlevelbuilder-ui-ux-pro-max-skill-design.json"
     },
     {
+      "id": "nexu-io-open-design-design-system-source-context-mr0bb87z",
+      "name": "design system source context mr0bb87z",
+      "summary": "This file is generated during setup and should be treated as source evidence for the design-system project. Use it before writing or revising DESIGN.md, previews, tokens, UI kit e…",
+      "summaryZh": "Design System Source Context Mr0bb87z 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Design System Source Context Mr0bb87z 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Design System Source Context Mr0bb87z 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Design System Source Context Mr0bb87z 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Design System Source Context Mr0bb87z 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Design System Source Context Mr0bb87z 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Design System Source Context Mr0bb87z”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Design System Source Context Mr0bb87z”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/design-system-source-context-mr0bb87z' \"$HOME/.claude/skills/design-system-source-context-mr0bb87z\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/community/design-system-source-context-mr0bb87z",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-design-system-source-context-mr0bb87z.json"
+    },
+    {
       "id": "nexu-io-open-design-design-systems",
       "name": "design systems",
       "summary": "Each subfolder is a portable design system in [`DESIGN.md`](../docs/spec.md) format. Pick one in the top-bar **Design system** dropdown and every skill will read it as part of its…",
@@ -55248,6 +55284,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-emergency-rescue.json"
+    },
+    {
+      "id": "nexu-io-open-design-emil-design-eng",
+      "name": "emil-design-eng",
+      "summary": "|",
+      "summaryZh": "Emil Design Eng 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Emil Design Eng 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Emil Design Eng 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Emil Design Eng 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Emil Design Eng 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Emil Design Eng 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Emil Design Eng”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Emil Design Eng”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/skills/emil-design-eng' \"$HOME/.claude/skills/emil-design-eng\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "skills/emil-design-eng",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-emil-design-eng.json"
     },
     {
       "id": "nexu-io-open-design-emilkowalski-motion",
@@ -65942,6 +66014,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-fundraising-advisor.json"
     },
     {
+      "id": "nexu-io-open-design-g2-design-system-ui-kit-mqgbmh2w",
+      "name": "g2 design system ui kit mqgbmh2w",
+      "summary": "This community plugin packages a reviewable UI kit for the HiCatcat G2 AR glasses HUD design system.",
+      "summaryZh": "G2 Design System Ui Kit Mqgbmh2w 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "G2 Design System Ui Kit Mqgbmh2w 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 G2 Design System Ui Kit Mqgbmh2w 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 G2 Design System Ui Kit Mqgbmh2w 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 G2 Design System Ui Kit Mqgbmh2w 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 G2 Design System Ui Kit Mqgbmh2w 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 G2 Design System Ui Kit Mqgbmh2w”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 G2 Design System Ui Kit Mqgbmh2w”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/g2-design-system-ui-kit-mqgbmh2w' \"$HOME/.claude/skills/g2-design-system-ui-kit-mqgbmh2w\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/community/g2-design-system-ui-kit-mqgbmh2w",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-g2-design-system-ui-kit-mqgbmh2w.json"
+    },
+    {
       "id": "foryourhealth111-pixel-vibe-skills-g2-legend-expert",
       "name": "G2 Legend Expert",
       "summary": "Expert skill for G2 legend development - provides comprehensive knowledge about legend rendering implementation, component architecture, layout algorithms, and interaction handlin…",
@@ -71754,7 +71862,7 @@
     {
       "id": "mattpocock-skills-grilling",
       "name": "grilling",
-      "summary": "Interview the user relentlessly about a plan or design. Use when the user wants to stress-test a plan before building, or uses any 'grill' trigger phrases.",
+      "summary": "Grill the user relentlessly about a plan or design. Use when the user wants to stress-test a plan before building, or uses any 'grill' trigger phrases.",
       "summaryZh": "Grilling 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Grilling 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Grilling 处理具体工作流的 Claude Code 用户。",
@@ -73510,6 +73618,78 @@
       "packageUrl": "/skill-files/ruvnet-ruflo-harness-genome.json"
     },
     {
+      "id": "ruvnet-ruflo-harness-gepa",
+      "name": "harness-gepa",
+      "summary": "Inspect and audit GEPA genomes via the `@metaharness/darwin/gepa` library entry (darwin 0.8.0) — load/validate a genome (default: the shipped cand-6 promotion), render the system …",
+      "summaryZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
+      "capabilityZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
+      "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "audienceZh": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "scenarios": [
+        "按视频链接抓取字幕",
+        "生成章节摘要和重点列表",
+        "保存封面图和视频基础信息"
+      ],
+      "scenariosZh": [
+        "按视频链接抓取字幕",
+        "生成章节摘要和重点列表",
+        "保存封面图和视频基础信息"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Harness Gepa”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Harness Gepa”，再给出文件、链接或要完成的任务。",
+      "category": "内容整理",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-metaharness/skills/harness-gepa' \"$HOME/.claude/skills/harness-gepa\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-metaharness/skills/harness-gepa",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-harness-gepa.json"
+    },
+    {
+      "id": "ruvnet-ruflo-harness-learn",
+      "name": "harness-learn",
+      "summary": "Run a GEPA learning cycle via `metaharness learn` (upstream ADR-235, metaharness@0.3.0) — optimizes a harness genome against a SWE-bench-style slice manifest. $0 dry-run by defaul…",
+      "summaryZh": "Harness Learn 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Harness Learn 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Harness Learn 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Harness Learn 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Harness Learn 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Harness Learn 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Harness Learn”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Harness Learn”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-metaharness/skills/harness-learn' \"$HOME/.claude/skills/harness-learn\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-metaharness/skills/harness-learn",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-harness-learn.json"
+    },
+    {
       "id": "ruvnet-ruflo-harness-mcp-scan",
       "name": "harness-mcp-scan",
       "summary": "Static security scan of a harness's declared MCP surface via `harness mcp-scan <path>`. Reads `.mcp/servers.json` + `.harness/claims.json`. Pure-read, no dispatch. Exits 1 on find…",
@@ -75015,34 +75195,35 @@
     {
       "id": "nexu-io-open-design-high-end-visual-design",
       "name": "high-end-visual-design",
-      "summary": "|",
-      "summaryZh": "High End Visual Design 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "High End Visual Design 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "summary": "Teaches the AI to design like a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive. Blocks all the comm…",
+      "summaryZh": "High End Visual Design 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "High End Visual Design 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 High End Visual Design 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 High End Visual Design 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "使用 High End Visual Design 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "scenariosZh": [
-        "使用 High End Visual Design 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 High End Visual Design”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 High End Visual Design”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
+      "category": "代码 / Agent 开发",
       "tags": [
-        "skill"
+        "skill",
+        "api"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/skills/soft-skill' \"$HOME/.claude/skills/high-end-visual-design\"\nrm -rf '/tmp/nexu-io__open-design'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/agent-skill-principal-ui-ux-architect-motion-choreographer-awwwards-tier-mqu4mbbj' \"$HOME/.claude/skills/high-end-visual-design\"\nrm -rf '/tmp/nexu-io__open-design'"
       },
       "source": {
         "repo": "nexu-io/open-design",
         "url": "https://github.com/nexu-io/open-design",
-        "path": "skills/soft-skill",
+        "path": "plugins/community/agent-skill-principal-ui-ux-architect-motion-choreographer-awwwards-tier-mqu4mbbj",
         "type": "auto-promoted-high-star",
         "stars": 64767
       },
@@ -129933,6 +130114,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-review.json"
     },
     {
+      "id": "nexu-io-open-design-review-animations",
+      "name": "review-animations",
+      "summary": "|",
+      "summaryZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
+      "capabilityZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
+      "audience": "需要使用 Review Animations 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Review Animations 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成 Slack 可用的表情或动图",
+        "验证 GIF 文件大小和动画限制",
+        "把多段动画组合成可发送的 GIF"
+      ],
+      "scenariosZh": [
+        "生成 Slack 可用的表情或动图",
+        "验证 GIF 文件大小和动画限制",
+        "把多段动画组合成可发送的 GIF"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Review Animations”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Review Animations”，再给出文件、链接或要完成的任务。",
+      "category": "视觉素材",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/skills/review-animations' \"$HOME/.claude/skills/review-animations\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "skills/review-animations",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-review-animations.json"
+    },
+    {
       "id": "code-yeongyu-oh-my-openagent-review-work",
       "name": "review-work",
       "summary": "Post-implementation review orchestrator. Launches 5 parallel background sub-agents: Oracle (goal/constraint verification), Oracle (code quality), Oracle (security), unspecified-hi…",
@@ -135719,42 +135936,6 @@
         "stars": 63285
       },
       "packageUrl": "/skill-files/cline-cline-sdk.json"
-    },
-    {
-      "id": "thedotmack-claude-mem-sdk-node",
-      "name": "sdk node",
-      "summary": "`claude-mem` SDK — Plain-Node Example",
-      "summaryZh": "Sdk Node 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Sdk Node 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Sdk Node 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Sdk Node 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Sdk Node 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Sdk Node 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Sdk Node”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Sdk Node”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/examples/sdk-node' \"$HOME/.claude/skills/sdk-node\"\nrm -rf '/tmp/thedotmack__claude-mem'"
-      },
-      "source": {
-        "repo": "thedotmack/claude-mem",
-        "url": "https://github.com/thedotmack/claude-mem",
-        "path": "examples/sdk-node",
-        "type": "auto-promoted-high-star",
-        "stars": 82253
-      },
-      "packageUrl": "/skill-files/thedotmack-claude-mem-sdk-node.json"
     },
     {
       "id": "foryourhealth111-pixel-vibe-skills-seaborn",
@@ -159163,6 +159344,42 @@
       "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ultraresearch.json"
     },
     {
+      "id": "code-yeongyu-oh-my-openagent-ultrawork",
+      "name": "ultrawork",
+      "summary": "Codex plugin that injects a compact orchestration directive (the **ultrawork** prompt) when the user prompt contains `ultrawork` or `ulw` (word-bounded, case-insensitive).",
+      "summaryZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
+      "capabilityZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
+      "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
+      "audienceZh": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
+      "scenarios": [
+        "生成带标题、段落和列表的 Word 文档",
+        "读取已有 .docx 并提取关键信息",
+        "修改文档内容、结构和格式后重新导出"
+      ],
+      "scenariosZh": [
+        "生成带标题、段落和列表的 Word 文档",
+        "读取已有 .docx 并提取关键信息",
+        "修改文档内容、结构和格式后重新导出"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ultrawork”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ultrawork”，再给出文件、链接或要完成的任务。",
+      "category": "文档处理",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-codex/plugin/components/ultrawork' \"$HOME/.claude/skills/ultrawork\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/omo-codex/plugin/components/ultrawork",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ultrawork.json"
+    },
+    {
       "id": "code-yeongyu-oh-my-openagent-ulw-loop",
       "name": "ulw loop",
       "summary": "[![ci](https://img.shields.io/badge/ci-pending-lightgrey.svg)](#) [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)",
@@ -166408,6 +166625,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-web-artifacts-builder.json"
     },
     {
+      "id": "nexu-io-open-design-web-clone",
+      "name": "web-clone",
+      "summary": ">",
+      "summaryZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
+      "capabilityZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
+      "audience": "开发者、测试人员、产品经理和需要验证网页流程的人。",
+      "audienceZh": "开发者、测试人员、产品经理和需要验证网页流程的人。",
+      "scenarios": [
+        "打开 localhost 页面做交互检查",
+        "填写表单、点击按钮并读取页面结果",
+        "截图验证页面布局和状态"
+      ],
+      "scenariosZh": [
+        "打开 localhost 页面做交互检查",
+        "填写表单、点击按钮并读取页面结果",
+        "截图验证页面布局和状态"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Web Clone”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Web Clone”，再给出文件、链接或要完成的任务。",
+      "category": "网页自动化",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/skills/web-clone' \"$HOME/.claude/skills/web-clone\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "skills/web-clone",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-web-clone.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-web-coder",
       "name": "web-coder",
       "summary": "Expert 10x engineer with comprehensive knowledge of web development, internet protocols, and web standards. Use when working with HTML, CSS, JavaScript, web APIs, HTTP/HTTPS, web …",
@@ -169404,6 +169657,42 @@
         "stars": 128710
       },
       "packageUrl": "/skill-files/mattpocock-skills-writing-great-skills.json"
+    },
+    {
+      "id": "nexu-io-open-design-writing-guidelines",
+      "name": "writing-guidelines",
+      "summary": "|",
+      "summaryZh": "Writing Guidelines 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Writing Guidelines 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Writing Guidelines 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Writing Guidelines 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Writing Guidelines 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Writing Guidelines 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Writing Guidelines”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Writing Guidelines”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/skills/writing-guidelines' \"$HOME/.claude/skills/writing-guidelines\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "skills/writing-guidelines",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-writing-guidelines.json"
     },
     {
       "id": "obra-superpowers-writing-plans",
