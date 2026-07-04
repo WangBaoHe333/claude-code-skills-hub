@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-03T21:37:22.333Z",
+  "generatedAt": "2026-07-04T21:18:35.937Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -20101,6 +20101,44 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-boxhero-automation.json"
     },
     {
+      "id": "bytedance-deer-flow-boxlite",
+      "name": "boxlite",
+      "summary": "Runs each DeerFlow sandbox as a [BoxLite](https://github.com/boxlite-ai/boxlite) micro-VM — a daemonless, OCI-native VM with its own kernel (libkrun/KVM on Linux, Hypervisor.frame…",
+      "summaryZh": "Boxlite 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Boxlite 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Boxlite 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Boxlite 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Boxlite 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Boxlite 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Boxlite”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Boxlite”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "documents",
+        "github"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/bytedance__deer-flow'\ngit clone --depth 1 'https://github.com/bytedance/deer-flow.git' '/tmp/bytedance__deer-flow'\ncp -R '/tmp/bytedance__deer-flow/backend/packages/harness/deerflow/community/boxlite' \"$HOME/.claude/skills/boxlite\"\nrm -rf '/tmp/bytedance__deer-flow'"
+      },
+      "source": {
+        "repo": "bytedance/deer-flow",
+        "url": "https://github.com/bytedance/deer-flow",
+        "path": "backend/packages/harness/deerflow/community/boxlite",
+        "type": "auto-promoted-high-star",
+        "stars": 71160
+      },
+      "packageUrl": "/skill-files/bytedance-deer-flow-boxlite.json"
+    },
+    {
       "id": "nexu-io-open-design-brainstorming",
       "name": "brainstorming",
       "summary": "|",
@@ -21606,6 +21644,44 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-browser-form-fill.json"
+    },
+    {
+      "id": "ruvnet-ruflo-browser-intent",
+      "name": "browser-intent",
+      "summary": "Execute a natural-language browser intent via page-agent (browser_act) when the target is easier to describe than to select — degrades gracefully when page-agent or an OpenAI-comp…",
+      "summaryZh": "Browser Intent 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Browser Intent 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Browser Intent 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Browser Intent 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Browser Intent”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Browser Intent”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "browser",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-browser/skills/browser-intent' \"$HOME/.claude/skills/browser-intent\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-browser/skills/browser-intent",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-browser-intent.json"
     },
     {
       "id": "ruvnet-ruflo-browser-login",
@@ -87738,6 +87814,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-knowledge-query.json"
+    },
+    {
+      "id": "santifer-career-ops-ko",
+      "name": "ko",
+      "summary": "career-ops -- 한국어 모드 (`modes/ko/`)",
+      "summaryZh": "Ko 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ko 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ko 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ko 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ko 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ko 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ko”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ko”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/santifer__career-ops'\ngit clone --depth 1 'https://github.com/santifer/career-ops.git' '/tmp/santifer__career-ops'\ncp -R '/tmp/santifer__career-ops/modes/ko' \"$HOME/.claude/skills/ko\"\nrm -rf '/tmp/santifer__career-ops'"
+      },
+      "source": {
+        "repo": "santifer/career-ops",
+        "url": "https://github.com/santifer/career-ops",
+        "path": "modes/ko",
+        "type": "auto-promoted-high-star",
+        "stars": 55049
+      },
+      "packageUrl": "/skill-files/santifer-career-ops-ko.json"
     },
     {
       "id": "affaan-m-ecc-ko-kr",
@@ -169072,6 +169184,44 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-workflow-run.json"
+    },
+    {
+      "id": "affaan-m-ecc-workflows",
+      "name": "workflows",
+      "summary": "Scripts in this directory are [Claude Code **Workflow** tool](https://docs.claude.com/en/docs/claude-code) scripts — deterministic, multi-agent orchestration that runs in the back…",
+      "summaryZh": "Workflows 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Workflows 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Workflows 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Workflows 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Workflows”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Workflows”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "documents",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/workflows' \"$HOME/.claude/skills/workflows\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "workflows",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-workflows.json"
     },
     {
       "id": "github-spec-kit-workflows",
