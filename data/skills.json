@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T21:18:35.937Z",
+  "generatedAt": "2026-07-05T21:33:02.655Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -47287,6 +47287,44 @@
       "packageUrl": "/skill-files/ruvnet-ruflo-dependency-check.json"
     },
     {
+      "id": "nexu-io-open-design-deploy",
+      "name": "deploy",
+      "summary": "This deployment ships Open Design as a single Alpine-based runtime image. The daemon serves both the API and the built Next.js static export, so there is no separate nginx contain…",
+      "summaryZh": "Deploy 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Deploy 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Deploy 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Deploy 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Deploy 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Deploy 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Deploy”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Deploy”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "image",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/deploy' \"$HOME/.claude/skills/deploy\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "deploy",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-deploy.json"
+    },
+    {
       "id": "nexu-io-open-design-deploy-vercel-static",
       "name": "deploy-vercel-static",
       "summary": "Use this plugin when the user wants to deploy an accepted static web artifact to Vercel or prepare an equivalent deployment handoff with preview and production URLs.",
@@ -89241,7 +89279,7 @@
     {
       "id": "mvanhorn-last30days-skill-last30days",
       "name": "last30days",
-      "summary": "Research what people actually say about any topic in the last 30 days. Pulls posts and engagement from Reddit, X, YouTube, TikTok, Hacker News, Polymarket, GitHub, and the web.",
+      "summary": "Research what people actually say about any topic in the last 30 days. Pulls posts and engagement from Reddit, X, YouTube, TikTok, Hacker News, Polymarket, GitHub, and the web. In…",
       "summaryZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
       "capabilityZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
       "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
@@ -89261,6 +89299,7 @@
       "category": "内容整理",
       "tags": [
         "skill",
+        "documents",
         "github"
       ],
       "install": {
