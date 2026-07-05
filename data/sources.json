@@ -323,6 +323,30 @@
       "stars": 1646,
       "discoveredAt": "2026-06-21T21:59:44.375Z",
       "reason": "1646 stars, 1 SKILL.md"
+    },
+    {
+      "repo": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify.git",
+      "type": "auto-promoted-high-star",
+      "stars": 78116,
+      "discoveredAt": "2026-07-05T21:37:07.988Z",
+      "reason": "78116 stars, 1 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "Panniantong/Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach.git",
+      "type": "auto-promoted-high-star",
+      "stars": 51224,
+      "discoveredAt": "2026-07-05T21:37:07.988Z",
+      "reason": "51224 stars, 1 SKILL.md"
+    },
+    {
+      "repo": "better-auth/better-icons",
+      "url": "https://github.com/better-auth/better-icons.git",
+      "type": "auto-promoted-high-star",
+      "stars": 1132,
+      "discoveredAt": "2026-07-05T21:37:07.988Z",
+      "reason": "1132 stars, 1 SKILL.md, has skills directory"
     }
   ]
 }
