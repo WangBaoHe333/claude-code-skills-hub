@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T21:33:02.655Z",
+  "generatedAt": "2026-07-06T21:53:02.985Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -42,7 +42,10 @@
     "PenglongHuang/chinese-novelist-skill",
     "notdog1998/yourself-skill",
     "op7418/Youtube-clipper-skill",
-    "zstmfhy/zlibrary-to-notebooklm"
+    "zstmfhy/zlibrary-to-notebooklm",
+    "Graphify-Labs/graphify",
+    "Panniantong/Agent-Reach",
+    "better-auth/better-icons"
   ],
   "skills": [
     {
@@ -5872,6 +5875,43 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-agent-reach.json"
+    },
+    {
+      "id": "panniantong-agent-reach-agent-reach",
+      "name": "agent-reach",
+      "summary": ">",
+      "summaryZh": "Agent Reach 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Agent Reach 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Agent Reach 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Agent Reach 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Agent Reach”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Agent Reach”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Panniantong__Agent-Reach'\ngit clone --depth 1 'https://github.com/Panniantong/Agent-Reach.git' '/tmp/Panniantong__Agent-Reach'\ncp -R '/tmp/Panniantong__Agent-Reach/agent_reach/skill' \"$HOME/.claude/skills/agent-reach\"\nrm -rf '/tmp/Panniantong__Agent-Reach'"
+      },
+      "source": {
+        "repo": "Panniantong/Agent-Reach",
+        "url": "https://github.com/Panniantong/Agent-Reach",
+        "path": "agent_reach/skill",
+        "type": "auto-promoted-high-star",
+        "stars": 51224
+      },
+      "packageUrl": "/skill-files/panniantong-agent-reach-agent-reach.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-agent-security-hardening",
@@ -18003,6 +18043,43 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-better-auth-best-practices.json"
+    },
+    {
+      "id": "better-auth-better-icons-better-icons",
+      "name": "better-icons",
+      "summary": "Use when working with icons in any project. Provides CLI for searching 200+ icon libraries (Iconify) and retrieving SVGs. Commands: `better-icons search <query>` to find icons, `b…",
+      "summaryZh": "Better Icons 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Better Icons 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Better Icons 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Better Icons 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Better Icons”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Better Icons”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/better-auth__better-icons'\ngit clone --depth 1 'https://github.com/better-auth/better-icons.git' '/tmp/better-auth__better-icons'\ncp -R '/tmp/better-auth__better-icons/skills' \"$HOME/.claude/skills/better-icons\"\nrm -rf '/tmp/better-auth__better-icons'"
+      },
+      "source": {
+        "repo": "better-auth/better-icons",
+        "url": "https://github.com/better-auth/better-icons",
+        "path": "skills",
+        "type": "auto-promoted-high-star",
+        "stars": 1132
+      },
+      "packageUrl": "/skill-files/better-auth-better-icons-better-icons.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-better-proposals-automation",
@@ -57597,6 +57674,44 @@
       "packageUrl": "/skill-files/safishamsi-graphify-example.json"
     },
     {
+      "id": "graphify-labs-graphify-example",
+      "name": "example",
+      "summary": "A small document pipeline — parser, validator, processor, storage, API — with architecture notes and research notes. Seven files, two languages, clear call relationships between m…",
+      "summaryZh": "Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Example 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Example 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Example 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Example 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Example”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Example”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "documents",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Graphify-Labs__graphify'\ngit clone --depth 1 'https://github.com/Graphify-Labs/graphify.git' '/tmp/Graphify-Labs__graphify'\ncp -R '/tmp/Graphify-Labs__graphify/worked/example' \"$HOME/.claude/skills/example\"\nrm -rf '/tmp/Graphify-Labs__graphify'"
+      },
+      "source": {
+        "repo": "Graphify-Labs/graphify",
+        "url": "https://github.com/Graphify-Labs/graphify",
+        "path": "worked/example",
+        "type": "auto-promoted-high-star",
+        "stars": 78116
+      },
+      "packageUrl": "/skill-files/graphify-labs-graphify-example.json"
+    },
+    {
       "id": "notdog1998-yourself-skill-example-me",
       "name": "example_me",
       "summary": "小北（示例），25岁，产品经理，上海",
@@ -71680,6 +71795,45 @@
       "packageUrl": "/skill-files/safishamsi-graphify-graphify.json"
     },
     {
+      "id": "graphify-labs-graphify-graphify",
+      "name": "graphify",
+      "summary": "Use for any question about a codebase, its architecture, file relationships, or project content — especially when graphify-out/ exists, where the question should be treated as a g…",
+      "summaryZh": "Graphify 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Graphify 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Graphify 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Graphify 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Graphify 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Graphify 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Graphify”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Graphify”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "documents",
+        "image",
+        "video"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Graphify-Labs__graphify'\ngit clone --depth 1 'https://github.com/Graphify-Labs/graphify.git' '/tmp/Graphify-Labs__graphify'\ncp -R '/tmp/Graphify-Labs__graphify/graphify' \"$HOME/.claude/skills/graphify\"\nrm -rf '/tmp/Graphify-Labs__graphify'"
+      },
+      "source": {
+        "repo": "Graphify-Labs/graphify",
+        "url": "https://github.com/Graphify-Labs/graphify",
+        "path": "graphify",
+        "type": "auto-promoted-high-star",
+        "stars": 78116
+      },
+      "packageUrl": "/skill-files/graphify-labs-graphify-graphify.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-greek-banking-integration",
       "name": "greek-banking-integration",
       "summary": "Parses bank statements from all major Greek banks (Alpha, NBG, Eurobank, Piraeus). File-based CSV/Excel import with transaction reconciliation.",
@@ -78915,6 +79069,43 @@
       "packageUrl": "/skill-files/safishamsi-graphify-httpx.json"
     },
     {
+      "id": "graphify-labs-graphify-httpx",
+      "name": "httpx",
+      "summary": "A synthetic 6-file Python codebase modeled after httpx's architecture. Tests graphify on a realistic library with clean layering: exceptions → models → auth/transport → client.",
+      "summaryZh": "Httpx 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Httpx 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Httpx 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Httpx 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Httpx 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Httpx 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Httpx”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Httpx”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "testing"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Graphify-Labs__graphify'\ngit clone --depth 1 'https://github.com/Graphify-Labs/graphify.git' '/tmp/Graphify-Labs__graphify'\ncp -R '/tmp/Graphify-Labs__graphify/worked/httpx' \"$HOME/.claude/skills/httpx\"\nrm -rf '/tmp/Graphify-Labs__graphify'"
+      },
+      "source": {
+        "repo": "Graphify-Labs/graphify",
+        "url": "https://github.com/Graphify-Labs/graphify",
+        "path": "worked/httpx",
+        "type": "auto-promoted-high-star",
+        "stars": 78116
+      },
+      "packageUrl": "/skill-files/graphify-labs-graphify-httpx.json"
+    },
+    {
       "id": "nexu-io-open-design-huashu-annual-letter",
       "name": "huashu-annual-letter",
       "summary": "|",
@@ -80486,6 +80677,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-icypeas-automation.json"
+    },
+    {
+      "id": "santifer-career-ops-id",
+      "name": "id",
+      "summary": "career-ops -- Mode Bahasa Indonesia (`modes/id/`)",
+      "summaryZh": "Id 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Id 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Id 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Id 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Id 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Id 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Id”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Id”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/santifer__career-ops'\ngit clone --depth 1 'https://github.com/santifer/career-ops.git' '/tmp/santifer__career-ops'\ncp -R '/tmp/santifer__career-ops/modes/id' \"$HOME/.claude/skills/id\"\nrm -rf '/tmp/santifer__career-ops'"
+      },
+      "source": {
+        "repo": "santifer/career-ops",
+        "url": "https://github.com/santifer/career-ops",
+        "path": "modes/id",
+        "type": "auto-promoted-high-star",
+        "stars": 55049
+      },
+      "packageUrl": "/skill-files/santifer-career-ops-id.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-idea-to-post",
@@ -86718,6 +86945,42 @@
         "stars": 67112
       },
       "packageUrl": "/skill-files/safishamsi-graphify-karpathy-repos.json"
+    },
+    {
+      "id": "graphify-labs-graphify-karpathy-repos",
+      "name": "karpathy repos",
+      "summary": "This is the corpus that produced the **71.5x token reduction** benchmark.",
+      "summaryZh": "Karpathy Repos 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Karpathy Repos 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Karpathy Repos 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Karpathy Repos 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Karpathy Repos 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Karpathy Repos 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Karpathy Repos”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Karpathy Repos”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Graphify-Labs__graphify'\ngit clone --depth 1 'https://github.com/Graphify-Labs/graphify.git' '/tmp/Graphify-Labs__graphify'\ncp -R '/tmp/Graphify-Labs__graphify/worked/karpathy-repos' \"$HOME/.claude/skills/karpathy-repos\"\nrm -rf '/tmp/Graphify-Labs__graphify'"
+      },
+      "source": {
+        "repo": "Graphify-Labs/graphify",
+        "url": "https://github.com/Graphify-Labs/graphify",
+        "path": "worked/karpathy-repos",
+        "type": "auto-promoted-high-star",
+        "stars": 78116
+      },
+      "packageUrl": "/skill-files/graphify-labs-graphify-karpathy-repos.json"
     },
     {
       "id": "multica-ai-andrej-karpathy-skills-karpathy-guidelines",
@@ -98849,6 +99112,44 @@
         "stars": 67112
       },
       "packageUrl": "/skill-files/safishamsi-graphify-mixed-corpus.json"
+    },
+    {
+      "id": "graphify-labs-graphify-mixed-corpus",
+      "name": "mixed corpus",
+      "summary": "A small mixed-input corpus: Python source files, a markdown paper with arXiv citations, and one image. Tests graphify on different file types in a single run.",
+      "summaryZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
+      "capabilityZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
+      "audience": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "audienceZh": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "scenarios": [
+        "渲染代码高亮、数学公式和 Mermaid 图",
+        "把长文转成可发布 HTML",
+        "套用主题生成统一风格页面"
+      ],
+      "scenariosZh": [
+        "渲染代码高亮、数学公式和 Mermaid 图",
+        "把长文转成可发布 HTML",
+        "套用主题生成统一风格页面"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Mixed Corpus”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Mixed Corpus”，再给出文件、链接或要完成的任务。",
+      "category": "内容发布",
+      "tags": [
+        "skill",
+        "testing",
+        "image"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Graphify-Labs__graphify'\ngit clone --depth 1 'https://github.com/Graphify-Labs/graphify.git' '/tmp/Graphify-Labs__graphify'\ncp -R '/tmp/Graphify-Labs__graphify/worked/mixed-corpus' \"$HOME/.claude/skills/mixed-corpus\"\nrm -rf '/tmp/Graphify-Labs__graphify'"
+      },
+      "source": {
+        "repo": "Graphify-Labs/graphify",
+        "url": "https://github.com/Graphify-Labs/graphify",
+        "path": "worked/mixed-corpus",
+        "type": "auto-promoted-high-star",
+        "stars": 78116
+      },
+      "packageUrl": "/skill-files/graphify-labs-graphify-mixed-corpus.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-mkts-market-data",
@@ -116703,6 +117004,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-physical-de-escalation.json"
+    },
+    {
+      "id": "code-yeongyu-oh-my-openagent-pi-goal",
+      "name": "pi-goal",
+      "summary": "Persistent Codex-style goal tracking for pi. Use when the user explicitly asks to set, continue, audit, pause, resume, complete, or inspect a long-running goal.",
+      "summaryZh": "Pi Goal 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Pi Goal 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Pi Goal 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Pi Goal 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Pi Goal 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Pi Goal 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Pi Goal”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Pi Goal”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/pi-goal' \"$HOME/.claude/skills/pi-goal\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/pi-goal",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-pi-goal.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-piggy-automation",
@@ -169082,7 +169419,7 @@
     {
       "id": "thedotmack-claude-mem-worker",
       "name": "worker",
-      "summary": "The Worker Service is an Express HTTP server that handles all claude-mem operations. It runs on port 37777 (configurable via `CLAUDE_MEM_WORKER_PORT`) and is managed by PM2.",
+      "summary": "The worker is the local HTTP runtime used by hooks, the viewer, MCP search, and background observation generation. It is built into `plugin/scripts/worker-service.cjs` and managed…",
       "summaryZh": "Worker 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Worker 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Worker 处理具体工作流的 Claude Code 用户。",
