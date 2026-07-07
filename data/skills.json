@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T21:53:02.985Z",
+  "generatedAt": "2026-07-07T21:48:06.667Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -594,6 +594,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-1password.json"
+    },
+    {
+      "id": "foryourhealth111-pixel-vibe-skills-2026-07-02",
+      "name": "2026 07 02",
+      "summary": "- **提示词安装**：复制一段提示词给 AI 客户端，让它确认宿主、版本并执行安装。 - **命令安装**：直接在终端运行 install/check，适合熟悉宿主根目录和命令行的人。",
+      "summaryZh": "2026 07 02 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "2026 07 02 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 2026 07 02 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 2026 07 02 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 2026 07 02 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 2026 07 02 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 2026 07 02”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 2026 07 02”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/docs/archive/install-legacy/2026-07-02' \"$HOME/.claude/skills/2026-07-02\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
+      },
+      "source": {
+        "repo": "foryourhealth111-pixel/Vibe-Skills",
+        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
+        "path": "docs/archive/install-legacy/2026-07-02",
+        "type": "auto-promoted-high-star",
+        "stars": 2326
+      },
+      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-2026-07-02.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-2slides",
@@ -56974,6 +57010,43 @@
       "packageUrl": "/skill-files/affaan-m-ecc-eval-harness.json"
     },
     {
+      "id": "addyosmani-agent-skills-evals",
+      "name": "evals",
+      "summary": "How this repo measures whether its skills actually work: that they **trigger** when they should, **stay distinct** from each other, and **change agent behavior** the way each skil…",
+      "summaryZh": "Evals 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Evals 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Evals 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Evals 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Evals”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Evals”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/addyosmani__agent-skills'\ngit clone --depth 1 'https://github.com/addyosmani/agent-skills.git' '/tmp/addyosmani__agent-skills'\ncp -R '/tmp/addyosmani__agent-skills/evals' \"$HOME/.claude/skills/evals\"\nrm -rf '/tmp/addyosmani__agent-skills'"
+      },
+      "source": {
+        "repo": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "path": "evals",
+        "type": "auto-promoted-high-star",
+        "stars": 59408
+      },
+      "packageUrl": "/skill-files/addyosmani-agent-skills-evals.json"
+    },
+    {
       "id": "juliusbrussee-caveman-evals",
       "name": "evals",
       "summary": "Measures real token compression of caveman skills by running the same prompts through Claude Code under three conditions and comparing the generated output token counts.",
@@ -75425,6 +75498,42 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-heyzine-automation.json"
     },
     {
+      "id": "santifer-career-ops-hi",
+      "name": "hi",
+      "summary": "career-ops — हिन्दी मोड्स (`modes/hi/`)",
+      "summaryZh": "Hi 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Hi 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Hi 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Hi 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Hi 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Hi 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Hi”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Hi”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/santifer__career-ops'\ngit clone --depth 1 'https://github.com/santifer/career-ops.git' '/tmp/santifer__career-ops'\ncp -R '/tmp/santifer__career-ops/modes/hi' \"$HOME/.claude/skills/hi\"\nrm -rf '/tmp/santifer__career-ops'"
+      },
+      "source": {
+        "repo": "santifer/career-ops",
+        "url": "https://github.com/santifer/career-ops",
+        "path": "modes/hi",
+        "type": "auto-promoted-high-star",
+        "stars": 55049
+      },
+      "packageUrl": "/skill-files/santifer-career-ops-hi.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-hi-lite",
       "name": "hi lite",
       "summary": "**Search, browse, and rediscover your Kindle highlights — locally, for free.**",
@@ -83249,7 +83358,7 @@
     {
       "id": "foryourhealth111-pixel-vibe-skills-install",
       "name": "install",
-      "summary": "- **提示词安装**：复制一段提示词给 AI 客户端，让它确认宿主、版本并执行安装。 - **命令安装**：直接在终端运行 install/check，适合熟悉宿主根目录和命令行的人。",
+      "summary": "公开安装现在从发布版本 zip 开始。先下载发布版本 zip，解压后在这个发布目录里运行脚本。安装器随后只做一件事：把 `vibe` 安装到一个 skills 目录下。",
       "summaryZh": "Install 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Install 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Install 处理具体工作流的 Claude Code 用户。",
@@ -163055,6 +163164,42 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-verifiedemail-automation.json"
     },
     {
+      "id": "foryourhealth111-pixel-vibe-skills-verify",
+      "name": "verify",
+      "summary": "This directory stores executable verification gates for local and CI use.",
+      "summaryZh": "Verify 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Verify 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Verify 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Verify 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Verify 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Verify 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Verify”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Verify”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/scripts/verify' \"$HOME/.claude/skills/verify\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
+      },
+      "source": {
+        "repo": "foryourhealth111-pixel/Vibe-Skills",
+        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
+        "path": "scripts/verify",
+        "type": "auto-promoted-high-star",
+        "stars": 2326
+      },
+      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-verify.json"
+    },
+    {
       "id": "agenticnotetaking-arscontexta-verify",
       "name": "verify",
       "summary": "Combined verification — recite (description quality via cold-read prediction) + validate (schema compliance) + review (health checks). Use as a quality gate after creating notes o…",
@@ -163498,7 +163643,7 @@
     {
       "id": "foryourhealth111-pixel-vibe-skills-vibe-upgrade",
       "name": "vibe-upgrade",
-      "summary": "Upgrade the local Vibe-Skills installation to the latest official default-branch state.",
+      "summary": "Legacy update entry for existing Vibe-Skills installations.",
       "summaryZh": "Vibe Upgrade 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Vibe Upgrade 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Vibe Upgrade 处理具体工作流的 Claude Code 用户。",
@@ -163517,8 +163662,7 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Vibe Upgrade”，再给出文件、链接或要完成的任务。",
       "category": "通用工具",
       "tags": [
-        "skill",
-        "testing"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/bundled/skills/vibe-upgrade' \"$HOME/.claude/skills/vibe-upgrade\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"

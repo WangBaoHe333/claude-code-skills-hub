@@ -9,7 +9,7 @@
     {
       "path": "README.md",
       "encoding": "utf8",
-      "content": "# Skill Catalog\n\nThis package owns detached catalog metadata for official VCO skills.\n\nIt is not a runtime owner.\nIt exists so installer and distribution layers can consume catalog descriptors without traversing bundled runtime topology.\n"
+      "content": "# Skill Catalog\n\nThis package owns detached catalog metadata for official VCO skills.\n\nIt is not a runtime owner.\nIt exists so installer and distribution layers can consume catalog descriptors without traversing bundled runtime topology.\n\nThe exported catalog is profile-aware.\n`minimal` and `full` do not maintain a second copy of skill-selection truth here.\nEach catalog profile points back to the matching runtime-core packaging projection, so changing the starter set only requires changing one source of truth.\n"
     },
     {
       "path": "groups/index.json",
@@ -29,7 +29,7 @@
     {
       "path": "profiles/full.json",
       "encoding": "utf8",
-      "content": "{\n  \"schema_version\": \"vgo-skill-catalog.profile.v1\",\n  \"profile_id\": \"full\",\n  \"owner\": \"skill-catalog\",\n  \"selection_mode\": \"all_official_except_excluded\",\n  \"exclude_skill_ids\": [\n    \"vibe\"\n  ]\n}\n"
+      "content": "{\n  \"schema_version\": \"vgo-skill-catalog.profile.v1\",\n  \"profile_id\": \"full\",\n  \"owner\": \"skill-catalog\",\n  \"selection_mode\": \"runtime_core_projection\",\n  \"runtime_core_profile\": \"full\"\n}\n"
     },
     {
       "path": "profiles/index.json",
@@ -39,7 +39,7 @@
     {
       "path": "profiles/minimal.json",
       "encoding": "utf8",
-      "content": "{\n  \"schema_version\": \"vgo-skill-catalog.profile.v1\",\n  \"profile_id\": \"minimal\",\n  \"owner\": \"skill-catalog\",\n  \"selection_mode\": \"allowlist\",\n  \"skill_ids\": [\n    \"brainstorming\",\n    \"cancel-ralph\",\n    \"dialectic\",\n    \"local-vco-roles\",\n    \"ralph-loop\",\n    \"spec-kit-vibe-compat\",\n    \"subagent-driven-development\",\n    \"superclaude-framework-compat\",\n    \"systematic-debugging\",\n    \"tdd-guide\",\n    \"think-harder\",\n    \"writing-plans\"\n  ]\n}\n"
+      "content": "{\n  \"schema_version\": \"vgo-skill-catalog.profile.v1\",\n  \"profile_id\": \"minimal\",\n  \"owner\": \"skill-catalog\",\n  \"selection_mode\": \"runtime_core_projection\",\n  \"runtime_core_profile\": \"minimal\"\n}\n"
     }
   ]
 }
