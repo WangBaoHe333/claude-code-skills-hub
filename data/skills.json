@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T21:48:06.667Z",
+  "generatedAt": "2026-07-08T21:36:32.760Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -4684,6 +4684,43 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-agent-otc-trade.json"
+    },
+    {
+      "id": "nexu-io-open-design-agent-protocol",
+      "name": "agent protocol",
+      "summary": "Daemon module providing the ACP and pi RPC subprocess protocol adapters used to drive external AI agent CLIs from the Open Design daemon.",
+      "summaryZh": "Agent Protocol 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Agent Protocol 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Agent Protocol 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Agent Protocol 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Agent Protocol”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Agent Protocol”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/apps/daemon/src/agent-protocol' \"$HOME/.claude/skills/agent-protocol\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "apps/daemon/src/agent-protocol",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-agent-protocol.json"
     },
     {
       "id": "code-yeongyu-oh-my-openagent-agent-reach",
@@ -82157,7 +82194,7 @@
     {
       "id": "mattpocock-skills-implement",
       "name": "implement",
-      "summary": "Implement a piece of work based on a PRD or set of issues.",
+      "summary": "Implement a piece of work based on a spec or set of tickets.",
       "summaryZh": "Implement 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Implement 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Implement 处理具体工作流的 Claude Code 用户。",
@@ -117812,6 +117849,43 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-plain-automation.json"
+    },
+    {
+      "id": "affaan-m-ecc-plan-canvas",
+      "name": "plan-canvas",
+      "summary": "Open plans and HTML artifacts in a local browser canvas where the human annotates elements, chats, and approves or requests changes without leaving the page. Use when presenting a…",
+      "summaryZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
+      "capabilityZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
+      "audience": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "audienceZh": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "scenarios": [
+        "渲染代码高亮、数学公式和 Mermaid 图",
+        "把长文转成可发布 HTML",
+        "套用主题生成统一风格页面"
+      ],
+      "scenariosZh": [
+        "渲染代码高亮、数学公式和 Mermaid 图",
+        "把长文转成可发布 HTML",
+        "套用主题生成统一风格页面"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Plan Canvas”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Plan Canvas”，再给出文件、链接或要完成的任务。",
+      "category": "内容发布",
+      "tags": [
+        "skill",
+        "browser"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/plan-canvas' \"$HOME/.claude/skills/plan-canvas\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/plan-canvas",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-plan-canvas.json"
     },
     {
       "id": "garrytan-gstack-plan-ceo-review",
@@ -156097,76 +156171,76 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-tmux.json"
     },
     {
-      "id": "mattpocock-skills-to-issues",
-      "name": "to-issues",
-      "summary": "Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices.",
-      "summaryZh": "To Issues 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "To Issues 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 To Issues 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 To Issues 处理具体工作流的 Claude Code 用户。",
+      "id": "mattpocock-skills-to-spec",
+      "name": "to-spec",
+      "summary": "Turn the current conversation into a spec and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed.",
+      "summaryZh": "To Spec 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "To Spec 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 To Spec 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 To Spec 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "使用 To Issues 完成相关任务",
+        "使用 To Spec 完成相关任务",
         "减少手工复制、整理和重复操作",
         "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "使用 To Issues 完成相关任务",
+        "使用 To Spec 完成相关任务",
         "减少手工复制、整理和重复操作",
         "把固定流程交给 Claude Code 执行"
       ],
-      "usage": "安装后在 Claude Code 中明确说“使用 To Issues”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 To Issues”，再给出文件、链接或要完成的任务。",
+      "usage": "安装后在 Claude Code 中明确说“使用 To Spec”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 To Spec”，再给出文件、链接或要完成的任务。",
       "category": "通用工具",
       "tags": [
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/to-issues' \"$HOME/.claude/skills/to-issues\"\nrm -rf '/tmp/mattpocock__skills'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/to-spec' \"$HOME/.claude/skills/to-spec\"\nrm -rf '/tmp/mattpocock__skills'"
       },
       "source": {
         "repo": "mattpocock/skills",
         "url": "https://github.com/mattpocock/skills",
-        "path": "skills/engineering/to-issues",
+        "path": "skills/engineering/to-spec",
         "type": "auto-promoted-high-star",
         "stars": 128710
       },
-      "packageUrl": "/skill-files/mattpocock-skills-to-issues.json"
+      "packageUrl": "/skill-files/mattpocock-skills-to-spec.json"
     },
     {
-      "id": "mattpocock-skills-to-prd",
-      "name": "to-prd",
-      "summary": "Turn the current conversation into a PRD and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed.",
-      "summaryZh": "To Prd 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "To Prd 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 To Prd 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 To Prd 处理具体工作流的 Claude Code 用户。",
+      "id": "mattpocock-skills-to-tickets",
+      "name": "to-tickets",
+      "summary": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker — edges as text in a lo…",
+      "summaryZh": "To Tickets 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "To Tickets 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 To Tickets 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 To Tickets 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "使用 To Prd 完成相关任务",
+        "使用 To Tickets 完成相关任务",
         "减少手工复制、整理和重复操作",
         "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "使用 To Prd 完成相关任务",
+        "使用 To Tickets 完成相关任务",
         "减少手工复制、整理和重复操作",
         "把固定流程交给 Claude Code 执行"
       ],
-      "usage": "安装后在 Claude Code 中明确说“使用 To Prd”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 To Prd”，再给出文件、链接或要完成的任务。",
+      "usage": "安装后在 Claude Code 中明确说“使用 To Tickets”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 To Tickets”，再给出文件、链接或要完成的任务。",
       "category": "通用工具",
       "tags": [
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/to-prd' \"$HOME/.claude/skills/to-prd\"\nrm -rf '/tmp/mattpocock__skills'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/to-tickets' \"$HOME/.claude/skills/to-tickets\"\nrm -rf '/tmp/mattpocock__skills'"
       },
       "source": {
         "repo": "mattpocock/skills",
         "url": "https://github.com/mattpocock/skills",
-        "path": "skills/engineering/to-prd",
+        "path": "skills/engineering/to-tickets",
         "type": "auto-promoted-high-star",
         "stars": 128710
       },
-      "packageUrl": "/skill-files/mattpocock-skills-to-prd.json"
+      "packageUrl": "/skill-files/mattpocock-skills-to-tickets.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-todo-tracker-safe",
@@ -166954,12 +167028,12 @@
         "api"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/wayfinder' \"$HOME/.claude/skills/wayfinder\"\nrm -rf '/tmp/mattpocock__skills'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/wayfinder' \"$HOME/.claude/skills/wayfinder\"\nrm -rf '/tmp/mattpocock__skills'"
       },
       "source": {
         "repo": "mattpocock/skills",
         "url": "https://github.com/mattpocock/skills",
-        "path": "skills/in-progress/wayfinder",
+        "path": "skills/engineering/wayfinder",
         "type": "auto-promoted-high-star",
         "stars": 128710
       },
@@ -167876,6 +167950,546 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-webflow-china-speed.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-aurora-veil",
+      "name": "webgl-aurora-veil",
+      "summary": "|",
+      "summaryZh": "Webgl Aurora Veil 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Aurora Veil 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Aurora Veil 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Aurora Veil 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Aurora Veil 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Aurora Veil 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Aurora Veil”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Aurora Veil”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-aurora-veil' \"$HOME/.claude/skills/webgl-aurora-veil\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-aurora-veil",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-aurora-veil.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-caustic-pool",
+      "name": "webgl-caustic-pool",
+      "summary": "|",
+      "summaryZh": "Webgl Caustic Pool 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Caustic Pool 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Caustic Pool 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Caustic Pool 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Caustic Pool 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Caustic Pool 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Caustic Pool”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Caustic Pool”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-caustic-pool' \"$HOME/.claude/skills/webgl-caustic-pool\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-caustic-pool",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-caustic-pool.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-depth-gallery",
+      "name": "webgl-depth-gallery",
+      "summary": "|",
+      "summaryZh": "Webgl Depth Gallery 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Depth Gallery 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Depth Gallery 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Depth Gallery 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Depth Gallery 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Depth Gallery 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Depth Gallery”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Depth Gallery”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-depth-gallery' \"$HOME/.claude/skills/webgl-depth-gallery\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-depth-gallery",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-depth-gallery.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-distortion-grain",
+      "name": "webgl-distortion-grain",
+      "summary": "|",
+      "summaryZh": "Webgl Distortion Grain 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Distortion Grain 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Distortion Grain 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Distortion Grain 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Distortion Grain 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Distortion Grain 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Distortion Grain”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Distortion Grain”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-distortion-grain' \"$HOME/.claude/skills/webgl-distortion-grain\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-distortion-grain",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-distortion-grain.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-experience",
+      "name": "webgl-experience",
+      "summary": "|",
+      "summaryZh": "Webgl Experience 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Experience 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Experience 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Experience 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Experience 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Experience 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Experience”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Experience”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-templates/webgl-experience' \"$HOME/.claude/skills/webgl-experience\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "design-templates/webgl-experience",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-experience.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-halftone-drift",
+      "name": "webgl-halftone-drift",
+      "summary": "|",
+      "summaryZh": "Webgl Halftone Drift 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Halftone Drift 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Halftone Drift 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Halftone Drift 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Halftone Drift 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Halftone Drift 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Halftone Drift”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Halftone Drift”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-halftone-drift' \"$HOME/.claude/skills/webgl-halftone-drift\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-halftone-drift",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-halftone-drift.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-holographic-foil",
+      "name": "webgl-holographic-foil",
+      "summary": "|",
+      "summaryZh": "Webgl Holographic Foil 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Holographic Foil 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Holographic Foil 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Holographic Foil 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Holographic Foil 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Holographic Foil 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Holographic Foil”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Holographic Foil”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-holographic-foil' \"$HOME/.claude/skills/webgl-holographic-foil\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-holographic-foil",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-holographic-foil.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-horizontal-parallax",
+      "name": "webgl-horizontal-parallax",
+      "summary": "|",
+      "summaryZh": "Webgl Horizontal Parallax 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Horizontal Parallax 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Horizontal Parallax 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Horizontal Parallax 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Horizontal Parallax 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Horizontal Parallax 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Horizontal Parallax”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Horizontal Parallax”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-horizontal-parallax' \"$HOME/.claude/skills/webgl-horizontal-parallax\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-horizontal-parallax",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-horizontal-parallax.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-liquid-iridescence",
+      "name": "webgl-liquid-iridescence",
+      "summary": "|",
+      "summaryZh": "Webgl Liquid Iridescence 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Liquid Iridescence 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Liquid Iridescence 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Liquid Iridescence 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Liquid Iridescence 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Liquid Iridescence 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Liquid Iridescence”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Liquid Iridescence”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-liquid-iridescence' \"$HOME/.claude/skills/webgl-liquid-iridescence\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-liquid-iridescence",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-liquid-iridescence.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-liquid-metal",
+      "name": "webgl-liquid-metal",
+      "summary": "|",
+      "summaryZh": "Webgl Liquid Metal 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Liquid Metal 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Liquid Metal 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Liquid Metal 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Liquid Metal 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Liquid Metal 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Liquid Metal”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Liquid Metal”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-liquid-metal' \"$HOME/.claude/skills/webgl-liquid-metal\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-liquid-metal",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-liquid-metal.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-neon-grid",
+      "name": "webgl-neon-grid",
+      "summary": "|",
+      "summaryZh": "Webgl Neon Grid 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Neon Grid 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Neon Grid 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Neon Grid 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Neon Grid 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Neon Grid 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Neon Grid”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Neon Grid”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-neon-grid' \"$HOME/.claude/skills/webgl-neon-grid\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-neon-grid",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-neon-grid.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-particle-galaxy",
+      "name": "webgl-particle-galaxy",
+      "summary": "|",
+      "summaryZh": "Webgl Particle Galaxy 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Particle Galaxy 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Particle Galaxy 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Particle Galaxy 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Particle Galaxy 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Particle Galaxy 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Particle Galaxy”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Particle Galaxy”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-particle-galaxy' \"$HOME/.claude/skills/webgl-particle-galaxy\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-particle-galaxy",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-particle-galaxy.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-pixel-reveal-gallery",
+      "name": "webgl-pixel-reveal-gallery",
+      "summary": "|",
+      "summaryZh": "Webgl Pixel Reveal Gallery 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Pixel Reveal Gallery 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Pixel Reveal Gallery 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Pixel Reveal Gallery 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Pixel Reveal Gallery 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Pixel Reveal Gallery 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Pixel Reveal Gallery”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Pixel Reveal Gallery”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-pixel-reveal-gallery' \"$HOME/.claude/skills/webgl-pixel-reveal-gallery\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-pixel-reveal-gallery",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-pixel-reveal-gallery.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-raymarched-hero",
+      "name": "webgl-raymarched-hero",
+      "summary": "|",
+      "summaryZh": "Webgl Raymarched Hero 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Raymarched Hero 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Raymarched Hero 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Raymarched Hero 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Raymarched Hero 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Raymarched Hero 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Raymarched Hero”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Raymarched Hero”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-raymarched-hero' \"$HOME/.claude/skills/webgl-raymarched-hero\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-raymarched-hero",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-raymarched-hero.json"
+    },
+    {
+      "id": "nexu-io-open-design-webgl-voronoi-cells",
+      "name": "webgl-voronoi-cells",
+      "summary": "|",
+      "summaryZh": "Webgl Voronoi Cells 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Webgl Voronoi Cells 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Webgl Voronoi Cells 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Webgl Voronoi Cells 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Webgl Voronoi Cells 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Webgl Voronoi Cells 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Webgl Voronoi Cells”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Webgl Voronoi Cells”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/webgl-voronoi-cells' \"$HOME/.claude/skills/webgl-voronoi-cells\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/webgl-voronoi-cells",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-webgl-voronoi-cells.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-webscraping-ai-automation",
@@ -169595,6 +170209,42 @@
         "stars": 82253
       },
       "packageUrl": "/skill-files/thedotmack-claude-mem-worker.json"
+    },
+    {
+      "id": "nexu-io-open-design-worker-visualizer",
+      "name": "worker-visualizer",
+      "summary": "|",
+      "summaryZh": "Worker Visualizer 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Worker Visualizer 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Worker Visualizer 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Worker Visualizer 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Worker Visualizer 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Worker Visualizer 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Worker Visualizer”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Worker Visualizer”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-templates/worker-visualizer' \"$HOME/.claude/skills/worker-visualizer\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "design-templates/worker-visualizer",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-worker-visualizer.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-workflow-automator",

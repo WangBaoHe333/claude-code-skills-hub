@@ -4,7 +4,7 @@
     {
       "path": "SKILL.md",
       "encoding": "utf8",
-      "content": "---\nname: implement\ndescription: \"Implement a piece of work based on a PRD or set of issues.\"\ndisable-model-invocation: true\n---\n\nImplement the work described by the user in the PRD or issues.\n\nUse /tdd where possible, at pre-agreed seams.\n\nRun typechecking regularly, single test files regularly, and the full test suite once at the end.\n\nOnce done, use /code-review to review the work.\n\nCommit your work to the current branch.\n"
+      "content": "---\nname: implement\ndescription: \"Implement a piece of work based on a spec or set of tickets.\"\ndisable-model-invocation: true\n---\n\nImplement the work described by the user in the spec or tickets.\n\nUse /tdd where possible, at pre-agreed seams.\n\nRun typechecking regularly, single test files regularly, and the full test suite once at the end.\n\nOnce done, use /code-review to review the work.\n\nCommit your work to the current branch.\n"
     }
   ]
 }
