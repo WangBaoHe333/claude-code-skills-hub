@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T21:36:32.760Z",
+  "generatedAt": "2026-07-09T21:52:41.905Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -30374,7 +30374,7 @@
     {
       "id": "ruvnet-ruflo-cli",
       "name": "cli",
-      "summary": "[![Ruflo Banner](ruflo/assets/ruflo-small.jpeg)](https://cognitum.one/agentic-engineering)",
+      "summary": "[![Ruflo Banner](ruflo/assets/ruflo-small.jpeg)](https://cognitum.one/agentic-engineering) [![Agentics Foundation Banner](docs/assets/sv-summit.png)](https://agentics.org/siliconv…",
       "summaryZh": "Cli 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Cli 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Cli 处理具体工作流的 Claude Code 用户。",
@@ -30394,6 +30394,7 @@
       "category": "代码 / Agent 开发",
       "tags": [
         "skill",
+        "documents",
         "api"
       ],
       "install": {
@@ -47217,6 +47218,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-deepread-pii.json"
+    },
+    {
+      "id": "bytedance-deer-flow-deer-flow",
+      "name": "deer flow",
+      "summary": "Deploys the full DeerFlow stack to Kubernetes: **gateway** (backend + embedded LangGraph runtime), **frontend** (Next.js), **nginx** (internal reverse proxy preserving the compose…",
+      "summaryZh": "Deer Flow 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Deer Flow 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Deer Flow 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Deer Flow 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Deer Flow 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Deer Flow 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Deer Flow”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Deer Flow”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/bytedance__deer-flow'\ngit clone --depth 1 'https://github.com/bytedance/deer-flow.git' '/tmp/bytedance__deer-flow'\ncp -R '/tmp/bytedance__deer-flow/deploy/helm/deer-flow' \"$HOME/.claude/skills/deer-flow\"\nrm -rf '/tmp/bytedance__deer-flow'"
+      },
+      "source": {
+        "repo": "bytedance/deer-flow",
+        "url": "https://github.com/bytedance/deer-flow",
+        "path": "deploy/helm/deer-flow",
+        "type": "auto-promoted-high-star",
+        "stars": 71160
+      },
+      "packageUrl": "/skill-files/bytedance-deer-flow-deer-flow.json"
     },
     {
       "id": "affaan-m-ecc-defi-amm-security",
@@ -109233,6 +109270,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-open-optimise.json"
     },
     {
+      "id": "nexu-io-open-design-open-design-homepage",
+      "name": "open-design-homepage",
+      "summary": "A pixel-faithful, self-contained mirror of the live open-design.ai homepage — an interactive React Three Fiber / Next.js hero with a real-time 3D wordmark, sticker collage, variab…",
+      "summaryZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
+      "capabilityZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
+      "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
+      "audienceZh": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
+      "scenarios": [
+        "生成带标题、段落和列表的 Word 文档",
+        "读取已有 .docx 并提取关键信息",
+        "修改文档内容、结构和格式后重新导出"
+      ],
+      "scenariosZh": [
+        "生成带标题、段落和列表的 Word 文档",
+        "读取已有 .docx 并提取关键信息",
+        "修改文档内容、结构和格式后重新导出"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Open Design Homepage”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Open Design Homepage”，再给出文件、链接或要完成的任务。",
+      "category": "文档处理",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/open-design-homepage' \"$HOME/.claude/skills/open-design-homepage\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/_official/examples/open-design-homepage",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-open-design-homepage.json"
+    },
+    {
       "id": "garrytan-gstack-open-gstack-browser",
       "name": "open-gstack-browser",
       "summary": "Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in.",
@@ -131887,7 +131960,7 @@
     {
       "id": "ruvnet-ruflo-ruflo",
       "name": "ruflo",
-      "summary": "[![Ruflo Banner](ruflo/assets/ruflo-small.jpeg)](https://cognitum.one/agentic-engineering)",
+      "summary": "[![Ruflo Banner](ruflo/assets/ruflo-small.jpeg)](https://cognitum.one/agentic-engineering) [![Agentics Foundation Banner](docs/assets/sv-summit.png)](https://agentics.org/siliconv…",
       "summaryZh": "Ruflo 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Ruflo 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Ruflo 处理具体工作流的 Claude Code 用户。",
@@ -131907,6 +131980,7 @@
       "category": "代码 / Agent 开发",
       "tags": [
         "skill",
+        "documents",
         "api"
       ],
       "install": {
