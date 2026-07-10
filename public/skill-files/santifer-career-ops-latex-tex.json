@@ -1,0 +1,25 @@
+{
+  "id": "santifer-career-ops-latex-tex",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: latex-tex\ndescription: \"LaTeX-in examples (latex-tex mode)\"\n---\n\n# latex tex\n\nLaTeX-in examples (latex-tex mode)\n\n## 中文说明\n\nLatex Tex 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Latex Tex 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# LaTeX-in examples (latex-tex mode)\n\nFictional `.tex` fixtures for `extract-latex-content.mjs` / `patch-latex-content.mjs` tests.\nDo not use real names, emails, or employers from your own CV here.\n\n| File | Family |\n|------|--------|\n| `resume-subheading.tex` | `resumeSubheading` — `\\resumeItem` bullets + `\\textbf{Category}{: items}` skills |\n| `tabularx-itemize.tex` | `tabularx-itemize` — `tabularx` header rows + `itemize` bullets |\n\n```bash\nnode extract-latex-content.mjs examples/latex-tex/resume-subheading.tex\n```\n"
+    },
+    {
+      "path": "resume-subheading.tex",
+      "encoding": "utf8",
+      "content": "% Fictional example CV for latex-tex tests (resumeSubheading family).\n\\documentclass[letterpaper,11pt]{article}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\usepackage[hidelinks]{hyperref}\n\\pdfgentounicode=1\n\n\\newcommand{\\resumeItem}[1]{\\item\\small{#1}}\n\\newcommand{\\resumeSubheading}[4]{%\n  \\item\n  \\textbf{#1} \\hfill #2 \\\\\n  \\textit{#3} \\hfill \\textit{#4}%\n}\n\\newcommand{\\resumeItemListStart}{\\begin{itemize}[leftmargin=0.15in]}\n\\newcommand{\\resumeItemListEnd}{\\end{itemize}}\n\n\\begin{document}\n\\begin{center}\n  {\\LARGE\\bfseries Alex Example}\\\\[2pt]\n  \\small alex@example.dev $|$ Example City, EX\n\\end{center}\n\n\\section{Summary}\n\\resumeItemListStart\n  \\resumeItem{Software engineer with five years building backend APIs and data pipelines.}\n\\resumeItemListEnd\n\n\\section{Work Experience}\n\\resumeItemListStart\n  \\resumeSubheading{Example Corp}{2022 -- Present}{Backend Engineer}{Remote}\n  \\resumeItemListStart\n    \\resumeItem{Built REST APIs in Python serving 20k daily active users.}\n    \\resumeItem{Reduced batch job runtime by 35 percent with parallel workers.}\n  \\resumeItemListEnd\n\\resumeItemListEnd\n\n\\section{Technical Skills}\n\\begin{itemize}[leftmargin=0.15in]\n  \\small{\\item{\n    \\textbf{Languages}{: Python, Go, SQL} \\\\\n    \\textbf{Tools}{: Docker, PostgreSQL, Redis} \\\\\n  }}\n\\end{itemize}\n\n\\end{document}\n"
+    },
+    {
+      "path": "tabularx-itemize.tex",
+      "encoding": "utf8",
+      "content": "% Fictional example CV for latex-tex tests (tabularx + itemize family).\n\\documentclass[11pt]{article}\n\\usepackage[margin=0.75in]{geometry}\n\\usepackage{tabularx}\n\\usepackage{enumitem}\n\\usepackage[hidelinks]{hyperref}\n\n\\begin{document}\n\\begin{center}\n  {\\Large\\bfseries Blair Sample}\\\\\n  blair@example.dev $|$ Sample Town, EX\n\\end{center}\n\n\\section*{Profile}\n\\begin{itemize}[leftmargin=*]\n  \\item Product-minded engineer focused on developer tools and platform reliability.\n\\end{itemize}\n\n\\section*{Experience}\n\\begin{tabularx}{\\textwidth}{@{}X r@{}}\n  Example Labs & 2021 -- Present \\\\\n\\end{tabularx}\n\\begin{itemize}[leftmargin=*]\n  \\item Operated Kubernetes clusters for internal platform teams.\n  \\item Introduced SLO dashboards that cut incident triage time.\n\\end{itemize}\n\n\\section*{Skills}\n\\begin{itemize}[leftmargin=*]\n  \\item Languages: TypeScript, Python, Bash\n  \\item Infrastructure: AWS, Terraform, Grafana\n\\end{itemize}\n\n\\end{document}\n"
+    }
+  ]
+}

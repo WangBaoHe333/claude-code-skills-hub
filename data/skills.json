@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T21:52:41.905Z",
+  "generatedAt": "2026-07-10T21:33:21.852Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -26508,6 +26508,43 @@
       "packageUrl": "/skill-files/ruvnet-ruflo-chat-format.json"
     },
     {
+      "id": "nexu-io-open-design-chat-motion-overlay",
+      "name": "chat-motion-overlay",
+      "summary": "Generate configurable chat motion overlays from a transcript or screenshot, including plain bubble scenes, app-style chat containers, optional device frames, preset or uploaded av…",
+      "summaryZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
+      "capabilityZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
+      "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "audienceZh": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "scenarios": [
+        "按视频链接抓取字幕",
+        "生成章节摘要和重点列表",
+        "保存封面图和视频基础信息"
+      ],
+      "scenariosZh": [
+        "按视频链接抓取字幕",
+        "生成章节摘要和重点列表",
+        "保存封面图和视频基础信息"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Chat Motion Overlay”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Chat Motion Overlay”，再给出文件、链接或要完成的任务。",
+      "category": "内容整理",
+      "tags": [
+        "skill",
+        "video"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/skills/chat-motion-overlay' \"$HOME/.claude/skills/chat-motion-overlay\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "skills/chat-motion-overlay",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-chat-motion-overlay.json"
+    },
+    {
       "id": "composiohq-awesome-claude-skills-chatbotkit-automation",
       "name": "chatbotkit-automation",
       "summary": "Automate Chatbotkit tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -46562,7 +46599,7 @@
     {
       "id": "nexu-io-open-design-deck-guizang-editorial",
       "name": "deck-guizang-editorial",
-      "summary": "Editorial magazine meets e-ink: 10 layouts and 5 palettes (Ink, Indigo Porcelain, Forest Ink, Kraft Paper, Dune).",
+      "summary": "|",
       "summaryZh": "Deck Guizang Editorial 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Deck Guizang Editorial 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Deck Guizang Editorial 处理具体工作流的 Claude Code 用户。",
@@ -46598,7 +46635,7 @@
     {
       "id": "nexu-io-open-design-deck-open-slide-canvas",
       "name": "deck-open-slide-canvas",
-      "summary": "Locked 1920x1080 canvas deck with React component-level free composition, not bound to a fixed template.",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -46635,7 +46672,7 @@
     {
       "id": "nexu-io-open-design-deck-swiss-international",
       "name": "deck-swiss-international",
-      "summary": "16-column grid, one saturated accent, and 22 locked layouts (Klein Blue, Lemon, Mint, Safety Orange).",
+      "summary": "|",
       "summaryZh": "Deck Swiss International 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Deck Swiss International 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Deck Swiss International 处理具体工作流的 Claude Code 用户。",
@@ -65771,24 +65808,24 @@
     {
       "id": "nexu-io-open-design-frontend-slides",
       "name": "frontend-slides",
-      "summary": "Create animation-rich, zero-dependency HTML presentations on a fixed 1920×1080 stage that scales to any viewport. Distinctive typography, committed palettes, choreographed reveals…",
-      "summaryZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
-      "capabilityZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
-      "audience": "需要使用 Frontend Slides 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Frontend Slides 处理具体工作流的 Claude Code 用户。",
+      "summary": "|",
+      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
       "scenarios": [
-        "生成 Slack 可用的表情或动图",
-        "验证 GIF 文件大小和动画限制",
-        "把多段动画组合成可发送的 GIF"
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
       ],
       "scenariosZh": [
-        "生成 Slack 可用的表情或动图",
-        "验证 GIF 文件大小和动画限制",
-        "把多段动画组合成可发送的 GIF"
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Frontend Slides”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Frontend Slides”，再给出文件、链接或要完成的任务。",
-      "category": "视觉素材",
+      "category": "演示文稿",
       "tags": [
         "skill",
         "presentations"
@@ -65808,7 +65845,7 @@
     {
       "id": "addyosmani-agent-skills-frontend-ui-engineering",
       "name": "frontend-ui-engineering",
-      "summary": "Builds production-quality UIs. Use when building or modifying user-facing interfaces. Use when creating components, implementing layouts, managing state, or when the output needs …",
+      "summary": "Builds production-quality, accessible, responsive user-facing UIs. Use when building or modifying interfaces and pages, creating components, implementing layouts, meeting WCAG acc…",
       "summaryZh": "Frontend Ui Engineering 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Frontend Ui Engineering 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Frontend Ui Engineering 处理具体工作流的 Claude Code 用户。",
@@ -65844,24 +65881,24 @@
     {
       "id": "nexu-io-open-design-fs-creative-voltage",
       "name": "fs-creative-voltage",
-      "summary": "Creative Voltage decks: retro-modern electric blue × deep navy split panels, neon yellow badges, halftone dot textures, and script flourishes on a fixed 1920×1080 stage that scale…",
-      "summaryZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
-      "capabilityZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
-      "audience": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
-      "audienceZh": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "summary": "|",
+      "summaryZh": "Fs Creative Voltage 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Fs Creative Voltage 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Fs Creative Voltage 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Fs Creative Voltage 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "渲染代码高亮、数学公式和 Mermaid 图",
-        "把长文转成可发布 HTML",
-        "套用主题生成统一风格页面"
+        "使用 Fs Creative Voltage 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "渲染代码高亮、数学公式和 Mermaid 图",
-        "把长文转成可发布 HTML",
-        "套用主题生成统一风格页面"
+        "使用 Fs Creative Voltage 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Fs Creative Voltage”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Fs Creative Voltage”，再给出文件、链接或要完成的任务。",
-      "category": "内容发布",
+      "category": "通用工具",
       "tags": [
         "skill"
       ],
@@ -65880,27 +65917,26 @@
     {
       "id": "nexu-io-open-design-fs-editorial-forest",
       "name": "fs-editorial-forest",
-      "summary": "Editorial Forest — a quiet, literary HTML deck theme: deep forest green #2e4a2a, dusty pink #e89cb1, and warm cream #efe7d4 paper set in Source Serif 4 with JetBrains Mono kickers…",
-      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "summary": "|",
+      "summaryZh": "Fs Editorial Forest 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Fs Editorial Forest 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Fs Editorial Forest 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Fs Editorial Forest 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Fs Editorial Forest 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Fs Editorial Forest 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Fs Editorial Forest”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Fs Editorial Forest”，再给出文件、链接或要完成的任务。",
-      "category": "演示文稿",
+      "category": "通用工具",
       "tags": [
-        "skill",
-        "presentations"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/fs-editorial-forest' \"$HOME/.claude/skills/fs-editorial-forest\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -65917,24 +65953,24 @@
     {
       "id": "nexu-io-open-design-fs-electric-studio",
       "name": "fs-electric-studio",
-      "summary": "Electric Studio (钴蓝工作室) HTML decks: bold clean vertical split panels — white over cobalt #4361ee — with corner brand marks, a dark accent bar on the panel seam, quote typography a…",
-      "summaryZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
-      "capabilityZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
-      "audience": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
-      "audienceZh": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "summary": "|",
+      "summaryZh": "Fs Electric Studio 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Fs Electric Studio 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Fs Electric Studio 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Fs Electric Studio 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "渲染代码高亮、数学公式和 Mermaid 图",
-        "把长文转成可发布 HTML",
-        "套用主题生成统一风格页面"
+        "使用 Fs Electric Studio 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "渲染代码高亮、数学公式和 Mermaid 图",
-        "把长文转成可发布 HTML",
-        "套用主题生成统一风格页面"
+        "使用 Fs Electric Studio 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Fs Electric Studio”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Fs Electric Studio”，再给出文件、链接或要完成的任务。",
-      "category": "内容发布",
+      "category": "通用工具",
       "tags": [
         "skill"
       ],
@@ -65953,27 +65989,26 @@
     {
       "id": "nexu-io-open-design-fs-emerald-editorial",
       "name": "fs-emerald-editorial",
-      "summary": "Emerald Editorial - magazine-cover business decks: saturated emerald #3CD896 canvas, deep navy #0F1A5C ink, warm paper #F1E9D6 tiles, double-rule masthead ornaments, Bodoni Moda 9…",
-      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "summary": "|",
+      "summaryZh": "Fs Emerald Editorial 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Fs Emerald Editorial 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Fs Emerald Editorial 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Fs Emerald Editorial 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Fs Emerald Editorial 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Fs Emerald Editorial 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Fs Emerald Editorial”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Fs Emerald Editorial”，再给出文件、链接或要完成的任务。",
-      "category": "演示文稿",
+      "category": "通用工具",
       "tags": [
-        "skill",
-        "presentations"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/fs-emerald-editorial' \"$HOME/.claude/skills/fs-emerald-editorial\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -65990,24 +66025,24 @@
     {
       "id": "nexu-io-open-design-fs-notebook-tabs",
       "name": "fs-notebook-tabs",
-      "summary": "Create editorial 'physical notebook' HTML decks: a cream paper card floating on a dark ground, mint/lavender/pink/sky index tabs on the right edge, binder holes on the left, Bodon…",
-      "summaryZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
-      "capabilityZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
-      "audience": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
-      "audienceZh": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "summary": "|",
+      "summaryZh": "Fs Notebook Tabs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Fs Notebook Tabs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Fs Notebook Tabs 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Fs Notebook Tabs 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "渲染代码高亮、数学公式和 Mermaid 图",
-        "把长文转成可发布 HTML",
-        "套用主题生成统一风格页面"
+        "使用 Fs Notebook Tabs 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "渲染代码高亮、数学公式和 Mermaid 图",
-        "把长文转成可发布 HTML",
-        "套用主题生成统一风格页面"
+        "使用 Fs Notebook Tabs 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Fs Notebook Tabs”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Fs Notebook Tabs”，再给出文件、链接或要完成的任务。",
-      "category": "内容发布",
+      "category": "通用工具",
       "tags": [
         "skill"
       ],
@@ -77037,24 +77072,24 @@
     {
       "id": "nexu-io-open-design-hps-academic-paper",
       "name": "hps-academic-paper",
-      "summary": "Academic Paper deck theme: LaTeX-paper feel on paper-white #fdfcf8 — all-serif type (Latin Modern Roman → Playfair Display fallback), ink-black body, link-blue #1a3a7a underlined …",
-      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "summary": "|",
+      "summaryZh": "Hps Academic Paper 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Hps Academic Paper 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Hps Academic Paper 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Hps Academic Paper 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Hps Academic Paper 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Hps Academic Paper 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Hps Academic Paper”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Hps Academic Paper”，再给出文件、链接或要完成的任务。",
-      "category": "演示文稿",
+      "category": "通用工具",
       "tags": [
         "skill"
       ],
@@ -77073,24 +77108,24 @@
     {
       "id": "nexu-io-open-design-hps-bauhaus",
       "name": "hps-bauhaus",
-      "summary": "Bauhaus Primary — design-history geometric deck style from the lewislulu/html-ppt-skill bauhaus theme. Aged canvas #f4efe3, red/yellow/blue primaries, hard three-band gradient, ze…",
-      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "summary": "|",
+      "summaryZh": "Hps Bauhaus 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Hps Bauhaus 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Hps Bauhaus 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Hps Bauhaus 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Hps Bauhaus 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Hps Bauhaus 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Hps Bauhaus”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Hps Bauhaus”，再给出文件、链接或要完成的任务。",
-      "category": "演示文稿",
+      "category": "通用工具",
       "tags": [
         "skill"
       ],
@@ -77109,24 +77144,24 @@
     {
       "id": "nexu-io-open-design-hps-memphis-pop",
       "name": "hps-memphis-pop",
-      "summary": "Memphis Pop deck — 80s Memphis design as a locked single-theme HTML deck. Warm cream canvas tiled edge-to-edge with a pink/teal/yellow confetti-dot pattern, 2.5px black-outlined c…",
-      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "summary": "|",
+      "summaryZh": "Hps Memphis Pop 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Hps Memphis Pop 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Hps Memphis Pop 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Hps Memphis Pop 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Hps Memphis Pop 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Hps Memphis Pop 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Hps Memphis Pop”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Hps Memphis Pop”，再给出文件、链接或要完成的任务。",
-      "category": "演示文稿",
+      "category": "通用工具",
       "tags": [
         "skill"
       ],
@@ -77145,28 +77180,26 @@
     {
       "id": "nexu-io-open-design-hps-retro-tv",
       "name": "hps-retro-tv",
-      "summary": "Retro TV deck — 80s/90s picture-tube nostalgia as a locked single-theme HTML deck. Warm cream canvas with CRT scanlines overlaid on every slide, curved-glass tube vignette, amber …",
-      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "summary": "|",
+      "summaryZh": "Hps Retro Tv 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Hps Retro Tv 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Hps Retro Tv 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Hps Retro Tv 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Hps Retro Tv 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Hps Retro Tv 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Hps Retro Tv”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Hps Retro Tv”，再给出文件、链接或要完成的任务。",
-      "category": "演示文稿",
+      "category": "通用工具",
       "tags": [
-        "skill",
-        "presentations",
-        "testing"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/hps-retro-tv' \"$HOME/.claude/skills/hps-retro-tv\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -77183,28 +77216,26 @@
     {
       "id": "nexu-io-open-design-hps-true-blueprint",
       "name": "hps-true-blueprint",
-      "summary": "True Blueprint deck theme — blueprint-blue #0b3a6f field under a 40px white drafting grid, dashed-border translucent cards, white/ice-blue ink with amber annotations, all JetBrain…",
-      "summaryZh": "读取、分析、修改和生成电子表格，适合数据清洗、报表整理和表格自动化。",
-      "capabilityZh": "读取、分析、修改和生成电子表格，适合数据清洗、报表整理和表格自动化。",
-      "audience": "数据运营、分析师、财务和需要批量处理表格的人。",
-      "audienceZh": "数据运营、分析师、财务和需要批量处理表格的人。",
+      "summary": "|",
+      "summaryZh": "Hps True Blueprint 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Hps True Blueprint 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Hps True Blueprint 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Hps True Blueprint 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "批量读写单元格和工作表",
-        "整理 CSV/XLSX 数据并生成统计结果",
-        "制作可直接打开的表格文件"
+        "使用 Hps True Blueprint 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "批量读写单元格和工作表",
-        "整理 CSV/XLSX 数据并生成统计结果",
-        "制作可直接打开的表格文件"
+        "使用 Hps True Blueprint 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Hps True Blueprint”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Hps True Blueprint”，再给出文件、链接或要完成的任务。",
-      "category": "表格处理",
+      "category": "通用工具",
       "tags": [
-        "skill",
-        "documents",
-        "spreadsheets"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/hps-true-blueprint' \"$HOME/.claude/skills/hps-true-blueprint\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -77221,27 +77252,26 @@
     {
       "id": "nexu-io-open-design-hps-y2k-chrome",
       "name": "hps-y2k-chrome",
-      "summary": "Y2K Chrome deck theme — full-bleed 5-stop silver-metal gradient canvas, chrome-clipped headlines, 72% white frosted-glass cards with inset top highlights, mega-radius corners and …",
-      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "summary": "|",
+      "summaryZh": "Hps Y2k Chrome 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Hps Y2k Chrome 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Hps Y2k Chrome 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Hps Y2k Chrome 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Hps Y2k Chrome 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Hps Y2k Chrome 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Hps Y2k Chrome”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Hps Y2k Chrome”，再给出文件、链接或要完成的任务。",
-      "category": "演示文稿",
+      "category": "通用工具",
       "tags": [
-        "skill",
-        "presentations"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/hps-y2k-chrome' \"$HOME/.claude/skills/hps-y2k-chrome\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -77405,7 +77435,7 @@
     {
       "id": "nexu-io-open-design-html-ppt-course-module",
       "name": "html-ppt-course-module",
-      "summary": "Online-course / workshop module deck — warm paper background + Playfair serif, persistent left sidebar of learning objectives, MCQ self-check page. Use for teaching modules, train…",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -77424,8 +77454,7 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Html Ppt Course Module”，再给出文件、链接或要完成的任务。",
       "category": "演示文稿",
       "tags": [
-        "skill",
-        "presentations"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-templates/html-ppt-course-module' \"$HOME/.claude/skills/html-ppt-course-module\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -77442,7 +77471,7 @@
     {
       "id": "nexu-io-open-design-html-ppt-graphify-dark-graph",
       "name": "html-ppt-graphify-dark-graph",
-      "summary": "暗底知识图谱 deck — #06060c→#0e1020 深夜渐变 + 漂浮 blur orbs、封面 SVG 力导向图谱、彩虹渐变标题、JetBrains Mono 命令行高亮、glass-morphism 卡片。适合 dev-tool / CLI / 知识图谱 / 数据可视化的发布会，\"AI-native + 科幻 + 暖色\" 调子。",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -77478,27 +77507,26 @@
     {
       "id": "nexu-io-open-design-html-ppt-hermes-cyber-terminal",
       "name": "html-ppt-hermes-cyber-terminal",
-      "summary": "暗终端 honest-review deck — #0a0c10 黑底 + 56px 赛博网格 + CRT 暗角 + 扫描线、窗口红绿灯 chrome、`$ prompt` 命令行标题、薄荷绿 #7ed3a4 大字、JetBrains Mono、stroke-only 柱状图、blinking 光标、琥珀/绿/红三档 tag、暗色代码块。适合 CLI / …",
-      "summaryZh": "Html Ppt Hermes Cyber Terminal 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Html Ppt Hermes Cyber Terminal 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 Html Ppt Hermes Cyber Terminal 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Html Ppt Hermes Cyber Terminal 处理具体工作流的 Claude Code 用户。",
+      "summary": "|",
+      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
       "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
       ],
       "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Html Ppt Hermes Cyber Terminal”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Html Ppt Hermes Cyber Terminal”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
+      "category": "演示文稿",
       "tags": [
-        "skill",
-        "api"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-templates/html-ppt-hermes-cyber-terminal' \"$HOME/.claude/skills/html-ppt-hermes-cyber-terminal\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -77515,7 +77543,7 @@
     {
       "id": "nexu-io-open-design-html-ppt-knowledge-arch-blueprint",
       "name": "html-ppt-knowledge-arch-blueprint",
-      "summary": "奶油蓝图架构 deck — 奶油纸 #F0EAE0 底色 + 单一锈红 #B5392A 高亮、48px 蓝图网格 mask、2px 黑边硬卡片、pipeline 步骤盒（其中一个抬高）、右侧锈红 insight callout、Playfair 衬线大字、SVG 虚线反馈环。零渐变零软阴影，认真且印刷友好。",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -77551,28 +77579,26 @@
     {
       "id": "nexu-io-open-design-html-ppt-obsidian-claude-gradient",
       "name": "html-ppt-obsidian-claude-gradient",
-      "summary": "GitHub 暗紫渐变 deck — GitHub-dark #0d1117 + 紫蓝 radial 环境光 + 60px 网格 mask、居中布局、紫色 pill 标签、三色渐变标题（#a855f7→#60a5fa→#34d399）、GitHub 风代码 palette、紫色左边框高亮块。适合开发者工作流 / MCP / Agent / dev tool…",
-      "summaryZh": "Html Ppt Obsidian Claude Gradient 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Html Ppt Obsidian Claude Gradient 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 Html Ppt Obsidian Claude Gradient 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Html Ppt Obsidian Claude Gradient 处理具体工作流的 Claude Code 用户。",
+      "summary": "|",
+      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
       "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
       ],
       "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Html Ppt Obsidian Claude Gradient”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Html Ppt Obsidian Claude Gradient”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
+      "category": "演示文稿",
       "tags": [
-        "skill",
-        "github",
-        "api"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-templates/html-ppt-obsidian-claude-gradient' \"$HOME/.claude/skills/html-ppt-obsidian-claude-gradient\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -77589,7 +77615,7 @@
     {
       "id": "nexu-io-open-design-html-ppt-pitch-deck",
       "name": "html-ppt-pitch-deck",
-      "summary": "Investor-ready 10-slide HTML pitch deck — white + blue→purple gradient hero, big numbers, traction bar chart, $4.5M-style ask page. Use when the user wants a fundraising deck, see…",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -77608,8 +77634,7 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Html Ppt Pitch Deck”，再给出文件、链接或要完成的任务。",
       "category": "演示文稿",
       "tags": [
-        "skill",
-        "presentations"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-templates/html-ppt-pitch-deck' \"$HOME/.claude/skills/html-ppt-pitch-deck\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -77626,7 +77651,7 @@
     {
       "id": "nexu-io-open-design-html-ppt-presenter-mode",
       "name": "html-ppt-presenter-mode",
-      "summary": "演讲者模式专用 deck — tokyo-night 默认主题，5 套主题 T 键切换，每页带 150-300 字逐字稿示例（<aside class=\"notes\">），按 S 打开 popup（CURRENT / NEXT / SCRIPT / TIMER 四张磁吸卡片）。用于技术分享、公开演讲、课程讲解，怕忘词或要提词器的场景。",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -77662,7 +77687,7 @@
     {
       "id": "nexu-io-open-design-html-ppt-product-launch",
       "name": "html-ppt-product-launch",
-      "summary": "Launch keynote deck — dark hero + light content, warm orange→peach accent, feature cards, pricing tiers, CTA. Use when announcing a product, launching a feature, or doing a keynot…",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -77808,7 +77833,7 @@
     {
       "id": "nexu-io-open-design-html-ppt-tech-sharing",
       "name": "html-ppt-tech-sharing",
-      "summary": "Conference / internal tech-talk deck — GitHub-dark, JetBrains Mono, terminal code blocks, agenda + Q&A pages. Use for engineering presentations, internal sharing sessions, confere…",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -77827,8 +77852,7 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Html Ppt Tech Sharing”，再给出文件、链接或要完成的任务。",
       "category": "演示文稿",
       "tags": [
-        "skill",
-        "github"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-templates/html-ppt-tech-sharing' \"$HOME/.claude/skills/html-ppt-tech-sharing\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -77845,7 +77869,7 @@
     {
       "id": "nexu-io-open-design-html-ppt-testing-safety-alert",
       "name": "html-ppt-testing-safety-alert",
-      "summary": "红琥珀警示 deck — 顶/底 45° 红黑 hazard 条纹、红色删除线否定标题、L1/L2/L3 绿/琥珀/红 tier 卡片、圆点状态 alert box、policy-yaml 代码块（红左边框 + bad 关键词高亮）、红绿 checklist、Q1 事故堆叠柱状图。适合安全 / 风险 / 事故复盘 / 红队 / 上线前 AI 评审 / po…",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -77882,7 +77906,7 @@
     {
       "id": "nexu-io-open-design-html-ppt-weekly-report",
       "name": "html-ppt-weekly-report",
-      "summary": "Team weekly / status-update deck — corporate clarity, 8-cell KPI grid, shipped list, 8-week bar chart, next-week table. Use for 周报, business reviews, team status updates, and exec…",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -77918,7 +77942,7 @@
     {
       "id": "nexu-io-open-design-html-ppt-xhs-pastel-card",
       "name": "html-ppt-xhs-pastel-card",
-      "summary": "柔和马卡龙慢生活 deck — 奶油 #fef8f1 底 + 三个柔光 blob、Playfair 斜体衬线 display 标题混 sans 正文、28px 圆角马卡龙卡片（桃 / 薄荷 / 天 / 紫 / 柠 / 玫）、Playfair 斜体 01-04 序号、SVG donut 图、chip+page 顶栏。适合生活方式 / 个人成长 / 慢生活 /…",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -77954,7 +77978,7 @@
     {
       "id": "nexu-io-open-design-html-ppt-xhs-white-editorial",
       "name": "html-ppt-xhs-white-editorial",
-      "summary": "白底杂志风 deck — 纯白背景 + 顶部 10 色彩虹 bar、80-110px display 标题、紫→蓝→绿→橙→粉渐变文字、马卡龙软卡片组（粉/紫/蓝/绿/橙）、黑底白字 .focus pill、引用大块。同时适合发小红书图文 + 横版 PPT 双用。",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -89944,6 +89968,42 @@
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-latex-posters.json"
     },
     {
+      "id": "santifer-career-ops-latex-tex",
+      "name": "latex tex",
+      "summary": "LaTeX-in examples (latex-tex mode)",
+      "summaryZh": "Latex Tex 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Latex Tex 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Latex Tex 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Latex Tex 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Latex Tex 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Latex Tex 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Latex Tex”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Latex Tex”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/santifer__career-ops'\ngit clone --depth 1 'https://github.com/santifer/career-ops.git' '/tmp/santifer__career-ops'\ncp -R '/tmp/santifer__career-ops/examples/latex-tex' \"$HOME/.claude/skills/latex-tex\"\nrm -rf '/tmp/santifer__career-ops'"
+      },
+      "source": {
+        "repo": "santifer/career-ops",
+        "url": "https://github.com/santifer/career-ops",
+        "path": "examples/latex-tex",
+        "type": "auto-promoted-high-star",
+        "stars": 55049
+      },
+      "packageUrl": "/skill-files/santifer-career-ops-latex-tex.json"
+    },
+    {
       "id": "foryourhealth111-pixel-vibe-skills-latex-submission-pipeline",
       "name": "latex-submission-pipeline",
       "summary": "Use when building a LaTeX manuscript submission pipeline with templates, latexmk, BibTeX/Biber, chktex, latexindent, CI PDF builds, compile debugging, and submission zip packaging.",
@@ -93680,7 +93740,7 @@
     {
       "id": "nexu-io-open-design-magazine-web-ppt",
       "name": "magazine-web-ppt",
-      "summary": "Generates an \"editorial magazine × electronic ink\" style horizontal-swipe web deck (a single HTML file), with a WebGL fluid background, serif headlines + sans-serif body, act divi…",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -93699,8 +93759,7 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Magazine Web Ppt”，再给出文件、链接或要完成的任务。",
       "category": "演示文稿",
       "tags": [
-        "skill",
-        "image"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-templates/guizang-ppt' \"$HOME/.claude/skills/magazine-web-ppt\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -99990,6 +100049,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-modern-javascript-patterns.json"
+    },
+    {
+      "id": "santifer-career-ops-modes",
+      "name": "modes",
+      "summary": "The \"brain\" of career-ops: Markdown prompt files executed by whatever AI coding CLI you use.",
+      "summaryZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
+      "capabilityZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
+      "audience": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "audienceZh": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "scenarios": [
+        "渲染代码高亮、数学公式和 Mermaid 图",
+        "把长文转成可发布 HTML",
+        "套用主题生成统一风格页面"
+      ],
+      "scenariosZh": [
+        "渲染代码高亮、数学公式和 Mermaid 图",
+        "把长文转成可发布 HTML",
+        "套用主题生成统一风格页面"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Modes”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Modes”，再给出文件、链接或要完成的任务。",
+      "category": "内容发布",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/santifer__career-ops'\ngit clone --depth 1 'https://github.com/santifer/career-ops.git' '/tmp/santifer__career-ops'\ncp -R '/tmp/santifer__career-ops/modes' \"$HOME/.claude/skills/modes\"\nrm -rf '/tmp/santifer__career-ops'"
+      },
+      "source": {
+        "repo": "santifer/career-ops",
+        "url": "https://github.com/santifer/career-ops",
+        "path": "modes",
+        "type": "auto-promoted-high-star",
+        "stars": 55049
+      },
+      "packageUrl": "/skill-files/santifer-career-ops-modes.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-module-analyzer-generate-doc",
@@ -115643,7 +115738,7 @@
     {
       "id": "addyosmani-agent-skills-performance-optimization",
       "name": "performance-optimization",
-      "summary": "Optimizes application performance. Use when performance requirements exist, when you suspect performance regressions, or when Core Web Vitals or load times need improvement. Use w…",
+      "summary": "Optimizes application performance across frontend, backend, queries, and databases. Use when performance requirements exist, when you suspect performance regressions, when Core We…",
       "summaryZh": "Performance Optimization 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Performance Optimization 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Performance Optimization 处理具体工作流的 Claude Code 用户。",
@@ -120568,7 +120663,7 @@
     {
       "id": "nexu-io-open-design-ppt-keynote",
       "name": "ppt-keynote",
-      "summary": "Apple Keynote-quality slides, one card per screen, with keyboard left/right navigation.",
+      "summary": "|",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -120587,8 +120682,7 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Ppt Keynote”，再给出文件、链接或要完成的任务。",
       "category": "演示文稿",
       "tags": [
-        "skill",
-        "presentations"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/ppt-keynote' \"$HOME/.claude/skills/ppt-keynote\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -140391,6 +140485,42 @@
       "packageUrl": "/skill-files/mattpocock-skills-setup-pre-commit.json"
     },
     {
+      "id": "mattpocock-skills-setup-ts-deep-modules",
+      "name": "setup-ts-deep-modules",
+      "summary": "Wire dependency-cruiser into a TypeScript repo so each package is a deep module — implementation hidden in subfolders, reachable only through its entry-point files. User-invoked.",
+      "summaryZh": "Setup Ts Deep Modules 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Setup Ts Deep Modules 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Setup Ts Deep Modules 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Setup Ts Deep Modules 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Setup Ts Deep Modules 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Setup Ts Deep Modules 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Setup Ts Deep Modules”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Setup Ts Deep Modules”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/setup-ts-deep-modules' \"$HOME/.claude/skills/setup-ts-deep-modules\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/in-progress/setup-ts-deep-modules",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-setup-ts-deep-modules.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-setuporion-byimpa",
       "name": "setuporion byimpa",
       "summary": "--- name: vps-setup description: Setup completo de VPS Ubuntu/Debian para produção com Docker Swarm, Traefik v3 (SSL/HTTPS automático), Portainer CE e rede overlay. Baseado no Set…",
@@ -152674,7 +152804,7 @@
     {
       "id": "code-yeongyu-oh-my-openagent-teammode",
       "name": "teammode",
-      "summary": "Codex-only team orchestration: run a named team of cooperating Codex threads with durable, script-managed state. MUST USE when the user asks Codex to create, run, coordinate, insp…",
+      "summary": "Codex-only team orchestration: run a named team of cooperating Codex workers with durable, script-managed state. MUST USE when the user asks Codex to create, run, coordinate, insp…",
       "summaryZh": "Teammode 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Teammode 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Teammode 处理具体工作流的 Claude Code 用户。",
@@ -156283,7 +156413,7 @@
     {
       "id": "mattpocock-skills-to-tickets",
       "name": "to-tickets",
-      "summary": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker — edges as text in a lo…",
+      "summary": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker — edges as text in one …",
       "summaryZh": "To Tickets 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "To Tickets 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 To Tickets 处理具体工作流的 Claude Code 用户。",
@@ -162102,27 +162232,26 @@
     {
       "id": "nexu-io-open-design-ve-midnight-editorial",
       "name": "ve-midnight-editorial",
-      "summary": "Midnight Editorial deck — cinematic editorial dark theme: deep navy #0f1729 pages with a warm gold #d4a73a accent, Instrument Serif 120px dramatic display dropping straight to 14p…",
-      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "summary": "|",
+      "summaryZh": "Ve Midnight Editorial 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ve Midnight Editorial 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ve Midnight Editorial 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ve Midnight Editorial 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Ve Midnight Editorial 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
+        "使用 Ve Midnight Editorial 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Ve Midnight Editorial”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Ve Midnight Editorial”，再给出文件、链接或要完成的任务。",
-      "category": "演示文稿",
+      "category": "通用工具",
       "tags": [
-        "skill",
-        "presentations"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/ve-midnight-editorial' \"$HOME/.claude/skills/ve-midnight-editorial\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -162139,28 +162268,26 @@
     {
       "id": "nexu-io-open-design-ve-terminal-mono",
       "name": "ve-terminal-mono",
-      "summary": "Terminal Mono deck theme: developer-native near-black #0a0e14 ground, Geist Mono everywhere (large weight-400 mono titles, never bold display), Dracula-green #50fa7b accent, faint…",
-      "summaryZh": "Ve Terminal Mono 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Ve Terminal Mono 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "summary": "|",
+      "summaryZh": "Ve Terminal Mono 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ve Terminal Mono 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Ve Terminal Mono 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 Ve Terminal Mono 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "使用 Ve Terminal Mono 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "使用 Ve Terminal Mono 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Ve Terminal Mono”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Ve Terminal Mono”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
+      "category": "通用工具",
       "tags": [
-        "skill",
-        "presentations",
-        "api"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/_official/examples/ve-terminal-mono' \"$HOME/.claude/skills/ve-terminal-mono\"\nrm -rf '/tmp/nexu-io__open-design'"
