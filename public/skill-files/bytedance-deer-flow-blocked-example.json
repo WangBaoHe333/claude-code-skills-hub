@@ -1,0 +1,10 @@
+{
+  "id": "bytedance-deer-flow-blocked-example",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: blocked-example\n---\n\n# Blocked Example\n\nThis fixture is missing a required description.\n"
+    }
+  ]
+}

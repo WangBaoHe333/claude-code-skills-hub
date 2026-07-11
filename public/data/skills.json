@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-10T21:33:21.852Z",
+  "generatedAt": "2026-07-11T21:12:18.780Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -19037,6 +19037,42 @@
         "stars": 215443
       },
       "packageUrl": "/skill-files/affaan-m-ecc-blender-motion-state-inspection.json"
+    },
+    {
+      "id": "bytedance-deer-flow-blocked-example",
+      "name": "blocked-example",
+      "summary": "This fixture is missing a required description.",
+      "summaryZh": "Blocked Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Blocked Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Blocked Example 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Blocked Example 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Blocked Example 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Blocked Example 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Blocked Example”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Blocked Example”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/bytedance__deer-flow'\ngit clone --depth 1 'https://github.com/bytedance/deer-flow.git' '/tmp/bytedance__deer-flow'\ncp -R '/tmp/bytedance__deer-flow/skills/public/skill-reviewer/evals/fixtures/blocked' \"$HOME/.claude/skills/blocked-example\"\nrm -rf '/tmp/bytedance__deer-flow'"
+      },
+      "source": {
+        "repo": "bytedance/deer-flow",
+        "url": "https://github.com/bytedance/deer-flow",
+        "path": "skills/public/skill-reviewer/evals/fixtures/blocked",
+        "type": "auto-promoted-high-star",
+        "stars": 71160
+      },
+      "packageUrl": "/skill-files/bytedance-deer-flow-blocked-example.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-blocknative-automation",
@@ -57932,6 +57968,42 @@
       "packageUrl": "/skill-files/notdog1998-yourself-skill-example-me.json"
     },
     {
+      "id": "bytedance-deer-flow-example-safe-skill",
+      "name": "example-safe-skill",
+      "summary": "Reviews a single Markdown troubleshooting note for clarity. Invoke when the user asks to improve a provided troubleshooting note.",
+      "summaryZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
+      "capabilityZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
+      "audience": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "audienceZh": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "scenarios": [
+        "渲染代码高亮、数学公式和 Mermaid 图",
+        "把长文转成可发布 HTML",
+        "套用主题生成统一风格页面"
+      ],
+      "scenariosZh": [
+        "渲染代码高亮、数学公式和 Mermaid 图",
+        "把长文转成可发布 HTML",
+        "套用主题生成统一风格页面"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Example Safe Skill”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Example Safe Skill”，再给出文件、链接或要完成的任务。",
+      "category": "内容发布",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/bytedance__deer-flow'\ngit clone --depth 1 'https://github.com/bytedance/deer-flow.git' '/tmp/bytedance__deer-flow'\ncp -R '/tmp/bytedance__deer-flow/skills/public/skill-reviewer/evals/fixtures/publish-candidate' \"$HOME/.claude/skills/example-safe-skill\"\nrm -rf '/tmp/bytedance__deer-flow'"
+      },
+      "source": {
+        "repo": "bytedance/deer-flow",
+        "url": "https://github.com/bytedance/deer-flow",
+        "path": "skills/public/skill-reviewer/evals/fixtures/publish-candidate",
+        "type": "auto-promoted-high-star",
+        "stars": 71160
+      },
+      "packageUrl": "/skill-files/bytedance-deer-flow-example-safe-skill.json"
+    },
+    {
       "id": "affaan-m-ecc-examples",
       "name": "examples",
       "summary": "Archivos de Configuración de Ejemplo",
@@ -83232,6 +83304,43 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-init-project.json"
+    },
+    {
+      "id": "bytedance-deer-flow-injection-example",
+      "name": "injection-example",
+      "summary": "Demonstrates unsafe review data. Invoke only in reviewer prompt-injection calibration tests.",
+      "summaryZh": "Injection Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Injection Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Injection Example 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Injection Example 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Injection Example 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Injection Example 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Injection Example”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Injection Example”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "testing"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/bytedance__deer-flow'\ngit clone --depth 1 'https://github.com/bytedance/deer-flow.git' '/tmp/bytedance__deer-flow'\ncp -R '/tmp/bytedance__deer-flow/skills/public/skill-reviewer/evals/fixtures/prompt-injection' \"$HOME/.claude/skills/injection-example\"\nrm -rf '/tmp/bytedance__deer-flow'"
+      },
+      "source": {
+        "repo": "bytedance/deer-flow",
+        "url": "https://github.com/bytedance/deer-flow",
+        "path": "skills/public/skill-reviewer/evals/fixtures/prompt-injection",
+        "type": "auto-promoted-high-star",
+        "stars": 71160
+      },
+      "packageUrl": "/skill-files/bytedance-deer-flow-injection-example.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-inkos",
@@ -114401,6 +114510,42 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-parseur-automation.json"
     },
     {
+      "id": "bytedance-deer-flow-partial-package-example",
+      "name": "partial-package-example",
+      "summary": "Fixture for truncated package review. Invoke only in skill-reviewer calibration.",
+      "summaryZh": "Partial Package Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Partial Package Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Partial Package Example 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Partial Package Example 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Partial Package Example 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Partial Package Example 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Partial Package Example”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Partial Package Example”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/bytedance__deer-flow'\ngit clone --depth 1 'https://github.com/bytedance/deer-flow.git' '/tmp/bytedance__deer-flow'\ncp -R '/tmp/bytedance__deer-flow/skills/public/skill-reviewer/evals/fixtures/partial-package' \"$HOME/.claude/skills/partial-package-example\"\nrm -rf '/tmp/bytedance__deer-flow'"
+      },
+      "source": {
+        "repo": "bytedance/deer-flow",
+        "url": "https://github.com/bytedance/deer-flow",
+        "path": "skills/public/skill-reviewer/evals/fixtures/partial-package",
+        "type": "auto-promoted-high-star",
+        "stars": 71160
+      },
+      "packageUrl": "/skill-files/bytedance-deer-flow-partial-package-example.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-partnerships-ecosystem",
       "name": "partnerships ecosystem",
       "summary": "World-class partnerships, alliances, channel, and ecosystem strategy skill for Codex and compatible agent runtimes.",
@@ -143317,6 +143462,42 @@
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-skill-lookup.json"
     },
     {
+      "id": "bytedance-deer-flow-skill-reviewer",
+      "name": "skill-reviewer",
+      "summary": "Reviews DeerFlow skill packages for readiness, triggers, safety boundaries, resources, and evidence. Invoke when users ask to audit, grade, or production-check an existing skill.",
+      "summaryZh": "Skill Reviewer 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Skill Reviewer 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Skill Reviewer 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Skill Reviewer 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Skill Reviewer 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Skill Reviewer 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Skill Reviewer”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Skill Reviewer”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/bytedance__deer-flow'\ngit clone --depth 1 'https://github.com/bytedance/deer-flow.git' '/tmp/bytedance__deer-flow'\ncp -R '/tmp/bytedance__deer-flow/skills/public/skill-reviewer' \"$HOME/.claude/skills/skill-reviewer\"\nrm -rf '/tmp/bytedance__deer-flow'"
+      },
+      "source": {
+        "repo": "bytedance/deer-flow",
+        "url": "https://github.com/bytedance/deer-flow",
+        "path": "skills/public/skill-reviewer",
+        "type": "auto-promoted-high-star",
+        "stars": 71160
+      },
+      "packageUrl": "/skill-files/bytedance-deer-flow-skill-reviewer.json"
+    },
+    {
       "id": "affaan-m-ecc-skill-scout",
       "name": "skill-scout",
       "summary": "新しいスキルを作成する前に、ローカル・マーケットプレイス・GitHub・Webの既存スキルを検索する。スキルの作成・ビルド・フォーク・検索を行う際に使用。",
@@ -162010,6 +162191,42 @@
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-vaex.json"
     },
     {
+      "id": "bytedance-deer-flow-vague-helper",
+      "name": "vague-helper",
+      "summary": "Helps with anything.",
+      "summaryZh": "Vague Helper 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Vague Helper 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Vague Helper 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Vague Helper 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Vague Helper 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Vague Helper 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Vague Helper”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Vague Helper”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/bytedance__deer-flow'\ngit clone --depth 1 'https://github.com/bytedance/deer-flow.git' '/tmp/bytedance__deer-flow'\ncp -R '/tmp/bytedance__deer-flow/skills/public/skill-reviewer/evals/fixtures/needs-revision' \"$HOME/.claude/skills/vague-helper\"\nrm -rf '/tmp/bytedance__deer-flow'"
+      },
+      "source": {
+        "repo": "bytedance/deer-flow",
+        "url": "https://github.com/bytedance/deer-flow",
+        "path": "skills/public/skill-reviewer/evals/fixtures/needs-revision",
+        "type": "auto-promoted-high-star",
+        "stars": 71160
+      },
+      "packageUrl": "/skill-files/bytedance-deer-flow-vague-helper.json"
+    },
+    {
       "id": "agenticnotetaking-arscontexta-validate",
       "name": "validate",
       "summary": "Schema validation for notes. Checks against domain-specific templates. Validates required fields, enum values, description quality, and link health. Non-blocking — warns but doesn…",
@@ -173814,6 +174031,43 @@
         "stars": 215443
       },
       "packageUrl": "/skill-files/affaan-m-ecc-zh-tw.json"
+    },
+    {
+      "id": "bytedance-deer-flow-zh-output-example",
+      "name": "zh-output-example",
+      "summary": "Reviews Chinese skill documentation for publication readiness. Invoke when the user asks in Chinese to review a skill.",
+      "summaryZh": "Zh Output Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Zh Output Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Zh Output Example 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Zh Output Example 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Zh Output Example 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Zh Output Example 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Zh Output Example”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Zh Output Example”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "documents"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/bytedance__deer-flow'\ngit clone --depth 1 'https://github.com/bytedance/deer-flow.git' '/tmp/bytedance__deer-flow'\ncp -R '/tmp/bytedance__deer-flow/skills/public/skill-reviewer/evals/fixtures/zh-output' \"$HOME/.claude/skills/zh-output-example\"\nrm -rf '/tmp/bytedance__deer-flow'"
+      },
+      "source": {
+        "repo": "bytedance/deer-flow",
+        "url": "https://github.com/bytedance/deer-flow",
+        "path": "skills/public/skill-reviewer/evals/fixtures/zh-output",
+        "type": "auto-promoted-high-star",
+        "stars": 71160
+      },
+      "packageUrl": "/skill-files/bytedance-deer-flow-zh-output-example.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-zhy-wechat-writing",

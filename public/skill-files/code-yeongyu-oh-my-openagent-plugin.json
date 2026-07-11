@@ -14,7 +14,7 @@
     {
       "path": "package.json",
       "encoding": "utf8",
-      "content": "{\n  \"name\": \"@code-yeongyu/omo-senpi\",\n  \"version\": \"4.16.3\",\n  \"private\": true,\n  \"description\": \"OMO Senpi adapter packaged as one local-path Pi package.\",\n  \"type\": \"module\",\n  \"keywords\": [\n    \"pi-package\",\n    \"senpi\",\n    \"omo\",\n    \"oh-my-openagent\",\n    \"pi\"\n  ],\n  \"pi\": {\n    \"extensions\": [\n      \"./extensions/omo.js\"\n    ],\n    \"skills\": [\n      \"./skills\"\n    ]\n  },\n  \"files\": [\n    \"extensions\",\n    \"skills\",\n    \"README.md\",\n    \"LICENSE\"\n  ]\n}\n"
+      "content": "{\n  \"name\": \"@code-yeongyu/omo-senpi\",\n  \"version\": \"4.17.0\",\n  \"private\": true,\n  \"description\": \"OMO Senpi adapter packaged as one local-path Pi package.\",\n  \"type\": \"module\",\n  \"keywords\": [\n    \"pi-package\",\n    \"senpi\",\n    \"omo\",\n    \"oh-my-openagent\",\n    \"pi\"\n  ],\n  \"pi\": {\n    \"extensions\": [\n      \"./extensions/omo.js\"\n    ],\n    \"skills\": [\n      \"./skills\"\n    ]\n  },\n  \"files\": [\n    \"extensions\",\n    \"skills\",\n    \"README.md\",\n    \"LICENSE\"\n  ]\n}\n"
     },
     {
       "path": "scripts/build-extension.d.mts",

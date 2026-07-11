@@ -1,0 +1,10 @@
+{
+  "id": "bytedance-deer-flow-vague-helper",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: vague-helper\ndescription: Helps with anything.\n---\n\n# Vague Helper\n\nDo the task. Use your judgment.\n"
+    }
+  ]
+}
