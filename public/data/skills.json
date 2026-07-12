@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11T21:12:18.780Z",
+  "generatedAt": "2026-07-12T21:11:20.009Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -160474,7 +160474,7 @@
     {
       "id": "code-yeongyu-oh-my-openagent-ulw-plan",
       "name": "ulw-plan",
-      "summary": "MUST USE for planning before coding: 5+ steps, ambiguous scope, multiple modules, architecture decisions, a vague 'just make it good / figure out what to build' brief, or any requ…",
+      "summary": "MUST USE for planning before coding when design uncertainty remains after discovery: ambiguous scope, competing decompositions, unclear boundaries, uncertain dependency ordering, …",
       "summaryZh": "Ulw Plan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Ulw Plan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Ulw Plan 处理具体工作流的 Claude Code 用户。",
