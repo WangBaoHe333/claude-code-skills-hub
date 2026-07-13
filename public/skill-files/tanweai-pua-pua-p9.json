@@ -1,0 +1,10 @@
+{
+  "id": "tanweai-pua-pua-p9",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: pua-p9\ndescription: \"PUA P9 alias for Codex. Codex subcommand mapping for Claude Code /pua:p9 style usage; invoke with $pua-p9.\"\nlicense: MIT\n---\n\n# pua-p9\n\nThis is a Codex CLI alias for the Claude Code `/pua:p9` command.\n\nLoad and follow the p9 skill/protocol. Operate as a P9 tech lead: write task prompts, manage P8 execution, and do not personally implement code unless explicitly reassigned.\n\nWhen this alias changes `~/.pua/config.json`, preserve unknown fields and create `~/.pua/` if missing. Do not claim completion without command/output evidence.\n"
+    }
+  ]
+}

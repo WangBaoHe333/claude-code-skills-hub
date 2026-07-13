@@ -5,6 +5,11 @@
       "path": "SKILL.md",
       "encoding": "utf8",
       "content": "---\nname: grill-me\ndescription: A relentless interview to sharpen a plan or design.\ndisable-model-invocation: true\n---\n\nRun a `/grilling` session.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "interface:\n  display_name: \"Grill Me\"\n  short_description: \"Sharpen a plan through interview\"\npolicy:\n  allow_implicit_invocation: false\n"
     }
   ]
 }

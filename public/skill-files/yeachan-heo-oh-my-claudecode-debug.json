@@ -1,0 +1,10 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-debug",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: debug\ndescription: Diagnose the current OMC session or repo state using logs, traces, state, and focused reproduction\n---\n\n# Debug\n\nUse this skill when the user wants help diagnosing a current OMC/Claude-Code session problem, workflow breakage, or confusing runtime behavior.\n\n## Goal\nFind the real failure signal quickly and explain the next corrective step.\n\n## Workflow\n1. Read the user’s issue description carefully.\n2. Inspect the most relevant local evidence first:\n   - trace tools\n   - state tools\n   - notepad / project memory when relevant\n   - failing tests or commands\n3. Reproduce the issue narrowly if possible.\n4. Distinguish symptoms from root cause.\n5. Recommend the smallest next fix or verification step.\n\n## Rules\n- Prefer real evidence over guesses.\n- Use the trace/state surfaces when the issue involves orchestration, hooks, or agent flow.\n- If the issue is actually a product/runtime bug rather than app code, say so plainly.\n- Do not prescribe broad rewrites before isolating the failure.\n\n## Output\n- Observed failure\n- Root-cause hypothesis\n- Evidence for that hypothesis\n- Smallest next action\n\n"
+    }
+  ]
+}

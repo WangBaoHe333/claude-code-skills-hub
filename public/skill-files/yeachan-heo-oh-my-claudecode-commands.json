@@ -1,0 +1,145 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-commands",
+  "files": [
+    {
+      "path": "ask.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC ask\n\nThis compatibility command keeps `/oh-my-claudecode:ask` available without loading the full `ask` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/ask/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "autoresearch.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC autoresearch\n\nThis compatibility command keeps `/oh-my-claudecode:autoresearch` available without loading the full `autoresearch` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/autoresearch/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "ccg.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC ccg\n\nThis compatibility command keeps `/oh-my-claudecode:ccg` available without loading the full `ccg` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/ccg/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "compact.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"Prepare OMC context for a manual Claude Code /compact handoff.\"\nargument-hint: \"[optional compaction note]\"\n---\n\n# OMC Manual Context Compaction Helper\n\nThis command intentionally uses the plugin-scoped name `/oh-my-claudecode:compact` instead of the bare `/compact` command. Bare `/compact` is reserved for Claude Code's native compaction command and must not be shadowed by OMC.\n\nOMC cannot invoke Claude Code's built-in `/compact` from a plugin command: `/compact` is a native slash command, not a prompt skill, and a prompt-skill call for `compact` is not a supported handoff. This helper is instruction-only and must not claim that OMC triggers compaction itself.\n\n## Dispatch\n\n1. Treat this as a request to prepare for manual Claude Code conversation compaction. Do not create a separate OMC summarizer and do not replace existing auto-compress behavior.\n2. Preserve any user note for the compaction request:\n\n```text\n$ARGUMENTS\n```\n\n3. Tell the user to run Claude Code's built-in bare `/compact` command directly. If the note above is non-empty, tell them to include it with `/compact`.\n4. Before handing off, remind the user that Claude Code's normal `PreCompact` lifecycle should run OMC's existing pre-compact hooks (`pre-compact`, project memory, and wiki preservation) when the native compaction occurs.\n5. Do not invoke a `compact` skill, do not attempt to call `/compact` on the user's behalf, and do not manually summarize the session.\n\n## User-facing handoff\n\nUse this wording, adapting only the note text:\n\n```text\nOMC prepared the compaction context, but plugin commands cannot trigger Claude Code's native /compact directly. Run this as a bare Claude Code command now:\n\n/compact $ARGUMENTS\n\nBare /compact remains Claude Code's native command; OMC does not shadow or invoke it.\n```\n"
+    },
+    {
+      "path": "configure-notifications.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC configure-notifications\n\nThis compatibility command keeps `/oh-my-claudecode:configure-notifications` available without loading the full `configure-notifications` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/configure-notifications/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "debug.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC debug\n\nThis compatibility command keeps `/oh-my-claudecode:debug` available without loading the full `debug` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/debug/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "deep-dive.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC deep-dive\n\nThis compatibility command keeps `/oh-my-claudecode:deep-dive` available without loading the full `deep-dive` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/deep-dive/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "deepinit.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC deepinit\n\nThis compatibility command keeps `/oh-my-claudecode:deepinit` available without loading the full `deepinit` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/deepinit/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "external-context.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC external-context\n\nThis compatibility command keeps `/oh-my-claudecode:external-context` available without loading the full `external-context` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/external-context/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "hud.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC hud\n\nThis compatibility command keeps `/oh-my-claudecode:hud` available without loading the full `hud` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/hud/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "learner.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC learner\n\n`/oh-my-claudecode:learner` is a compatibility alias for `/oh-my-claudecode:skillify`.\n\nRead `skills/skillify/SKILL.md`, follow its full instructions, and pass through the user's arguments:\n\n```text\n$ARGUMENTS\n```\n"
+    },
+    {
+      "path": "mcp-setup.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC mcp-setup\n\nThis compatibility command keeps `/oh-my-claudecode:mcp-setup` available without loading the full `mcp-setup` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/mcp-setup/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "omc-doctor.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC omc-doctor\n\nThis compatibility command keeps `/oh-my-claudecode:omc-doctor` available without loading the full `omc-doctor` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/omc-doctor/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "omc-setup.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC omc-setup\n\nThis compatibility command keeps `/oh-my-claudecode:omc-setup` available without loading the full `omc-setup` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/omc-setup/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "omc-teams.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC omc-teams\n\nThis compatibility command keeps `/oh-my-claudecode:omc-teams` available without loading the full `omc-teams` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/omc-teams/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "project-session-manager.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC project-session-manager\n\nThis compatibility command keeps `/oh-my-claudecode:project-session-manager` available without loading the full `project-session-manager` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/project-session-manager/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "psm.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC psm\n\n`/oh-my-claudecode:psm` is a compatibility alias for `/oh-my-claudecode:project-session-manager`.\n\nRead `skills/project-session-manager/SKILL.md`, follow its full instructions, and pass through the user's arguments:\n\n```text\n$ARGUMENTS\n```\n"
+    },
+    {
+      "path": "release.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC release\n\nThis compatibility command keeps `/oh-my-claudecode:release` available without loading the full `release` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/release/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "remember.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC remember\n\nThis compatibility command keeps `/oh-my-claudecode:remember` available without loading the full `remember` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/remember/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "sciomc.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC sciomc\n\nThis compatibility command keeps `/oh-my-claudecode:sciomc` available without loading the full `sciomc` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/sciomc/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "self-improve.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC self-improve\n\nThis compatibility command keeps `/oh-my-claudecode:self-improve` available without loading the full `self-improve` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/self-improve/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "skill.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC skill\n\nThis compatibility command keeps `/oh-my-claudecode:skill` available without loading the full `skill` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/skill/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "skillify.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC skillify\n\nThis compatibility command keeps `/oh-my-claudecode:skillify` available without loading the full `skillify` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/skillify/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "trace.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC trace\n\nThis compatibility command keeps `/oh-my-claudecode:trace` available without loading the full `trace` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/trace/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "verify.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC verify\n\nThis compatibility command keeps `/oh-my-claudecode:verify` available without loading the full `verify` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/verify/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "visual-verdict.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC visual-verdict\n\nThis compatibility command keeps `/oh-my-claudecode:visual-verdict` available without loading the full `visual-verdict` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/visual-verdict/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "wiki.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC wiki\n\nThis compatibility command keeps `/oh-my-claudecode:wiki` available without loading the full `wiki` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/wiki/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    },
+    {
+      "path": "writer-memory.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: \"\"\n---\n\n# OMC writer-memory\n\nThis compatibility command keeps `/oh-my-claudecode:writer-memory` available without loading the full `writer-memory` skill description in every Claude Code session.\n\n## Dispatch\n\n1. Read the full bundled skill instructions from the active OMC plugin/install: `skills/writer-memory/SKILL.md`.\n2. Follow that SKILL.md exactly, treating the user's arguments as:\n\n```text\n$ARGUMENTS\n```\n\nIf the file is not directly readable from the current working directory, locate it under the active `CLAUDE_PLUGIN_ROOT`/`OMC_PLUGIN_ROOT`, package root, or installed OMC plugin directory, then continue.\n"
+    }
+  ]
+}

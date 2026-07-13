@@ -1,0 +1,10 @@
+{
+  "id": "tanweai-pua-pua-yes",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: pua-yes\ndescription: \"PUA yes alias for Codex. Codex subcommand mapping for Claude Code /pua:yes style usage; invoke with $pua-yes.\"\nlicense: MIT\n---\n\n# pua-yes\n\nThis is a Codex CLI alias for the Claude Code `/pua:yes` command.\n\nLoad and follow the yes skill/protocol. Keep the same verification red lines while switching to encouragement-first narration.\n\nWhen this alias changes `~/.pua/config.json`, preserve unknown fields and create `~/.pua/` if missing. Do not claim completion without command/output evidence.\n"
+    }
+  ]
+}

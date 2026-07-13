@@ -1,0 +1,20 @@
+{
+  "id": "windmill-labs-windmill-docs-snapshot",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: docs-snapshot\ndescription: \"`llms.txt.gz` (curated page index) and `llms-full.txt.gz` (full corpus, every docs page concatenated and delimited by `Source:` lines) are a gzipped snapshot of `https://www.windm…\"\n---\n\n# docs snapshot\n\n`llms.txt.gz` (curated page index) and `llms-full.txt.gz` (full corpus, every docs page concatenated and delimited by `Source:` lines) are a gzipped snapshot of `https://www.windmill.dev/llms.txt` and `/llms-full.txt`.\n\n## 中文说明\n\nDocs Snapshot 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Docs Snapshot 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Vendored docs snapshot\n\n`llms.txt.gz` (curated page index) and `llms-full.txt.gz` (full corpus, every docs\npage concatenated and delimited by `Source:` lines) are a gzipped snapshot of\n`https://www.windmill.dev/llms.txt` and `/llms-full.txt`.\n\nThey are embedded into the binary by `../src/docs/corpus.rs` (`include_bytes!`) and\ndecompressed/parsed once at first use. This lets in-product docs search\n(`GET /api/docs/search`, `GET /api/docs/page`) — used by the AI chat, the MCP\n`searchDocs`/`readDocsPage` tools, and the `wmill docs` CLI — work with **no\nruntime network egress**, including on air-gapped instances.\n\nThe tradeoff is staleness: the snapshot is pinned to whatever was published when\n`fetch.sh` was last run. Refresh on each release:\n\n```bash\n./fetch.sh        # re-downloads and re-gzips both files\ngit add llms.txt.gz llms-full.txt.gz\n```\n"
+    },
+    {
+      "path": "fetch.sh",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env bash\n# Refresh the vendored documentation snapshot embedded into windmill-api.\n#\n# The backend self-hosts the docs corpus (see ../src/docs/) so docs search works\n# with no runtime egress. This snapshot is pinned to whatever was published on\n# windmill.dev when this script was last run — re-run it on each release to keep\n# the in-product docs search reasonably fresh, then commit the updated *.gz.\nset -euo pipefail\n\nDOCS_ORIGIN=\"${DOCS_ORIGIN:-https://www.windmill.dev}\"\nDIR=\"$(cd \"$(dirname \"${BASH_SOURCE[0]}\")\" && pwd)\"\n\nfetch() {\n  local name=\"$1\"\n  echo \"Fetching ${DOCS_ORIGIN}/${name} ...\"\n  curl -fSL \"${DOCS_ORIGIN}/${name}\" -o \"${DIR}/${name}\"\n  # -9 max compression; -n omit the original name/timestamp so the artifact is\n  # reproducible and diffs only when the docs actually change.\n  gzip -9 -n -c \"${DIR}/${name}\" > \"${DIR}/${name}.gz\"\n  rm -f \"${DIR}/${name}\"\n  echo \"  wrote ${name}.gz ($(wc -c < \"${DIR}/${name}.gz\") bytes)\"\n}\n\nfetch \"llms.txt\"\nfetch \"llms-full.txt\"\necho \"Done. Commit the updated *.gz files.\"\n"
+    }
+  ]
+}

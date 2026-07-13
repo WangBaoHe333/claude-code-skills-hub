@@ -1,0 +1,25 @@
+{
+  "id": "shuvonsec-claude-bug-bounty-burp-mcp-client",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: burp-mcp-client\ndescription: \"Connect Claude Bug Bounty to Burp Suite via PortSwigger's official [MCP Server extension](https://github.com/PortSwigger/mcp-server).\"\n---\n\n# burp mcp client\n\nConnect Claude Bug Bounty to Burp Suite via PortSwigger's official [MCP Server extension](https://github.com/PortSwigger/mcp-server).\n\n## 中文说明\n\nBurp Mcp Client 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Burp Mcp Client 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Burp Suite MCP Integration\n\nConnect Claude Bug Bounty to Burp Suite via PortSwigger's official [MCP Server extension](https://github.com/PortSwigger/mcp-server).\n\n## How It Works\n\nBurp Suite runs the MCP Server extension, which exposes an **SSE server** at `http://127.0.0.1:9876`. Since most MCP clients (Claude Code, OpenCode) only support stdio, a **Java proxy jar** (bundled with the extension) bridges the two.\n\n```\nOpenCode/Claude ←stdio→ mcp-proxy-all.jar ←SSE→ Burp Suite :9876\n```\n\nNo API key needed — the proxy connects locally to Burp.\n\n## What You Get\n\nWith Burp MCP connected, the tool can:\n\n- **Read proxy history** — every request/response captured through Burp\n- **Filter traffic** — by host, method, status code, content type\n- **Send/replay requests** — through Burp with proper auth cookies\n- **Generate Collaborator payloads** — for OOB testing (SSRF, XXE, blind injection)\n- **Access Scanner findings** — from Burp's active/passive scanner\n\n## Setup (5 minutes)\n\n### Step 1: Build and install the Burp MCP extension\n\n```bash\ngit clone https://github.com/PortSwigger/mcp-server.git\ncd mcp-server\n./gradlew embedProxyJar\n# Output: build/libs/burp-mcp-all.jar\n```\n\nIn Burp Suite: **Extensions → Add → Java → select `burp-mcp-all.jar`**\n\n### Step 2: Extract the proxy jar\n\nIn Burp Suite: **MCP tab → Extract proxy jar** — save `mcp-proxy-all.jar` somewhere permanent (e.g. `~/.local/share/burp-mcp/mcp-proxy-all.jar`).\n\n### Step 3: Verify Burp SSE server is running\n\nThe extension listens on `http://127.0.0.1:9876` by default. Confirm in the **MCP tab** that the server is enabled.\n\n### Step 4: Configure your MCP client\n\n**Claude Code** — add to `~/.claude/settings.json`:\n```json\n{\n  \"mcpServers\": {\n    \"burp\": {\n      \"command\": \"java\",\n      \"args\": [\"-jar\", \"/path/to/mcp-proxy-all.jar\", \"--sse-url\", \"http://127.0.0.1:9876\"]\n    }\n  }\n}\n```\n\n**OpenCode** — merge into `opencode.json` (project root) or `~/.config/opencode/config.json`:\n```json\n{\n  \"mcp\": {\n    \"burp\": {\n      \"type\": \"local\",\n      \"enabled\": true,\n      \"command\": [\"java\", \"-jar\", \"/path/to/mcp-proxy-all.jar\", \"--sse-url\", \"http://127.0.0.1:9876\"]\n    }\n  }\n}\n```\n\nSee `config.json` (Claude Code) and `opencode-config.json` (OpenCode) in this directory for ready-to-copy snippets.\n\n### Step 5: Verify connection\n\nStart Burp Suite with the extension loaded, then in Claude Code or OpenCode:\n\n```\nhunt target.com\n```\n\nIf Burp MCP is connected, the agent will pull from your proxy history automatically.\n\n## Without Burp\n\nAll commands work without Burp MCP. The tool falls back to:\n\n- `curl` for HTTP requests (provide auth headers manually)\n- Manual request/response pasting for validation\n- `webhook.site` or Interactsh for OOB testing instead of Collaborator\n\n## Troubleshooting\n\n| Problem | Fix |\n|---|---|\n| \"Burp MCP not connected\" | Check Burp is running with the extension loaded and SSE server enabled |\n| \"Connection refused on 9876\" | Check the MCP tab in Burp — toggle the server off/on |\n| \"java not found\" | Ensure Java is in your PATH: `java --version` |\n| \"No proxy history\" | Browse the target through Burp first — the MCP server only sees captured traffic |\n| Port conflict | Change the port in Burp's MCP tab and update `--sse-url` accordingly |\n"
+    },
+    {
+      "path": "config.json",
+      "encoding": "utf8",
+      "content": "{\n  \"mcpServers\": {\n    \"burp\": {\n      \"command\": \"java\",\n      \"args\": [\"-jar\", \"burp-mcp-server.jar\"],\n      \"env\": {\n        \"BURP_API_URL\": \"http://localhost:1337\",\n        \"BURP_API_KEY\": \"${BURP_API_KEY}\"\n      }\n    }\n  },\n  \"_comment\": \"Copy this into your .claude/settings.json mcpServers section. Set BURP_API_KEY in your environment.\"\n}\n"
+    },
+    {
+      "path": "opencode-config.json",
+      "encoding": "utf8",
+      "content": "{\n  \"$schema\": \"https://opencode.ai/config.json\",\n  \"mcp\": {\n    \"burp\": {\n      \"type\": \"local\",\n      \"enabled\": true,\n      \"command\": [\n        \"java\",\n        \"-jar\",\n        \"/path/to/mcp-proxy.jar\",\n        \"--sse-url\",\n        \"http://127.0.0.1:9876\"\n      ]\n    }\n  }\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "lee-to-ai-factory-hello-commit",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: hello-commit\ndescription: Custom commit workflow that replaces the built-in aif-commit. Demonstrates the skill replacement feature of the extension system.\nallowed-tools: Bash(git *)\ndisable-model-invocation: true\n---\n\n# Custom Commit (Hello Extension)\n\nThis skill replaces the built-in `aif-commit` to demonstrate the `replaces` feature.\n\n## Workflow\n\n1. Run `git status` and `git diff --cached`\n2. If nothing staged, suggest staging\n3. Generate a commit message with a `[hello]` prefix\n4. Ask for confirmation\n5. Execute `git commit`\n"
+    }
+  ]
+}

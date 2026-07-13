@@ -1,0 +1,10 @@
+{
+  "id": "lee-to-ai-factory-aif-hello-world",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: aif-hello-world\ndescription: A hello world skill provided by the aif-ext-hello extension. Demonstrates extension-provided skills.\n---\n\n# Hello World\n\nThis is a test skill provided by the `aif-ext-hello` extension.\n\nWhen invoked, respond with a friendly greeting and confirm that the extension system is working.\n\n## Usage\n\nSimply say \"hello\" or invoke `/aif-hello-world` to test.\n"
+    }
+  ]
+}

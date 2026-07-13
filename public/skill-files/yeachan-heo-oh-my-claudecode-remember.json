@@ -1,0 +1,10 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-remember",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: remember\ndescription: Review reusable project knowledge and decide what belongs in project memory, notepad, or durable docs\n---\n\n# Remember\n\nUse this skill when the user wants to preserve or organize useful knowledge discovered during a session.\n\n## Goal\nPromote durable, reusable knowledge into the right memory surface instead of leaving it buried in chat history.\n\n## Memory surfaces\n- **Project memory** — durable team/project knowledge\n- **Notepad priority** — short high-signal context for the next turns\n- **Notepad working** — temporary active-session notes\n- **Docs / AGENTS / CLAUDE files** — durable instructions and conventions when they truly belong there\n\n## Workflow\n1. Gather the relevant session findings.\n2. Classify each item:\n   - durable project fact\n   - temporary working note\n   - operator preference or instruction\n   - duplicate / stale / conflicting information\n3. Propose the best destination for each item.\n4. Write or update only the appropriate memory surface.\n5. Call out duplicates or conflicts that should be cleaned up.\n\n## Rules\n- Do not dump everything into one store.\n- Prefer project memory for durable team knowledge.\n- Prefer notepad for short-lived working context.\n- Keep entries concise and actionable.\n- If something is uncertain, mark it as uncertain rather than storing it as fact.\n\n## Output\n- What was stored\n- Where it was stored\n- Any duplicates/conflicts found\n\n"
+    }
+  ]
+}

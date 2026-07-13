@@ -1,0 +1,20 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-vendor-mcp-server",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: vendor-mcp-server\ndescription: \"Vendor Company-Context MCP Server\"\n---\n\n# vendor mcp server\n\nVendor Company-Context MCP Server\n\n## 中文说明\n\nVendor Mcp Server 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Vendor Mcp Server 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Vendor Company-Context MCP Server\n\nThis is a tiny runnable reference server for the company-context contract documented in:\n\n- [`docs/company-context-interface.md`](../../docs/company-context-interface.md)\n\nIt exposes exactly one tool:\n\n- `get_company_context`\n\n## Run\n\nFrom the repo root:\n\n```bash\nnode examples/vendor-mcp-server/server.mjs\n```\n\n## Register with Claude Code\n\n```bash\nclaude mcp add company-context -- node examples/vendor-mcp-server/server.mjs\n```\n\nThen configure OMC:\n\n```jsonc\n{\n  \"companyContext\": {\n    \"tool\": \"mcp__company-context__get_company_context\",\n    \"onError\": \"warn\"\n  }\n}\n```\n\nUse one of:\n\n- `.claude/omc.jsonc`\n- `~/.config/claude-omc/config.jsonc`\n\n## Contract Notes\n\n- Input: `{ query: string }`\n- Output: `{ context: string }`\n- Returned markdown is informational only.\n- This example is intentionally tiny and static. Real vendors can load policy from files, databases, or internal services as long as they preserve the same tool contract.\n"
+    },
+    {
+      "path": "server.mjs",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env node\n\nimport { Server } from \"@modelcontextprotocol/sdk/server/index.js\";\nimport { StdioServerTransport } from \"@modelcontextprotocol/sdk/server/stdio.js\";\nimport {\n  CallToolRequestSchema,\n  ListToolsRequestSchema,\n} from \"@modelcontextprotocol/sdk/types.js\";\n\nconst TOOL = {\n  name: \"get_company_context\",\n  description: \"Return informational-only company context as markdown.\",\n  inputSchema: {\n    type: \"object\",\n    properties: {\n      query: {\n        type: \"string\",\n        description: \"Natural-language summary of the current task or workflow stage.\",\n      },\n    },\n    required: [\"query\"],\n    additionalProperties: false,\n  },\n};\n\nfunction buildContext(query) {\n  return [\n    \"# Company Context\",\n    \"\",\n    \"## Security\",\n    \"- Handle customer data as confidential.\",\n    \"- Prefer least-privilege defaults when access levels are unclear.\",\n    \"\",\n    \"## Review checklist\",\n    \"- Keep changes narrow and reversible.\",\n    \"- Preserve auditability for behavior changes.\",\n    \"\",\n    \"## Domain glossary\",\n    \"- Tenant: a single customer workspace.\",\n    \"- Policy: an organization rule that explains expected behavior.\",\n    \"\",\n    \"## Query summary\",\n    query,\n  ].join(\"\\n\");\n}\n\nconst server = new Server(\n  {\n    name: \"company-context\",\n    version: \"1.0.0\",\n  },\n  {\n    capabilities: {\n      tools: {},\n    },\n  },\n);\n\nserver.setRequestHandler(ListToolsRequestSchema, async () => ({\n  tools: [TOOL],\n}));\n\nserver.setRequestHandler(CallToolRequestSchema, async (request) => {\n  const { name, arguments: args } = request.params;\n  if (name !== TOOL.name) {\n    return {\n      content: [{ type: \"text\", text: `Unknown tool: ${name}` }],\n      isError: true,\n    };\n  }\n\n  const query = typeof args?.query === \"string\" ? args.query : \"\";\n  const context = buildContext(query);\n\n  return {\n    content: [{ type: \"text\", text: context }],\n    structuredContent: { context },\n  };\n});\n\nconst transport = new StdioServerTransport();\nawait server.connect(transport);\n"
+    }
+  ]
+}

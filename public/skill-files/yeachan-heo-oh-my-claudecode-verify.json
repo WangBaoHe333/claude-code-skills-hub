@@ -1,0 +1,10 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-verify",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: verify\ndescription: Verify that a change really works before you claim completion\n---\n\n# Verify\n\nUse this skill when the user wants confidence that a feature, fix, or refactor actually works.\n\n## Goal\nTurn vague “it should work” claims into concrete evidence.\n\n## Workflow\n1. Identify the exact behavior that must be proven.\n2. Prefer existing tests first.\n3. If coverage is missing, run the narrowest direct verification commands available.\n4. If direct automation is not enough, describe the manual validation steps and gather concrete observable evidence.\n5. Report only what was actually verified.\n\n## Verification order\n1. Existing tests\n2. Typecheck / build\n3. Narrow direct command checks\n4. Manual or interactive validation\n\n## Rules\n- Do not say a change is complete without evidence.\n- If a check fails, include the failure clearly.\n- If no realistic verification path exists, say that explicitly instead of bluffing.\n- Prefer concise evidence summaries over noisy logs.\n\n## Output\n- What was verified\n- Which commands/tests were run\n- What passed\n- What failed or remains unverified\n\n"
+    }
+  ]
+}

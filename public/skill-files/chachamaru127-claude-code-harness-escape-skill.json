@@ -1,0 +1,10 @@
+{
+  "id": "chachamaru127-claude-code-harness-escape-skill",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: \"escape-skill\"\ndescription-en: \"A \\\"quoted\\\" path C:\\\\tools\\\\skill\"\ndisable-model-invocation: true\nuser-invocable: false\n---\nTemp escape skill\n"
+    }
+  ]
+}

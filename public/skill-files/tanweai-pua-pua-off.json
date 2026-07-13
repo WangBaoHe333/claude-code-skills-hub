@@ -1,0 +1,10 @@
+{
+  "id": "tanweai-pua-pua-off",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: pua-off\ndescription: \"PUA off alias for Codex. Codex subcommand mapping for Claude Code /pua:off style usage; invoke with $pua-off.\"\nlicense: MIT\n---\n\n# pua-off\n\nThis is a Codex CLI alias for the Claude Code `/pua:off` command.\n\nDisable PUA always-on mode by setting ~/.pua/config.json always_on=false and feedback_frequency=0. Then report [PUA OFF].\n\nWhen this alias changes `~/.pua/config.json`, preserve unknown fields and create `~/.pua/` if missing. Do not claim completion without command/output evidence.\n"
+    }
+  ]
+}

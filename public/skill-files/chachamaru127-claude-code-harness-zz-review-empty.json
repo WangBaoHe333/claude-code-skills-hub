@@ -1,0 +1,10 @@
+{
+  "id": "chachamaru127-claude-code-harness-zz-review-empty",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname:\ndescription-en:\ndisable-model-invocation: true\nuser-invocable: false\n---\nTemp empty skill\n"
+    }
+  ]
+}

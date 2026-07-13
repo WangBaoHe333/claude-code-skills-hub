@@ -1,0 +1,20 @@
+{
+  "id": "feast-dev-feast-mcp-feature-store",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: mcp-feature-store\ndescription: \"Feast MCP Feature Server Example\"\n---\n\n# mcp feature store\n\nFeast MCP Feature Server Example\n\n## 中文说明\n\nMcp Feature Store 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Mcp Feature Store 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": " # Feast MCP Feature Server Example\n\nThis example demonstrates how to enable MCP (Model Context Protocol) support in Feast, allowing AI agents and applications to interact with your features through standardized MCP interfaces.\n\n## Prerequisites\n\n1. Python 3.8+\n2. Feast installed\n3. FastAPI MCP library\n\n## Installation\n\n1. Install Feast with MCP support:\n```bash\npip install feast[mcp]\n```\n\nAlternatively, you can install the dependencies separately:\n```bash\npip install feast\npip install fastapi_mcp\n```\n\n## Setup\n\n1. Navigate to this example directory within your cloned Feast repository:\n```bash\ncd examples/mcp_feature_store\n```\n\n2. Initialize a Feast repository in this directory. We'll use the existing `feature_store.yaml` that's already configured for MCP:\n```bash\nfeast init . \n```\nThis will create a `data` subdirectory and a `feature_repo` subdirectory if they don't exist, and will use the `feature_store.yaml` present in the current directory (`examples/mcp_feature_store`).\n\n3. Apply the feature store configuration:\n```bash\ncd feature_repo \nfeast apply\ncd .. # Go back to examples/mcp_feature_store for the next steps\n```\n\n## Starting the MCP-Enabled Feature Server\n\nStart the Feast feature server with MCP support:\n\n```bash\nfeast serve --host 0.0.0.0 --port 6566\n```\n\nIf MCP is properly configured, you should see a log message indicating that MCP support has been enabled:\n\n```\nINFO:feast.feature_server:MCP support has been enabled for the Feast feature server\n```\n\n## Available MCP Tools\n\nThe fastapi_mcp integration automatically exposes your Feast feature server's FastAPI endpoints as MCP tools. This means AI assistants can:\n\n- **Call `/get-online-features`** to retrieve features from the feature store\n- **Use `/health`** to check server status  \n\n\n## Configuration Details\n\nThe key configuration that enables MCP support:\n\n```yaml\nfeature_server:\n    type: mcp                    # Use MCP feature server type\n    enabled: true               # Enable feature server\n    mcp_enabled: true           # Enable MCP protocol support\n    mcp_server_name: \"feast-feature-store\"\n    mcp_server_version: \"1.0.0\"\n```"
+    },
+    {
+      "path": "feature_store.yaml",
+      "encoding": "utf8",
+      "content": "project: feast_mcp_example\nregistry: data/registry.db\nprovider: local\n\nonline_store:\n    type: sqlite\n    path: data/online_store.db\n\noffline_store:\n    type: file\n\n# MCP Feature Server Configuration\nfeature_server:\n    type: mcp\n    enabled: true\n    mcp_enabled: true  # Enable MCP support - defaults to false\n    mcp_transport: http\n    mcp_server_name: \"feast-feature-store\"\n    mcp_server_version: \"1.0.0\"\n    feature_logging:\n        enabled: false\n\nentity_key_serialization_version: 3\n"
+    }
+  ]
+}

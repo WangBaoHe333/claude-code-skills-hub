@@ -1,0 +1,20 @@
+{
+  "id": "shuvonsec-claude-bug-bounty-hooks",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: hooks\ndescription: \"Claude Code hook configuration for the bug bounty toolkit.\"\n---\n\n# hooks\n\nClaude Code hook configuration for the bug bounty toolkit.\n\n## 中文说明\n\nHooks 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Hooks 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Hooks\n\nClaude Code hook configuration for the bug bounty toolkit.\n\n| File | Purpose |\n|:---|:---|\n| `hooks.json` | Hook definitions — runs safety checks before tool calls, enforces scope validation |\n\nHooks are loaded automatically by Claude Code from `~/.claude/hooks/` after `install.sh`.\n"
+    },
+    {
+      "path": "hooks.json",
+      "encoding": "utf8",
+      "content": "{\n  \"hooks\": [\n    {\n      \"event\": \"SessionStart\",\n      \"command\": \"echo 'Bug Bounty Session Started. Run /recon <target> to begin or /hunt to continue an active target. Check scope FIRST.'\"\n    },\n    {\n      \"event\": \"SessionStop\",\n      \"command\": \"echo 'Session ended. Save findings to findings/. Run /validate on any leads before next session.'\"\n    },\n    {\n      \"event\": \"Stop\",\n      \"command\": \"echo 'Hunt complete. Checklist: findings saved? scope verified? reports in reports/? run /validate on any unvalidated leads.'\"\n    }\n  ]\n}\n"
+    }
+  ]
+}
