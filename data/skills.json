@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T21:18:42.356Z",
+  "generatedAt": "2026-07-14T21:21:06.259Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -2650,6 +2650,42 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-adr-index.json"
+    },
+    {
+      "id": "ruvnet-ruflo-adr-reindex",
+      "name": "adr-reindex",
+      "summary": "Reconcile the ADR index against a DELETED ADR file or relation line by dropping and rebuilding adr-patterns + adr-edges from scratch (scripts/reindex.mjs). Use when adr-index alon…",
+      "summaryZh": "Adr Reindex 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Adr Reindex 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Adr Reindex 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Adr Reindex 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Adr Reindex 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Adr Reindex 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Adr Reindex”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Adr Reindex”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-adr/skills/adr-reindex' \"$HOME/.claude/skills/adr-reindex\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-adr/skills/adr-reindex",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-adr-reindex.json"
     },
     {
       "id": "ruvnet-ruflo-adr-review",
@@ -141277,7 +141313,7 @@
     {
       "id": "ruvnet-ruflo-ruflo-adr",
       "name": "ruflo adr",
-      "summary": "ADR lifecycle management -- create, index, supersede, and link Architecture Decision Records to code.",
+      "summary": "ADR lifecycle management -- create, index, reconcile, supersede, and link Architecture Decision Records to code.",
       "summaryZh": "Ruflo Adr 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Ruflo Adr 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Ruflo Adr 处理具体工作流的 Claude Code 用户。",
@@ -166437,6 +166473,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-tmux.json"
+    },
+    {
+      "id": "mattpocock-skills-to-questionnaire",
+      "name": "to-questionnaire",
+      "summary": "Turn a decision you can't fully answer into a questionnaire for someone else to fill in.",
+      "summaryZh": "To Questionnaire 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "To Questionnaire 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 To Questionnaire 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 To Questionnaire 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 To Questionnaire 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 To Questionnaire 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 To Questionnaire”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 To Questionnaire”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/to-questionnaire' \"$HOME/.claude/skills/to-questionnaire\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/in-progress/to-questionnaire",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-to-questionnaire.json"
     },
     {
       "id": "mattpocock-skills-to-spec",
