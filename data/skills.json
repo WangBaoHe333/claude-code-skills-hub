@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-15T21:21:14.515Z",
+  "generatedAt": "2026-07-16T21:31:37.304Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -19247,6 +19247,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-batch-resume-screener.json"
+    },
+    {
+      "id": "mattpocock-skills-batch-grill-me",
+      "name": "batch-grill-me",
+      "summary": "A relentless interview that asks every frontier question at once, round by round.",
+      "summaryZh": "Batch Grill Me 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Batch Grill Me 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Batch Grill Me 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Batch Grill Me 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Batch Grill Me 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Batch Grill Me 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Batch Grill Me”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Batch Grill Me”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/batch-grill-me' \"$HOME/.claude/skills/batch-grill-me\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/in-progress/batch-grill-me",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-batch-grill-me.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-battlenet-automation",
