@@ -14,7 +14,7 @@
     {
       "path": "groups/index.json",
       "encoding": "utf8",
-      "content": "{\n  \"schema_version\": \"vgo-skill-catalog.groups.v1\",\n  \"owner\": \"skill-catalog\",\n  \"groups\": [\n    {\n      \"group_id\": \"governed-core\",\n      \"skill_ids\": [\n        \"vibe\",\n        \"brainstorming\",\n        \"writing-plans\",\n        \"systematic-debugging\",\n        \"tdd-guide\"\n      ]\n    },\n    {\n      \"group_id\": \"compat-support\",\n      \"skill_ids\": [\n        \"cancel-ralph\",\n        \"dialectic\",\n        \"local-vco-roles\",\n        \"ralph-loop\",\n        \"spec-kit-vibe-compat\",\n        \"subagent-driven-development\",\n        \"superclaude-framework-compat\",\n        \"think-harder\"\n      ]\n    }\n  ]\n}\n"
+      "content": "{\n  \"schema_version\": \"vgo-skill-catalog.groups.v1\",\n  \"owner\": \"skill-catalog\",\n  \"groups\": [\n    {\n      \"group_id\": \"governed-core\",\n      \"skill_ids\": [\n        \"vibe\",\n        \"brainstorming\",\n        \"writing-plans\",\n        \"systematic-debugging\",\n        \"tdd-guide\"\n      ]\n    },\n    {\n      \"group_id\": \"compat-support\",\n      \"skill_ids\": [\n        \"cancel-ralph\",\n        \"dialectic\",\n        \"local-vco-roles\",\n        \"ralph-loop\",\n        \"spec-kit-vibe-compat\",\n        \"subagent-driven-development\",\n        \"think-harder\"\n      ]\n    }\n  ]\n}\n"
     },
     {
       "path": "metadata/index.json",

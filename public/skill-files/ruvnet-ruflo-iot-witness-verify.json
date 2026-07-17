@@ -4,7 +4,7 @@
     {
       "path": "SKILL.md",
       "encoding": "utf8",
-      "content": "---\nname: iot-witness-verify\ndescription: Verify witness chain integrity and detect provenance gaps\nallowed-tools: Bash(npx *) mcp__claude-flow__memory_store Read\nargument-hint: \"<device-id>\"\n---\nVerify the witness chain integrity for a Cognitum Seed device.\n\nSteps:\n1. `npx -y -p @claude-flow/plugin-iot-cognitum@latest cognitum-iot witness verify DEVICE_ID`\n2. Check for epoch gaps and hash chain breaks\n3. Report integrity score (0.0–1.0)\n4. If gaps found, store for audit trail:\n   `mcp__claude-flow__memory_store({ key: \"iot-witness-gap-DEVICEID\", value: \"Gap from EPOCH to EPOCH\", namespace: \"iot-audit\" })`\n"
+      "content": "---\nname: iot-witness-verify\ndescription: Verify witness chain integrity and detect provenance gaps\nallowed-tools: Bash(npx *) mcp__plugin_ruflo-core_ruflo__memory_store Read\nargument-hint: \"<device-id>\"\n---\nVerify the witness chain integrity for a Cognitum Seed device.\n\nSteps:\n1. `npx -y -p @claude-flow/plugin-iot-cognitum@latest cognitum-iot witness verify DEVICE_ID`\n2. Check for epoch gaps and hash chain breaks\n3. Report integrity score (0.0–1.0)\n4. If gaps found, store for audit trail:\n   `mcp__plugin_ruflo-core_ruflo__memory_store({ key: \"iot-witness-gap-DEVICEID\", value: \"Gap from EPOCH to EPOCH\", namespace: \"iot-audit\" })`\n"
     }
   ]
 }

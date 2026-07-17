@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T21:31:37.304Z",
+  "generatedAt": "2026-07-17T21:14:19.927Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -55911,7 +55911,7 @@
     {
       "id": "foryourhealth111-pixel-vibe-skills-documentation-lookup",
       "name": "documentation-lookup",
-      "summary": "This skill should be used when the user asks about libraries, frameworks, API references, or needs code examples. Activates for setup questions, code generation involving librarie…",
+      "summary": "Use when the user needs current library, framework, or API documentation and version-specific code examples.",
       "summaryZh": "Documentation Lookup 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Documentation Lookup 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Documentation Lookup 处理具体工作流的 Claude Code 用户。",
@@ -56175,7 +56175,7 @@
     {
       "id": "anthropics-skills-docx",
       "name": "docx",
-      "summary": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files). Triggers include: any mention of 'Word doc', 'word document', '.docx', or…",
+      "summary": "Use this skill whenever the user wants to create, read, edit, or manipulate Word documents (.docx files) or Word templates (.dotx files). Triggers include: any mention of 'Word do…",
       "summaryZh": "读取、提取、拆分、合并和检查 PDF 页面内容，适合处理合同、论文、发票、报告和扫描资料。",
       "capabilityZh": "读取、提取、拆分、合并和检查 PDF 页面内容，适合处理合同、论文、发票、报告和扫描资料。",
       "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
@@ -86616,6 +86616,43 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-hyperise-automation.json"
     },
     {
+      "id": "code-yeongyu-oh-my-openagent-hyperplan",
+      "name": "hyperplan",
+      "summary": "Adversarial multi-agent planning skill for omo-senpi. Self-orchestrates a 5-member hostile team (categories unspecified-low, unspecified-high, deep, ultrabrain, artistry) via the …",
+      "summaryZh": "Hyperplan 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Hyperplan 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Hyperplan 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Hyperplan 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Hyperplan”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Hyperplan”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-senpi/skills/hyperplan' \"$HOME/.claude/skills/hyperplan\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/omo-senpi/skills/hyperplan",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-hyperplan.json"
+    },
+    {
       "id": "foryourhealth111-pixel-vibe-skills-hypothesis-generation",
       "name": "hypothesis-generation",
       "summary": "Structured hypothesis formulation from observations. Use when you have experimental observations or data and need to formulate testable hypotheses with predictions, propose mechan…",
@@ -89553,7 +89590,7 @@
     {
       "id": "foryourhealth111-pixel-vibe-skills-install",
       "name": "install",
-      "summary": "公开安装现在从发布版本 zip 开始。先下载发布版本 zip，解压后在这个发布目录里运行脚本。安装器随后只做一件事：把 `vibe` 安装到一个 skills 目录下。",
+      "summary": "公开安装应从发布版本 zip 开始，不要直接从仓库 checkout 安装。下载当前的 [vibe-skills-4.0.0-public.zip](https://github.com/foryourhealth111-pixel/Vibe-Skills/releases/download/v4.0.0/vibe-skills-4.0.0-public.…",
       "summaryZh": "Install 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Install 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Install 处理具体工作流的 Claude Code 用户。",
@@ -89572,7 +89609,8 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Install”，再给出文件、链接或要完成的任务。",
       "category": "通用工具",
       "tags": [
-        "skill"
+        "skill",
+        "github"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/docs/install' \"$HOME/.claude/skills/install\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
@@ -96672,12 +96710,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/lcx-contribute-bug-fix' \"$HOME/.claude/skills/lcx-contribute-bug-fix\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-codex/plugin/components/lcx/skills/lcx-contribute-bug-fix' \"$HOME/.claude/skills/lcx-contribute-bug-fix\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
       },
       "source": {
         "repo": "code-yeongyu/oh-my-openagent",
         "url": "https://github.com/code-yeongyu/oh-my-openagent",
-        "path": "packages/shared-skills/skills/lcx-contribute-bug-fix",
+        "path": "packages/omo-codex/plugin/components/lcx/skills/lcx-contribute-bug-fix",
         "type": "auto-promoted-high-star",
         "stars": 62215
       },
@@ -96710,12 +96748,12 @@
         "testing"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/lcx-doctor' \"$HOME/.claude/skills/lcx-doctor\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-codex/plugin/components/lcx/skills/lcx-doctor' \"$HOME/.claude/skills/lcx-doctor\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
       },
       "source": {
         "repo": "code-yeongyu/oh-my-openagent",
         "url": "https://github.com/code-yeongyu/oh-my-openagent",
-        "path": "packages/shared-skills/skills/lcx-doctor",
+        "path": "packages/omo-codex/plugin/components/lcx/skills/lcx-doctor",
         "type": "auto-promoted-high-star",
         "stars": 62215
       },
@@ -96747,12 +96785,12 @@
         "github"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/lcx-report-bug' \"$HOME/.claude/skills/lcx-report-bug\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-codex/plugin/components/lcx/skills/lcx-report-bug' \"$HOME/.claude/skills/lcx-report-bug\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
       },
       "source": {
         "repo": "code-yeongyu/oh-my-openagent",
         "url": "https://github.com/code-yeongyu/oh-my-openagent",
-        "path": "packages/shared-skills/skills/lcx-report-bug",
+        "path": "packages/omo-codex/plugin/components/lcx/skills/lcx-report-bug",
         "type": "auto-promoted-high-star",
         "stars": 62215
       },
@@ -99391,6 +99429,42 @@
         "stars": 2326
       },
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-local-vco-roles.json"
+    },
+    {
+      "id": "homeassistant-ai-ha-mcp-locales",
+      "name": "locales",
+      "summary": "The settings page discovers every `*.json` catalog in this directory. To add a language, copy `en.json`, rename it to the language code (for example `it.json`), translate the valu…",
+      "summaryZh": "Locales 用来翻译和润色文本，适合把文章、说明、界面文案或资料转换成目标语言。",
+      "capabilityZh": "Locales 用来翻译和润色文本，适合把文章、说明、界面文案或资料转换成目标语言。",
+      "audience": "需要使用 Locales 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Locales 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "翻译 Markdown、文章或说明文档",
+        "保留原文结构并润色译文",
+        "把技术内容改写成更自然的中文或英文"
+      ],
+      "scenariosZh": [
+        "翻译 Markdown、文章或说明文档",
+        "保留原文结构并润色译文",
+        "把技术内容改写成更自然的中文或英文"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Locales”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Locales”，再给出文件、链接或要完成的任务。",
+      "category": "翻译 / 本地化",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/homeassistant-ai__ha-mcp'\ngit clone --depth 1 'https://github.com/homeassistant-ai/ha-mcp.git' '/tmp/homeassistant-ai__ha-mcp'\ncp -R '/tmp/homeassistant-ai__ha-mcp/src/ha_mcp/settings_ui/locales' \"$HOME/.claude/skills/locales\"\nrm -rf '/tmp/homeassistant-ai__ha-mcp'"
+      },
+      "source": {
+        "repo": "homeassistant-ai/ha-mcp",
+        "url": "https://github.com/homeassistant-ai/ha-mcp",
+        "path": "src/ha_mcp/settings_ui/locales",
+        "type": "auto-promoted-high-star",
+        "stars": 3950
+      },
+      "packageUrl": "/skill-files/homeassistant-ai-ha-mcp-locales.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-lodgify-automation",
@@ -128691,7 +128765,7 @@
     {
       "id": "anthropics-skills-pptx",
       "name": "pptx",
-      "summary": "Use this skill any time a .pptx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, parsing, or e…",
+      "summary": "Use this skill any time a .pptx or .potx file is involved in any way — as input, output, or both. This includes: creating slide decks, pitch decks, or presentations; reading, pars…",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -141568,7 +141642,7 @@
     {
       "id": "ruvnet-ruflo-ruflo-browser",
       "name": "ruflo browser",
-      "summary": "Session-as-skill browser automation. Playwright-backed via 23 `mcp__claude-flow__browser_*` tools, with each session captured as a first-class **RVF cognitive container** holding …",
+      "summary": "Session-as-skill browser automation. Playwright-backed via 23 `mcp__plugin_ruflo-core_ruflo__browser_*` tools, with each session captured as a first-class **RVF cognitive containe…",
       "summaryZh": "Ruflo Browser 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Ruflo Browser 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Ruflo Browser 处理具体工作流的 Claude Code 用户。",
@@ -145439,6 +145513,43 @@
         "stars": 37702
       },
       "packageUrl": "/skill-files/yeachan-heo-oh-my-claudecode-sciomc.json"
+    },
+    {
+      "id": "shubhamsaboo-awesome-llm-apps-scope-creep-detector",
+      "name": "scope creep detector",
+      "summary": "Checks a working, staged, saved, or branch diff against a one-line intent. It flags unrelated paths, new dependencies, public API renames, config or CI edits, oversized hunks, for…",
+      "summaryZh": "Scope Creep Detector 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Scope Creep Detector 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Scope Creep Detector 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Scope Creep Detector 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Scope Creep Detector”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Scope Creep Detector”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Shubhamsaboo__awesome-llm-apps'\ngit clone --depth 1 'https://github.com/Shubhamsaboo/awesome-llm-apps.git' '/tmp/Shubhamsaboo__awesome-llm-apps'\ncp -R '/tmp/Shubhamsaboo__awesome-llm-apps/agent_skills/scope-creep-detector' \"$HOME/.claude/skills/scope-creep-detector\"\nrm -rf '/tmp/Shubhamsaboo__awesome-llm-apps'"
+      },
+      "source": {
+        "repo": "Shubhamsaboo/awesome-llm-apps",
+        "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+        "path": "agent_skills/scope-creep-detector",
+        "type": "auto-promoted-high-star",
+        "stars": 118441
+      },
+      "packageUrl": "/skill-files/shubhamsaboo-awesome-llm-apps-scope-creep-detector.json"
     },
     {
       "id": "garrytan-gstack-scrape",
@@ -160044,42 +160155,6 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-superchat-automation.json"
     },
     {
-      "id": "foryourhealth111-pixel-vibe-skills-superclaude-framework-compat",
-      "name": "superclaude-framework-compat",
-      "summary": "Codex compatibility layer for SuperClaude /sc:* commands with vibe-adapted routing.",
-      "summaryZh": "Superclaude Framework Compat 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Superclaude Framework Compat 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Superclaude Framework Compat 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Superclaude Framework Compat 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Superclaude Framework Compat 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Superclaude Framework Compat 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Superclaude Framework Compat”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Superclaude Framework Compat”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/bundled/skills/superclaude-framework-compat' \"$HOME/.claude/skills/superclaude-framework-compat\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
-      },
-      "source": {
-        "repo": "foryourhealth111-pixel/Vibe-Skills",
-        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-        "path": "bundled/skills/superclaude-framework-compat",
-        "type": "auto-promoted-high-star",
-        "stars": 2326
-      },
-      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-superclaude-framework-compat.json"
-    },
-    {
       "id": "leoyeai-openclaw-master-skills-superfluid",
       "name": "superfluid",
       "summary": ">",
@@ -170609,42 +170684,6 @@
       "packageUrl": "/skill-files/yeachan-heo-oh-my-claudecode-ultraqa.json"
     },
     {
-      "id": "code-yeongyu-oh-my-openagent-ultraresearch",
-      "name": "ultraresearch",
-      "summary": "Legacy alias for ulw-research. MUST USE when the user asks for ultraresearch, /ultraresearch, or $ultraresearch; immediately load and follow the ulw-research skill.",
-      "summaryZh": "Ultraresearch 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Ultraresearch 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Ultraresearch 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Ultraresearch 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Ultraresearch 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Ultraresearch 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Ultraresearch”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Ultraresearch”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/ultraresearch' \"$HOME/.claude/skills/ultraresearch\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
-      },
-      "source": {
-        "repo": "code-yeongyu/oh-my-openagent",
-        "url": "https://github.com/code-yeongyu/oh-my-openagent",
-        "path": "packages/shared-skills/skills/ultraresearch",
-        "type": "auto-promoted-high-star",
-        "stars": 62215
-      },
-      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ultraresearch.json"
-    },
-    {
       "id": "code-yeongyu-oh-my-openagent-ultrawork",
       "name": "ultrawork",
       "summary": "Codex plugin that injects a compact orchestration directive (the **ultrawork** prompt) when the user prompt contains `ultrawork` or `ulw` (word-bounded, case-insensitive).",
@@ -174485,78 +174524,6 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-vibe-coding-mastery.json"
     },
     {
-      "id": "foryourhealth111-pixel-vibe-skills-vibe-do-it",
-      "name": "vibe-do-it",
-      "summary": "Execute through the full governed path with an implementation-forward bias while keeping canonical vibe as the only governed runtime.",
-      "summaryZh": "Vibe Do It 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Vibe Do It 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Vibe Do It 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Vibe Do It 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Vibe Do It 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Vibe Do It 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Vibe Do It”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Vibe Do It”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/bundled/skills/vibe-do-it' \"$HOME/.claude/skills/vibe-do-it\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
-      },
-      "source": {
-        "repo": "foryourhealth111-pixel/Vibe-Skills",
-        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-        "path": "bundled/skills/vibe-do-it",
-        "type": "auto-promoted-high-star",
-        "stars": 2326
-      },
-      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-vibe-do-it.json"
-    },
-    {
-      "id": "foryourhealth111-pixel-vibe-skills-vibe-how-do-we-do",
-      "name": "vibe-how-do-we-do",
-      "summary": "Design the approach and execution plan by entering the canonical vibe runtime with a planning-first bias.",
-      "summaryZh": "Vibe How Do We Do 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Vibe How Do We Do 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Vibe How Do We Do 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Vibe How Do We Do 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Vibe How Do We Do 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Vibe How Do We Do 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Vibe How Do We Do”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Vibe How Do We Do”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/bundled/skills/vibe-how-do-we-do' \"$HOME/.claude/skills/vibe-how-do-we-do\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
-      },
-      "source": {
-        "repo": "foryourhealth111-pixel/Vibe-Skills",
-        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-        "path": "bundled/skills/vibe-how-do-we-do",
-        "type": "auto-promoted-high-star",
-        "stars": 2326
-      },
-      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-vibe-how-do-we-do.json"
-    },
-    {
       "id": "leoyeai-openclaw-master-skills-vibe-notion",
       "name": "vibe-notion",
       "summary": "Interact with Notion using the unofficial private API - pages, databases, blocks, search, users, comments",
@@ -174592,78 +174559,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-vibe-notion.json"
-    },
-    {
-      "id": "foryourhealth111-pixel-vibe-skills-vibe-upgrade",
-      "name": "vibe-upgrade",
-      "summary": "Legacy update entry for existing Vibe-Skills installations.",
-      "summaryZh": "Vibe Upgrade 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Vibe Upgrade 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Vibe Upgrade 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Vibe Upgrade 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Vibe Upgrade 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Vibe Upgrade 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Vibe Upgrade”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Vibe Upgrade”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/bundled/skills/vibe-upgrade' \"$HOME/.claude/skills/vibe-upgrade\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
-      },
-      "source": {
-        "repo": "foryourhealth111-pixel/Vibe-Skills",
-        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-        "path": "bundled/skills/vibe-upgrade",
-        "type": "auto-promoted-high-star",
-        "stars": 2326
-      },
-      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-vibe-upgrade.json"
-    },
-    {
-      "id": "foryourhealth111-pixel-vibe-skills-vibe-what-do-i-want",
-      "name": "vibe-what-do-i-want",
-      "summary": "Clarify intent and freeze requirements by entering the canonical vibe runtime with a discovery-first bounded stop.",
-      "summaryZh": "Vibe What Do I Want 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Vibe What Do I Want 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Vibe What Do I Want 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Vibe What Do I Want 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Vibe What Do I Want 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Vibe What Do I Want 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Vibe What Do I Want”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Vibe What Do I Want”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/bundled/skills/vibe-what-do-i-want' \"$HOME/.claude/skills/vibe-what-do-i-want\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
-      },
-      "source": {
-        "repo": "foryourhealth111-pixel/Vibe-Skills",
-        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-        "path": "bundled/skills/vibe-what-do-i-want",
-        "type": "auto-promoted-high-star",
-        "stars": 2326
-      },
-      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-vibe-what-do-i-want.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-vibetrading-code-gen",
@@ -184366,7 +184261,7 @@
     {
       "id": "anthropics-skills-xlsx",
       "name": "xlsx",
-      "summary": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .csv, or…",
+      "summary": "Use this skill any time a spreadsheet file is the primary input or output. This means any task where the user wants to: open, read, edit, or fix an existing .xlsx, .xlsm, .xltx, .…",
       "summaryZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
       "capabilityZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
       "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
