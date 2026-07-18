@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T21:14:19.927Z",
+  "generatedAt": "2026-07-18T21:12:09.690Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -46020,24 +46020,24 @@
     {
       "id": "nexu-io-open-design-critique-theater",
       "name": "critique-theater",
-      "summary": "5-dimension critique panel; emits the critique.score signal that drives devloop convergence.",
-      "summaryZh": "Critique Theater 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Critique Theater 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Critique Theater 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Critique Theater 处理具体工作流的 Claude Code 用户。",
+      "summary": "Five-role Design Jury review that streams scored rounds, persists a replayable transcript, and ships through the daemon's Critique Theater protocol.",
+      "summaryZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
+      "capabilityZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
+      "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "audienceZh": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
       "scenarios": [
-        "使用 Critique Theater 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "按视频链接抓取字幕",
+        "生成章节摘要和重点列表",
+        "保存封面图和视频基础信息"
       ],
       "scenariosZh": [
-        "使用 Critique Theater 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "按视频链接抓取字幕",
+        "生成章节摘要和重点列表",
+        "保存封面图和视频基础信息"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Critique Theater”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Critique Theater”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
+      "category": "内容整理",
       "tags": [
         "skill"
       ],
@@ -51864,27 +51864,27 @@
     {
       "id": "nexu-io-open-design-design-systems",
       "name": "design systems",
-      "summary": "Each subfolder is a portable design system in [`DESIGN.md`](../docs/spec.md) format. Pick one in the top-bar **Design system** dropdown and every skill will read it as part of its…",
-      "summaryZh": "Design Systems 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Design Systems 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "summary": "Each subfolder is a portable design-system package. Selecting one from the Design System surface or a supported project-creation workflow composes its design context into the agen…",
+      "summaryZh": "Design Systems 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Design Systems 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Design Systems 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 Design Systems 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "使用 Design Systems 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "scenariosZh": [
-        "使用 Design Systems 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Design Systems”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Design Systems”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
+      "category": "代码 / Agent 开发",
       "tags": [
         "skill",
-        "documents"
+        "api"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/design-systems' \"$HOME/.claude/skills/design-systems\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -57831,6 +57831,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-dynamics-365-automation.json"
+    },
+    {
+      "id": "nexu-io-open-design-e2e-coverage",
+      "name": "e2e coverage",
+      "summary": "这个目录用于维护当前自动化测试覆盖的 QA 用例文档，主要索引 `e2e/` 套件，并在必要处补充与同一用户流直接相关的 `apps/web` 组件测试。",
+      "summaryZh": "E2e Coverage 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "E2e Coverage 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 E2e Coverage 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 E2e Coverage 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 E2e Coverage 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 E2e Coverage 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 E2e Coverage”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 E2e Coverage”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/docs/testing/e2e-coverage' \"$HOME/.claude/skills/e2e-coverage\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "docs/testing/e2e-coverage",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-e2e-coverage.json"
     },
     {
       "id": "affaan-m-ecc-e2e-testing",
@@ -106620,6 +106656,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-mkts-market-data.json"
     },
     {
+      "id": "foryourhealth111-pixel-vibe-skills-ml-experiment",
+      "name": "ml experiment",
+      "summary": "<div align=\"right\"> <strong>English</strong> | <a href=\"./README.zh.md\">中文</a> </div>",
+      "summaryZh": "Ml Experiment 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ml Experiment 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ml Experiment 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ml Experiment 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ml Experiment 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ml Experiment 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ml Experiment”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ml Experiment”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/docs/cases/ml-experiment' \"$HOME/.claude/skills/ml-experiment\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
+      },
+      "source": {
+        "repo": "foryourhealth111-pixel/Vibe-Skills",
+        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
+        "path": "docs/cases/ml-experiment",
+        "type": "auto-promoted-high-star",
+        "stars": 2326
+      },
+      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-ml-experiment.json"
+    },
+    {
       "id": "affaan-m-ecc-ml-adoption-playbook",
       "name": "ml-adoption-playbook",
       "summary": "End-to-end methodology for AI agents and software engineers to add machine learning algorithms to existing non-ML codebases. Covers problem framing, data readiness, architectural …",
@@ -116925,7 +116997,7 @@
     {
       "id": "nexu-io-open-design-open-design-landing",
       "name": "open design landing",
-      "summary": "Reusable skill that produces a world-class editorial landing page in the **Atelier Zero** design language — the warm-paper, italic-serif, collage-on-grid aesthetic shared by Monoc…",
+      "summary": "Reusable design template that produces a world-class editorial landing page in the **Atelier Zero** design language — the warm-paper, italic-serif, collage-on-grid aesthetic share…",
       "summaryZh": "Open Design Landing 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Open Design Landing 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Open Design Landing 处理具体工作流的 Claude Code 用户。",
@@ -116961,7 +117033,7 @@
     {
       "id": "nexu-io-open-design-open-design-landing-deck",
       "name": "open design landing deck",
-      "summary": "Sister skill to [`open-design-landing`](../open-design-landing/). Produces a single-file slide deck in the **Atelier Zero** design language — warm-paper background, italic-serif e…",
+      "summary": "Sister design template to [`open-design-landing`](../open-design-landing/). Produces a single-file slide deck in the **Atelier Zero** design language — warm-paper background, ital…",
       "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
       "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
@@ -130959,42 +131031,6 @@
       "packageUrl": "/skill-files/shubhamsaboo-awesome-llm-apps-project-graveyard.json"
     },
     {
-      "id": "affaan-m-ecc-project-guidelines-example",
-      "name": "project guidelines example",
-      "summary": "これはプロジェクト固有のスキルの例です。自分のプロジェクトのテンプレートとして使用してください。",
-      "summaryZh": "Project Guidelines Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Project Guidelines Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Project Guidelines Example 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Project Guidelines Example 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Project Guidelines Example 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Project Guidelines Example 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Project Guidelines Example”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Project Guidelines Example”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/docs/ja-JP/skills/project-guidelines-example' \"$HOME/.claude/skills/project-guidelines-example\"\nrm -rf '/tmp/affaan-m__ECC'"
-      },
-      "source": {
-        "repo": "affaan-m/ECC",
-        "url": "https://github.com/affaan-m/ECC",
-        "path": "docs/ja-JP/skills/project-guidelines-example",
-        "type": "auto-promoted-high-star",
-        "stars": 215443
-      },
-      "packageUrl": "/skill-files/affaan-m-ecc-project-guidelines-example.json"
-    },
-    {
       "id": "composiohq-awesome-claude-skills-project-bubble-automation",
       "name": "project-bubble-automation",
       "summary": "Automate Project Bubble tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -131104,6 +131140,43 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-project-generator.json"
+    },
+    {
+      "id": "affaan-m-ecc-project-guidelines-example",
+      "name": "project-guidelines-example",
+      "summary": "Project-specific skill template covering architecture, patterns, testing, and deployment guidance.",
+      "summaryZh": "Project Guidelines Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Project Guidelines Example 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Project Guidelines Example 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Project Guidelines Example 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Project Guidelines Example 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Project Guidelines Example 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Project Guidelines Example”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Project Guidelines Example”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "testing"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/docs/ja-JP/skills/project-guidelines-example' \"$HOME/.claude/skills/project-guidelines-example\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "docs/ja-JP/skills/project-guidelines-example",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-project-guidelines-example.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-project-manager",
@@ -139957,7 +140030,7 @@
     {
       "id": "affaan-m-ecc-returns-reverse-logistics",
       "name": "returns-reverse-logistics",
-      "summary": "返品承認、受取・検品、処分決定、返金処理、不正検出、保証クレーム管理のための標準化された専門知識。15年以上の経験を持つ返品オペレーションマネージャーの知見に基づく。段階的フレームワーク、処分経済性、不正パターン認識、ベンダー回収プロセスを含む。製品返品、逆物流、返金決定、返品不正検出、保証クレームを扱う場合に使用。license: Apache-2.0",
+      "summary": "返品承認、受取・検品、処分決定、返金処理、不正検出、保証クレーム管理のための標準化された専門知識。15年以上の経験を持つ返品オペレーションマネージャーの知見に基づく。段階的フレームワーク、処分経済性、不正パターン認識、ベンダー回収プロセスを含む。製品返品、逆物流、返金決定、返品不正検出、保証クレームを扱う場合に使用。",
       "summaryZh": "Returns Reverse Logistics 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Returns Reverse Logistics 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Returns Reverse Logistics 处理具体工作流的 Claude Code 用户。",
@@ -153489,26 +153562,27 @@
     {
       "id": "nexu-io-open-design-skills",
       "name": "skills",
-      "summary": "A skill is the atomic unit of design capability in Open Design — one folder, one `SKILL.md`, optional `assets/` and `references/`. The daemon scans this directory at startup; drop…",
-      "summaryZh": "Skills 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Skills 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "summary": "This directory contains **functional skills**: capabilities the agent invokes to do work on user input, such as briefs, audits, utilities, and asset packagers. Each folder has a `…",
+      "summaryZh": "Skills 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Skills 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Skills 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 Skills 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "使用 Skills 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "scenariosZh": [
-        "使用 Skills 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Skills”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Skills”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
+      "category": "代码 / Agent 开发",
       "tags": [
-        "skill"
+        "skill",
+        "api"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/skills' \"$HOME/.claude/skills/skills\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -170207,6 +170281,43 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-uhomes-student-housing.json"
+    },
+    {
+      "id": "cline-cline-ui",
+      "name": "ui",
+      "summary": "Shared visual foundations and reusable React presentation primitives for Cline web products. The package lets teams adopt the same semantic theme and agent chat language without a…",
+      "summaryZh": "Ui 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Ui 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Ui 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ui 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ui”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ui”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/cline__cline'\ngit clone --depth 1 'https://github.com/cline/cline.git' '/tmp/cline__cline'\ncp -R '/tmp/cline__cline/sdk/packages/ui' \"$HOME/.claude/skills/ui\"\nrm -rf '/tmp/cline__cline'"
+      },
+      "source": {
+        "repo": "cline/cline",
+        "url": "https://github.com/cline/cline",
+        "path": "sdk/packages/ui",
+        "type": "auto-promoted-high-star",
+        "stars": 63285
+      },
+      "packageUrl": "/skill-files/cline-cline-ui.json"
     },
     {
       "id": "tw93-waza-ui",
