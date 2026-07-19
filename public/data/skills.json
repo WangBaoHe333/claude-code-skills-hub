@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-18T21:12:09.690Z",
+  "generatedAt": "2026-07-19T21:15:06.345Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -2065,6 +2065,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-ad-ready.json"
+    },
+    {
+      "id": "foryourhealth111-pixel-vibe-skills-adapters",
+      "name": "adapters",
+      "summary": "This directory holds host-specific compatibility contracts for the universalization program.",
+      "summaryZh": "Adapters 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Adapters 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Adapters 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Adapters 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Adapters 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Adapters 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Adapters”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Adapters”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/adapters' \"$HOME/.claude/skills/adapters\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
+      },
+      "source": {
+        "repo": "foryourhealth111-pixel/Vibe-Skills",
+        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
+        "path": "adapters",
+        "type": "auto-promoted-high-star",
+        "stars": 2326
+      },
+      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-adapters.json"
     },
     {
       "id": "foryourhealth111-pixel-vibe-skills-adaptyv",
@@ -40540,6 +40576,43 @@
       "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-comment-checker.json"
     },
     {
+      "id": "shubhamsaboo-awesome-llm-apps-commit-archaeologist",
+      "name": "commit archaeologist",
+      "summary": "Commit Archaeologist Agent Skill",
+      "summaryZh": "Commit Archaeologist 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Commit Archaeologist 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Commit Archaeologist 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Commit Archaeologist 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Commit Archaeologist”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Commit Archaeologist”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Shubhamsaboo__awesome-llm-apps'\ngit clone --depth 1 'https://github.com/Shubhamsaboo/awesome-llm-apps.git' '/tmp/Shubhamsaboo__awesome-llm-apps'\ncp -R '/tmp/Shubhamsaboo__awesome-llm-apps/agent_skills/commit-archaeologist' \"$HOME/.claude/skills/commit-archaeologist\"\nrm -rf '/tmp/Shubhamsaboo__awesome-llm-apps'"
+      },
+      "source": {
+        "repo": "Shubhamsaboo/awesome-llm-apps",
+        "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+        "path": "agent_skills/commit-archaeologist",
+        "type": "auto-promoted-high-star",
+        "stars": 118441
+      },
+      "packageUrl": "/skill-files/shubhamsaboo-awesome-llm-apps-commit-archaeologist.json"
+    },
+    {
       "id": "foryourhealth111-pixel-vibe-skills-commit-with-reflection",
       "name": "commit with reflection",
       "summary": "Commit with Reflection - Git提交与反思报告技能",
@@ -74433,6 +74506,114 @@
       "packageUrl": "/skill-files/abhigyanpatwari-gitnexus-gitnexus-cursor-integration.json"
     },
     {
+      "id": "abhigyanpatwari-gitnexus-gitnexus-lfg",
+      "name": "gitnexus lfg",
+      "summary": "gitnexus-lfg — plan → gate → work → review",
+      "summaryZh": "Gitnexus Lfg 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Gitnexus Lfg 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Gitnexus Lfg 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Gitnexus Lfg 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Gitnexus Lfg 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Gitnexus Lfg 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Gitnexus Lfg”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Gitnexus Lfg”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'\ngit clone --depth 1 'https://github.com/abhigyanpatwari/GitNexus.git' '/tmp/abhigyanpatwari__GitNexus'\ncp -R '/tmp/abhigyanpatwari__GitNexus/gitnexus/skills/gitnexus-lfg' \"$HOME/.claude/skills/gitnexus-lfg\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'"
+      },
+      "source": {
+        "repo": "abhigyanpatwari/GitNexus",
+        "url": "https://github.com/abhigyanpatwari/GitNexus",
+        "path": "gitnexus/skills/gitnexus-lfg",
+        "type": "auto-promoted-high-star",
+        "stars": 42116
+      },
+      "packageUrl": "/skill-files/abhigyanpatwari-gitnexus-gitnexus-lfg.json"
+    },
+    {
+      "id": "abhigyanpatwari-gitnexus-gitnexus-plan",
+      "name": "gitnexus plan",
+      "summary": "gitnexus-plan — implementation-ready engineering plans",
+      "summaryZh": "Gitnexus Plan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Gitnexus Plan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Gitnexus Plan 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Gitnexus Plan 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Gitnexus Plan 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Gitnexus Plan 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Gitnexus Plan”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Gitnexus Plan”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'\ngit clone --depth 1 'https://github.com/abhigyanpatwari/GitNexus.git' '/tmp/abhigyanpatwari__GitNexus'\ncp -R '/tmp/abhigyanpatwari__GitNexus/gitnexus/skills/gitnexus-plan' \"$HOME/.claude/skills/gitnexus-plan\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'"
+      },
+      "source": {
+        "repo": "abhigyanpatwari/GitNexus",
+        "url": "https://github.com/abhigyanpatwari/GitNexus",
+        "path": "gitnexus/skills/gitnexus-plan",
+        "type": "auto-promoted-high-star",
+        "stars": 42116
+      },
+      "packageUrl": "/skill-files/abhigyanpatwari-gitnexus-gitnexus-plan.json"
+    },
+    {
+      "id": "abhigyanpatwari-gitnexus-gitnexus-work",
+      "name": "gitnexus work",
+      "summary": "gitnexus-work — execute a gitnexus-plan",
+      "summaryZh": "Gitnexus Work 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Gitnexus Work 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Gitnexus Work 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Gitnexus Work 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Gitnexus Work 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Gitnexus Work 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Gitnexus Work”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Gitnexus Work”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'\ngit clone --depth 1 'https://github.com/abhigyanpatwari/GitNexus.git' '/tmp/abhigyanpatwari__GitNexus'\ncp -R '/tmp/abhigyanpatwari__GitNexus/gitnexus/skills/gitnexus-work' \"$HOME/.claude/skills/gitnexus-work\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'"
+      },
+      "source": {
+        "repo": "abhigyanpatwari/GitNexus",
+        "url": "https://github.com/abhigyanpatwari/GitNexus",
+        "path": "gitnexus/skills/gitnexus-work",
+        "type": "auto-promoted-high-star",
+        "stars": 42116
+      },
+      "packageUrl": "/skill-files/abhigyanpatwari-gitnexus-gitnexus-work.json"
+    },
+    {
       "id": "abhigyanpatwari-gitnexus-gitnexus-cli",
       "name": "gitnexus-cli",
       "summary": "Use when the user needs to run GitNexus CLI commands like analyze/index a repo, check status, clean the index, generate a wiki, or list indexed repos. Examples: \\\"Index this repo\\…",
@@ -74649,43 +74830,6 @@
       "packageUrl": "/skill-files/abhigyanpatwari-gitnexus-gitnexus-pdg-query.json"
     },
     {
-      "id": "abhigyanpatwari-gitnexus-gitnexus-pr-review",
-      "name": "gitnexus-pr-review",
-      "summary": "Use when the user wants to review a pull request, understand what a PR changes, assess risk of merging, or check for missing test coverage. Examples: \\\"Review this PR\\\", \\\"What do…",
-      "summaryZh": "Gitnexus Pr Review 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Gitnexus Pr Review 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Gitnexus Pr Review 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Gitnexus Pr Review 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Gitnexus Pr Review 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Gitnexus Pr Review 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Gitnexus Pr Review”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Gitnexus Pr Review”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "testing"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'\ngit clone --depth 1 'https://github.com/abhigyanpatwari/GitNexus.git' '/tmp/abhigyanpatwari__GitNexus'\ncp -R '/tmp/abhigyanpatwari__GitNexus/gitnexus-claude-plugin/skills/gitnexus-pr-review' \"$HOME/.claude/skills/gitnexus-pr-review\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'"
-      },
-      "source": {
-        "repo": "abhigyanpatwari/GitNexus",
-        "url": "https://github.com/abhigyanpatwari/GitNexus",
-        "path": "gitnexus-claude-plugin/skills/gitnexus-pr-review",
-        "type": "auto-promoted-high-star",
-        "stars": 42116
-      },
-      "packageUrl": "/skill-files/abhigyanpatwari-gitnexus-gitnexus-pr-review.json"
-    },
-    {
       "id": "abhigyanpatwari-gitnexus-gitnexus-refactoring",
       "name": "gitnexus-refactoring",
       "summary": "Use when the user wants to rename, extract, split, move, or restructure code safely. Examples: \\\"Rename this function\\\", \\\"Extract this into a module\\\", \\\"Refactor this class\\\", \\…",
@@ -74720,6 +74864,44 @@
         "stars": 42116
       },
       "packageUrl": "/skill-files/abhigyanpatwari-gitnexus-gitnexus-refactoring.json"
+    },
+    {
+      "id": "abhigyanpatwari-gitnexus-gitnexus-review",
+      "name": "gitnexus-review",
+      "summary": "Review code changes with GitNexus from a GitHub PR URL or number, a branch/ref or commit range, or local staged, unstaged, and untracked changes. Use when the user asks for a code…",
+      "summaryZh": "Gitnexus Review 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Gitnexus Review 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Gitnexus Review 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Gitnexus Review 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Gitnexus Review 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Gitnexus Review 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Gitnexus Review”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Gitnexus Review”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "testing",
+        "github"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'\ngit clone --depth 1 'https://github.com/abhigyanpatwari/GitNexus.git' '/tmp/abhigyanpatwari__GitNexus'\ncp -R '/tmp/abhigyanpatwari__GitNexus/gitnexus/skills/gitnexus-review' \"$HOME/.claude/skills/gitnexus-review\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'"
+      },
+      "source": {
+        "repo": "abhigyanpatwari/GitNexus",
+        "url": "https://github.com/abhigyanpatwari/GitNexus",
+        "path": "gitnexus/skills/gitnexus-review",
+        "type": "auto-promoted-high-star",
+        "stars": 42116
+      },
+      "packageUrl": "/skill-files/abhigyanpatwari-gitnexus-gitnexus-review.json"
     },
     {
       "id": "abhigyanpatwari-gitnexus-gitnexus-taint-analysis",
@@ -158288,6 +158470,43 @@
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-stable-baselines3.json"
     },
     {
+      "id": "nextlevelbuilder-ui-ux-pro-max-skill-stack",
+      "name": "stack",
+      "summary": "A ready-to-clone Claude Code project that makes the agent **genuinely good at website design** — not by hoping for better output, but by wiring in the three things generic AI desi…",
+      "summaryZh": "Stack 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Stack 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Stack 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Stack 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Stack”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Stack”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ngit clone --depth 1 'https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git' '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'\ncp -R '/tmp/nextlevelbuilder__ui-ux-pro-max-skill/stack' \"$HOME/.claude/skills/stack\"\nrm -rf '/tmp/nextlevelbuilder__ui-ux-pro-max-skill'"
+      },
+      "source": {
+        "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+        "path": "stack",
+        "type": "auto-promoted-high-star",
+        "stars": 91613
+      },
+      "packageUrl": "/skill-files/nextlevelbuilder-ui-ux-pro-max-skill-stack.json"
+    },
+    {
       "id": "composiohq-awesome-claude-skills-stack-exchange-automation",
       "name": "stack-exchange-automation",
       "summary": "Automate Stack Exchange tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -181461,6 +181680,42 @@
         "stars": 64767
       },
       "packageUrl": "/skill-files/nexu-io-open-design-worker-visualizer.json"
+    },
+    {
+      "id": "abhigyanpatwari-gitnexus-workflow-bench",
+      "name": "workflow bench",
+      "summary": "Workflow benchmark — observe the token savings",
+      "summaryZh": "Workflow Bench 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Workflow Bench 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Workflow Bench 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Workflow Bench 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Workflow Bench 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Workflow Bench 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Workflow Bench”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Workflow Bench”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'\ngit clone --depth 1 'https://github.com/abhigyanpatwari/GitNexus.git' '/tmp/abhigyanpatwari__GitNexus'\ncp -R '/tmp/abhigyanpatwari__GitNexus/eval/workflow_bench' \"$HOME/.claude/skills/workflow-bench\"\nrm -rf '/tmp/abhigyanpatwari__GitNexus'"
+      },
+      "source": {
+        "repo": "abhigyanpatwari/GitNexus",
+        "url": "https://github.com/abhigyanpatwari/GitNexus",
+        "path": "eval/workflow_bench",
+        "type": "auto-promoted-high-star",
+        "stars": 42116
+      },
+      "packageUrl": "/skill-files/abhigyanpatwari-gitnexus-workflow-bench.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-workflow-automator",

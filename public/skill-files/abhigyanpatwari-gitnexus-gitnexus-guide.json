@@ -9,7 +9,7 @@
     {
       "path": "mcp.json",
       "encoding": "utf8",
-      "content": "{\n  \"mcpServers\": {\n    \"gitnexus\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"gitnexus@latest\", \"mcp\"]\n    }\n  }\n}\n"
+      "content": "{\n  \"mcpServers\": {\n    \"gitnexus\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"gitnexus@1.6.9\", \"mcp\"]\n    }\n  }\n}\n"
     }
   ]
 }

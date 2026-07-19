@@ -19,7 +19,7 @@
     {
       "path": "requirements.txt",
       "encoding": "utf8",
-      "content": "agno>=2.2.10\nopenai\nmcp\npython-dotenv"
+      "content": "agno>=2.2.10\nopenai\nmcp\npython-dotenv\nsqlalchemy"
     }
   ]
 }
