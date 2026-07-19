@@ -603,6 +603,30 @@
       "stars": 1245,
       "discoveredAt": "2026-07-12T21:28:50.578Z",
       "reason": "1245 stars, 1 SKILL.md"
+    },
+    {
+      "repo": "hashintel/hash",
+      "url": "https://github.com/hashintel/hash.git",
+      "type": "auto-promoted-high-star",
+      "stars": 1621,
+      "discoveredAt": "2026-07-19T21:29:10.743Z",
+      "reason": "1621 stars, 18 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "liferay/liferay-portal",
+      "url": "https://github.com/liferay/liferay-portal.git",
+      "type": "auto-promoted-high-star",
+      "stars": 2259,
+      "discoveredAt": "2026-07-19T21:29:10.743Z",
+      "reason": "2259 stars, 14 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "jaywcjlove/awesome-mac",
+      "url": "https://github.com/jaywcjlove/awesome-mac.git",
+      "type": "auto-promoted-high-star",
+      "stars": 108211,
+      "discoveredAt": "2026-07-19T21:29:10.743Z",
+      "reason": "108211 stars, 1 SKILL.md, has skills directory"
     }
   ]
 }
