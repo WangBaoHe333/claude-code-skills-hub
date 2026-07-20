@@ -1,0 +1,10 @@
+{
+  "id": "leoyeai-openclaw-master-skills-amemo-init-mate",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: amemo-init-mate\ndescription: 当用户说「刷新助手记忆」「初始化助手记忆」「重置记忆」时调用，从云端拉取最新记忆内容并写入本地 memory/MEMORY.md。\n---\n\n# amemo-init-mate — 初始化 AI 助手\n\n## 接口信息\n\n- **路由**: POST https://skill.amemo.cn/init-mate\n- **Bean**: MateBean\n- **Content-Type**: application/json\n\n## 请求参数\n\n> **注意**：服务端要求所有字段必须存在。`userToken` 必填，`mateMemory` 可选但字段必须存在（可传 `null`）。\n\n| 参数 | 类型 | 必填 | 说明 |\n|------|------|------|------|\n| userToken | str | **是** | 用户登录凭证（通过 amemo-login 获取） |\n| mateMemory | str | 否 | 初始记忆内容，不传则传 `null` |\n\n## 请求示例\n\n```bash\n# 初始化（不传记忆内容）\ncurl -X POST https://skill.amemo.cn/init-mate \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"userToken\": \"<token>\", \"mateMemory\": null}'\n\n# 初始化并设置记忆\ncurl -X POST https://skill.amemo.cn/init-mate \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"userToken\": \"<token>\", \"mateMemory\": \"用户偏好：喜欢简洁风格\"}'\n```\n\n## 响应示例\n\n```json\n{\"code\": 200, \"desc\": \"success\", \"data\": \"...\"}\n```\n\n## 注意事项\n\n- 所有字段必须存在，即使不传值也要传 `null`\n- 必须先通过 `amemo-login` 获取 userToken\n- `mateMemory` 为可选，用于设定助手初始记忆\n\n## 执行流程（由主模块调度）\n\n### 执行步骤\n\n```\n1. 识别触发词（刷新/初始化/重置 + 助手记忆）\n    ↓\n2. 检查 userToken 是否存在\n    ├── 无 token → 引导登录流程\n    ↓\n3. 检查 memory 目录是否存在\n    ├── 不存在 → 自动创建 memory 目录\n    ↓\n4. 调用 POST /init-mate 接口\n    ↓\n5. 解析响应\n    └── data.mateMemory: AI 助手记忆内容（Markdown 格式）\n    ↓\n6. 更新本地 MEMORY.md\n    ├── 如果 memory 目录不存在 → 先创建\n    ├── 写入 mateMemory 内容到 memory/MEMORY.md\n    ↓\n7. 返回结果给用户\n```\n\n### 更新 MEMORY.md 模板\n\n将 `mateMemory` 内容完整写入 `memory/MEMORY.md`：\n\n```markdown\n{mateMemory}\n```\n\n### 成功提示模板\n\n```\n✅ 助手记忆已刷新！\n\n已同步 {count} 条记忆信息到本地 MEMORY.md\n\n记忆内容包括：\n• 用户偏好设置\n• 工作习惯和规律\n• 常用工具和技术栈\n• 个人目标和关注点\n\n现在 AI 助手将根据您的记忆提供更个性化的服务。\n```\n\n### 失败处理\n\n**文件写入失败时：**\n```\n⚠️ 记忆同步失败：无法写入 MEMORY.md 文件\n\n可能原因：\n• 目录权限不足\n• 磁盘空间已满\n\n请检查后重试，或联系管理员。\n```\n\n**接口调用失败时：**\n```\n⚠️ 无法获取助手记忆，请检查：\n• amemo 服务是否正常运行\n• 网络连接是否正常\n\n错误信息：{error_message}\n```\n"
+    }
+  ]
+}
