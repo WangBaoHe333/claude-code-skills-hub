@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T21:40:33.415Z",
+  "generatedAt": "2026-07-21T21:40:54.335Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -92169,6 +92169,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-humanize-ai-text.json"
     },
     {
+      "id": "nexu-io-open-design-humanize-ppt",
+      "name": "humanize-ppt",
+      "summary": ">-",
+      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "scenarios": [
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
+      ],
+      "scenariosZh": [
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Humanize Ppt”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Humanize Ppt”，再给出文件、链接或要完成的任务。",
+      "category": "演示文稿",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/humanize-ppt' \"$HOME/.claude/skills/humanize-ppt\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/community/humanize-ppt",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-humanize-ppt.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-humanizer",
       "name": "humanizer",
       "summary": ">",
@@ -135322,16 +135358,53 @@
         "testing"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/microsoft__playwright'\ngit clone --depth 1 'https://github.com/microsoft/playwright.git' '/tmp/microsoft__playwright'\ncp -R '/tmp/microsoft__playwright/packages/playwright-core/src/tools/cli-client/skill' \"$HOME/.claude/skills/playwright-cli\"\nrm -rf '/tmp/microsoft__playwright'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/microsoft__playwright'\ngit clone --depth 1 'https://github.com/microsoft/playwright.git' '/tmp/microsoft__playwright'\ncp -R '/tmp/microsoft__playwright/packages/playwright-core/src/tools/skills/playwright-cli' \"$HOME/.claude/skills/playwright-cli\"\nrm -rf '/tmp/microsoft__playwright'"
       },
       "source": {
         "repo": "microsoft/playwright",
         "url": "https://github.com/microsoft/playwright",
-        "path": "packages/playwright-core/src/tools/cli-client/skill",
+        "path": "packages/playwright-core/src/tools/skills/playwright-cli",
         "type": "auto-promoted-high-star",
         "stars": 90947
       },
       "packageUrl": "/skill-files/microsoft-playwright-playwright-cli.json"
+    },
+    {
+      "id": "microsoft-playwright-playwright-component-testing",
+      "name": "playwright-component-testing",
+      "summary": "Set up component testing with Playwright using a story gallery — scaffold stories and a gallery dev page driven by the built-in mount fixture, no dedicated component-testing runti…",
+      "summaryZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
+      "capabilityZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
+      "audience": "开发者、测试人员、产品经理和需要验证网页流程的人。",
+      "audienceZh": "开发者、测试人员、产品经理和需要验证网页流程的人。",
+      "scenarios": [
+        "打开 localhost 页面做交互检查",
+        "填写表单、点击按钮并读取页面结果",
+        "截图验证页面布局和状态"
+      ],
+      "scenariosZh": [
+        "打开 localhost 页面做交互检查",
+        "填写表单、点击按钮并读取页面结果",
+        "截图验证页面布局和状态"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Playwright Component Testing”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Playwright Component Testing”，再给出文件、链接或要完成的任务。",
+      "category": "网页自动化",
+      "tags": [
+        "skill",
+        "testing"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/microsoft__playwright'\ngit clone --depth 1 'https://github.com/microsoft/playwright.git' '/tmp/microsoft__playwright'\ncp -R '/tmp/microsoft__playwright/packages/playwright-core/src/tools/skills/playwright-component-testing' \"$HOME/.claude/skills/playwright-component-testing\"\nrm -rf '/tmp/microsoft__playwright'"
+      },
+      "source": {
+        "repo": "microsoft/playwright",
+        "url": "https://github.com/microsoft/playwright",
+        "path": "packages/playwright-core/src/tools/skills/playwright-component-testing",
+        "type": "auto-promoted-high-star",
+        "stars": 90947
+      },
+      "packageUrl": "/skill-files/microsoft-playwright-playwright-component-testing.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-playwright-mcp",
@@ -135436,12 +135509,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/microsoft__playwright'\ngit clone --depth 1 'https://github.com/microsoft/playwright.git' '/tmp/microsoft__playwright'\ncp -R '/tmp/microsoft__playwright/packages/playwright-core/src/tools/trace' \"$HOME/.claude/skills/playwright-trace\"\nrm -rf '/tmp/microsoft__playwright'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/microsoft__playwright'\ngit clone --depth 1 'https://github.com/microsoft/playwright.git' '/tmp/microsoft__playwright'\ncp -R '/tmp/microsoft__playwright/packages/playwright-core/src/tools/skills/playwright-trace' \"$HOME/.claude/skills/playwright-trace\"\nrm -rf '/tmp/microsoft__playwright'"
       },
       "source": {
         "repo": "microsoft/playwright",
         "url": "https://github.com/microsoft/playwright",
-        "path": "packages/playwright-core/src/tools/trace",
+        "path": "packages/playwright-core/src/tools/skills/playwright-trace",
         "type": "auto-promoted-high-star",
         "stars": 90947
       },
