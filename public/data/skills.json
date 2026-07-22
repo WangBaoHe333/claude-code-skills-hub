@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T21:40:54.335Z",
+  "generatedAt": "2026-07-22T21:41:25.542Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -17505,6 +17505,43 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-async-interview-automation.json"
+    },
+    {
+      "id": "nexu-io-open-design-atelier-zero-image-generation-prompt-pack-mrrxpegw",
+      "name": "atelier zero image generation prompt pack mrrxpegw",
+      "summary": "Atelier Zero — Image Generation Prompt Pack",
+      "summaryZh": "Atelier Zero Image Generation Prompt Pack Mrrxpegw 用来生成或整理图片、插画、封面、漫画或信息图，适合内容发布和视觉素材制作。",
+      "capabilityZh": "Atelier Zero Image Generation Prompt Pack Mrrxpegw 用来生成或整理图片、插画、封面、漫画或信息图，适合内容发布和视觉素材制作。",
+      "audience": "需要使用 Atelier Zero Image Generation Prompt Pack Mrrxpegw 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Atelier Zero Image Generation Prompt Pack Mrrxpegw 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "用 Atelier Zero Image Generation Prompt Pack Mrrxpegw 生成文章配图或封面",
+        "把文字内容整理成图文素材",
+        "生成适合社媒、博客或演示使用的视觉内容"
+      ],
+      "scenariosZh": [
+        "用 Atelier Zero Image Generation Prompt Pack Mrrxpegw 生成文章配图或封面",
+        "把文字内容整理成图文素材",
+        "生成适合社媒、博客或演示使用的视觉内容"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Atelier Zero Image Generation Prompt Pack Mrrxpegw”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Atelier Zero Image Generation Prompt Pack Mrrxpegw”，再给出文件、链接或要完成的任务。",
+      "category": "视觉素材",
+      "tags": [
+        "skill",
+        "image"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/atelier-zero-image-generation-prompt-pack-mrrxpegw' \"$HOME/.claude/skills/atelier-zero-image-generation-prompt-pack-mrrxpegw\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/community/atelier-zero-image-generation-prompt-pack-mrrxpegw",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-atelier-zero-image-generation-prompt-pack-mrrxpegw.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-atelier-agent-integration",
@@ -44066,7 +44103,7 @@
     {
       "id": "shubhamsaboo-awesome-llm-apps-commit-archaeologist",
       "name": "commit archaeologist",
-      "summary": "Commit Archaeologist Agent Skill",
+      "summary": "🏺 Commit Archaeologist Agent Skill",
       "summaryZh": "Commit Archaeologist 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Commit Archaeologist 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Commit Archaeologist 处理具体工作流的 Claude Code 用户。",
@@ -56949,6 +56986,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-desktime-automation.json"
+    },
+    {
+      "id": "cline-cline-desktop-app",
+      "name": "desktop app",
+      "summary": "Tauri desktop shell + Bun sidecar backend + Next.js UI for running and inspecting Cline chat sessions.",
+      "summaryZh": "Desktop App 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Desktop App 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Desktop App 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Desktop App 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Desktop App 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Desktop App 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Desktop App”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Desktop App”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/cline__cline'\ngit clone --depth 1 'https://github.com/cline/cline.git' '/tmp/cline__cline'\ncp -R '/tmp/cline__cline/apps/examples/desktop-app' \"$HOME/.claude/skills/desktop-app\"\nrm -rf '/tmp/cline__cline'"
+      },
+      "source": {
+        "repo": "cline/cline",
+        "url": "https://github.com/cline/cline",
+        "path": "apps/examples/desktop-app",
+        "type": "auto-promoted-high-star",
+        "stars": 63285
+      },
+      "packageUrl": "/skill-files/cline-cline-desktop-app.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-desktop-control",
@@ -135255,6 +135328,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-play-physical-instrument.json"
     },
     {
+      "id": "near-nearcore-playbooks",
+      "name": "playbooks",
+      "summary": "Copy-paste workflows for putting the protocol model to work. Each is a set of staged prompts (scope → analyze → synthesize + adversarial check) designed to be run with Claude Code…",
+      "summaryZh": "Playbooks 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Playbooks 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Playbooks 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Playbooks 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Playbooks 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Playbooks 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Playbooks”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Playbooks”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/near__nearcore'\ngit clone --depth 1 'https://github.com/near/nearcore.git' '/tmp/near__nearcore'\ncp -R '/tmp/near__nearcore/protocol-model/playbooks' \"$HOME/.claude/skills/playbooks\"\nrm -rf '/tmp/near__nearcore'"
+      },
+      "source": {
+        "repo": "near/nearcore",
+        "url": "https://github.com/near/nearcore",
+        "path": "protocol-model/playbooks",
+        "type": "auto-promoted-high-star",
+        "stars": 2593
+      },
+      "packageUrl": "/skill-files/near-nearcore-playbooks.json"
+    },
+    {
       "id": "foryourhealth111-pixel-vibe-skills-playwright",
       "name": "playwright",
       "summary": "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` …",
@@ -175977,6 +176086,43 @@
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-think-harder.json"
     },
     {
+      "id": "shubhamsaboo-awesome-llm-apps-thinking-out-loud",
+      "name": "thinking out loud",
+      "summary": "Ramble at your agent by voice. Audit what it heard before it acts.",
+      "summaryZh": "Thinking Out Loud 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Thinking Out Loud 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Thinking Out Loud 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Thinking Out Loud 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Thinking Out Loud”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Thinking Out Loud”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Shubhamsaboo__awesome-llm-apps'\ngit clone --depth 1 'https://github.com/Shubhamsaboo/awesome-llm-apps.git' '/tmp/Shubhamsaboo__awesome-llm-apps'\ncp -R '/tmp/Shubhamsaboo__awesome-llm-apps/agent_skills/thinking-out-loud' \"$HOME/.claude/skills/thinking-out-loud\"\nrm -rf '/tmp/Shubhamsaboo__awesome-llm-apps'"
+      },
+      "source": {
+        "repo": "Shubhamsaboo/awesome-llm-apps",
+        "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+        "path": "agent_skills/thinking-out-loud",
+        "type": "auto-promoted-high-star",
+        "stars": 118441
+      },
+      "packageUrl": "/skill-files/shubhamsaboo-awesome-llm-apps-thinking-out-loud.json"
+    },
+    {
       "id": "shubhamsaboo-awesome-llm-apps-thinkpath-chatbot-app",
       "name": "thinkpath chatbot app",
       "summary": "ThinkPath Chatbot 🧠 *Strategic Thinking Assistant with Local LLM Integration* *Guided Responses Chatbot*",
@@ -193830,7 +193976,7 @@
     {
       "id": "windmill-labs-windmill-write-script-bun",
       "name": "write-script-bun",
-      "summary": "MUST use when writing Bun/TypeScript scripts.",
+      "summary": "MUST use when writing TypeScript scripts. Bun is the default and preferred TypeScript runtime — pick it for TypeScript unless the script specifically needs Deno.",
       "summaryZh": "Write Script Bun 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Write Script Bun 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Write Script Bun 处理具体工作流的 Claude Code 用户。",
@@ -193938,7 +194084,7 @@
     {
       "id": "windmill-labs-windmill-write-script-deno",
       "name": "write-script-deno",
-      "summary": "MUST use when writing Deno/TypeScript scripts.",
+      "summary": "Use ONLY when a TypeScript script specifically requires the Deno runtime (Deno stdlib or deno.land URL imports). For all other TypeScript, use write-script-bun instead.",
       "summaryZh": "Write Script Deno 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Write Script Deno 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Write Script Deno 处理具体工作流的 Claude Code 用户。",
