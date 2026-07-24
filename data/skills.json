@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T21:35:36.541Z",
+  "generatedAt": "2026-07-24T21:37:46.264Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -72400,7 +72400,7 @@
     {
       "id": "obra-superpowers-finishing-a-development-branch",
       "name": "finishing-a-development-branch",
-      "summary": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for …",
+      "summary": "Use when implementation is complete, all tests pass, and you need to decide how to integrate the work",
       "summaryZh": "Finishing A Development Branch 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Finishing A Development Branch 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Finishing A Development Branch 处理具体工作流的 Claude Code 用户。",
@@ -98468,6 +98468,42 @@
         "stars": 215443
       },
       "packageUrl": "/skill-files/affaan-m-ecc-ito-basket-compare.json"
+    },
+    {
+      "id": "affaan-m-ecc-ito-compute",
+      "name": "ito-compute",
+      "summary": "Query live GPU inventory, submit an authenticated Itô fixed-rate RFQ, inspect RFQ or procurement status, and run explicitly gated node qualification through the separately install…",
+      "summaryZh": "Ito Compute 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ito Compute 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ito Compute 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ito Compute 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ito Compute 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ito Compute 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ito Compute”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ito Compute”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/ito-compute' \"$HOME/.claude/skills/ito-compute\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/ito-compute",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-ito-compute.json"
     },
     {
       "id": "affaan-m-ecc-ito-data-atlas-agent",
