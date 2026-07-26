@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T21:16:02.704Z",
+  "generatedAt": "2026-07-26T21:18:54.736Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -43372,7 +43372,7 @@
     {
       "id": "code-yeongyu-oh-my-openagent-coding-agent-sessions",
       "name": "coding-agent-sessions",
-      "summary": "MUST USE when asked to find, read, list, search, inspect, fetch, export, or reconstruct coding-agent sessions across Codex, Claude Code/Desktop, OpenCode, Senpi/pi, OpenClaw, Fact…",
+      "summary": "MUST USE when asked to find, read, list, search, inspect, fetch, export, or reconstruct coding-agent sessions across Codex, Claude Code/Desktop, OpenCode, Senpi/pi, oh-my-pi (omp)…",
       "summaryZh": "Coding Agent Sessions 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
       "capabilityZh": "Coding Agent Sessions 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
       "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
@@ -47132,6 +47132,43 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-contract-and-proposal-writer.json"
+    },
+    {
+      "id": "affaan-m-ecc-contract-first",
+      "name": "contract-first",
+      "summary": "Use when multiple consumers and providers must evolve an API or event schema without field drift, integration surprises, or one side silently redefining the interface.",
+      "summaryZh": "Contract First 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Contract First 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Contract First 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Contract First 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Contract First 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Contract First 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Contract First”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Contract First”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/contract-first' \"$HOME/.claude/skills/contract-first\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/contract-first",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-contract-first.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-control-d-automation",
@@ -182492,6 +182529,43 @@
         "stars": 110114
       },
       "packageUrl": "/skill-files/garrytan-gstack-unfreeze.json"
+    },
+    {
+      "id": "affaan-m-ecc-unified-memory",
+      "name": "unified-memory",
+      "summary": "Share durable, inspectable context and handoffs between Claude, Codex, Hermes, Cursor, OpenCode, and other agents through the local ECC Memory Vault. Use when an agent must save w…",
+      "summaryZh": "Unified Memory 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Unified Memory 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Unified Memory 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Unified Memory 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Unified Memory”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Unified Memory”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/unified-memory' \"$HOME/.claude/skills/unified-memory\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/unified-memory",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-unified-memory.json"
     },
     {
       "id": "affaan-m-ecc-unified-notifications-ops",
