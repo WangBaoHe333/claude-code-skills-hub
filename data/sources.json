@@ -627,6 +627,22 @@
       "stars": 108211,
       "discoveredAt": "2026-07-19T21:29:10.743Z",
       "reason": "108211 stars, 1 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "katanemo/plano",
+      "url": "https://github.com/katanemo/plano.git",
+      "type": "auto-promoted-high-star",
+      "stars": 6898,
+      "discoveredAt": "2026-07-26T21:31:06.949Z",
+      "reason": "6898 stars, 17 SKILL.md, 1 skill README hints, has skills directory"
+    },
+    {
+      "repo": "JuneYaooo/gpt-image2-ppt-skills",
+      "url": "https://github.com/JuneYaooo/gpt-image2-ppt-skills.git",
+      "type": "auto-promoted-high-star",
+      "stars": 1106,
+      "discoveredAt": "2026-07-26T21:31:06.949Z",
+      "reason": "1106 stars, 1 SKILL.md"
     }
   ]
 }
