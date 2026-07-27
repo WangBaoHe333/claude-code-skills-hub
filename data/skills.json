@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T21:18:54.736Z",
+  "generatedAt": "2026-07-27T21:37:07.398Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -80,7 +80,9 @@
     "BayramAnnakov/claude-reflect",
     "hashintel/hash",
     "liferay/liferay-portal",
-    "jaywcjlove/awesome-mac"
+    "jaywcjlove/awesome-mac",
+    "katanemo/plano",
+    "JuneYaooo/gpt-image2-ppt-skills"
   ],
   "skills": [
     {
@@ -34562,6 +34564,42 @@
       "packageUrl": "/skill-files/evermind-ai-everos-claude-code-plugin.json"
     },
     {
+      "id": "katanemo-plano-claude-code-router",
+      "name": "claude code router",
+      "summary": "Claude Code Router - Multi-Model Access with Intelligent Routing",
+      "summaryZh": "Claude Code Router 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Claude Code Router 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Claude Code Router 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Claude Code Router 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Claude Code Router 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Claude Code Router 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Claude Code Router”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Claude Code Router”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/demos/llm_routing/claude_code_router' \"$HOME/.claude/skills/claude-code-router\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "demos/llm_routing/claude_code_router",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-claude-code-router.json"
+    },
+    {
       "id": "thedotmack-claude-mem-claude-mem",
       "name": "claude mem",
       "summary": "A minimal container for exercising claude-mem end-to-end without polluting your host. Not a dev environment — just enough to boot `claude` with the locally-built plugin and captur…",
@@ -55711,6 +55749,43 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-demio-automation.json"
     },
     {
+      "id": "katanemo-plano-demos",
+      "name": "demos",
+      "summary": "This directory contains demos showcasing Plano's capabilities as an AI-native proxy for agentic applications.",
+      "summaryZh": "Demos 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Demos 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Demos 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Demos 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Demos”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Demos”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/demos' \"$HOME/.claude/skills/demos\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "demos",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-demos.json"
+    },
+    {
       "id": "foryourhealth111-pixel-vibe-skills-denario",
       "name": "denario",
       "summary": "Multiagent AI system for scientific research assistance that automates research workflows from data analysis to publication. This skill should be used when generating research ide…",
@@ -67584,6 +67659,43 @@
         "stars": 1015
       },
       "packageUrl": "/skill-files/asklokesh-loki-mode-examples.json"
+    },
+    {
+      "id": "juneyaooo-gpt-image2-ppt-skills-examples",
+      "name": "examples",
+      "summary": "这个目录提供一组可直接复用的 `slides_plan.md` 示例，用来帮助新用户从常见 PPT 场景快速开始。",
+      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
+      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
+      "scenarios": [
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
+      ],
+      "scenariosZh": [
+        "生成完整 PPTX 结构",
+        "修改已有幻灯片内容和版式",
+        "导出可预览、可交付的演示文件"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Examples”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Examples”，再给出文件、链接或要完成的任务。",
+      "category": "演示文稿",
+      "tags": [
+        "skill",
+        "presentations"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuneYaooo__gpt-image2-ppt-skills'\ngit clone --depth 1 'https://github.com/JuneYaooo/gpt-image2-ppt-skills.git' '/tmp/JuneYaooo__gpt-image2-ppt-skills'\ncp -R '/tmp/JuneYaooo__gpt-image2-ppt-skills/examples' \"$HOME/.claude/skills/examples\"\nrm -rf '/tmp/JuneYaooo__gpt-image2-ppt-skills'"
+      },
+      "source": {
+        "repo": "JuneYaooo/gpt-image2-ppt-skills",
+        "url": "https://github.com/JuneYaooo/gpt-image2-ppt-skills",
+        "path": "examples",
+        "type": "auto-promoted-high-star",
+        "stars": 1106
+      },
+      "packageUrl": "/skill-files/juneyaooo-gpt-image2-ppt-skills-examples.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-excalidraw-diagram-generator",
@@ -91626,6 +91738,43 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-html-to-image-automation.json"
     },
     {
+      "id": "katanemo-plano-http-filter",
+      "name": "http filter",
+      "summary": "A multi-agent RAG system demonstrating plano's agent filter chain with HTTP protocol.",
+      "summaryZh": "Http Filter 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Http Filter 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Http Filter 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Http Filter 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Http Filter”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Http Filter”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/demos/filter_chains/http_filter' \"$HOME/.claude/skills/http-filter\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "demos/filter_chains/http_filter",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-http-filter.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-http-api-cloudbase",
       "name": "http-api-cloudbase",
       "summary": "Use CloudBase HTTP API to access CloudBase platform features (database, authentication, cloud functions, cloud hosting, cloud storage, AI) via HTTP protocol from backends or scrip…",
@@ -110365,6 +110514,43 @@
       "packageUrl": "/skill-files/feast-dev-feast-mcp-feature-store.json"
     },
     {
+      "id": "katanemo-plano-mcp-filter",
+      "name": "mcp filter",
+      "summary": "A multi-agent RAG system demonstrating plano's agent filter chain with MCP protocol.",
+      "summaryZh": "Mcp Filter 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Mcp Filter 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Mcp Filter 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Mcp Filter 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Mcp Filter”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Mcp Filter”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/demos/filter_chains/mcp_filter' \"$HOME/.claude/skills/mcp-filter\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "demos/filter_chains/mcp_filter",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-mcp-filter.json"
+    },
+    {
       "id": "foryourhealth111-pixel-vibe-skills-mcp-integration",
       "name": "MCP Integration",
       "summary": "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\", \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external s…",
@@ -114626,27 +114812,26 @@
     {
       "id": "nexu-io-open-design-mocks",
       "name": "mocks",
-      "summary": "`mocks/` — replay-based mock CLIs for OD's supported agents",
-      "summaryZh": "Mocks 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Mocks 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "summary": "`mocks/` — replay-based mock CLIs and protocol fixtures",
+      "summaryZh": "Mocks 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Mocks 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Mocks 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 Mocks 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "使用 Mocks 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "使用 Mocks 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Mocks”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Mocks”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
+      "category": "通用工具",
       "tags": [
-        "skill",
-        "api"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/mocks' \"$HOME/.claude/skills/mocks\"\nrm -rf '/tmp/nexu-io__open-design'"
@@ -135146,6 +135331,334 @@
         "stars": 2326
       },
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-planning-with-files.json"
+    },
+    {
+      "id": "katanemo-plano-plano-advanced-patterns",
+      "name": "plano-advanced-patterns",
+      "summary": "Design advanced Plano architectures. Use for multi-listener systems, prompt target schema quality, and layered orchestration patterns.",
+      "summaryZh": "Plano Advanced Patterns 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Plano Advanced Patterns 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Plano Advanced Patterns 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Plano Advanced Patterns 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Plano Advanced Patterns 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Plano Advanced Patterns 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Plano Advanced Patterns”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Plano Advanced Patterns”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/skills/plano-advanced-patterns' \"$HOME/.claude/skills/plano-advanced-patterns\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "skills/plano-advanced-patterns",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-plano-advanced-patterns.json"
+    },
+    {
+      "id": "katanemo-plano-plano-agent-orchestration",
+      "name": "plano-agent-orchestration",
+      "summary": "Improve multi-agent orchestration in Plano. Use for agent registration, agent listener wiring, and capability-focused agent descriptions for accurate routing.",
+      "summaryZh": "Plano Agent Orchestration 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Plano Agent Orchestration 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Plano Agent Orchestration 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Plano Agent Orchestration 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Plano Agent Orchestration”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Plano Agent Orchestration”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/skills/plano-agent-orchestration' \"$HOME/.claude/skills/plano-agent-orchestration\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "skills/plano-agent-orchestration",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-plano-agent-orchestration.json"
+    },
+    {
+      "id": "katanemo-plano-plano-agent-skills",
+      "name": "plano-agent-skills",
+      "summary": "Best practices for building agents and agentic applications with Plano, including configuration, routing, orchestration, guardrails, observability, and deployment.",
+      "summaryZh": "Plano Agent Skills 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Plano Agent Skills 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Plano Agent Skills 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Plano Agent Skills 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Plano Agent Skills”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Plano Agent Skills”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/skills/plano-agent-skills' \"$HOME/.claude/skills/plano-agent-skills\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "skills/plano-agent-skills",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-plano-agent-skills.json"
+    },
+    {
+      "id": "katanemo-plano-plano-cli-operations",
+      "name": "plano-cli-operations",
+      "summary": "Apply Plano CLI best practices. Use for startup troubleshooting, cli_agent workflows, and template-based project bootstrapping.",
+      "summaryZh": "Plano Cli Operations 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Plano Cli Operations 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Plano Cli Operations 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Plano Cli Operations 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Plano Cli Operations”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Plano Cli Operations”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/skills/plano-cli-operations' \"$HOME/.claude/skills/plano-cli-operations\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "skills/plano-cli-operations",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-plano-cli-operations.json"
+    },
+    {
+      "id": "katanemo-plano-plano-config-fundamentals",
+      "name": "plano-config-fundamentals",
+      "summary": "Validate and fix Plano config fundamentals. Use for config versioning, listener types, provider registration, secrets handling, and startup validation failures.",
+      "summaryZh": "Plano Config Fundamentals 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Plano Config Fundamentals 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Plano Config Fundamentals 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Plano Config Fundamentals 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Plano Config Fundamentals 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Plano Config Fundamentals 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Plano Config Fundamentals”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Plano Config Fundamentals”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/skills/plano-config-fundamentals' \"$HOME/.claude/skills/plano-config-fundamentals\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "skills/plano-config-fundamentals",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-plano-config-fundamentals.json"
+    },
+    {
+      "id": "katanemo-plano-plano-deployment-security",
+      "name": "plano-deployment-security",
+      "summary": "Apply Plano deployment and production security practices. Use for Docker networking, state storage choices, readiness checks, and environment-based secret handling.",
+      "summaryZh": "Plano Deployment Security 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Plano Deployment Security 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Plano Deployment Security 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Plano Deployment Security 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Plano Deployment Security 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Plano Deployment Security 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Plano Deployment Security”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Plano Deployment Security”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "documents"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/skills/plano-deployment-security' \"$HOME/.claude/skills/plano-deployment-security\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "skills/plano-deployment-security",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-plano-deployment-security.json"
+    },
+    {
+      "id": "katanemo-plano-plano-filter-guardrails",
+      "name": "plano-filter-guardrails",
+      "summary": "Harden Plano filter chains and guardrails. Use for MCP filter setup, prompt guard responses, and safe filter ordering.",
+      "summaryZh": "Plano Filter Guardrails 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Plano Filter Guardrails 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Plano Filter Guardrails 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Plano Filter Guardrails 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Plano Filter Guardrails 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Plano Filter Guardrails 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Plano Filter Guardrails”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Plano Filter Guardrails”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/skills/plano-filter-guardrails' \"$HOME/.claude/skills/plano-filter-guardrails\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "skills/plano-filter-guardrails",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-plano-filter-guardrails.json"
+    },
+    {
+      "id": "katanemo-plano-plano-observability-debugging",
+      "name": "plano-observability-debugging",
+      "summary": "Improve Plano tracing and debugging workflows. Use for sampling strategy, span attributes, and trace query-based root-cause analysis.",
+      "summaryZh": "Plano Observability Debugging 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Plano Observability Debugging 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Plano Observability Debugging 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Plano Observability Debugging 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Plano Observability Debugging 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Plano Observability Debugging 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Plano Observability Debugging”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Plano Observability Debugging”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/skills/plano-observability-debugging' \"$HOME/.claude/skills/plano-observability-debugging\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "skills/plano-observability-debugging",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-plano-observability-debugging.json"
+    },
+    {
+      "id": "katanemo-plano-plano-routing-model-selection",
+      "name": "plano-routing-model-selection",
+      "summary": "Optimize Plano model routing and selection. Use for provider defaults, model aliases, passthrough auth, and routing preference quality.",
+      "summaryZh": "Plano Routing Model Selection 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Plano Routing Model Selection 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Plano Routing Model Selection 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Plano Routing Model Selection 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Plano Routing Model Selection 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Plano Routing Model Selection 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Plano Routing Model Selection”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Plano Routing Model Selection”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/skills/plano-routing-model-selection' \"$HOME/.claude/skills/plano-routing-model-selection\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "skills/plano-routing-model-selection",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-plano-routing-model-selection.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-plans",
@@ -164055,6 +164568,44 @@
         "stars": 1717
       },
       "packageUrl": "/skill-files/flowglad-flowglad-skills.json"
+    },
+    {
+      "id": "katanemo-plano-skills",
+      "name": "skills",
+      "summary": "A structured repository of best practices for building agents and agentic applications with [Plano](https://github.com/katanemo/archgw) — the AI-native proxy and dataplane. Optimi…",
+      "summaryZh": "Skills 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Skills 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Skills 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Skills 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Skills”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Skills”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "github",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/katanemo__plano'\ngit clone --depth 1 'https://github.com/katanemo/plano.git' '/tmp/katanemo__plano'\ncp -R '/tmp/katanemo__plano/skills' \"$HOME/.claude/skills/skills\"\nrm -rf '/tmp/katanemo__plano'"
+      },
+      "source": {
+        "repo": "katanemo/plano",
+        "url": "https://github.com/katanemo/plano",
+        "path": "skills",
+        "type": "auto-promoted-high-star",
+        "stars": 6898
+      },
+      "packageUrl": "/skill-files/katanemo-plano-skills.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-skyfire-automation",

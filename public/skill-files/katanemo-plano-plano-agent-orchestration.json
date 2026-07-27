@@ -1,0 +1,10 @@
+{
+  "id": "katanemo-plano-plano-agent-orchestration",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: plano-agent-orchestration\ndescription: Improve multi-agent orchestration in Plano. Use for agent registration, agent listener wiring, and capability-focused agent descriptions for accurate routing.\nlicense: Apache-2.0\nmetadata:\n  author: katanemo\n  version: \"1.0.0\"\n---\n\n# Plano Agent Orchestration\n\nUse this skill for agent listener quality, sub-agent registration, and route accuracy.\n\n## When To Use\n\n- \"Fix multi-agent routing\"\n- \"Validate agents vs listeners.agents config\"\n- \"Improve agent descriptions\"\n- \"Set up a reliable orchestrator\"\n\n## Apply These Rules\n\n- `agent-orchestration`\n- `agent-descriptions`\n\n## Execution Checklist\n\n1. Verify each agent exists in both `agents` and `listeners[].agents`.\n2. Ensure one fallback/default agent where appropriate.\n3. Rewrite descriptions to be capability-focused and non-overlapping.\n4. Keep descriptions specific, concise, and example-driven.\n5. Provide test prompts to validate routing outcomes.\n"
+    }
+  ]
+}

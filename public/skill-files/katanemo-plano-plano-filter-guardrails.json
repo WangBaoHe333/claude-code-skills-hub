@@ -1,0 +1,10 @@
+{
+  "id": "katanemo-plano-plano-filter-guardrails",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: plano-filter-guardrails\ndescription: Harden Plano filter chains and guardrails. Use for MCP filter setup, prompt guard responses, and safe filter ordering.\nlicense: Apache-2.0\nmetadata:\n  author: katanemo\n  version: \"1.0.0\"\n---\n\n# Plano Filter Chains and Guardrails\n\nUse this skill when safety controls or filter pipelines need correction.\n\n## When To Use\n\n- \"Fix filter chain ordering\"\n- \"Set up MCP filters correctly\"\n- \"Improve guardrail rejection behavior\"\n- \"Harden request processing for safety\"\n\n## Apply These Rules\n\n- `filter-mcp`\n- `filter-guardrails`\n- `filter-ordering`\n\n## Execution Checklist\n\n1. Configure filter `type`, `transport`, and `tool` explicitly for MCP.\n2. Ensure rejection messages are clear and actionable.\n3. Order chain as guards -> rewriters -> enrichment -> output checks.\n4. Prevent expensive enrichment on unsafe requests.\n5. Verify with representative blocked and allowed test prompts.\n"
+    }
+  ]
+}

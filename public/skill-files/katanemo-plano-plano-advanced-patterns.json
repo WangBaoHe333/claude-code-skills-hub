@@ -1,0 +1,10 @@
+{
+  "id": "katanemo-plano-plano-advanced-patterns",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: plano-advanced-patterns\ndescription: Design advanced Plano architectures. Use for multi-listener systems, prompt target schema quality, and layered orchestration patterns.\nlicense: Apache-2.0\nmetadata:\n  author: katanemo\n  version: \"1.0.0\"\n---\n\n# Plano Advanced Patterns\n\nUse this skill for higher-order architecture decisions once fundamentals are stable.\n\n## When To Use\n\n- \"Design a multi-listener Plano architecture\"\n- \"Improve prompt target schema precision\"\n- \"Combine model, prompt, and agent listeners\"\n- \"Refine advanced routing/function-calling behavior\"\n\n## Apply These Rules\n\n- `advanced-multi-listener`\n- `advanced-prompt-targets`\n\n## Execution Checklist\n\n1. Use multiple listeners only when interfaces are truly distinct.\n2. Keep provider/routing definitions shared and consistent.\n3. Define prompt target parameters with strict, explicit schemas.\n4. Minimize ambiguity that causes malformed tool calls.\n5. Provide migration-safe recommendations and test scenarios.\n"
+    }
+  ]
+}

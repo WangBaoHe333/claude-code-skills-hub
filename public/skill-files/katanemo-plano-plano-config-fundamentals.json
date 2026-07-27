@@ -1,0 +1,10 @@
+{
+  "id": "katanemo-plano-plano-config-fundamentals",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: plano-config-fundamentals\ndescription: Validate and fix Plano config fundamentals. Use for config versioning, listener types, provider registration, secrets handling, and startup validation failures.\nlicense: Apache-2.0\nmetadata:\n  author: katanemo\n  version: \"1.0.0\"\n---\n\n# Plano Configuration Fundamentals\n\nUse this skill for foundational `config.yaml` correctness.\n\n## When To Use\n\n- \"Validate this Plano config\"\n- \"Fix startup config errors\"\n- \"Check listeners/providers/secrets\"\n- \"Why does `planoai up` fail schema validation?\"\n\n## Apply These Rules\n\n- `config-version`\n- `config-listeners`\n- `config-providers`\n- `config-secrets`\n\n## Execution Checklist\n\n1. Ensure `version: v0.3.0` is present.\n2. Confirm listener type matches intended architecture.\n3. Verify provider names/interfaces and exactly one default provider.\n4. Replace hardcoded secrets with `$ENV_VAR` substitution.\n5. Return minimal patch and a `planoai up` verification plan.\n"
+    }
+  ]
+}

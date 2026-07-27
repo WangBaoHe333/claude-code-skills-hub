@@ -1,0 +1,10 @@
+{
+  "id": "katanemo-plano-plano-deployment-security",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: plano-deployment-security\ndescription: Apply Plano deployment and production security practices. Use for Docker networking, state storage choices, readiness checks, and environment-based secret handling.\nlicense: Apache-2.0\nmetadata:\n  author: katanemo\n  version: \"1.0.0\"\n---\n\n# Plano Deployment and Security\n\nUse this skill to harden production deployments and reduce runtime surprises.\n\n## When To Use\n\n- \"Fix unreachable agents in Docker\"\n- \"Configure persistent conversation state\"\n- \"Add readiness and health checks\"\n- \"Prepare production deployment checklist\"\n\n## Apply These Rules\n\n- `deploy-docker`\n- `deploy-state`\n- `deploy-health`\n\n## Execution Checklist\n\n1. Use `host.docker.internal` for host-side services from inside Plano container.\n2. Prefer PostgreSQL state storage for production multi-turn workloads.\n3. Verify `/healthz` before traffic or CI assertions.\n4. Ensure secrets remain environment-based, never hardcoded.\n5. Return deployment checks with failure-mode diagnostics.\n"
+    }
+  ]
+}

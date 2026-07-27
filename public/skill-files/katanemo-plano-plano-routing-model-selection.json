@@ -1,0 +1,10 @@
+{
+  "id": "katanemo-plano-plano-routing-model-selection",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: plano-routing-model-selection\ndescription: Optimize Plano model routing and selection. Use for provider defaults, model aliases, passthrough auth, and routing preference quality.\nlicense: Apache-2.0\nmetadata:\n  author: katanemo\n  version: \"1.0.0\"\n---\n\n# Plano Routing and Model Selection\n\nUse this skill when requests are routed to the wrong model, costs are high, or fallback behavior is unclear.\n\n## When To Use\n\n- \"Improve model routing\"\n- \"Add aliases and defaults\"\n- \"Fix passthrough auth with proxy providers\"\n- \"Tune routing preferences for better classification\"\n\n## Apply These Rules\n\n- `routing-default`\n- `routing-aliases`\n- `routing-passthrough`\n- `routing-preferences`\n\n## Execution Checklist\n\n1. Ensure exactly one `default: true` provider.\n2. Add semantic aliases for stable client contracts.\n3. Configure passthrough auth only where required.\n4. Rewrite vague preference descriptions with concrete task scopes.\n5. Validate routing behavior using trace-based checks.\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "katanemo-plano-plano-cli-operations",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: plano-cli-operations\ndescription: Apply Plano CLI best practices. Use for startup troubleshooting, cli_agent workflows, and template-based project bootstrapping.\nlicense: Apache-2.0\nmetadata:\n  author: katanemo\n  version: \"1.0.0\"\n---\n\n# Plano CLI Operations\n\nUse this skill when the task is primarily operational and CLI-driven.\n\n## When To Use\n\n- \"Fix `planoai up` failures\"\n- \"Use `planoai cli_agent` with coding agents\"\n- \"Bootstrap a project with `planoai init` templates\"\n\n## Apply These Rules\n\n- `cli-startup`\n- `cli-agent`\n- `cli-init`\n\n## Execution Checklist\n\n1. Follow startup validation order before deep debugging.\n2. Use `cli_agent` to route coding-agent traffic through Plano.\n3. Start from templates for reliable first-time setup.\n4. Provide a compact runbook with exact CLI commands.\n"
+    }
+  ]
+}

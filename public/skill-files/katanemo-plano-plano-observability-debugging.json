@@ -1,0 +1,10 @@
+{
+  "id": "katanemo-plano-plano-observability-debugging",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: plano-observability-debugging\ndescription: Improve Plano tracing and debugging workflows. Use for sampling strategy, span attributes, and trace query-based root-cause analysis.\nlicense: Apache-2.0\nmetadata:\n  author: katanemo\n  version: \"1.0.0\"\n---\n\n# Plano Observability and Debugging\n\nUse this skill to make routing and latency behavior inspectable and debuggable.\n\n## When To Use\n\n- \"Enable tracing correctly\"\n- \"Add useful span attributes\"\n- \"Debug why a request routed incorrectly\"\n- \"Inspect filter/model latency from traces\"\n\n## Apply These Rules\n\n- `observe-tracing`\n- `observe-span-attributes`\n- `observe-trace-query`\n\n## Execution Checklist\n\n1. Enable tracing with environment-appropriate sampling.\n2. Add useful static and header-derived span attributes.\n3. Use `planoai trace` filters to isolate route and latency issues.\n4. Prefer trace evidence over assumptions in recommendations.\n5. Return exact commands to reproduce and validate findings.\n"
+    }
+  ]
+}
