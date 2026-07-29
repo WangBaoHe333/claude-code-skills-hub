@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-ruflo-status",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: ruflo-status\ndescription: Diagnose Ruflo health, then report system, MCP server, and active-agent status without changing the installation\nargument-hint: \"[--fix]\"\nallowed-tools: Bash(npx *)\n---\n\n# Ruflo status\n\nUse this skill when the user asks for Ruflo health, diagnostics, MCP server\nstate, or active-agent status.\n\n## Default read-only workflow\n\nRun these commands in order:\n\n```bash\nnpx @claude-flow/cli@latest doctor\nnpx @claude-flow/cli@latest status\n```\n\nSummarize the diagnostics and status together. Do not repair, reset, start,\nstop, install, or otherwise change anything during the default workflow.\n\n## Explicit repair workflow\n\nOnly when the user explicitly asks to fix or auto-repair the installation,\nreplace the first command with:\n\n```bash\nnpx @claude-flow/cli@latest doctor --fix\nnpx @claude-flow/cli@latest status\n```\n\nReport what the repair changed and the resulting status. Never infer\nauthorization for `doctor --fix` from a request to check or diagnose Ruflo.\n"
+    }
+  ]
+}

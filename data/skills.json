@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T21:39:09.007Z",
+  "generatedAt": "2026-07-29T21:19:44.320Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -40919,6 +40919,42 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-clockify-automation.json"
     },
     {
+      "id": "nexu-io-open-design-clone-audit-mrlv3nl4",
+      "name": "clone-audit-mrlv3nl4",
+      "summary": "Audit cloned or reimplemented websites for fidelity gaps, tracking scripts, source-brand and language residue, placeholders, and risky external dependencies. Use before handoff or…",
+      "summaryZh": "Clone Audit Mrlv3nl4 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Clone Audit Mrlv3nl4 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Clone Audit Mrlv3nl4 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Clone Audit Mrlv3nl4 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Clone Audit Mrlv3nl4 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Clone Audit Mrlv3nl4 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Clone Audit Mrlv3nl4”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Clone Audit Mrlv3nl4”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/plugins/community/clone-audit-mrlv3nl4' \"$HOME/.claude/skills/clone-audit-mrlv3nl4\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "plugins/community/clone-audit-mrlv3nl4",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-clone-audit-mrlv3nl4.json"
+    },
+    {
       "id": "browser-use-browser-use-cloud",
       "name": "cloud",
       "summary": ">",
@@ -80690,6 +80726,42 @@
       "packageUrl": "/skill-files/abhigyanpatwari-gitnexus-gitnexus-taint-analysis.json"
     },
     {
+      "id": "code-yeongyu-oh-my-openagent-give-me-tips",
+      "name": "give-me-tips",
+      "summary": "Explains any senpi tip in depth - startup tips, working tips, and any Tip: line shown in the TUI (including the Fable-5-refusal fallback tip). Use when the user asks about a Tip: …",
+      "summaryZh": "Give Me Tips 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Give Me Tips 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Give Me Tips 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Give Me Tips 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Give Me Tips 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Give Me Tips 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Give Me Tips”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Give Me Tips”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-senpi/skills/give-me-tips' \"$HOME/.claude/skills/give-me-tips\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/omo-senpi/skills/give-me-tips",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-give-me-tips.json"
+    },
+    {
       "id": "composiohq-awesome-claude-skills-givebutter-automation",
       "name": "givebutter-automation",
       "summary": "Automate Givebutter tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -106637,24 +106709,24 @@
     {
       "id": "homeassistant-ai-ha-mcp-locales",
       "name": "locales",
-      "summary": "The settings page discovers every `*.json` catalog in this directory. To add a language, copy `en.json`, rename it to the language code (for example `it.json`), translate the valu…",
-      "summaryZh": "Locales 用来翻译和润色文本，适合把文章、说明、界面文案或资料转换成目标语言。",
-      "capabilityZh": "Locales 用来翻译和润色文本，适合把文章、说明、界面文案或资料转换成目标语言。",
+      "summary": "The settings page discovers every `*.json` catalog in this directory. No Python or JavaScript registration is required, and no packaging file needs editing — the wheel, sdist and …",
+      "summaryZh": "Locales 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Locales 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Locales 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 Locales 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "翻译 Markdown、文章或说明文档",
-        "保留原文结构并润色译文",
-        "把技术内容改写成更自然的中文或英文"
+        "使用 Locales 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "翻译 Markdown、文章或说明文档",
-        "保留原文结构并润色译文",
-        "把技术内容改写成更自然的中文或英文"
+        "使用 Locales 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Locales”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Locales”，再给出文件、链接或要完成的任务。",
-      "category": "翻译 / 本地化",
+      "category": "通用工具",
       "tags": [
         "skill"
       ],
@@ -152767,6 +152839,43 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-ruflo-doctor.json"
+    },
+    {
+      "id": "ruvnet-ruflo-ruflo-status",
+      "name": "ruflo-status",
+      "summary": "Diagnose Ruflo health, then report system, MCP server, and active-agent status without changing the installation",
+      "summaryZh": "Ruflo Status 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Ruflo Status 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Ruflo Status 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ruflo Status 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ruflo Status”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ruflo Status”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-core/skills/ruflo-status' \"$HOME/.claude/skills/ruflo-status\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-core/skills/ruflo-status",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-ruflo-status.json"
     },
     {
       "id": "affaan-m-ecc-rules",
