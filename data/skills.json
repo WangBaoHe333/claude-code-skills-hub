@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T21:19:44.320Z",
+  "generatedAt": "2026-07-30T21:40:56.519Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -5377,6 +5377,44 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-agent-designer.json"
+    },
+    {
+      "id": "storybookjs-storybook-agent-eval",
+      "name": "agent eval",
+      "summary": "Runs coding agents (Claude Code and Codex) against fixture projects in sandboxes and asserts that they follow the Storybook workflows this repo ships — writing stories, previewing…",
+      "summaryZh": "Agent Eval 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Agent Eval 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Agent Eval 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Agent Eval 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Agent Eval”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Agent Eval”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "testing",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/storybookjs__storybook'\ngit clone --depth 1 'https://github.com/storybookjs/storybook.git' '/tmp/storybookjs__storybook'\ncp -R '/tmp/storybookjs__storybook/agent-eval' \"$HOME/.claude/skills/agent-eval\"\nrm -rf '/tmp/storybookjs__storybook'"
+      },
+      "source": {
+        "repo": "storybookjs/storybook",
+        "url": "https://github.com/storybookjs/storybook",
+        "path": "agent-eval",
+        "type": "auto-promoted-high-star",
+        "stars": 90670
+      },
+      "packageUrl": "/skill-files/storybookjs-storybook-agent-eval.json"
     },
     {
       "id": "feast-dev-feast-agent-feature-store",
@@ -34636,6 +34674,44 @@
       "packageUrl": "/skill-files/thedotmack-claude-mem-claude-mem.json"
     },
     {
+      "id": "storybookjs-storybook-claude-plugin",
+      "name": "claude plugin",
+      "summary": "You can use Storybook's plugin in Claude Code or Claude Desktop to connect agents to your Storybook. Agents can then use the plugin's skills and tools to generate UI, run tests, a…",
+      "summaryZh": "Claude Plugin 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Claude Plugin 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Claude Plugin 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Claude Plugin 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Claude Plugin”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Claude Plugin”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "testing",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/storybookjs__storybook'\ngit clone --depth 1 'https://github.com/storybookjs/storybook.git' '/tmp/storybookjs__storybook'\ncp -R '/tmp/storybookjs__storybook/code/lib/claude-plugin' \"$HOME/.claude/skills/claude-plugin\"\nrm -rf '/tmp/storybookjs__storybook'"
+      },
+      "source": {
+        "repo": "storybookjs/storybook",
+        "url": "https://github.com/storybookjs/storybook",
+        "path": "code/lib/claude-plugin",
+        "type": "auto-promoted-high-star",
+        "stars": 90670
+      },
+      "packageUrl": "/skill-files/storybookjs-storybook-claude-plugin.json"
+    },
+    {
       "id": "anthropics-skills-claude-api",
       "name": "claude-api",
       "summary": "|-",
@@ -43298,6 +43374,44 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-codex-code-task.json"
     },
     {
+      "id": "storybookjs-storybook-codex-plugin",
+      "name": "codex plugin",
+      "summary": "You can use Storybook's Codex plugin to connect agents to your Storybook. Agents can then use the plugin's skills and tools to generate UI, run tests, and preview their work in yo…",
+      "summaryZh": "Codex Plugin 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Codex Plugin 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Codex Plugin 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Codex Plugin 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Codex Plugin”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Codex Plugin”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "testing",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/storybookjs__storybook'\ngit clone --depth 1 'https://github.com/storybookjs/storybook.git' '/tmp/storybookjs__storybook'\ncp -R '/tmp/storybookjs__storybook/code/lib/codex-plugin' \"$HOME/.claude/skills/codex-plugin\"\nrm -rf '/tmp/storybookjs__storybook'"
+      },
+      "source": {
+        "repo": "storybookjs/storybook",
+        "url": "https://github.com/storybookjs/storybook",
+        "path": "code/lib/codex-plugin",
+        "type": "auto-promoted-high-star",
+        "stars": 90670
+      },
+      "packageUrl": "/skill-files/storybookjs-storybook-codex-plugin.json"
+    },
+    {
       "id": "nexu-io-open-design-codex-interactive-capability-map",
       "name": "codex-interactive-capability-map",
       "summary": "Turn a long-form article, thread, memo, or product narrative into a compact clickable capability map with a workflow loop, use-case matrix, and responsive detail panel.",
@@ -43465,7 +43579,8 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Coding Agent Sessions”，再给出文件、链接或要完成的任务。",
       "category": "内容整理",
       "tags": [
-        "skill"
+        "skill",
+        "browser"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/coding-agent-sessions' \"$HOME/.claude/skills/coding-agent-sessions\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
@@ -96022,6 +96137,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-init.json"
     },
     {
+      "id": "storybookjs-storybook-init",
+      "name": "init",
+      "summary": "Use when adding Storybook to a project that does not have Storybook configured yet.",
+      "summaryZh": "Init 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Init 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Init 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Init 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Init 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Init 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Init”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Init”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/storybookjs__storybook'\ngit clone --depth 1 'https://github.com/storybookjs/storybook.git' '/tmp/storybookjs__storybook'\ncp -R '/tmp/storybookjs__storybook/code/lib/codex-plugin/plugins/storybook/skills/init' \"$HOME/.claude/skills/init\"\nrm -rf '/tmp/storybookjs__storybook'"
+      },
+      "source": {
+        "repo": "storybookjs/storybook",
+        "url": "https://github.com/storybookjs/storybook",
+        "path": "code/lib/codex-plugin/plugins/storybook/skills/init",
+        "type": "auto-promoted-high-star",
+        "stars": 90670
+      },
+      "packageUrl": "/skill-files/storybookjs-storybook-init.json"
+    },
+    {
       "id": "code-yeongyu-oh-my-openagent-init-deep",
       "name": "init-deep",
       "summary": "(builtin) Initialize hierarchical AGENTS.md knowledge base",
@@ -102718,6 +102869,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-langbase-automation.json"
+    },
+    {
+      "id": "evermind-ai-everos-langfuse",
+      "name": "langfuse",
+      "summary": "EverOS × Langfuse (native OpenTelemetry)",
+      "summaryZh": "Langfuse 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Langfuse 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Langfuse 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Langfuse 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Langfuse 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Langfuse 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Langfuse”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Langfuse”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/EverMind-AI__EverOS'\ngit clone --depth 1 'https://github.com/EverMind-AI/EverOS.git' '/tmp/EverMind-AI__EverOS'\ncp -R '/tmp/EverMind-AI__EverOS/examples/langfuse' \"$HOME/.claude/skills/langfuse\"\nrm -rf '/tmp/EverMind-AI__EverOS'"
+      },
+      "source": {
+        "repo": "EverMind-AI/EverOS",
+        "url": "https://github.com/EverMind-AI/EverOS",
+        "path": "examples/langfuse",
+        "type": "auto-promoted-high-star",
+        "stars": 10873
+      },
+      "packageUrl": "/skill-files/evermind-ai-everos-langfuse.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-langsmith-fetch",
@@ -110402,6 +110589,42 @@
         "stars": 45347
       },
       "packageUrl": "/skill-files/mvanhorn-last30days-skill-mcp.json"
+    },
+    {
+      "id": "storybookjs-storybook-mcp",
+      "name": "mcp",
+      "summary": "Storybook addon for MCP-powered UI development workflows.",
+      "summaryZh": "Mcp 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Mcp 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Mcp 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Mcp 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Mcp 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Mcp 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Mcp”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Mcp”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/storybookjs__storybook'\ngit clone --depth 1 'https://github.com/storybookjs/storybook.git' '/tmp/storybookjs__storybook'\ncp -R '/tmp/storybookjs__storybook/code/addons/mcp' \"$HOME/.claude/skills/mcp\"\nrm -rf '/tmp/storybookjs__storybook'"
+      },
+      "source": {
+        "repo": "storybookjs/storybook",
+        "url": "https://github.com/storybookjs/storybook",
+        "path": "code/addons/mcp",
+        "type": "auto-promoted-high-star",
+        "stars": 90670
+      },
+      "packageUrl": "/skill-files/storybookjs-storybook-mcp.json"
     },
     {
       "id": "shuvonsec-claude-bug-bounty-mcp",
@@ -125401,6 +125624,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-open-optimise.json"
+    },
+    {
+      "id": "storybookjs-storybook-open-service",
+      "name": "open service",
+      "summary": "`open-service` is a small schema-driven service system for Storybook internals.",
+      "summaryZh": "Open Service 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Open Service 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Open Service 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Open Service 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Open Service 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Open Service 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Open Service”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Open Service”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/storybookjs__storybook'\ngit clone --depth 1 'https://github.com/storybookjs/storybook.git' '/tmp/storybookjs__storybook'\ncp -R '/tmp/storybookjs__storybook/code/core/src/shared/open-service' \"$HOME/.claude/skills/open-service\"\nrm -rf '/tmp/storybookjs__storybook'"
+      },
+      "source": {
+        "repo": "storybookjs/storybook",
+        "url": "https://github.com/storybookjs/storybook",
+        "path": "code/core/src/shared/open-service",
+        "type": "auto-promoted-high-star",
+        "stars": 90670
+      },
+      "packageUrl": "/skill-files/storybookjs-storybook-open-service.json"
     },
     {
       "id": "nexu-io-open-design-open-design-homepage",
@@ -160386,6 +160645,42 @@
       "packageUrl": "/skill-files/yeachan-heo-oh-my-claudecode-setup.json"
     },
     {
+      "id": "storybookjs-storybook-setup",
+      "name": "setup",
+      "summary": "Use this skill when Storybook is already installed and the user wants a working `preview` file and stories for real components.",
+      "summaryZh": "Setup 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Setup 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Setup 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Setup 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Setup 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Setup 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Setup”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Setup”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/storybookjs__storybook'\ngit clone --depth 1 'https://github.com/storybookjs/storybook.git' '/tmp/storybookjs__storybook'\ncp -R '/tmp/storybookjs__storybook/code/lib/codex-plugin/plugins/storybook/skills/setup' \"$HOME/.claude/skills/setup\"\nrm -rf '/tmp/storybookjs__storybook'"
+      },
+      "source": {
+        "repo": "storybookjs/storybook",
+        "url": "https://github.com/storybookjs/storybook",
+        "path": "code/lib/codex-plugin/plugins/storybook/skills/setup",
+        "type": "auto-promoted-high-star",
+        "stars": 90670
+      },
+      "packageUrl": "/skill-files/storybookjs-storybook-setup.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-setup-dca",
       "name": "setup dca",
       "summary": "Set up non-custodial dollar-cost averaging on Uniswap: recurring swaps, Gelato keeper automation, and monitoring.",
@@ -170574,6 +170869,43 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-storerocket-automation.json"
     },
     {
+      "id": "storybookjs-storybook-stories",
+      "name": "stories",
+      "summary": "Invoke FIRST, before creating, editing, or deleting components, stories, styles, CSS, themes, colors, or design tokens — anything that changes how the UI looks, no exceptions. Als…",
+      "summaryZh": "Stories 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Stories 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Stories 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Stories 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Stories 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Stories 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Stories”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Stories”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "documents"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/storybookjs__storybook'\ngit clone --depth 1 'https://github.com/storybookjs/storybook.git' '/tmp/storybookjs__storybook'\ncp -R '/tmp/storybookjs__storybook/code/lib/claude-plugin/skills/stories' \"$HOME/.claude/skills/stories\"\nrm -rf '/tmp/storybookjs__storybook'"
+      },
+      "source": {
+        "repo": "storybookjs/storybook",
+        "url": "https://github.com/storybookjs/storybook",
+        "path": "code/lib/claude-plugin/skills/stories",
+        "type": "auto-promoted-high-star",
+        "stars": 90670
+      },
+      "packageUrl": "/skill-files/storybookjs-storybook-stories.json"
+    },
+    {
       "id": "homeassistant-ai-ha-mcp-stories",
       "name": "stories",
       "summary": "User acceptance stories for ha-mcp Bot Acceptance Testing (BAT). Each story represents a realistic use case that users perform with AI agents connected to Home Assistant via MCP.",
@@ -170647,6 +170979,114 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-stormglass-io-automation.json"
+    },
+    {
+      "id": "storybookjs-storybook-storybook-init",
+      "name": "storybook-init",
+      "summary": "Use when adding Storybook to a project that does not have Storybook configured yet.",
+      "summaryZh": "Storybook Init 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Storybook Init 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Storybook Init 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Storybook Init 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Storybook Init 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Storybook Init 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Storybook Init”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Storybook Init”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/storybookjs__storybook'\ngit clone --depth 1 'https://github.com/storybookjs/storybook.git' '/tmp/storybookjs__storybook'\ncp -R '/tmp/storybookjs__storybook/code/lib/claude-plugin/skills/storybook-init' \"$HOME/.claude/skills/storybook-init\"\nrm -rf '/tmp/storybookjs__storybook'"
+      },
+      "source": {
+        "repo": "storybookjs/storybook",
+        "url": "https://github.com/storybookjs/storybook",
+        "path": "code/lib/claude-plugin/skills/storybook-init",
+        "type": "auto-promoted-high-star",
+        "stars": 90670
+      },
+      "packageUrl": "/skill-files/storybookjs-storybook-storybook-init.json"
+    },
+    {
+      "id": "storybookjs-storybook-storybook-setup",
+      "name": "storybook-setup",
+      "summary": "Use this skill when Storybook is already installed and the user wants a working `preview` file and stories for real components.",
+      "summaryZh": "Storybook Setup 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Storybook Setup 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Storybook Setup 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Storybook Setup 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Storybook Setup 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Storybook Setup 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Storybook Setup”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Storybook Setup”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/storybookjs__storybook'\ngit clone --depth 1 'https://github.com/storybookjs/storybook.git' '/tmp/storybookjs__storybook'\ncp -R '/tmp/storybookjs__storybook/code/lib/claude-plugin/skills/storybook-setup' \"$HOME/.claude/skills/storybook-setup\"\nrm -rf '/tmp/storybookjs__storybook'"
+      },
+      "source": {
+        "repo": "storybookjs/storybook",
+        "url": "https://github.com/storybookjs/storybook",
+        "path": "code/lib/claude-plugin/skills/storybook-setup",
+        "type": "auto-promoted-high-star",
+        "stars": 90670
+      },
+      "packageUrl": "/skill-files/storybookjs-storybook-storybook-setup.json"
+    },
+    {
+      "id": "storybookjs-storybook-storybook-upgrade",
+      "name": "storybook-upgrade",
+      "summary": "Use this skill when Storybook exists but needs an upgrade.",
+      "summaryZh": "Storybook Upgrade 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Storybook Upgrade 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Storybook Upgrade 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Storybook Upgrade 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Storybook Upgrade 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Storybook Upgrade 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Storybook Upgrade”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Storybook Upgrade”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/storybookjs__storybook'\ngit clone --depth 1 'https://github.com/storybookjs/storybook.git' '/tmp/storybookjs__storybook'\ncp -R '/tmp/storybookjs__storybook/code/lib/claude-plugin/skills/storybook-upgrade' \"$HOME/.claude/skills/storybook-upgrade\"\nrm -rf '/tmp/storybookjs__storybook'"
+      },
+      "source": {
+        "repo": "storybookjs/storybook",
+        "url": "https://github.com/storybookjs/storybook",
+        "path": "code/lib/claude-plugin/skills/storybook-upgrade",
+        "type": "auto-promoted-high-star",
+        "stars": 90670
+      },
+      "packageUrl": "/skill-files/storybookjs-storybook-storybook-upgrade.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-strategic-alignment",
@@ -183743,6 +184183,42 @@
         "stars": 3414
       },
       "packageUrl": "/skill-files/agenticnotetaking-arscontexta-upgrade.json"
+    },
+    {
+      "id": "storybookjs-storybook-upgrade",
+      "name": "upgrade",
+      "summary": "Use this skill when Storybook exists but needs an upgrade.",
+      "summaryZh": "Upgrade 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Upgrade 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Upgrade 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Upgrade 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Upgrade 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Upgrade 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Upgrade”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Upgrade”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/storybookjs__storybook'\ngit clone --depth 1 'https://github.com/storybookjs/storybook.git' '/tmp/storybookjs__storybook'\ncp -R '/tmp/storybookjs__storybook/code/lib/codex-plugin/plugins/storybook/skills/upgrade' \"$HOME/.claude/skills/upgrade\"\nrm -rf '/tmp/storybookjs__storybook'"
+      },
+      "source": {
+        "repo": "storybookjs/storybook",
+        "url": "https://github.com/storybookjs/storybook",
+        "path": "code/lib/codex-plugin/plugins/storybook/skills/upgrade",
+        "type": "auto-promoted-high-star",
+        "stars": 90670
+      },
+      "packageUrl": "/skill-files/storybookjs-storybook-upgrade.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-upgrading-expo",

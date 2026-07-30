@@ -1,0 +1,10 @@
+{
+  "id": "storybookjs-storybook-setup",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: setup\ndescription: Use this skill when Storybook is already installed and the user wants a working `preview` file and stories for real components.\n---\n\nPrerequisites:\n\n1. Confirm Storybook exists (`package.json`, `.storybook/`). If not, switch to `$storybook:init`.\n2. Storybook must be at least 10.5 (or `next` while 10.5 is not yet released). If it is older, or upgrade/repair is needed first, switch to `$storybook:upgrade`.\n\nRun `npx storybook ai setup` from the project root (or the Storybook package in a monorepo).\n\n**Follow the printed Markdown precisely.** Do not substitute your own plan.\n"
+    }
+  ]
+}
