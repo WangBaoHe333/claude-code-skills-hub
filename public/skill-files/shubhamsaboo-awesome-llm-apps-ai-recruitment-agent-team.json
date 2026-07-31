@@ -19,7 +19,7 @@
     {
       "path": "requirements.txt",
       "encoding": "utf8",
-      "content": "# Core dependencies\nphidata\nagno>=2.2.10\nstreamlit==1.40.2\nPyPDF2==3.0.1\nstreamlit-pdf-viewer==0.0.19\nrequests==2.32.3\npytz==2023.4\ntyping-extensions>=4.9.0\n\n# Optional but recommended\nblack>=24.1.1  # for code formatting\npython-dateutil>=2.8.2  # for date parsing\n"
+      "content": "# Core dependencies\nagno>=2.2.10\nstreamlit==1.40.2\nPyPDF2==3.0.1\nstreamlit-pdf-viewer==0.0.19\nrequests==2.32.3\npytz==2023.4\ntyping-extensions>=4.9.0\n\n# Optional but recommended\nblack>=24.1.1  # for code formatting\npython-dateutil>=2.8.2  # for date parsing\n"
     }
   ]
 }

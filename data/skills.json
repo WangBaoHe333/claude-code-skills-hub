@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T21:40:56.519Z",
+  "generatedAt": "2026-07-31T21:39:05.626Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -8575,6 +8575,42 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-agility-cms-automation.json"
     },
     {
+      "id": "ruvnet-ruflo-agntcy-status",
+      "name": "agntcy-status",
+      "summary": "Show AGNTCY/SLIM/CASA integration status — whether upstream AGNTCY packages are installed, which transport (local vs SLIM) is active, and whether CASA enforcement is enabled. Use …",
+      "summaryZh": "Agntcy Status 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Agntcy Status 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Agntcy Status 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Agntcy Status 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Agntcy Status 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Agntcy Status 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Agntcy Status”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Agntcy Status”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-agntcy/skills/agntcy-status' \"$HOME/.claude/skills/agntcy-status\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-agntcy/skills/agntcy-status",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-agntcy-status.json"
+    },
+    {
       "id": "composiohq-awesome-claude-skills-ahrefs-automation",
       "name": "Ahrefs Automation",
       "summary": "Automate SEO research with Ahrefs -- analyze backlink profiles, research keywords, track domain metrics history, audit organic rankings, and perform batch URL analysis through the…",
@@ -11007,7 +11043,7 @@
     {
       "id": "lee-to-ai-factory-aif-explore",
       "name": "aif-explore",
-      "summary": "Enter explore mode - a thinking partner for exploring ideas, investigating problems, and clarifying requirements. Use when the user wants to think through something before or duri…",
+      "summary": "Enter explore mode to investigate ideas, systems, problems, and requirements before planning. Use explicit ultra mode when the user wants a durable adaptive research bundle with a…",
       "summaryZh": "Aif Explore 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Aif Explore 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Aif Explore 处理具体工作流的 Claude Code 用户。",
@@ -11260,7 +11296,7 @@
     {
       "id": "lee-to-ai-factory-aif-plan",
       "name": "aif-plan",
-      "summary": "Plan implementation for a feature or task. Two modes — fast (single quick plan) or full (richer plan with optional git branch/worktree flow). Use when user says \"plan\", \"new featu…",
+      "summary": "Plan a feature or task in fast, full, or ultra mode. Ultra creates an indexed multi-file bundle with deeply specified phases for execution by a smaller model. Use for \"plan\", \"new…",
       "summaryZh": "Aif Plan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Aif Plan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Aif Plan 处理具体工作流的 Claude Code 用户。",
@@ -47874,6 +47910,42 @@
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-core.json"
     },
     {
+      "id": "conorbronsdon-avoid-ai-writing-corpus",
+      "name": "corpus",
+      "summary": "This repo asserts things about false positives. The tiering exists \"to reduce false positives on words that are fine in isolation but suspicious in clusters.\" The tolerance matrix…",
+      "summaryZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
+      "capabilityZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
+      "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
+      "audienceZh": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
+      "scenarios": [
+        "生成带标题、段落和列表的 Word 文档",
+        "读取已有 .docx 并提取关键信息",
+        "修改文档内容、结构和格式后重新导出"
+      ],
+      "scenariosZh": [
+        "生成带标题、段落和列表的 Word 文档",
+        "读取已有 .docx 并提取关键信息",
+        "修改文档内容、结构和格式后重新导出"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Corpus”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Corpus”，再给出文件、链接或要完成的任务。",
+      "category": "文档处理",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/conorbronsdon__avoid-ai-writing'\ngit clone --depth 1 'https://github.com/conorbronsdon/avoid-ai-writing.git' '/tmp/conorbronsdon__avoid-ai-writing'\ncp -R '/tmp/conorbronsdon__avoid-ai-writing/corpus' \"$HOME/.claude/skills/corpus\"\nrm -rf '/tmp/conorbronsdon__avoid-ai-writing'"
+      },
+      "source": {
+        "repo": "conorbronsdon/avoid-ai-writing",
+        "url": "https://github.com/conorbronsdon/avoid-ai-writing",
+        "path": "corpus",
+        "type": "auto-promoted-high-star",
+        "stars": 2312
+      },
+      "packageUrl": "/skill-files/conorbronsdon-avoid-ai-writing-corpus.json"
+    },
+    {
       "id": "composiohq-awesome-claude-skills-corrently-automation",
       "name": "corrently-automation",
       "summary": "Automate Corrently tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -53234,6 +53306,42 @@
         "stars": 64767
       },
       "packageUrl": "/skill-files/nexu-io-open-design-data-report.json"
+    },
+    {
+      "id": "code-yeongyu-oh-my-openagent-data-scientist",
+      "name": "data-scientist",
+      "summary": "Expert data processing specialist with intelligent DuckDB/Polars selection for maximum performance. Always includes numpy, never uses pandas, runs everything through uv. Triggers:…",
+      "summaryZh": "Data Scientist 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Data Scientist 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Data Scientist 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Data Scientist 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Data Scientist 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Data Scientist 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Data Scientist”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Data Scientist”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/data-scientist' \"$HOME/.claude/skills/data-scientist\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/shared-skills/skills/data-scientist",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-data-scientist.json"
     },
     {
       "id": "affaan-m-ecc-data-scraper-agent",
@@ -58610,7 +58718,7 @@
     {
       "id": "nexu-io-open-design-direction-picker",
       "name": "direction-picker",
-      "summary": "3-5 direction picker that lets the user choose before final generation.",
+      "summary": "Optional 3-5 direction picker for users who explicitly ask to compare visual directions.",
       "summaryZh": "Direction Picker 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Direction Picker 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Direction Picker 处理具体工作流的 Claude Code 用户。",
@@ -58863,7 +58971,7 @@
     {
       "id": "nexu-io-open-design-discovery-question-form",
       "name": "discovery-question-form",
-      "summary": "Turn-1 discovery question form for ambiguous briefs.",
+      "summary": "Structured clarification form for unresolved material requirements.",
       "summaryZh": "Discovery Question Form 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Discovery Question Form 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Discovery Question Form 处理具体工作流的 Claude Code 用户。",
@@ -123581,7 +123689,7 @@
     {
       "id": "nexu-io-open-design-od-default",
       "name": "od-default",
-      "summary": "Hidden fallback scenario for free-form Home prompts. Ask the task type first, then continue through the matching Open Design flow.",
+      "summary": "Hidden fallback scenario for free-form Home prompts. Infer the task type and ask only when routing is materially ambiguous.",
       "summaryZh": "Od Default 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Od Default 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Od Default 处理具体工作流的 Claude Code 用户。",
@@ -151921,6 +152029,43 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-ruflo-agentdb.json"
+    },
+    {
+      "id": "ruvnet-ruflo-ruflo-agntcy",
+      "name": "ruflo agntcy",
+      "summary": "AGNTCY/Outshift Internet-of-Cognition (IOC) runtime integration for Ruflo — the \"AGNTCY-identified, SLIM-transported, CASA-authorized\" leg of the clean-positioning stack described…",
+      "summaryZh": "Ruflo Agntcy 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ruflo Agntcy 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ruflo Agntcy 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ruflo Agntcy 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ruflo Agntcy 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ruflo Agntcy 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ruflo Agntcy”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ruflo Agntcy”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "documents"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-agntcy' \"$HOME/.claude/skills/ruflo-agntcy\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-agntcy",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-ruflo-agntcy.json"
     },
     {
       "id": "ruvnet-ruflo-ruflo-aidefence",
@@ -183450,7 +183595,7 @@
     {
       "id": "code-yeongyu-oh-my-openagent-ulw-research",
       "name": "ulw-research",
-      "summary": "Team-first maximum-saturation research orchestration for omo-senpi. Scopes the topic solo, organizes the axes into a brief, then DEFAULTS to a cooperating team (team_create) - one…",
+      "summary": "Team-first maximum-saturation research orchestration for omo-senpi. Scopes solo, ALWAYS asks which final format to render (PDF+DOCX default), then stands up a max-size cooperating…",
       "summaryZh": "读取、提取、拆分、合并和检查 PDF 页面内容，适合处理合同、论文、发票、报告和扫描资料。",
       "capabilityZh": "读取、提取、拆分、合并和检查 PDF 页面内容，适合处理合同、论文、发票、报告和扫描资料。",
       "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
@@ -183471,7 +183616,7 @@
       "tags": [
         "skill",
         "pdf",
-        "testing"
+        "documents"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-senpi/skills/ulw-research' \"$HOME/.claude/skills/ulw-research\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
