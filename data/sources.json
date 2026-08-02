@@ -643,6 +643,30 @@
       "stars": 1106,
       "discoveredAt": "2026-07-26T21:31:06.949Z",
       "reason": "1106 stars, 1 SKILL.md"
+    },
+    {
+      "repo": "openwpm/OpenWPM",
+      "url": "https://github.com/openwpm/OpenWPM.git",
+      "type": "auto-promoted-high-star",
+      "stars": 1416,
+      "discoveredAt": "2026-08-02T21:29:25.486Z",
+      "reason": "1416 stars, 14 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "linuxfoundation/crowd.dev",
+      "url": "https://github.com/linuxfoundation/crowd.dev.git",
+      "type": "auto-promoted-high-star",
+      "stars": 3369,
+      "discoveredAt": "2026-08-02T21:29:25.486Z",
+      "reason": "3369 stars, 10 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "adamlyttleapps/claude-skill-app-onboarding-questionnaire",
+      "url": "https://github.com/adamlyttleapps/claude-skill-app-onboarding-questionnaire.git",
+      "type": "auto-promoted-high-star",
+      "stars": 1148,
+      "discoveredAt": "2026-08-02T21:29:25.486Z",
+      "reason": "1148 stars, 1 SKILL.md"
     }
   ]
 }
