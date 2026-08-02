@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T21:17:57.151Z",
+  "generatedAt": "2026-08-02T21:17:29.478Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -56116,6 +56116,44 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-dependency-auditor.json"
+    },
+    {
+      "id": "shubhamsaboo-awesome-llm-apps-dependency-doctor",
+      "name": "dependency doctor",
+      "summary": "Dependency Doctor inspects one dependency manifest for surface-level, direct-manifest footguns. It catches unpinned versions, standard-library shadowing, obsolete backports, and o…",
+      "summaryZh": "Dependency Doctor 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Dependency Doctor 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Dependency Doctor 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Dependency Doctor 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Dependency Doctor”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Dependency Doctor”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "documents",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Shubhamsaboo__awesome-llm-apps'\ngit clone --depth 1 'https://github.com/Shubhamsaboo/awesome-llm-apps.git' '/tmp/Shubhamsaboo__awesome-llm-apps'\ncp -R '/tmp/Shubhamsaboo__awesome-llm-apps/agent_skills/dependency-doctor' \"$HOME/.claude/skills/dependency-doctor\"\nrm -rf '/tmp/Shubhamsaboo__awesome-llm-apps'"
+      },
+      "source": {
+        "repo": "Shubhamsaboo/awesome-llm-apps",
+        "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+        "path": "agent_skills/dependency-doctor",
+        "type": "auto-promoted-high-star",
+        "stars": 118441
+      },
+      "packageUrl": "/skill-files/shubhamsaboo-awesome-llm-apps-dependency-doctor.json"
     },
     {
       "id": "ruvnet-ruflo-dependency-check",
@@ -170177,7 +170215,7 @@
     {
       "id": "code-yeongyu-oh-my-openagent-start-work",
       "name": "start-work",
-      "summary": "Execute a Prometheus work plan in Codex with Boulder state, evidence ledger updates, worktree discipline, parallel subagents, and Stop-hook continuation. Use after planning when t…",
+      "summary": "Execute a Prometheus work plan with Boulder state, evidence ledger updates, worktree discipline, parallel subagents, and Stop-hook continuation. Use after planning when the user s…",
       "summaryZh": "Start Work 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Start Work 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Start Work 处理具体工作流的 Claude Code 用户。",
@@ -191604,44 +191642,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-web-development.json"
-    },
-    {
-      "id": "juneyaooo-gpt-image2-ppt-skills-web-ppt-template-distiller",
-      "name": "web-ppt-template-distiller",
-      "summary": "Score and distill high-quality online PPT or presentation template preview pages into reusable paired gpt-image2-ppt style Markdown and layout JSON. Use when the user wants to min…",
-      "summaryZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "capabilityZh": "创建、编辑和导出演示文稿，适合路演、汇报、课程和方案展示。",
-      "audience": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "audienceZh": "创业者、销售、产品经理、讲师和需要制作汇报材料的人。",
-      "scenarios": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
-      ],
-      "scenariosZh": [
-        "生成完整 PPTX 结构",
-        "修改已有幻灯片内容和版式",
-        "导出可预览、可交付的演示文件"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Web Ppt Template Distiller”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Web Ppt Template Distiller”，再给出文件、链接或要完成的任务。",
-      "category": "演示文稿",
-      "tags": [
-        "skill",
-        "presentations",
-        "image"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuneYaooo__gpt-image2-ppt-skills'\ngit clone --depth 1 'https://github.com/JuneYaooo/gpt-image2-ppt-skills.git' '/tmp/JuneYaooo__gpt-image2-ppt-skills'\ncp -R '/tmp/JuneYaooo__gpt-image2-ppt-skills/skills/web-ppt-template-distiller' \"$HOME/.claude/skills/web-ppt-template-distiller\"\nrm -rf '/tmp/JuneYaooo__gpt-image2-ppt-skills'"
-      },
-      "source": {
-        "repo": "JuneYaooo/gpt-image2-ppt-skills",
-        "url": "https://github.com/JuneYaooo/gpt-image2-ppt-skills",
-        "path": "skills/web-ppt-template-distiller",
-        "type": "auto-promoted-high-star",
-        "stars": 1106
-      },
-      "packageUrl": "/skill-files/juneyaooo-gpt-image2-ppt-skills-web-ppt-template-distiller.json"
     },
     {
       "id": "nexu-io-open-design-web-prototype",
