@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T21:17:29.478Z",
+  "generatedAt": "2026-08-03T21:38:09.873Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -82,7 +82,10 @@
     "liferay/liferay-portal",
     "jaywcjlove/awesome-mac",
     "katanemo/plano",
-    "JuneYaooo/gpt-image2-ppt-skills"
+    "JuneYaooo/gpt-image2-ppt-skills",
+    "openwpm/OpenWPM",
+    "linuxfoundation/crowd.dev",
+    "adamlyttleapps/claude-skill-app-onboarding-questionnaire"
   ],
   "skills": [
     {
@@ -2979,6 +2982,42 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-adr.json"
+    },
+    {
+      "id": "linuxfoundation-crowd-dev-adr",
+      "name": "adr",
+      "summary": "Architecture Decision Records (ADRs) capture significant technical decisions made in this project, including context, alternatives considered, and consequences.",
+      "summaryZh": "Adr 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Adr 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Adr 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Adr 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Adr 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Adr 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Adr”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Adr”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/linuxfoundation__crowd.dev'\ngit clone --depth 1 'https://github.com/linuxfoundation/crowd.dev.git' '/tmp/linuxfoundation__crowd.dev'\ncp -R '/tmp/linuxfoundation__crowd.dev/docs/adr' \"$HOME/.claude/skills/adr\"\nrm -rf '/tmp/linuxfoundation__crowd.dev'"
+      },
+      "source": {
+        "repo": "linuxfoundation/crowd.dev",
+        "url": "https://github.com/linuxfoundation/crowd.dev",
+        "path": "docs/adr",
+        "type": "auto-promoted-high-star",
+        "stars": 3369
+      },
+      "packageUrl": "/skill-files/linuxfoundation-crowd-dev-adr.json"
     },
     {
       "id": "ruvnet-ruflo-adr-create",
@@ -60231,7 +60270,7 @@
     {
       "id": "foryourhealth111-pixel-vibe-skills-docs",
       "name": "docs",
-      "summary": "`docs/` 只负责长期说明、当前状态入口和最小治理导航，不承担运行时真相本身，也不再公开堆放大批个人执行日志。",
+      "summary": "`docs/` 负责长期说明和最小治理导航。当前状态由 CI proof、GitHub Release 和本地 `check` 输出提供。",
       "summaryZh": "Docs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Docs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Docs 处理具体工作流的 Claude Code 用户。",
@@ -60251,7 +60290,8 @@
       "category": "通用工具",
       "tags": [
         "skill",
-        "documents"
+        "documents",
+        "github"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/docs' \"$HOME/.claude/skills/docs\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
@@ -115358,6 +115398,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-moco-automation.json"
+    },
+    {
+      "id": "thedotmack-claude-mem-mode-creator",
+      "name": "mode-creator",
+      "summary": "Interactively create, install, activate, and verify custom claude-mem modes, including domain-specific observation types, concept tags, optional Telegram alerts, bot setup, worker…",
+      "summaryZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
+      "capabilityZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
+      "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
+      "audienceZh": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
+      "scenarios": [
+        "生成带标题、段落和列表的 Word 文档",
+        "读取已有 .docx 并提取关键信息",
+        "修改文档内容、结构和格式后重新导出"
+      ],
+      "scenariosZh": [
+        "生成带标题、段落和列表的 Word 文档",
+        "读取已有 .docx 并提取关键信息",
+        "修改文档内容、结构和格式后重新导出"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Mode Creator”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Mode Creator”，再给出文件、链接或要完成的任务。",
+      "category": "文档处理",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/plugin/skills/mode-creator' \"$HOME/.claude/skills/mode-creator\"\nrm -rf '/tmp/thedotmack__claude-mem'"
+      },
+      "source": {
+        "repo": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "path": "plugin/skills/mode-creator",
+        "type": "auto-promoted-high-star",
+        "stars": 82253
+      },
+      "packageUrl": "/skill-files/thedotmack-claude-mem-mode-creator.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-model-supply-chain",
@@ -170504,6 +170580,43 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-status.json"
+    },
+    {
+      "id": "foryourhealth111-pixel-vibe-skills-status",
+      "name": "status",
+      "summary": "`docs/status/` 只放当前状态入口、proof contract、必要 guardrails，以及少量仍被 verify 直接消费的历史契约页。",
+      "summaryZh": "Status 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Status 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Status 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Status 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Status 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Status 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Status”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Status”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "documents"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/docs/status' \"$HOME/.claude/skills/status\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
+      },
+      "source": {
+        "repo": "foryourhealth111-pixel/Vibe-Skills",
+        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
+        "path": "docs/status",
+        "type": "auto-promoted-high-star",
+        "stars": 2326
+      },
+      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-status.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-statuscake-automation",
