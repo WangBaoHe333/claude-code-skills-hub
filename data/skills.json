@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T21:38:09.873Z",
+  "generatedAt": "2026-08-04T21:45:35.896Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -67996,6 +67996,42 @@
         "stars": 1015
       },
       "packageUrl": "/skill-files/asklokesh-loki-mode-examples.json"
+    },
+    {
+      "id": "conorbronsdon-avoid-ai-writing-examples",
+      "name": "examples",
+      "summary": "`--style` adds a house style on top of the de-AI pass. It is not a guide registry: it applies **register/voice** directives and removes AI tells, on top of whatever **mechanics** …",
+      "summaryZh": "Examples 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Examples 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Examples 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Examples 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Examples 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Examples 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Examples”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Examples”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/conorbronsdon__avoid-ai-writing'\ngit clone --depth 1 'https://github.com/conorbronsdon/avoid-ai-writing.git' '/tmp/conorbronsdon__avoid-ai-writing'\ncp -R '/tmp/conorbronsdon__avoid-ai-writing/examples' \"$HOME/.claude/skills/examples\"\nrm -rf '/tmp/conorbronsdon__avoid-ai-writing'"
+      },
+      "source": {
+        "repo": "conorbronsdon/avoid-ai-writing",
+        "url": "https://github.com/conorbronsdon/avoid-ai-writing",
+        "path": "examples",
+        "type": "auto-promoted-high-star",
+        "stars": 2312
+      },
+      "packageUrl": "/skill-files/conorbronsdon-avoid-ai-writing-examples.json"
     },
     {
       "id": "juneyaooo-gpt-image2-ppt-skills-examples",
