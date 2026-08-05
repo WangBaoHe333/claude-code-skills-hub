@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T21:45:35.896Z",
+  "generatedAt": "2026-08-05T21:45:24.492Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -22040,42 +22040,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-batch-resume-screener.json"
-    },
-    {
-      "id": "mattpocock-skills-batch-grill-me",
-      "name": "batch-grill-me",
-      "summary": "A relentless interview that asks every frontier question at once, round by round.",
-      "summaryZh": "Batch Grill Me 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Batch Grill Me 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Batch Grill Me 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Batch Grill Me 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Batch Grill Me 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Batch Grill Me 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Batch Grill Me”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Batch Grill Me”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/batch-grill-me' \"$HOME/.claude/skills/batch-grill-me\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/in-progress/batch-grill-me",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-batch-grill-me.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-battlenet-automation",
@@ -56344,28 +56308,26 @@
     {
       "id": "mattpocock-skills-deprecated",
       "name": "deprecated",
-      "summary": "- **[design-an-interface](./design-an-interface/SKILL.md)** — Generate multiple radically different interface designs for a module using parallel sub-agents. - **[qa](./qa/SKILL.m…",
-      "summaryZh": "Deprecated 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Deprecated 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "summary": "Skills I no longer use. This bucket is currently empty — a retired skill is deleted, and the changeset that removes it names whatever replaced it.",
+      "summaryZh": "Deprecated 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Deprecated 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Deprecated 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 Deprecated 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "使用 Deprecated 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "使用 Deprecated 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Deprecated”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Deprecated”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
+      "category": "通用工具",
       "tags": [
-        "skill",
-        "github",
-        "api"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/deprecated' \"$HOME/.claude/skills/deprecated\"\nrm -rf '/tmp/mattpocock__skills'"
@@ -56674,43 +56636,6 @@
         "stars": 64767
       },
       "packageUrl": "/skill-files/nexu-io-open-design-design-systems.json"
-    },
-    {
-      "id": "mattpocock-skills-design-an-interface",
-      "name": "design-an-interface",
-      "summary": "Generate multiple radically different interface designs for a module using parallel sub-agents. Use when user wants to design an API, explore interface options, compare module sha…",
-      "summaryZh": "Design An Interface 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Design An Interface 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 Design An Interface 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Design An Interface 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Design An Interface”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Design An Interface”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
-      "tags": [
-        "skill",
-        "api"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/deprecated/design-an-interface' \"$HOME/.claude/skills/design-an-interface\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/deprecated/design-an-interface",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-design-an-interface.json"
     },
     {
       "id": "nexu-io-open-design-design-brief",
@@ -64002,42 +63927,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-edict-multi-agent-orchestration.json"
-    },
-    {
-      "id": "mattpocock-skills-edit-article",
-      "name": "edit-article",
-      "summary": "Edit and improve articles by restructuring sections, improving clarity, and tightening prose. Use when user wants to edit, revise, or improve an article draft.",
-      "summaryZh": "Edit Article 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Edit Article 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Edit Article 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Edit Article 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Edit Article 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Edit Article 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Edit Article”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Edit Article”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/personal/edit-article' \"$HOME/.claude/skills/edit-article\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/personal/edit-article",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-edit-article.json"
     },
     {
       "id": "nexu-io-open-design-editorial-burgundy-principles-template",
@@ -95746,7 +95635,7 @@
     {
       "id": "mattpocock-skills-in-progress",
       "name": "in progress",
-      "summary": "Skills that are still being developed. They're not ready to ship — expect rough edges, breaking changes, and abandoned experiments. They're excluded from the plugin and the top-le…",
+      "summary": "Beta. These skills are public on purpose — try them and tell me what breaks. They're excluded from the plugin and the top-level README until they graduate to a stable bucket, they…",
       "summaryZh": "In Progress 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "In Progress 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 In Progress 处理具体工作流的 Claude Code 用户。",
@@ -95765,7 +95654,8 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 In Progress”，再给出文件、链接或要完成的任务。",
       "category": "通用工具",
       "tags": [
-        "skill"
+        "skill",
+        "documents"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress' \"$HOME/.claude/skills/in-progress\"\nrm -rf '/tmp/mattpocock__skills'"
@@ -123470,42 +123360,6 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-obsidian-cli.json"
     },
     {
-      "id": "mattpocock-skills-obsidian-vault",
-      "name": "obsidian-vault",
-      "summary": "Search, create, and manage notes in the Obsidian vault with wikilinks and index notes. Use when user wants to find, create, or organize notes in Obsidian.",
-      "summaryZh": "Obsidian Vault 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Obsidian Vault 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Obsidian Vault 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Obsidian Vault 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Obsidian Vault 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Obsidian Vault 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Obsidian Vault”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Obsidian Vault”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/personal/obsidian-vault' \"$HOME/.claude/skills/obsidian-vault\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/personal/obsidian-vault",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-obsidian-vault.json"
-    },
-    {
       "id": "leoyeai-openclaw-master-skills-oc-doctor",
       "name": "oc doctor",
       "summary": "[English](README.md) | [中文](README.zh-CN.md)",
@@ -133460,42 +133314,6 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-persistiq-automation.json"
-    },
-    {
-      "id": "mattpocock-skills-personal",
-      "name": "personal",
-      "summary": "Skills tied to my own setup, not promoted in the plugin.",
-      "summaryZh": "Personal 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Personal 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Personal 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Personal 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Personal 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Personal 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Personal”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Personal”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/personal' \"$HOME/.claude/skills/personal\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/personal",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-personal.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-personal-brand-builder",
@@ -144123,44 +143941,6 @@
       "packageUrl": "/skill-files/garrytan-gstack-qa.json"
     },
     {
-      "id": "mattpocock-skills-qa",
-      "name": "qa",
-      "summary": "Interactive QA session where user reports bugs or issues conversationally, and the agent files GitHub issues. Explores the codebase in the background for context and domain langua…",
-      "summaryZh": "Qa 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Qa 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 Qa 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Qa 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Qa”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Qa”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
-      "tags": [
-        "skill",
-        "github",
-        "api"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/deprecated/qa' \"$HOME/.claude/skills/qa\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/deprecated/qa",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-qa.json"
-    },
-    {
       "id": "browser-use-browser-use-qa",
       "name": "qa",
       "summary": "QA-test a website or web app and return a 1-5 quality score (5 = flawless, 1 = broken) with evidence. Use when the user wants to test, QA, evaluate, score, or \"check how good\" a s…",
@@ -149218,43 +148998,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-reprompter.json"
-    },
-    {
-      "id": "mattpocock-skills-request-refactor-plan",
-      "name": "request-refactor-plan",
-      "summary": "Create a detailed refactor plan with tiny commits via user interview, then file it as a GitHub issue. Use when user wants to plan a refactor, create a refactoring RFC, or break a …",
-      "summaryZh": "Request Refactor Plan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Request Refactor Plan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Request Refactor Plan 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Request Refactor Plan 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Request Refactor Plan 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Request Refactor Plan 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Request Refactor Plan”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Request Refactor Plan”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "github"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/deprecated/request-refactor-plan' \"$HOME/.claude/skills/request-refactor-plan\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/deprecated/request-refactor-plan",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-request-refactor-plan.json"
     },
     {
       "id": "obra-superpowers-requesting-code-review",
@@ -179235,12 +178978,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/to-questionnaire' \"$HOME/.claude/skills/to-questionnaire\"\nrm -rf '/tmp/mattpocock__skills'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/productivity/to-questionnaire' \"$HOME/.claude/skills/to-questionnaire\"\nrm -rf '/tmp/mattpocock__skills'"
       },
       "source": {
         "repo": "mattpocock/skills",
         "url": "https://github.com/mattpocock/skills",
-        "path": "skills/in-progress/to-questionnaire",
+        "path": "skills/productivity/to-questionnaire",
         "type": "auto-promoted-high-star",
         "stars": 128710
       },
@@ -183013,42 +182756,6 @@
         "stars": 3950
       },
       "packageUrl": "/skill-files/homeassistant-ai-ha-mcp-uat.json"
-    },
-    {
-      "id": "mattpocock-skills-ubiquitous-language",
-      "name": "ubiquitous-language",
-      "summary": "Extract a DDD-style ubiquitous language glossary from the current conversation, flagging ambiguities and proposing canonical terms. Saves to UBIQUITOUS_LANGUAGE.md. Use when user …",
-      "summaryZh": "Ubiquitous Language 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Ubiquitous Language 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Ubiquitous Language 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Ubiquitous Language 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Ubiquitous Language 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Ubiquitous Language 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Ubiquitous Language”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Ubiquitous Language”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/deprecated/ubiquitous-language' \"$HOME/.claude/skills/ubiquitous-language\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/deprecated/ubiquitous-language",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-ubiquitous-language.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-ubtrippin",
@@ -190804,6 +190511,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-wahoo-cloud.json"
     },
     {
+      "id": "mattpocock-skills-wait-what",
+      "name": "wait-what",
+      "summary": "Stop. That last message did not land — re-pitch it.",
+      "summaryZh": "Wait What 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Wait What 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Wait What 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Wait What 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Wait What 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Wait What 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Wait What”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Wait What”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/productivity/wait-what' \"$HOME/.claude/skills/wait-what\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/productivity/wait-what",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-wait-what.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-waitingformacguffin",
       "name": "waitingformacguffin",
       "summary": "Oscar prediction market intelligence from waitingformacguffin.com. Get live odds, whale activity, price movements, precursor awards, order book depth, and frontrunner changes acro…",
@@ -194454,35 +194197,35 @@
     {
       "id": "mattpocock-skills-wizard",
       "name": "wizard",
-      "summary": "Generate an interactive bash wizard that walks a human through a manual procedure — third-party setup, a one-off migration, an A→B state transition — opening URLs, capturing value…",
-      "summaryZh": "Wizard 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Wizard 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "summary": "Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an …",
+      "summaryZh": "Wizard 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Wizard 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Wizard 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 Wizard 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "使用 Wizard 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "scenariosZh": [
-        "使用 Wizard 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Wizard”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Wizard”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
+      "category": "代码 / Agent 开发",
       "tags": [
         "skill",
-        "github"
+        "api"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/wizard' \"$HOME/.claude/skills/wizard\"\nrm -rf '/tmp/mattpocock__skills'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/engineering/wizard' \"$HOME/.claude/skills/wizard\"\nrm -rf '/tmp/mattpocock__skills'"
       },
       "source": {
         "repo": "mattpocock/skills",
         "url": "https://github.com/mattpocock/skills",
-        "path": "skills/in-progress/wizard",
+        "path": "skills/engineering/wizard",
         "type": "auto-promoted-high-star",
         "stars": 128710
       },
@@ -196530,6 +196273,44 @@
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-writing-docs.json"
     },
     {
+      "id": "mattpocock-skills-writing-for-agents",
+      "name": "writing-for-agents",
+      "summary": "Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.",
+      "summaryZh": "Writing For Agents 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Writing For Agents 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Writing For Agents 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Writing For Agents 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Writing For Agents”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Writing For Agents”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "documents",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/productivity/writing-for-agents' \"$HOME/.claude/skills/writing-for-agents\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/productivity/writing-for-agents",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-writing-for-agents.json"
+    },
+    {
       "id": "mattpocock-skills-writing-fragments",
       "name": "writing-fragments",
       "summary": "Writing, explore — mine raw fragments, no structure yet.",
@@ -196564,42 +196345,6 @@
         "stars": 128710
       },
       "packageUrl": "/skill-files/mattpocock-skills-writing-fragments.json"
-    },
-    {
-      "id": "mattpocock-skills-writing-great-skills",
-      "name": "writing-great-skills",
-      "summary": "Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable.",
-      "summaryZh": "Writing Great Skills 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Writing Great Skills 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Writing Great Skills 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Writing Great Skills 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Writing Great Skills 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Writing Great Skills 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Writing Great Skills”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Writing Great Skills”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/productivity/writing-great-skills' \"$HOME/.claude/skills/writing-great-skills\"\nrm -rf '/tmp/mattpocock__skills'"
-      },
-      "source": {
-        "repo": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "path": "skills/productivity/writing-great-skills",
-        "type": "auto-promoted-high-star",
-        "stars": 128710
-      },
-      "packageUrl": "/skill-files/mattpocock-skills-writing-great-skills.json"
     },
     {
       "id": "nexu-io-open-design-writing-guidelines",
