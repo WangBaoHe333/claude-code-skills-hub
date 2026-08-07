@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T21:45:24.492Z",
+  "generatedAt": "2026-08-07T01:00:52.468Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -16817,6 +16817,43 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-archon-lightning.json"
+    },
+    {
+      "id": "shuvonsec-claude-bug-bounty-argus",
+      "name": "argus",
+      "summary": "Argus — the all-seeing scanner suite. Six automated scanners for high-value web + LLM bug classes — CORS misconfiguration (origin reflection / null / credentialed read), CRLF & ho…",
+      "summaryZh": "Argus 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Argus 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Argus 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Argus 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Argus”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Argus”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shuvonsec__claude-bug-bounty'\ngit clone --depth 1 'https://github.com/shuvonsec/claude-bug-bounty.git' '/tmp/shuvonsec__claude-bug-bounty'\ncp -R '/tmp/shuvonsec__claude-bug-bounty/skills/argus' \"$HOME/.claude/skills/argus\"\nrm -rf '/tmp/shuvonsec__claude-bug-bounty'"
+      },
+      "source": {
+        "repo": "shuvonsec/claude-bug-bounty",
+        "url": "https://github.com/shuvonsec/claude-bug-bounty",
+        "path": "skills/argus",
+        "type": "auto-promoted-high-star",
+        "stars": 3950
+      },
+      "packageUrl": "/skill-files/shuvonsec-claude-bug-bounty-argus.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-ariadne-thread",
@@ -40743,6 +40780,43 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-client-onboarding-agent.json"
     },
     {
+      "id": "shuvonsec-claude-bug-bounty-client-reverse",
+      "name": "client-reverse",
+      "summary": "Client-side request-signing and anti-bot token reversal for bug bounty — when a request carries a sign/sig/hmac/token/nonce/timestamp/X-Sensor header that Burp Repeater cannot rep…",
+      "summaryZh": "Client Reverse 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
+      "capabilityZh": "Client Reverse 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
+      "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "audienceZh": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "scenarios": [
+        "把链接内容转成 Markdown",
+        "提取视频字幕或社媒正文",
+        "把外部资料整理成摘要和后续待办"
+      ],
+      "scenariosZh": [
+        "把链接内容转成 Markdown",
+        "提取视频字幕或社媒正文",
+        "把外部资料整理成摘要和后续待办"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Client Reverse”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Client Reverse”，再给出文件、链接或要完成的任务。",
+      "category": "内容整理",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shuvonsec__claude-bug-bounty'\ngit clone --depth 1 'https://github.com/shuvonsec/claude-bug-bounty.git' '/tmp/shuvonsec__claude-bug-bounty'\ncp -R '/tmp/shuvonsec__claude-bug-bounty/skills/client-reverse' \"$HOME/.claude/skills/client-reverse\"\nrm -rf '/tmp/shuvonsec__claude-bug-bounty'"
+      },
+      "source": {
+        "repo": "shuvonsec/claude-bug-bounty",
+        "url": "https://github.com/shuvonsec/claude-bug-bounty",
+        "path": "skills/client-reverse",
+        "type": "auto-promoted-high-star",
+        "stars": 3950
+      },
+      "packageUrl": "/skill-files/shuvonsec-claude-bug-bounty-client-reverse.json"
+    },
+    {
       "id": "nexu-io-open-design-clinic-console",
       "name": "clinic console",
       "summary": "Clinic Console — live artifact template",
@@ -45572,7 +45646,7 @@
     {
       "id": "affaan-m-ecc-configure-ecc",
       "name": "configure-ecc",
-      "summary": "Everything Claude Code のインタラクティブなインストーラー — スキルとルールの選択とインストールをユーザーレベルまたはプロジェクトレベルのディレクトリへガイドし、パスを検証し、必要に応じてインストールされたファイルを最適化します。",
+      "summary": "Claude Code、Codex、Kimi 内で ECC のインストール、更新、再設定を案内し、各ハーネスが実際に備えるプラグイン、スコープ、フック機能を守ります。",
       "summaryZh": "Configure Ecc 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Configure Ecc 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Configure Ecc 处理具体工作流的 Claude Code 用户。",
@@ -63232,7 +63306,7 @@
     {
       "id": "affaan-m-ecc-ecc",
       "name": "ecc",
-      "summary": "plugins/ecc — Codex Repo-Marketplace Plugin Target",
+      "summary": "plugins/ecc — Legacy Codex Thin-Plugin Artifact",
       "summaryZh": "Ecc 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Ecc 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Ecc 处理具体工作流的 Claude Code 用户。",
@@ -176038,6 +176112,42 @@
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-tensorboard.json"
     },
     {
+      "id": "affaan-m-ecc-terminal-opener",
+      "name": "terminal-opener",
+      "summary": "Open an executable and its argument array in a visible terminal window through a reusable, shell-free launch plan with dry-run, JSON, capability detection, detached fallback, and …",
+      "summaryZh": "Terminal Opener 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Terminal Opener 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Terminal Opener 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Terminal Opener 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Terminal Opener 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Terminal Opener 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Terminal Opener”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Terminal Opener”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/terminal-opener' \"$HOME/.claude/skills/terminal-opener\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/terminal-opener",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-terminal-opener.json"
+    },
+    {
       "id": "affaan-m-ecc-terminal-ops",
       "name": "terminal-ops",
       "summary": "ECCのための証拠優先のリポジトリ実行ワークフロー。ユーザーがコマンドの実行、リポジトリの確認、CIの失敗のデバッグ、正確な実行と検証の証明を伴う狭い修正のプッシュを必要とする場合に使用する。",
@@ -179756,6 +179866,42 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-tools.json"
+    },
+    {
+      "id": "shuvonsec-claude-bug-bounty-tools",
+      "name": "tools",
+      "summary": "Python and shell scanner pipeline (~50 tools). Every tool checks whether its external dependency is installed — missing tools are skipped, never hard-error.",
+      "summaryZh": "Tools 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Tools 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Tools 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Tools 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Tools 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Tools 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Tools”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Tools”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shuvonsec__claude-bug-bounty'\ngit clone --depth 1 'https://github.com/shuvonsec/claude-bug-bounty.git' '/tmp/shuvonsec__claude-bug-bounty'\ncp -R '/tmp/shuvonsec__claude-bug-bounty/tools' \"$HOME/.claude/skills/tools\"\nrm -rf '/tmp/shuvonsec__claude-bug-bounty'"
+      },
+      "source": {
+        "repo": "shuvonsec/claude-bug-bounty",
+        "url": "https://github.com/shuvonsec/claude-bug-bounty",
+        "path": "tools",
+        "type": "auto-promoted-high-star",
+        "stars": 3950
+      },
+      "packageUrl": "/skill-files/shuvonsec-claude-bug-bounty-tools.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-topic-monitor",
@@ -191794,7 +191940,7 @@
     {
       "id": "shuvonsec-claude-bug-bounty-web2-vuln-classes",
       "name": "web2-vuln-classes",
-      "summary": "Complete reference for 24 web2 bug classes with root causes, detection patterns, bypass tables, exploit techniques, and real paid examples. Covers IDOR, auth bypass, XSS, SSRF (11…",
+      "summary": "Complete reference for 26 web2 bug classes with root causes, detection patterns, bypass tables, exploit techniques, and real paid examples. Covers IDOR, auth bypass, XSS, SSRF (11…",
       "summaryZh": "Web2 Vuln Classes 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Web2 Vuln Classes 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Web2 Vuln Classes 处理具体工作流的 Claude Code 用户。",
