@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T21:09:45.838Z",
+  "generatedAt": "2026-08-08T20:57:32.259Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -11698,6 +11698,42 @@
         "stars": 1027
       },
       "packageUrl": "/skill-files/lee-to-ai-factory-aif-skill-generator.json"
+    },
+    {
+      "id": "lee-to-ai-factory-aif-transfer",
+      "name": "aif-transfer",
+      "summary": ">-",
+      "summaryZh": "Aif Transfer 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Aif Transfer 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Aif Transfer 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Aif Transfer 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Aif Transfer 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Aif Transfer 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Aif Transfer”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Aif Transfer”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/lee-to__ai-factory'\ngit clone --depth 1 'https://github.com/lee-to/ai-factory.git' '/tmp/lee-to__ai-factory'\ncp -R '/tmp/lee-to__ai-factory/skills/aif-transfer' \"$HOME/.claude/skills/aif-transfer\"\nrm -rf '/tmp/lee-to__ai-factory'"
+      },
+      "source": {
+        "repo": "lee-to/ai-factory",
+        "url": "https://github.com/lee-to/ai-factory",
+        "path": "skills/aif-transfer",
+        "type": "auto-promoted-high-star",
+        "stars": 1027
+      },
+      "packageUrl": "/skill-files/lee-to-ai-factory-aif-transfer.json"
     },
     {
       "id": "lee-to-ai-factory-aif-verify",
