@@ -667,6 +667,22 @@
       "stars": 1148,
       "discoveredAt": "2026-08-02T21:29:25.486Z",
       "reason": "1148 stars, 1 SKILL.md"
+    },
+    {
+      "repo": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail.git",
+      "type": "auto-promoted-high-star",
+      "stars": 99267,
+      "discoveredAt": "2026-08-09T21:06:07.673Z",
+      "reason": "99267 stars, 12 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "BuddiesOfBudgie/budgie-desktop",
+      "url": "https://github.com/BuddiesOfBudgie/budgie-desktop.git",
+      "type": "auto-promoted-high-star",
+      "stars": 1326,
+      "discoveredAt": "2026-08-09T21:06:07.673Z",
+      "reason": "1326 stars, 2 SKILL.md, has skills directory"
     }
   ]
 }
