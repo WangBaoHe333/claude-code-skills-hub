@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T21:01:12.758Z",
+  "generatedAt": "2026-08-10T21:10:27.554Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -85,7 +85,9 @@
     "JuneYaooo/gpt-image2-ppt-skills",
     "openwpm/OpenWPM",
     "linuxfoundation/crowd.dev",
-    "adamlyttleapps/claude-skill-app-onboarding-questionnaire"
+    "adamlyttleapps/claude-skill-app-onboarding-questionnaire",
+    "DietrichGebert/ponytail",
+    "BuddiesOfBudgie/budgie-desktop"
   ],
   "skills": [
     {
@@ -7761,6 +7763,44 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-agentguard.json"
+    },
+    {
+      "id": "dietrichgebert-ponytail-agentic",
+      "name": "agentic",
+      "summary": "The single-shot benchmark (`../promptfooconfig.yaml`) measures one prompt, one completion. A fair critique ([#126](https://github.com/DietrichGebert/ponytail/issues/126)) is that …",
+      "summaryZh": "Agentic 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Agentic 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Agentic 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Agentic 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Agentic”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Agentic”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "github",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/DietrichGebert__ponytail'\ngit clone --depth 1 'https://github.com/DietrichGebert/ponytail.git' '/tmp/DietrichGebert__ponytail'\ncp -R '/tmp/DietrichGebert__ponytail/benchmarks/agentic' \"$HOME/.claude/skills/agentic\"\nrm -rf '/tmp/DietrichGebert__ponytail'"
+      },
+      "source": {
+        "repo": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "path": "benchmarks/agentic",
+        "type": "auto-promoted-high-star",
+        "stars": 99267
+      },
+      "packageUrl": "/skill-files/dietrichgebert-ponytail-agentic.json"
     },
     {
       "id": "ruvnet-ruflo-agentic-qe",
@@ -22737,6 +22777,44 @@
         "stars": 215443
       },
       "packageUrl": "/skill-files/affaan-m-ecc-benchmark-optimization-loop.json"
+    },
+    {
+      "id": "dietrichgebert-ponytail-benchmarks",
+      "name": "benchmarks",
+      "summary": "Three arms (no skill, [caveman](https://github.com/JuliusBrussee/caveman), ponytail), three models, five everyday tasks, **10 runs per cell, median reported**. Code LOC is counted…",
+      "summaryZh": "Benchmarks 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Benchmarks 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Benchmarks 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Benchmarks 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Benchmarks 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Benchmarks 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Benchmarks”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Benchmarks”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "github",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/DietrichGebert__ponytail'\ngit clone --depth 1 'https://github.com/DietrichGebert/ponytail.git' '/tmp/DietrichGebert__ponytail'\ncp -R '/tmp/DietrichGebert__ponytail/benchmarks' \"$HOME/.claude/skills/benchmarks\"\nrm -rf '/tmp/DietrichGebert__ponytail'"
+      },
+      "source": {
+        "repo": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "path": "benchmarks",
+        "type": "auto-promoted-high-star",
+        "stars": 99267
+      },
+      "packageUrl": "/skill-files/dietrichgebert-ponytail-benchmarks.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-benefits-navigator",
@@ -68070,6 +68148,42 @@
       "packageUrl": "/skill-files/juneyaooo-gpt-image2-ppt-skills-examples.json"
     },
     {
+      "id": "dietrichgebert-ponytail-examples",
+      "name": "examples",
+      "summary": "Real model output, verbatim from benchmark runs, the same task answered by the same model with no skill (`## Without Ponytail`) and with ponytail (`## With Ponytail`), so you can …",
+      "summaryZh": "Examples 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Examples 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Examples 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Examples 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Examples 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Examples 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Examples”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Examples”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/DietrichGebert__ponytail'\ngit clone --depth 1 'https://github.com/DietrichGebert/ponytail.git' '/tmp/DietrichGebert__ponytail'\ncp -R '/tmp/DietrichGebert__ponytail/examples' \"$HOME/.claude/skills/examples\"\nrm -rf '/tmp/DietrichGebert__ponytail'"
+      },
+      "source": {
+        "repo": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "path": "examples",
+        "type": "auto-promoted-high-star",
+        "stars": 99267
+      },
+      "packageUrl": "/skill-files/dietrichgebert-ponytail-examples.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-excalidraw-diagram-generator",
       "name": "excalidraw-diagram-generator",
       "summary": "Generate Excalidraw diagrams from natural language descriptions. Use when asked to \"create a diagram\", \"make a flowchart\", \"visualize a process\", \"draw a system architecture\", \"cr…",
@@ -105541,42 +105655,6 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-linear.json"
     },
     {
-      "id": "hashintel-hash-linear",
-      "name": "linear",
-      "summary": "Model Context Protocol (MCP) server for retrieving Linear issue information. [Read more about MCP](https://modelcontextprotocol.io/introduction).",
-      "summaryZh": "Linear 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Linear 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Linear 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Linear 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Linear 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Linear 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Linear”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Linear”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/hashintel__hash'\ngit clone --depth 1 'https://github.com/hashintel/hash.git' '/tmp/hashintel__hash'\ncp -R '/tmp/hashintel__hash/apps/mcp/linear' \"$HOME/.claude/skills/linear\"\nrm -rf '/tmp/hashintel__hash'"
-      },
-      "source": {
-        "repo": "hashintel/hash",
-        "url": "https://github.com/hashintel/hash",
-        "path": "apps/mcp/linear",
-        "type": "auto-promoted-high-star",
-        "stars": 1621
-      },
-      "packageUrl": "/skill-files/hashintel-hash-linear.json"
-    },
-    {
       "id": "composiohq-awesome-claude-skills-linguapop-automation",
       "name": "linguapop-automation",
       "summary": "Automate Linguapop tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -110992,42 +111070,6 @@
         "stars": 3586
       },
       "packageUrl": "/skill-files/flexprice-flexprice-mcp.json"
-    },
-    {
-      "id": "hashintel-hash-mcp",
-      "name": "mcp",
-      "summary": "Model Context Protocol (MCP) server",
-      "summaryZh": "Mcp 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Mcp 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Mcp 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Mcp 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Mcp 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Mcp 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Mcp”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Mcp”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/hashintel__hash'\ngit clone --depth 1 'https://github.com/hashintel/hash.git' '/tmp/hashintel__hash'\ncp -R '/tmp/hashintel__hash/apps/mcp' \"$HOME/.claude/skills/mcp\"\nrm -rf '/tmp/hashintel__hash'"
-      },
-      "source": {
-        "repo": "hashintel/hash",
-        "url": "https://github.com/hashintel/hash",
-        "path": "apps/mcp",
-        "type": "auto-promoted-high-star",
-        "stars": 1621
-      },
-      "packageUrl": "/skill-files/hashintel-hash-mcp.json"
     },
     {
       "id": "shubhamsaboo-awesome-llm-apps-mcp-apps-generative-ui-showcase",
@@ -122512,43 +122554,6 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-notion.json"
     },
     {
-      "id": "hashintel-hash-notion",
-      "name": "notion",
-      "summary": "Model Context Protocol (MCP) server for searching for and retrieving Notion documents. [Read more about MCP](https://modelcontextprotocol.io/introduction).",
-      "summaryZh": "Notion 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Notion 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Notion 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Notion 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Notion 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Notion 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Notion”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Notion”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "documents"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/hashintel__hash'\ngit clone --depth 1 'https://github.com/hashintel/hash.git' '/tmp/hashintel__hash'\ncp -R '/tmp/hashintel__hash/apps/mcp/notion' \"$HOME/.claude/skills/notion\"\nrm -rf '/tmp/hashintel__hash'"
-      },
-      "source": {
-        "repo": "hashintel/hash",
-        "url": "https://github.com/hashintel/hash",
-        "path": "apps/mcp/notion",
-        "type": "auto-promoted-high-star",
-        "stars": 1621
-      },
-      "packageUrl": "/skill-files/hashintel-hash-notion.json"
-    },
-    {
       "id": "leoyeai-openclaw-master-skills-notion-mcp",
       "name": "notion mcp",
       "summary": "**App name:** `notion` **Base URL proxied:** `mcp.notion.com`",
@@ -126175,6 +126180,43 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-openai-automation.json"
+    },
+    {
+      "id": "shubhamsaboo-awesome-llm-apps-openai-remote-mcp-bridge",
+      "name": "openai remote mcp bridge",
+      "summary": "Learn how to connect a plain OpenAI function-calling loop to a hosted Streamable HTTP MCP server—without an agent framework.",
+      "summaryZh": "Openai Remote Mcp Bridge 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Openai Remote Mcp Bridge 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Openai Remote Mcp Bridge 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Openai Remote Mcp Bridge 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Openai Remote Mcp Bridge”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Openai Remote Mcp Bridge”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Shubhamsaboo__awesome-llm-apps'\ngit clone --depth 1 'https://github.com/Shubhamsaboo/awesome-llm-apps.git' '/tmp/Shubhamsaboo__awesome-llm-apps'\ncp -R '/tmp/Shubhamsaboo__awesome-llm-apps/mcp_ai_agents/openai_remote_mcp_bridge' \"$HOME/.claude/skills/openai-remote-mcp-bridge\"\nrm -rf '/tmp/Shubhamsaboo__awesome-llm-apps'"
+      },
+      "source": {
+        "repo": "Shubhamsaboo/awesome-llm-apps",
+        "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+        "path": "mcp_ai_agents/openai_remote_mcp_bridge",
+        "type": "auto-promoted-high-star",
+        "stars": 118441
+      },
+      "packageUrl": "/skill-files/shubhamsaboo-awesome-llm-apps-openai-remote-mcp-bridge.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-openai-codex-multi-oauth",
@@ -138049,6 +138091,258 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-ponyflash.json"
+    },
+    {
+      "id": "dietrichgebert-ponytail-ponytail",
+      "name": "ponytail",
+      "summary": ">",
+      "summaryZh": "Ponytail 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ponytail 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ponytail 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ponytail 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ponytail 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ponytail 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ponytail”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ponytail”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/DietrichGebert__ponytail'\ngit clone --depth 1 'https://github.com/DietrichGebert/ponytail.git' '/tmp/DietrichGebert__ponytail'\ncp -R '/tmp/DietrichGebert__ponytail/skills/ponytail' \"$HOME/.claude/skills/ponytail\"\nrm -rf '/tmp/DietrichGebert__ponytail'"
+      },
+      "source": {
+        "repo": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "path": "skills/ponytail",
+        "type": "auto-promoted-high-star",
+        "stars": 99267
+      },
+      "packageUrl": "/skill-files/dietrichgebert-ponytail-ponytail.json"
+    },
+    {
+      "id": "dietrichgebert-ponytail-ponytail-mcp",
+      "name": "ponytail mcp",
+      "summary": "An MCP server that serves Ponytail's lazy-senior-dev instructions. It exposes the same ruleset the Claude hooks and Pi extension use, so every host emits identical rules.",
+      "summaryZh": "Ponytail Mcp 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ponytail Mcp 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ponytail Mcp 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ponytail Mcp 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ponytail Mcp 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ponytail Mcp 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ponytail Mcp”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ponytail Mcp”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/DietrichGebert__ponytail'\ngit clone --depth 1 'https://github.com/DietrichGebert/ponytail.git' '/tmp/DietrichGebert__ponytail'\ncp -R '/tmp/DietrichGebert__ponytail/ponytail-mcp' \"$HOME/.claude/skills/ponytail-mcp\"\nrm -rf '/tmp/DietrichGebert__ponytail'"
+      },
+      "source": {
+        "repo": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "path": "ponytail-mcp",
+        "type": "auto-promoted-high-star",
+        "stars": 99267
+      },
+      "packageUrl": "/skill-files/dietrichgebert-ponytail-ponytail-mcp.json"
+    },
+    {
+      "id": "dietrichgebert-ponytail-ponytail-audit",
+      "name": "ponytail-audit",
+      "summary": ">",
+      "summaryZh": "Ponytail Audit 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ponytail Audit 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ponytail Audit 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ponytail Audit 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ponytail Audit 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ponytail Audit 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ponytail Audit”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ponytail Audit”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/DietrichGebert__ponytail'\ngit clone --depth 1 'https://github.com/DietrichGebert/ponytail.git' '/tmp/DietrichGebert__ponytail'\ncp -R '/tmp/DietrichGebert__ponytail/skills/ponytail-audit' \"$HOME/.claude/skills/ponytail-audit\"\nrm -rf '/tmp/DietrichGebert__ponytail'"
+      },
+      "source": {
+        "repo": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "path": "skills/ponytail-audit",
+        "type": "auto-promoted-high-star",
+        "stars": 99267
+      },
+      "packageUrl": "/skill-files/dietrichgebert-ponytail-ponytail-audit.json"
+    },
+    {
+      "id": "dietrichgebert-ponytail-ponytail-debt",
+      "name": "ponytail-debt",
+      "summary": ">",
+      "summaryZh": "Ponytail Debt 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ponytail Debt 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ponytail Debt 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ponytail Debt 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ponytail Debt 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ponytail Debt 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ponytail Debt”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ponytail Debt”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/DietrichGebert__ponytail'\ngit clone --depth 1 'https://github.com/DietrichGebert/ponytail.git' '/tmp/DietrichGebert__ponytail'\ncp -R '/tmp/DietrichGebert__ponytail/skills/ponytail-debt' \"$HOME/.claude/skills/ponytail-debt\"\nrm -rf '/tmp/DietrichGebert__ponytail'"
+      },
+      "source": {
+        "repo": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "path": "skills/ponytail-debt",
+        "type": "auto-promoted-high-star",
+        "stars": 99267
+      },
+      "packageUrl": "/skill-files/dietrichgebert-ponytail-ponytail-debt.json"
+    },
+    {
+      "id": "dietrichgebert-ponytail-ponytail-gain",
+      "name": "ponytail-gain",
+      "summary": ">",
+      "summaryZh": "Ponytail Gain 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ponytail Gain 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ponytail Gain 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ponytail Gain 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ponytail Gain 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ponytail Gain 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ponytail Gain”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ponytail Gain”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/DietrichGebert__ponytail'\ngit clone --depth 1 'https://github.com/DietrichGebert/ponytail.git' '/tmp/DietrichGebert__ponytail'\ncp -R '/tmp/DietrichGebert__ponytail/skills/ponytail-gain' \"$HOME/.claude/skills/ponytail-gain\"\nrm -rf '/tmp/DietrichGebert__ponytail'"
+      },
+      "source": {
+        "repo": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "path": "skills/ponytail-gain",
+        "type": "auto-promoted-high-star",
+        "stars": 99267
+      },
+      "packageUrl": "/skill-files/dietrichgebert-ponytail-ponytail-gain.json"
+    },
+    {
+      "id": "dietrichgebert-ponytail-ponytail-help",
+      "name": "ponytail-help",
+      "summary": ">",
+      "summaryZh": "Ponytail Help 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ponytail Help 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ponytail Help 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ponytail Help 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ponytail Help 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ponytail Help 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ponytail Help”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ponytail Help”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/DietrichGebert__ponytail'\ngit clone --depth 1 'https://github.com/DietrichGebert/ponytail.git' '/tmp/DietrichGebert__ponytail'\ncp -R '/tmp/DietrichGebert__ponytail/skills/ponytail-help' \"$HOME/.claude/skills/ponytail-help\"\nrm -rf '/tmp/DietrichGebert__ponytail'"
+      },
+      "source": {
+        "repo": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "path": "skills/ponytail-help",
+        "type": "auto-promoted-high-star",
+        "stars": 99267
+      },
+      "packageUrl": "/skill-files/dietrichgebert-ponytail-ponytail-help.json"
+    },
+    {
+      "id": "dietrichgebert-ponytail-ponytail-review",
+      "name": "ponytail-review",
+      "summary": ">",
+      "summaryZh": "Ponytail Review 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ponytail Review 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ponytail Review 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ponytail Review 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ponytail Review 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ponytail Review 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ponytail Review”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ponytail Review”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/DietrichGebert__ponytail'\ngit clone --depth 1 'https://github.com/DietrichGebert/ponytail.git' '/tmp/DietrichGebert__ponytail'\ncp -R '/tmp/DietrichGebert__ponytail/skills/ponytail-review' \"$HOME/.claude/skills/ponytail-review\"\nrm -rf '/tmp/DietrichGebert__ponytail'"
+      },
+      "source": {
+        "repo": "DietrichGebert/ponytail",
+        "url": "https://github.com/DietrichGebert/ponytail",
+        "path": "skills/ponytail-review",
+        "type": "auto-promoted-high-star",
+        "stars": 99267
+      },
+      "packageUrl": "/skill-files/dietrichgebert-ponytail-ponytail-review.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-ponzu-launchpad",
@@ -175892,6 +176186,42 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-templated-automation.json"
     },
     {
+      "id": "santifer-career-ops-templates",
+      "name": "templates",
+      "summary": "System-layer template files used by career-ops scripts and modes. These files are auto-updated when you run `npm run update` -- put user customizations in the user-layer files ins…",
+      "summaryZh": "Templates 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Templates 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Templates 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Templates 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Templates 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Templates 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Templates”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Templates”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/santifer__career-ops'\ngit clone --depth 1 'https://github.com/santifer/career-ops.git' '/tmp/santifer__career-ops'\ncp -R '/tmp/santifer__career-ops/templates' \"$HOME/.claude/skills/templates\"\nrm -rf '/tmp/santifer__career-ops'"
+      },
+      "source": {
+        "repo": "santifer/career-ops",
+        "url": "https://github.com/santifer/career-ops",
+        "path": "templates",
+        "type": "auto-promoted-high-star",
+        "stars": 55049
+      },
+      "packageUrl": "/skill-files/santifer-career-ops-templates.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-temporal-cortex-scheduling",
       "name": "temporal-cortex-scheduling",
       "summary": "|-",
@@ -191317,6 +191647,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-weathermap-automation.json"
+    },
+    {
+      "id": "santifer-career-ops-web",
+      "name": "web",
+      "summary": "An **experimental, opt-in web UI** for career-ops. It is a local-first *view* over the exact same files the CLI reads and writes (`data/pipeline.md`, `data/applications.md`, `repo…",
+      "summaryZh": "Web 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Web 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Web 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Web 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Web 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Web 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Web”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Web”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/santifer__career-ops'\ngit clone --depth 1 'https://github.com/santifer/career-ops.git' '/tmp/santifer__career-ops'\ncp -R '/tmp/santifer__career-ops/web' \"$HOME/.claude/skills/web\"\nrm -rf '/tmp/santifer__career-ops'"
+      },
+      "source": {
+        "repo": "santifer/career-ops",
+        "url": "https://github.com/santifer/career-ops",
+        "path": "web",
+        "type": "auto-promoted-high-star",
+        "stars": 55049
+      },
+      "packageUrl": "/skill-files/santifer-career-ops-web.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-web-autopilot",
