@@ -1,0 +1,15 @@
+{
+  "id": "juliusbrussee-caveman-investigate-first",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: investigate-first\ndescription: Diagnose ambiguous failures before editing. Use for unknown causes, intermittent behavior, performance regressions, or investigations needing evidence-ranked hypotheses.\n---\n\n# Investigate first\n\nGather evidence before changing product code.\n\n- Separate observed symptom from inferred cause.\n- Trace inputs, state transitions, ownership boundaries, and failure output.\n- Rank hypotheses by evidence and cheap falsification value.\n- Do not edit until one credible mechanism explains evidence.\n- Stop exploration when evidence is sufficient to name cause or exact blocker.\n\nReport cause and proof. Make no fix unless task authorizes implementation.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "interface:\n  display_name: \"Investigate First\"\n  short_description: \"Find credible cause before editing code\"\n  default_prompt: \"Use $investigate-first to diagnose this failure before proposing edits.\"\n"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "juliusbrussee-caveman-safe-refactor",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: safe-refactor\ndescription: Restructure code while preserving behavior. Use for extraction, consolidation, ownership moves, or cleanup where verification must bracket structural edits.\n---\n\n# Safe refactor\n\nDefine behavior-preservation boundary and establish verification before structural edits.\n\n- Keep feature changes outside refactor.\n- Move one ownership boundary at a time.\n- Preserve public interfaces, failure behavior, ordering, and compatibility unless explicitly scoped.\n- Keep intermediate states buildable and testable.\n- Avoid dependency or configuration growth without correctness need.\n\nRun same proof after change. Stop when behavior matches and requested structure is achieved.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "interface:\n  display_name: \"Safe Refactor\"\n  short_description: \"Preserve behavior through structural change\"\n  default_prompt: \"Use $safe-refactor to restructure this code while preserving behavior.\"\n"
+    }
+  ]
+}

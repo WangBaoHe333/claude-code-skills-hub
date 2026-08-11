@@ -1,0 +1,15 @@
+{
+  "id": "juliusbrussee-caveman-verify-and-stop",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: verify-and-stop\ndescription: Prove existing work meets acceptance conditions without expanding scope. Use for validation-only tasks, completion checks, focused gate runs, and last-mile proof.\n---\n\n# Verify and stop\n\nTranslate acceptance conditions into smallest sufficient proof set.\n\n- Reuse still-current results with matching repository state.\n- Run focused checks before wider gates.\n- Distinguish pass, fail, unavailable, and blocked exactly.\n- Do not edit product code unless verification request includes fixes.\n- Do not add polish, cleanup, or unrelated tests after criteria pass.\n\nStop immediately when acceptance proof is complete. Report commands, results, and unresolved risk only.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "interface:\n  display_name: \"Verify and Stop\"\n  short_description: \"Run relevant proof then stop cleanly\"\n  default_prompt: \"Use $verify-and-stop to prove acceptance criteria without adding scope.\"\n"
+    }
+  ]
+}

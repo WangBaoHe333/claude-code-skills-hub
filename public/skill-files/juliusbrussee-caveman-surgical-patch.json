@@ -1,0 +1,15 @@
+{
+  "id": "juliusbrussee-caveman-surgical-patch",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: surgical-patch\ndescription: Fix bugs and small behavior changes at the narrowest responsible layer. Use when regression proof, preserved surrounding behavior, and task-relevant tests matter.\n---\n\n# Surgical patch\n\nReproduce failure first when economical; otherwise capture strongest available evidence.\n\n- Trace symptom to responsible mechanism.\n- Change narrowest layer that owns incorrect behavior.\n- Preserve unrelated behavior and user changes.\n- Avoid cleanup, renaming, and abstraction outside fix.\n- Add only regression proof relevant to task.\n\nRun focused proof plus nearest affected gate. Stop when failure is fixed and regression proof passes.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "interface:\n  display_name: \"Surgical Patch\"\n  short_description: \"Fix narrow responsible layer with proof\"\n  default_prompt: \"Use $surgical-patch to fix this bug with a narrow verified change.\"\n"
+    }
+  ]
+}

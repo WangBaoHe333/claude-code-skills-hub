@@ -1,0 +1,15 @@
+{
+  "id": "juliusbrussee-caveman-migration",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: migration\ndescription: Implement reversible compatibility-safe transitions. Use for schema, data, API, protocol, configuration, or dependency migrations requiring rollback and preservation proof.\n---\n\n# Migration\n\nMap current readers, writers, data shape, compatibility window, and ownership before editing.\n\n- Define forward path and rollback path.\n- Preserve existing data; make destructive steps explicit and separately authorized.\n- Keep mixed-version operation safe where rollout can overlap.\n- Sequence expand, migrate, verify, then contract when applicable.\n- Make retries idempotent and partial failure observable.\n- Verify old and new paths at required transition stages.\n\nStop after requested stage passes; do not perform later destructive contraction implicitly.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "interface:\n  display_name: \"Migration\"\n  short_description: \"Plan reversible data-safe transitions\"\n  default_prompt: \"Use $migration to implement this transition with compatibility and rollback proof.\"\n"
+    }
+  ]
+}

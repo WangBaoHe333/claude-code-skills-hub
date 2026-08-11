@@ -1,0 +1,15 @@
+{
+  "id": "juliusbrussee-caveman-lean-build",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: lean-build\ndescription: Build feature work with high overbuilding risk. Use for new behavior, product slices, or integrations where repository reuse, strict scope, and an explicit stop condition matter.\n---\n\n# Lean build\n\nNative Core's architecture-first simplicity remains mandatory. Turn feature into complete narrow outcome fitting system.\n\n- Derive observable acceptance and explicit non-goals from request and repository.\n- Trace entry point through layers owning invariants.\n- Deliver coherent end-to-end path across responsible layers; never force work into one file, direct expression, or local patch.\n- Reuse fitting seam. Refactor when patching duplicates behavior, weakens ownership, or hides root cause.\n- Omit modes, providers, config, extensibility, and polish unless acceptance needs them.\n- Add surface, dependency, service, config, or migration only for lifecycle design or acceptance; state material tradeoff.\n- Keep work runnable; preserve Core safety.\n\nExercise path. Run focused proof. Stop when acceptance passes. Report only material omissions and trigger.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "interface:\n  display_name: \"Lean Build\"\n  short_description: \"Build smallest coherent feature slice\"\n  default_prompt: \"Use $lean-build to implement this feature without speculative scope.\"\n"
+    }
+  ]
+}

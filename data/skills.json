@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T21:10:27.554Z",
+  "generatedAt": "2026-08-11T21:12:58.112Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -709,42 +709,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-1password.json"
-    },
-    {
-      "id": "foryourhealth111-pixel-vibe-skills-2026-07-02",
-      "name": "2026 07 02",
-      "summary": "- **提示词安装**：复制一段提示词给 AI 客户端，让它确认宿主、版本并执行安装。 - **命令安装**：直接在终端运行 install/check，适合熟悉宿主根目录和命令行的人。",
-      "summaryZh": "2026 07 02 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "2026 07 02 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 2026 07 02 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 2026 07 02 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 2026 07 02 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 2026 07 02 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 2026 07 02”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 2026 07 02”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/docs/archive/install-legacy/2026-07-02' \"$HOME/.claude/skills/2026-07-02\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
-      },
-      "source": {
-        "repo": "foryourhealth111-pixel/Vibe-Skills",
-        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-        "path": "docs/archive/install-legacy/2026-07-02",
-        "type": "auto-promoted-high-star",
-        "stars": 2326
-      },
-      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-2026-07-02.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-2slides",
@@ -4969,6 +4933,43 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-agencyzoom-automation.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-agent",
+      "name": "agent",
+      "summary": "Give every production agent a local catalog-price guard and a token bill.",
+      "summaryZh": "Agent 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Agent 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Agent 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Agent 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Agent”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Agent”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/packages/agent' \"$HOME/.claude/skills/agent\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "packages/agent",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-agent.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-agent-anti-false-completion",
@@ -20163,27 +20164,26 @@
     {
       "id": "bytedance-deer-flow-backend",
       "name": "backend",
-      "summary": "DeerFlow is a LangGraph-based AI super agent with sandbox execution, persistent memory, and extensible tool integration. The backend enables AI agents to execute code, browse the …",
-      "summaryZh": "Backend 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Backend 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "summary": "**Language:** English | [简体中文](README_zh.md)",
+      "summaryZh": "Backend 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Backend 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Backend 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 Backend 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "使用 Backend 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "使用 Backend 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Backend”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Backend”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
+      "category": "通用工具",
       "tags": [
-        "skill",
-        "api"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/bytedance__deer-flow'\ngit clone --depth 1 'https://github.com/bytedance/deer-flow.git' '/tmp/bytedance__deer-flow'\ncp -R '/tmp/bytedance__deer-flow/backend' \"$HOME/.claude/skills/backend\"\nrm -rf '/tmp/bytedance__deer-flow'"
@@ -26816,6 +26816,43 @@
       "packageUrl": "/skill-files/garrytan-gstack-browse.json"
     },
     {
+      "id": "juliusbrussee-caveman-browse",
+      "name": "browse",
+      "summary": "`caveman-browse` is a local browser-interaction MCP server. It attaches to Chrome, reads `Accessibility.getFullAXTree`, compresses the AX payload through the Caveman engine's forc…",
+      "summaryZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
+      "capabilityZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
+      "audience": "开发者、测试人员、产品经理和需要验证网页流程的人。",
+      "audienceZh": "开发者、测试人员、产品经理和需要验证网页流程的人。",
+      "scenarios": [
+        "打开 localhost 页面做交互检查",
+        "填写表单、点击按钮并读取页面结果",
+        "截图验证页面布局和状态"
+      ],
+      "scenariosZh": [
+        "打开 localhost 页面做交互检查",
+        "填写表单、点击按钮并读取页面结果",
+        "截图验证页面布局和状态"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Browse”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Browse”，再给出文件、链接或要完成的任务。",
+      "category": "网页自动化",
+      "tags": [
+        "skill",
+        "browser"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/browse' \"$HOME/.claude/skills/browse\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "browse",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-browse.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-browse",
       "name": "browse",
       "summary": "|",
@@ -31025,6 +31062,43 @@
       "packageUrl": "/skill-files/juliusbrussee-caveman-caveman-help.json"
     },
     {
+      "id": "juliusbrussee-caveman-caveman-learn",
+      "name": "caveman learn",
+      "summary": "Close the loop on `caveman learn`. The command measures where your agent's tokens go; this skill reviews that plan with you and applies the fixes — one approved edit at a time.",
+      "summaryZh": "Caveman Learn 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Caveman Learn 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Caveman Learn 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Caveman Learn 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Caveman Learn”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Caveman Learn”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/skills/caveman-learn' \"$HOME/.claude/skills/caveman-learn\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "skills/caveman-learn",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-caveman-learn.json"
+    },
+    {
       "id": "juliusbrussee-caveman-caveman-review",
       "name": "caveman review",
       "summary": "One-line PR comments. Location, problem, fix. No throat-clearing.",
@@ -31131,6 +31205,222 @@
         "stars": 72472
       },
       "packageUrl": "/skill-files/juliusbrussee-caveman-caveman-compress.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-caveman-discover",
+      "name": "caveman-discover",
+      "summary": ">",
+      "summaryZh": "Caveman Discover 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Caveman Discover 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Caveman Discover 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Caveman Discover 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Caveman Discover 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Caveman Discover 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Caveman Discover”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Caveman Discover”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/skills/caveman-discover' \"$HOME/.claude/skills/caveman-discover\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "skills/caveman-discover",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-caveman-discover.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-caveman-evidence-review",
+      "name": "caveman-evidence-review",
+      "summary": ">",
+      "summaryZh": "Caveman Evidence Review 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Caveman Evidence Review 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Caveman Evidence Review 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Caveman Evidence Review 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Caveman Evidence Review 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Caveman Evidence Review 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Caveman Evidence Review”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Caveman Evidence Review”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/skills/caveman-evidence-review' \"$HOME/.claude/skills/caveman-evidence-review\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "skills/caveman-evidence-review",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-caveman-evidence-review.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-caveman-explore",
+      "name": "caveman-explore",
+      "summary": "Read-only repository explorer. Use PROACTIVELY for cold-start exploration, broad cross-file localization, or when a direct search has failed and you need to find where something l…",
+      "summaryZh": "Caveman Explore 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Caveman Explore 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Caveman Explore 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Caveman Explore 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Caveman Explore 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Caveman Explore 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Caveman Explore”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Caveman Explore”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/skills/caveman-explore' \"$HOME/.claude/skills/caveman-explore\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "skills/caveman-explore",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-caveman-explore.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-caveman-manage",
+      "name": "caveman-manage",
+      "summary": ">",
+      "summaryZh": "Caveman Manage 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Caveman Manage 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Caveman Manage 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Caveman Manage 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Caveman Manage 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Caveman Manage 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Caveman Manage”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Caveman Manage”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/skills/caveman-manage' \"$HOME/.claude/skills/caveman-manage\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "skills/caveman-manage",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-caveman-manage.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-caveman-optimize",
+      "name": "caveman-optimize",
+      "summary": ">",
+      "summaryZh": "Caveman Optimize 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Caveman Optimize 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Caveman Optimize 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Caveman Optimize 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Caveman Optimize 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Caveman Optimize 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Caveman Optimize”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Caveman Optimize”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/skills/caveman-optimize' \"$HOME/.claude/skills/caveman-optimize\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "skills/caveman-optimize",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-caveman-optimize.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-caveman-setup",
+      "name": "caveman-setup",
+      "summary": ">",
+      "summaryZh": "Caveman Setup 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Caveman Setup 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Caveman Setup 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Caveman Setup 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Caveman Setup 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Caveman Setup 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Caveman Setup”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Caveman Setup”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/skills/caveman-setup' \"$HOME/.claude/skills/caveman-setup\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "skills/caveman-setup",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-caveman-setup.json"
     },
     {
       "id": "juliusbrussee-caveman-caveman-stats",
@@ -37453,6 +37743,43 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-cli.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-cli",
+      "name": "cli",
+      "summary": "The `caveman` (alias `cave`) CLI. Wrap supported coding agents so their LLM traffic can use local metering and recoverable context compression:",
+      "summaryZh": "Cli 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Cli 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Cli 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Cli 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Cli”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Cli”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/packages/cli' \"$HOME/.claude/skills/cli\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "packages/cli",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-cli.json"
     },
     {
       "id": "nextlevelbuilder-ui-ux-pro-max-skill-cli",
@@ -43787,7 +44114,7 @@
     {
       "id": "code-yeongyu-oh-my-openagent-coding-agent-sessions",
       "name": "coding-agent-sessions",
-      "summary": "MUST USE when asked to find, read, list, search, inspect, fetch, export, or reconstruct coding-agent sessions across Codex, Claude Code/Desktop, OpenCode, Senpi/pi, oh-my-pi (omp)…",
+      "summary": "MUST USE when asked to find, read, list, search, inspect, fetch, export, or reconstruct coding-agent sessions across Codex, Claude Code/Desktop, OpenCode, OMO/Senpi/pi, oh-my-pi (…",
       "summaryZh": "Coding Agent Sessions 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
       "capabilityZh": "Coding Agent Sessions 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
       "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
@@ -49153,6 +49480,42 @@
         "stars": 215443
       },
       "packageUrl": "/skill-files/affaan-m-ecc-council.json"
+    },
+    {
+      "id": "affaan-m-ecc-council-multi-model",
+      "name": "council-multi-model",
+      "summary": "Add one optional external Codex critique after the existing council has produced a decision draft. Use when an ambiguous, high-consequence decision would benefit from a separate m…",
+      "summaryZh": "Council Multi Model 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Council Multi Model 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Council Multi Model 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Council Multi Model 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Council Multi Model 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Council Multi Model 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Council Multi Model”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Council Multi Model”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/council-multi-model' \"$HOME/.claude/skills/council-multi-model\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/council-multi-model",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-council-multi-model.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-countdown-api-automation",
@@ -57957,6 +58320,43 @@
       "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-dev-browser.json"
     },
     {
+      "id": "affaan-m-ecc-dev-team",
+      "name": "dev-team",
+      "summary": "Simulate a collaborative dev team session where multiple role-based personas (PM, Architect, Developer, QA) respond to the same problem together in one session. Use when designing…",
+      "summaryZh": "Dev Team 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Dev Team 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Dev Team 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Dev Team 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Dev Team”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Dev Team”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/dev-team' \"$HOME/.claude/skills/dev-team\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/dev-team",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-dev-team.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-developer-interview-simulator",
       "name": "developer interview simulator",
       "summary": "--- name: developer-interview-simulator description: >- Simulates developer/engineering interviews: coding rounds, system design, behavioral for engineers, and tech-specific Q&A. …",
@@ -60383,7 +60783,7 @@
     {
       "id": "foryourhealth111-pixel-vibe-skills-docs",
       "name": "docs",
-      "summary": "`docs/` 负责长期说明和最小治理导航。当前状态由 CI proof、GitHub Release 和本地 `check` 输出提供。",
+      "summary": "This directory is the human navigation layer for the executable contracts.",
       "summaryZh": "Docs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Docs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Docs 处理具体工作流的 Claude Code 用户。",
@@ -60403,8 +60803,7 @@
       "category": "通用工具",
       "tags": [
         "skill",
-        "documents",
-        "github"
+        "documents"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/docs' \"$HOME/.claude/skills/docs\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
@@ -65551,6 +65950,43 @@
       "packageUrl": "/skill-files/nexu-io-open-design-eng-runbook.json"
     },
     {
+      "id": "juliusbrussee-caveman-engine",
+      "name": "engine",
+      "summary": "Local, recoverable context compression for AI agents.",
+      "summaryZh": "Engine 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Engine 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Engine 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Engine 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Engine”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Engine”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/engine' \"$HOME/.claude/skills/engine\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "engine",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-engine.json"
+    },
+    {
       "id": "mattpocock-skills-engineering",
       "name": "engineering",
       "summary": "Skills I use daily for code work.",
@@ -68621,6 +69057,43 @@
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-exploratory-data-analysis.json"
     },
     {
+      "id": "juliusbrussee-caveman-explorer",
+      "name": "explorer",
+      "summary": "@caveman/explorer — the FastContext exploration subagent",
+      "summaryZh": "Explorer 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Explorer 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Explorer 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Explorer 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Explorer”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Explorer”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/explorer' \"$HOME/.claude/skills/explorer\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "explorer",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-explorer.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-expo-ui-jetpack-compose",
       "name": "Expo UI Jetpack Compose",
       "summary": "`@expo/ui/jetpack-compose` package lets you use Jetpack Compose Views and modifiers in your app.",
@@ -69058,6 +69531,43 @@
       "packageUrl": "/skill-files/nexu-io-open-design-extend-plugin-author.json"
     },
     {
+      "id": "juliusbrussee-caveman-extension",
+      "name": "extension",
+      "summary": "Caveman Mode (browser extension)",
+      "summaryZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
+      "capabilityZh": "控制浏览器打开页面、点击、输入、截图和验证结果，适合测试本地网页和执行网页流程。",
+      "audience": "开发者、测试人员、产品经理和需要验证网页流程的人。",
+      "audienceZh": "开发者、测试人员、产品经理和需要验证网页流程的人。",
+      "scenarios": [
+        "打开 localhost 页面做交互检查",
+        "填写表单、点击按钮并读取页面结果",
+        "截图验证页面布局和状态"
+      ],
+      "scenariosZh": [
+        "打开 localhost 页面做交互检查",
+        "填写表单、点击按钮并读取页面结果",
+        "截图验证页面布局和状态"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Extension”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Extension”，再给出文件、链接或要完成的任务。",
+      "category": "网页自动化",
+      "tags": [
+        "skill",
+        "browser"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/extension' \"$HOME/.claude/skills/extension\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "extension",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-extension.json"
+    },
+    {
       "id": "microsoft-playwright-extension",
       "name": "extension",
       "summary": "The Playwright Chrome Extension allows you to connect to pages in your existing browser and leverage the state of your default user profile. This means the AI assistant can intera…",
@@ -69093,43 +69603,6 @@
         "stars": 90947
       },
       "packageUrl": "/skill-files/microsoft-playwright-extension.json"
-    },
-    {
-      "id": "foryourhealth111-pixel-vibe-skills-external-tooling",
-      "name": "external tooling",
-      "summary": "- Docs root: [`../README.md`](../README.md) - Repo root: [`../../README.md`](../../README.md)",
-      "summaryZh": "External Tooling 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "External Tooling 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 External Tooling 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 External Tooling 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 External Tooling 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 External Tooling 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 External Tooling”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 External Tooling”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "documents"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/docs/external-tooling' \"$HOME/.claude/skills/external-tooling\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
-      },
-      "source": {
-        "repo": "foryourhealth111-pixel/Vibe-Skills",
-        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-        "path": "docs/external-tooling",
-        "type": "auto-promoted-high-star",
-        "stars": 2326
-      },
-      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-external-tooling.json"
     },
     {
       "id": "yeachan-heo-oh-my-claudecode-external-context",
@@ -98012,6 +98485,42 @@
       "packageUrl": "/skill-files/garrytan-gstack-investigate.json"
     },
     {
+      "id": "juliusbrussee-caveman-investigate-first",
+      "name": "investigate-first",
+      "summary": "Diagnose ambiguous failures before editing. Use for unknown causes, intermittent behavior, performance regressions, or investigations needing evidence-ranked hypotheses.",
+      "summaryZh": "Investigate First 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Investigate First 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Investigate First 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Investigate First 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Investigate First 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Investigate First 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Investigate First”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Investigate First”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/skills/investigate-first' \"$HOME/.claude/skills/investigate-first\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "skills/investigate-first",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-investigate-first.json"
+    },
+    {
       "id": "affaan-m-ecc-investor-materials",
       "name": "investor-materials",
       "summary": "投資家向けマテリアル、ピッチデック、財務プレゼンテーション、およびビジネス概要。",
@@ -104740,6 +105249,42 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-leadoku-automation.json"
     },
     {
+      "id": "juliusbrussee-caveman-lean-build",
+      "name": "lean-build",
+      "summary": "Build feature work with high overbuilding risk. Use for new behavior, product slices, or integrations where repository reuse, strict scope, and an explicit stop condition matter.",
+      "summaryZh": "Lean Build 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Lean Build 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Lean Build 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Lean Build 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Lean Build 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Lean Build 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Lean Build”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Lean Build”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/skills/lean-build' \"$HOME/.claude/skills/lean-build\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "skills/lean-build",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-lean-build.json"
+    },
+    {
       "id": "garrytan-gstack-learn",
       "name": "learn",
       "summary": "Manage project learnings.",
@@ -106717,6 +107262,44 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-livesession-automation.json"
+    },
+    {
+      "id": "affaan-m-ecc-living-docs-governance",
+      "name": "living-docs-governance",
+      "summary": "Keep a long-lived project's documentation from rotting by assigning existing project docs clear constitution, map, status, and history roles, then wiring the active agent harness …",
+      "summaryZh": "Living Docs Governance 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Living Docs Governance 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Living Docs Governance 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Living Docs Governance 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Living Docs Governance”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Living Docs Governance”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "documents",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/living-docs-governance' \"$HOME/.claude/skills/living-docs-governance\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/living-docs-governance",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-living-docs-governance.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-living-ethics",
@@ -110527,6 +111110,43 @@
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-markitdown.json"
     },
     {
+      "id": "juliusbrussee-caveman-mastra",
+      "name": "mastra",
+      "summary": "The Caveman adapter for [Mastra](https://mastra.ai)'s OpenTelemetry export: it points Mastra's OTLP exporter at Caveman, stamps the project/agent/task identifiers Caveman groups b…",
+      "summaryZh": "Mastra 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Mastra 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Mastra 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Mastra 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Mastra”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Mastra”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/packages/mastra' \"$HOME/.claude/skills/mastra\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "packages/mastra",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-mastra.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-matchclaws",
       "name": "matchclaws",
       "summary": "Enable after install clawhub enable matchclaws ```",
@@ -110925,6 +111545,42 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-mcp.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-mcp",
+      "name": "mcp",
+      "summary": "The Caveman MCP server: five compression tools — `caveman_compress`, `caveman_retrieve`, `caveman_stats`, `caveman_toon_encode`, and `caveman_toon_decode` — over stdio, for any MC…",
+      "summaryZh": "Mcp 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Mcp 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Mcp 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Mcp 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Mcp 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Mcp 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Mcp”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Mcp”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/mcp' \"$HOME/.claude/skills/mcp\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "mcp",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-mcp.json"
     },
     {
       "id": "mvanhorn-last30days-skill-mcp",
@@ -112098,6 +112754,43 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-melo-automation.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-mem",
+      "name": "mem",
+      "summary": "Durable, compression-native agent memory: `remember`, `recall`, `supersede`, `history`, `forget`. Memories live in a local SQLite store; recall ranks them with BM25 behind a conse…",
+      "summaryZh": "Mem 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Mem 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Mem 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Mem 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Mem”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Mem”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/mem' \"$HOME/.claude/skills/mem\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "mem",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-mem.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-mem-automation",
@@ -113894,6 +114587,43 @@
       "packageUrl": "/skill-files/ruvnet-ruflo-migrate-validate.json"
     },
     {
+      "id": "juliusbrussee-caveman-migration",
+      "name": "migration",
+      "summary": "Implement reversible compatibility-safe transitions. Use for schema, data, API, protocol, configuration, or dependency migrations requiring rollback and preservation proof.",
+      "summaryZh": "Migration 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Migration 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Migration 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Migration 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Migration 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Migration 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Migration”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Migration”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/skills/migration' \"$HOME/.claude/skills/migration\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "skills/migration",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-migration.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-migration-architect",
       "name": "migration architect",
       "summary": "**Tier:** POWERFUL **Category:** Engineering - Migration Strategy **Purpose:** Zero-downtime migration planning, compatibility validation, and rollback strategy generation",
@@ -114964,42 +115694,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-mkts-market-data.json"
-    },
-    {
-      "id": "foryourhealth111-pixel-vibe-skills-ml-experiment",
-      "name": "ml experiment",
-      "summary": "<div align=\"right\"> <strong>English</strong> | <a href=\"./README.zh.md\">中文</a> </div>",
-      "summaryZh": "Ml Experiment 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Ml Experiment 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Ml Experiment 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Ml Experiment 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Ml Experiment 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Ml Experiment 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Ml Experiment”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Ml Experiment”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/docs/cases/ml-experiment' \"$HOME/.claude/skills/ml-experiment\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
-      },
-      "source": {
-        "repo": "foryourhealth111-pixel/Vibe-Skills",
-        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-        "path": "docs/cases/ml-experiment",
-        "type": "auto-promoted-high-star",
-        "stars": 2326
-      },
-      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-ml-experiment.json"
     },
     {
       "id": "affaan-m-ecc-ml-adoption-playbook",
@@ -125302,6 +125996,42 @@
         "stars": 62215
       },
       "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-omo-codex.json"
+    },
+    {
+      "id": "code-yeongyu-oh-my-openagent-onboarding",
+      "name": "onboarding",
+      "summary": "Onboarding tour for first-time omo users",
+      "summaryZh": "Onboarding 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Onboarding 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Onboarding 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Onboarding 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Onboarding 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Onboarding 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Onboarding”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Onboarding”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-senpi/plugin/skills/onboarding' \"$HOME/.claude/skills/onboarding\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/omo-senpi/plugin/skills/onboarding",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-onboarding.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-onboarding",
@@ -136364,42 +137094,6 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-plans.json"
     },
     {
-      "id": "foryourhealth111-pixel-vibe-skills-plans",
-      "name": "plans",
-      "summary": "- Up: [`../README.md`](../README.md)",
-      "summaryZh": "Plans 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Plans 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Plans 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Plans 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Plans 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Plans 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Plans”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Plans”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/docs/plans' \"$HOME/.claude/skills/plans\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
-      },
-      "source": {
-        "repo": "foryourhealth111-pixel/Vibe-Skills",
-        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-        "path": "docs/plans",
-        "type": "auto-promoted-high-star",
-        "stars": 2326
-      },
-      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-plans.json"
-    },
-    {
       "id": "composiohq-awesome-claude-skills-plasmic-automation",
       "name": "plasmic-automation",
       "summary": "Automate Plasmic tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -142450,6 +143144,42 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-proxiedmail-automation.json"
     },
     {
+      "id": "juliusbrussee-caveman-proxy",
+      "name": "proxy",
+      "summary": "Caveman Gateway — the public, byte-safe `caveman` standalone gateway.",
+      "summaryZh": "Proxy 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Proxy 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Proxy 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Proxy 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Proxy 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Proxy 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Proxy”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Proxy”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/proxy' \"$HOME/.claude/skills/proxy\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "proxy",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-proxy.json"
+    },
+    {
       "id": "santifer-career-ops-pt",
       "name": "pt",
       "summary": "career-ops -- Modos em Português BR (`modes/pt/`)",
@@ -148484,42 +149214,6 @@
       "packageUrl": "/skill-files/nexu-io-open-design-release-notes-one-pager.json"
     },
     {
-      "id": "foryourhealth111-pixel-vibe-skills-releases",
-      "name": "releases",
-      "summary": "- Up: [`../README.md`](../README.md)",
-      "summaryZh": "Releases 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Releases 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Releases 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Releases 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Releases 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Releases 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Releases”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Releases”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/docs/releases' \"$HOME/.claude/skills/releases\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
-      },
-      "source": {
-        "repo": "foryourhealth111-pixel/Vibe-Skills",
-        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-        "path": "docs/releases",
-        "type": "auto-promoted-high-star",
-        "stars": 2326
-      },
-      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-releases.json"
-    },
-    {
       "id": "composiohq-awesome-claude-skills-remarkety-automation",
       "name": "remarkety-automation",
       "summary": "Automate Remarkety tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -151811,43 +152505,6 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-romantic-relationship-maintenance.json"
     },
     {
-      "id": "foryourhealth111-pixel-vibe-skills-root-docs",
-      "name": "root docs",
-      "summary": "- Up: [`../README.md`](../README.md)",
-      "summaryZh": "Root Docs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Root Docs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Root Docs 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Root Docs 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Root Docs 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Root Docs 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Root Docs”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Root Docs”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "documents"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/docs/archive/root-docs' \"$HOME/.claude/skills/root-docs\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
-      },
-      "source": {
-        "repo": "foryourhealth111-pixel/Vibe-Skills",
-        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-        "path": "docs/archive/root-docs",
-        "type": "auto-promoted-high-star",
-        "stars": 2326
-      },
-      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-root-docs.json"
-    },
-    {
       "id": "leoyeai-openclaw-master-skills-rootcraft-learning-system",
       "name": "rootcraft-learning-system",
       "summary": "RootCraft Learning System - An integrated learning methodology combining First Principles Thinking, Taxonomy-Based Classification, Feynman Technique, and Recursive Questioning for…",
@@ -154926,6 +155583,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-safe-payment-gaurd.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-safe-refactor",
+      "name": "safe-refactor",
+      "summary": "Restructure code while preserving behavior. Use for extraction, consolidation, ownership moves, or cleanup where verification must bracket structural edits.",
+      "summaryZh": "Safe Refactor 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Safe Refactor 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Safe Refactor 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Safe Refactor 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Safe Refactor 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Safe Refactor 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Safe Refactor”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Safe Refactor”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/skills/safe-refactor' \"$HOME/.claude/skills/safe-refactor\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "skills/safe-refactor",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-safe-refactor.json"
     },
     {
       "id": "affaan-m-ecc-safety-guard",
@@ -162847,6 +163540,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-shotstack-automation.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-shrink",
+      "name": "shrink",
+      "summary": "Compress MCP/OpenAI **tool catalogs** so a large tool list costs fewer tokens. It drops annotation bloat (examples, titles, comments, schema markers), reduces long descriptions wh…",
+      "summaryZh": "Shrink 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Shrink 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Shrink 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Shrink 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Shrink 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Shrink 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Shrink”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Shrink”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/shrink' \"$HOME/.claude/skills/shrink\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "shrink",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-shrink.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-sidecar-onestep",
@@ -170837,43 +171566,6 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-status.json"
     },
     {
-      "id": "foryourhealth111-pixel-vibe-skills-status",
-      "name": "status",
-      "summary": "`docs/status/` 只放当前状态入口、proof contract、必要 guardrails，以及少量仍被 verify 直接消费的历史契约页。",
-      "summaryZh": "Status 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Status 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Status 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Status 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Status 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Status 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Status”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Status”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "documents"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'\ngit clone --depth 1 'https://github.com/foryourhealth111-pixel/Vibe-Skills.git' '/tmp/foryourhealth111-pixel__Vibe-Skills'\ncp -R '/tmp/foryourhealth111-pixel__Vibe-Skills/docs/status' \"$HOME/.claude/skills/status\"\nrm -rf '/tmp/foryourhealth111-pixel__Vibe-Skills'"
-      },
-      "source": {
-        "repo": "foryourhealth111-pixel/Vibe-Skills",
-        "url": "https://github.com/foryourhealth111-pixel/Vibe-Skills",
-        "path": "docs/status",
-        "type": "auto-promoted-high-star",
-        "stars": 2326
-      },
-      "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-status.json"
-    },
-    {
       "id": "composiohq-awesome-claude-skills-statuscake-automation",
       "name": "statuscake-automation",
       "summary": "Automate Statuscake tasks via Rube MCP (Composio). Always search tools first for current schemas.",
@@ -172152,6 +172844,43 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-study-buddy.json"
     },
     {
+      "id": "juliusbrussee-caveman-subagent-tax",
+      "name": "subagent tax",
+      "summary": "**How big is the prefix your coding harness sends on every call?**",
+      "summaryZh": "Subagent Tax 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Subagent Tax 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Subagent Tax 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Subagent Tax 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Subagent Tax”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Subagent Tax”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/packages/subagent-tax' \"$HOME/.claude/skills/subagent-tax\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "packages/subagent-tax",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-subagent-tax.json"
+    },
+    {
       "id": "obra-superpowers-subagent-driven-development",
       "name": "subagent-driven-development",
       "summary": "Use when executing implementation plans with independent tasks in the current session",
@@ -172924,6 +173653,43 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-surge-openclaw-dev.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-surgical-patch",
+      "name": "surgical-patch",
+      "summary": "Fix bugs and small behavior changes at the narrowest responsible layer. Use when regression proof, preserved surrounding behavior, and task-relevant tests matter.",
+      "summaryZh": "Surgical Patch 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Surgical Patch 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Surgical Patch 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Surgical Patch 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Surgical Patch 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Surgical Patch 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Surgical Patch”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Surgical Patch”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "testing"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/skills/surgical-patch' \"$HOME/.claude/skills/surgical-patch\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "skills/surgical-patch",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-surgical-patch.json"
     },
     {
       "id": "bytedance-deer-flow-surprise-me",
@@ -187618,6 +188384,42 @@
         "stars": 37702
       },
       "packageUrl": "/skill-files/yeachan-heo-oh-my-claudecode-verify.json"
+    },
+    {
+      "id": "juliusbrussee-caveman-verify-and-stop",
+      "name": "verify-and-stop",
+      "summary": "Prove existing work meets acceptance conditions without expanding scope. Use for validation-only tasks, completion checks, focused gate runs, and last-mile proof.",
+      "summaryZh": "Verify And Stop 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Verify And Stop 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Verify And Stop 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Verify And Stop 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Verify And Stop 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Verify And Stop 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Verify And Stop”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Verify And Stop”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/skills/verify-and-stop' \"$HOME/.claude/skills/verify-and-stop\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "skills/verify-and-stop",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-verify-and-stop.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-verify-claims",
