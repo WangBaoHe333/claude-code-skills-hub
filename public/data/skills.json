@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T21:12:58.112Z",
+  "generatedAt": "2026-08-12T21:11:40.429Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -63451,7 +63451,7 @@
     {
       "id": "affaan-m-ecc-dynamic-workflow-mode",
       "name": "dynamic-workflow-mode",
-      "summary": "Design task-local harnesses, eval gates, and reusable skill extraction for Claude dynamic workflow mode and other adaptive agent harnesses.",
+      "summary": "Design task-local harnesses, eval gates, and reusable skill extraction for Claude dynamic workflow mode and other adaptive agent harnesses. Use when building a task-local harness,…",
       "summaryZh": "Dynamic Workflow Mode 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Dynamic Workflow Mode 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Dynamic Workflow Mode 处理具体工作流的 Claude Code 用户。",
@@ -99688,40 +99688,41 @@
       "packageUrl": "/skill-files/affaan-m-ecc-iterative-retrieval.json"
     },
     {
-      "id": "affaan-m-ecc-ito-basket-compare",
-      "name": "ito-basket-compare",
-      "summary": "Compare Itô prediction-market baskets against a user's knowledge base, portfolio notes, financial context, watchlist, or research thesis. Use for read-only basket comparison and g…",
-      "summaryZh": "Ito Basket Compare 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Ito Basket Compare 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Ito Basket Compare 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Ito Basket Compare 处理具体工作流的 Claude Code 用户。",
+      "id": "affaan-m-ecc-ito-baskets",
+      "name": "ito-baskets",
+      "summary": "Read-only Itô basket and prediction-market data skill. Index the live basket catalog, compare a basket against user-supplied research or a watchlist, build a source-grounded marke…",
+      "summaryZh": "读取、分析、修改和生成电子表格，适合数据清洗、报表整理和表格自动化。",
+      "capabilityZh": "读取、分析、修改和生成电子表格，适合数据清洗、报表整理和表格自动化。",
+      "audience": "数据运营、分析师、财务和需要批量处理表格的人。",
+      "audienceZh": "数据运营、分析师、财务和需要批量处理表格的人。",
       "scenarios": [
-        "使用 Ito Basket Compare 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "批量读写单元格和工作表",
+        "整理 CSV/XLSX 数据并生成统计结果",
+        "制作可直接打开的表格文件"
       ],
       "scenariosZh": [
-        "使用 Ito Basket Compare 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
+        "批量读写单元格和工作表",
+        "整理 CSV/XLSX 数据并生成统计结果",
+        "制作可直接打开的表格文件"
       ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Ito Basket Compare”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Ito Basket Compare”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
+      "usage": "安装后在 Claude Code 中明确说“使用 Ito Baskets”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ito Baskets”，再给出文件、链接或要完成的任务。",
+      "category": "表格处理",
       "tags": [
-        "skill"
+        "skill",
+        "spreadsheets"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/ito-basket-compare' \"$HOME/.claude/skills/ito-basket-compare\"\nrm -rf '/tmp/affaan-m__ECC'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/ito-baskets' \"$HOME/.claude/skills/ito-baskets\"\nrm -rf '/tmp/affaan-m__ECC'"
       },
       "source": {
         "repo": "affaan-m/ECC",
         "url": "https://github.com/affaan-m/ECC",
-        "path": "skills/ito-basket-compare",
+        "path": "skills/ito-baskets",
         "type": "auto-promoted-high-star",
         "stars": 215443
       },
-      "packageUrl": "/skill-files/affaan-m-ecc-ito-basket-compare.json"
+      "packageUrl": "/skill-files/affaan-m-ecc-ito-baskets.json"
     },
     {
       "id": "affaan-m-ecc-ito-compute",
@@ -99760,43 +99761,6 @@
       "packageUrl": "/skill-files/affaan-m-ecc-ito-compute.json"
     },
     {
-      "id": "affaan-m-ecc-ito-data-atlas-agent",
-      "name": "ito-data-atlas-agent",
-      "summary": "Design source-grounded Data Atlas style agents for Itô basket research, market discovery, parameter drafting, and human-in-the-loop editing. Use for architecture and read-only wor…",
-      "summaryZh": "Ito Data Atlas Agent 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Ito Data Atlas Agent 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 Ito Data Atlas Agent 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Ito Data Atlas Agent 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Ito Data Atlas Agent”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Ito Data Atlas Agent”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
-      "tags": [
-        "skill",
-        "api"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/ito-data-atlas-agent' \"$HOME/.claude/skills/ito-data-atlas-agent\"\nrm -rf '/tmp/affaan-m__ECC'"
-      },
-      "source": {
-        "repo": "affaan-m/ECC",
-        "url": "https://github.com/affaan-m/ECC",
-        "path": "skills/ito-data-atlas-agent",
-        "type": "auto-promoted-high-star",
-        "stars": 215443
-      },
-      "packageUrl": "/skill-files/affaan-m-ecc-ito-data-atlas-agent.json"
-    },
-    {
       "id": "affaan-m-ecc-ito-inference",
       "name": "ito-inference",
       "summary": "Inspect the availability of model serving on a completed Itô compute booking and, when the canonical backend becomes available, hand off an explicitly confirmed serving manifest. …",
@@ -99833,83 +99797,9 @@
       "packageUrl": "/skill-files/affaan-m-ecc-ito-inference.json"
     },
     {
-      "id": "affaan-m-ecc-ito-market-intelligence",
-      "name": "ito-market-intelligence",
-      "summary": "Research prediction-market events, venues, underliers, liquidity, and news context for Itô basket workflows. Use for read-only market intelligence, API-gated Itô exploration, and …",
-      "summaryZh": "Ito Market Intelligence 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Ito Market Intelligence 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Ito Market Intelligence 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Ito Market Intelligence 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Ito Market Intelligence 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Ito Market Intelligence 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Ito Market Intelligence”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Ito Market Intelligence”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill",
-        "api"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/ito-market-intelligence' \"$HOME/.claude/skills/ito-market-intelligence\"\nrm -rf '/tmp/affaan-m__ECC'"
-      },
-      "source": {
-        "repo": "affaan-m/ECC",
-        "url": "https://github.com/affaan-m/ECC",
-        "path": "skills/ito-market-intelligence",
-        "type": "auto-promoted-high-star",
-        "stars": 215443
-      },
-      "packageUrl": "/skill-files/affaan-m-ecc-ito-market-intelligence.json"
-    },
-    {
-      "id": "affaan-m-ecc-ito-trade-planner",
-      "name": "ito-trade-planner",
-      "summary": "Build a non-advisory prediction-market trade planning worksheet for Itô or venue workflows. Use to inspect venues, underliers, constraints, order prerequisites, and manual executi…",
-      "summaryZh": "读取、分析、修改和生成电子表格，适合数据清洗、报表整理和表格自动化。",
-      "capabilityZh": "读取、分析、修改和生成电子表格，适合数据清洗、报表整理和表格自动化。",
-      "audience": "数据运营、分析师、财务和需要批量处理表格的人。",
-      "audienceZh": "数据运营、分析师、财务和需要批量处理表格的人。",
-      "scenarios": [
-        "批量读写单元格和工作表",
-        "整理 CSV/XLSX 数据并生成统计结果",
-        "制作可直接打开的表格文件"
-      ],
-      "scenariosZh": [
-        "批量读写单元格和工作表",
-        "整理 CSV/XLSX 数据并生成统计结果",
-        "制作可直接打开的表格文件"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Ito Trade Planner”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Ito Trade Planner”，再给出文件、链接或要完成的任务。",
-      "category": "表格处理",
-      "tags": [
-        "skill",
-        "spreadsheets"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/ito-trade-planner' \"$HOME/.claude/skills/ito-trade-planner\"\nrm -rf '/tmp/affaan-m__ECC'"
-      },
-      "source": {
-        "repo": "affaan-m/ECC",
-        "url": "https://github.com/affaan-m/ECC",
-        "path": "skills/ito-trade-planner",
-        "type": "auto-promoted-high-star",
-        "stars": 215443
-      },
-      "packageUrl": "/skill-files/affaan-m-ecc-ito-trade-planner.json"
-    },
-    {
       "id": "affaan-m-ecc-ito-training",
       "name": "ito-training",
-      "summary": "Run an ML training job on a completed Itô compute booking through the canonical Itô backend. Use after ito-compute has booked GPU nodes and the user wants pre-training, fine-tunin…",
+      "summary": "Inspect the availability of ML training on a completed Itô compute booking and, when the canonical backend becomes available, hand off an explicitly confirmed training manifest. U…",
       "summaryZh": "Ito Training 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Ito Training 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Ito Training 处理具体工作流的 Claude Code 用户。",
@@ -103280,7 +103170,7 @@
     {
       "id": "affaan-m-ecc-kubernetes-patterns",
       "name": "kubernetes-patterns",
-      "summary": "Kubernetes workload patterns, resource management, RBAC, probes, autoscaling, ConfigMap/Secret handling, and kubectl debugging for production-grade deployments.",
+      "summary": "Kubernetes workload patterns, resource management, RBAC, probes, autoscaling, ConfigMap/Secret handling, and kubectl debugging for production-grade deployments. Use when writing o…",
       "summaryZh": "Kubernetes Patterns 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Kubernetes Patterns 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Kubernetes Patterns 处理具体工作流的 Claude Code 用户。",
@@ -154856,81 +154746,9 @@
       "packageUrl": "/skill-files/ruvnet-ruflo-rvf-manage.json"
     },
     {
-      "id": "shareai-lab-learn-claude-code-s03-permission",
-      "name": "s03 permission",
-      "summary": "[中文](README.md) · [English](README.en.md) · [日本語](README.ja.md)",
-      "summaryZh": "S03 Permission 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "S03 Permission 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 S03 Permission 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 S03 Permission 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 S03 Permission 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 S03 Permission 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 S03 Permission”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 S03 Permission”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'\ngit clone --depth 1 'https://github.com/shareAI-lab/learn-claude-code.git' '/tmp/shareAI-lab__learn-claude-code'\ncp -R '/tmp/shareAI-lab__learn-claude-code/s03_permission' \"$HOME/.claude/skills/s03-permission\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'"
-      },
-      "source": {
-        "repo": "shareAI-lab/learn-claude-code",
-        "url": "https://github.com/shareAI-lab/learn-claude-code",
-        "path": "s03_permission",
-        "type": "auto-promoted-high-star",
-        "stars": 66493
-      },
-      "packageUrl": "/skill-files/shareai-lab-learn-claude-code-s03-permission.json"
-    },
-    {
-      "id": "shareai-lab-learn-claude-code-s04-hooks",
-      "name": "s04 hooks",
-      "summary": "[中文](README.md) · [English](README.en.md) · [日本語](README.ja.md)",
-      "summaryZh": "S04 Hooks 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "S04 Hooks 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 S04 Hooks 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 S04 Hooks 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 S04 Hooks 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 S04 Hooks 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 S04 Hooks”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 S04 Hooks”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'\ngit clone --depth 1 'https://github.com/shareAI-lab/learn-claude-code.git' '/tmp/shareAI-lab__learn-claude-code'\ncp -R '/tmp/shareAI-lab__learn-claude-code/s04_hooks' \"$HOME/.claude/skills/s04-hooks\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'"
-      },
-      "source": {
-        "repo": "shareAI-lab/learn-claude-code",
-        "url": "https://github.com/shareAI-lab/learn-claude-code",
-        "path": "s04_hooks",
-        "type": "auto-promoted-high-star",
-        "stars": 66493
-      },
-      "packageUrl": "/skill-files/shareai-lab-learn-claude-code-s04-hooks.json"
-    },
-    {
       "id": "shareai-lab-learn-claude-code-s06-subagent",
       "name": "s06 subagent",
-      "summary": "s06: Subagent — 大任务拆小，每个拿到的都是干净上下文",
+      "summary": "s06: Subagent — Give a Subtask Its Own Context",
       "summaryZh": "S06 Subagent 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "S06 Subagent 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 S06 Subagent 处理具体工作流的 Claude Code 用户。",
@@ -154967,7 +154785,7 @@
     {
       "id": "shareai-lab-learn-claude-code-s07-skill-loading",
       "name": "s07 skill loading",
-      "summary": "[中文](README.md) · [English](README.en.md) · [日本語](README.ja.md)",
+      "summary": "s07: Skill Loading — Load Skills When Needed",
       "summaryZh": "S07 Skill Loading 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "S07 Skill Loading 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 S07 Skill Loading 处理具体工作流的 Claude Code 用户。",
@@ -155001,45 +154819,9 @@
       "packageUrl": "/skill-files/shareai-lab-learn-claude-code-s07-skill-loading.json"
     },
     {
-      "id": "shareai-lab-learn-claude-code-s08-context-compact",
-      "name": "s08 context compact",
-      "summary": "s08: Context Compact — 上下文总会满，要有办法腾地方",
-      "summaryZh": "S08 Context Compact 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "S08 Context Compact 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 S08 Context Compact 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 S08 Context Compact 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 S08 Context Compact 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 S08 Context Compact 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 S08 Context Compact”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 S08 Context Compact”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'\ngit clone --depth 1 'https://github.com/shareAI-lab/learn-claude-code.git' '/tmp/shareAI-lab__learn-claude-code'\ncp -R '/tmp/shareAI-lab__learn-claude-code/s08_context_compact' \"$HOME/.claude/skills/s08-context-compact\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'"
-      },
-      "source": {
-        "repo": "shareAI-lab/learn-claude-code",
-        "url": "https://github.com/shareAI-lab/learn-claude-code",
-        "path": "s08_context_compact",
-        "type": "auto-promoted-high-star",
-        "stars": 66493
-      },
-      "packageUrl": "/skill-files/shareai-lab-learn-claude-code-s08-context-compact.json"
-    },
-    {
       "id": "shareai-lab-learn-claude-code-s09-memory",
       "name": "s09 memory",
-      "summary": "[中文](README.md) · [English](README.en.md) · [日本語](README.ja.md)",
+      "summary": "s09: Memory — Keep Useful Knowledge Across Sessions",
       "summaryZh": "S09 Memory 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "S09 Memory 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 S09 Memory 处理具体工作流的 Claude Code 用户。",
@@ -155073,157 +154855,13 @@
       "packageUrl": "/skill-files/shareai-lab-learn-claude-code-s09-memory.json"
     },
     {
-      "id": "shareai-lab-learn-claude-code-s10-system-prompt",
-      "name": "s10 system prompt",
-      "summary": "s10: System Prompt — 运行时组装，不硬编码",
-      "summaryZh": "S10 System Prompt 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "S10 System Prompt 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 S10 System Prompt 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 S10 System Prompt 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 S10 System Prompt 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 S10 System Prompt 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 S10 System Prompt”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 S10 System Prompt”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'\ngit clone --depth 1 'https://github.com/shareAI-lab/learn-claude-code.git' '/tmp/shareAI-lab__learn-claude-code'\ncp -R '/tmp/shareAI-lab__learn-claude-code/s10_system_prompt' \"$HOME/.claude/skills/s10-system-prompt\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'"
-      },
-      "source": {
-        "repo": "shareAI-lab/learn-claude-code",
-        "url": "https://github.com/shareAI-lab/learn-claude-code",
-        "path": "s10_system_prompt",
-        "type": "auto-promoted-high-star",
-        "stars": 66493
-      },
-      "packageUrl": "/skill-files/shareai-lab-learn-claude-code-s10-system-prompt.json"
-    },
-    {
-      "id": "shareai-lab-learn-claude-code-s13-background-tasks",
-      "name": "s13 background tasks",
-      "summary": "[中文](README.md) · [English](README.en.md) · [日本語](README.ja.md)",
-      "summaryZh": "S13 Background Tasks 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "S13 Background Tasks 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 S13 Background Tasks 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 S13 Background Tasks 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 S13 Background Tasks 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 S13 Background Tasks 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 S13 Background Tasks”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 S13 Background Tasks”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'\ngit clone --depth 1 'https://github.com/shareAI-lab/learn-claude-code.git' '/tmp/shareAI-lab__learn-claude-code'\ncp -R '/tmp/shareAI-lab__learn-claude-code/s13_background_tasks' \"$HOME/.claude/skills/s13-background-tasks\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'"
-      },
-      "source": {
-        "repo": "shareAI-lab/learn-claude-code",
-        "url": "https://github.com/shareAI-lab/learn-claude-code",
-        "path": "s13_background_tasks",
-        "type": "auto-promoted-high-star",
-        "stars": 66493
-      },
-      "packageUrl": "/skill-files/shareai-lab-learn-claude-code-s13-background-tasks.json"
-    },
-    {
-      "id": "shareai-lab-learn-claude-code-s18-worktree-isolation",
-      "name": "s18 worktree isolation",
-      "summary": "s18: Worktree Isolation — 各干各的，互不干扰",
-      "summaryZh": "S18 Worktree Isolation 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "S18 Worktree Isolation 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 S18 Worktree Isolation 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 S18 Worktree Isolation 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 S18 Worktree Isolation 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 S18 Worktree Isolation 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 S18 Worktree Isolation”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 S18 Worktree Isolation”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'\ngit clone --depth 1 'https://github.com/shareAI-lab/learn-claude-code.git' '/tmp/shareAI-lab__learn-claude-code'\ncp -R '/tmp/shareAI-lab__learn-claude-code/s18_worktree_isolation' \"$HOME/.claude/skills/s18-worktree-isolation\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'"
-      },
-      "source": {
-        "repo": "shareAI-lab/learn-claude-code",
-        "url": "https://github.com/shareAI-lab/learn-claude-code",
-        "path": "s18_worktree_isolation",
-        "type": "auto-promoted-high-star",
-        "stars": 66493
-      },
-      "packageUrl": "/skill-files/shareai-lab-learn-claude-code-s18-worktree-isolation.json"
-    },
-    {
-      "id": "shareai-lab-learn-claude-code-s19-mcp-plugin",
-      "name": "s19 mcp plugin",
-      "summary": "[中文](README.md) · [English](README.en.md) · [日本語](README.ja.md)",
-      "summaryZh": "S19 Mcp Plugin 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "S19 Mcp Plugin 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 S19 Mcp Plugin 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 S19 Mcp Plugin 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 S19 Mcp Plugin 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 S19 Mcp Plugin 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 S19 Mcp Plugin”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 S19 Mcp Plugin”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'\ngit clone --depth 1 'https://github.com/shareAI-lab/learn-claude-code.git' '/tmp/shareAI-lab__learn-claude-code'\ncp -R '/tmp/shareAI-lab__learn-claude-code/s19_mcp_plugin' \"$HOME/.claude/skills/s19-mcp-plugin\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'"
-      },
-      "source": {
-        "repo": "shareAI-lab/learn-claude-code",
-        "url": "https://github.com/shareAI-lab/learn-claude-code",
-        "path": "s19_mcp_plugin",
-        "type": "auto-promoted-high-star",
-        "stars": 66493
-      },
-      "packageUrl": "/skill-files/shareai-lab-learn-claude-code-s19-mcp-plugin.json"
-    },
-    {
-      "id": "shareai-lab-learn-claude-code-s20-comprehensive",
-      "name": "s20 comprehensive",
-      "summary": "s20: Comprehensive Agent — 全部机制，归到一个循环",
-      "summaryZh": "S20 Comprehensive 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "S20 Comprehensive 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 S20 Comprehensive 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 S20 Comprehensive 处理具体工作流的 Claude Code 用户。",
+      "id": "shareai-lab-learn-claude-code-s13-agent-teams",
+      "name": "s13 agent teams",
+      "summary": "s13: Agent Teams — Runtime and Coordination Protocols",
+      "summaryZh": "S13 Agent Teams 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "S13 Agent Teams 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 S13 Agent Teams 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 S13 Agent Teams 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
         "生成或修改 Claude Code skill",
         "整理 Agent/API 使用说明和开发步骤",
@@ -155234,24 +154872,96 @@
         "整理 Agent/API 使用说明和开发步骤",
         "把工程任务拆成可执行的代码工作流"
       ],
-      "usage": "安装后在 Claude Code 中明确说“使用 S20 Comprehensive”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 S20 Comprehensive”，再给出文件、链接或要完成的任务。",
+      "usage": "安装后在 Claude Code 中明确说“使用 S13 Agent Teams”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 S13 Agent Teams”，再给出文件、链接或要完成的任务。",
       "category": "代码 / Agent 开发",
       "tags": [
         "skill",
         "api"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'\ngit clone --depth 1 'https://github.com/shareAI-lab/learn-claude-code.git' '/tmp/shareAI-lab__learn-claude-code'\ncp -R '/tmp/shareAI-lab__learn-claude-code/s20_comprehensive' \"$HOME/.claude/skills/s20-comprehensive\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'\ngit clone --depth 1 'https://github.com/shareAI-lab/learn-claude-code.git' '/tmp/shareAI-lab__learn-claude-code'\ncp -R '/tmp/shareAI-lab__learn-claude-code/s13_agent_teams' \"$HOME/.claude/skills/s13-agent-teams\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'"
       },
       "source": {
         "repo": "shareAI-lab/learn-claude-code",
         "url": "https://github.com/shareAI-lab/learn-claude-code",
-        "path": "s20_comprehensive",
+        "path": "s13_agent_teams",
         "type": "auto-promoted-high-star",
         "stars": 66493
       },
-      "packageUrl": "/skill-files/shareai-lab-learn-claude-code-s20-comprehensive.json"
+      "packageUrl": "/skill-files/shareai-lab-learn-claude-code-s13-agent-teams.json"
+    },
+    {
+      "id": "shareai-lab-learn-claude-code-s14-mcp-plugin",
+      "name": "s14 mcp plugin",
+      "summary": "s14: MCP Tools — Discover and Invoke External Tools",
+      "summaryZh": "S14 Mcp Plugin 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "S14 Mcp Plugin 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 S14 Mcp Plugin 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 S14 Mcp Plugin 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 S14 Mcp Plugin 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 S14 Mcp Plugin 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 S14 Mcp Plugin”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 S14 Mcp Plugin”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'\ngit clone --depth 1 'https://github.com/shareAI-lab/learn-claude-code.git' '/tmp/shareAI-lab__learn-claude-code'\ncp -R '/tmp/shareAI-lab__learn-claude-code/s14_mcp_plugin' \"$HOME/.claude/skills/s14-mcp-plugin\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'"
+      },
+      "source": {
+        "repo": "shareAI-lab/learn-claude-code",
+        "url": "https://github.com/shareAI-lab/learn-claude-code",
+        "path": "s14_mcp_plugin",
+        "type": "auto-promoted-high-star",
+        "stars": 66493
+      },
+      "packageUrl": "/skill-files/shareai-lab-learn-claude-code-s14-mcp-plugin.json"
+    },
+    {
+      "id": "shareai-lab-learn-claude-code-s15-integrated-harness",
+      "name": "s15 integrated harness",
+      "summary": "s15: Integrated Harness — Many Mechanisms, One Loop",
+      "summaryZh": "S15 Integrated Harness 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "S15 Integrated Harness 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 S15 Integrated Harness 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 S15 Integrated Harness 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 S15 Integrated Harness 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 S15 Integrated Harness 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 S15 Integrated Harness”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 S15 Integrated Harness”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'\ngit clone --depth 1 'https://github.com/shareAI-lab/learn-claude-code.git' '/tmp/shareAI-lab__learn-claude-code'\ncp -R '/tmp/shareAI-lab__learn-claude-code/s15_integrated_harness' \"$HOME/.claude/skills/s15-integrated-harness\"\nrm -rf '/tmp/shareAI-lab__learn-claude-code'"
+      },
+      "source": {
+        "repo": "shareAI-lab/learn-claude-code",
+        "url": "https://github.com/shareAI-lab/learn-claude-code",
+        "path": "s15_integrated_harness",
+        "type": "auto-promoted-high-star",
+        "stars": 66493
+      },
+      "packageUrl": "/skill-files/shareai-lab-learn-claude-code-s15-integrated-harness.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-saas-churn-analysis",
@@ -176037,7 +175747,7 @@
     {
       "id": "affaan-m-ecc-team-agent-orchestration",
       "name": "team-agent-orchestration",
-      "summary": "Run team-based orchestration for agent squads using work items, ownership, agent Kanban, merge gates, and control pane handoffs.",
+      "summary": "Run team-based orchestration for agent squads using work items, ownership, agent Kanban, merge gates, and control pane handoffs. Use when coordinating an agent squad with work ite…",
       "summaryZh": "Team Agent Orchestration 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Team Agent Orchestration 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Team Agent Orchestration 处理具体工作流的 Claude Code 用户。",
