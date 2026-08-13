@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T21:11:40.429Z",
+  "generatedAt": "2026-08-13T21:12:09.772Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -29494,7 +29494,7 @@
     {
       "id": "yeachan-heo-oh-my-claudecode-cancel",
       "name": "cancel",
-      "summary": "Cancel any active OMC mode (autopilot, ralph, ultrawork, ultraqa, swarm, ultrapilot, pipeline, team)",
+      "summary": "Cancel any active OMC mode (autopilot, ralph, ultrawork, ultraqa, ultragoal, swarm, ultrapilot, pipeline, team)",
       "summaryZh": "Cancel 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Cancel 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Cancel 处理具体工作流的 Claude Code 用户。",
@@ -61912,7 +61912,7 @@
     {
       "id": "mattpocock-skills-domain-modeling",
       "name": "domain-modeling",
-      "summary": "Build and sharpen a project's domain model. Use when the user wants to pin down domain terminology or a ubiquitous language, record an architectural decision, or when another skil…",
+      "summary": "Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a CONTEXT.md, or recording or editing an ADR.",
       "summaryZh": "Domain Modeling 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Domain Modeling 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Domain Modeling 处理具体工作流的 Claude Code 用户。",

@@ -604,7 +604,7 @@
     {
       "path": "src/core/constants.ts",
       "encoding": "utf8",
-      "content": "/**\n * Shared constants used across the CLI.\n * This file should have minimal imports to avoid circular dependencies.\n */\n\nexport const WM_FORK_PREFIX = \"wm-fork\";\n\n// CLI version — source of truth. Release tooling (.github/change-versions*.sh)\n// rewrites this line. Kept here, rather than in main.ts, so low-level modules\n// (e.g. utils.ts) can read it without importing main.ts and creating a circular\n// dependency (main → workspace → utils → main) that triggers a TDZ.\n// Re-exported from main.ts for backwards compatibility.\nexport const VERSION = \"1.788.0\";\n"
+      "content": "/**\n * Shared constants used across the CLI.\n * This file should have minimal imports to avoid circular dependencies.\n */\n\nexport const WM_FORK_PREFIX = \"wm-fork\";\n\n// CLI version — source of truth. Release tooling (.github/change-versions*.sh)\n// rewrites this line. Kept here, rather than in main.ts, so low-level modules\n// (e.g. utils.ts) can read it without importing main.ts and creating a circular\n// dependency (main → workspace → utils → main) that triggers a TDZ.\n// Re-exported from main.ts for backwards compatibility.\nexport const VERSION = \"1.789.0\";\n"
     },
     {
       "path": "src/core/context.ts",
