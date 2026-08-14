@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-alpha",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: alpha\ndescription: Fixture dispatcher with a mode table and forced-read references.\ntriggers: a-key-the-upstream-router-DOES-read\nx-dead-key: a-key-no-router-reads\n---\n\n# Alpha\n\n## Dispatch protocol\n\n1. Infer the mode from the request.\n2. Read `references/CORE.md` and `references/POLICY.md` for every invocation. Read `references/OPTIONAL.md` before public-web work.\n3. When the target is a repository, read `references/CORE.md` once before specialist work; it is already billed eagerly.\n\n## Top-level modes\n\n| Mode | Infer when | Candidate internal specialists |\n|---|---|---|\n| `Discovery` | The idea is fluid. | `references/legacy/office.md` |\n| `Full chain` | Everything at once. | `references/legacy/auto.md` |\n"
+    },
+    {
+      "path": "references/CORE.md",
+      "encoding": "utf8",
+      "content": "# Core\n\nForced-read reference number one. Read on every invocation of alpha.\n"
+    },
+    {
+      "path": "references/OPTIONAL.md",
+      "encoding": "utf8",
+      "content": "# Optional\n\nConditional reference. Not part of the eager bill.\n"
+    },
+    {
+      "path": "references/POLICY.md",
+      "encoding": "utf8",
+      "content": "# Policy\n\nForced-read reference number two.\n"
+    }
+  ]
+}

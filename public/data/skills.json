@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T21:12:09.772Z",
+  "generatedAt": "2026-08-14T20:55:23.362Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -12405,6 +12405,42 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-all-images-ai-automation.json"
     },
     {
+      "id": "garrytan-gstack-alpha",
+      "name": "alpha",
+      "summary": "Fixture dispatcher with a mode table and forced-read references.",
+      "summaryZh": "Alpha 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Alpha 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Alpha 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Alpha 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Alpha 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Alpha 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Alpha”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Alpha”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/garrytan__gstack'\ngit clone --depth 1 'https://github.com/garrytan/gstack.git' '/tmp/garrytan__gstack'\ncp -R '/tmp/garrytan__gstack/test/fixtures/context-bill/tree-a/alpha' \"$HOME/.claude/skills/alpha\"\nrm -rf '/tmp/garrytan__gstack'"
+      },
+      "source": {
+        "repo": "garrytan/gstack",
+        "url": "https://github.com/garrytan/gstack",
+        "path": "test/fixtures/context-bill/tree-a/alpha",
+        "type": "auto-promoted-high-star",
+        "stars": 110114
+      },
+      "packageUrl": "/skill-files/garrytan-gstack-alpha.json"
+    },
+    {
       "id": "foryourhealth111-pixel-vibe-skills-alpha-vantage",
       "name": "alpha-vantage",
       "summary": "Access real-time and historical stock market data, forex rates, cryptocurrency prices, commodities, economic indicators, and 50+ technical indicators via the Alpha Vantage API. Us…",
@@ -23073,6 +23109,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-bestbuy-automation.json"
+    },
+    {
+      "id": "garrytan-gstack-beta",
+      "name": "beta",
+      "summary": "Clean fixture tool skill with no forced reads and no mode table.",
+      "summaryZh": "Beta 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Beta 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Beta 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Beta 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Beta 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Beta 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Beta”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Beta”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/garrytan__gstack'\ngit clone --depth 1 'https://github.com/garrytan/gstack.git' '/tmp/garrytan__gstack'\ncp -R '/tmp/garrytan__gstack/test/fixtures/context-bill/tree-a/beta' \"$HOME/.claude/skills/beta\"\nrm -rf '/tmp/garrytan__gstack'"
+      },
+      "source": {
+        "repo": "garrytan/gstack",
+        "url": "https://github.com/garrytan/gstack",
+        "path": "test/fixtures/context-bill/tree-a/beta",
+        "type": "auto-promoted-high-star",
+        "stars": 110114
+      },
+      "packageUrl": "/skill-files/garrytan-gstack-beta.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-bettafish-opinion-analysis",
@@ -149843,24 +149915,24 @@
     {
       "id": "affaan-m-ecc-repo-scan",
       "name": "repo-scan",
-      "summary": "クロススタックのソースコード資産監査——各ファイルを分類し、埋め込まれたサードパーティライブラリを検出し、各モジュールに対してインタラクティブなHTMLレポートとともに実用的な4段階の判定を提供する。",
-      "summaryZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
-      "capabilityZh": "把 Markdown 转成排版好的 HTML，适合公众号、技术文章、教程和内部知识库发布。",
-      "audience": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
-      "audienceZh": "技术作者、公众号作者、知识库维护者和内部文档负责人。",
+      "summary": "固定されレビュー可能なコミットから外部の repo-scan スキルをインストールするブートストラップ用ポインター。クロススタックのソースコード資産監査を実行する前に repo-scan のインストールが必要な場合に使用する。この ECC ポインター自体は監査を実行しない。",
+      "summaryZh": "Repo Scan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Repo Scan 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Repo Scan 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Repo Scan 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "渲染代码高亮、数学公式和 Mermaid 图",
-        "把长文转成可发布 HTML",
-        "套用主题生成统一风格页面"
+        "使用 Repo Scan 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "渲染代码高亮、数学公式和 Mermaid 图",
-        "把长文转成可发布 HTML",
-        "套用主题生成统一风格页面"
+        "使用 Repo Scan 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Repo Scan”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Repo Scan”，再给出文件、链接或要完成的任务。",
-      "category": "内容发布",
+      "category": "通用工具",
       "tags": [
         "skill"
       ],
@@ -169321,7 +169393,8 @@
       "usageZh": "安装后在 Claude Code 中明确说“使用 Spec Driven Development”，再给出文件、链接或要完成的任务。",
       "category": "通用工具",
       "tags": [
-        "skill"
+        "skill",
+        "testing"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/addyosmani__agent-skills'\ngit clone --depth 1 'https://github.com/addyosmani/agent-skills.git' '/tmp/addyosmani__agent-skills'\ncp -R '/tmp/addyosmani__agent-skills/skills/spec-driven-development' \"$HOME/.claude/skills/spec-driven-development\"\nrm -rf '/tmp/addyosmani__agent-skills'"

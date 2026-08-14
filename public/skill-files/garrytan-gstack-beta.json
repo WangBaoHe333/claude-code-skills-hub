@@ -1,0 +1,15 @@
+{
+  "id": "garrytan-gstack-beta",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: beta\ndescription: Clean fixture tool skill with no forced reads and no mode table.\n---\n\n# Beta\n\nOne-command tool skill. Nothing eager beyond this file, nothing lazy.\n"
+    },
+    {
+      "path": "agents.md",
+      "encoding": "utf8",
+      "content": "# Foreign host file\n\nA skill-shaped file another host dropped into scanner scope (#1694).\n"
+    }
+  ]
+}
