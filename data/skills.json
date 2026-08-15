@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T20:55:23.362Z",
+  "generatedAt": "2026-08-15T20:48:14.976Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -58651,7 +58651,7 @@
     {
       "id": "garrytan-gstack-diagram",
       "name": "diagram",
-      "summary": "Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open (gstack)",
+      "summary": "Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open on excalidraw.com, and rendered SVG + PNG. (gstack)",
       "summaryZh": "Diagram 用来生成或整理图片、插画、封面、漫画或信息图，适合内容发布和视觉素材制作。",
       "capabilityZh": "Diagram 用来生成或整理图片、插画、封面、漫画或信息图，适合内容发布和视觉素材制作。",
       "audience": "需要使用 Diagram 处理具体工作流的 Claude Code 用户。",
@@ -174280,7 +174280,7 @@
     {
       "id": "garrytan-gstack-sync-gbrain",
       "name": "sync-gbrain",
-      "summary": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. Wraps the gstack-gbrain-sync orchestrator with state (gstack)",
+      "summary": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. (gstack)",
       "summaryZh": "Sync Gbrain 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Sync Gbrain 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Sync Gbrain 处理具体工作流的 Claude Code 用户。",
