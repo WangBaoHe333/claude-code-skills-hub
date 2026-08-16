@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T20:48:14.976Z",
+  "generatedAt": "2026-08-16T20:47:17.926Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -60816,6 +60816,43 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-docnify-automation.json"
     },
     {
+      "id": "juliusbrussee-caveman-docs",
+      "name": "docs",
+      "summary": "Caveman technical documentation",
+      "summaryZh": "Docs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Docs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Docs 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Docs 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Docs 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Docs 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Docs”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Docs”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "documents"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/docs' \"$HOME/.claude/skills/docs\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "docs",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-docs.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-docs",
       "name": "docs",
       "summary": "This folder contains detailed documentation for the Stock Analysis skill.",
@@ -69131,7 +69168,7 @@
     {
       "id": "juliusbrussee-caveman-explorer",
       "name": "explorer",
-      "summary": "@caveman/explorer — the FastContext exploration subagent",
+      "summary": "Read-only repository exploration subagent inspired by FastContext ([arXiv 2606.14066](https://arxiv.org/abs/2606.14066)). It keeps file reads and searches in isolated subagent con…",
       "summaryZh": "Explorer 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Explorer 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Explorer 处理具体工作流的 Claude Code 用户。",
@@ -99977,6 +100014,43 @@
       "packageUrl": "/skill-files/affaan-m-ecc-ja-jp.json"
     },
     {
+      "id": "chachamaru127-claude-code-harness-japanese-writing-drafter",
+      "name": "japanese-writing-drafter",
+      "summary": "Detect when the operator corrects the agent's Japanese phrasing mid-conversation (rewrites a sentence, calls out a style problem, says 'this wording is bad, say it like X instead'…",
+      "summaryZh": "Japanese Writing Drafter 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Japanese Writing Drafter 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Japanese Writing Drafter 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Japanese Writing Drafter 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Japanese Writing Drafter”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Japanese Writing Drafter”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Chachamaru127__claude-code-harness'\ngit clone --depth 1 'https://github.com/Chachamaru127/claude-code-harness.git' '/tmp/Chachamaru127__claude-code-harness'\ncp -R '/tmp/Chachamaru127__claude-code-harness/opencode/skills/japanese-writing-drafter' \"$HOME/.claude/skills/japanese-writing-drafter\"\nrm -rf '/tmp/Chachamaru127__claude-code-harness'"
+      },
+      "source": {
+        "repo": "Chachamaru127/claude-code-harness",
+        "url": "https://github.com/Chachamaru127/claude-code-harness",
+        "path": "opencode/skills/japanese-writing-drafter",
+        "type": "auto-promoted-high-star",
+        "stars": 2966
+      },
+      "packageUrl": "/skill-files/chachamaru127-claude-code-harness-japanese-writing-drafter.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-java-audit-skill",
       "name": "java audit skill",
       "summary": "**AI-Powered Java Security Audit Framework**",
@@ -111072,6 +111146,43 @@
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-markitdown.json"
     },
     {
+      "id": "code-yeongyu-oh-my-openagent-mass-ulw",
+      "name": "mass-ulw",
+      "summary": "Run a dependency graph of child agents in one call with the native dag tool. Use when the user asks for mass-ulw, a DAG of tasks, fan-out/fan-in work, or multi-agent execution whe…",
+      "summaryZh": "Mass Ulw 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Mass Ulw 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Mass Ulw 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Mass Ulw 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Mass Ulw”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Mass Ulw”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-senpi/skills/mass-ulw' \"$HOME/.claude/skills/mass-ulw\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/omo-senpi/skills/mass-ulw",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-mass-ulw.json"
+    },
+    {
       "id": "juliusbrussee-caveman-mastra",
       "name": "mastra",
       "summary": "The Caveman adapter for [Mastra](https://mastra.ai)'s OpenTelemetry export: it points Mastra's OTLP exporter at Caveman, stamps the project/agent/task identifiers Caveman groups b…",
@@ -120673,6 +120784,43 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-nasdaq-automation.json"
+    },
+    {
+      "id": "affaan-m-ecc-nasiko-control-plane",
+      "name": "nasiko-control-plane",
+      "summary": "Install, detect, and operate the optional Nasiko agent control plane through ECC with pinned artifacts, explicit consent, and telemetry and secrets boundaries.",
+      "summaryZh": "Nasiko Control Plane 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Nasiko Control Plane 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Nasiko Control Plane 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Nasiko Control Plane 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Nasiko Control Plane”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Nasiko Control Plane”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/nasiko-control-plane' \"$HOME/.claude/skills/nasiko-control-plane\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/nasiko-control-plane",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-nasiko-control-plane.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-native-app-performance",
