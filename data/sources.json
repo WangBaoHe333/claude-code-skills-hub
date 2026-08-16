@@ -683,6 +683,14 @@
       "stars": 1326,
       "discoveredAt": "2026-08-09T21:06:07.673Z",
       "reason": "1326 stars, 2 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "vinta/awesome-python",
+      "url": "https://github.com/vinta/awesome-python.git",
+      "type": "auto-promoted-high-star",
+      "stars": 314306,
+      "discoveredAt": "2026-08-16T20:51:41.357Z",
+      "reason": "314306 stars, 3 SKILL.md, has skills directory"
     }
   ]
 }
