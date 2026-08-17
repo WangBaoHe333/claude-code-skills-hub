@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T20:47:17.926Z",
+  "generatedAt": "2026-08-17T20:55:25.378Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -87,7 +87,8 @@
     "linuxfoundation/crowd.dev",
     "adamlyttleapps/claude-skill-app-onboarding-questionnaire",
     "DietrichGebert/ponytail",
-    "BuddiesOfBudgie/budgie-desktop"
+    "BuddiesOfBudgie/budgie-desktop",
+    "vinta/awesome-python"
   ],
   "skills": [
     {
@@ -35264,6 +35265,42 @@
       "packageUrl": "/skill-files/storybookjs-storybook-claude-plugin.json"
     },
     {
+      "id": "anthropics-skills-claude-academy-guide",
+      "name": "claude-academy-guide",
+      "summary": ">",
+      "summaryZh": "Claude Academy Guide 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Claude Academy Guide 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Claude Academy Guide 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Claude Academy Guide 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Claude Academy Guide 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Claude Academy Guide 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Claude Academy Guide”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Claude Academy Guide”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/anthropics__skills'\ngit clone --depth 1 'https://github.com/anthropics/skills.git' '/tmp/anthropics__skills'\ncp -R '/tmp/anthropics__skills/skills/claude-academy-guide' \"$HOME/.claude/skills/claude-academy-guide\"\nrm -rf '/tmp/anthropics__skills'"
+      },
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills",
+        "path": "skills/claude-academy-guide",
+        "type": "official-source",
+        "stars": 0
+      },
+      "packageUrl": "/skill-files/anthropics-skills-claude-academy-guide.json"
+    },
+    {
       "id": "anthropics-skills-claude-api",
       "name": "claude-api",
       "summary": "|-",
@@ -59450,6 +59487,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-directory-submission.json"
     },
     {
+      "id": "anthropics-skills-discernment-nudge",
+      "name": "discernment-nudge",
+      "summary": ">",
+      "summaryZh": "Discernment Nudge 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Discernment Nudge 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Discernment Nudge 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Discernment Nudge 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Discernment Nudge 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Discernment Nudge 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Discernment Nudge”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Discernment Nudge”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/anthropics__skills'\ngit clone --depth 1 'https://github.com/anthropics/skills.git' '/tmp/anthropics__skills'\ncp -R '/tmp/anthropics__skills/skills/discernment-nudge' \"$HOME/.claude/skills/discernment-nudge\"\nrm -rf '/tmp/anthropics__skills'"
+      },
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills",
+        "path": "skills/discernment-nudge",
+        "type": "official-source",
+        "stars": 0
+      },
+      "packageUrl": "/skill-files/anthropics-skills-discernment-nudge.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-discogs-sync",
       "name": "discogs-sync",
       "summary": ">",
@@ -63300,6 +63373,42 @@
         "stars": 1621
       },
       "packageUrl": "/skill-files/hashintel-hash-ds-components.json"
+    },
+    {
+      "id": "evermind-ai-everos-dsh",
+      "name": "dsh",
+      "summary": "EverOS Memory for DeepSeek Harness",
+      "summaryZh": "Dsh 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Dsh 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Dsh 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Dsh 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Dsh 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Dsh 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Dsh”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Dsh”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/EverMind-AI__EverOS'\ngit clone --depth 1 'https://github.com/EverMind-AI/EverOS.git' '/tmp/EverMind-AI__EverOS'\ncp -R '/tmp/EverMind-AI__EverOS/examples/dsh' \"$HOME/.claude/skills/dsh\"\nrm -rf '/tmp/EverMind-AI__EverOS'"
+      },
+      "source": {
+        "repo": "EverMind-AI/EverOS",
+        "url": "https://github.com/EverMind-AI/EverOS",
+        "path": "examples/dsh",
+        "type": "auto-promoted-high-star",
+        "stars": 10873
+      },
+      "packageUrl": "/skill-files/evermind-ai-everos-dsh.json"
     },
     {
       "id": "santifer-career-ops-dual-track-engineer-instructor",
