@@ -9,12 +9,12 @@
     {
       "path": "README.md",
       "encoding": "utf8",
-      "content": "# apps/daemon/tests/fixtures/plugin-fixtures\n\nDeclarative plugin fixtures used by Phase 1 plugin-system tests\n(`docs/plans/plugins-implementation.md` Phase 1 e2e-1).\n\nEach subfolder is a self-contained Open Design plugin (per\n`docs/plugins-spec.md` §5) ready to be passed to\n`od plugin install --source <path>`.\n\n- `sample-plugin/` — minimal `open-design.json` + companion `SKILL.md`.\n  The sidecar has primary precedence; the `SKILL.md` exists so the\n  daemon's compat adapter can be tested in isolation by deleting\n  `open-design.json`.\n"
+      "content": "# apps/daemon/tests/fixtures/plugin-fixtures\n\nDeclarative plugin fixtures used by Phase 1 plugin-system tests\n(`docs/plans/plugins-implementation.md` Phase 1 e2e-1).\n\nEach subfolder is a self-contained OpenDesign plugin (per\n`docs/plugins-spec.md` §5) ready to be passed to\n`od plugin install --source <path>`.\n\n- `sample-plugin/` — minimal `open-design.json` + companion `SKILL.md`.\n  The sidecar has primary precedence; the `SKILL.md` exists so the\n  daemon's compat adapter can be tested in isolation by deleting\n  `open-design.json`.\n"
     },
     {
       "path": "sample-plugin/SKILL.md",
       "encoding": "utf8",
-      "content": "---\nname: sample-plugin\ndescription: Phase 1 sample plugin synthesizing a SKILL.md frontmatter for backwards-compat tests.\nod:\n  kind: skill\n  taskKind: new-generation\n  preview:\n    type: deck\n---\n\n# Sample Plugin\n\nThis is the SKILL.md half of the Phase 1 e2e fixture. The companion\n`open-design.json` sidecar carries the canonical Open Design plugin\nmanifest fields; this file proves the SKILL-only adapter path stays\nhonest when an install lacks an explicit sidecar (just delete\n`open-design.json` to test the legacy compat tier).\n\n## Workflow\n\n1. Acknowledge the user's brief via the discovery question form atom.\n2. Use TodoWrite to plan the brief.\n3. Emit the brief as a deck artifact.\n"
+      "content": "---\nname: sample-plugin\ndescription: Phase 1 sample plugin synthesizing a SKILL.md frontmatter for backwards-compat tests.\nod:\n  kind: skill\n  taskKind: new-generation\n  preview:\n    type: deck\n---\n\n# Sample Plugin\n\nThis is the SKILL.md half of the Phase 1 e2e fixture. The companion\n`open-design.json` sidecar carries the canonical OpenDesign plugin\nmanifest fields; this file proves the SKILL-only adapter path stays\nhonest when an install lacks an explicit sidecar (just delete\n`open-design.json` to test the legacy compat tier).\n\n## Workflow\n\n1. Acknowledge the user's brief via the discovery question form atom.\n2. Use TodoWrite to plan the brief.\n3. Emit the brief as a deck artifact.\n"
     },
     {
       "path": "sample-plugin/open-design.json",

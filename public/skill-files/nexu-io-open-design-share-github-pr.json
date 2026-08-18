@@ -4,7 +4,7 @@
     {
       "path": "SKILL.md",
       "encoding": "utf8",
-      "content": "---\nname: share-github-pr\ndescription: Use this plugin when the user wants to package an accepted plugin or artifact as a GitHub pull request for Open Design or another target repository.\nlicense: MIT\nmetadata:\n  author: open-design-spec\n  version: \"0.1.0\"\n---\n\n# Share GitHub PR\n\n## Workflow\n\n1. Confirm the target repository, branch, and PR intent before making externally visible changes.\n2. Read the changed artifact or plugin folder and create a concise PR summary.\n3. Run available validation commands.\n4. Stage only relevant files.\n5. Open or prepare the PR and report the URL or exact next command.\n\n## Output Contract\n\nProduce `pr-summary.md` and a PR URL or prepared branch summary.\n\n"
+      "content": "---\nname: share-github-pr\ndescription: Use this plugin when the user wants to package an accepted plugin or artifact as a GitHub pull request for OpenDesign or another target repository.\nlicense: MIT\nmetadata:\n  author: open-design-spec\n  version: \"0.1.0\"\n---\n\n# Share GitHub PR\n\n## Workflow\n\n1. Confirm the target repository, branch, and PR intent before making externally visible changes.\n2. Read the changed artifact or plugin folder and create a concise PR summary.\n3. Run available validation commands.\n4. Stage only relevant files.\n5. Open or prepare the PR and report the URL or exact next command.\n\n## Output Contract\n\nProduce `pr-summary.md` and a PR URL or prepared branch summary.\n\n"
     },
     {
       "path": "open-design.json",

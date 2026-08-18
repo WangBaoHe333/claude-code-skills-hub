@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T20:55:25.378Z",
+  "generatedAt": "2026-08-18T20:49:01.109Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -1674,6 +1674,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-academic-research-hub.json"
+    },
+    {
+      "id": "anthropics-skills-academy-guide",
+      "name": "academy-guide",
+      "summary": ">",
+      "summaryZh": "Academy Guide 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Academy Guide 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Academy Guide 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Academy Guide 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Academy Guide 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Academy Guide 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Academy Guide”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Academy Guide”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/anthropics__skills'\ngit clone --depth 1 'https://github.com/anthropics/skills.git' '/tmp/anthropics__skills'\ncp -R '/tmp/anthropics__skills/skills/academy-guide' \"$HOME/.claude/skills/academy-guide\"\nrm -rf '/tmp/anthropics__skills'"
+      },
+      "source": {
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills",
+        "path": "skills/academy-guide",
+        "type": "official-source",
+        "stars": 0
+      },
+      "packageUrl": "/skill-files/anthropics-skills-academy-guide.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-accelo-automation",
@@ -5722,7 +5758,7 @@
     {
       "id": "nexu-io-open-design-agent-protocol",
       "name": "agent protocol",
-      "summary": "Daemon module providing the ACP and pi RPC subprocess protocol adapters used to drive external AI agent CLIs from the Open Design daemon.",
+      "summary": "Daemon module providing the ACP and pi RPC subprocess protocol adapters used to drive external AI agent CLIs from the OpenDesign daemon.",
       "summaryZh": "Agent Protocol 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Agent Protocol 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Agent Protocol 处理具体工作流的 Claude Code 用户。",
@@ -35265,42 +35301,6 @@
       "packageUrl": "/skill-files/storybookjs-storybook-claude-plugin.json"
     },
     {
-      "id": "anthropics-skills-claude-academy-guide",
-      "name": "claude-academy-guide",
-      "summary": ">",
-      "summaryZh": "Claude Academy Guide 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Claude Academy Guide 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Claude Academy Guide 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Claude Academy Guide 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Claude Academy Guide 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Claude Academy Guide 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Claude Academy Guide”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Claude Academy Guide”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/anthropics__skills'\ngit clone --depth 1 'https://github.com/anthropics/skills.git' '/tmp/anthropics__skills'\ncp -R '/tmp/anthropics__skills/skills/claude-academy-guide' \"$HOME/.claude/skills/claude-academy-guide\"\nrm -rf '/tmp/anthropics__skills'"
-      },
-      "source": {
-        "repo": "anthropics/skills",
-        "url": "https://github.com/anthropics/skills",
-        "path": "skills/claude-academy-guide",
-        "type": "official-source",
-        "stars": 0
-      },
-      "packageUrl": "/skill-files/anthropics-skills-claude-academy-guide.json"
-    },
-    {
       "id": "anthropics-skills-claude-api",
       "name": "claude-api",
       "summary": "|-",
@@ -45103,7 +45103,7 @@
     {
       "id": "nexu-io-open-design-community-import-smoke-test",
       "name": "community-import-smoke-test",
-      "summary": "A portable community plugin for validating Open Design plugin import flows.",
+      "summary": "A portable community plugin for validating OpenDesign plugin import flows.",
       "summaryZh": "Community Import Smoke Test 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Community Import Smoke Test 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Community Import Smoke Test 处理具体工作流的 Claude Code 用户。",
@@ -45140,7 +45140,7 @@
     {
       "id": "nexu-io-open-design-community-registry-starter",
       "name": "community-registry-starter",
-      "summary": "A small community registry starter plugin used to verify Open Design marketplace install flows.",
+      "summary": "A small community registry starter plugin used to verify OpenDesign marketplace install flows.",
       "summaryZh": "Community Registry Starter 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Community Registry Starter 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Community Registry Starter 处理具体工作流的 Claude Code 用户。",
@@ -52954,6 +52954,43 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-daffy-automation.json"
     },
     {
+      "id": "code-yeongyu-oh-my-openagent-dag-library",
+      "name": "dag-library",
+      "summary": "Store a dag definition once and re-run it in one or two lines, instead of pasting the full definition JSON into every eval cell. MUST USE whenever the user wants to save a DAG for…",
+      "summaryZh": "Dag Library 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Dag Library 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Dag Library 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Dag Library 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Dag Library”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Dag Library”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-senpi/skills/dag-library' \"$HOME/.claude/skills/dag-library\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/omo-senpi/skills/dag-library",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-dag-library.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-daily-devotion",
       "name": "daily devotion",
       "summary": "--- name: daily_devotion description: Creates personalized daily devotions with verse of the day, pastoral message, structured prayer, and time-aware greetings version: 1.1.0 auth…",
@@ -56857,7 +56894,7 @@
     {
       "id": "nexu-io-open-design-deploy",
       "name": "deploy",
-      "summary": "This deployment ships Open Design as a single Alpine-based runtime image. The daemon serves both the API and the built Next.js static export, so there is no separate nginx contain…",
+      "summary": "This deployment ships OpenDesign as a single Alpine-based runtime image. The daemon serves both the API and the built Next.js static export, so there is no separate nginx containe…",
       "summaryZh": "Deploy 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Deploy 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Deploy 处理具体工作流的 Claude Code 用户。",
@@ -69643,7 +69680,7 @@
     {
       "id": "nexu-io-open-design-export-nextjs-handoff",
       "name": "export-nextjs-handoff",
-      "summary": "Use this plugin when the user wants an accepted Open Design artifact converted into a Next.js App Router handoff with clean components, styles, assets, and implementation notes.",
+      "summary": "Use this plugin when the user wants an accepted OpenDesign artifact converted into a Next.js App Router handoff with clean components, styles, assets, and implementation notes.",
       "summaryZh": "Export Nextjs Handoff 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Export Nextjs Handoff 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Export Nextjs Handoff 处理具体工作流的 Claude Code 用户。",
@@ -69715,7 +69752,7 @@
     {
       "id": "nexu-io-open-design-extend-plugin-author",
       "name": "extend-plugin-author",
-      "summary": "Use this plugin when the user wants to create, improve, validate, publish, or submit an Open Design plugin using the plugin spec, examples, and PR workflow.",
+      "summary": "Use this plugin when the user wants to create, improve, validate, publish, or submit an OpenDesign plugin using the plugin spec, examples, and PR workflow.",
       "summaryZh": "Extend Plugin Author 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Extend Plugin Author 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Extend Plugin Author 处理具体工作流的 Claude Code 用户。",
@@ -96332,7 +96369,7 @@
     {
       "id": "nexu-io-open-design-import-smoke-test",
       "name": "import smoke test",
-      "summary": "A small community plugin for exercising the Open Design import UI. It is meant to be boring in exactly the useful way: the folder has the portable `SKILL.md` floor, the enriched `…",
+      "summary": "A small community plugin for exercising the OpenDesign import UI. It is meant to be boring in exactly the useful way: the folder has the portable `SKILL.md` floor, the enriched `o…",
       "summaryZh": "Import Smoke Test 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Import Smoke Test 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Import Smoke Test 处理具体工作流的 Claude Code 用户。",
@@ -96369,7 +96406,7 @@
     {
       "id": "nexu-io-open-design-import-screenshot-to-prototype",
       "name": "import-screenshot-to-prototype",
-      "summary": "Use this plugin when the user provides a screenshot or image reference and wants it reconstructed as an editable Open Design prototype with sensible components, layout, and respon…",
+      "summary": "Use this plugin when the user provides a screenshot or image reference and wants it reconstructed as an editable OpenDesign prototype with sensible components, layout, and respons…",
       "summaryZh": "Import Screenshot To Prototype 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Import Screenshot To Prototype 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Import Screenshot To Prototype 处理具体工作流的 Claude Code 用户。",
@@ -124612,7 +124649,7 @@
     {
       "id": "nexu-io-open-design-od-design-refine",
       "name": "od design refine",
-      "summary": "Use this plugin when the user wants to improve an existing Open Design artifact rather than create a new one.",
+      "summary": "Use this plugin when the user wants to improve an existing OpenDesign artifact rather than create a new one.",
       "summaryZh": "Od Design Refine 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Od Design Refine 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Od Design Refine 处理具体工作流的 Claude Code 用户。",
@@ -124648,7 +124685,7 @@
     {
       "id": "nexu-io-open-design-od-nextjs-export",
       "name": "od nextjs export",
-      "summary": "Use this plugin when the user wants to hand an accepted Open Design artifact to a Next.js App Router project.",
+      "summary": "Use this plugin when the user wants to hand an accepted OpenDesign artifact to a Next.js App Router project.",
       "summaryZh": "Od Nextjs Export 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Od Nextjs Export 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Od Nextjs Export 处理具体工作流的 Claude Code 用户。",
@@ -124684,7 +124721,7 @@
     {
       "id": "nexu-io-open-design-od-react-export",
       "name": "od react export",
-      "summary": "Use this plugin when the user wants to hand an accepted Open Design artifact to a React app.",
+      "summary": "Use this plugin when the user wants to hand an accepted OpenDesign artifact to a React app.",
       "summaryZh": "Od React Export 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Od React Export 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Od React Export 处理具体工作流的 Claude Code 用户。",
@@ -124720,7 +124757,7 @@
     {
       "id": "nexu-io-open-design-od-vue-export",
       "name": "od vue export",
-      "summary": "Use this plugin when the user wants to hand an accepted Open Design artifact to a Vue 3 project.",
+      "summary": "Use this plugin when the user wants to hand an accepted OpenDesign artifact to a Vue 3 project.",
       "summaryZh": "Od Vue Export 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Od Vue Export 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Od Vue Export 处理具体工作流的 Claude Code 用户。",
@@ -124939,7 +124976,7 @@
     {
       "id": "nexu-io-open-design-od-plugin-authoring",
       "name": "od-plugin-authoring",
-      "summary": "Guided scenario for creating an Open Design plugin folder that can be installed into My plugins.",
+      "summary": "Guided scenario for creating an OpenDesign plugin folder that can be installed into My plugins.",
       "summaryZh": "Od Plugin Authoring 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Od Plugin Authoring 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Od Plugin Authoring 处理具体工作流的 Claude Code 用户。",
@@ -124975,7 +125012,7 @@
     {
       "id": "nexu-io-open-design-od-plugin-contribute-open-design",
       "name": "od-plugin-contribute-open-design",
-      "summary": "Open a pull request adding a local Open Design plugin to the Open Design community catalog using gh CLI.",
+      "summary": "Open a pull request adding a local OpenDesign plugin to the OpenDesign community catalog using gh CLI.",
       "summaryZh": "Od Plugin Contribute Open Design 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Od Plugin Contribute Open Design 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Od Plugin Contribute Open Design 处理具体工作流的 Claude Code 用户。",
@@ -125011,7 +125048,7 @@
     {
       "id": "nexu-io-open-design-od-plugin-publish-github",
       "name": "od-plugin-publish-github",
-      "summary": "Publish a local Open Design plugin to a new public GitHub repository using gh CLI.",
+      "summary": "Publish a local OpenDesign plugin to a new public GitHub repository using gh CLI.",
       "summaryZh": "Od Plugin Publish Github 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Od Plugin Publish Github 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Od Plugin Publish Github 处理具体工作流的 Claude Code 用户。",
@@ -125048,7 +125085,7 @@
     {
       "id": "nexu-io-open-design-od-share-to-community",
       "name": "od-share-to-community",
-      "summary": "Package the user's just-finished work as an Open Design plugin without asking for fields the project files already answer, then surface the existing Add-to-My-plugins / Open-Desig…",
+      "summary": "Package the user's just-finished work as an OpenDesign plugin without asking for fields the project files already answer, then surface the existing Add-to-My-plugins / Open-Design…",
       "summaryZh": "Od Share To Community 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Od Share To Community 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Od Share To Community 处理具体工作流的 Claude Code 用户。",
@@ -125120,7 +125157,7 @@
     {
       "id": "nexu-io-open-design-od-web-effect-extractor",
       "name": "od-web-effect-extractor",
-      "summary": "Extract visual effects, animation systems, Canvas/WebGL/Shader behavior, and interaction details from a reference website, then rebuild them as an editable Open Design web artifac…",
+      "summary": "Extract visual effects, animation systems, Canvas/WebGL/Shader behavior, and interaction details from a reference website, then rebuild them as an editable OpenDesign web artifact.",
       "summaryZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
       "capabilityZh": "制作适合 Slack 发送的动画 GIF，并检查尺寸、帧数、文件大小和循环效果。",
       "audience": "需要使用 Od Web Effect Extractor 处理具体工作流的 Claude Code 用户。",
@@ -148960,7 +148997,7 @@
     {
       "id": "nexu-io-open-design-refine-critique-loop",
       "name": "refine-critique-loop",
-      "summary": "Use this plugin when the user has an existing Open Design artifact and wants targeted critique, patching, brand tightening, responsive fixes, or quality improvement without starti…",
+      "summary": "Use this plugin when the user has an existing OpenDesign artifact and wants targeted critique, patching, brand tightening, responsive fixes, or quality improvement without startin…",
       "summaryZh": "Refine Critique Loop 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Refine Critique Loop 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Refine Critique Loop 处理具体工作流的 Claude Code 用户。",
@@ -162594,7 +162631,7 @@
     {
       "id": "nexu-io-open-design-share-github-pr",
       "name": "share-github-pr",
-      "summary": "Use this plugin when the user wants to package an accepted plugin or artifact as a GitHub pull request for Open Design or another target repository.",
+      "summary": "Use this plugin when the user wants to package an accepted plugin or artifact as a GitHub pull request for OpenDesign or another target repository.",
       "summaryZh": "Share Github Pr 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Share Github Pr 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Share Github Pr 处理具体工作流的 Claude Code 用户。",
