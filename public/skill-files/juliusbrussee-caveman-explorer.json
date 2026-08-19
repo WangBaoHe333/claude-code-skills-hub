@@ -19,7 +19,7 @@
     {
       "path": "package.json",
       "encoding": "utf8",
-      "content": "{\n  \"name\": \"@caveman/explorer\",\n  \"version\": \"1.0.0\",\n  \"license\": \"MIT\",\n  \"private\": true,\n  \"type\": \"module\",\n  \"description\": \"FastContext-style exploration subagent for coding agents — read-only, cheap model, compact path:line citations, kept out of the solver's context.\",\n  \"files\": [\"fastcontext.claude-agent.md\"],\n  \"scripts\": {\n    \"test\": \"node --test tests/*.mjs\"\n  }\n}\n"
+      "content": "{\n  \"name\": \"@caveman/explorer\",\n  \"version\": \"1.0.0\",\n  \"license\": \"MIT\",\n  \"private\": true,\n  \"type\": \"module\",\n  \"description\": \"FastContext-style exploration subagent for coding agents — read-only, cheap model, compact path:line citations, kept out of the solver's context.\",\n  \"files\": [\"fastcontext.claude-agent.md\"],\n  \"scripts\": {\n    \"test\": \"node --test --test-force-exit tests/*.mjs\"\n  }\n}\n"
     },
     {
       "path": "tests/agent-file.test.mjs",

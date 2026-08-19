@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T20:49:01.109Z",
+  "generatedAt": "2026-08-19T20:59:29.836Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -43235,7 +43235,7 @@
     {
       "id": "mattpocock-skills-code-review",
       "name": "code-review",
-      "summary": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (do…",
+      "summary": "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (doe…",
       "summaryZh": "Code Review 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Code Review 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Code Review 处理具体工作流的 Claude Code 用户。",
@@ -57005,7 +57005,7 @@
     {
       "id": "mattpocock-skills-deprecated",
       "name": "deprecated",
-      "summary": "Skills I no longer use. This bucket is currently empty — a retired skill is deleted, and the changeset that removes it names whatever replaced it.",
+      "summary": "Skills I no longer use. This bucket is currently empty: a retired skill is deleted, and the changeset that removes it names whatever replaced it.",
       "summaryZh": "Deprecated 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Deprecated 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Deprecated 处理具体工作流的 Claude Code 用户。",
@@ -96587,7 +96587,7 @@
     {
       "id": "mattpocock-skills-in-progress",
       "name": "in progress",
-      "summary": "Beta. These skills are public on purpose — try them and tell me what breaks. They're excluded from the plugin and the top-level README until they graduate to a stable bucket, they…",
+      "summary": "Beta. These skills are public on purpose: try them and tell me what breaks. They're excluded from the plugin and the top-level README until they graduate to a stable bucket, they …",
       "summaryZh": "In Progress 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "In Progress 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 In Progress 处理具体工作流的 Claude Code 用户。",
@@ -115655,7 +115655,7 @@
     {
       "id": "mattpocock-skills-misc",
       "name": "misc",
-      "summary": "Tools I keep around but rarely use — not promoted in the plugin.",
+      "summary": "Tools I keep around but rarely use, not promoted in the plugin.",
       "summaryZh": "Misc 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Misc 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Misc 处理具体工作流的 Claude Code 用户。",
@@ -162150,7 +162150,7 @@
     {
       "id": "mattpocock-skills-setup-matt-pocock-skills",
       "name": "setup-matt-pocock-skills",
-      "summary": "Configure this repo for the engineering skills — set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skill…",
+      "summary": "Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.",
       "summaryZh": "Setup Matt Pocock Skills 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Setup Matt Pocock Skills 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Setup Matt Pocock Skills 处理具体工作流的 Claude Code 用户。",
@@ -162224,7 +162224,7 @@
     {
       "id": "mattpocock-skills-setup-ts-deep-modules",
       "name": "setup-ts-deep-modules",
-      "summary": "Wire dependency-cruiser into a TypeScript repo so each package is a deep module — implementation hidden in subfolders, reachable only through its entry-point files. User-invoked.",
+      "summary": "Wire dependency-cruiser into a TypeScript repo so each package is a deep module, with implementation hidden in subfolders and reachable only through its entry-point files. User-in…",
       "summaryZh": "Setup Ts Deep Modules 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Setup Ts Deep Modules 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Setup Ts Deep Modules 处理具体工作流的 Claude Code 用户。",
@@ -180383,7 +180383,7 @@
     {
       "id": "mattpocock-skills-to-spec",
       "name": "to-spec",
-      "summary": "Turn the current conversation into a spec and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed.",
+      "summary": "Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed.",
       "summaryZh": "To Spec 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "To Spec 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 To Spec 处理具体工作流的 Claude Code 用户。",
@@ -180419,7 +180419,7 @@
     {
       "id": "mattpocock-skills-to-tickets",
       "name": "to-tickets",
-      "summary": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker — edges as text in one …",
+      "summary": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one f…",
       "summaryZh": "To Tickets 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "To Tickets 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 To Tickets 处理具体工作流的 Claude Code 用户。",
@@ -182545,7 +182545,7 @@
     {
       "id": "mattpocock-skills-triage",
       "name": "triage",
-      "summary": "Move issues and external PRs through a state machine of triage roles — categorise, verify, grill if needed, and write agent-ready briefs.",
+      "summary": "Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if needed, and write agent-ready briefs.",
       "summaryZh": "Triage 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Triage 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Triage 处理具体工作流的 Claude Code 用户。",
@@ -191976,7 +191976,7 @@
     {
       "id": "mattpocock-skills-wait-what",
       "name": "wait-what",
-      "summary": "Stop. That last message did not land — re-pitch it.",
+      "summary": "Stop. That last message did not land: re-pitch it.",
       "summaryZh": "Wait What 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Wait What 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Wait What 处理具体工作流的 Claude Code 用户。",
@@ -192419,7 +192419,7 @@
     {
       "id": "mattpocock-skills-wayfinder",
       "name": "wayfinder",
-      "summary": "Plan a huge chunk of work — more than one agent session can hold — as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the d…",
+      "summary": "Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the des…",
       "summaryZh": "Wayfinder 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Wayfinder 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Wayfinder 处理具体工作流的 Claude Code 用户。",
@@ -197629,7 +197629,7 @@
     {
       "id": "mattpocock-skills-writing-beats",
       "name": "writing-beats",
-      "summary": "Writing, exploit — assemble raw material into a journey of beats, grounding each term before a beat leans on it.",
+      "summary": "Writing, exploit; assemble raw material into a journey of beats, grounding each term before a beat leans on it.",
       "summaryZh": "Writing Beats 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Writing Beats 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Writing Beats 处理具体工作流的 Claude Code 用户。",
@@ -197812,7 +197812,7 @@
     {
       "id": "mattpocock-skills-writing-fragments",
       "name": "writing-fragments",
-      "summary": "Writing, explore — mine raw fragments, no structure yet.",
+      "summary": "Writing, explore: mine raw fragments, no structure yet.",
       "summaryZh": "Writing Fragments 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Writing Fragments 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Writing Fragments 处理具体工作流的 Claude Code 用户。",
@@ -198100,7 +198100,7 @@
     {
       "id": "mattpocock-skills-writing-shape",
       "name": "writing-shape",
-      "summary": "Writing, exploit — shape raw material into an article, paragraph by paragraph.",
+      "summary": "Writing, exploit: shape raw material into an article, paragraph by paragraph.",
       "summaryZh": "Writing Shape 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Writing Shape 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Writing Shape 处理具体工作流的 Claude Code 用户。",

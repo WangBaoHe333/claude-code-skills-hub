@@ -14,7 +14,7 @@
     {
       "path": "package.json",
       "encoding": "utf8",
-      "content": "{\n  \"name\": \"@caveman/mastra\",\n  \"version\": \"1.0.0\",\n  \"license\": \"MIT\",\n  \"type\": \"module\",\n  \"main\": \"dist/index.js\",\n  \"types\": \"dist/index.d.ts\",\n  \"scripts\": {\n    \"build\": \"tsc\",\n    \"lint\": \"tsc --noEmit\",\n    \"test\": \"tsc && tsc --project tsconfig.test.json && node --test tests/*.runtime.mjs\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"24.10.1\",\n    \"typescript\": \"5.9.3\"\n  }\n}\n"
+      "content": "{\n  \"name\": \"@caveman/mastra\",\n  \"version\": \"1.0.0\",\n  \"license\": \"MIT\",\n  \"type\": \"module\",\n  \"main\": \"dist/index.js\",\n  \"types\": \"dist/index.d.ts\",\n  \"scripts\": {\n    \"build\": \"tsc\",\n    \"lint\": \"tsc --noEmit\",\n    \"test\": \"tsc && tsc --project tsconfig.test.json && node --test --test-force-exit tests/*.runtime.mjs\"\n  },\n  \"devDependencies\": {\n    \"@types/node\": \"24.10.1\",\n    \"typescript\": \"5.9.3\"\n  }\n}\n"
     },
     {
       "path": "src/index.ts",
