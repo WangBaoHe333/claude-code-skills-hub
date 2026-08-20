@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T20:59:29.836Z",
+  "generatedAt": "2026-08-20T20:57:58.073Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -11848,6 +11848,43 @@
         "stars": 1027
       },
       "packageUrl": "/skill-files/lee-to-ai-factory-aif-verify.json"
+    },
+    {
+      "id": "lee-to-ai-factory-aif-warmup",
+      "name": "aif-warmup",
+      "summary": "Load the essential AI Factory project context before work begins. Reads configured DESCRIPTION, ARCHITECTURE, ROADMAP, RESEARCH, RULES, and applicable AGENTS.md files, then return…",
+      "summaryZh": "Aif Warmup 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Aif Warmup 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Aif Warmup 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Aif Warmup 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Aif Warmup”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Aif Warmup”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/lee-to__ai-factory'\ngit clone --depth 1 'https://github.com/lee-to/ai-factory.git' '/tmp/lee-to__ai-factory'\ncp -R '/tmp/lee-to__ai-factory/skills/aif-warmup' \"$HOME/.claude/skills/aif-warmup\"\nrm -rf '/tmp/lee-to__ai-factory'"
+      },
+      "source": {
+        "repo": "lee-to/ai-factory",
+        "url": "https://github.com/lee-to/ai-factory",
+        "path": "skills/aif-warmup",
+        "type": "auto-promoted-high-star",
+        "stars": 1027
+      },
+      "packageUrl": "/skill-files/lee-to-ai-factory-aif-warmup.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-aiusd-skill-agent",
@@ -135670,6 +135707,43 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-physical-de-escalation.json"
     },
     {
+      "id": "juliusbrussee-caveman-pi-extension",
+      "name": "pi extension",
+      "summary": "Native [Caveman](https://getcaveman.dev) extension for the [Pi coding agent](https://pi.dev).",
+      "summaryZh": "Pi Extension 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Pi Extension 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Pi Extension 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Pi Extension 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Pi Extension”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Pi Extension”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/packages/pi-extension' \"$HOME/.claude/skills/pi-extension\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
+      },
+      "source": {
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "path": "packages/pi-extension",
+        "type": "auto-promoted-high-star",
+        "stars": 72472
+      },
+      "packageUrl": "/skill-files/juliusbrussee-caveman-pi-extension.json"
+    },
+    {
       "id": "code-yeongyu-oh-my-openagent-pi-goal",
       "name": "pi-goal",
       "summary": "Persistent Codex-style goal tracking for pi. Use when the user explicitly asks to set, continue, audit, pause, resume, complete, or inspect a long-running goal.",
@@ -175556,6 +175630,44 @@
         "stars": 215443
       },
       "packageUrl": "/skill-files/affaan-m-ecc-taste.json"
+    },
+    {
+      "id": "affaan-m-ecc-tasteforge-video",
+      "name": "tasteforge-video",
+      "summary": "Use for file-driven multimodal image, video, and 3D-asset discovery; taste interviews; distill or apply workflows; style-pack validation; editable EDL/FCPXML export; provenance au…",
+      "summaryZh": "Tasteforge Video 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Tasteforge Video 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Tasteforge Video 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Tasteforge Video 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Tasteforge Video 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Tasteforge Video 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Tasteforge Video”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Tasteforge Video”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "image",
+        "video"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/tasteforge-video' \"$HOME/.claude/skills/tasteforge-video\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/tasteforge-video",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-tasteforge-video.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-tavily",
