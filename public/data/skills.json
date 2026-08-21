@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T20:57:58.073Z",
+  "generatedAt": "2026-08-21T20:50:12.965Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -38883,6 +38883,42 @@
       "packageUrl": "/skill-files/hkuds-cli-anything-cli-anything-freecad.json"
     },
     {
+      "id": "hkuds-cli-anything-cli-anything-generator",
+      "name": "cli-anything-generator",
+      "summary": ">-",
+      "summaryZh": "Cli Anything Generator 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Cli Anything Generator 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Cli Anything Generator 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Cli Anything Generator 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Cli Anything Generator 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Cli Anything Generator 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Cli Anything Generator”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Cli Anything Generator”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/HKUDS__CLI-Anything'\ngit clone --depth 1 'https://github.com/HKUDS/CLI-Anything.git' '/tmp/HKUDS__CLI-Anything'\ncp -R '/tmp/HKUDS__CLI-Anything/cursor-plugin/skills/cli-anything-generator' \"$HOME/.claude/skills/cli-anything-generator\"\nrm -rf '/tmp/HKUDS__CLI-Anything'"
+      },
+      "source": {
+        "repo": "HKUDS/CLI-Anything",
+        "url": "https://github.com/HKUDS/CLI-Anything",
+        "path": "cursor-plugin/skills/cli-anything-generator",
+        "type": "auto-promoted-high-star",
+        "stars": 43034
+      },
+      "packageUrl": "/skill-files/hkuds-cli-anything-cli-anything-generator.json"
+    },
+    {
       "id": "hkuds-cli-anything-cli-anything-gimp",
       "name": "cli-anything-gimp",
       "summary": ">-",
@@ -52150,6 +52186,42 @@
       "packageUrl": "/skill-files/thedotmack-claude-mem-cursor-hooks.json"
     },
     {
+      "id": "hkuds-cli-anything-cursor-plugin",
+      "name": "cursor plugin",
+      "summary": "Cursor Desktop adapter that delivers the **full generator** (slash commands + vendored `cli-anything-plugin` methodology) while keeping the **consumer** path (CLI-Hub / meta-skill…",
+      "summaryZh": "Cursor Plugin 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Cursor Plugin 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Cursor Plugin 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Cursor Plugin 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Cursor Plugin 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Cursor Plugin 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Cursor Plugin”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Cursor Plugin”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/HKUDS__CLI-Anything'\ngit clone --depth 1 'https://github.com/HKUDS/CLI-Anything.git' '/tmp/HKUDS__CLI-Anything'\ncp -R '/tmp/HKUDS__CLI-Anything/cursor-plugin' \"$HOME/.claude/skills/cursor-plugin\"\nrm -rf '/tmp/HKUDS__CLI-Anything'"
+      },
+      "source": {
+        "repo": "HKUDS/CLI-Anything",
+        "url": "https://github.com/HKUDS/CLI-Anything",
+        "path": "cursor-plugin",
+        "type": "auto-promoted-high-star",
+        "stars": 43034
+      },
+      "packageUrl": "/skill-files/hkuds-cli-anything-cursor-plugin.json"
+    },
+    {
       "id": "conorbronsdon-avoid-ai-writing-cursor-rules",
       "name": "cursor rules",
       "summary": "Drop-in [Cursor](https://cursor.sh) rule that ports the [`avoid-ai-writing`](../SKILL.md) skill to Cursor's `.mdc` rule format. Functionally identical to the upstream skill — same…",
@@ -56525,6 +56597,80 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-deepsearch-mpro.json"
+    },
+    {
+      "id": "ruvnet-ruflo-deepseek-chat",
+      "name": "deepseek-chat",
+      "summary": "One-shot chat completion against DeepSeek's `deepseek-chat` model via the OpenAI-compatible /v1/chat/completions endpoint. Reads DEEPSEEK_API_KEY from the environment; degrades gr…",
+      "summaryZh": "Deepseek Chat 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Deepseek Chat 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Deepseek Chat 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Deepseek Chat 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Deepseek Chat 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Deepseek Chat 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Deepseek Chat”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Deepseek Chat”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-deepseek-harness/skills/deepseek-chat' \"$HOME/.claude/skills/deepseek-chat\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-deepseek-harness/skills/deepseek-chat",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-deepseek-chat.json"
+    },
+    {
+      "id": "ruvnet-ruflo-deepseek-reason",
+      "name": "deepseek-reason",
+      "summary": "Reasoning-mode completion against DeepSeek's `deepseek-reasoner` model (R1) via /v1/chat/completions. Surfaces the model's chain-of-thought (`reasoning_content`) separately from t…",
+      "summaryZh": "Deepseek Reason 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Deepseek Reason 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Deepseek Reason 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Deepseek Reason 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Deepseek Reason 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Deepseek Reason 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Deepseek Reason”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Deepseek Reason”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-deepseek-harness/skills/deepseek-reason' \"$HOME/.claude/skills/deepseek-reason\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-deepseek-harness/skills/deepseek-reason",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-deepseek-reason.json"
     },
     {
       "id": "bytedance-deer-flow-deer-flow",
@@ -87092,7 +87238,7 @@
     {
       "id": "ruvnet-ruflo-harness-gepa",
       "name": "harness-gepa",
-      "summary": "Inspect and audit GEPA genomes via the `@metaharness/darwin/gepa` library entry (darwin 0.8.0) — load/validate a genome (default: the shipped cand-6 promotion), render the system …",
+      "summary": "Inspect and audit GEPA genomes via the `@metaharness/darwin/gepa` library entry (darwin 0.8.0) — load/validate a genome (default is the shipped cand-6 promotion), render the syste…",
       "summaryZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
       "capabilityZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
       "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
@@ -96365,6 +96511,42 @@
         "stars": 128710
       },
       "packageUrl": "/skill-files/mattpocock-skills-implement.json"
+    },
+    {
+      "id": "mattpocock-skills-implement-spec",
+      "name": "implement-spec",
+      "summary": "Implement a specification in code.",
+      "summaryZh": "Implement Spec 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Implement Spec 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Implement Spec 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Implement Spec 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Implement Spec 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Implement Spec 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Implement Spec”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Implement Spec”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/mattpocock__skills'\ngit clone --depth 1 'https://github.com/mattpocock/skills.git' '/tmp/mattpocock__skills'\ncp -R '/tmp/mattpocock__skills/skills/in-progress/implement-spec' \"$HOME/.claude/skills/implement-spec\"\nrm -rf '/tmp/mattpocock__skills'"
+      },
+      "source": {
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "path": "skills/in-progress/implement-spec",
+        "type": "auto-promoted-high-star",
+        "stars": 128710
+      },
+      "packageUrl": "/skill-files/mattpocock-skills-implement-spec.json"
     },
     {
       "id": "ruvnet-ruflo-implementation",
@@ -185029,7 +185211,7 @@
     {
       "id": "code-yeongyu-oh-my-openagent-ulw-research",
       "name": "ulw-research",
-      "summary": "Team-first maximum-saturation research orchestration for omo-senpi. Scopes solo, ALWAYS asks which final format to render (PDF+DOCX default), then stands up a max-size cooperating…",
+      "summary": "Team-first maximum-saturation research orchestration. ALWAYS asks which final format to render (PDF+DOCX default), then stands up a max-size cooperating team (team_create): one me…",
       "summaryZh": "读取、提取、拆分、合并和检查 PDF 页面内容，适合处理合同、论文、发票、报告和扫描资料。",
       "capabilityZh": "读取、提取、拆分、合并和检查 PDF 页面内容，适合处理合同、论文、发票、报告和扫描资料。",
       "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
@@ -190984,7 +191166,7 @@
     {
       "id": "code-yeongyu-oh-my-openagent-visual-qa",
       "name": "visual-qa",
-      "summary": "MUST USE after building/changing any UI or when asked whether a page, component, or TUI looks right. Rigorous visual QA across web/page and terminal UIs. Prefer browser:control-in…",
+      "summary": "MUST USE after building/changing any UI or when asked whether a page, component, or TUI looks right. Rigorous visual QA across web/page, terminal, and paginated-document surfaces.…",
       "summaryZh": "Visual Qa 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Visual Qa 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Visual Qa 处理具体工作流的 Claude Code 用户。",
@@ -191004,6 +191186,8 @@
       "category": "代码 / Agent 开发",
       "tags": [
         "skill",
+        "pdf",
+        "documents",
         "browser",
         "api"
       ],
