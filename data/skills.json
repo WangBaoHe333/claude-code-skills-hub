@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T20:50:12.965Z",
+  "generatedAt": "2026-08-22T20:49:01.150Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -37855,7 +37855,7 @@
     {
       "id": "ruvnet-ruflo-cli",
       "name": "cli",
-      "summary": "[![Ruflo Banner](ruflo/assets/ruflo-small.jpeg)](https://cognitum.one/agentic-engineering) [![Agentics Foundation Banner](docs/assets/sv-summit.png)](https://agentics.org/siliconv…",
+      "summary": "[![Ruflo Banner](ruflo/assets/ruflo-small.jpeg)](https://cognitum.one/agentic-engineering)",
       "summaryZh": "Cli 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Cli 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Cli 处理具体工作流的 Claude Code 用户。",
@@ -37875,7 +37875,6 @@
       "category": "代码 / Agent 开发",
       "tags": [
         "skill",
-        "documents",
         "api"
       ],
       "install": {
@@ -153422,7 +153421,7 @@
     {
       "id": "ruvnet-ruflo-ruflo",
       "name": "ruflo",
-      "summary": "[![Ruflo Banner](ruflo/assets/ruflo-small.jpeg)](https://cognitum.one/agentic-engineering) [![Agentics Foundation Banner](docs/assets/sv-summit.png)](https://agentics.org/siliconv…",
+      "summary": "[![Ruflo Banner](ruflo/assets/ruflo-small.jpeg)](https://cognitum.one/agentic-engineering)",
       "summaryZh": "Ruflo 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Ruflo 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Ruflo 处理具体工作流的 Claude Code 用户。",
@@ -153442,7 +153441,6 @@
       "category": "代码 / Agent 开发",
       "tags": [
         "skill",
-        "documents",
         "api"
       ],
       "install": {
