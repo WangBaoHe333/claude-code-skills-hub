@@ -691,6 +691,38 @@
       "stars": 314306,
       "discoveredAt": "2026-08-16T20:51:41.357Z",
       "reason": "314306 stars, 3 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "brycewang-stanford/Auto-Empirical-Research-Skills",
+      "url": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills.git",
+      "type": "auto-promoted-high-star",
+      "stars": 3514,
+      "discoveredAt": "2026-08-23T20:54:09.711Z",
+      "reason": "3514 stars, 1161 SKILL.md, 71 skill README hints, has skills directory"
+    },
+    {
+      "repo": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl.git",
+      "type": "auto-promoted-high-star",
+      "stars": 171350,
+      "discoveredAt": "2026-08-23T20:54:09.711Z",
+      "reason": "171350 stars, 5 SKILL.md, 3 skill README hints, has skills directory"
+    },
+    {
+      "repo": "go-spring/go-spring",
+      "url": "https://github.com/go-spring/go-spring.git",
+      "type": "auto-promoted-high-star",
+      "stars": 1791,
+      "discoveredAt": "2026-08-23T20:54:09.711Z",
+      "reason": "1791 stars, 2 SKILL.md, 1 skill README hints, has skills directory"
+    },
+    {
+      "repo": "Dicklesworthstone/coding_agent_session_search",
+      "url": "https://github.com/Dicklesworthstone/coding_agent_session_search.git",
+      "type": "auto-promoted-high-star",
+      "stars": 1080,
+      "discoveredAt": "2026-08-23T20:54:09.711Z",
+      "reason": "1080 stars, 1 SKILL.md"
     }
   ]
 }
