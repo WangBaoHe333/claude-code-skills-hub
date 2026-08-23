@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T20:49:01.150Z",
+  "generatedAt": "2026-08-23T20:48:02.155Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -29010,6 +29010,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-c-level-advisor.json"
+    },
+    {
+      "id": "sheeki03-tirith-c00",
+      "name": "c00",
+      "summary": "C00 post-r3 compatibility baseline",
+      "summaryZh": "C00 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "C00 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 C00 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 C00 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 C00 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 C00 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 C00”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 C00”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/sheeki03__tirith'\ngit clone --depth 1 'https://github.com/sheeki03/tirith.git' '/tmp/sheeki03__tirith'\ncp -R '/tmp/sheeki03__tirith/tests/fixtures/c00' \"$HOME/.claude/skills/c00\"\nrm -rf '/tmp/sheeki03__tirith'"
+      },
+      "source": {
+        "repo": "sheeki03/tirith",
+        "url": "https://github.com/sheeki03/tirith",
+        "path": "tests/fixtures/c00",
+        "type": "auto-promoted-high-star",
+        "stars": 2591
+      },
+      "packageUrl": "/skill-files/sheeki03-tirith-c00.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-cabinpanda-automation",
@@ -90892,6 +90928,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-hosting-feeding-groups.json"
     },
     {
+      "id": "titanwings-colleague-skill-hosts",
+      "name": "hosts",
+      "summary": "The files in this directory are official brand assets or theme-specific derivatives of official assets. `deepseek-wordmark-dark.svg` only sets the official SVG's inherited `curren…",
+      "summaryZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
+      "capabilityZh": "创建、读取和修改 Word 文档，适合报告、合同、方案、批注稿和模板化文档。",
+      "audience": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
+      "audienceZh": "需要处理合同、报告、论文、发票、教材或知识资料的人。",
+      "scenarios": [
+        "生成带标题、段落和列表的 Word 文档",
+        "读取已有 .docx 并提取关键信息",
+        "修改文档内容、结构和格式后重新导出"
+      ],
+      "scenariosZh": [
+        "生成带标题、段落和列表的 Word 文档",
+        "读取已有 .docx 并提取关键信息",
+        "修改文档内容、结构和格式后重新导出"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Hosts”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Hosts”，再给出文件、链接或要完成的任务。",
+      "category": "文档处理",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/titanwings__colleague-skill'\ngit clone --depth 1 'https://github.com/titanwings/colleague-skill.git' '/tmp/titanwings__colleague-skill'\ncp -R '/tmp/titanwings__colleague-skill/docs/assets/hosts' \"$HOME/.claude/skills/hosts\"\nrm -rf '/tmp/titanwings__colleague-skill'"
+      },
+      "source": {
+        "repo": "titanwings/colleague-skill",
+        "url": "https://github.com/titanwings/colleague-skill",
+        "path": "docs/assets/hosts",
+        "type": "auto-promoted-high-star",
+        "stars": 19649
+      },
+      "packageUrl": "/skill-files/titanwings-colleague-skill-hosts.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-hot-topic-ideator",
       "name": "hot-topic-ideator",
       "summary": "生成小红书热点选题和内容创意。当用户提到\"热点选题\"、\"内容创意\"、\"小红书选题\"、\"trending topics\"、\"content ideas\"、\"热门话题\"、\"爆款选题\"时使用。适用于品牌社媒运营、内容策划、热点借势营销场景。",
@@ -149760,6 +149832,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-remarkety-automation.json"
+    },
+    {
+      "id": "sheeki03-tirith-remediation",
+      "name": "remediation",
+      "summary": "`source-index.json` is the immutable 135-row source ledger. `findings.json` is the canonical remediation-root ledger. `main.md` is a generated human view and must never be edited …",
+      "summaryZh": "Remediation 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Remediation 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Remediation 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Remediation 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Remediation 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Remediation 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Remediation”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Remediation”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/sheeki03__tirith'\ngit clone --depth 1 'https://github.com/sheeki03/tirith.git' '/tmp/sheeki03__tirith'\ncp -R '/tmp/sheeki03__tirith/docs/security/remediation' \"$HOME/.claude/skills/remediation\"\nrm -rf '/tmp/sheeki03__tirith'"
+      },
+      "source": {
+        "repo": "sheeki03/tirith",
+        "url": "https://github.com/sheeki03/tirith",
+        "path": "docs/security/remediation",
+        "type": "auto-promoted-high-star",
+        "stars": 2591
+      },
+      "packageUrl": "/skill-files/sheeki03-tirith-remediation.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-remember",
