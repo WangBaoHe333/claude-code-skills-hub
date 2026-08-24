@@ -1,0 +1,25 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-referee-response",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-referee-response\ndescription: Organize and execute Stata workflows for referee responses, robustness requests, and coauthor follow-ups. Use when the user needs to answer a critique with targeted reruns, tables, figures, and a defensible audit trail.\n---\n\n# Referee Response\n\nUse this skill when the task is to answer a critique rather than merely rerun code.\n\n1. Translate the critique into a finite set of empirical checks.\n2. Keep outputs tied to the exact request.\n3. Separate confirmed findings, changed results, and unresolved issues.\n\nRead `references/response-patterns.md` for the workflow template.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Referee Response\"\nshort_description: \"Handle referee-response reruns and evidence tracking in Stata.\"\ndefault_prompt: \"Use the stata-referee-response skill to organize and execute a referee-response workflow in Stata.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"context-skill\",\n  \"allowed_tools\": [],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Organize and execute Stata workflows for referee responses, robustness requests, and coauthor follow-ups. Use when the user needs to answer a critique with targeted reruns, tables, figures, and a defensible audit trail.\",\n  \"references\": [\n    \"references/response-patterns.md\"\n  ],\n  \"display_name\": \"Stata Referee Response\",\n  \"short_description\": \"Handle referee-response reruns and evidence tracking in Stata.\",\n  \"default_prompt\": \"Use the stata-referee-response skill to organize and execute a referee-response workflow in Stata.\"\n}\n"
+    },
+    {
+      "path": "references/response-patterns.md",
+      "encoding": "utf8",
+      "content": "# Response Patterns\n\nFor each referee or coauthor request:\n\n1. restate the request,\n2. define the exact rerun or robustness check,\n3. capture the output and any changed interpretation,\n4. note what remains unchanged,\n5. preserve the audit trail.\n\nAvoid sprawling exploratory reruns that are not tied to the criticism being answered.\n"
+    }
+  ]
+}

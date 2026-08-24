@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-obsidian-research-log",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: obsidian-research-log\ndescription: Use this skill when the user is discussing daily research work, TODOs, plans, standups, meetings, milestones, or general project progress that should be reflected in Obsidian daily notes, plan notes, and hub updates.\n---\n\n# Obsidian Research Log\n\nUse this skill to keep project planning and daily progress synchronized.\n\n## Role in the workflow\n\nThis is a **supporting skill** under `obsidian-project-memory`.\n\nPrefer a small number of durable updates over creating extra planning folders.\n\n## Default targets\n\n- `Daily/YYYY-MM-DD.md`\n- `01-Plan.md`\n- `00-Hub.md` recent progress block\n- `.claude/project-memory/<project_id>.md`\n\n## Rules\n\n- Convert vague TODOs into concrete checkbox lists in `01-Plan.md` when they become durable commitments.\n- Preserve chronology in `Daily/`: append dated blocks instead of rewriting history.\n- Link daily notes to touched experiments, papers, results, and writing notes when the destination is already canonical.\n- If a meeting note is only temporary, keep it in `Daily/` first.\n- If meeting output becomes durable project knowledge, summarize and route it into `Knowledge/`, `Writing/`, or `01-Plan.md` instead of creating a default `Meetings/` folder.\n- Prefer updating existing canonical notes over spawning parallel task notes.\n\n## Main judgment rule\n\nDaily logs are for process.\n\nIf a note will still matter after several days or weeks, promote the durable part into `Knowledge/`, `Experiments/`, `Results/`, or `Writing/`.\n"
+    }
+  ]
+}

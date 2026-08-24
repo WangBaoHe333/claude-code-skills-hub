@@ -1,0 +1,25 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-power-analysis",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-power-analysis\ndescription: Plan and critique power, MDE, and sample-size calculations for Stata-based research workflows. Use when the user is designing a study, checking detectability, or defending precision claims.\n---\n\n# Power Analysis\n\nUse this skill when precision and detectability are the focus.\n\n1. Clarify the estimand and target effect size.\n2. State the assumptions behind the power calculation.\n3. Distinguish formal power analysis from ex post rationalization.\n\nRead `references/power-checklist.md` for the reporting checklist.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Power Analysis\"\nshort_description: \"Guide power, MDE, and sample-size reasoning for empirical work.\"\ndefault_prompt: \"Use the stata-power-analysis skill to plan or critique a power and minimum-detectable-effect analysis.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"context-skill\",\n  \"allowed_tools\": [],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Plan and critique power, MDE, and sample-size calculations for Stata-based research workflows. Use when the user is designing a study, checking detectability, or defending precision claims.\",\n  \"references\": [\n    \"references/power-checklist.md\"\n  ],\n  \"display_name\": \"Stata Power Analysis\",\n  \"short_description\": \"Guide power, MDE, and sample-size reasoning for empirical work.\",\n  \"default_prompt\": \"Use the stata-power-analysis skill to plan or critique a power and minimum-detectable-effect analysis.\"\n}\n"
+    },
+    {
+      "path": "references/power-checklist.md",
+      "encoding": "utf8",
+      "content": "# Power Checklist\n\nState:\n\n- estimand,\n- variance assumptions,\n- effect size or MDE,\n- alpha and power targets,\n- cluster structure when relevant.\n\nDo not blur ex ante design calculations with ex post excuses for noisy estimates.\n"
+    }
+  ]
+}

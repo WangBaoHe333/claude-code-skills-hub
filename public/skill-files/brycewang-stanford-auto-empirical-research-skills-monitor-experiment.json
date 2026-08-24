@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-monitor-experiment",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: \"monitor-experiment\"\ndescription: \"Monitor running experiments, check progress, collect results. Use when user says \\\"check results\\\", \\\"is it done\\\", \\\"monitor\\\", or wants experiment output.\"\n---\n\n# Monitor Experiment Results\n\nMonitor: $ARGUMENTS\n\n## Workflow\n\n### Step 1: Check What's Running\n```bash\nssh <server> \"screen -ls\"\n```\n\n### Step 2: Collect Output from Each Screen\nFor each screen session, capture the last N lines:\n```bash\nssh <server> \"screen -S <name> -X hardcopy /tmp/screen_<name>.txt && tail -50 /tmp/screen_<name>.txt\"\n```\n\nIf hardcopy fails, check for log files or tee output.\n\n### Step 3: Check for JSON Result Files\n```bash\nssh <server> \"ls -lt <results_dir>/*.json 2>/dev/null | head -20\"\n```\n\nIf JSON results exist, fetch and parse them:\n```bash\nssh <server> \"cat <results_dir>/<latest>.json\"\n```\n\n### Step 4: Summarize Results\n\nPresent results in a comparison table:\n```\n| Experiment | Metric | Delta vs Baseline | Status |\n|-----------|--------|-------------------|--------|\n| Baseline  | X.XX   | —                 | done   |\n| Method A  | X.XX   | +Y.Y              | done   |\n```\n\n### Step 5: Interpret\n- Compare against known baselines\n- Flag unexpected results (negative delta, NaN, divergence)\n- Suggest next steps based on findings\n\n### Step 6: Feishu Notification (if configured)\n\nAfter results are collected, check `~/.codex/feishu.json`:\n- Send `experiment_done` notification: results summary table, delta vs baseline\n- If config absent or mode `\"off\"`: skip entirely (no-op)\n\n## Key Rules\n- Always show raw numbers before interpretation\n- Compare against the correct baseline (same config)\n- Note if experiments are still running (check progress bars, iteration counts)\n- If results look wrong, check training logs for errors before concluding\n\n"
+    }
+  ]
+}

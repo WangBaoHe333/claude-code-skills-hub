@@ -1,0 +1,35 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-replication",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-replication\ndescription: Run replication, robustness, and specification-sensitivity workflows for Stata projects. Use when a researcher wants to reproduce a result, rerun a pipeline, compare specifications, audit a do-file sequence, or check whether a claim is stable.\n---\n\n# Replication And Robustness\n\nUse this skill for reproducibility work rather than one-off execution.\n\n1. Identify the replication entrypoint.\n2. Run the baseline cleanly and capture logs and stored results.\n3. Compare requested variants in a structured way.\n4. Say whether the result truly replicates, partly matches, or breaks.\n\nRead `references/workflow.md` for the replication checklist and use `scripts/compare_specs.py` and `scripts/summarize_log.py` for deterministic comparisons.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Replication\"\nshort_description: \"Run replication and robustness checks with structured comparisons.\"\ndefault_prompt: \"Use the stata-replication skill to reproduce a result and compare robustness variants in a structured way.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"context-skill\",\n  \"allowed_tools\": [],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Run replication, robustness, and specification-sensitivity workflows for Stata projects. Use when a researcher wants to reproduce a result, rerun a pipeline, compare specifications, audit a do-file sequence, or check whether a claim is stable.\",\n  \"references\": [\n    \"references/workflow.md\"\n  ],\n  \"scripts\": [\n    \"scripts/compare_specs.py\",\n    \"scripts/summarize_log.py\"\n  ],\n  \"display_name\": \"Stata Replication\",\n  \"short_description\": \"Run replication and robustness checks with structured comparisons.\",\n  \"default_prompt\": \"Use the stata-replication skill to reproduce a result and compare robustness variants in a structured way.\"\n}\n"
+    },
+    {
+      "path": "references/workflow.md",
+      "encoding": "utf8",
+      "content": "# Replication Workflow\n\n1. Identify the authoritative entrypoint.\n2. Run the baseline cleanly and save the full log.\n3. Capture stored results after each model.\n4. Compare requested variants systematically.\n5. Distinguish environment failures from substantive result changes.\n\nDo not say a result replicates unless the target output materially matches.\n\nUse:\n\n- `scripts/compare_specs.py` for structured coefficient/spec comparisons\n- `scripts/summarize_log.py` for long replication logs\n"
+    },
+    {
+      "path": "scripts/compare_specs.py",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env python3\n\"\"\"Compare two regression result payloads deterministically.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport sys\n\n\ndef _load(path: str) -> dict:\n    with open(path, \"r\") as handle:\n        return json.load(handle)\n\n\ndef main(argv: list[str] | None = None) -> int:\n    argv = argv or sys.argv[1:]\n    if len(argv) != 2:\n        print(\"usage: compare_specs.py baseline.json variant.json\", file=sys.stderr)\n        return 1\n    baseline = _load(argv[0])\n    variant = _load(argv[1])\n    result = {}\n    for key, value in baseline.items():\n        other = variant.get(key)\n        if isinstance(value, (int, float)) and isinstance(other, (int, float)):\n            result[key] = {\n                \"baseline\": value,\n                \"variant\": other,\n                \"delta\": other - value,\n            }\n    print(json.dumps(result, indent=2, sort_keys=True))\n    return 0\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n"
+    },
+    {
+      "path": "scripts/summarize_log.py",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env python3\n\"\"\"Summarize a replication log with deterministic heuristics.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport sys\nfrom pathlib import Path\n\n\ndef main(argv: list[str] | None = None) -> int:\n    argv = argv or sys.argv[1:]\n    if len(argv) != 1:\n        print(\"usage: summarize_log.py /path/to/log\", file=sys.stderr)\n        return 1\n    text = Path(argv[0]).read_text()\n    lines = text.splitlines()\n    payload = {\n        \"line_count\": len(lines),\n        \"has_error\": any(\"r(\" in line or \"error\" in line.lower() for line in lines),\n        \"tail\": lines[-10:],\n    }\n    print(json.dumps(payload, indent=2))\n    return 0\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n"
+    }
+  ]
+}

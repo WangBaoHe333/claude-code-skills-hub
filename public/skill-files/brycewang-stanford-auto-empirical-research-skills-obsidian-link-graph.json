@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-obsidian-link-graph",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: obsidian-link-graph\ndescription: Use this skill when the user wants to repair or strengthen Obsidian wikilinks among existing canonical project notes, especially across papers, knowledge notes, experiments, results, and writing.\n---\n\n# Obsidian Link Graph\n\nThis is a **legacy compatibility helper**.\n\nDespite the name, the current default workflow is **not** graph-heavy. Use this skill to repair navigation among existing canonical notes, not to generate graph artifacts by default.\n\n## Responsibilities\n\n- strengthen wikilinks among `00-Hub.md`, `01-Plan.md`, `Knowledge/`, `Papers/`, `Experiments/`, `Results/`, `Writing/`, and `Daily/`\n- improve backlinks where a durable relationship is already clear\n- help route a new reference to the best existing canonical note\n- reduce disconnected durable notes without creating concept or dataset sprawl\n\n## Link heuristics\n\n- Prefer one canonical note per durable object.\n- Link through stable project objects, not ad-hoc phrases.\n- Avoid overlinking every paragraph; keep only meaningful edges.\n- Prefer repairing existing links over creating new auxiliary notes.\n- If the best target is unclear, narrow the search first and use `find-canonical-note` from `obsidian-project-memory` when helpful.\n\n## Do not assume by default\n\n- `Concepts/`\n- `Datasets/`\n- `Maps/`\n- `Views/`\n- `.canvas`\n- `.base`\n\nCreate those only if the user explicitly asks for them.\n"
+    }
+  ]
+}

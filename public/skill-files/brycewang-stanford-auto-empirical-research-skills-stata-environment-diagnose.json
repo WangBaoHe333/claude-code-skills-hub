@@ -1,0 +1,30 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-environment-diagnose",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-environment-diagnose\ndescription: Diagnose local Stata, MCP, package, startup, graph-export, and permissions issues. Use when setup is failing, Stata is not discovered, packages are missing, logs are truncated, or a managed machine behaves differently from a normal workstation.\n---\n\n# Environment Diagnose\n\nUse this skill for setup and platform troubleshooting.\n\n1. Verify detection with `stata_manage_session(action=\"detect\")`.\n2. Reproduce the smallest failing command.\n3. Use logs, package checks, and environment reporting before suggesting a fix.\n4. Separate root cause, evidence, remediation, and verification.\n\nRead `references/troubleshooting.md` for the diagnosis flow and use `scripts/report_environment.py` for a deterministic environment summary.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Environment Diagnose\"\nshort_description: \"Diagnose setup, package, and environment failures around mcp-stata.\"\ndefault_prompt: \"Use the stata-environment-diagnose skill to diagnose environment, package, and setup problems around mcp-stata.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"context-skill\",\n  \"allowed_tools\": [],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Diagnose local Stata, MCP, package, startup, graph-export, and permissions issues. Use when setup is failing, Stata is not discovered, packages are missing, logs are truncated, or a managed machine behaves differently from a normal workstation.\",\n  \"references\": [\n    \"references/troubleshooting.md\"\n  ],\n  \"scripts\": [\n    \"scripts/report_environment.py\"\n  ],\n  \"display_name\": \"Stata Environment Diagnose\",\n  \"short_description\": \"Diagnose setup, package, and environment failures around mcp-stata.\",\n  \"default_prompt\": \"Use the stata-environment-diagnose skill to diagnose environment, package, and setup problems around mcp-stata.\"\n}\n"
+    },
+    {
+      "path": "references/troubleshooting.md",
+      "encoding": "utf8",
+      "content": "# Troubleshooting Flow\n\nStart with:\n\n1. `stata_manage_session(action=\"detect\", include_packages=True)`\n2. the smallest failing `stata_run(...)`\n3. `stata_read_log` if the result is truncated\n\nCommon buckets:\n\n- `STATA_PATH` missing or wrong\n- missing user-written packages such as `reghdfe` or `gtools`\n- startup/profile side effects\n- permissions problems affecting temp files, logs, or graphs\n- workstation differences across lab or coauthor machines\n\nUse `scripts/report_environment.py` to summarize the environment deterministically before recommending a fix.\n"
+    },
+    {
+      "path": "scripts/report_environment.py",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env python3\n\"\"\"Summarize the mcp-stata runtime environment in a deterministic format.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport platform\nimport sys\nfrom pathlib import Path\n\n\ndef main() -> int:\n    payload = {\n        \"python\": sys.version.split()[0],\n        \"platform\": platform.platform(),\n        \"cwd\": str(Path.cwd()),\n        \"env\": {\n            \"STATA_PATH\": os.environ.get(\"STATA_PATH\", \"\"),\n            \"MCP_STATA_STARTUP_DO_FILE\": os.environ.get(\"MCP_STATA_STARTUP_DO_FILE\", \"\"),\n            \"MCP_STATA_TEMP_DIR\": os.environ.get(\"MCP_STATA_TEMP_DIR\", \"\"),\n        },\n    }\n    print(json.dumps(payload, indent=2))\n    return 0\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n"
+    }
+  ]
+}

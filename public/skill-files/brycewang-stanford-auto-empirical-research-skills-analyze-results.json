@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-analyze-results",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: \"analyze-results\"\ndescription: \"Analyze ML experiment results, compute statistics, generate comparison tables and insights. Use when user says \\\"analyze results\\\", \\\"compare\\\", or needs to interpret experimental data.\"\n---\n\n# Analyze Experiment Results\n\nAnalyze: $ARGUMENTS\n\n## Workflow\n\n### Step 1: Locate Results\nFind all relevant JSON/CSV result files:\n- Check `figures/`, `results/`, or project-specific output directories\n- Parse JSON results into structured data\n\n### Step 2: Build Comparison Table\nOrganize results by:\n- **Independent variables**: model type, hyperparameters, data config\n- **Dependent variables**: primary metric (e.g., perplexity, accuracy, loss), secondary metrics\n- **Delta vs baseline**: always compute relative improvement\n\n### Step 3: Statistical Analysis\n- If multiple seeds: report mean +/- std, check reproducibility\n- If sweeping a parameter: identify trends (monotonic, U-shaped, plateau)\n- Flag outliers or suspicious results\n\n### Step 4: Generate Insights\nFor each finding, structure as:\n1. **Observation**: what the data shows (with numbers)\n2. **Interpretation**: why this might be happening\n3. **Implication**: what this means for the research question\n4. **Next step**: what experiment would test the interpretation\n\n### Step 5: Update Documentation\nIf findings are significant:\n- Propose updates to project notes or experiment reports\n- Draft a concise finding statement (1-2 sentences)\n\n## Output Format\nAlways include:\n1. Raw data table\n2. Key findings (numbered, concise)\n3. Suggested next experiments (if any)\n\n"
+    }
+  ]
+}

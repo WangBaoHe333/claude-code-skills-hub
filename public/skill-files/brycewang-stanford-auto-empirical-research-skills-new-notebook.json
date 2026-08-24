@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-new-notebook",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: new-notebook\ndescription: Creates a Jupyter notebook with Jupytext pairing and registers it in _quarto.yml. Use when adding a new notebook.\nargument-hint: <name> <title>\nallowed-tools: Bash, Read, Write, Edit, Glob, Grep\n---\n\n# Create New Notebook\n\nCreate a new Jupyter notebook with Jupytext pairing and register it in the manuscript.\n\n## Arguments\n\n- `$ARGUMENTS` — the notebook name and title (e.g., \"notebook-02 Regression Analysis\")\n\n## Steps\n\n1. Parse the name and title from the arguments. Follow the naming convention: `notebook-NN.ipynb` (sequential numbering)\n2. Check `notebooks/` for existing notebooks to determine the next number\n3. Create the `.ipynb` file in `notebooks/` with:\n   - The correct kernel (ask user: Python, R, or Stata)\n   - A first code cell with the setup appropriate for the chosen kernel:\n     - **Python:** `import sys; sys.path.insert(0, \"..\"); from config import set_seeds, DATA_DIR; set_seeds()`\n     - **R:** `source(\"../config.R\"); set_seeds()`\n     - **Stata:** `clear all` followed by `set seed 42`\n   - A markdown cell with the notebook title\n4. Create the Jupytext `.md` pair by running: `uv run jupytext --set-formats ipynb,md:myst notebooks/<name>.ipynb`\n5. Register the notebook in `_quarto.yml` under `manuscript.notebooks`:\n   ```yaml\n   - notebook: notebooks/<name>.ipynb\n     title: \"N<number>: <title>\"\n   ```\n6. Confirm the notebook renders: `quarto render notebooks/<name>.ipynb`\n"
+    }
+  ]
+}

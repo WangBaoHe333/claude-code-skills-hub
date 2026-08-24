@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-obsidian-project-lifecycle",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: obsidian-project-lifecycle\ndescription: Use this skill when the user wants to detach, archive, purge, or otherwise change the lifecycle state of an Obsidian project knowledge base.\n---\n\n# Obsidian Project Lifecycle\n\nUse the shared helper script for deterministic lifecycle operations.\n\n## Role in the workflow\n\nThis is a **supporting skill** under `obsidian-project-memory`.\n\nUse it for project-level state changes and, when needed, note-level removal or rename flows.\n\n## Project-level commands\n\n```bash\npython3 ../obsidian-project-memory/scripts/project_kb.py lifecycle --cwd \"$PWD\" --mode detach\npython3 ../obsidian-project-memory/scripts/project_kb.py lifecycle --cwd \"$PWD\" --mode archive\npython3 ../obsidian-project-memory/scripts/project_kb.py lifecycle --cwd \"$PWD\" --mode purge\n```\n\n## Note-level command\n\n```bash\npython3 ../obsidian-project-memory/scripts/project_kb.py note-lifecycle --cwd \"$PWD\" --mode archive --note \"Results/Old-Result.md\"\npython3 ../obsidian-project-memory/scripts/project_kb.py note-lifecycle --cwd \"$PWD\" --mode purge --note \"Results/Old-Result.md\"\npython3 ../obsidian-project-memory/scripts/project_kb.py note-lifecycle --cwd \"$PWD\" --mode rename --note \"Experiments/Old-Name.md\" --dest \"Experiments/New-Name.md\"\n```\n\n## Policy\n\n- **Detach**: stop syncing, keep vault content.\n- **Archive**: default for “remove this project's knowledge”; move the project to `Archive/` and disable syncing.\n- **Purge**: only when the user explicitly requests permanent deletion.\n- **Rename / move**: treat as update plus link repair, not delete plus create.\n\nAlways summarize what was removed, what was preserved, and whether auto-sync remains enabled.\n"
+    }
+  ]
+}

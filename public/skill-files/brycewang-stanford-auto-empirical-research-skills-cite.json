@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-cite",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: cite\ndescription: Finds a paper by title, author, or DOI, adds BibTeX to references.bib, and shows citation syntax. Use when adding a reference.\nargument-hint: <paper or DOI>\nallowed-tools: Bash, Read, Write, Edit, Glob, Grep, WebSearch, WebFetch\n---\n\n# Add Citation\n\nFind a paper, create a BibTeX entry, add it to `references.bib`, and provide the citation syntax.\n\n## Arguments\n\n- `$ARGUMENTS` — a paper description, title, author name, or DOI (e.g., \"Acemoglu 2001 colonial origins\" or \"10.1257/aer.91.5.1369\")\n\n## Steps\n\n1. Parse the argument to determine if it is a DOI or a descriptive search query.\n\n2. Search for the paper:\n   - If a DOI is provided, fetch the metadata directly (use web search or CrossRef)\n   - If a description is provided, search the web to identify the paper and its DOI/metadata\n\n3. Construct a valid BibTeX entry with these fields (at minimum):\n   - `@article{key,` (or `@book`, `@incollection`, etc. as appropriate)\n   - `author`, `title`, `journal` (or `booktitle`), `year`, `volume`, `number`, `pages`, `doi`\n   - Use a citation key in the format: `lastname_yearword` (e.g., `acemoglu2001colonial`)\n\n4. Read `references.bib` and check for duplicate keys:\n   - If the exact key already exists, inform the user and show the existing entry\n   - If a similar key exists (same author and year), warn the user\n\n5. Append the new entry to `references.bib` (add a blank line before the new entry)\n\n6. Show the user the citation syntax for use in `index.qmd`:\n   - Narrative: `@key` → \"Author (Year)\"\n   - Parenthetical: `[@key]` → \"(Author, Year)\"\n   - Multiple: `[@key1; @key2]`\n\n7. Ask if the user wants to create an annotation note in `references/` (see `/project:literature-note`)\n\n## Error handling\n\n- If the paper cannot be found, report the search results and ask the user to provide more details or a DOI.\n- If `references.bib` does not exist, create it with the new entry.\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-figures-gallery",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: figures-gallery\ndescription: Generates an HTML gallery of all project figures with captions and source notebooks. Use when reviewing figures.\nallowed-tools: Bash, Read, Write, Glob, Grep\n---\n\n# Generate Figures Gallery\n\nCreate an HTML gallery page displaying all project figures with their captions and source notebooks.\n\n## Steps\n\n1. Scan `images/` for all image files:\n   - Supported formats: `.png`, `.jpg`, `.jpeg`, `.svg`, `.pdf`\n   - Record each file's name, path, and modification date\n\n2. Scan all registered notebooks (from `_quarto.yml`) for cells with `fig-` labels:\n   - Extract the cell label (e.g., `fig-sample`, `fig-event-study`)\n   - Extract the caption from `#| fig-cap:` or `*| fig-cap:` directives\n   - Record the source notebook path\n\n3. Generate an HTML gallery page with:\n   - A title and generation timestamp\n   - For each figure from `images/`:\n     - Image thumbnail (or placeholder for PDFs)\n     - Filename as caption\n     - File size and dimensions (if determinable)\n   - For each figure from notebooks:\n     - The cell label\n     - The caption (from cell directive)\n     - The source notebook name\n     - The embed shortcode: `{{< embed notebooks/<name>.ipynb#<label> >}}`\n   - Simple CSS styling for a grid layout\n\n4. Save the gallery to `_manuscript/figures-gallery.html` (the `_manuscript/` directory is gitignored, so this output won't be committed).\n\n5. Report:\n   - File path to the gallery\n   - Count of figures from `images/`\n   - Count of figure cells from notebooks\n   - Command to open: `open _manuscript/figures-gallery.html`\n\n## Error handling\n\n- If `images/` does not exist or is empty, note it and continue with notebook figures.\n- If no notebooks have `fig-` labeled cells, note it and continue with `images/` files.\n- If both sources are empty, report \"No figures found in the project.\"\n"
+    }
+  ]
+}

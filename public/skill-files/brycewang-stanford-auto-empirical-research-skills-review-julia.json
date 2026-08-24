@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-review-julia",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: review-julia\ndescription: Run the Julia code review protocol on Julia scripts. Checks code quality, type stability, parallel computing patterns, and scientific computing standards. Produces a report without editing files.\ndisable-model-invocation: true\nargument-hint: \"[filename or 'all']\"\nallowed-tools: [\"Read\", \"Grep\", \"Glob\", \"Write\", \"Task\"]\n---\n\n## Review Julia Code\n\nRun a comprehensive Julia code review on the specified script(s). **Do NOT edit any source files** -- produce a report only.\n\n### Steps\n\n1. **Identify target**: Use `$ARGUMENTS` to find the Julia file(s). If `all`, scan all `.jl` files in the project.\n\n2. **Read standards** from `.claude/rules/julia-code-conventions.md`.\n\n3. **Check these categories**:\n   - **Module Structure:** Proper module organization, exports, includes\n   - **Parallel Computing:** `@everywhere` annotations, `pmap` usage, worker data distribution\n   - **Optimization:** Convergence checks, multiple starting values, grid search patterns\n   - **Type Stability:** Concrete types in hot loops, `@code_warntype` recommendations\n   - **Path Conventions:** `joinpath()` usage, no hardcoded OS-specific separators\n   - **Naming:** `snake_case` functions, `CamelCase` types, paper notation alignment\n   - **Common Pitfalls:** Missing `@everywhere`, local minima, large closures in `pmap`\n\n4. **Save report** to `quality_reports/[script_name]_julia_review.md`.\n\n5. **Present summary**: Total issues, severity breakdown, top critical issues.\n\n### Important\n- **NEVER edit source files.** Report only.\n- Prioritize correctness and performance over style.\n- For Julia code generation patterns (MLE, GMM, simulation), see `/econometrics-julia`.\n"
+    }
+  ]
+}

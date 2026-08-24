@@ -1,0 +1,25 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-data-provenance",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-data-provenance\ndescription: Track dataset lineage, transformation steps, merge logic, and reproducibility risks in Stata workflows. Use when the user needs to explain where data came from, how it changed, or why a pipeline can be trusted.\n---\n\n# Data Provenance\n\nUse this skill when lineage and reproducibility matter.\n\n1. Map the sequence of source files and transformations.\n2. Flag untracked merges, overwrites, and silent sample restrictions.\n3. Produce a concise provenance narrative a coauthor can audit.\n\nRead `references/lineage.md` for the provenance checklist.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Data Provenance\"\nshort_description: \"Trace dataset lineage and reproducibility risks in Stata pipelines.\"\ndefault_prompt: \"Use the stata-data-provenance skill to explain dataset lineage and identify reproducibility risks.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"context-skill\",\n  \"allowed_tools\": [],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Track dataset lineage, transformation steps, merge logic, and reproducibility risks in Stata workflows. Use when the user needs to explain where data came from, how it changed, or why a pipeline can be trusted.\",\n  \"references\": [\n    \"references/lineage.md\"\n  ],\n  \"display_name\": \"Stata Data Provenance\",\n  \"short_description\": \"Trace dataset lineage and reproducibility risks in Stata pipelines.\",\n  \"default_prompt\": \"Use the stata-data-provenance skill to explain dataset lineage and identify reproducibility risks.\"\n}\n"
+    },
+    {
+      "path": "references/lineage.md",
+      "encoding": "utf8",
+      "content": "# Lineage Checklist\n\nTrack:\n\n- source datasets,\n- merge keys and merge types,\n- sample restrictions,\n- generated variables,\n- saved intermediates,\n- outputs that depend on each stage.\n\nFlag any step that is hard to reproduce from committed code and named inputs.\n"
+    }
+  ]
+}

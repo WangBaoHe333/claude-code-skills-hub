@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-lfg",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: lfg\ndescription: Full autonomous research workflow — brainstorm, plan, implement, review, and document\nargument-hint: \"[research task, estimation problem, or methodological improvement]\"\ndisable-model-invocation: true\n---\n\nRun these 5 slash commands in order. Do not do anything else. Do not stop between steps — complete every step through to the end.\n\n1. `/workflows:brainstorm $ARGUMENTS`\n2. `/workflows:plan`\n3. `/workflows:work`\n4. `/workflows:review`\n5. `/workflows:compound`\n\n**Hard gates:**\n- Step 2 must not start until step 1 has written a file to `docs/brainstorms/`. If brainstorm produced no file, stop and report.\n- Step 3 must not start until step 2 has written a file to `docs/plans/`. If plan produced no file, stop and report.\n- Steps 4 and 5 run on whatever step 3 produced. A failed review does not block compound.\n\nStart with step 1 now.\n"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-causal-inference",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-causal-inference\ndescription: Design, run, and critique causal inference workflows in Stata. Use when the user is working on identification, treatment effects, DiD, IV, event studies, RD, or assumption-sensitive empirical claims.\n---\n\n# Causal Inference\n\nUse this skill when the question is causal, not merely predictive.\n\n1. Clarify the identification strategy.\n2. Check the right diagnostics and assumptions for the design.\n3. Separate point estimates from identification credibility.\n\nRead `references/designs.md` for design-specific guidance.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Causal Inference\"\nshort_description: \"Support causal inference workflows and assumption checks in Stata.\"\ndefault_prompt: \"Use the stata-causal-inference skill to guide a causal inference workflow and check design-specific assumptions.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"context-skill\",\n  \"allowed_tools\": [],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Design, run, and critique causal inference workflows in Stata. Use when the user is working on identification, treatment effects, DiD, IV, event studies, RD, or assumption-sensitive empirical claims.\",\n  \"references\": [\n    \"references/designs.md\"\n  ],\n  \"display_name\": \"Stata Causal Inference\",\n  \"short_description\": \"Support causal inference workflows and assumption checks in Stata.\",\n  \"default_prompt\": \"Use the stata-causal-inference skill to guide a causal inference workflow and check design-specific assumptions.\"\n}\n"
+    },
+    {
+      "path": "references/designs.md",
+      "encoding": "utf8",
+      "content": "# Causal Designs\n\nUse this checklist:\n\n- DiD and event study: pre-trends, treatment timing, cohort composition\n- IV: first stage strength, exclusion concerns, interpretation of LATE\n- RD: bandwidth, polynomial sensitivity, manipulation checks\n- Matching and weighting: overlap, balance, trimming, estimand clarity\n\nReport both what the estimate says and how credible the identifying assumptions look.\n"
+    }
+  ]
+}

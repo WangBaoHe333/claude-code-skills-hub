@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-render",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: render\ndescription: Runs the clean render pipeline (HTML, PDF, Word) via scripts/render.sh. Use when asked to render, build, or compile the manuscript.\ndisable-model-invocation: true\nallowed-tools: Bash, Read, Glob, Grep\n---\n\n# Render Manuscript\n\nRun the clean render pipeline and report results.\n\n## Steps\n\n1. Run `bash scripts/render.sh` to clear caches and render all formats (HTML, PDF, Word)\n2. If the render fails, read the full error output and diagnose the issue\n3. After a successful render, report the output file sizes:\n   - `ls -lh _manuscript/index.html _manuscript/index.pdf _manuscript/index.docx`\n4. Summarize any warnings from the Quarto output\n"
+    }
+  ]
+}

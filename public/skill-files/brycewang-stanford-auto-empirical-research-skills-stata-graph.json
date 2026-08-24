@@ -1,0 +1,20 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-graph",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-graph\ndescription: List, export, and review Stata graphs from the current session.\n---\n\n1. Call `stata_manage_graphs(action=\"list\")` to see all graphs in memory, with the active graph marked.\n\n2. If an argument (graph name) was provided:\n   - Call `stata_manage_graphs(action=\"export\", graph_name=<argument>, format=\"png\")` and display the exported file path.\n\n3. If no argument was provided and graphs exist:\n   - Call `stata_manage_graphs(action=\"export_all\", format=\"png\")` to export all graphs.\n   - Display all exported file paths for the user to inspect.\n\n4. If no graphs are in memory, tell the user to create a graph first (e.g., `/stata-run histogram price` or `/stata-run scatter price mpg`).\n\nAfter export, review the graph(s): check titles, axis labels, legends, and whether the plot matches expectations. Report any issues.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Graph\"\nshort_description: \"Export and review graphs from the active Stata session.\"\ndefault_prompt: \"Use the stata-graph skill to export and inspect graphs from the active Stata session.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"slash-command\",\n  \"argument_hint\": \"[graph_name]\",\n  \"allowed_tools\": [\n    \"mcp__mcp-stata__stata_manage_graphs\"\n  ],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"List, export, and review Stata graphs from the current session.\",\n  \"display_name\": \"Stata Graph\",\n  \"short_description\": \"Export and review graphs from the active Stata session.\",\n  \"default_prompt\": \"Use the stata-graph skill to export and inspect graphs from the active Stata session.\"\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-results",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-results\ndescription: Fetch and display stored r(), e(), and s() results from the last Stata command.\n---\n\nCall `stata_get_results(include_matrices=True, as_json=True)`.\n\nPresent the results in a structured format:\n- **r() scalars**: name → value pairs (e.g., r(N), r(mean), r(sd))\n- **e() scalars**: model-level results (e.g., e(N), e(r2), e(F))\n- **e() matrices**: if present, display b (coefficients) and V (variance-covariance) as formatted tables\n- **s() macros**: string results if any\n\nIf no results are stored (empty response), tell the user to run a Stata command first (e.g., `regress`, `summarize`, `ttest`).\n\nIf the user needs Mata state, note they can ask you to call `stata_get_results(include_mata=True)`.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Results\"\nshort_description: \"Show stored Stata results from the most recent command.\"\ndefault_prompt: \"Use the stata-results skill to fetch and summarize stored Stata results.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"slash-command\",\n  \"argument_hint\": \"\",\n  \"allowed_tools\": [\n    \"mcp__mcp-stata__stata_get_results\"\n  ],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Fetch and display stored r(), e(), and s() results from the last Stata command.\",\n  \"display_name\": \"Stata Results\",\n  \"short_description\": \"Show stored Stata results from the most recent command.\",\n  \"default_prompt\": \"Use the stata-results skill to fetch and summarize stored Stata results.\"\n}\n"
+    }
+  ]
+}

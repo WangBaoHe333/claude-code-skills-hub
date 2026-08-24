@@ -1,0 +1,20 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-log",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-log\ndescription: Tail, read, or search a Stata log file from a previous command or background task.\n---\n\nParse the argument:\n- First token: log file path or background task_id\n- Second token (optional): search term\n\n**If a search term is provided**, call:\n```\nstata_read_log(path=<first_token>, query=<second_token>, before=2, after=2, regex=False)\n```\nDisplay matching lines with context.\n\n**If no search term**, call:\n```\nstata_read_log(path=<first_token>, tail_lines=50)\n```\nDisplay the last 50 lines of the log.\n\n**If the argument looks like a task_id** (not a file path), call:\n```\nstata_read_log(task_id=<argument>, tail_lines=50)\n```\n\nIf no argument is provided, tell the user to supply a log file path or task_id. These are returned by `stata_run` in the `log_path` field of the JSON response.\n\nIf the log is large and truncated, note the `offset` for reading more (the response includes the current byte offset).\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Log\"\nshort_description: \"Read or search a Stata log from a prior command or task.\"\ndefault_prompt: \"Use the stata-log skill to inspect a log file or background task output.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"slash-command\",\n  \"argument_hint\": \"<path or task_id> [search_term]\",\n  \"allowed_tools\": [\n    \"mcp__mcp-stata__stata_read_log\"\n  ],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Tail, read, or search a Stata log file from a previous command or background task.\",\n  \"display_name\": \"Stata Log\",\n  \"short_description\": \"Read or search a Stata log from a prior command or task.\",\n  \"default_prompt\": \"Use the stata-log skill to inspect a log file or background task output.\"\n}\n"
+    }
+  ]
+}

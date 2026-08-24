@@ -1,0 +1,20 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-help",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-help\ndescription: Look up Stata command documentation and display formatted help text.\n---\n\nThe argument is the Stata command or help topic (e.g., \"regress\", \"graph\", \"if\", \"egen\", \"frames\").\n\nCall `stata_get_help(topic=<argument>, plain_text=False, merge_paragraphs=True)`.\n\nDisplay the help text. The response is formatted as Markdown. Present:\n1. Syntax section first\n2. Description and options\n3. Examples if present\n\nIf no argument is provided, ask the user which Stata command they want help with.\n\nIf the help topic is not found (error in response), suggest:\n- Checking spelling (e.g., \"summarize\" not \"summarise\")\n- Using `help contents` as the topic for the help index\n- Searching for related commands with `/stata-inspect` using `action=\"search\"`\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Help\"\nshort_description: \"Fetch formatted Stata help for a command or topic.\"\ndefault_prompt: \"Use the stata-help skill to retrieve and summarize Stata documentation.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"slash-command\",\n  \"argument_hint\": \"<topic>\",\n  \"allowed_tools\": [\n    \"mcp__mcp-stata__stata_get_help\"\n  ],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Look up Stata command documentation and display formatted help text.\",\n  \"display_name\": \"Stata Help\",\n  \"short_description\": \"Fetch formatted Stata help for a command or topic.\",\n  \"default_prompt\": \"Use the stata-help skill to retrieve and summarize Stata documentation.\"\n}\n"
+    }
+  ]
+}

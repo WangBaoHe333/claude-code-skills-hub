@@ -1,0 +1,15 @@
+{
+  "id": "dicklesworthstone-coding-agent-session-search-fm-connectors-malformed-session-json",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: fm-connectors-malformed-session-json\ndescription: \"Fixture: fm-connectors-malformed-session-json\"\n---\n\n# fm connectors malformed session json\n\nFixture: fm-connectors-malformed-session-json\n\n## 中文说明\n\nFm Connectors Malformed Session Json 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Fm Connectors Malformed Session Json 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Fixture: fm-connectors-malformed-session-json\n\nThis fixture corresponds to the failure mode `fm-connectors-malformed-session-json` documented in\n`coding_agent_session_search__doctor_workspace/analysis/failure_modes/`.\n\n## Pass-1 contract (Phase 9 of the world-class-doctor skill)\n\nEvery fixture must satisfy this round-trip:\n\n```\n1. corrupt(data_dir)                        → on-disk state matches expected corruption\n2. cass doctor                              → finding emitted with fm-connectors-malformed-session-json\n3. cass doctor --fix                        → mutation applied; report.json::operation_outcome.kind == \"fixed\"\n4. cass doctor                              → exit 0, no findings\n5. cass doctor undo <run-id>                → byte-identical to step 1's corrupted state\n```\n\n## Pass-3 status\n\nThis fixture is a **stub** — the directory + README pin the contract.\n`tests/doctor_fixtures_round_trip.rs::fixture_layout_one_subdir_per_fm` enforces\nthat every subdirectory under `tests/doctor_fixtures/` follows the `fm-*` naming\nconvention.\n\n## Pass-4+ tasks\n\nImplementing this fixture's full corruption + repair + undo round-trip is queued\nfor pass-4. Each fixture's full implementation will:\n\n1. Add a `corrupt.rs` (or `corrupt.sh`) module that produces the broken state.\n2. Add a regression test in this directory's parent that exercises the round-trip.\n3. Add the corresponding entry to `failure_mode_scores.jsonl`.\n\nFor the canonical pass-1 round-trip example, see the unit tests in:\n- `src/doctor_chokepoint.rs::tests::write_round_trips_with_backup_and_hashes`\n- `src/doctor_undo.rs::tests::round_trip_write_then_undo_restores_byte_identical`\n"
+    }
+  ]
+}

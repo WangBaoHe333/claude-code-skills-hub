@@ -1,0 +1,30 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-publication-qa",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-publication-qa\ndescription: Review regression outputs, tables, and graphs for publication readiness. Use when the user asks whether a result is ready for a paper, appendix, seminar, referee response, or coauthor review.\n---\n\n# Publication QA\n\nUse this skill when editorial quality matters.\n\n1. Re-run or inspect the relevant model or graph.\n2. Review statistical clarity, labeling, sample consistency, and visual presentation.\n3. Distinguish required fixes from optional polish.\n\nRead `references/checklist.md` for the review checklist and use `scripts/graph_qa_checklist.py` when generating a graph-specific QA pass.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Publication QA\"\nshort_description: \"Review tables and figures for publication-quality presentation.\"\ndefault_prompt: \"Use the stata-publication-qa skill to review tables and figures for publication readiness.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"context-skill\",\n  \"allowed_tools\": [],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Review regression outputs, tables, and graphs for publication readiness. Use when the user asks whether a result is ready for a paper, appendix, seminar, referee response, or coauthor review.\",\n  \"references\": [\n    \"references/checklist.md\"\n  ],\n  \"scripts\": [\n    \"scripts/graph_qa_checklist.py\"\n  ],\n  \"display_name\": \"Stata Publication QA\",\n  \"short_description\": \"Review tables and figures for publication-quality presentation.\",\n  \"default_prompt\": \"Use the stata-publication-qa skill to review tables and figures for publication readiness.\"\n}\n"
+    },
+    {
+      "path": "references/checklist.md",
+      "encoding": "utf8",
+      "content": "# Publication QA Checklist\n\nFor tables:\n\n- coefficient labels clear enough for readers\n- sample size consistent across specifications\n- clustering and FE notes explicit\n- fit statistics present when expected\n- rounding and notation consistent\n\nFor figures:\n\n- title, subtitle, notes, axis labels, legends\n- scale choices do not obscure interpretation\n- graph defaults do not look exploratory\n- colors and categories remain legible when printed\n\nUse `scripts/graph_qa_checklist.py` to turn graph metadata into a deterministic review scaffold.\n"
+    },
+    {
+      "path": "scripts/graph_qa_checklist.py",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env python3\n\"\"\"Emit a deterministic graph QA checklist from a graph name and notes.\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport json\n\n\ndef main() -> int:\n    parser = argparse.ArgumentParser()\n    parser.add_argument(\"--graph-name\", default=\"Graph\")\n    parser.add_argument(\"--notes\", default=\"\")\n    args = parser.parse_args()\n    checklist = {\n        \"graph_name\": args.graph_name,\n        \"checks\": [\n            \"Title and subtitle match the paper narrative\",\n            \"Axis labels are readable and interpretable\",\n            \"Legend labels are publication ready\",\n            \"Scale choices do not hide economically meaningful variation\",\n            \"Notes and sample definitions are complete\",\n        ],\n        \"notes\": args.notes,\n    }\n    print(json.dumps(checklist, indent=2))\n    return 0\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n"
+    }
+  ]
+}

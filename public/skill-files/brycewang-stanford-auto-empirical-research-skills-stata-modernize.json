@@ -1,0 +1,25 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-modernize",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-modernize\ndescription: Improve, modernize, and optimize existing Stata code for performance, portability, and maintainability. Use when legacy patterns such as preserve/restore, cd, #delimit, slow aggregation, or weak fixed-effects workflows appear in code under review.\n---\n\n# Modernize Stata\n\nUse this skill when a user wants stronger Stata code, not just working Stata code.\n\n1. Identify the current anti-patterns.\n2. Recommend or implement modern replacements with clear rationale.\n3. Favor frames, `reghdfe`, `gtools`, portable paths, and explicit state handling.\n\nRead `references/patterns.md` for common replacements and examples.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Modernize\"\nshort_description: \"Replace legacy Stata patterns with modern, faster, more portable ones.\"\ndefault_prompt: \"Use the stata-modernize skill to identify and replace legacy Stata patterns with modern alternatives.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"context-skill\",\n  \"allowed_tools\": [],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Improve, modernize, and optimize existing Stata code for performance, portability, and maintainability. Use when legacy patterns such as preserve/restore, cd, #delimit, slow aggregation, or weak fixed-effects workflows appear in code under review.\",\n  \"references\": [\n    \"references/patterns.md\"\n  ],\n  \"display_name\": \"Stata Modernize\",\n  \"short_description\": \"Replace legacy Stata patterns with modern, faster, more portable ones.\",\n  \"default_prompt\": \"Use the stata-modernize skill to identify and replace legacy Stata patterns with modern alternatives.\"\n}\n"
+    },
+    {
+      "path": "references/patterns.md",
+      "encoding": "utf8",
+      "content": "# Modernization Patterns\n\nPrefer these replacements:\n\n- `preserve` / `restore` -> frames and `frlink` / `frget`\n- `regress y x i.fe` with large FE sets -> `reghdfe`\n- `egen` aggregations on large data -> `gegen` / `gcollapse`\n- `cd` and hard-coded working directories -> project locals or globals\n- `#delimit ;` -> standard line continuation with `///`\n\nWhen modernizing, explain:\n\n- what the old pattern risks,\n- why the replacement is better,\n- whether the replacement depends on Stata 16+ or external packages.\n"
+    }
+  ]
+}

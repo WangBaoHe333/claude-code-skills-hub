@@ -1,0 +1,30 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-table-builder",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-table-builder\ndescription: Build and review paper-ready regression, balance, and summary tables from Stata outputs. Use when the user needs a clean table for a draft, appendix, or coauthor share-out.\n---\n\n# Table Builder\n\nUse this skill when the target output is a table rather than raw console output.\n\n1. Determine the table type and target audience.\n2. Extract authoritative stored results.\n3. Check labels, notes, sample definitions, and comparability across columns.\n\nRead `references/table-patterns.md` and use `scripts/check_table_ready.py` for deterministic readiness checks.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Table Builder\"\nshort_description: \"Build and review paper-ready tables from Stata outputs.\"\ndefault_prompt: \"Use the stata-table-builder skill to assemble and review a paper-ready table from Stata outputs.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"context-skill\",\n  \"allowed_tools\": [],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Build and review paper-ready regression, balance, and summary tables from Stata outputs. Use when the user needs a clean table for a draft, appendix, or coauthor share-out.\",\n  \"references\": [\n    \"references/table-patterns.md\"\n  ],\n  \"scripts\": [\n    \"scripts/check_table_ready.py\"\n  ],\n  \"display_name\": \"Stata Table Builder\",\n  \"short_description\": \"Build and review paper-ready tables from Stata outputs.\",\n  \"default_prompt\": \"Use the stata-table-builder skill to assemble and review a paper-ready table from Stata outputs.\"\n}\n"
+    },
+    {
+      "path": "references/table-patterns.md",
+      "encoding": "utf8",
+      "content": "# Table Patterns\n\nReview:\n\n- column comparability,\n- sample size drift,\n- coefficient labels,\n- notes for controls, FE, clustering, and weights,\n- consistent rounding.\n\nTreat a table as reader-facing prose in numeric form, not just extracted estimates.\n"
+    },
+    {
+      "path": "scripts/check_table_ready.py",
+      "encoding": "utf8",
+      "content": "#!/usr/bin/env python3\n\"\"\"Check a simple table payload for missing presentation essentials.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport sys\n\n\ndef main(argv: list[str] | None = None) -> int:\n    argv = argv or sys.argv[1:]\n    if len(argv) != 1:\n        print(\"usage: check_table_ready.py table.json\", file=sys.stderr)\n        return 1\n    with open(argv[0], \"r\") as handle:\n        payload = json.load(handle)\n    findings = []\n    for required in (\"title\", \"columns\", \"notes\"):\n        if not payload.get(required):\n            findings.append(f\"missing_{required}\")\n    print(json.dumps({\"ready\": not findings, \"findings\": findings}, indent=2))\n    return 0\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n"
+    }
+  ]
+}

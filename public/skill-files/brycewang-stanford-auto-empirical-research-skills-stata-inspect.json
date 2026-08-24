@@ -1,0 +1,20 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-inspect",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-inspect\ndescription: Describe and summarize the current dataset in memory. Optionally inspect a specific variable with codebook.\n---\n\nIf an argument (variable name) is provided:\n1. Call `stata_inspect_data(action=\"codebook\", query=<variable>)` and display the codebook output.\n\nIf no argument is provided:\n1. Call `stata_inspect_data(action=\"describe\")` — display the dataset structure (obs, vars, types, labels).\n2. Call `stata_inspect_data(action=\"summary\")` — display descriptive statistics (N, mean, sd, min, max).\n3. Present both results in a clear, readable format.\n\nIf either call returns an error indicating no data in memory, tell the user to load data first (e.g., `/stata-run sysuse auto, clear` or `stata_load_data(\"auto\")`).\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Inspect\"\nshort_description: \"Describe the active dataset or inspect a specific variable.\"\ndefault_prompt: \"Use the stata-inspect skill to describe the current dataset or inspect a specific variable.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"slash-command\",\n  \"argument_hint\": \"[variable]\",\n  \"allowed_tools\": [\n    \"mcp__mcp-stata__stata_inspect_data\"\n  ],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Describe and summarize the current dataset in memory. Optionally inspect a specific variable with codebook.\",\n  \"display_name\": \"Stata Inspect\",\n  \"short_description\": \"Describe the active dataset or inspect a specific variable.\",\n  \"default_prompt\": \"Use the stata-inspect skill to describe the current dataset or inspect a specific variable.\"\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-bib-check",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: bib-check\ndescription: Cross-checks citation keys in index.qmd against references.bib, reporting missing, orphaned, and duplicate entries. Use when verifying citations.\nallowed-tools: Bash, Read, Glob, Grep\n---\n\n# Audit Citations and References\n\nCross-check all citation keys in the manuscript against `references.bib` and report mismatches.\n\n## Steps\n\n1. Read `index.qmd` and extract every citation key:\n   - Narrative citations: `@key`\n   - Parenthetical citations: `[@key]`, `[@key1; @key2]`\n   - Ignore email addresses and `@sec-`, `@fig-`, `@tbl-` cross-references\n\n2. Read `references.bib` and extract every entry key (the identifier after `@article{`, `@book{`, etc.)\n\n3. Check for duplicate keys within `references.bib` (same key defined more than once)\n\n4. Report three categories:\n\n   **Errors — cited in manuscript but missing from `.bib`:**\n   - List each missing key with the line number in `index.qmd` where it appears\n   - For each, suggest running `/project:cite <key>` to add the entry\n\n   **Orphaned — in `.bib` but never cited in manuscript:**\n   - List each unused key (informational, not necessarily a problem)\n\n   **Duplicates — same key appears multiple times in `.bib`:**\n   - List each duplicate with line numbers in `references.bib`\n\n5. Print a summary: total cited keys, total `.bib` entries, errors, orphaned, duplicates\n\n## Error handling\n\n- If `references.bib` does not exist, report the error and stop.\n- If `index.qmd` contains no citations, report \"No citations found\" and stop.\n"
+    }
+  ]
+}

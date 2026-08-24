@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-visual-audit",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: visual-audit\ndescription: Perform adversarial visual audit of Quarto or Beamer slides checking for overflow, font consistency, box fatigue, and layout issues.\nargument-hint: \"[QMD or TEX filename]\"\nallowed-tools: [\"Read\", \"Grep\", \"Glob\", \"Write\", \"Task\"]\n---\n\n# Visual Audit of Slide Deck\n\nPerform a thorough visual layout audit of a slide deck.\n\n## Steps\n\n1. **Read the slide file** specified in `$ARGUMENTS`\n\n2. **For Quarto (.qmd) files:**\n   - Render with `quarto render Quarto/$ARGUMENTS`\n   - Open in browser to inspect each slide\n\n3. **For Beamer (.tex) files:**\n   - Compile and check for overfull hbox warnings\n\n4. **Audit every slide for:**\n\n   **OVERFLOW:** Content exceeding slide boundaries\n   **FONT CONSISTENCY:** Inline font-size overrides, inconsistent sizes\n   **BOX FATIGUE:** 2+ colored boxes on one slide, wrong box types\n   **SPACING:** Missing negative margins, missing fig-align\n   **LAYOUT:** Missing transitions, missing framing sentences, semantic colors\n\n5. **Produce a report** organized by slide with severity and recommendations\n\n6. **Follow the spacing-first principle:**\n   1. Reduce vertical spacing with negative margins\n   2. Consolidate lists\n   3. Move displayed equations inline\n   4. Reduce image/SVG size\n   5. Last resort: font size reduction (never below 0.85em)\n"
+    }
+  ]
+}

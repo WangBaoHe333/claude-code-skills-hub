@@ -1,0 +1,20 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-lint",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-lint\ndescription: Run static analysis on a Stata .do or .ado file and report style and best-practice issues.\n---\n\nThe argument is the absolute path to a `.do` or `.ado` file.\n\n1. Call `stata_inspect_data(action=\"lint\", path=<argument>)`.\n\n2. Display the lint results, grouping issues by severity or type:\n   - Line number and issue description for each finding\n   - Common issues: use of `cd`, `preserve`/`restore`, `#delimit`, hardcoded paths, long lines, missing `version` statement\n\n3. For each category of issue found, briefly explain the modern alternative (refer to the **stata-modernize** skill for details).\n\n4. If the file is clean, confirm: \"No issues found in `<filename>`.\"\n\n5. If the path argument is missing, tell the user to provide an absolute path to a `.do` or `.ado` file.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Lint\"\nshort_description: \"Lint a Stata do-file or ado-file for style and modernization issues.\"\ndefault_prompt: \"Use the stata-lint skill to lint a Stata do-file or ado-file and explain any findings.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"slash-command\",\n  \"argument_hint\": \"<path>\",\n  \"allowed_tools\": [\n    \"mcp__mcp-stata__stata_inspect_data\"\n  ],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Run static analysis on a Stata .do or .ado file and report style and best-practice issues.\",\n  \"display_name\": \"Stata Lint\",\n  \"short_description\": \"Lint a Stata do-file or ado-file for style and modernization issues.\",\n  \"default_prompt\": \"Use the stata-lint skill to lint a Stata do-file or ado-file and explain any findings.\"\n}\n"
+    }
+  ]
+}

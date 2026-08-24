@@ -1,0 +1,15 @@
+{
+  "id": "firecrawl-firecrawl-firecrawl-skills",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: firecrawl-skills\ndescription: \"[Firecrawl skills catalog](https://github.com/firecrawl/skills) — the full catalog of Firecrawl agent skills (CLI, build, workflows).\"\n---\n\n# firecrawl skills\n\n[Firecrawl skills catalog](https://github.com/firecrawl/skills) — the full catalog of Firecrawl agent skills (CLI, build, workflows).\n\n## 中文说明\n\nFirecrawl Skills 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。\n\n## 典型场景\n- 生成或修改 Claude Code skill\n- 整理 Agent/API 使用说明和开发步骤\n- 把工程任务拆成可执行的代码工作流"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Firecrawl Skills\n\n[Firecrawl skills catalog](https://github.com/firecrawl/skills) — the full catalog of Firecrawl agent skills (CLI, build, workflows).\n\nThe **build skills** (adding Firecrawl to product code, choosing endpoints, wiring SDKs, setting up API keys) are authored in this monorepo at [`skills/`](../skills) and mirrored into the catalog by CI.\n"
+    }
+  ]
+}

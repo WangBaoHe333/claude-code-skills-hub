@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-ai-augmented-economist",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: ai-augmented-economist\ndescription: Integrate AI tools into economic research, teaching, and policy analysis with attention to privacy and reproducibility.\nowner: Vera / Personal\ntags: [AI, research, teaching]\ntriggers: [\"use AI tools\",\"automate analysis\",\"AI in economics\"]\ninputs:\n  - name: project_context\n    type: string\n    required: false\noutputs:\n  - name: integration_plan\n    type: document\n  - name: data_pipeline_design\n    type: document\nexamples:\n  - prompt: |\n      Propose an AI integration plan for a small research team analyzing childcare data.\n    expected: |\n      Tool choices, privacy safeguards, reproducible pipeline, and SLA for model updates.\nguardrails: |\n  Do not upload personally identifying data to external models; document training data provenance.\n---\n\nPurpose\n\nProvide a stepwise approach to choose AI tools, build secure data pipelines, and apply AI methods responsibly in economics work.\n\nWorkflow\n\n1. Assess tasks suitable for AI augmentation\n2. Select tools considering privacy and licensing\n3. Build reproducible data pipelines and artifact tracking\n4. Validate outputs against domain knowledge and econometric checks\n5. Monitor models and document assumptions\n"
+    }
+  ]
+}

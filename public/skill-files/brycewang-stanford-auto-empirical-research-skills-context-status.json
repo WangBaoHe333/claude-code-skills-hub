@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-context-status",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: context-status\ndescription: |\n  Show current session status and context health for the sewage project.\n  Use to check context usage, active work state, and what will survive compaction.\nallowed-tools: [\"Bash\", \"Read\", \"Glob\"]\n---\n\n# Context Status\n\nShow current session status including context usage estimate and project state.\n\n## Workflow\n\n### Step 1: Check Session State\n\n```bash\n# Recent git activity\ngit log --oneline -5\n\n# Working tree status\ngit status --short\n\n# Recent output files\nls -lt output/log/ 2>/dev/null | head -5\n```\n\n### Step 2: Check Project Progress\n\n```bash\n# Count analysis scripts\nfind scripts/R/09_analysis/ -name \"*.R\" | wc -l\n\n# Count output tables and figures\nls output/tables/*.tex 2>/dev/null | wc -l\nls output/figures/ 2>/dev/null | wc -l\n\n# Check manuscript sections\nls docs/overleaf/*.tex 2>/dev/null\n```\n\n### Step 3: Report Status\n\nFormat output:\n\n```\nSession Status\n---\nRecent commits: [last 3]\nUncommitted changes: [count]\nRecent reports: [last 3 in output/log/]\n\nProject Progress\n---\nPipeline scripts: N\nAnalysis scripts: N\nOutput tables: N\nOutput figures: N\nManuscript sections: N .tex files\n\nMemory Files\n---\n[List files in .claude/projects/.../memory/]\n```\n\n## Notes\n\n- Context usage is estimated from conversation length\n- All important state is saved to disk (memory files, output/log/)\n- Use `/commit` to save work before context compaction\n"
+    }
+  ]
+}

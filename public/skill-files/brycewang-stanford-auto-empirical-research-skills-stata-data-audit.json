@@ -1,0 +1,25 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-data-audit",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-data-audit\ndescription: Audit datasets for structure, missingness, labeling, suspicious values, duplicate identifiers, and documentation readiness. Use when a researcher asks for data QA, codebook review, sanity checks, or pre-analysis cleanup guidance.\n---\n\n# Data Audit\n\nRun a compact but explicit audit of the active dataset.\n\n1. Start with `stata_inspect_data(action=\"describe\")` and `stata_inspect_data(action=\"summary\")`.\n2. Use targeted `codebook`, `search`, and `stata_run` checks for key variables or suspicious patterns.\n3. Report concrete issues, not generic reassurance.\n\nRead `references/checklist.md` for the full audit checklist and recommended output format.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Data Audit\"\nshort_description: \"Run a structured quality audit on the active dataset.\"\ndefault_prompt: \"Use the stata-data-audit skill to audit the active dataset and report concrete data quality risks.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"context-skill\",\n  \"allowed_tools\": [],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Audit datasets for structure, missingness, labeling, suspicious values, duplicate identifiers, and documentation readiness. Use when a researcher asks for data QA, codebook review, sanity checks, or pre-analysis cleanup guidance.\",\n  \"references\": [\n    \"references/checklist.md\"\n  ],\n  \"display_name\": \"Stata Data Audit\",\n  \"short_description\": \"Run a structured quality audit on the active dataset.\",\n  \"default_prompt\": \"Use the stata-data-audit skill to audit the active dataset and report concrete data quality risks.\"\n}\n"
+    },
+    {
+      "path": "references/checklist.md",
+      "encoding": "utf8",
+      "content": "# Data Audit Checklist\n\nReview the dataset in this order:\n\n1. Structure: observations, variables, types, labels.\n2. Summary statistics: missingness, ranges, obvious anomalies.\n3. Key identifiers: duplicates, accidental many-to-many merges, unlabeled categories.\n4. Variable readiness: missing labels, odd storage types, suspicious sentinel values.\n5. Documentation readiness: what a coauthor or referee would need explained.\n\nUseful targeted checks:\n\n- `duplicates report id`\n- `count if missing(var)`\n- `tab var, missing`\n- consistency checks with `assert`\n\nReport:\n\n- what was checked,\n- concrete risks found,\n- what appears clean,\n- what still needs manual confirmation.\n"
+    }
+  ]
+}

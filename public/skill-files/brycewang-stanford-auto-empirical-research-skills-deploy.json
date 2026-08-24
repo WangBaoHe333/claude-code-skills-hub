@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-deploy",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: deploy\ndescription: Render Quarto slides and sync to docs/ for GitHub Pages deployment. Use when deploying lecture slides after making changes.\ndisable-model-invocation: true\nargument-hint: \"[LectureN or 'all']\"\nallowed-tools: [\"Read\", \"Bash\"]\n---\n\n# Deploy Slides to GitHub Pages\n\nRender Quarto slides and sync all files to `docs/` for GitHub Pages deployment.\n\n## Steps\n\n1. **Run the sync script:**\n   - If `$ARGUMENTS` is provided (e.g., \"Lecture4\"): `./scripts/sync_to_docs.sh $ARGUMENTS`\n   - If no argument: `./scripts/sync_to_docs.sh` (syncs all lectures)\n\n2. **Verify deployment:**\n   - Check that HTML files exist in `docs/slides/`\n   - Check that `_files/` directories were copied (RevealJS assets)\n   - Check that `docs/Figures/` was synced from `Figures/`\n\n3. **Verify interactive charts** (if applicable):\n   - Grep rendered HTML for interactive widget count\n   - Confirm count matches expected\n\n4. **Verify TikZ SVGs** (if applicable):\n   - Check that all referenced SVG files exist in `docs/Figures/LectureN/`\n\n5. **Open in browser** for visual verification:\n   - `open docs/slides/LectureX_Name.html`\n   - Confirm slides render, images display, navigation works\n\n6. **Report results** to the user\n\n## What the sync script does:\n- Renders all `.qmd` files in `Quarto/` (skips `*_backup*` files)\n- Copies HTML and `_files/` directories to `docs/slides/`\n- Copies Beamer PDFs from `Slides/` to `docs/slides/`\n- Syncs `Figures/` to `docs/Figures/` using rsync\n"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-stata-toolkit",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: stata-toolkit\ndescription: Activate when users mention Stata commands, .do files, regressions, econometrics, stored results, graphs, dataset inspection, replication, or Stata errors. Route the task through mcp-stata tools and the specialized research skills instead of treating it as plain text coding.\n---\n\n# Stata Toolkit Dispatcher\n\nUse this skill as the default router for Stata work.\n\n1. Confirm the `mcp-stata` MCP server is available.\n2. Route quick tasks to the direct slash-style skills:\n   - `stata-run`\n   - `stata-inspect`\n   - `stata-results`\n   - `stata-graph`\n   - `stata-help`\n   - `stata-log`\n   - `stata-lint`\n3. Route research workflows to the specialized skills:\n   - `stata-data-audit`\n   - `stata-environment-diagnose`\n   - `stata-modernize`\n   - `stata-publication-qa`\n   - `stata-replication`\n   - `stata-causal-inference`\n   - `stata-table-builder`\n   - `stata-power-analysis`\n   - `stata-data-provenance`\n   - `stata-referee-response`\n4. Use the MCP tools directly when the user needs ad hoc Stata execution or a mixed workflow.\n\nRead these references when needed:\n- `references/tool-reference.md` for the tool map and identity response.\n- `references/research-workflows.md` for end-to-end economics workflows.\n- `references/error-handling.md` for log, `rc`, and background-task handling.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "display_name: \"Stata Toolkit\"\nshort_description: \"Dispatch Stata work to the right mcp-stata tools and research skills.\"\ndefault_prompt: \"Use the stata-toolkit skill to route the user's Stata task through the appropriate tools and specialist skills.\"\n"
+    },
+    {
+      "path": "manifest.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": \"3.2.7\",\n  \"invocation_type\": \"context-skill\",\n  \"allowed_tools\": [],\n  \"supported_agents\": [\n    \"claude\",\n    \"codex\",\n    \"gemini\",\n    \"cursor\",\n    \"windsurf\",\n    \"vscode\"\n  ],\n  \"trigger_text\": \"Activate when users mention Stata commands, .do files, regressions, econometrics, stored results, graphs, dataset inspection, replication, or Stata errors. Route the task through mcp-stata tools and the specialized research skills instead of treating it as plain text coding.\",\n  \"references\": [\n    \"references/tool-reference.md\",\n    \"references/research-workflows.md\",\n    \"references/error-handling.md\"\n  ],\n  \"display_name\": \"Stata Toolkit\",\n  \"short_description\": \"Dispatch Stata work to the right mcp-stata tools and research skills.\",\n  \"default_prompt\": \"Use the stata-toolkit skill to route the user's Stata task through the appropriate tools and specialist skills.\"\n}\n"
+    },
+    {
+      "path": "references/error-handling.md",
+      "encoding": "utf8",
+      "content": "# Error Handling\n\n- Surface `rc` codes explicitly when Stata returns an error.\n- If output is truncated, read the full `log_path` with `stata_read_log`.\n- Use `trace=True` for unclear do-file failures.\n- Use `background=True` plus `stata_task_status` for long-running jobs.\n- Use `stata_control(action=\"break\", id=<session_id>)` to interrupt a running command in-session.\n- Use `stata_control(action=\"cancel\", id=<task_id>)` for background-task cancellation.\n"
+    },
+    {
+      "path": "references/research-workflows.md",
+      "encoding": "utf8",
+      "content": "# Research Workflows\n\nUse the toolkit as the entrypoint for these paper-oriented workflows:\n\n- Replication and robustness checks.\n- Data audit before estimation.\n- Publication QA for tables and graphs.\n- Referee-response re-runs with specification comparisons.\n- Causal inference workflows where identifying assumptions and diagnostics matter.\n- Environment diagnosis on university-managed or locked-down machines.\n\nPrefer the specialized skills whenever a workflow has repeated judgment points or multiple execution steps.\n"
+    },
+    {
+      "path": "references/tool-reference.md",
+      "encoding": "utf8",
+      "content": "# Tool Reference\n\nUse these tools as the core Stata execution surface:\n\n- `stata_run` for ad hoc commands and `.do` files.\n- `stata_load_data` to load a dataset before analysis.\n- `stata_inspect_data` for `describe`, `summary`, `codebook`, `search`, `list`, `get`, and `lint`.\n- `stata_get_results` for stored `r()`, `e()`, and `s()` results.\n- `stata_manage_graphs` for listing and exporting graphs.\n- `stata_manage_session` for detection, session lifecycle, UI-channel access, and history diff.\n- `stata_task_status` and `stata_control` for background jobs and interrupts.\n- `stata_read_log` for full logs when direct output is truncated.\n\nWhen the user asks whether mcp-stata is available, verify with `stata_manage_session(action=\"detect\")` and include the detected Stata version and flavor in the reply.\n"
+    }
+  ]
+}

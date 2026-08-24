@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-pedagogy-review",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: pedagogy-review\ndescription: Run holistic pedagogical review on lecture slides. Checks narrative arc, student prerequisites, worked examples, notation clarity, and deck pacing.\nargument-hint: \"[QMD or TEX filename]\"\nallowed-tools: [\"Read\", \"Grep\", \"Glob\", \"Write\", \"Task\"]\n---\n\n# Pedagogical Review of Lecture Slides\n\nPerform a comprehensive pedagogical review.\n\n## Steps\n\n1. **Identify the file** specified in `$ARGUMENTS`\n   - If no argument, ask user which lecture to review\n   - If just a name, look in `Quarto/` or `Slides/`\n\n2. **Launch the pedagogy-reviewer agent** with the full file path\n   - The agent checks 13 pedagogical patterns\n   - Performs deck-level analysis (narrative arc, pacing, visual rhythm, notation)\n   - Considers student perspective (prerequisites, objections)\n\n3. **The agent produces a report** saved to:\n   `quality_reports/[FILENAME_WITHOUT_EXT]_pedagogy_report.md`\n\n4. **Present summary to user:**\n   - Patterns followed vs violated (out of 13)\n   - Deck-level assessments\n   - Critical recommendations (top 3-5)\n\n## Important Notes\n\n- This is a **read-only review** — no files are edited\n- Focuses on **pedagogy** not visual layout (use `/visual-audit` for that)\n- For a combined review, use `/slide-excellence` instead\n"
+    }
+  ]
+}

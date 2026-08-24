@@ -1,0 +1,10 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-omc-review",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: omc-review\ndescription: Evaluate finished work for defects, risk, and simplification before it ships\n---\n\n# Review\n\nUse this skill to evaluate work that already exists. Review never authors the\nchange it is judging.\n\nThis is the canonical review workflow. `merge-readiness` routes here, and\n`ai-slop-cleaner` is an opt-in lane within it.\n\n## Goal\nFind what is actually wrong, ranked by severity, with enough detail to act on.\n\n## Workflow\n1. Establish what changed and what it was meant to do.\n2. Read the change against that intent.\n3. Check correctness first, then risk, then simplification.\n4. Verify each candidate finding before reporting it.\n5. Report findings most-severe first.\n\n## What to check\n- **Correctness** — logic defects, edge cases, error paths, concurrency\n- **Risk** — security boundaries, destructive operations, data integrity\n- **Reuse** — existing utilities or patterns the change should have used\n- **Simplification** — code that could be deleted or collapsed\n- **Coverage** — behavior that ships untested\n\n## Rules\n- Separate lanes: the reviewer must not be the author's same active context.\n- Verify before reporting. A plausible-sounding finding that does not reproduce is noise.\n- State severity honestly; do not pad the list to look thorough.\n- \"No findings\" is a valid result when the work is sound.\n- Advisory by default — review informs, it does not gate. Hard gates (release,\n  security, destructive operations) stay separate and fail closed.\n\n## Output\n- Findings, most-severe first, each with file, line, and concrete failure scenario\n- What was checked and found clean\n- Anything that could not be assessed\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-data-audit",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: data-audit\ndescription: Scans notebooks for data file references and verifies each file exists on disk. Use when checking for broken data paths.\nallowed-tools: Bash, Read, Glob, Grep\n---\n\n# Audit Data References\n\nScan all notebooks for data file references and verify they exist on disk.\n\n## Steps\n\n1. Scan all `.ipynb` files in `notebooks/` for data loading patterns:\n   - **Python:** `pd.read_csv(...)`, `pd.read_stata(...)`, `pd.read_excel(...)`, `pd.read_parquet(...)`, `open(...)`, `np.loadtxt(...)`\n   - **R:** `read.csv(...)`, `read_csv(...)`, `read.dta(...)`, `haven::read_dta(...)`, `readxl::read_excel(...)`, `load(...)`\n   - **Stata:** `use \"...\"`, `import delimited \"...\"`, `import excel \"...\"`, `insheet using \"...\"`\n   - Also check the `.md` Jupytext pairs for the same patterns\n\n2. Extract every referenced file path and normalize it:\n   - Resolve relative paths from the notebook's directory (`notebooks/`)\n   - Resolve paths using `DATA_DIR`, `RAW_DATA_DIR` from `config.py` / `config.R`\n\n3. Check that each referenced file exists in `data/rawData/` or `data/`\n\n4. Scan `data/rawData/` and `data/` for all data files present on disk\n\n5. Report three categories:\n\n   **Resolved — referenced and found:**\n   - File path, which notebook references it, line/cell number\n\n   **Broken — referenced but not found:**\n   - File path as written in code, which notebook, suggested fix (closest matching file, or note that it may need to be downloaded)\n\n   **Undocumented — on disk but never referenced by any notebook:**\n   - File path in `data/rawData/` or `data/` that no notebook loads\n\n6. Print a summary: total references, resolved, broken, undocumented files\n\n## Error handling\n\n- If no notebooks exist, report \"No notebooks found\" and stop.\n- If `data/rawData/` does not exist, warn but continue checking `data/`.\n"
+    }
+  ]
+}

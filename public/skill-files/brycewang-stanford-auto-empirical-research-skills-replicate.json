@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-replicate",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: replicate\ndescription: \"Build and verify replication packages — routes to reproducibility-auditor agent\"\nargument-hint: \"<project directory or replication target>\"\ndisable-model-invocation: true\n---\n\nThis command routes to the `reproducibility-auditor` agent, which performs both structural checks (seeds, versions, paths, pipeline integrity) and functional checks (reproduction, data documentation, environment, output matching).\n\nRun the `reproducibility-auditor` agent on the current project.\n"
+    }
+  ]
+}

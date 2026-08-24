@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-handoff",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: handoff\ndescription: Writes a session handoff report to handoffs/ with project state, work done, decisions, and next steps. Use at session end or after significant work.\nallowed-tools: Bash, Read, Write, Glob, Grep\n---\n\n# Write Handoff Report\n\nWrite a session handoff report to preserve context across sessions.\n\n## Steps\n\n1. Check the most recent file in `handoffs/` to understand prior state\n2. Create a new file in `handoffs/` named with today's date and time: `YYYYMMDD_HHMM.md`\n3. Include these sections:\n   - **Project State** — one paragraph summarizing current status\n   - **Work Completed** — bullet list of what was done this session with key results\n   - **Decisions Made** — any choices and their rationale\n   - **Open Issues** — blockers or unresolved items\n   - **Next Steps** — concrete actions for the next session\n4. Verify the file was saved and summarize next steps to the user\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-obsidian-synthesis-map",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: obsidian-synthesis-map\ndescription: Use this skill when generating higher-level synthesis notes such as literature reviews, comparison matrices, project summaries, or other cross-note summaries inside the project knowledge base.\n---\n\n# Obsidian Synthesis Map\n\nThis is a **legacy compatibility helper**.\n\nDespite the name, the current default workflow focuses on **synthesis notes**, not Bases or Canvas artifacts.\n\n## Default outputs\n\n- `Writing/` synthesis notes\n- project summaries tied to `Knowledge/`, `Papers/`, `Experiments/`, and `Results/`\n- comparison notes that help writing, planning, or result interpretation\n\n## Guidelines\n\n- Use `obsidian-project-memory` as the main workflow authority.\n- Use `$obsidian-markdown` for note quality.\n- Keep synthesis notes anchored to real papers, experiments, results, and project questions via wikilinks.\n- Prefer one durable synthesis note per purpose instead of many overlapping summaries.\n- If the user explicitly asks for `.base` or `.canvas` artifacts, treat them as optional add-ons, not default outputs.\n\n## Default stance\n\nDo **not** generate:\n- `Views/*.base`\n- `Maps/*.canvas`\n\nunless the user explicitly asks for those artifacts.\n"
+    }
+  ]
+}

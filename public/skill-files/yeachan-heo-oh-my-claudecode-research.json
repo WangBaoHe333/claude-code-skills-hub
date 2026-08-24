@@ -1,0 +1,10 @@
+{
+  "id": "yeachan-heo-oh-my-claudecode-research",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: research\ndescription: Investigate an open question and return grounded, sourced findings\n---\n\n# Research\n\nUse this skill when the next step depends on something not yet known. Research\nanswers questions; it does not implement.\n\nThis is the canonical research lane. `deep-dive`, `sciomc`, and `autoresearch`\nroute here.\n\n## Goal\nReplace assumptions with evidence, and say plainly what remains uncertain.\n\n## Workflow\n1. State the question precisely enough to know when it is answered.\n2. Search the repo and its docs first — local evidence outranks recollection.\n3. For external SDKs, frameworks, or APIs, consult official documentation.\n4. Sweep more than one way when the answer could hide: by file, by symbol, by caller, by history.\n5. Synthesize into findings, each tied to where it came from.\n\n## Scale\n- **Narrow lookup** — answer it directly.\n- **Multiple independent questions** — investigate in parallel.\n- **Unknown-size discovery** — keep going until additional passes surface nothing new.\n\n## Rules\n- Cite the source: file and line, or the document consulted.\n- Distinguish what was verified from what was inferred.\n- Report contradicting evidence rather than picking the tidier story.\n- Do not implement as a side effect of researching.\n\n## Output\n- The question\n- Findings, each with its source\n- What remains unknown or unverifiable\n- Recommended next step, if one follows\n"
+    }
+  ]
+}

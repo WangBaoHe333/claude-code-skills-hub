@@ -1,0 +1,10 @@
+{
+  "id": "brycewang-stanford-auto-empirical-research-skills-fix-chinese",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: fix-chinese\ndescription: PROACTIVE SKILL — automatically apply whenever writing, generating, or editing any text that is mainly in Chinese. No user trigger needed. Also use when the user explicitly asks to \"fix Chinese\", \"修改中文\", \"去翻译腔\", \"去AI味\", \"fix Chinese formatting\", or \"review Chinese text\". Eliminates AI-sounding expressions and translation artifacts. Enforces Chinese-English mixed formatting rules (spacing, punctuation, bold formatting).\n---\n\n# Fix Chinese Writing\n\nReview the provided text or file and apply all fixes below. Make edits in-place.\n\n## Anti-AI / Anti-Translation Style\n\n- Write natural, fluent Chinese as a native speaker would\n- Remove these phrases on sight: \"值得注意的是\", \"需要强调的是\", \"总而言之\", \"综上所述\", \"这不是科幻\"\n- Reduce overuse of \"的\" — restructure sentences instead\n- Replace stiff passive voice with active constructions\n- Break up long attributive clauses (定语从句) into shorter sentences\n- Cut empty filler and overly polite expressions\n- Do not add quotation marks unless necessary\n\n## Chinese-English Mixed Formatting\n\n- Half-width space between Chinese and English/numbers: `Claude Code 是`, `第 1 章`\n- Full-width punctuation in Chinese context, half-width in English/code context\n- Keep proper nouns in English: Claude Code, MCP, Skills, GitHub, Vibe Coding\n- When bold Chinese text is followed by more text, add a space after the bold: `**这里** 和**那里**`\n"
+    }
+  ]
+}
