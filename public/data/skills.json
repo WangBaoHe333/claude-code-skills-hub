@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T21:06:45.353Z",
+  "generatedAt": "2026-08-25T20:59:57.430Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -74493,42 +74493,6 @@
       "packageUrl": "/skill-files/brycewang-stanford-auto-empirical-research-skills-dse-loop.json"
     },
     {
-      "id": "evermind-ai-everos-dsh",
-      "name": "dsh",
-      "summary": "EverOS Memory for DeepSeek Harness",
-      "summaryZh": "Dsh 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Dsh 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Dsh 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Dsh 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Dsh 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Dsh 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Dsh”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Dsh”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/EverMind-AI__EverOS'\ngit clone --depth 1 'https://github.com/EverMind-AI/EverOS.git' '/tmp/EverMind-AI__EverOS'\ncp -R '/tmp/EverMind-AI__EverOS/examples/dsh' \"$HOME/.claude/skills/dsh\"\nrm -rf '/tmp/EverMind-AI__EverOS'"
-      },
-      "source": {
-        "repo": "EverMind-AI/EverOS",
-        "url": "https://github.com/EverMind-AI/EverOS",
-        "path": "examples/dsh",
-        "type": "auto-promoted-high-star",
-        "stars": 10873
-      },
-      "packageUrl": "/skill-files/evermind-ai-everos-dsh.json"
-    },
-    {
       "id": "santifer-career-ops-dual-track-engineer-instructor",
       "name": "dual track engineer instructor",
       "summary": "Example -- dual-track engineer + instructor",
@@ -82921,43 +82885,6 @@
         "stars": 2326
       },
       "packageUrl": "/skill-files/foryourhealth111-pixel-vibe-skills-exploratory-data-analysis.json"
-    },
-    {
-      "id": "juliusbrussee-caveman-explorer",
-      "name": "explorer",
-      "summary": "Read-only repository exploration subagent inspired by FastContext ([arXiv 2606.14066](https://arxiv.org/abs/2606.14066)). It keeps file reads and searches in isolated subagent con…",
-      "summaryZh": "Explorer 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Explorer 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 Explorer 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Explorer 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Explorer”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Explorer”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
-      "tags": [
-        "skill",
-        "api"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/explorer' \"$HOME/.claude/skills/explorer\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
-      },
-      "source": {
-        "repo": "JuliusBrussee/caveman",
-        "url": "https://github.com/JuliusBrussee/caveman",
-        "path": "explorer",
-        "type": "auto-promoted-high-star",
-        "stars": 72472
-      },
-      "packageUrl": "/skill-files/juliusbrussee-caveman-explorer.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-expo-ui-jetpack-compose",
@@ -133348,43 +133275,6 @@
       "packageUrl": "/skill-files/brycewang-stanford-auto-empirical-research-skills-master-thesis-review.json"
     },
     {
-      "id": "juliusbrussee-caveman-mastra",
-      "name": "mastra",
-      "summary": "The Caveman adapter for [Mastra](https://mastra.ai)'s OpenTelemetry export: it points Mastra's OTLP exporter at Caveman, stamps the project/agent/task identifiers Caveman groups b…",
-      "summaryZh": "Mastra 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Mastra 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 Mastra 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Mastra 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Mastra”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Mastra”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
-      "tags": [
-        "skill",
-        "api"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/JuliusBrussee__caveman'\ngit clone --depth 1 'https://github.com/JuliusBrussee/caveman.git' '/tmp/JuliusBrussee__caveman'\ncp -R '/tmp/JuliusBrussee__caveman/packages/mastra' \"$HOME/.claude/skills/mastra\"\nrm -rf '/tmp/JuliusBrussee__caveman'"
-      },
-      "source": {
-        "repo": "JuliusBrussee/caveman",
-        "url": "https://github.com/JuliusBrussee/caveman",
-        "path": "packages/mastra",
-        "type": "auto-promoted-high-star",
-        "stars": 72472
-      },
-      "packageUrl": "/skill-files/juliusbrussee-caveman-mastra.json"
-    },
-    {
       "id": "leoyeai-openclaw-master-skills-matchclaws",
       "name": "matchclaws",
       "summary": "Enable after install clawhub enable matchclaws ```",
@@ -151175,7 +151065,7 @@
     {
       "id": "code-yeongyu-oh-my-openagent-omo-codex",
       "name": "omo codex",
-      "summary": "Codex harness adapter for **oh-my-openagent**. Brings the OMO experience (rules injection, comment checker, plugin-scoped MCPs, ultrawork, ulw-loop, start-work continuation, telem…",
+      "summary": "Codex harness adapter for **oh-my-openagent**. Brings the OMO experience (rules injection, comment checker, plugin-scoped MCPs, ultrawork, ulw-loop, ulw-execute continuation, tele…",
       "summaryZh": "Omo Codex 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Omo Codex 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Omo Codex 处理具体工作流的 Claude Code 用户。",
@@ -195856,6 +195746,43 @@
       "packageUrl": "/skill-files/ruvnet-ruflo-session-persist.json"
     },
     {
+      "id": "chachamaru127-claude-code-harness-session-send",
+      "name": "session-send",
+      "summary": "This skill should be used when the user asks to notify other session, requests a session handoff, says tell other agent, or needs a cross-session message.",
+      "summaryZh": "Session Send 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Session Send 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Session Send 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Session Send 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Session Send”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Session Send”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Chachamaru127__claude-code-harness'\ngit clone --depth 1 'https://github.com/Chachamaru127/claude-code-harness.git' '/tmp/Chachamaru127__claude-code-harness'\ncp -R '/tmp/Chachamaru127__claude-code-harness/opencode/skills/session-send' \"$HOME/.claude/skills/session-send\"\nrm -rf '/tmp/Chachamaru127__claude-code-harness'"
+      },
+      "source": {
+        "repo": "Chachamaru127/claude-code-harness",
+        "url": "https://github.com/Chachamaru127/claude-code-harness",
+        "path": "opencode/skills/session-send",
+        "type": "auto-promoted-high-star",
+        "stars": 2966
+      },
+      "packageUrl": "/skill-files/chachamaru127-claude-code-harness-session-send.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-setup",
       "name": "setup",
       "summary": "Set up a new autoresearch experiment interactively. Collects domain, target file, eval command, metric, direction, and evaluator.",
@@ -206515,79 +206442,6 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-stannp-automation.json"
-    },
-    {
-      "id": "code-yeongyu-oh-my-openagent-start-work-continuation",
-      "name": "start work continuation",
-      "summary": "Codex Stop-hook continuation injector for the omo-codex `start-work` skill.",
-      "summaryZh": "Start Work Continuation 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Start Work Continuation 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Start Work Continuation 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Start Work Continuation 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Start Work Continuation 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Start Work Continuation 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Start Work Continuation”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Start Work Continuation”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-codex/plugin/components/start-work-continuation' \"$HOME/.claude/skills/start-work-continuation\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
-      },
-      "source": {
-        "repo": "code-yeongyu/oh-my-openagent",
-        "url": "https://github.com/code-yeongyu/oh-my-openagent",
-        "path": "packages/omo-codex/plugin/components/start-work-continuation",
-        "type": "auto-promoted-high-star",
-        "stars": 62215
-      },
-      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-start-work-continuation.json"
-    },
-    {
-      "id": "code-yeongyu-oh-my-openagent-start-work",
-      "name": "start-work",
-      "summary": "Execute a Prometheus work plan with Boulder state, evidence ledger updates, worktree discipline, parallel subagents, and Stop-hook continuation. Use after planning when the user s…",
-      "summaryZh": "Start Work 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Start Work 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "audience": "需要使用 Start Work 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Start Work 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Start Work”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Start Work”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
-      "tags": [
-        "skill",
-        "api"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/start-work' \"$HOME/.claude/skills/start-work\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
-      },
-      "source": {
-        "repo": "code-yeongyu/oh-my-openagent",
-        "url": "https://github.com/code-yeongyu/oh-my-openagent",
-        "path": "packages/shared-skills/skills/start-work",
-        "type": "auto-promoted-high-star",
-        "stars": 62215
-      },
-      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-start-work.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-starton-automation",
@@ -223303,6 +223157,42 @@
       "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ultrawork.json"
     },
     {
+      "id": "code-yeongyu-oh-my-openagent-ulw-execute-continuation",
+      "name": "ulw execute continuation",
+      "summary": "Codex Stop-hook continuation injector for the omo-codex `ulw-execute` skill.",
+      "summaryZh": "Ulw Execute Continuation 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ulw Execute Continuation 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ulw Execute Continuation 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ulw Execute Continuation 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ulw Execute Continuation 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ulw Execute Continuation 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ulw Execute Continuation”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ulw Execute Continuation”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/omo-codex/plugin/components/ulw-execute-continuation' \"$HOME/.claude/skills/ulw-execute-continuation\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/omo-codex/plugin/components/ulw-execute-continuation",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ulw-execute-continuation.json"
+    },
+    {
       "id": "code-yeongyu-oh-my-openagent-ulw-loop",
       "name": "ulw loop",
       "summary": "[![ci](https://img.shields.io/badge/ci-pending-lightgrey.svg)](#) [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)",
@@ -223337,6 +223227,43 @@
         "stars": 62215
       },
       "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ulw-loop.json"
+    },
+    {
+      "id": "code-yeongyu-oh-my-openagent-ulw-execute",
+      "name": "ulw-execute",
+      "summary": "Execute a Prometheus work plan with Boulder state, evidence ledger updates, worktree discipline, parallel subagents, and Stop-hook continuation. Use after planning when the user s…",
+      "summaryZh": "Ulw Execute 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Ulw Execute 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Ulw Execute 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ulw Execute 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ulw Execute”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ulw Execute”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'\ngit clone --depth 1 'https://github.com/code-yeongyu/oh-my-openagent.git' '/tmp/code-yeongyu__oh-my-openagent'\ncp -R '/tmp/code-yeongyu__oh-my-openagent/packages/shared-skills/skills/ulw-execute' \"$HOME/.claude/skills/ulw-execute\"\nrm -rf '/tmp/code-yeongyu__oh-my-openagent'"
+      },
+      "source": {
+        "repo": "code-yeongyu/oh-my-openagent",
+        "url": "https://github.com/code-yeongyu/oh-my-openagent",
+        "path": "packages/shared-skills/skills/ulw-execute",
+        "type": "auto-promoted-high-star",
+        "stars": 62215
+      },
+      "packageUrl": "/skill-files/code-yeongyu-oh-my-openagent-ulw-execute.json"
     },
     {
       "id": "code-yeongyu-oh-my-openagent-ulw-plan",

@@ -1,0 +1,10 @@
+{
+  "id": "chachamaru127-claude-code-harness-session-send",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: session-send\ndescription: \"This skill should be used when the user asks to notify other session, requests a session handoff, says tell other agent, or needs a cross-session message.\"\ndescription-en: \"This skill should be used when the user asks to notify other session, requests a session handoff, says tell other agent, or needs a cross-session message.\"\ndescription-ja: \"他のセッションに知らせる、セッション間連絡、引き継ぎを送る、と依頼されたときに使用する。\"\nallowed-tools: [\"Bash\"]\n---\n\n# Session Send\n\n確定した事実を別セッションのエージェントへ送る。\n\n## 1. 宛先の確認\n\nまず稼働中のセッションを一覧し、相手の `team` と `agent` を確認する。\n\n```bash\nbin/harness session list\n```\n\n出力は `session_id / team / agent / label / task / since / elapsed` のタブ区切り。\n`--to` に入れるのは **`agent` 列**であって `session_id` 列ではない。\nこの 2 つは一致することもあるが、breezing 実行中のセッションでは `agent` が\n`BREEZING_ROLE` になるため一致しない。inbox は team + agent の完全一致でしか引かないので、\n`session_id` を `--to` に入れると**エラーも出ないまま相手に届かない**。\n\n`team` / `agent` 列が空のセッションは、まだ身分証を publish していない。\nそのセッションには送らず、相手が名乗るのを待つ。名前が似ていても推測で送らない。\n\n自分の送信元は、Phase 141.3 の hook が書き出す環境変数から取得する。\n\n```bash\nteam=\"${HARNESS_LIVEMSG_TEAM:?HARNESS_LIVEMSG_TEAM is not set}\"\nfrom_agent=\"${HARNESS_LIVEMSG_AGENT:?HARNESS_LIVEMSG_AGENT is not set}\"\n```\n\n## 2. 送信\n\n確認した宛先へ次の形式で送る。本文は最後の positional 引数にする。\n\n```bash\nbin/harness inbox send \\\n  --team <team> \\\n  --from <自分のagent> \\\n  --to <相手のagent> \\\n  --subject \"<件名>\" \\\n  \"<本文>\"\n```\n\n自分の値を環境変数から渡す場合は次の形にする。\n\n```bash\nbin/harness inbox send \\\n  --team \"$team\" \\\n  --from \"$from_agent\" \\\n  --to <相手のagent> \\\n  --subject \"<件名>\" \\\n  \"<本文>\"\n```\n\n## 3. 送ってよいものの判断基準\n\n送る:\n\n- 完了通知\n- これから触る場所の宣言\n- 引き継ぎ\n\n送らない:\n\n- 作業中の相談\n- 推測\n- 未検証の主張\n\n根拠: CooperBench の測定では、同一ファイルを 2 エージェントが触ると成功率が単独の約半分に落ち、失敗の 63% が相手の変更についての誤った思い込みから来ていた。だから「確定した事実」だけを送る。\n"
+    }
+  ]
+}
