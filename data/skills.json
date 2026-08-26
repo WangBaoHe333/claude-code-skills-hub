@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T20:59:57.430Z",
+  "generatedAt": "2026-08-26T23:48:00.706Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -5462,6 +5462,42 @@
         "stars": 0
       },
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-aeroleads-automation.json"
+    },
+    {
+      "id": "brycewang-stanford-auto-empirical-research-skills-aers-score",
+      "name": "aers score",
+      "summary": "`aers-score` — take the AERS benchmark and score yourself",
+      "summaryZh": "Aers Score 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Aers Score 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Aers Score 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Aers Score 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Aers Score 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Aers Score 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Aers Score”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Aers Score”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/brycewang-stanford__Auto-Empirical-Research-Skills'\ngit clone --depth 1 'https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills.git' '/tmp/brycewang-stanford__Auto-Empirical-Research-Skills'\ncp -R '/tmp/brycewang-stanford__Auto-Empirical-Research-Skills/aers_score' \"$HOME/.claude/skills/aers-score\"\nrm -rf '/tmp/brycewang-stanford__Auto-Empirical-Research-Skills'"
+      },
+      "source": {
+        "repo": "brycewang-stanford/Auto-Empirical-Research-Skills",
+        "url": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
+        "path": "aers_score",
+        "type": "auto-promoted-high-star",
+        "stars": 3514
+      },
+      "packageUrl": "/skill-files/brycewang-stanford-auto-empirical-research-skills-aers-score.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-aes-cart-abandonment-analyzer",
@@ -35503,6 +35539,42 @@
       "packageUrl": "/skill-files/composiohq-awesome-claude-skills-carbone-automation.json"
     },
     {
+      "id": "brycewang-stanford-auto-empirical-research-skills-card-1995-iv",
+      "name": "card 1995 iv",
+      "summary": "Card (1995) 端到端复现 / End-to-End Replication",
+      "summaryZh": "Card 1995 Iv 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Card 1995 Iv 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Card 1995 Iv 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Card 1995 Iv 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Card 1995 Iv 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Card 1995 Iv 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Card 1995 Iv”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Card 1995 Iv”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/brycewang-stanford__Auto-Empirical-Research-Skills'\ngit clone --depth 1 'https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills.git' '/tmp/brycewang-stanford__Auto-Empirical-Research-Skills'\ncp -R '/tmp/brycewang-stanford__Auto-Empirical-Research-Skills/demo-notebooks/card-1995-iv' \"$HOME/.claude/skills/card-1995-iv\"\nrm -rf '/tmp/brycewang-stanford__Auto-Empirical-Research-Skills'"
+      },
+      "source": {
+        "repo": "brycewang-stanford/Auto-Empirical-Research-Skills",
+        "url": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
+        "path": "demo-notebooks/card-1995-iv",
+        "type": "auto-promoted-high-star",
+        "stars": 3514
+      },
+      "packageUrl": "/skill-files/brycewang-stanford-auto-empirical-research-skills-card-1995-iv.json"
+    },
+    {
       "id": "brycewang-stanford-auto-empirical-research-skills-card-krueger-1994",
       "name": "card krueger 1994",
       "summary": "Card & Krueger (1994) 端到端复现 / End-to-End Replication",
@@ -57727,6 +57799,42 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-coverage.json"
+    },
+    {
+      "id": "thedotmack-claude-mem-cowork",
+      "name": "cowork",
+      "summary": "Claude-Mem for **Cowork** (native Claude app — mobile, web, desktop cloud sessions).",
+      "summaryZh": "Cowork 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Cowork 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Cowork 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Cowork 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Cowork 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Cowork 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Cowork”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Cowork”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/cowork' \"$HOME/.claude/skills/cowork\"\nrm -rf '/tmp/thedotmack__claude-mem'"
+      },
+      "source": {
+        "repo": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "path": "cowork",
+        "type": "auto-promoted-high-star",
+        "stars": 82253
+      },
+      "packageUrl": "/skill-files/thedotmack-claude-mem-cowork.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-coworker",
@@ -135433,7 +135541,7 @@
     {
       "id": "thedotmack-claude-mem-mem-search",
       "name": "mem-search",
-      "summary": "Search claude-mem's persistent cross-session memory database. Use when user asks \"did we already solve this?\", \"how did we do X last time?\", or needs work from previous sessions.",
+      "summary": ">",
       "summaryZh": "Mem Search 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Mem Search 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Mem Search 处理具体工作流的 Claude Code 用户。",
@@ -135455,16 +135563,52 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/plugin/skills/mem-search' \"$HOME/.claude/skills/mem-search\"\nrm -rf '/tmp/thedotmack__claude-mem'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/cowork/skills/mem-search' \"$HOME/.claude/skills/mem-search\"\nrm -rf '/tmp/thedotmack__claude-mem'"
       },
       "source": {
         "repo": "thedotmack/claude-mem",
         "url": "https://github.com/thedotmack/claude-mem",
-        "path": "plugin/skills/mem-search",
+        "path": "cowork/skills/mem-search",
         "type": "auto-promoted-high-star",
         "stars": 82253
       },
       "packageUrl": "/skill-files/thedotmack-claude-mem-mem-search.json"
+    },
+    {
+      "id": "thedotmack-claude-mem-mem-setup",
+      "name": "mem-setup",
+      "summary": ">",
+      "summaryZh": "Mem Setup 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Mem Setup 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Mem Setup 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Mem Setup 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Mem Setup 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Mem Setup 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Mem Setup”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Mem Setup”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/cowork/skills/mem-setup' \"$HOME/.claude/skills/mem-setup\"\nrm -rf '/tmp/thedotmack__claude-mem'"
+      },
+      "source": {
+        "repo": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "path": "cowork/skills/mem-setup",
+        "type": "auto-promoted-high-star",
+        "stars": 82253
+      },
+      "packageUrl": "/skill-files/thedotmack-claude-mem-mem-setup.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-mem0-automation",

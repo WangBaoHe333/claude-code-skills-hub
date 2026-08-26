@@ -604,7 +604,7 @@
     {
       "path": "pages_verify/unencrypted/site/config.json",
       "encoding": "utf8",
-      "content": "{\n  \"encrypted\": false,\n  \"version\": \"1.0.0\",\n  \"payload\": {\n    \"path\": \"payload/data.db\",\n    \"format\": \"sqlite\",\n    \"size_bytes\": 17\n  },\n  \"warning\": \"UNENCRYPTED - All content is publicly readable\"\n}\n"
+      "content": "{\n  \"encrypted\": false,\n  \"version\": \"1.0.0\",\n  \"payload\": {\n    \"path\": \"payload/data.db\",\n    \"format\": \"sqlite\",\n    \"size_bytes\": 16\n  },\n  \"warning\": \"UNENCRYPTED - All content is publicly readable\"\n}\n"
     },
     {
       "path": "pages_verify/unencrypted/site/index.html",
