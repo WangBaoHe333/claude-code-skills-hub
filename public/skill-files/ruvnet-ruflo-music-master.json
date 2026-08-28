@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-music-master",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: music-master\ndescription: Run a mastering pass (LUFS loudness normalization + peak limiting) on an existing production\nallowed-tools: mcp__cogmusic__master mcp__cogmusic__get_production mcp__plugin_ruflo-core_ruflo__memory_store\nargument-hint: \"<production-id>\"\n---\n\n# Music Master\n\nApplies loudness normalization (default target -14 LUFS, common streaming-platform standard) plus a peak limiter to an already-generated production.\n\n## When to use\n\nThe user wants a \"radio-ready\" or streaming-normalized version of a track they've already generated.\n\n## Steps\n\n1. Call `mcp__cogmusic__master({ id: \"<production-id>\" })`.\n2. The result includes `lufs_before` and `lufs_after` — report both so the user can see the actual loudness change, not just \"done.\"\n3. Update the cached entry in `music-productions` (if one exists) with the new `lufs_before`/`lufs_after`/`has_mastered: true` fields so later lookups don't need a round-trip.\n4. Mastered audio isn't returned inline over MCP — point the user at the dashboard. See [ADR-0001](../../docs/adrs/0001-music-contract.md).\n"
+    }
+  ]
+}

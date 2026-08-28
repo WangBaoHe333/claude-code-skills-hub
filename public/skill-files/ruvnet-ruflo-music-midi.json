@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-music-midi",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: music-midi\ndescription: Extract MIDI/score from an existing production\nallowed-tools: mcp__cogmusic__extract_midi mcp__cogmusic__get_production\nargument-hint: \"<production-id>\"\n---\n\n# Music MIDI\n\nRuns pitch-tracked MIDI/score extraction on an already-generated production.\n\n## When to use\n\nThe user wants a MIDI file or score from a track they've already generated (transcription, arranging, DAW import). Needs an existing production `id`.\n\n## Steps\n\n1. Call `mcp__cogmusic__extract_midi({ id: \"<production-id>\" })`. Real GPU work, same reliability profile as `music-stems` and `music-generate` — one retry on a transient failure is reasonable before treating it as broken.\n2. Confirm via `mcp__cogmusic__get_production` that `has_midi` is now `true`.\n3. Like stems, the MIDI file itself isn't returned inline over MCP today — point the user at the dashboard to download it. See [ADR-0001](../../docs/adrs/0001-music-contract.md).\n"
+    }
+  ]
+}

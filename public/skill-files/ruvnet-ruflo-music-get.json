@@ -1,0 +1,10 @@
+{
+  "id": "ruvnet-ruflo-music-get",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: music-get\ndescription: Fetch metadata and audio_url for a single production by id\nallowed-tools: mcp__cogmusic__get_production mcp__plugin_ruflo-core_ruflo__memory_retrieve mcp__plugin_ruflo-core_ruflo__memory_search\nargument-hint: \"<production-id>\"\n---\n\n# Music Get\n\nLooks up one production's current state — useful to check whether a `separate_stems`/`extract_midi`/`master` call from earlier in the session actually finished.\n\n## When to use\n\nYou have a production `id` (from `music-generate`'s result, `music-list`, or the `music-productions` memory cache) and need its latest metadata.\n\n## Steps\n\n1. Check the `music-productions` namespace cache first if you're only after fields that don't change (title, original prompt/lyrics, `audio_duration`) — no need to round-trip if you already have them.\n2. For anything that *can* change (`has_stems`, `has_midi`, `has_mastered`, `lufs_before`/`lufs_after`), call the live tool:\n   ```\n   mcp__cogmusic__get_production({ id: \"<production-id>\" })\n   ```\n3. If the `id` doesn't exist or belongs to a different account, the call errors — don't guess at a substitute id; ask the user to confirm it or run `music-list` to find the right one.\n"
+    }
+  ]
+}

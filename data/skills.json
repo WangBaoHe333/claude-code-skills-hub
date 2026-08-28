@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T23:48:00.706Z",
+  "generatedAt": "2026-08-28T04:29:19.248Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -67215,7 +67215,7 @@
     {
       "id": "nextlevelbuilder-ui-ux-pro-max-skill-design",
       "name": "design",
-      "summary": "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML pres…",
+      "summary": "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini or Atlas Cloud AI), corporate identity program (50 deliverables, CIP mock…",
       "summaryZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
       "capabilityZh": "下载 YouTube 字幕、封面、章节和元数据，适合把视频整理成笔记、摘要或知识库材料。",
       "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
@@ -97952,7 +97952,7 @@
     {
       "id": "addyosmani-agent-skills-git-workflow-and-versioning",
       "name": "git-workflow-and-versioning",
-      "summary": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, or when you need to organize work across multiple parallel…",
+      "summary": "Structures git workflow practices. Use when making any code change. Use when committing, branching, resolving conflicts, opening or reviewing a pull request (PR), pushing to a rem…",
       "summaryZh": "Git Workflow And Versioning 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Git Workflow And Versioning 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Git Workflow And Versioning 处理具体工作流的 Claude Code 用户。",
@@ -143659,6 +143659,78 @@
       "packageUrl": "/skill-files/hkuds-cli-anything-musescore.json"
     },
     {
+      "id": "ruvnet-ruflo-music-connect",
+      "name": "music-connect",
+      "summary": "One-time setup — mint a Cognitum Music personal access token and register the cogmusic MCP server with Claude Code",
+      "summaryZh": "Music Connect 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Music Connect 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Music Connect 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Music Connect 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Music Connect 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Music Connect 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Music Connect”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Music Connect”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-music/skills/music-connect' \"$HOME/.claude/skills/music-connect\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-music/skills/music-connect",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-music-connect.json"
+    },
+    {
+      "id": "ruvnet-ruflo-music-generate",
+      "name": "music-generate",
+      "summary": "Generate a new song from a creative brief (genre, mood, language, BPM, theme) via the cogmusic MCP create_production tool",
+      "summaryZh": "Music Generate 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Music Generate 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Music Generate 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Music Generate 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Music Generate 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Music Generate 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Music Generate”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Music Generate”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-music/skills/music-generate' \"$HOME/.claude/skills/music-generate\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-music/skills/music-generate",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-music-generate.json"
+    },
+    {
       "id": "bytedance-deer-flow-music-generation",
       "name": "music-generation",
       "summary": "Use this skill when the user requests to generate, create, compose, or produce music or songs — background music, theme songs, jingles, or instrumental tracks. Generates a song fr…",
@@ -143694,6 +143766,186 @@
         "stars": 71160
       },
       "packageUrl": "/skill-files/bytedance-deer-flow-music-generation.json"
+    },
+    {
+      "id": "ruvnet-ruflo-music-get",
+      "name": "music-get",
+      "summary": "Fetch metadata and audio_url for a single production by id",
+      "summaryZh": "Music Get 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
+      "capabilityZh": "Music Get 用来抓取、提取或整理网页、社媒、视频和文章内容，适合做摘要、笔记和知识库沉淀。",
+      "audience": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "audienceZh": "内容创作者、研究者、学习者和需要把视频资料沉淀成文字的人。",
+      "scenarios": [
+        "把链接内容转成 Markdown",
+        "提取视频字幕或社媒正文",
+        "把外部资料整理成摘要和后续待办"
+      ],
+      "scenariosZh": [
+        "把链接内容转成 Markdown",
+        "提取视频字幕或社媒正文",
+        "把外部资料整理成摘要和后续待办"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Music Get”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Music Get”，再给出文件、链接或要完成的任务。",
+      "category": "内容整理",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-music/skills/music-get' \"$HOME/.claude/skills/music-get\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-music/skills/music-get",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-music-get.json"
+    },
+    {
+      "id": "ruvnet-ruflo-music-list",
+      "name": "music-list",
+      "summary": "List the account's saved music productions with metadata and audio_url",
+      "summaryZh": "Music List 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Music List 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Music List 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Music List 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Music List 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Music List 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Music List”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Music List”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-music/skills/music-list' \"$HOME/.claude/skills/music-list\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-music/skills/music-list",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-music-list.json"
+    },
+    {
+      "id": "ruvnet-ruflo-music-master",
+      "name": "music-master",
+      "summary": "Run a mastering pass (LUFS loudness normalization + peak limiting) on an existing production",
+      "summaryZh": "Music Master 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Music Master 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Music Master 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Music Master 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Music Master 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Music Master 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Music Master”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Music Master”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-music/skills/music-master' \"$HOME/.claude/skills/music-master\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-music/skills/music-master",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-music-master.json"
+    },
+    {
+      "id": "ruvnet-ruflo-music-midi",
+      "name": "music-midi",
+      "summary": "Extract MIDI/score from an existing production",
+      "summaryZh": "Music Midi 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Music Midi 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Music Midi 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Music Midi 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Music Midi 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Music Midi 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Music Midi”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Music Midi”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-music/skills/music-midi' \"$HOME/.claude/skills/music-midi\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-music/skills/music-midi",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-music-midi.json"
+    },
+    {
+      "id": "ruvnet-ruflo-music-stems",
+      "name": "music-stems",
+      "summary": "Run 4-stem separation (vocals/drums/bass/other) on an existing production",
+      "summaryZh": "Music Stems 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Music Stems 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Music Stems 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Music Stems 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Music Stems 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Music Stems 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Music Stems”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Music Stems”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-music/skills/music-stems' \"$HOME/.claude/skills/music-stems\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-music/skills/music-stems",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-music-stems.json"
     },
     {
       "id": "composiohq-awesome-claude-skills-mx-technologies-automation",
@@ -144582,27 +144834,26 @@
     {
       "id": "affaan-m-ecc-nasiko-control-plane",
       "name": "nasiko-control-plane",
-      "summary": "Install, detect, and operate the optional Nasiko agent control plane through ECC with pinned artifacts, explicit consent, and telemetry and secrets boundaries.",
-      "summaryZh": "Nasiko Control Plane 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
-      "capabilityZh": "Nasiko Control Plane 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "summary": "Use the experimental Nasiko CLI lifecycle bridge for pinned installation, read-only status, and qualified uninstall with explicit consent and telemetry and secrets boundaries.",
+      "summaryZh": "Nasiko Control Plane 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Nasiko Control Plane 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Nasiko Control Plane 处理具体工作流的 Claude Code 用户。",
       "audienceZh": "需要使用 Nasiko Control Plane 处理具体工作流的 Claude Code 用户。",
       "scenarios": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "使用 Nasiko Control Plane 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "scenariosZh": [
-        "生成或修改 Claude Code skill",
-        "整理 Agent/API 使用说明和开发步骤",
-        "把工程任务拆成可执行的代码工作流"
+        "使用 Nasiko Control Plane 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
       ],
       "usage": "安装后在 Claude Code 中明确说“使用 Nasiko Control Plane”，再给出文件、链接或要完成的任务。",
       "usageZh": "安装后在 Claude Code 中明确说“使用 Nasiko Control Plane”，再给出文件、链接或要完成的任务。",
-      "category": "代码 / Agent 开发",
+      "category": "通用工具",
       "tags": [
-        "skill",
-        "api"
+        "skill"
       ],
       "install": {
         "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/skills/nasiko-control-plane' \"$HOME/.claude/skills/nasiko-control-plane\"\nrm -rf '/tmp/affaan-m__ECC'"
@@ -187031,6 +187282,42 @@
         "stars": 59462
       },
       "packageUrl": "/skill-files/ruvnet-ruflo-ruflo-migrations.json"
+    },
+    {
+      "id": "ruvnet-ruflo-ruflo-music",
+      "name": "ruflo music",
+      "summary": "AI music generation via [Cognitum Music](https://music.cognitum.one) — compose lyrics/prompts, generate tracks, separate stems, extract MIDI, and master, all through the `cogmusic…",
+      "summaryZh": "Ruflo Music 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Ruflo Music 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Ruflo Music 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Ruflo Music 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Ruflo Music 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Ruflo Music 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Ruflo Music”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Ruflo Music”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/ruvnet__ruflo'\ngit clone --depth 1 'https://github.com/ruvnet/ruflo.git' '/tmp/ruvnet__ruflo'\ncp -R '/tmp/ruvnet__ruflo/plugins/ruflo-music' \"$HOME/.claude/skills/ruflo-music\"\nrm -rf '/tmp/ruvnet__ruflo'"
+      },
+      "source": {
+        "repo": "ruvnet/ruflo",
+        "url": "https://github.com/ruvnet/ruflo",
+        "path": "plugins/ruflo-music",
+        "type": "auto-promoted-high-star",
+        "stars": 59462
+      },
+      "packageUrl": "/skill-files/ruvnet-ruflo-ruflo-music.json"
     },
     {
       "id": "ruvnet-ruflo-ruflo-neural-trader",
