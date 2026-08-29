@@ -4,7 +4,7 @@
     {
       "path": "SKILL.md",
       "encoding": "utf8",
-      "content": "---\nname: pua-pro\ndescription: \"PUA Pro alias for Codex. Codex subcommand mapping for Claude Code /pua:pro style usage; invoke with $pua-pro.\"\nlicense: MIT\n---\n\n# pua-pro\n\nThis is a Codex CLI alias for the Claude Code `/pua:pro` command.\n\nLoad and follow the pro skill/protocol for self-evolution, platform telemetry, KPI, and config commands.\n\nWhen this alias changes `~/.pua/config.json`, preserve unknown fields and create `~/.pua/` if missing. Do not claim completion without command/output evidence.\n"
+      "content": "---\nname: pua-pro\ndescription: \"PUA Pro alias for Codex. Codex subcommand mapping for Claude Code /pua:pro style usage; invoke with $pua-pro.\"\nlicense: MIT\n---\n\n# pua-pro\n\nThis is a Codex CLI alias for the Claude Code `/pua:pro` command.\n\nLoad and follow the pro skill/protocol for self-evolution, KPI, and config commands. All of it runs locally — there is no telemetry, no account and no upload.\n\nWhen this alias changes `~/.pua/config.json`, preserve unknown fields and create `~/.pua/` if missing. Do not claim completion without command/output evidence.\n"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T02:56:53.531Z",
+  "generatedAt": "2026-08-29T22:48:03.732Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -36845,7 +36845,7 @@
     {
       "id": "juliusbrussee-caveman-caveman-explore",
       "name": "caveman-explore",
-      "summary": "Read-only repository explorer. Use PROACTIVELY for cold-start exploration, broad cross-file localization, or when a direct search has failed and you need to find where something l…",
+      "summary": "Read-only repository explorer for cold-start orientation, broad cross-file localization, or when a direct search failed. Skip it when the exact file or symbol is already named. Re…",
       "summaryZh": "Caveman Explore 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Caveman Explore 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Caveman Explore 处理具体工作流的 Claude Code 用户。",
@@ -63234,7 +63234,7 @@
     {
       "id": "code-yeongyu-oh-my-openagent-data-scientist",
       "name": "data-scientist",
-      "summary": "Expert data processing specialist with intelligent DuckDB/Polars selection for maximum performance. Always includes numpy, never uses pandas, runs everything through uv. Triggers:…",
+      "summary": "Expert data processing with a hybrid engine strategy: resident-kernel engines first - DuckDB plus a resident Python stack (Polars/numpy/matplotlib) in persistent js/py eval kernel…",
       "summaryZh": "Data Scientist 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Data Scientist 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Data Scientist 处理具体工作流的 Claude Code 用户。",
@@ -116568,7 +116568,7 @@
     {
       "id": "foryourhealth111-pixel-vibe-skills-install",
       "name": "install",
-      "summary": "公开安装应从发布版本 zip 开始，不要直接从仓库 checkout 安装。下载当前的 [vibe-skills-4.0.0-public.zip](https://github.com/foryourhealth111-pixel/Vibe-Skills/releases/download/v4.0.0/vibe-skills-4.0.0-public.…",
+      "summary": "公开安装应从发布版本 zip 开始，不要直接从仓库 checkout 安装。下载当前的 [vibe-skills-4.1.0-public.zip](https://github.com/foryourhealth111-pixel/Vibe-Skills/releases/download/v4.1.0/vibe-skills-4.1.0-public.…",
       "summaryZh": "Install 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Install 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Install 处理具体工作流的 Claude Code 用户。",
@@ -133386,7 +133386,7 @@
     {
       "id": "code-yeongyu-oh-my-openagent-mass-ulw",
       "name": "mass-ulw",
-      "summary": "Run a dependency graph of child agents in one call with the native dag tool. Use when the user asks for mass-ulw, a DAG of tasks, fan-out/fan-in work, or multi-agent execution whe…",
+      "summary": "Run a dependency graph of child agents in one call with the native workflow tool. Use when the user asks for mass-ulw, a DAG of tasks, fan-out/fan-in work, or multi-agent executio…",
       "summaryZh": "Mass Ulw 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Mass Ulw 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Mass Ulw 处理具体工作流的 Claude Code 用户。",
