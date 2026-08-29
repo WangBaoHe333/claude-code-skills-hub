@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T04:29:19.248Z",
+  "generatedAt": "2026-08-29T02:56:53.531Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -34731,7 +34731,7 @@
     {
       "id": "yeachan-heo-oh-my-claudecode-cancel",
       "name": "cancel",
-      "summary": "Cancel any active OMC mode (autopilot, ralph, ultrawork, ultragoal, swarm, ultrapilot, pipeline, team)",
+      "summary": "Cancel any active OMC mode (autopilot, ralph, ultragoal, swarm, ultrapilot, pipeline, team) and clean up retired legacy state",
       "summaryZh": "Cancel 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Cancel 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Cancel 处理具体工作流的 Claude Code 用户。",
@@ -54475,6 +54475,44 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-console-agent.json"
+    },
+    {
+      "id": "addyosmani-agent-skills-constraint-driven-development",
+      "name": "constraint-driven-development",
+      "summary": "Establishes a project's quality bar as a written contract and stops agents quietly lowering it. Interviews the user on which dimensions matter, supplies sane default thresholds wh…",
+      "summaryZh": "Constraint Driven Development 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Constraint Driven Development 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Constraint Driven Development 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Constraint Driven Development 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Constraint Driven Development”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Constraint Driven Development”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "testing",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/addyosmani__agent-skills'\ngit clone --depth 1 'https://github.com/addyosmani/agent-skills.git' '/tmp/addyosmani__agent-skills'\ncp -R '/tmp/addyosmani__agent-skills/skills/constraint-driven-development' \"$HOME/.claude/skills/constraint-driven-development\"\nrm -rf '/tmp/addyosmani__agent-skills'"
+      },
+      "source": {
+        "repo": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "path": "skills/constraint-driven-development",
+        "type": "auto-promoted-high-star",
+        "stars": 59408
+      },
+      "packageUrl": "/skill-files/addyosmani-agent-skills-constraint-driven-development.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-construction-daily-report",
@@ -101588,6 +101626,42 @@
         "stars": 3414
       },
       "packageUrl": "/skill-files/agenticnotetaking-arscontexta-graph.json"
+    },
+    {
+      "id": "yeachan-heo-oh-my-claudecode-graph",
+      "name": "graph",
+      "summary": "Deterministic orchestration graph runtime - declarative DAG pipelines with journal-based crash recovery",
+      "summaryZh": "Graph 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Graph 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Graph 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Graph 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Graph 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Graph 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Graph”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Graph”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/Yeachan-Heo__oh-my-claudecode'\ngit clone --depth 1 'https://github.com/Yeachan-Heo/oh-my-claudecode.git' '/tmp/Yeachan-Heo__oh-my-claudecode'\ncp -R '/tmp/Yeachan-Heo__oh-my-claudecode/skills/graph' \"$HOME/.claude/skills/graph\"\nrm -rf '/tmp/Yeachan-Heo__oh-my-claudecode'"
+      },
+      "source": {
+        "repo": "Yeachan-Heo/oh-my-claudecode",
+        "url": "https://github.com/Yeachan-Heo/oh-my-claudecode",
+        "path": "skills/graph",
+        "type": "auto-promoted-high-star",
+        "stars": 37702
+      },
+      "packageUrl": "/skill-files/yeachan-heo-oh-my-claudecode-graph.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-graph-viz",
@@ -223437,6 +223511,42 @@
         "stars": 3514
       },
       "packageUrl": "/skill-files/brycewang-stanford-auto-empirical-research-skills-ui-ux-pro-max.json"
+    },
+    {
+      "id": "affaan-m-ecc-uk-ua",
+      "name": "uk UA",
+      "summary": "<p align=\"center\"> <img src=\"../../assets/hero.png\" alt=\"ECC - операційна система для агентних оболонок\" width=\"100%\" /> </p>",
+      "summaryZh": "Uk UA 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Uk UA 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Uk UA 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Uk UA 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Uk UA 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Uk UA 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Uk UA”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Uk UA”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/affaan-m__ECC'\ngit clone --depth 1 'https://github.com/affaan-m/ECC.git' '/tmp/affaan-m__ECC'\ncp -R '/tmp/affaan-m__ECC/docs/uk-UA' \"$HOME/.claude/skills/uk-ua\"\nrm -rf '/tmp/affaan-m__ECC'"
+      },
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "docs/uk-UA",
+        "type": "auto-promoted-high-star",
+        "stars": 215443
+      },
+      "packageUrl": "/skill-files/affaan-m-ecc-uk-ua.json"
     },
     {
       "id": "brycewang-stanford-auto-empirical-research-skills-uk-legislation-api",
