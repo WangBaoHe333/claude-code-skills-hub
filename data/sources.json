@@ -723,6 +723,78 @@
       "stars": 1080,
       "discoveredAt": "2026-08-23T20:54:09.711Z",
       "reason": "1080 stars, 1 SKILL.md"
+    },
+    {
+      "repo": "sickn33/agentic-awesome-skills",
+      "url": "https://github.com/sickn33/agentic-awesome-skills.git",
+      "type": "auto-promoted-high-star",
+      "stars": 45705,
+      "discoveredAt": "2026-08-30T22:55:14.128Z",
+      "reason": "45705 stars, 6603 SKILL.md, 272 skill README hints, has skills directory"
+    },
+    {
+      "repo": "openclaw/openclaw",
+      "url": "https://github.com/openclaw/openclaw.git",
+      "type": "auto-promoted-high-star",
+      "stars": 388089,
+      "discoveredAt": "2026-08-30T22:55:14.128Z",
+      "reason": "388089 stars, 121 SKILL.md, 1 skill README hints, has skills directory"
+    },
+    {
+      "repo": "rohitg00/ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch.git",
+      "type": "auto-promoted-high-star",
+      "stars": 51259,
+      "discoveredAt": "2026-08-30T22:55:14.128Z",
+      "reason": "51259 stars, 22 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "pytorch/pytorch",
+      "url": "https://github.com/pytorch/pytorch.git",
+      "type": "auto-promoted-high-star",
+      "stars": 102684,
+      "discoveredAt": "2026-08-30T22:55:14.128Z",
+      "reason": "102684 stars, 16 SKILL.md, 1 skill README hints, has skills directory"
+    },
+    {
+      "repo": "Significant-Gravitas/AutoGPT",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT.git",
+      "type": "auto-promoted-high-star",
+      "stars": 187019,
+      "discoveredAt": "2026-08-30T22:55:14.128Z",
+      "reason": "187019 stars, 10 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "mui/material-ui",
+      "url": "https://github.com/mui/material-ui.git",
+      "type": "auto-promoted-high-star",
+      "stars": 98975,
+      "discoveredAt": "2026-08-30T22:55:14.128Z",
+      "reason": "98975 stars, 6 SKILL.md, 5 skill README hints, has skills directory"
+    },
+    {
+      "repo": "denoland/deno",
+      "url": "https://github.com/denoland/deno.git",
+      "type": "auto-promoted-high-star",
+      "stars": 108346,
+      "discoveredAt": "2026-08-30T22:55:14.128Z",
+      "reason": "108346 stars, 6 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "electron/electron",
+      "url": "https://github.com/electron/electron.git",
+      "type": "auto-promoted-high-star",
+      "stars": 122808,
+      "discoveredAt": "2026-08-30T22:55:14.128Z",
+      "reason": "122808 stars, 5 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "ansible/ansible",
+      "url": "https://github.com/ansible/ansible.git",
+      "type": "auto-promoted-high-star",
+      "stars": 70505,
+      "discoveredAt": "2026-08-30T22:55:14.128Z",
+      "reason": "70505 stars, 4 SKILL.md, has skills directory"
     }
   ]
 }
