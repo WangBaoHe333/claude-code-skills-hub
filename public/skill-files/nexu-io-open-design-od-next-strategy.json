@@ -2,6 +2,11 @@
   "id": "nexu-io-open-design-od-next-strategy",
   "files": [
     {
+      "path": "AGENTS.md",
+      "encoding": "utf8",
+      "content": "# `od-next-strategy` (OD Next V2 prompt assets)\n\nEverything under `assets/` is sent to the model **verbatim** as part of the\nprompt bundle. Never write repository-maintenance notes, TODOs, or\ncross-references into those files — they reach the model as instructions.\nMaintenance notes belong here instead: this file is not part of the asset\nroster (`apps/daemon/src/plugins/strategy-package.ts:158`), so it is never read\nor hashed at runtime.\n\nThis folder is one half of a two-sided prompt implementation, and not all of OD\nNext's content lives here — host runtime contracts such as the deck framework\nare carried in TypeScript, not in these task profiles. Before changing anything\nhere, read [`docs/prompt-composition.md`](../../../../docs/prompt-composition.md):\nthe fork point, the variant axes, the host contract table, the asset roster and\npackage-hash rules, and the known gaps.\n"
+    },
+    {
       "path": "SKILL.md",
       "encoding": "utf8",
       "content": "---\nname: od-next-strategy\ndescription: Bundled OD Next V2 strategy entrypoint for route-locked planning and Build execution.\n---\n\n# OD Next Strategy V2\n\nThis bundled scenario packages the stable content used by the internal OD Next\nplanning and Build recipe. It is not a portable strategy selector and does not\nactivate itself.\n\nWhen Open Design supplies a validated V2 binding, load the assets in this order:\n\n1. `assets/core-system-prompt.md`\n2. `assets/general-orchestration.md`\n3. exactly one task profile selected through\n   `references/task-profile-mapping.md`\n\nA task profile may declare `resources` — non-prompt files such as the\nprototype profile's handheld device shells under\n`assets/task-profiles/prototype/device-frames/`. They enter the package\nidentity with their profile, are never concatenated into the prompt head, and\nare staged by Open Design into the project directory (`.od-frames/`) for the\nrule card to reference.\n\nThe runtime owns route selection, task-chain state, session continuation, and\nmachine-contract parsing. Content in this folder must not infer that those\nruntime facts exist unless Open Design supplied them.\n"

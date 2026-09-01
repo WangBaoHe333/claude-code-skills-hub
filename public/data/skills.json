@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T00:02:33.951Z",
+  "generatedAt": "2026-09-01T22:46:35.654Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -18344,6 +18344,42 @@
         "stars": 110114
       },
       "packageUrl": "/skill-files/garrytan-gstack-alpha.json"
+    },
+    {
+      "id": "nexu-io-open-design-alpha-skill",
+      "name": "Alpha Skill",
+      "summary": "First fixture skill with a runnable demo.",
+      "summaryZh": "Alpha Skill 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Alpha Skill 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Alpha Skill 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Alpha Skill 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Alpha Skill 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Alpha Skill 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Alpha Skill”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Alpha Skill”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/tools/release/tests/fixtures/catalog/skills/alpha' \"$HOME/.claude/skills/alpha-skill\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "tools/release/tests/fixtures/catalog/skills/alpha",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-alpha-skill.json"
     },
     {
       "id": "foryourhealth111-pixel-vibe-skills-alpha-vantage",
@@ -41097,6 +41133,42 @@
         "stars": 110114
       },
       "packageUrl": "/skill-files/garrytan-gstack-beta.json"
+    },
+    {
+      "id": "nexu-io-open-design-beta-skill",
+      "name": "Beta Skill",
+      "summary": "Instruction-only fixture skill.",
+      "summaryZh": "Beta Skill 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Beta Skill 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Beta Skill 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Beta Skill 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Beta Skill 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Beta Skill 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Beta Skill”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Beta Skill”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/tools/release/tests/fixtures/catalog/skills/beta' \"$HOME/.claude/skills/beta-skill\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "tools/release/tests/fixtures/catalog/skills/beta",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-beta-skill.json"
     },
     {
       "id": "leoyeai-openclaw-master-skills-bettafish-opinion-analysis",
@@ -90234,6 +90306,42 @@
         "stars": 45705
       },
       "packageUrl": "/skill-files/sickn33-agentic-awesome-skills-decision-navigator.json"
+    },
+    {
+      "id": "nexu-io-open-design-deck-one",
+      "name": "Deck One",
+      "summary": "A small deck template fixture.",
+      "summaryZh": "Deck One 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Deck One 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Deck One 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Deck One 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Deck One 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Deck One 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Deck One”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Deck One”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/nexu-io__open-design'\ngit clone --depth 1 'https://github.com/nexu-io/open-design.git' '/tmp/nexu-io__open-design'\ncp -R '/tmp/nexu-io__open-design/tools/release/tests/fixtures/catalog/design-templates/deck-one' \"$HOME/.claude/skills/deck-one\"\nrm -rf '/tmp/nexu-io__open-design'"
+      },
+      "source": {
+        "repo": "nexu-io/open-design",
+        "url": "https://github.com/nexu-io/open-design",
+        "path": "tools/release/tests/fixtures/catalog/design-templates/deck-one",
+        "type": "auto-promoted-high-star",
+        "stars": 64767
+      },
+      "packageUrl": "/skill-files/nexu-io-open-design-deck-one.json"
     },
     {
       "id": "nexu-io-open-design-deck-guizang-editorial",
@@ -254303,7 +254411,7 @@
     {
       "id": "santifer-career-ops-scaffolder",
       "name": "scaffolder",
-      "summary": "One-command installer for [**career-ops**](https://github.com/santifer/career-ops) — the AI-powered job search pipeline built on Claude Code.",
+      "summary": "One-command installer for [**career-ops**](https://github.com/career-ops-hq/career-ops) — the AI-powered job search pipeline built on Claude Code.",
       "summaryZh": "Scaffolder 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Scaffolder 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Scaffolder 处理具体工作流的 Claude Code 用户。",

@@ -1,0 +1,15 @@
+{
+  "id": "nexu-io-open-design-alpha-skill",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: Alpha Skill\ndescription: First fixture skill with a runnable demo.\ntriggers:\n  - alpha demo\nod:\n  mode: prototype\n  platform: desktop\n  scenario: marketing\n  category: demos\n  featured: 1\n  example_prompt: Make an alpha demo\ni18n:\n  zh-CN:\n    name: Alpha 技能\n    description: 第一个带可运行演示的技能\n---\n\n# Alpha Skill\n\nBody for alpha.\n"
+    },
+    {
+      "path": "example.html",
+      "encoding": "utf8",
+      "content": "<!doctype html><html lang=\"en\"><body><h1>Alpha demo</h1></body></html>\n"
+    }
+  ]
+}

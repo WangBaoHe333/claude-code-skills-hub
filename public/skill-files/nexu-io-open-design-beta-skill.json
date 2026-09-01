@@ -1,0 +1,10 @@
+{
+  "id": "nexu-io-open-design-beta-skill",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: Beta Skill\ndescription: Instruction-only fixture skill.\nod:\n  mode: design-system\n  category: writing\n---\n\n# Beta Skill\n\nInstruction body only.\n"
+    }
+  ]
+}
