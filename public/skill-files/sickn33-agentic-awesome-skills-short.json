@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-short",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: short\ndescription: \"Rewrite the previous response more briefly while preserving the substance.\"\ncategory: writing\nrisk: safe\nsource: community\nsource_repo: davidondrej/skills\nsource_type: community\ndate_added: \"2026-07-07\"\nauthor: davidondrej\ntags: [writing, editing, concise]\ntools: [claude, codex]\nlicense: \"MIT\"\nlicense_source: \"https://github.com/davidondrej/skills/blob/main/LICENSE\"\ndisable-model-invocation: true\n---\n\nrewrite your last response to be simpler & shorter. do not do anything else.\n\n## When to Use\n\n- Use when the user asks for a shorter, simpler, or TLDR version of the previous response.\n- Use when the current answer should be compressed without changing the substance.\n\n## Limitations\n\n- Adapted from `davidondrej/skills`; verify local paths, tools, credentials, and agent features before acting.\n- For commands, remote access, scheduling, browser automation, or file-changing workflows, get explicit user approval and confirm the target environment first.\n"
+    }
+  ]
+}

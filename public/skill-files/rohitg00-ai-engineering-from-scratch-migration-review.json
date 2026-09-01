@@ -1,0 +1,20 @@
+{
+  "id": "rohitg00-ai-engineering-from-scratch-migration-review",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: migration-review\ndescription: Review database migration files when a change adds or modifies paths under migrations/. Use it before merge to collect forward, rollback, locking, and data-safety evidence.\nallowed-tools: Read Grep Glob Bash(python3 ${CLAUDE_SKILL_DIR}/scripts/check_scope.py *)\n---\n\n# Migration Review\n\nReview only the migration files named in `$ARGUMENTS` and the code needed to\nverify their compatibility. This Skill does not authorize applying a migration.\n\n1. Run `python3 ${CLAUDE_SKILL_DIR}/scripts/check_scope.py $ARGUMENTS`.\n2. Stop if the checker rejects any path outside `migrations/`.\n3. Read [references/review-checklist.md](references/review-checklist.md).\n4. Inspect each accepted file and its schema assumptions.\n5. Report forward behavior, rollback limits, lock risk, data-volume risk,\n   verification evidence, and unresolved blockers.\n\nReturn these headings: `Scope`, `Evidence`, `Risks`, `Rollback`, `Blockers`, and\n`Decision`. Use `Decision: blocked` whenever required evidence is missing.\n\nThe bundled checker is [scripts/check_scope.py](scripts/check_scope.py). The\n`allowed-tools` entry pre-approves only that command for the invocation turn; it\ndoes not remove other tools or replace project permission rules.\n"
+    },
+    {
+      "path": "references/review-checklist.md",
+      "encoding": "utf8",
+      "content": "# Migration Review Checklist\n\n## Forward\n\n- Identify the schema and data transition.\n- Check compatibility with the currently deployed application version.\n- Estimate locks, transaction duration, and affected row volume.\n\n## Rollback\n\n- State whether rollback is safe, lossy, or impossible.\n- Keep destructive cleanup separate from the compatibility migration.\n- Name the restore or compensating path when reversal is not possible.\n\n## Evidence\n\n- Record the exact validation command and result.\n- Link each risk to a file and statement.\n- Leave the decision blocked when production volume or compatibility evidence is missing.\n"
+    },
+    {
+      "path": "scripts/check_scope.py",
+      "encoding": "utf8",
+      "content": "\"\"\"Validate migration-review Skill arguments without reading the filesystem.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport sys\nfrom pathlib import PurePosixPath\n\n\ndef validate_paths(paths: list[str]) -> dict[str, object]:\n    accepted: list[str] = []\n    rejected: list[dict[str, str]] = []\n    for raw in paths:\n        normalized = raw.replace(\"\\\\\", \"/\")\n        path = PurePosixPath(normalized)\n        reason = \"\"\n        if path.is_absolute() or \"..\" in path.parts:\n            reason = \"path must be repository-relative without parent traversal\"\n        elif not path.parts or path.parts[0] != \"migrations\":\n            reason = \"path must be under migrations/\"\n        elif path.suffix.lower() not in {\".sql\", \".py\"}:\n            reason = \"migration file must end in .sql or .py\"\n        if reason:\n            rejected.append({\"path\": raw, \"reason\": reason})\n        else:\n            accepted.append(normalized)\n    if not paths:\n        rejected.append({\"path\": \"\", \"reason\": \"at least one migration path is required\"})\n    return {\n        \"status\": \"valid\" if not rejected else \"blocked\",\n        \"accepted\": accepted,\n        \"rejected\": rejected,\n    }\n\n\ndef main(argv: list[str]) -> int:\n    result = validate_paths(argv)\n    print(json.dumps(result, indent=2, sort_keys=True))\n    return 0 if result[\"status\"] == \"valid\" else 2\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main(sys.argv[1:]))\n"
+    }
+  ]
+}

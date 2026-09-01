@@ -1,0 +1,60 @@
+{
+  "id": "sickn33-agentic-awesome-skills-crossframe-teach",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: crossframe-teach\ndescription: \"Use when CrossFrame Suite routes explicit Chinese teaching of CrossFrame concepts, misreading boundaries, plain-language examples, signals, or exercises.\"\ncategory: content\nrisk: safe\nsource: community\nsource_repo: xi-kari/crossframe-skill\nsource_type: community\ndate_added: 2026-06-16\nauthor: xi-kari\nlicense: MIT\nlicense_source: https://github.com/xi-kari/crossframe-skill/blob/main/LICENSE\ntools:\n  - \"Agent Skills\"\n  - Codex\n  - Claude\ntags:\n  - crossframe\n  - chinese\n  - teaching\n  - concepts\n  - plain-language\n---\n# CrossFrame Teach\n\n\n\n## When to Use This Skill\n\n- Use when `crossframe-suite` routes explicit CrossFrame work into concept teaching, misreading correction, plain-language examples, observable signals, or exercises.\n- Use when the user wants to understand a CrossFrame concept without turning terms into slogans.\n- Do not use independently unless the user explicitly names this sibling skill.\n\n## Packaged Source Note\n\nThis AAS-ready copy preserves the original CrossFrame skill body below. Chinese remains the canonical semantic layer; English metadata is only for discovery, installation, and repository review.\n\n## Limitations\n\n- The skill body is intentionally Chinese-canonical; English metadata is for discovery and does not replace the original Chinese terms.\n- Use only after explicit CrossFrame invocation or `crossframe-suite` routing; do not apply it as a generic default reasoning layer.\n- It structures analysis, drafting, and review, but does not replace source verification, domain expertise, or legal, medical, or financial judgment.\n\n> **本 skill 不独立触发。** 所有 CrossFrame 任务统一从 `crossframe-suite` 入口调度。用户无需直接调用本 skill；suite 根据路由规则在需要时自动加载。\n\n如果概念教学要连接文章写作、案例沉淀、读书研究或输出评审，先读取 `../crossframe-suite/SKILL.md` 做总调度；本 skill 只负责教学解释、误读边界和练习。\n\n## 轻入口原则\n\n中文是权威语义。`CrossFrame Teach` 只是教学入口，不重写、不替代、不压缩 canonical CrossFrame。\n\n每次触发后先读取相邻 canonical 材料：\n\n- `../crossframe/SKILL.md`\n- `../crossframe/references/read-routing-map.md`\n- 若概念教学触发高责任、公共制度、亲密关系、长期演化、框架治理、AI 现实验证、弱信号/不透明、无法退出、工具化、隐喻/来源透明或文章输出，追加读取 `../crossframe/references/continuity-bundles.md`，并按需使用 `../crossframe/worksheets/source-continuity-check.md`；未完成联读时只能降档。\n- 复用 `../crossframe/templates/read-state-capsule.md` 规定的 `v5-read-state-capsule`，并在高责任、公共、AI/过程性产物、生命周期、无法退出主体或文章输出场景执行 `../crossframe/worksheets/source-anchor-integrity-check.md`。如果胶囊缺失，回到 `../crossframe/SKILL.md` 补齐；本 skill 不重新发明源路由。\n\n不要把 canonical 全文复制进回答。只按本次概念需要读取 canonical 的协议、术语保真材料、概念卡或模板；教学表达使用本 skill 的轻量协议和模板。\n\n## 必读资源\n\n1. 读取 `protocols/teach-protocol.md`，确定本次是概念课、误读纠偏、现实信号训练，还是练习题生成。\n2. 读取 `references/teaching-fidelity.md`，防止术语堆砌、解释过短失真、道德化和漏练习。\n3. 需要成稿时使用 `templates/concept-lesson.md`；只生成练习时使用 `templates/micro-exercises.md`。\n4. 需要对照样例时读取 `examples/` 中对应概念；需要自测时读取 `evals/smoke-tests.md`。\n\n## 输出顺序\n\n默认按这个顺序输出，不要把术语放在第一段当结论：\n\n1. **先说人话**：用普通生活语言解释概念在说什么。\n2. **概念映射**：把人话对应到 1-3 个 CrossFrame 结构问题。\n3. **反例与误读边界**：写清不能误读成什么，给一个坏例或反例。\n4. **现实观察**：列出现实里能看见的行为、资源、边界、反馈或责任变化。\n5. **练习**：给 1-3 个小练习，帮助用户自己辨认概念边界。\n\n如果用户要求极简，也至少保留一个极短自测问题，除非用户明确说不要练习。\n\n## 教学边界\n\n- 概念解释不是现实诊断；没有事实时，不给强判断。\n- 不把 CrossFrame 概念当作道德要求、人格标签、命运预言或专业替代品。\n- 不说“这是典型的 X，所以 Y”；先说事实模式，再给概念映射。\n- 不把“爱/开放行动”讲成继续忍耐、继续牺牲或取消责任链。\n- 不把“开放断言”讲成含糊、不负责或最终审判。\n- 不把“承接/回流”讲成脾气好、会沟通、态度变好或单方负责。\n\n## 最低合格标准\n\n一次合格的教学回答必须能回答：\n\n- 普通人第一段能不能听懂？\n- 这个概念对应哪些现实行为或结构变化？\n- 它最容易被误读成什么？\n- 哪个反例能让用户知道边界在哪里？\n- 用户可以观察什么信号？\n- 用户可以做哪一个练习来验证自己是否理解？\n\n## 资源索引\n\n- `protocols/teach-protocol.md`：教学解释流程。\n- `references/teaching-fidelity.md`：教学保真与反误用规则。\n- `templates/concept-lesson.md`：完整概念课模板。\n- `templates/micro-exercises.md`：练习题模板。\n- `examples/chengjie-huiliu.md`：承接/回流教学样例。\n- `examples/open-assertion.md`：开放断言教学样例。\n- `examples/love-open-action.md`：爱/开放行动教学样例。\n- `examples/failure-patterns.md`：失败样例。\n- `evals/smoke-tests.md`：smoke tests。\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "interface:\n  display_name: \"CrossFrame Teach\"\n  short_description: \"用人话解释 CrossFrame 概念、边界、信号与练习。\"\n  default_prompt: \"用 crossframe-teach 解释这个 CrossFrame 概念，先说人话，再给边界、现实信号和练习题。\"\n"
+    },
+    {
+      "path": "evals/smoke-tests.md",
+      "encoding": "utf8",
+      "content": "# Smoke Tests\n\n这些测试用于快速检查 `crossframe-teach` 是否退化。每个测试都应触发本 skill，并在输出中保持“人话解释 -> 概念映射 -> 反例/误读边界 -> 现实观察 -> 练习”的顺序。\n\n## Test 1: 防术语堆砌\n\nPrompt:\n\n> 用 CrossFrame Teach 给普通人解释“承接/回流”。\n\nPass:\n\n- 第一段不用“结构负荷、责任链、反馈写回”等术语也能读懂。\n- 能说出“谁付成本，条件有没有改变”。\n- 有现实信号和练习。\n\nFail:\n\n- 第一段主要由 CrossFrame 术语组成。\n- 只说“承接就是负责，回流就是回应”。\n\n## Test 2: 防解释过短失真\n\nPrompt:\n\n> 一句话解释“开放断言”，但别讲错。\n\nPass:\n\n- 即使很短，也保留“当前判断 + 可撤回/撤回条件”的核心。\n- 附一个极短自测题，除非用户明确禁止练习。\n\nFail:\n\n- 只说“开放断言就是不确定”。\n- 没有边界或撤回条件。\n\n## Test 3: 防道德化\n\nPrompt:\n\n> “爱/开放行动”是不是说明我应该继续牺牲？\n\nPass:\n\n- 明确否定“继续牺牲”的道德化误读。\n- 说明爱不能取消边界、责任链和回流。\n- 给出被消耗与被接住的现实信号。\n\nFail:\n\n- 鼓励用户继续忍耐、继续承接或证明自己更有爱。\n- 把爱写成道德命令。\n\n## Test 4: 防漏练习\n\nPrompt:\n\n> 教我区分“态度变好”和“回流真的发生了”。\n\nPass:\n\n- 有辨认题、改写题或观察题中的至少一种。\n- 练习围绕现实行为、规则、资源、边界或角色变化。\n\nFail:\n\n- 只有解释，没有任何练习或自测。\n- 练习只是价值表态，例如“你愿不愿意更包容”。\n"
+    },
+    {
+      "path": "examples/chengjie-huiliu.md",
+      "encoding": "utf8",
+      "content": "# 样例：承接 / 回流\n\n## 用户问法\n\n“承接和回流到底是什么意思？别讲太玄。”\n\n## 好回答\n\n一个人一直在补洞、解释、安抚、协调、背锅，这叫他在替系统吸收成本。真正的问题不是他有没有努力，而是这些努力有没有换来条件改变：规则变没变、资源加没加、角色有没有重新分配、边界有没有被尊重。\n\n## 概念映射\n\n- 承接：有人吸收压力、风险、情绪、解释劳动或不确定性。\n- 回流：这些成本被写回规则、资源、角色、边界、记忆或能力。\n- 核心问题：谁付了成本，条件有没有因此改变。\n\n## 反例与误读边界\n\n坏例：“你既然能承接，就应该继续忍一忍。”\n\n这不成立。承接不是美德评选，也不是继续忍耐的命令。如果付出没有带来规则、资源或边界变化，它可能只是被继续消耗。\n\n## 现实中看什么\n\n- 一方持续补救，另一方只表达感谢或抱歉。\n- 问题被说出后，时间表、负责人、资源没有变化。\n- 危机过去后，一切回到原状。\n\n## 小练习\n\n1. 辨认题：有人每次项目出问题都加班救火，复盘会上大家夸他负责，但下次仍然没有人补位。这是承接、回流，还是两者都不是？\n2. 改写题：把“承接/回流断裂”改成一句普通人能听懂的话。\n3. 观察题：列出两个能证明“回流真的发生了”的现实信号。\n"
+    },
+    {
+      "path": "examples/failure-patterns.md",
+      "encoding": "utf8",
+      "content": "# 失败样例\n\n## 失败 1：术语堆砌\n\n坏例：\n\n> 承接/回流是结构负荷在责任链中经由行动承接完成反馈写回的机制。\n\n问题：第一段没有人话，用户无法知道现实里要看什么。\n\n修正方向：\n\n> 先看谁一直在补洞，再看补完以后规则、资源或边界有没有变化。\n\n## 失败 2：解释过短导致失真\n\n坏例：\n\n> 开放断言就是不确定。\n\n问题：丢掉了当前判断、替代解释、撤回条件和行动边界。\n\n修正方向：\n\n> 开放断言是先给当前最有力判断，同时说明什么证据会让它改写。\n\n## 失败 3：把概念当道德要求\n\n坏例：\n\n> 爱是开放行动，所以你应该继续承接。\n\n问题：把爱变成命令，把成本压回单方，取消了边界和责任链。\n\n修正方向：\n\n> 如果这份付出没有留下边界、规则或关系能力，它可能正在被消耗。\n\n## 失败 4：没有练习\n\n坏例：\n\n> 承接是吸收成本，回流是条件改变。\n\n问题：虽然句子正确，但没有让用户练习辨认边界，教学任务未完成。\n\n修正方向：补一个辨认题或自测题。\n"
+    },
+    {
+      "path": "examples/love-open-action.md",
+      "encoding": "utf8",
+      "content": "# 样例：爱 / 开放行动\n\n## 用户问法\n\n“爱作为开放行动，意思是不是要更无私？”\n\n## 好回答\n\n不是。这里的爱不是叫人继续牺牲，也不是证明谁更高尚。它说的是：有些行动不能只用利益、恐惧、规训或惯性解释；行动者承担了真实成本，打开了新的可能。但这份成本不能被浪费，它需要留下边界、记忆、能力、规则或关系改变。\n\n## 概念映射\n\n- 开放行动：不是被利益或恐惧完全推出的行动，而是打开新可能的行动。\n- 不浪费爱：检查这份成本有没有被接住，有没有形成边界、能力或条件变化。\n- 责任链：爱不能取消有权者、施害者或系统本来该承担的责任。\n\n## 反例与误读边界\n\n坏例：“如果你真的爱，就应该再坚持。”\n\n这不成立。它把爱变成道德要求，并把修复成本压回被消耗的人身上。CrossFrame 的讲法恰恰要看这份付出有没有被关系或系统接住。\n\n## 现实中看什么\n\n- 有人承担了本可以不承担的真实成本。\n- 这个行动打开了新的沟通、规则、保护或未来可能。\n- 如果只有单方付出，没有边界和条件变化，这份爱正在被消耗。\n\n## 小练习\n\n1. 辨认题：一个人持续让步，但对方没有任何行为改变，这更像开放行动被接住，还是被消耗？\n2. 改写题：把“你要更有爱”改成不压迫人的说法。\n3. 观察题：列出一个“爱没有被浪费”的现实信号。\n"
+    },
+    {
+      "path": "examples/open-assertion.md",
+      "encoding": "utf8",
+      "content": "# 样例：开放断言\n\n## 用户问法\n\n“开放断言是不是就是不敢下判断？”\n\n## 好回答\n\n不是。开放断言是：我先把当前最有力的判断说出来，但同时告诉你它可能错在哪里、什么证据会让我改口、现在能做的行动边界在哪里。它不是含糊，而是把判断放在可撤回的位置上。\n\n## 概念映射\n\n- 当前判断：在现有事实下最有力的解释。\n- 替代解释：还可能有什么别的原因。\n- 撤回条件：出现什么证据后，原判断要降档或改写。\n- 行动边界：这个判断目前只能支持什么，不能支持什么。\n\n## 反例与误读边界\n\n坏例：“可能是 A，也可能不是，所以先这样吧。”\n\n这不算开放断言。它没有当前判断、替代解释、撤回条件和行动边界，只是把不确定性丢给用户。\n\n## 现实中看什么\n\n- 证据还不完整，但重复模式已经出现。\n- 直接强判断会伤害名誉、权利、关系或资源。\n- 用户需要先观察、设边界或做低风险行动。\n\n## 小练习\n\n1. 辨认题：一句话里只说“我不确定”，没有当前判断和撤回条件，算开放断言吗？\n2. 改写题：把“这人就是不负责任”改写成开放断言。\n3. 观察题：给一个会让判断撤回的证据。\n"
+    },
+    {
+      "path": "protocols/teach-protocol.md",
+      "encoding": "utf8",
+      "content": "# 教学解释协议\n\n用于把 CrossFrame 概念讲给普通人。目标不是压缩 canonical，也不是做完整诊断，而是让用户能分清：这个概念在现实里看什么、不能被误用成什么、如何练习辨认。\n\n## 1. 读取与定向\n\n1. 先读 `../crossframe/SKILL.md` 和 `../crossframe/references/read-routing-map.md`。\n2. 根据用户要解释的概念，按 routing map 读取必要 canonical 概念卡、术语保真材料或概念解释协议。\n3. 再读本 skill 的 `references/teaching-fidelity.md`。\n4. 如果用户没有给具体概念，先问一个短问题让用户选：概念解释、误读纠偏、现实信号、练习题。\n\n## 2. 内部教学图\n\n成稿前先内部形成 5 个要素，不要原样展示为工作表：\n\n- 人话核心：不用术语时，这个概念到底在说什么。\n- 结构映射：它对应对象、成本、反馈、边界、责任、尺度或行动能力中的哪几项。\n- 误读边界：最容易被讲歪成什么。\n- 现实信号：用户能观察到的行为、资源、规则、边界、反馈或责任变化。\n- 练习目标：这次练习要训练用户分辨什么。\n\n## 3. 输出档位\n\n- **概念小课**：完整使用 `templates/concept-lesson.md`。\n- **误读纠偏**：先指出误读，再给正确说法、反例、练习。\n- **现实信号训练**：多给观察清单，少给抽象理论。\n- **练习题生成**：使用 `templates/micro-exercises.md`，附参考答案或判分点。\n- **极简解释**：保留人话、一个边界、一个自测题。\n\n## 4. 必须保留的输出顺序\n\n1. 先说人话。\n2. 概念映射。\n3. 反例与误读边界。\n4. 现实观察。\n5. 练习。\n\n不要在第一段用一串术语开场。术语只能在映射区出现，并且要能落回现实动作。\n\n## 5. 回流到诊断\n\n如果用户从概念解释转向现实案例，不继续停留在教学模板里。改为提示需要补充事实，并按 canonical routing map 进入对应 CrossFrame protocol。\n\n如果用户提出新的教学误读、好例或坏例，可以把它临时作为教学材料使用；不要把它写入 canonical，除非用户明确要求维护 skill 文件。\n"
+    },
+    {
+      "path": "references/teaching-fidelity.md",
+      "encoding": "utf8",
+      "content": "# 教学保真规则\n\n本文件只规定教学表达的保真方式。概念定义以 `../crossframe/` 下的 canonical 中文材料为准。\n\n## 四个硬闸\n\n1. **术语闸**：第一段删掉所有 CrossFrame 术语后仍然能懂；如果不能，重写。\n2. **长度闸**：解释可以短，但不能短到丢掉核心差异、误读边界或现实信号。\n3. **道德闸**：概念不能变成“你应该更好、更忍、更爱、更负责”的道德命令。\n4. **练习闸**：默认必须有练习或自测，帮助用户辨认概念边界。\n\n## 好解释的结构\n\n- 先讲一个普通人能遇到的场面。\n- 再说这个场面里谁在付成本、什么条件有没有改变。\n- 再把它映射到 CrossFrame 概念。\n- 最后给一个反例和一个练习，让用户知道边界。\n\n## 禁止的退化\n\n- 用术语堆叠替代解释。\n- 把概念当成现实诊断结论。\n- 把证据不足的开放判断说成强判断。\n- 把爱、承接、责任链讲成单方牺牲。\n- 把“态度变好”“说了抱歉”“写了报告”直接当作回流或修复。\n- 把练习题写成价值表态题，例如“你愿不愿意更有爱”。\n\n## 反例写法\n\n反例要短，并且指出为什么不算这个概念：\n\n- 不算承接/回流：只有口头感谢，没有规则、资源、角色或边界变化。\n- 不算开放断言：只说“不确定”，没有当前判断、替代解释和撤回条件。\n- 不算爱/开放行动：要求别人继续牺牲，却没有真实成本、边界和回流。\n\n## 练习写法\n\n练习优先使用三类：\n\n- **辨认题**：给一个小场景，让用户判断是否属于该概念。\n- **改写题**：把术语句改成人话。\n- **观察题**：让用户列出 2 个现实信号和 1 个撤回条件。\n\n练习答案要允许有边界感，不要求唯一价值立场。\n"
+    },
+    {
+      "path": "templates/concept-lesson.md",
+      "encoding": "utf8",
+      "content": "# 概念教学模板\n\n用于输出完整的 CrossFrame 概念解释。按需删减，但不要改变主要顺序。\n\n## 先说人话\n\n用 2-5 句普通语言解释这个概念在现实里通常说的是什么。第一段不要把术语当结论。\n\n## 概念映射\n\n- 它在 CrossFrame 里关注：\n- 它通常牵涉的结构问题：\n- 它不能直接证明：\n\n## 反例与误读边界\n\n- 常见误读：\n- 一个坏例：\n- 为什么这个坏例不成立：\n\n## 现实中看什么\n\n- 信号 1：\n- 信号 2：\n- 信号 3：\n- 让判断撤回或降档的情况：\n\n## 小练习\n\n1. 辨认题：\n2. 改写题：\n3. 观察题：\n\n## 如果继续分析现实案例\n\n需要补充哪些事实：\n\n下一步应进入的 canonical protocol：\n"
+    },
+    {
+      "path": "templates/micro-exercises.md",
+      "encoding": "utf8",
+      "content": "# 微练习模板\n\n用于用户只想练概念辨认、边界或表达。\n\n## 练习组\n\n### 1. 辨认题\n\n场景：\n\n问题：这算不算这个概念？为什么？\n\n判分点：\n\n- 是否指出现实行为，而不是只喊术语。\n- 是否区分事实和解释。\n- 是否写出一个不成立条件。\n\n### 2. 改写题\n\n术语句：\n\n请改成人话：\n\n参考方向：\n\n- 保留核心结构。\n- 去掉道德命令。\n- 写出可观察信号。\n\n### 3. 边界题\n\n问题：什么情况下这个概念不能用？\n\n参考方向：\n\n- 缺事实时不能强判断。\n- 只看态度不等于看结构变化。\n- 不能取消责任链或安全边界。\n"
+    }
+  ]
+}

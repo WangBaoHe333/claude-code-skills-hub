@@ -1,0 +1,10 @@
+{
+  "id": "openclaw-openclaw-camsnap",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: camsnap\ndescription: \"Capture frames or clips from RTSP/ONVIF cameras and local webcams, including USB pan/tilt/zoom control.\"\nhomepage: https://camsnap.ai\nmetadata:\n  {\n    \"openclaw\":\n      {\n        \"emoji\": \"📸\",\n        \"requires\": { \"bins\": [\"camsnap\"] },\n        \"install\":\n          [\n            {\n              \"id\": \"brew\",\n              \"kind\": \"brew\",\n              \"formula\": \"steipete/tap/camsnap\",\n              \"bins\": [\"camsnap\"],\n              \"label\": \"Install camsnap (brew)\",\n            },\n          ],\n      },\n  }\n---\n\n# camsnap\n\nUse `camsnap` to grab snapshots, clips, or motion events from configured cameras.\n\nSetup\n\n- Config file: `~/.config/camsnap/config.yaml`\n- Add camera: `camsnap add --name kitchen --host 192.168.0.10 --user user --pass pass`\n\nCommon commands\n\n- Discover: `camsnap discover --info`\n- Snapshot: `camsnap snap kitchen --out shot.jpg`\n- Clip: `camsnap clip kitchen --dur 5s --out clip.mp4`\n- Motion watch: `camsnap watch kitchen --threshold 0.2 --action '...'`\n- Doctor: `camsnap doctor --probe`\n\nLocal webcams (macOS)\n\n- List devices: `camsnap devices`\n- Snapshot from a local camera: `camsnap snap --device 0 --out webcam.jpg`\n- PTZ position and ranges: `camsnap ptz status --device 0`\n- Move a gimbal camera: `camsnap ptz goto --device 0 --pan 45 --tilt -18`\n- Also `camsnap ptz move` (relative deltas) and `camsnap ptz home`.\n\nNotes\n\n- Requires `ffmpeg` on PATH.\n- Prefer a short test capture before longer clips.\n- PTZ needs macOS Camera permission: these cameras only service UVC controls while streaming, so `camsnap` holds a capture session open for the operation.\n- Motion commands verify the settled position and exit non-zero if the camera did not reach it. On-camera AI framing can override manual positioning; disable tracking if moves keep missing.\n"
+    }
+  ]
+}

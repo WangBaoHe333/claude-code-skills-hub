@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-python-development",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: python-development\ndescription: \"You are a Python project architecture expert specializing in scaffolding production-ready Python applications. Generate complete project structures with modern tooling (uv, FastAPI, Django), type hint (Alias for python-development-python-scaffold)\"\nrisk: critical\nsource: \"alias\"\ndate_added: \"2026-06-02\"\n---\n\n# Python Development\n\n> **This is an alias.** The canonical skill is **`python-development-python-scaffold`**.\n\nThis skill redirects to `python-development-python-scaffold`. Load it from the vault:\n\n`skill-libraries/development/python-development-python-scaffold/SKILL.md`\n\n## When to Use\n- Use this skill when the task matches this description: You are a Python project architecture expert specializing in scaffolding production-ready Python applications. Generate complete project structures with modern tooling (uv, FastAPI, Django), type hint (Alias for python-development-python-scaffold).\n\n## Why this alias exists\n\nUsers commonly search for `python-development` but the full skill name in this collection is `python-development-python-scaffold`. This alias ensures discoverability.\n\n## Limitations\n- Use this skill only when the task clearly matches the scope described above.\n- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.\n- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.\n\n## Examples\n```text\nUse @python-development for this task: You are a Python project architecture expert specializing in scaffolding production-ready Python applications. Generate complete project structures with modern tooling (uv, FastAPI, Django), type hint (Alias for python-development-python-scaffold).\n\nApply the skill to my current work and walk me through the safest next steps,\nkey checks, and the concrete output I should produce.\n```\n"
+    }
+  ]
+}

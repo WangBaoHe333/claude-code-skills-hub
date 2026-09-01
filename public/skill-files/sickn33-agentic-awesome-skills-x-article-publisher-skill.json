@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-x-article-publisher-skill",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: x-article-publisher-skill\ndescription: \"Publish articles to X/Twitter\"\nrisk: safe\nsource: \"https://github.com/wshuyi/x-article-publisher-skill\"\ndate_added: \"2026-02-27\"\n---\n\n# X Article Publisher Skill\n\n## Overview\n\nPublish articles to X/Twitter\n\n## When to Use This Skill\n\nUse this skill when you need to work with publish articles to x/twitter.\n\n## Instructions\n\nThis skill provides guidance and patterns for publish articles to x/twitter.\n\nFor more information, see the [source repository](https://github.com/wshuyi/x-article-publisher-skill).\n\n## Limitations\n- Use this skill only when the task clearly matches the scope described above.\n- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.\n- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.\n"
+    }
+  ]
+}

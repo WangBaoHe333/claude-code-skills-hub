@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-claude-win11-speckit-update-skill",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: claude-win11-speckit-update-skill\ndescription: \"Windows 11 system management\"\nrisk: safe\nsource: \"https://github.com/NotMyself/claude-win11-speckit-update-skill\"\ndate_added: \"2026-02-27\"\n---\n\n# Claude Win11 Speckit Update Skill\n\n## Overview\n\nWindows 11 system management\n\n## When to Use This Skill\n\nUse this skill when you need to work with windows 11 system management.\n\n## Instructions\n\nThis skill provides guidance and patterns for windows 11 system management.\n\nFor more information, see the [source repository](https://github.com/NotMyself/claude-win11-speckit-update-skill).\n\n## Limitations\n- Use this skill only when the task clearly matches the scope described above.\n- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.\n- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.\n"
+    }
+  ]
+}

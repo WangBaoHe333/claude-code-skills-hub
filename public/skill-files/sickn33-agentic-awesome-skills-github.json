@@ -1,0 +1,15 @@
+{
+  "id": "sickn33-agentic-awesome-skills-github",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: github\ndescription: \"Use the `gh` CLI for issues, pull requests, Actions runs, and GitHub API queries.\"\nrisk: safe\nsource: \"Dimillian/Skills (MIT)\"\ndate_added: \"2026-03-25\"\n---\n\n# GitHub Skill\n\nUse the `gh` CLI to interact with GitHub. Always specify `--repo owner/repo` when not in a git directory, or use URLs directly.\n\n## When to Use\n- When the user asks about GitHub issues, pull requests, workflow runs, or CI failures.\n- When you need `gh issue`, `gh pr`, `gh run`, or `gh api` from the command line.\n\n## Pull Requests\n\nCheck CI status on a PR:\n```bash\ngh pr checks 55 --repo owner/repo\n```\n\nList recent workflow runs:\n```bash\ngh run list --repo owner/repo --limit 10\n```\n\nView a run and see which steps failed:\n```bash\ngh run view <run-id> --repo owner/repo\n```\n\nView logs for failed steps only:\n```bash\ngh run view <run-id> --repo owner/repo --log-failed\n```\n\n### Debugging a CI Failure\n\nFollow this sequence to investigate a failing CI run:\n\n1. **Check PR status** — identify which checks are failing:\n   ```bash\n   gh pr checks 55 --repo owner/repo\n   ```\n2. **List recent runs** — find the relevant run ID:\n   ```bash\n   gh run list --repo owner/repo --limit 10\n   ```\n3. **View the failed run** — see which jobs and steps failed:\n   ```bash\n   gh run view <run-id> --repo owner/repo\n   ```\n4. **Fetch failure logs** — get the detailed output for failed steps:\n   ```bash\n   gh run view <run-id> --repo owner/repo --log-failed\n   ```\n\n## API for Advanced Queries\n\nThe `gh api` command is useful for accessing data not available through other subcommands.\n\nGet PR with specific fields:\n```bash\ngh api repos/owner/repo/pulls/55 --jq '.title, .state, .user.login'\n```\n\n## JSON Output\n\nMost commands support `--json` for structured output.  You can use `--jq` to filter:\n\n```bash\ngh issue list --repo owner/repo --json number,title --jq '.[] | \"\\(.number): \\(.title)\"'\n```\n\n## Limitations\n- Use this skill only when the task clearly matches the scope described above.\n- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.\n- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "interface:\n  display_name: \"GitHub\"\n  short_description: \"Use gh for GitHub workflows\"\n  default_prompt: \"Use $github to inspect this repository's pull requests, issues, runs, or API data.\"\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-skill-seekers",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: skill-seekers\ndescription: \"-Automatically convert documentation websites, GitHub repositories, and PDFs into Claude AI skills in minutes.\"\nrisk: safe\nsource: \"https://github.com/yusufkaraaslan/Skill_Seekers\"\ndate_added: \"2026-02-27\"\n---\n\n# Skill Seekers\n\n## Overview\n\n-Automatically convert documentation websites, GitHub repositories, and PDFs into Claude AI skills in minutes.\n\n## When to Use This Skill\n\nUse this skill when you need to work with -automatically convert documentation websites, github repositories, and pdfs into claude ai skills in minutes..\n\n## Instructions\n\nThis skill provides guidance and patterns for -automatically convert documentation websites, github repositories, and pdfs into claude ai skills in minutes..\n\nFor more information, see the [source repository](https://github.com/yusufkaraaslan/Skill_Seekers).\n\n## Limitations\n- Use this skill only when the task clearly matches the scope described above.\n- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.\n- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.\n"
+    }
+  ]
+}

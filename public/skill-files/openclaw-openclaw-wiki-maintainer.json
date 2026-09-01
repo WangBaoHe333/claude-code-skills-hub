@@ -1,0 +1,10 @@
+{
+  "id": "openclaw-openclaw-wiki-maintainer",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: wiki-maintainer\ndescription: Maintain the OpenClaw memory wiki vault with deterministic pages, managed blocks, and source-backed updates.\n---\n\nUse this skill when working inside a memory-wiki vault.\n\n- Prefer `wiki_status` first when you need to understand the vault mode, path, or Obsidian CLI availability.\n- Prefer `memory_search` with `corpus=all` when the shared memory tools are available and you want one recall pass across durable memory plus the compiled wiki.\n- Use `wiki_search` to discover candidate pages when you want wiki-specific ranking/provenance, then `wiki_get` to inspect the exact page before editing or citing it. Verify contact data before use; generated people facts need source-class provenance.\n- Use `wiki_apply` for narrow synthesis filing and metadata updates when a tool-level mutation is enough.\n- Run `wiki_lint` after meaningful wiki updates so contradictions, provenance gaps, and open questions get surfaced before you trust the vault.\n- Use `openclaw wiki ingest`, `openclaw wiki compile`, and `openclaw wiki lint` as the default maintenance loop.\n- In `bridge` mode, run `openclaw wiki bridge import` before relying on search results if you need the latest public memory artifacts pulled in.\n- In `unsafe-local` mode, use `openclaw wiki unsafe-local import` only when the user explicitly opted into private local path access.\n- Keep generated sections inside managed markers. Do not overwrite human note blocks.\n- Treat raw sources, memory artifacts, and daily notes as evidence. Do not let wiki pages become the only source of truth for new claims.\n- Keep page identity stable. Favor updating existing entities and concepts over spawning duplicates with slightly different names.\n- When creating or refreshing indexes, preserve Obsidian-friendly wikilinks if the vault render mode is `obsidian`.\n"
+    }
+  ]
+}

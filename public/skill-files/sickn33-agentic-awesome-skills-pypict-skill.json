@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-pypict-skill",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: pypict-skill\ndescription: \"Pairwise test generation\"\nrisk: safe\nsource: \"https://github.com/omkamal/pypict-claude-skill/blob/main/SKILL.md\"\ndate_added: \"2026-02-27\"\n---\n\n# Pypict Skill\n\n## Overview\n\nPairwise test generation\n\n## When to Use This Skill\n\nUse this skill when you need to work with pairwise test generation.\n\n## Instructions\n\nThis skill provides guidance and patterns for pairwise test generation.\n\nFor more information, see the [source repository](https://github.com/omkamal/pypict-claude-skill/blob/main/SKILL.md).\n\n## Limitations\n- Use this skill only when the task clearly matches the scope described above.\n- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.\n- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.\n"
+    }
+  ]
+}

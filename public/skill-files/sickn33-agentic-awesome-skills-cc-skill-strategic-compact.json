@@ -1,0 +1,15 @@
+{
+  "id": "sickn33-agentic-awesome-skills-cc-skill-strategic-compact",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: cc-skill-strategic-compact\ndescription: \"Development skill from everything-claude-code\"\nrisk: none\nsource: community\ndate_added: \"2026-02-27\"\n---\n\n# cc-skill-strategic-compact\n\nDevelopment skill skill.\n\n## When to Use\nThis skill is applicable to execute the workflow or actions described in the overview.\n\n## Limitations\n- Use this skill only when the task clearly matches the scope described above.\n- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.\n- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.\n"
+    },
+    {
+      "path": "suggest-compact.sh",
+      "encoding": "utf8",
+      "content": "#!/bin/bash\n# Strategic Compact Suggester\n# Runs on PreToolUse or periodically to suggest manual compaction at logical intervals\n#\n# Why manual over auto-compact:\n# - Auto-compact happens at arbitrary points, often mid-task\n# - Strategic compacting preserves context through logical phases\n# - Compact after exploration, before execution\n# - Compact after completing a milestone, before starting next\n#\n# Hook config (in ~/.claude/settings.json):\n# {\n#   \"hooks\": {\n#     \"PreToolUse\": [{\n#       \"matcher\": \"Edit|Write\",\n#       \"hooks\": [{\n#         \"type\": \"command\",\n#         \"command\": \"~/.claude/skills/strategic-compact/suggest-compact.sh\"\n#       }]\n#     }]\n#   }\n# }\n#\n# Criteria for suggesting compact:\n# - Session has been running for extended period\n# - Large number of tool calls made\n# - Transitioning from research/exploration to implementation\n# - Plan has been finalized\n\n# Track tool call count in a user-owned state directory\nCOUNTER_DIR=\"${XDG_STATE_HOME:-$HOME/.local/state}/strategic-compact\"\nmkdir -p \"$COUNTER_DIR\"\nCOUNTER_FILE=\"$COUNTER_DIR/tool-count\"\nTHRESHOLD=${COMPACT_THRESHOLD:-50}\n\n# Initialize or increment counter\nif [ -f \"$COUNTER_FILE\" ]; then\n  count=$(cat \"$COUNTER_FILE\")\n  count=$((count + 1))\n  echo \"$count\" > \"$COUNTER_FILE\"\nelse\n  echo \"1\" > \"$COUNTER_FILE\"\n  count=1\nfi\n\n# Suggest compact after threshold tool calls\nif [ \"$count\" -eq \"$THRESHOLD\" ]; then\n  echo \"[StrategicCompact] $THRESHOLD tool calls reached - consider /compact if transitioning phases\" >&2\nfi\n\n# Suggest at regular intervals after threshold\nif [ \"$count\" -gt \"$THRESHOLD\" ] && [ $((count % 25)) -eq 0 ]; then\n  echo \"[StrategicCompact] $count tool calls - good checkpoint for /compact if context is stale\" >&2\nfi\n"
+    }
+  ]
+}

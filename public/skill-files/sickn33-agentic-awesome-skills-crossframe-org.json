@@ -1,0 +1,115 @@
+{
+  "id": "sickn33-agentic-awesome-skills-crossframe-org",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: crossframe-org\ndescription: \"Use when CrossFrame Suite routes explicit Chinese analysis of teams, projects, organizations, responsibility chains, feedback write-back, repair, or retrospectives.\"\ncategory: business\nrisk: safe\nsource: community\nsource_repo: xi-kari/crossframe-skill\nsource_type: community\ndate_added: 2026-06-16\nauthor: xi-kari\nlicense: MIT\nlicense_source: https://github.com/xi-kari/crossframe-skill/blob/main/LICENSE\ntools:\n  - \"Agent Skills\"\n  - Codex\n  - Claude\ntags:\n  - crossframe\n  - chinese\n  - organization\n  - retrospective\n  - repair\n---\n# CrossFrame Org\n\n\n\n## When to Use This Skill\n\n- Use when `crossframe-suite` routes an explicit CrossFrame task about teams, projects, organizations, responsibility chains, authority chains, feedback write-back, retrospectives, or repair.\n- Use when an organizational failure needs mechanism candidates rather than personality judgment.\n- Do not use independently unless the user explicitly names this sibling skill.\n\n## Packaged Source Note\n\nThis AAS-ready copy preserves the original CrossFrame skill body below. Chinese remains the canonical semantic layer; English metadata is only for discovery, installation, and repository review.\n\n## Limitations\n\n- The skill body is intentionally Chinese-canonical; English metadata is for discovery and does not replace the original Chinese terms.\n- Use only after explicit CrossFrame invocation or `crossframe-suite` routing; do not apply it as a generic default reasoning layer.\n- It structures analysis, drafting, and review, but does not replace source verification, domain expertise, or legal, medical, or financial judgment.\n\n> **本 skill 不独立触发。** 所有 CrossFrame 任务统一从 `crossframe-suite` 入口调度。用户无需直接调用本 skill；suite 根据路由规则在需要时自动加载。\n\n如果组织修复判断之后要写文章、沉淀案例、做辩论或评审输出，先读取 `../crossframe-suite/SKILL.md` 做总调度；本 skill 只负责团队、项目和组织修复专项。\n\nCrossFrame Org 是 `crossframe` 的平行组织修复 skill，不替代 canonical `crossframe`，也不复制 CrossFrame 全文。它把 CrossFrame 的事实闸、尺度闸、责任闸、机制候选和概念保真，转成团队、项目、组织场景里的可执行修复备忘录。\n\n中文是权威语义。英文只用于 skill id、文件名或必要的外部接口；不要把“承接、回流、责任链、授权链、修复副产品、停止错误加速”翻译后再反向理解。\n\n## 必须执行的顺序\n\n1. 判断输出类型：组织诊断备忘录、反馈写回方案、复盘改造建议、低风险试点计划，或组合输出。\n2. 读取 `../crossframe/SKILL.md`。\n3. 读取 `../crossframe/references/read-routing-map.md`，确定本次需要加载的 canonical protocol、worksheet、concept card 和模板。\n4. 如果组织判断触发高责任、公共制度、亲密关系、长期演化、框架治理、AI 现实验证、弱信号/不透明、无法退出、工具化、隐喻/来源透明或文章输出，必须追加读取 `../crossframe/references/continuity-bundles.md`，并按需使用 `../crossframe/worksheets/source-continuity-check.md`；未完成联读时只能降档。\n5. 复用 `../crossframe/templates/read-state-capsule.md` 规定的 `v5-read-state-capsule`，并在高责任、公共、AI/过程性产物、生命周期、无法退出主体或文章输出场景执行 `../crossframe/worksheets/source-anchor-integrity-check.md`。如果胶囊缺失，回到 `../crossframe/SKILL.md` 补齐；本 skill 不重新发明源路由。\n6. 读取 `references/org-routing-map.md`，选择本 skill 的专项协议、引用材料和模板。\n7. 按请求读取本地协议：\n   - 项目失败、团队反复卡住：`protocols/org-diagnostic-protocol.md`\n   - 反馈没有进入下一轮结构改变：`protocols/feedback-writeback-protocol.md`\n   - 复盘失真、复盘形式化：`protocols/retrospective-redesign-protocol.md`\n   - 需要行动、试点、改造计划：`protocols/low-risk-pilot-protocol.md`\n8. 按需读取本地引用：\n   - 责任链与授权链：`references/responsibility-authorization-chain.md`\n   - 中层承接耗竭：`references/middle-manager-depletion.md`\n   - 项目失败与复盘失真信号：`references/org-failure-signals.md`\n   - 反管理鸡汤与反甩锅护栏：`references/anti-chicken-soup-guardrails.md`\n9. 如果判断使用高风险 CrossFrame 概念，按 `../crossframe/references/read-routing-map.md` 读取对应概念卡，并用 `../crossframe/worksheets/concept-fidelity-check.md` 做概念保真检查。\n10. 先形成内部组织 intake，再按模板输出；不要展示完整内部工作表，除非用户要求审计或完整工作表。\n\n## 内部组织 intake\n\n每次输出前，至少在内部写清：\n\n- 组织对象：团队、项目、流程、会议、角色、跨部门接口或治理层。\n- 事实边界：用户给出的事实、推测、证据缺口、不能判断的部分。\n- 失败现象：延期、返工、沉默、复盘失真、需求漂移、跨部门断裂、加速后更乱。\n- 责任链：谁对结果负责，谁能改变条件，谁承担失败成本，谁被要求继续解释。\n- 授权链：谁有权限改规则、资源、优先级、时间表、接口和停止条件。\n- 反馈链：信号从哪里来，经过谁转译，写回到什么规则、资源、角色或时间表。\n- 中层承接负荷：中层是否在替组织吸收冲突、解释、补锅、翻译和情绪成本。\n- 机制候选：至少两个互相竞争的解释，不能把问题直接压成“执行力差”。\n- 停止条件：哪些动作一旦出现负反馈就必须暂停、降档或撤回。\n- 低风险试点：最小、可观察、可撤回、能写回结构的小动作。\n\n## 输出规则\n\n- 默认先给短的 `组织推理提纲`，再输出用户需要的备忘录或方案。\n- 输出必须落到现实组织变量：角色、权限、资源、时间、接口、节奏、证据、停止条件。\n- 输出不是文章；不要走 `crossframe-essay`，除非用户明确要求写文章。\n- 第一段要用普通组织语言说明：发生了什么、为什么重复、下一步先改什么。\n- 术语只能做后台映射，不能用“这是典型的 X”替代诊断。\n\n## 硬规则\n\n- 不准写管理鸡汤：不输出“加强沟通、提升主人翁意识、统一思想、提高执行力”这类无结构变量建议。\n- 不准把问题压给执行层：任何涉及基层、执行、个人努力的判断，都必须同时检查授权链、资源链、时间链和反馈写回。\n- 不准只有复盘没有写回：每个建议都要说明写回到什么规则、资源、角色、接口或时间表。\n- 不准只有加速没有停止条件：冲刺、加会、升级管理、强推进都必须有暂停、降档、撤回或保护边界。\n- 不准把中层耗竭解释成能力不足或抗压不够；先检查组织是否把翻译、缓冲、补锅和冲突成本长期压给中层。\n- 不准把复盘报告、OKR 更新、合规记录、道歉声明或会议纪要当成修复本身；它们最多是修复副产品。\n- 不准用组织诊断替代劳动法、合规、心理健康、医疗、安全或正式申诉处置。\n- 不准为了显得积极而建议扩大范围；先找最小可逆试点。\n\n## 默认输出\n\n使用 `templates/output-selector.md` 判断模板。常见默认：\n\n```text\n# 组织推理提纲\n\n# 组织诊断备忘录\n\n# 反馈写回方案\n\n# 低风险试点计划\n```\n\n如果用户只要求复盘改造，使用 `templates/retrospective-redesign-recommendation.md`。如果用户只要求一个行动实验，使用 `templates/low-risk-pilot-plan.md` 并附 `templates/stop-condition-card.md`。\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "interface:\n  display_name: \"CrossFrame Org\"\n  short_description: \"组织修复专项：责任链、授权链、反馈写回与低风险试点。\"\n  default_prompt: \"用 crossframe-org 诊断这个团队复盘为什么失效，并输出组织备忘录、反馈写回方案和带停止条件的低风险试点。\"\n"
+    },
+    {
+      "path": "evals/crossframe-org-smoke-tests.md",
+      "encoding": "utf8",
+      "content": "# CrossFrame Org Smoke Tests\n\n这些测试用于人工或 agent 检查 `crossframe-org` 是否真的输出组织修复备忘录，而不是管理鸡汤或文章。\n\n## 通用验收\n\n每次输出必须检查：\n\n- 是否先读取或明确遵循 `../crossframe/SKILL.md` 与 `../crossframe/references/read-routing-map.md`。\n- 是否输出组织诊断备忘录、反馈写回方案、复盘改造建议或低风险试点计划，而不是文章正文。\n- 是否区分事实、解释、证据缺口和判断档位。\n- 是否列出至少两个机制候选。\n- 是否写出责任链、授权链、成本链或说明为什么暂时无法判断。\n- 是否检查中层承接耗竭，尤其是无授权补锅、翻译和缓冲。\n- 是否把反馈写回到规则、资源、角色、接口或时间表。\n- 是否有停止、降档、撤回或保护现场条件。\n- 是否避免人格审判、文化标签和执行层甩锅。\n\n## 测试 1：管理鸡汤防护\n\nPrompt：\n\n> 用 crossframe-org 给一个总延期的团队写管理建议。\n\n必须看到：\n\n- 不使用“加强沟通、提升执行力、统一思想”作为主要建议。\n- 至少一个结构变量：范围、资源、优先级、接口、时间表、停止条件。\n- 一个组织诊断备忘录或低风险试点计划。\n\n失败判定：\n\n- 输出主要是激励、文化、态度、主动性。\n- 只要求团队多沟通、多汇报、多负责。\n\n## 测试 2：不把问题压给执行层\n\nPrompt：\n\n> 基层执行不主动，风险也不提前说，怎么压实他们责任？\n\n必须看到：\n\n- 先检查风险反馈是否有保护和写回。\n- 同时检查授权链、资源链、时间链。\n- 区分执行责任与条件责任。\n- 如果执行层无权改变条件，不建议单向追责。\n\n失败判定：\n\n- 直接建议考核、追责、加日报、加会。\n- 没有问谁能冻结范围、改优先级、补资源或授权暂停。\n\n## 测试 3：没有反馈写回\n\nPrompt：\n\n> 我们复盘都写了，也有改进项，但下一轮一点没变。\n\n必须看到：\n\n- 明确说复盘材料可能是修复副产品，不是修复本身。\n- 写出反馈从来源到授权节点再到结构落点的路径。\n- 至少给一个写回动作，落到规则、资源、角色、接口或时间表。\n- 给下一轮检查证据。\n\n失败判定：\n\n- 只建议“完善闭环、跟踪改进项”。\n- 没有结构落点和复查证据。\n\n## 测试 4：没有停止条件\n\nPrompt：\n\n> 项目已经乱了，领导想每天开会冲刺，把进度追回来。\n\n必须看到：\n\n- 先识别错误加速风险。\n- 输出停止条件卡或在试点计划中写明暂停、降档、撤回条件。\n- 检查中层和执行层是否会被进一步透支。\n- 说明恢复推进需要补齐哪个授权或结构变量。\n\n失败判定：\n\n- 直接支持每天开会冲刺。\n- 没有停止条件。\n- 没有说明继续加速可能放大什么问题。\n\n## 测试 5：复盘失真样例\n\nPrompt：\n\n> 团队越复盘越会写漂亮材料，但真实问题没人说。\n\n必须看到：\n\n- 复盘改造建议，不是文章。\n- 保护事实和反馈者风险。\n- 删除表演性环节，增加授权主体在场。\n- 每轮只产出一个结构改动、一个证据指标、一个复查时间。\n\n## 测试 6：中层耗竭样例\n\nPrompt：\n\n> 中层主管每天协调到很晚，但上面不给资源，下面觉得他只会施压。\n\n必须看到：\n\n- 不把中层问题写成领导力不足。\n- 写明中层承接了哪些无授权成本。\n- 给出授权补齐、接口减少、停止承接或低风险试点。\n- 保护信息真实性和恢复时间。\n\n## 胶囊与文章技法边界回归\n\nPrompt：用 crossframe-org 做一次项目失败复盘，再转成组织复盘文章。\n\n必须看到：\n\n- 复用 `v5-read-state-capsule`，并在文章输出前执行源锚点完整性检查。\n- 组织判断仍保留责任链、授权链、反馈写回、停止条件和低风险试点。\n- 文章技法只能改变复盘文章的段落动作，不能把责任链写成管理鸡汤，也不能为了余味删除停止条件。\n- 若材料不足以支持强组织处置，必须降档为复盘假设或低条件试点。\n"
+    },
+    {
+      "path": "examples/bad-output-vs-good-output.md",
+      "encoding": "utf8",
+      "content": "# 失败样例与修正\n\n## 用户输入\n\n团队项目总延期，复盘也没有效果，帮我给管理建议。\n\n## 失败输出\n\n团队需要加强沟通，提升执行力，增强主人翁意识。管理者要压实责任，建立更完善的复盘闭环，每周开会同步风险，确保所有成员对目标保持一致。大家要主动发现问题、及时解决问题，把复盘结果落实到行动中。\n\n## 为什么失败\n\n- 管理鸡汤：全是态度词，没有组织变量。\n- 把问题压给执行层：要求成员更主动，没有检查授权链。\n- 没有反馈写回：没有写明改到规则、资源、角色、接口或时间表。\n- 没有停止条件：建议每周加会，未说明何时暂停或撤回。\n- 没有中层保护：没有识别协调成本可能继续压给中层。\n\n## 合格输出片段\n\n# 组织诊断备忘录\n\n## 一句话判断\n\n当前更像是复盘没有进入下一轮结构改变，而不是团队不知道要反思。先不要追加更密集会议，先查反馈为什么没有写回。\n\n## 责任链、授权链、成本链\n\n- 结果责任：项目 owner 与执行团队承担延期。\n- 条件授权：范围冻结、优先级调整、资源补偿和停止条件可能不在执行层。\n- 成本链：中层和执行层承担返工、解释和加班成本。\n\n## 反馈写回动作\n\n选择一个重复延期原因，把它写回到时间表和接口规则：需求冻结日之后的新增需求必须由授权 owner 在“延期、删范围、加资源”三选一中明确取舍。\n\n## 停止条件\n\n如果两周内新增会议只增加汇报材料、没有减少需求变更和返工，停止加会，转查授权链。\n"
+    },
+    {
+      "path": "examples/middle-manager-depletion-case.md",
+      "encoding": "utf8",
+      "content": "# 样例：中层承接耗竭\n\n## 用户输入\n\n一个部门主管越来越累，上面要求结果，下面抱怨需求乱，跨部门又总是临时改。主管每天开会协调，但没有权力砍需求或延时间。\n\n## 应读取\n\n- `../crossframe/references/concept-cards/structure-process-group.md`\n- `../crossframe/references/concept-cards/repair-byproduct.md`\n- `references/middle-manager-depletion.md`\n- `references/responsibility-authorization-chain.md`\n- `templates/org-diagnostic-memo.md`\n\n## 输出片段\n\n# 组织诊断备忘录\n\n## 一句话判断\n\n这个主管的耗竭不是单纯工作量大，而是组织把“范围变化、跨部门冲突、下行情绪、上行解释”集中压给他，却没有给他改变范围、时间和接口的授权。\n\n## 中层承接负荷\n\n- 他承担了结果解释、团队安抚、跨部门翻译和临时补救。\n- 他缺少需求冻结、延期声明、优先级降档和接口重设的授权。\n- 如果继续要求他“多协调”，组织会短期维持运转，长期损失真实风险上报和团队信任。\n\n## 反馈写回点\n\n把跨部门临时变更写回到接口规则：超过某个时点的需求变更必须由授权 owner 同时给出延期、删减范围或资源补偿，不能只交给主管协调。\n"
+    },
+    {
+      "path": "examples/project-failure-case.md",
+      "encoding": "utf8",
+      "content": "# 样例：项目失败\n\n## 用户输入\n\n项目连续三轮延期。每次都说是需求变了、沟通不及时、执行不够主动。项目经理一直在协调，团队开始不愿意报风险。请用 crossframe-org 做组织诊断备忘录。\n\n## 应读取\n\n- `../crossframe/SKILL.md`\n- `../crossframe/references/read-routing-map.md`\n- `protocols/org-diagnostic-protocol.md`\n- `references/responsibility-authorization-chain.md`\n- `references/org-failure-signals.md`\n- `templates/org-diagnostic-memo.md`\n\n## 输出片段\n\n# 组织推理提纲\n\n- 诊断对象：项目延期的决策和反馈写回流程。\n- 事实边界：已知连续三轮延期、需求变化、项目经理持续协调、团队不愿报风险；未知需求变更记录和授权规则。\n- 机制候选：目标漂移、授权断裂、反馈写回失败。\n- 判断档位：开放断言到组织诊断备忘录之间，需补需求变更和决策记录。\n\n# 组织诊断备忘录\n\n## 一句话判断\n\n这个项目可能不是单纯执行不够主动，而是“承担结果的人没有足够权限阻止需求漂移，知道风险的人也看不到反馈被写回下一轮”。\n\n## 责任链、授权链、成本链\n\n- 结果责任：项目经理和执行团队承担延期结果。\n- 条件授权：需求冻结、优先级调整和资源增补可能在更高层或业务侧。\n- 解释与补救成本：项目经理持续协调，团队逐渐停止报风险。\n- 当前错位：能改变范围的人未必承担延期成本，承担延期成本的人未必能改变范围。\n\n## 先停什么\n\n先停止把下一轮延期预防写成“团队更主动沟通”。如果没有需求冻结权和风险暂停权，更主动只会让项目经理继续吸收成本。\n"
+    },
+    {
+      "path": "examples/retrospective-distortion-case.md",
+      "encoding": "utf8",
+      "content": "# 样例：复盘失真\n\n## 用户输入\n\n我们每次复盘都很认真，材料也越来越规范，但下一轮还是同样的问题。大家现在都知道该怎么写复盘，不知道该怎么改事情。\n\n## 应读取\n\n- `../crossframe/references/concept-cards/repair-byproduct.md`\n- `../crossframe/references/concept-cards/evidence-cost.md`\n- `protocols/retrospective-redesign-protocol.md`\n- `references/anti-chicken-soup-guardrails.md`\n- `templates/retrospective-redesign-recommendation.md`\n\n## 输出片段\n\n# 复盘改造建议\n\n## 当前复盘为什么失真\n\n复盘正在从修复回路退化成可交付文本：材料越来越规范，但没有证据显示它改动了规则、资源、角色、接口或时间表。团队学会的是“如何完成复盘”，不是“如何让下一轮少掉一个重复失败”。\n\n## 删除\n\n- 删除泛化表态，例如“加强沟通、提高协同、压实责任”。\n- 删除无授权承诺，例如让执行层承诺解决需要上层取舍的问题。\n- 删除全员大复盘中的人格化归因环节。\n\n## 增加\n\n- 授权主体在场：能改范围、优先级、资源和停止条件的人必须对一个取舍表态。\n- 结构写回动作：本轮只选择一个重复问题，写回一个规则或时间表变化。\n- 证据指标：下一轮检查该变化是否真的减少返工、等待或风险沉默。\n"
+    },
+    {
+      "path": "protocols/feedback-writeback-protocol.md",
+      "encoding": "utf8",
+      "content": "# 反馈写回协议\n\n用于基层反馈无效、复盘没有改变下一轮、问题被看见但组织不变的场景。\n\n## 定义\n\n反馈写回不是收集意见，也不是会议纪要。反馈只有写回到规则、资源、角色、接口、时间表或停止条件，才进入组织修复回路。\n\n## 写回路径\n\n1. 信号来源：谁发出反馈，反馈来自结果、过程、客户、基层、跨部门接口还是风险事件。\n2. 信号保护：反馈者是否会因说出问题承担额外成本。\n3. 转译节点：谁把反馈转成组织语言，转译是否压扁了坏消息。\n4. 授权节点：谁能改变条件，是否在场。\n5. 结构落点：反馈写回到什么具体变量。\n6. 证据形式：下一轮用什么行为或结果证明写回发生。\n7. 复查时间：何时检查，谁检查，失败如何撤回或升级。\n\n## 五种有效写回\n\n- 规则写回：改验收口径、需求入口、升级路径、风险阈值。\n- 资源写回：增加时间、人手、预算、工具、培训或外部支持。\n- 角色写回：改变 owner、审批人、接口人、替补人或授权边界。\n- 接口写回：改变跨部门交接、响应时限、信息格式和默认决策规则。\n- 时间表写回：冻结范围、减少并行、设置恢复窗口和复查节点。\n\n## 失败模式\n\n- 反馈只变成“大家要重视”。\n- 反馈只变成执行层改进项。\n- 反馈只变成更密集汇报。\n- 反馈者需要继续解释，授权主体不用改变。\n- 没有下一轮信号，无法判断写回是否发生。\n\n## 输出要求\n\n每条写回建议必须包含：反馈来源、结构落点、授权 owner、执行 owner、证据、复查时间、失败处理。\n"
+    },
+    {
+      "path": "protocols/low-risk-pilot-protocol.md",
+      "encoding": "utf8",
+      "content": "# 低风险试点协议\n\n用于用户需要行动计划、组织改造试点、先做小步验证，或当前组织正在错误加速的场景。\n\n## 原则\n\n低风险试点必须小、短、可观察、可撤回。它不是“先随便做”，而是在证据不足或授权不足时，用最小动作验证机制候选。\n\n## 试点设计\n\n1. 选择一个重复问题：不要同时改文化、流程、绩效、会议和组织架构。\n2. 选择一个机制候选：试点要能区分至少两个机制中的一个。\n3. 明确授权 owner：谁批准范围、资源、时间和停止条件。\n4. 明确执行 owner：谁执行动作，但不让执行 owner 独自背结果。\n5. 写出结构改动：规则、资源、角色、接口或时间表中的一个。\n6. 设定观察指标：用行为证据，不用态度表态。\n7. 设定停止条件：何时暂停、降档、撤回或保护现场。\n8. 设定写回方式：试点结果如何进入下一轮制度或流程。\n\n## 停止错误加速\n\n如果出现以下情况，先输出停止条件卡，再给试点：\n\n- 问题没有定位，却要求更快交付。\n- 复盘没有写回，却要求更大范围复盘。\n- 中层已过载，却要求中层继续协调。\n- 执行层无授权，却要求执行层承诺结果。\n- 指标变坏，却用更多汇报证明管理更积极。\n\n## 输出要求\n\n低风险试点必须包含：试点对象、机制假设、动作、授权、资源、时间盒、观察指标、停止条件、撤回方式、写回方式。\n"
+    },
+    {
+      "path": "protocols/org-diagnostic-protocol.md",
+      "encoding": "utf8",
+      "content": "# 组织诊断协议\n\n用于项目失败、团队反复卡住、组织修复无效、跨部门协同断裂等请求。\n\n## 步骤\n\n1. 界定诊断对象：不要把整个组织当成对象，先定位项目、流程、接口、会议、角色或决策链。\n2. 分离事实与解释：把用户看到的现象、用户推测的原因、缺失证据分开。\n3. 画三条链：责任链、授权链、成本链。\n4. 定位反馈写回点：本轮问题有没有改到下一轮的规则、资源、角色、接口或时间表。\n5. 列出至少两个机制候选：\n   - 一个来自执行层行为也可以，但不能只有执行层行为。\n   - 至少一个必须检查授权、资源、目标或接口。\n6. 检查中层承接负荷：中层是否在无授权地吸收组织矛盾。\n7. 判断档位：开放断言、组织诊断备忘录、低条件行动、需要命题验证、暂缓判断。\n8. 给出下一步：观察项、写回动作、低风险试点或停止错误加速。\n\n## 必须输出的诊断变量\n\n- 重复失败是什么。\n- 当前解释为什么不足。\n- 哪条链断了或错位。\n- 谁有改变条件的权限。\n- 反馈应写回哪里。\n- 哪个动作应该先停或降档。\n\n## 禁止跳步\n\n- 不先问“谁没做好”，先问“谁能改变条件”。\n- 不先建议“再复盘一次”，先看上次复盘有没有写回。\n- 不把中层继续承接当成默认解法。\n- 不把“加速推进”当成无条件正向动作。\n"
+    },
+    {
+      "path": "protocols/retrospective-redesign-protocol.md",
+      "encoding": "utf8",
+      "content": "# 复盘改造协议\n\n用于复盘失真、复盘形式化、越复盘越没有真实反馈的场景。\n\n## 核心判断\n\n复盘不是修复本身。复盘的合格产物不是漂亮文本，而是下一轮可观察的结构变化。会议纪要、反思发言、改进项清单、OKR 更新和道歉声明都可能只是修复副产品。\n\n## 改造步骤\n\n1. 确定复盘对象：只选一个重复问题，不把复盘扩大成全员情绪宣泄。\n2. 保护事实：区分事实、推测、责任解释和证据缺口。\n3. 让授权主体在场：能改资源、范围、优先级、接口和停止条件的人必须进入复盘。\n4. 降低表演性：不要让复盘评价个人忠诚、态度或自我批评姿态。\n5. 限定产物：每次复盘只产出一个结构改动、一个证据指标、一个复查时间。\n6. 检查副产品：报告、会议纪要和改进项是否替代真实改动。\n7. 设置停止条件：如果复盘连续两轮不能写回结构，停止扩大复盘，改查授权链。\n\n## 复盘四问\n\n- 这次失败中，什么条件没有被授权改变。\n- 谁知道问题，但无法改变下一轮结构。\n- 哪个复盘结论如果没有资源、权限或时间表就只是口号。\n- 下一轮什么证据能证明修复发生，而不是只证明大家更会写复盘。\n\n## 输出要求\n\n复盘改造建议必须给出：\n\n- 保留什么复盘环节。\n- 删除什么表演性环节。\n- 增加什么授权在场机制。\n- 产出什么写回动作。\n- 什么情况下停止复盘扩张。\n"
+    },
+    {
+      "path": "references/anti-chicken-soup-guardrails.md",
+      "encoding": "utf8",
+      "content": "# 反管理鸡汤护栏\n\nCrossFrame Org 的输出要能改变组织变量，不提供空泛激励。\n\n## 失败表达\n\n以下表达通常不合格，除非后面补了具体结构变量：\n\n- 加强沟通。\n- 提升执行力。\n- 增强主人翁意识。\n- 统一思想。\n- 建立闭环。\n- 压实责任。\n- 提高协同效率。\n- 强化复盘机制。\n- 管理者要更有担当。\n- 团队要更主动。\n\n## 合格改写\n\n- “加强沟通”改为：固定决策入口、明确谁在什么时限内回复、未回复时谁有暂停权。\n- “提升执行力”改为：冻结范围、减少并行任务、明确验收口径、授权 owner 拒绝插单。\n- “建立闭环”改为：每条反馈写回到规则、资源、角色、接口或时间表，并在下一轮检查证据。\n- “压实责任”改为：结果 owner 与授权 owner 同表列出，避免只让执行层承担。\n- “强化复盘”改为：复盘只保留一个重复问题，产出一个结构改动和一个撤回条件。\n\n## 输出前检查\n\n- 建议里是否有 owner、授权、资源、时间盒、证据和停止条件。\n- 是否把复杂问题压成执行层态度问题。\n- 是否把报告、会议、口号当成修复本身。\n- 是否给了组织可以验证的下一轮信号。\n- 是否允许证据推翻当前判断。\n"
+    },
+    {
+      "path": "references/middle-manager-depletion.md",
+      "encoding": "utf8",
+      "content": "# 中层承接耗竭\n\n中层承接耗竭不是“抗压能力差”，而是组织把翻译、缓冲、补锅、冲突吸收和反馈转译长期压给一个层级，却不给相应授权、资源和停止权。\n\n## 常见表现\n\n- 中层同时向上解释风险、向下解释压力、横向协调接口。\n- 需求变化后，中层负责安抚团队，但不能改目标、时间或资源。\n- 复盘时中层被要求“拿方案”，但真正的授权主体不改变条件。\n- 团队越来越依赖个别中层的个人信誉维持运转。\n- 基层把中层视为压力来源，高层把中层视为执行问题来源。\n- 中层开始压缩信息：上报时去掉坏消息，下传时去掉不确定性。\n\n## 需要保护的变量\n\n- 信息真实性：中层不能因为怕追责而过滤坏消息。\n- 恢复时间：中层需要从连续补锅中恢复，而不是用更密集会议替代休息。\n- 授权边界：中层必须知道哪些事可以决定，哪些事需要升级。\n- 退出权：遇到超出授权的任务，中层可以暂停承接并要求条件补齐。\n- 后备承接者：不能让组织记忆只绑在少数人身上。\n\n## 修复方向\n\n- 把“请中层想办法”改成“补齐中层要改变条件所需的授权”。\n- 把“中层多沟通”改成“上层对范围、优先级、资源做明确取舍”。\n- 把“中层背结果”改成“授权主体对条件失败共同负责”。\n- 把“中层继续协调”改成“减少接口数量、固定决策入口、设停止条件”。\n\n## 失败提示\n\n如果输出把中层耗竭写成“要提升领导力、抗压能力、情绪管理”，但没有检查授权链和成本链，应判为失败。\n"
+    },
+    {
+      "path": "references/org-failure-signals.md",
+      "encoding": "utf8",
+      "content": "# 组织失败信号\n\n这些信号用于帮助定位组织修复对象，不是人格标签。\n\n## 高成本信号\n\n- 同一类延期、返工、跨部门等待连续出现，但复盘结论每次不同。\n- 会议纪要越来越完整，下一轮工作方式却没有可见变化。\n- 基层反馈只停留在抱怨、表态、情绪安抚或被要求“更主动沟通”。\n- 中层不断加班协调、翻译、补锅，但没有权限改优先级、资源和接口。\n- 领导层要求更快、更紧、更透明，却没有减少任务、增加资源或授权停止。\n- 项目失败后只追加流程、审批、汇报频率，而不处理决策入口和授权边界。\n- 复盘后产生“改进项清单”，但没有 owner 的权限、完成定义、证据和复查时间。\n\n## 复盘失真信号\n\n- 复盘主要产出是可以上交的文本，而不是下一轮结构改变。\n- 关键责任主体缺席，留下执行层解释“为什么没有做好”。\n- 说得最多的人没有改变条件的权限，能改变条件的人只听汇报。\n- 复盘把结构问题改写成态度、沟通、意识、配合、主动性。\n- 负面信号被称为“个别情况”，但没有抽样、追踪或撤回条件。\n\n## 项目失败的机制候选库\n\n候选机制应互相竞争，不要一次性全塞进输出。\n\n- 目标漂移：项目目标在执行中改变，但计划、资源和评价口径没有同步。\n- 授权断裂：承担结果的人没有改变范围、资源、优先级或接口的权限。\n- 反馈写回失败：问题被看见，却没有改到规则、角色、接口、时间表或资源。\n- 复盘副产品化：报告、清单、道歉、OKR 更新替代了真实修复。\n- 中层过载：组织把冲突、解释、翻译、补救成本集中压给中层。\n- 错误加速：问题还没定位就加会、冲刺、追责、升级管理，导致噪音更多。\n- 证据低成本化：自评、汇报、漂亮材料替代了可审计行为和结果证据。\n\n## 使用边界\n\n- 不凭单次失败给人格或文化定性。\n- 不把沉默直接解释为认同；沉默可能来自无授权、无保护或反馈无用。\n- 不把努力和加班当成修复证据；它们可能是组织未写回的成本外包。\n- 不把“大家都知道问题”当成闭环；知道问题不等于改动结构。\n"
+    },
+    {
+      "path": "references/org-routing-map.md",
+      "encoding": "utf8",
+      "content": "# CrossFrame Org 读取路由图\n\n本文件只决定组织专项材料怎么读。CrossFrame 本体仍由 `../crossframe/SKILL.md` 与 `../crossframe/references/read-routing-map.md` 决定。\n\n## 基础路由\n\n| 用户请求 | 先读 canonical | 本 skill 必读 | 输出模板 |\n| --- | --- | --- | --- |\n| 项目失败、延期、反复返工 | `../crossframe/protocols/diagnosis-protocol.md`、`../crossframe/references/concept-cards/mechanism-candidates.md` | `protocols/org-diagnostic-protocol.md`、`references/org-failure-signals.md`、`references/responsibility-authorization-chain.md` | `templates/org-diagnostic-memo.md` |\n| 复盘失真、复盘越做越假 | `../crossframe/references/concept-cards/repair-byproduct.md`、`../crossframe/references/concept-cards/evidence-cost.md` | `protocols/retrospective-redesign-protocol.md`、`references/org-failure-signals.md`、`references/anti-chicken-soup-guardrails.md` | `templates/retrospective-redesign-recommendation.md` |\n| 基层反馈没人听、问题无法写回 | `../crossframe/references/concept-cards/chengjie-huiliu.md`、`../crossframe/references/concept-cards/responsibility-chain.md` | `protocols/feedback-writeback-protocol.md`、`references/responsibility-authorization-chain.md` | `templates/feedback-writeback-plan.md` |\n| 中层疲惫、被夹在中间、长期补锅 | `../crossframe/references/concept-cards/structure-process-group.md`、`../crossframe/references/concept-cards/repair-byproduct.md` | `references/middle-manager-depletion.md`、`protocols/org-diagnostic-protocol.md` | `templates/org-diagnostic-memo.md` |\n| 想要组织改造、试点、行动计划 | `../crossframe/protocols/low-condition-action-protocol.md`、`../crossframe/references/concept-cards/low-condition-action.md` | `protocols/low-risk-pilot-protocol.md`、`references/responsibility-authorization-chain.md` | `templates/low-risk-pilot-plan.md`、`templates/stop-condition-card.md` |\n| 冲刺、加速、升级管理后更乱 | `../crossframe/references/concept-cards/judgment-grades.md`、`../crossframe/references/concept-cards/evidence-cost.md` | `protocols/low-risk-pilot-protocol.md`、`references/anti-chicken-soup-guardrails.md` | `templates/stop-condition-card.md` |\n\n## 高风险概念补读\n\n- 复盘、修复、道歉、改进项、合规材料：读 `../crossframe/references/concept-cards/repair-byproduct.md`。\n- 责任、背锅、负责人、Owner、RACI：读 `../crossframe/references/concept-cards/responsibility-chain.md`。\n- 反馈、回流、写回、闭环：读 `../crossframe/references/concept-cards/chengjie-huiliu.md`。\n- 中层耗竭、结构负荷、行动承接：读 `../crossframe/references/concept-cards/structure-process-group.md`。\n- 弱信号、汇报、报告、自评、复盘记录：读 `../crossframe/references/concept-cards/evidence-cost.md`。\n- 试点、低风险行动、可撤回动作：读 `../crossframe/references/concept-cards/low-condition-action.md`。\n- 停止条件、能否强推、能否升级：读 `../crossframe/references/concept-cards/judgment-grades.md`。\n\n## 输出选择\n\n- 用户要“怎么看、诊断、为什么”：默认 `组织诊断备忘录`。\n- 用户要“怎么改、怎么闭环”：默认 `反馈写回方案`。\n- 用户要“复盘怎么做”：默认 `复盘改造建议`。\n- 用户要“先试一下、低风险推进”：默认 `低风险试点计划`。\n- 用户情绪很急、组织正在加速：先输出 `停止条件卡`，再给低风险试点。\n"
+    },
+    {
+      "path": "references/responsibility-authorization-chain.md",
+      "encoding": "utf8",
+      "content": "# 责任链与授权链\n\n组织修复的核心问题通常不是“谁态度不好”，而是谁对结果负责、谁有权限改变条件、谁在承担没有权限的成本。\n\n## 三条链\n\n### 责任链\n\n- 结果责任：谁必须对结果、质量、延期、风险或损失负责。\n- 条件责任：谁负责提供资源、范围边界、优先级、接口和决策。\n- 解释责任：谁被要求解释失败、安抚冲突、翻译需求和证明努力。\n- 修复责任：谁负责把反馈写回下一轮结构。\n\n### 授权链\n\n- 范围授权：谁可以删减目标、冻结需求、拒绝插单。\n- 资源授权：谁可以增加人手、预算、时间、工具或外部支持。\n- 优先级授权：谁可以让低优先事项暂停。\n- 接口授权：谁可以改变跨团队交接方式、SLA 或决策入口。\n- 停止授权：谁可以宣布暂停、降档、撤回、保护现场。\n\n### 成本链\n\n- 谁承担加班、返工、解释、情绪劳动和信任损耗。\n- 谁因为失败失去名誉、机会、评价或资源。\n- 谁从模糊授权中受益，或避免暴露真实取舍。\n\n## 诊断问题\n\n1. 承担结果的人是否拥有足够授权。\n2. 拥有授权的人是否承担可见责任。\n3. 被要求解释的人是否能改变结构条件。\n4. 反馈是否能进入下一轮规则、资源、角色、接口或时间表。\n5. 组织是否把高层取舍失败包装成执行层配合不足。\n6. 中层是否成为事实上的“无授权修复器”。\n\n## 输出要求\n\n- 每个建议都要写明 owner，但 owner 不是背锅人；必须同时写明 owner 拥有什么授权。\n- 如果某建议需要上级授权，直接写出授权请求，而不是把动作写成执行层自我改进。\n- 如果授权无法获得，建议要降档为低风险试点、观察项或停止条件。\n"
+    },
+    {
+      "path": "templates/feedback-writeback-plan.md",
+      "encoding": "utf8",
+      "content": "# 反馈写回方案模板\n\n```text\n# 反馈写回方案\n\n## 反馈来源\n\n- 信号来自：\n- 反馈者风险：\n- 需要保护的事实：\n\n## 写回路径\n\n| 节点 | 当前状态 | 需要改变 |\n| --- | --- | --- |\n| 转译节点 |  |  |\n| 授权节点 |  |  |\n| 结构落点 |  |  |\n| 证据形式 |  |  |\n| 复查时间 |  |  |\n\n## 写回动作\n\n1. 规则写回：\n2. 资源写回：\n3. 角色或接口写回：\n4. 时间表写回：\n\n## Owner 与授权\n\n- 授权 owner：\n- 执行 owner：\n- 不能让谁单独背结果：\n\n## 下一轮检查\n\n- 成功信号：\n- 失败信号：\n- 失败后的暂停、降档或升级方式：\n```\n"
+    },
+    {
+      "path": "templates/low-risk-pilot-plan.md",
+      "encoding": "utf8",
+      "content": "# 低风险试点计划模板\n\n```text\n# 低风险试点计划\n\n## 试点对象\n\n- 重复问题：\n- 试点边界：\n- 不纳入本轮的内容：\n\n## 机制假设\n\n- 要验证的候选机制：\n- 竞争机制：\n- 什么证据会推翻当前假设：\n\n## 试点动作\n\n- 结构改动：\n- 授权 owner：\n- 执行 owner：\n- 所需资源：\n- 时间盒：\n\n## 观察指标\n\n- 行为证据：\n- 结果证据：\n- 中层负荷变化：\n- 基层反馈是否写回：\n\n## 写回方式\n\n试点结果将写回到规则、资源、角色、接口或时间表中的哪一项。\n\n## 撤回方式\n\n试点失败时如何暂停、降档、撤回或保护现场。\n```\n"
+    },
+    {
+      "path": "templates/org-diagnostic-memo.md",
+      "encoding": "utf8",
+      "content": "# 组织诊断备忘录模板\n\n```text\n# 组织推理提纲\n\n- 诊断对象：\n- 事实边界：\n- 尺度窗口：\n- 机制候选：\n- 判断档位：\n- 本次读取：\n- 下一步：\n\n# 组织诊断备忘录\n\n## 一句话判断\n\n用普通组织语言说明重复失败的关键机制，不使用术语开头。\n\n## 已知事实与证据缺口\n\n- 已知事实：\n- 仍缺证据：\n- 暂不判断：\n\n## 责任链、授权链、成本链\n\n- 结果责任：\n- 条件授权：\n- 解释与补救成本：\n- 当前错位：\n\n## 机制候选\n\n1. 候选 A：\n2. 候选 B：\n3. 候选 C：\n\n说明哪个候选更强，哪些证据会推翻它。\n\n## 中层承接负荷\n\n写明中层是否正在无授权承接，以及需要保护什么变量。\n\n## 反馈写回点\n\n把问题写回到规则、资源、角色、接口或时间表中的至少一个。\n\n## 先停什么\n\n列出一个应暂停、降档或撤回的错误加速动作。\n\n## 下一步低风险动作\n\n给出一个小试点或观察项，说明 owner、授权、证据和时间盒。\n```\n"
+    },
+    {
+      "path": "templates/output-selector.md",
+      "encoding": "utf8",
+      "content": "# 输出选择器\n\n根据用户请求选择最小充分输出。\n\n## 诊断型\n\n用户问“为什么、怎么看、问题在哪、是不是组织问题”：\n\n- 先输出 `组织推理提纲`。\n- 再使用 `org-diagnostic-memo.md`。\n- 如果出现复盘或反馈，附一个最短 `feedback-writeback-plan.md` 摘要。\n\n## 改造型\n\n用户问“怎么改、怎么闭环、怎样让反馈有效”：\n\n- 先输出 `组织推理提纲`。\n- 再使用 `feedback-writeback-plan.md`。\n- 需要试点时追加 `low-risk-pilot-plan.md`。\n\n## 复盘型\n\n用户问“复盘怎么做、为什么越复盘越假”：\n\n- 先输出 `组织推理提纲`。\n- 再使用 `retrospective-redesign-recommendation.md`。\n- 必须写出停止复盘扩张的条件。\n\n## 行动型\n\n用户问“先试什么、给个计划、低风险推进”：\n\n- 先输出 `组织推理提纲`。\n- 再使用 `low-risk-pilot-plan.md`。\n- 必须附 `stop-condition-card.md`。\n"
+    },
+    {
+      "path": "templates/retrospective-redesign-recommendation.md",
+      "encoding": "utf8",
+      "content": "# 复盘改造建议模板\n\n```text\n# 复盘改造建议\n\n## 当前复盘为什么失真\n\n说明复盘是哪里变成表演、汇报、副产品或甩锅。\n\n## 保留\n\n- 保留的事实还原环节：\n- 保留的风险记录：\n- 保留的用户或基层信号：\n\n## 删除\n\n- 删除的表态环节：\n- 删除的无授权承诺：\n- 删除的泛化改进项：\n\n## 增加\n\n- 授权主体在场：\n- 结构写回动作：\n- 证据指标：\n- 复查时间：\n\n## 复盘产物限制\n\n本轮只允许产出一个结构改动、一个观察指标、一个停止条件。\n\n## 停止条件\n\n如果连续两轮复盘不能改动规则、资源、角色、接口或时间表，停止扩大复盘，转查授权链和责任链错位。\n```\n"
+    },
+    {
+      "path": "templates/stop-condition-card.md",
+      "encoding": "utf8",
+      "content": "# 停止条件卡模板\n\n```text\n# 停止条件卡\n\n## 先不要继续加速的原因\n\n用一句人话说明：继续加速会放大哪个未定位问题。\n\n## 立即停止或降档\n\n- 暂停：\n- 降档：\n- 保留：\n\n## 触发停止的信号\n\n- 中层负荷：\n- 质量或返工：\n- 反馈失真：\n- 授权缺口：\n- 风险外溢：\n\n## 恢复推进的条件\n\n- 哪个授权补齐：\n- 哪个结构变量改动：\n- 哪个证据出现：\n- 谁有权恢复：\n```\n"
+    }
+  ]
+}

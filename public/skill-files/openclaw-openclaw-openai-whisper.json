@@ -1,0 +1,10 @@
+{
+  "id": "openclaw-openclaw-openai-whisper",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: openai-whisper\ndescription: \"Local speech-to-text with the Whisper CLI (no API key).\"\nhomepage: https://openai.com/research/whisper\nmetadata:\n  {\n    \"openclaw\":\n      {\n        \"emoji\": \"🎤\",\n        \"requires\": { \"bins\": [\"whisper\"] },\n        \"install\":\n          [\n            {\n              \"id\": \"brew\",\n              \"kind\": \"brew\",\n              \"formula\": \"openai-whisper\",\n              \"bins\": [\"whisper\"],\n              \"label\": \"Install OpenAI Whisper (brew)\",\n            },\n          ],\n      },\n  }\n---\n\n# Whisper (CLI)\n\nUse `whisper` to transcribe audio locally.\n\nQuick start\n\n- `whisper /path/audio.mp3 --model medium --output_format txt --output_dir .`\n- `whisper /path/audio.m4a --task translate --output_format srt`\n\nNotes\n\n- Models download to `~/.cache/whisper` on first run.\n- `--model` defaults to `turbo` on this install.\n- Use smaller models for speed, larger for accuracy.\n"
+    }
+  ]
+}

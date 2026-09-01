@@ -1,0 +1,15 @@
+{
+  "id": "sickn33-agentic-awesome-skills-macos-reverse",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: macos-reverse\ndescription: \"Authorized macOS and Mach-O reverse engineering: codesign inspection, Objective-C/Swift recovery, endpoint-security surfaces, and Apple-platform malware analysis.\"\nrisk: safe\nsource: \"https://github.com/zhaoxuya520/reverse-skill\"\nsource_repo: \"zhaoxuya520/reverse-skill\"\nsource_type: community\ndate_added: \"2026-08-25\"\nlicense: \"MIT\"\nlicense_source: \"https://github.com/zhaoxuya520/reverse-skill/blob/main/LICENSE\"\n---\n# macOS / Mach-O Reverse Engineering\n## When to Use\n\n- Analyzing macOS binaries or suspected malware samples.\n- Inspecting entitlements, signatures, and ObjC/Swift structures.\n\n\n## 适用场景\n\n- Mach-O 可执行文件 / dylib / framework\n- .app bundle、LaunchAgent/Daemon\n- Objective-C / Swift 符号与 runtime\n- 公证/签名、Hardened Runtime、TCC 相关行为分析\n- macOS 恶意软件静态/动态分析（联合 malware-analysis）\n\n## 工作流\n\n### 1. 包体与签名\n\n```bash\nfile target\ncodesign -dv --verbose=4 target\nspctl -a -vv target 2>&1\notool -L target\n```\n\n### 2. 静态\n\n```text\n□ class-dump / swift-demangle / Hopper / Ghidra / IDA\n□ 字符串与 XPC 服务名、TCC 敏感 API\n□ LC_LOAD_dylib 依赖与 rpath\n```\n\n### 3. 动态\n\n```text\n□ lldb / Frida\n□ fs_usage / log stream 观察\n□ 网络：联合 protocol-reverse 或代理\n```\n\n## 工具链\n\n| 工具 | 用途 |\n|------|------|\n| otool / nm / codesign | 系统自带 |\n| Hopper / Ghidra / IDA | 反编译 |\n| class-dump / dsdump | ObjC |\n| Frida / lldb | 动态 |\n| jtool2 | Mach-O |\n\n## 参考\n\n- `references/macho-triage.md`\n- `../mobile-reverse/`（iOS） `../ghidra-reverse/` `../malware-analysis/`\n\n## 路由上下文\n\n**上游**: MASTER R31  \n**下游**: iOS → mobile-reverse；通用样本 → malware-analysis\n\n## 任务完成自检\n\n- [ ] 是否记录签名/Hardened Runtime 状态？\n- [ ] 是否有地址级/符号级结论？\n- [ ] Checklist？\n\n## Limitations\n\n- Apple Silicon and hardened runtime add unpacking complexity.\n- Some analysis requires disabling SIP in a dedicated lab VM.\n\n> Adapted from [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill) (MIT).\n"
+    },
+    {
+      "path": "references/macho-triage.md",
+      "encoding": "utf8",
+      "content": "# Mach-O 分诊\n\n```bash\nfile ./app\notool -hv ./app\notool -l ./app | head\ncodesign -d --entitlements :- ./app\n```\n\n关注：`com.apple.security.*` entitlements、Library Validation、禁用库注入相关标志。"
+    }
+  ]
+}

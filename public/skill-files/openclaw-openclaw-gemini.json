@@ -1,0 +1,10 @@
+{
+  "id": "openclaw-openclaw-gemini",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: gemini\ndescription: \"Gemini CLI one-shot prompts, summaries, generation, skills, hooks, MCP, or Gemma routing.\"\nhomepage: https://ai.google.dev/\nmetadata:\n  {\n    \"openclaw\":\n      {\n        \"emoji\": \"✨\",\n        \"requires\": { \"bins\": [\"gemini\"] },\n        \"install\":\n          [\n            {\n              \"id\": \"brew\",\n              \"kind\": \"brew\",\n              \"formula\": \"gemini-cli\",\n              \"bins\": [\"gemini\"],\n              \"label\": \"Install Gemini CLI (brew)\",\n            },\n          ],\n      },\n  }\n---\n\n# Gemini CLI\n\nUse Gemini in headless one-shot mode. Positional text starts interactive mode; use `-p/--prompt`.\n\nQuick start\n\n- `gemini -p \"Answer this question...\"`\n- `gemini -m <model> -p \"Prompt...\"`\n- `gemini -p \"Return JSON\" --output-format json`\n- stdin appends to `-p`: `cat notes.md | gemini -p \"Summarize\"`\n\nExtensions\n\n- List: `gemini --list-extensions`\n- Manage: `gemini extensions <command>`\n- Skills: `gemini skills <command>`\n- Hooks: `gemini hooks <command>`\n- MCP: `gemini mcp <command>`\n\nNotes\n\n- If auth is required, run `gemini` once interactively and follow the login flow.\n- Avoid `--yolo` for safety.\n"
+    }
+  ]
+}

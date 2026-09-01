@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-wiki-qa",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: wiki-qa\ndescription: \"Answer repository questions grounded entirely in source code evidence. Use when user asks a question about the codebase, user wants to understand a specific file, function, or component, or user asks \\\"how does X work\\\" or \\\"where is Y defined\\\".\"\nrisk: safe\nsource: community\ndate_added: \"2026-02-27\"\n---\n\n# Wiki Q&A\n\nAnswer repository questions grounded entirely in source code evidence.\n\n## When to Use\n- User asks a question about the codebase\n- User wants to understand a specific file, function, or component\n- User asks \"how does X work\" or \"where is Y defined\"\n\n## Procedure\n\n1. Detect the language of the question; respond in the same language\n2. Search the codebase for relevant files\n3. Read those files to gather evidence\n4. Synthesize an answer with inline citations\n\n## Response Format\n\n- Use `##` headings, code blocks with language tags, tables, bullet lists\n- Cite sources inline: `(src/path/file.ts:42)`\n- Include a \"Key Files\" table mapping files to their roles\n- If information is insufficient, say so and suggest files to examine\n\n## Rules\n\n- ONLY use information from actual source files\n- NEVER invent, guess, or use external knowledge\n- Think step by step before answering\n\n### When to Use\nThis skill is applicable to execute the workflow or actions described in the overview.\n\n## Limitations\n- Use this skill only when the task clearly matches the scope described above.\n- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.\n- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.\n"
+    }
+  ]
+}

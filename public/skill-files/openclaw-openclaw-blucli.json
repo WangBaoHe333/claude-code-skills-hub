@@ -1,0 +1,10 @@
+{
+  "id": "openclaw-openclaw-blucli",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: blucli\ndescription: \"BluOS CLI (blu) for discovery, playback, grouping, and volume.\"\nhomepage: https://blucli.sh\nmetadata:\n  {\n    \"openclaw\":\n      {\n        \"emoji\": \"🫐\",\n        \"requires\": { \"bins\": [\"blu\"] },\n        \"install\":\n          [\n            {\n              \"id\": \"go\",\n              \"kind\": \"go\",\n              \"module\": \"github.com/steipete/blucli/cmd/blu@latest\",\n              \"bins\": [\"blu\"],\n              \"label\": \"Install blucli (go)\",\n            },\n          ],\n      },\n  }\n---\n\n# blucli (blu)\n\nUse `blu` to control Bluesound/NAD players.\n\nQuick start\n\n- `blu devices` (pick target)\n- `blu --device <id> status`\n- `blu play|pause|stop`\n- `blu volume set 15`\n\nTarget selection (in priority order)\n\n- `--device <id|name|alias>`\n- `BLU_DEVICE`\n- config default (if set)\n\nCommon tasks\n\n- Grouping: `blu group status|add|remove`\n- TuneIn search/play: `blu tunein search \"query\"`, `blu tunein play \"query\"`\n\nPrefer `--json` for scripts. Confirm the target device before changing playback.\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "openclaw-openclaw-slack",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: slack\ndescription: \"Slack messaging workflows through OpenClaw's message tool.\"\nmetadata: { \"openclaw\": { \"emoji\": \"💬\", \"requires\": { \"config\": [\"channels.slack\"] } } }\nallowed-tools: [\"message\"]\n---\n\n# Slack\n\nUse the `message` tool with `channel: \"slack\"`. The tool schema lists the actions enabled for the current Slack account; do not assume an action that is not present.\n\n## Workflow\n\n- Prefer stable Slack IDs from context. Sends outside the current conversation use `channel:<id>` or `user:<id>` targets.\n- Keep replies in the current thread unless the user asks for a top-level post. For another thread, pass its Slack timestamp as `threadId`; use the same timestamp as `messageId` for message-specific actions.\n- Before editing, deleting, pinning, or reacting to an ambiguous message, read the conversation and resolve its exact ID.\n- When multiple Slack accounts are configured, pass `accountId` rather than guessing.\n- Confirm destructive deletes when the target or intent is unclear.\n\nSlack formatting, mentions, tables, charts, and interactive controls are described automatically by the current `message` tool hints. Follow those hints instead of maintaining a second action or formatting catalog here.\n"
+    }
+  ]
+}

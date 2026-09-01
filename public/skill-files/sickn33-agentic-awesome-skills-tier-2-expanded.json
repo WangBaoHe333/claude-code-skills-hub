@@ -1,0 +1,15 @@
+{
+  "id": "sickn33-agentic-awesome-skills-tier-2-expanded",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: tier-2-expanded\ndescription: \"When to use Tier 2 (Expanded) skill architecture.\"\n---\n\n# tier 2 expanded\n\nWhen to use Tier 2 (Expanded) skill architecture.\n\n## 中文说明\n\nTier 2 Expanded 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Tier 2 Expanded 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: When to use Tier 2 (Expanded) skill architecture.\nmetadata:\n  tags: [tier-2, expanded, multi-file]\n---\n\n# Tier 2: Expanded Skills\n\nMulti-file skills for complex topics with multiple sub-concepts.\n\n## When to Use\n\n- **Multiple related concepts**: Needs separation of concerns\n- **200-1000 lines total**: Too big for one file\n- **Needs reference files**: Patterns, examples, troubleshooting\n- **Cross-linking**: Users need to navigate between sub-topics\n\n## Structure\n\n```\nmy-skill/\n├── SKILL.md              # Overview + navigation\n└── references/\n    ├── core/\n    │   ├── README.md     # Main concept\n    │   └── api.md        # API reference\n    ├── patterns/\n    │   └── README.md     # Usage patterns\n    └── troubleshooting/\n        └── README.md     # Common issues\n```\n\n## Example\n\nThe `writing-skills` skill itself is Tier 2:\n\n```\nwriting-skills/\n├── SKILL.md              # Decision tree + navigation\n├── gotchas.md            # Tribal knowledge\n└── references/\n    ├── anti-rationalization/\n    ├── cso/\n    ├── standards/\n    ├── templates/\n    └── testing/\n```\n\n## Progressive Disclosure\n\n1. **Metadata** (~100 tokens): Name + description loaded at startup\n2. **SKILL.md** (<500 lines): Decision tree + index\n3. **References** (as needed): Loaded only when user navigates\n\n## Key Differences from Tier 1\n\n| Aspect | Tier 1 | Tier 2 |\n|--------|--------|--------|\n| Files | 1 | 5-20 |\n| Total lines | <200 | 200-1000 |\n| Decision logic | None | Simple tree |\n| Token cost | Minimal | Medium (progressive) |\n\n## Checklist\n\n- [ ] SKILL.md has clear navigation links\n- [ ] Each `references/` subdir has README.md\n- [ ] No circular references between files\n- [ ] Decision tree points to specific files\n"
+    }
+  ]
+}

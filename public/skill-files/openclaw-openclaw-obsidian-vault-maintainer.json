@@ -1,0 +1,10 @@
+{
+  "id": "openclaw-openclaw-obsidian-vault-maintainer",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: obsidian-vault-maintainer\ndescription: Maintain an Obsidian-friendly memory wiki vault with wikilinks, frontmatter, and official Obsidian CLI awareness.\n---\n\nUse this skill when the memory-wiki vault render mode is `obsidian` or the user wants the wiki to play nicely with Obsidian.\n\n- Start from `openclaw wiki status` to confirm the vault mode and whether the official Obsidian CLI is available.\n- Use `openclaw wiki obsidian status` before shelling out, then prefer the dedicated helpers like `openclaw wiki obsidian search`, `openclaw wiki obsidian open`, `openclaw wiki obsidian command`, and `openclaw wiki obsidian daily`.\n- Prefer `[[Wikilinks]]`, stable filenames, and frontmatter that works with Obsidian dashboards and Dataview-style queries.\n- Keep generated sections deterministic so Obsidian users can safely add handwritten notes around them.\n- If the official Obsidian CLI is enabled, probe it before depending on it. Do not assume the app is installed, running, or configured.\n- Avoid destructive renames unless you also have a link-repair plan.\n"
+    }
+  ]
+}

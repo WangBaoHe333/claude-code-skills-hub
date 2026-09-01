@@ -1,0 +1,15 @@
+{
+  "id": "sickn33-agentic-awesome-skills-jetski-gemini-loader",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: jetski-gemini-loader\ndescription: \"此示例展示了一种将 **agentic-awesome-skills** 与 Jetski/Cortex 风格代理集成的方法,使用基于 `@skill-id` 提及的**延迟加载**,而不是将每个 `SKILL.md` 连接到提示词中。\"\n---\n\n# jetski gemini loader\n\n此示例展示了一种将 **agentic-awesome-skills** 与 Jetski/Cortex 风格代理集成的方法,使用基于 `@skill-id` 提及的**延迟加载**,而不是将每个 `SKILL.md` 连接到提示词中。\n\n## 中文说明\n\nJetski Gemini Loader 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。\n\n## 典型场景\n- 生成或修改 Claude Code skill\n- 整理 Agent/API 使用说明和开发步骤\n- 把工程任务拆成可执行的代码工作流"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# Jetski + Gemini 延迟技能加载器(示例)\n\n此示例展示了一种将 **agentic-awesome-skills** 与 Jetski/Cortex 风格代理集成的方法,使用基于 `@skill-id` 提及的**延迟加载**,而不是将每个 `SKILL.md` 连接到提示词中。\n\n> 这**不是**生产就绪的库 - 它是一个最小参考,您可以适应自己的主机/代理实现。\n\n---\n\n## 此示例演示的内容\n\n- 如何:\n  - 在启动时加载规范清单 `skills_index.json`（`data/skills_index.json` 只是兼容性镜像）;\n  - 扫描对话消息中的 `@skill-id` 模式;\n  - 将这些 id 解析为清单中的条目;\n  - 仅从磁盘读取相应的 `SKILL.md` 文件(延迟加载);\n  - 构建提示词数组,包含:\n    - 您的基本系统消息;\n    - 每个选定技能一个系统消息;\n    - 其余的轨迹。\n- 如何通过 `maxSkillsPerTurn` 强制执行**每轮最大技能数**。\n- 如何通过 `overflowBehavior` 选择在请求太多技能时是**截断还是报错**。\n\n此模式避免了在安装 1,936+ 技能时的上下文溢出。\n\n---\n\n## 文件\n\n- `loader.mjs`\n  - 实现:\n    - `loadSkillIndex(indexPath)`;\n    - `resolveSkillsFromMessages(messages, index, maxSkills)`;\n    - `loadSkillBodies(skillsRoot, metas)`;\n    - `buildModelMessages({...})`。\n- 另请参阅集成指南:\n  - [`docs/integrations/jetski-cortex.md`](../jetski-cortex.md)\n\n---\n\n## 基本用法(伪代码)\n\n```ts\nimport path from \"path\";\nimport {\n  loadSkillIndex,\n  buildModelMessages,\n  Message,\n} from \"./loader.mjs\";\n\nconst REPO_ROOT = \"/path/to/agentic-awesome-skills\";\nconst SKILLS_ROOT = REPO_ROOT;\nconst INDEX_PATH = path.join(REPO_ROOT, \"skills_index.json\");\n\n// 1. 在代理启动时引导一次\nconst skillIndex = loadSkillIndex(INDEX_PATH);\n\n// 2. 在调用模型之前,使用延迟加载的技能构建消息\nasync function runTurn(trajectory: Message[]) {\n  const baseSystemMessages: Message[] = [\n    {\n      role: \"system\",\n      content: \"You are a helpful coding agent.\",\n    },\n  ];\n\n  const modelMessages = await buildModelMessages({\n    baseSystemMessages,\n    trajectory,\n    skillIndex,\n    skillsRoot: SKILLS_ROOT,\n    maxSkillsPerTurn: 8,\n    overflowBehavior: \"error\",\n  });\n\n  // 3. 将 `modelMessages` 传递给您的 Jetski/Cortex + Gemini 客户端\n  // 例如 trajectoryChatConverter.convert(modelMessages)\n}\n```\n\n使路径和模型调用适应您的环境。\n\n---\n\n## 重要说明\n\n- **不要**遍历 `skills/*/SKILL.md` 并一次性加载所有内容。\n- 此示例:\n  - 假设技能与根目录 `skills_index.json` 位于同一仓库根目录下;\n  - 使用纯 Node.js ESM 模块,因此可以在没有 TypeScript 运行时的情况下直接导入。\n- 在真实主机中:\n  - 将 `buildModelMessages` 连接到您当前在 `TrajectoryChatConverter` 之前组装提示词的位置;\n  - 如果您希望明确的用户可见失败而不是静默删除额外技能,请考虑 `overflowBehavior: \"error\"`;\n  - 保持路径验证,以便清单条目无法逃脱您配置的技能根目录;\n  - 如果您想要更严格的安全预算,请添加 token 计数/截断逻辑。\n"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-accint-solve",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: accint-solve\ndescription: Route a goal through acc's scored-memory loop via acc_act(runtime=\"solve\"); deliberate any returned brain_frame and submit via continue.\nrisk: critical\nsource: https://github.com/maxbaluev/accreted-intelligence/tree/main/plugins/claude/skills/solve\nsource_repo: maxbaluev/accreted-intelligence\nsource_type: community\ndate_added: 2026-07-01\nlicense: Apache-2.0\nlicense_source: https://github.com/maxbaluev/accreted-intelligence/blob/main/LICENSE\n---\n\n# solve\n## When to Use\n\nUse this skill when you need route a goal through acc's scored-memory loop via acc_act(runtime=\"solve\"); deliberate any returned brain_frame and submit via continue.\n\n\nRouting sugar over the two MCP verbs — no logic lives here.\n\n1. Call `acc_act(runtime=\"solve\", input=\"<the goal>\")`.\n2. If the result is **final**: surface the answer, the `commitment` id, and the cited `[ids]`.\n3. If the result is a **brain_frame**: it is YOUR deliberation turn — the frame is typed\n   (which hole, what was retrieved, what is predicted). Reason over it, then submit via\n   `acc_act(runtime=\"continue\", input={\"frame_id\": ..., \"submit_token\": ..., \"proposal_text\": ...})`.\n4. End `proposal_text` with `PREDICT: <0.00-1.00> <why>`; acc strips that line before\n   the owner sees it and uses it to calibrate the Work Model against later outcomes.\n5. Never leave a received frame unresolved; never solo-derive outside the loop.\n6. Close the commitment honestly later with `acc_act(runtime=\"outcome\", ...)`.\n\n## Limitations\n\n- Use this skill only when the task clearly matches its upstream source and local project context.\n- Verify commands, generated code, dependencies, credentials, and external service behavior before applying changes.\n- Do not treat examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.\n"
+    }
+  ]
+}

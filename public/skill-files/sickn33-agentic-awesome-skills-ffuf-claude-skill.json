@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-ffuf-claude-skill",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: ffuf-claude-skill\ndescription: \"Web fuzzing with ffuf\"\nrisk: safe\nsource: \"https://github.com/jthack/ffuf_claude_skill\"\ndate_added: \"2026-02-27\"\n---\n\n# Ffuf Claude Skill\n\n## Overview\n\nWeb fuzzing with ffuf\n\n## When to Use This Skill\n\nUse this skill when you need to work with web fuzzing with ffuf.\n\n## Instructions\n\nThis skill provides guidance and patterns for web fuzzing with ffuf.\n\nFor more information, see the [source repository](https://github.com/jthack/ffuf_claude_skill).\n\n## Limitations\n- Use this skill only when the task clearly matches the scope described above.\n- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.\n- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.\n"
+    }
+  ]
+}

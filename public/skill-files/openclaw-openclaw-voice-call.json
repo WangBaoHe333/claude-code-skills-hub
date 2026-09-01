@@ -1,0 +1,10 @@
+{
+  "id": "openclaw-openclaw-voice-call",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: voice-call\ndescription: \"Start voice calls via the OpenClaw voice-call plugin.\"\nmetadata:\n  {\n    \"openclaw\":\n      {\n        \"emoji\": \"📞\",\n        \"skillKey\": \"voice-call\",\n        \"requires\": { \"config\": [\"plugins.entries.voice-call.enabled\"] },\n      },\n  }\n---\n\n# Voice Call\n\nUse the voice-call plugin to start or inspect calls (Twilio, Telnyx, Plivo, or mock).\n\n## CLI\n\n```bash\nopenclaw voicecall call --to \"+15555550123\" --message \"Hello from OpenClaw\"\nopenclaw voicecall status --call-id <id>\n```\n\n## Tool\n\nUse `voice_call` for agent-initiated calls.\n\nActions:\n\n- `initiate_call` (message, to?, mode?)\n- `continue_call` (callId, message)\n- `speak_to_user` (callId, message)\n- `end_call` (callId)\n- `get_status` (callId)\n\nNotes:\n\n- Requires the voice-call plugin to be enabled.\n- Plugin config lives under `plugins.entries.voice-call.config`.\n- Twilio config: `provider: \"twilio\"` + `twilio.accountSid/authToken` + `fromNumber`.\n- Telnyx config: `provider: \"telnyx\"` + `telnyx.apiKey/connectionId` + `fromNumber`.\n- Plivo config: `provider: \"plivo\"` + `plivo.authId/authToken` + `fromNumber`.\n- Dev fallback: `provider: \"mock\"` (no network).\n"
+    }
+  ]
+}

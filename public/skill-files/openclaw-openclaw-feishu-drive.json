@@ -1,0 +1,10 @@
+{
+  "id": "openclaw-openclaw-feishu-drive",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: feishu-drive\ndescription: |\n  Feishu cloud-storage and comment workflows. Activate when the user mentions cloud space, folders, Drive files, or document comments.\n---\n\n# Feishu Drive\n\nUse the single `feishu_drive` tool and its current action schema.\n\nFrom `https://example.feishu.cn/drive/folder/ABC123`, use `ABC123` as `folder_token`.\n\n## Files and folders\n\n- Start from a folder shared with the bot. Bot credentials normally have no usable personal root folder.\n- For paginated folder listings, keep the same `folder_token` and pass the returned `page_token` until no continuation token remains.\n- Use `info` with the exact file token and type returned by Drive or wiki discovery.\n- Resolve the exact source and destination before moving or deleting. Confirm destructive deletes when the user's intent or target is unclear.\n- Create subfolders inside a shared folder; creating at the account root normally fails for bots.\n\n## Comments\n\n- Use `list_comments`, then `list_comment_replies` with the exact `comment_id` to inspect a discussion.\n- Use `add_comment` for a document-level comment. Include `block_id` only when the user wants a comment on one known Docx block.\n- Use `reply_comment` for an existing comment thread.\n- Preserve the file type and pagination fields returned by the tool. The schema is authoritative for which file types each comment action accepts.\n\nOnly expose or forward file and comment contents needed for the user's request; shared Drive data may be private.\n"
+    }
+  ]
+}

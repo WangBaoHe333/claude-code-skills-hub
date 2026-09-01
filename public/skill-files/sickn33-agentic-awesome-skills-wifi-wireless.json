@@ -1,0 +1,15 @@
+{
+  "id": "sickn33-agentic-awesome-skills-wifi-wireless",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: wifi-wireless\ndescription: \"Authorized wireless security assessment: Wi-Fi capture, WPA handshake analysis, rogue AP detection research, and lab-only deauthentication testing.\"\nrisk: offensive\nsource: \"https://github.com/zhaoxuya520/reverse-skill\"\nsource_repo: \"zhaoxuya520/reverse-skill\"\nsource_type: community\ndate_added: \"2026-08-25\"\nlicense: \"MIT\"\nlicense_source: \"https://github.com/zhaoxuya520/reverse-skill/blob/main/LICENSE\"\n---\n> **⚠️ AUTHORIZED USE ONLY**\n> This skill is for educational purposes or authorized security assessments only.\n> You must have explicit, written permission from the system owner before using this tool.\n> Misuse of this tool is illegal and strictly prohibited.\n\n> **Mandatory confirmation gate**\n> Before running any command that probes, exploits, changes, persists on, extracts data from, or attempts credential access against a target:\n> 1. Ask the user to state the exact target URL, IP, account, or resource.\n> 2. Ask the user to confirm written authorization and the permitted scope.\n> 3. Show the exact command(s) and explain their expected effect.\n> 4. Wait for explicit confirmation in the current conversation.\n>\n> Without that confirmation, remain read-only and provide defensive guidance only. Prefer a sandbox, disposable VM, or controlled lab.\n\n# Wi-Fi / Wireless Security\n## When to Use\n\n- Assessing wireless posture of networks you own or are cleared to test.\n- Studying handshake material captured on your own lab network.\n\n\n## 适用场景\n\n- 授权 Wi-Fi 安全评估\n- WPA/WPA2 握手采集与离线评估\n- 流氓 AP / 钓鱼热点检测研究\n- 企业无线隔离与门户安全\n\n## 工作流\n\n```text\n□ iwconfig / airmon-ng 进入 monitor（合法环境）\n□ airodump-ng 锁定目标 BSSID 频道\n□ 握手或 PMKID 采集（仅目标）\n□ hashcat/aircrack 离线评估口令策略\n□ 报告：加密类型、隔离、门户绕过、建议\n```\n\n## 工具链\n\n| 工具 | 用途 |\n|------|------|\n| aircrack-ng suite | 采集/评估 |\n| hcxdumptool / hcxtools | PMKID |\n| hashcat | 口令评估 |\n| Wireshark | 管理帧分析 |\n\n## 参考\n\n- `references/wireless-lab-rules.md`\n- `../pentest-tools/` `../attack-chain/`（近源章节）\n\n## 路由上下文\n\n**上游**: MASTER R29  \n**MUST NOT**: 未授权 deauth、对非目标客户网络操作\n\n## 任务完成自检\n\n- [ ] 是否严格锁定目标 BSSID？\n- [ ] 是否在报告中给出加固建议？\n- [ ] Checklist？\n\n## Limitations\n\n- Deauthentication attacks are disruptive and illegal off-lab; lab use only.\n- WPA3 changes several attack surfaces documented here for WPA2.\n\n> Adapted from [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill) (MIT).\n"
+    },
+    {
+      "path": "references/wireless-lab-rules.md",
+      "encoding": "utf8",
+      "content": "# 无线实验规则\n\n1. 仅授权 SSID/BSSID  \n2. 发射功率与频道遵守当地法规  \n3. 优先屏蔽室/实验 AP  \n4. 证据中打码真实客户 MAC（若报告外传）  "
+    }
+  ]
+}

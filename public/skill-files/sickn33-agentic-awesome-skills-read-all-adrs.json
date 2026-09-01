@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-read-all-adrs",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: read-all-adrs\ndescription: \"Read every ADR in a project before summarizing architectural context or decisions.\"\ncategory: productivity\nrisk: safe\nsource: community\nsource_repo: davidondrej/skills\nsource_type: community\ndate_added: \"2026-07-07\"\nauthor: davidondrej\ntags: [adr, documentation, architecture]\ntools: [claude, codex]\nlicense: \"MIT\"\nlicense_source: \"https://github.com/davidondrej/skills/blob/main/LICENSE\"\ndisable-model-invocation: true\n---\n\n<!-- TODO(David): write the strong wording here -->\n\n## When to Use\n\n- Use when the user explicitly asks to load ADR context.\n- Use when architectural decisions must be understood before changing or judging a project.\n\nRead EVERY single ADR `.md` file in this project's `docs/adr/` folder, start to\nfinish.\n\nDo not skim. Read each ADR completely before summarizing.\n\nRead every single ADR file, for this project, in full.\n\n## Limitations\n\n- Adapted from `davidondrej/skills`; verify local paths, tools, credentials, and agent features before acting.\n- For commands, remote access, scheduling, browser automation, or file-changing workflows, get explicit user approval and confirm the target environment first.\n"
+    }
+  ]
+}

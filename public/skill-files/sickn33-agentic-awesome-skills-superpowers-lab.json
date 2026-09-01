@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-superpowers-lab",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: superpowers-lab\ndescription: \"Lab environment for Claude superpowers\"\nrisk: safe\nsource: \"https://github.com/obra/superpowers-lab\"\ndate_added: \"2026-02-27\"\n---\n\n# Superpowers Lab\n\n## Overview\n\nLab environment for Claude superpowers\n\n## When to Use This Skill\n\nUse this skill when you need to work with lab environment for claude superpowers.\n\n## Instructions\n\nThis skill provides guidance and patterns for lab environment for claude superpowers.\n\nFor more information, see the [source repository](https://github.com/obra/superpowers-lab).\n\n## Limitations\n- Use this skill only when the task clearly matches the scope described above.\n- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.\n- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.\n"
+    }
+  ]
+}

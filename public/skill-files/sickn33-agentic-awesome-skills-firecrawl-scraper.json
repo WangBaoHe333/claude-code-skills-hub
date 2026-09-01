@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-firecrawl-scraper",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: firecrawl-scraper\ndescription: \"Deep web scraping, screenshots, PDF parsing, and website crawling using Firecrawl API. Use when you need deep content extraction from web pages, page interaction is required (clicking, scrolling, etc.), or you want screenshots or PDF parsing.\"\nrisk: critical\nsource: community\ndate_added: \"2026-02-27\"\n---\n\n# firecrawl-scraper\n\n## Overview\nDeep web scraping, screenshots, PDF parsing, and website crawling using Firecrawl API\n\n## When to Use\n- When you need deep content extraction from web pages\n- When page interaction is required (clicking, scrolling, etc.)\n- When you want screenshots or PDF parsing\n- When batch scraping multiple URLs\n\n## Installation\n```bash\nnpx skills add -g BenedictKing/firecrawl-scraper\n```\n\n## Step-by-Step Guide\n1. Install the skill using the command above\n2. Configure Firecrawl API key\n3. Use naturally in Claude Code conversations\n\n## Examples\nSee [GitHub Repository](https://github.com/BenedictKing/firecrawl-scraper) for examples.\n\n## Best Practices\n- Configure API keys via environment variables\n\n## Troubleshooting\nSee the GitHub repository for troubleshooting guides.\n\n## Related Skills\n- context7-auto-research, tavily-web, exa-search, codex-review\n\n## Limitations\n- Use this skill only when the task clearly matches the scope described above.\n- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.\n- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.\n"
+    }
+  ]
+}

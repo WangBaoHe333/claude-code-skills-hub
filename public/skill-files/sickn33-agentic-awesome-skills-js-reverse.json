@@ -1,0 +1,70 @@
+{
+  "id": "sickn33-agentic-awesome-skills-js-reverse",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: js-reverse\ndescription: \"Front-end JavaScript reverse engineering: locate signature chains, analyze encrypted request parameters, sample runtime behavior, and reproduce logic locally in Node for evidence-based output.\"\nrisk: offensive\nsource: \"https://github.com/zhaoxuya520/reverse-skill\"\nsource_repo: \"zhaoxuya520/reverse-skill\"\nsource_type: community\ndate_added: \"2026-08-25\"\nlicense: \"MIT\"\nlicense_source: \"https://github.com/zhaoxuya520/reverse-skill/blob/main/LICENSE\"\n---\n> **⚠️ AUTHORIZED USE ONLY**\n> This skill is for educational purposes or authorized security assessments only.\n> You must have explicit, written permission from the system owner before using this tool.\n> Misuse of this tool is illegal and strictly prohibited.\n\n> **Mandatory confirmation gate**\n> Before running any command that probes, exploits, changes, persists on, extracts data from, or attempts credential access against a target:\n> 1. Ask the user to state the exact target URL, IP, account, or resource.\n> 2. Ask the user to confirm written authorization and the permitted scope.\n> 3. Show the exact command(s) and explain their expected effect.\n> 4. Wait for explicit confirmation in the current conversation.\n>\n> Without that confirmation, remain read-only and provide defensive guidance only. Prefer a sandbox, disposable VM, or controlled lab.\n\n# MCP 前端 JS 逆向作业规范\n## When to Use\n\n- Understanding how a web application signs or encrypts API requests.\n- Reproducing client-side crypto locally to validate analysis.\n\n\n## 适用范围\n\n当任务属于以下场景时优先使用本 skill：\n\n- 定位接口签名、加密参数、风控字段\n- 观察页面请求链路与脚本来源\n- 在运行时抓取函数入参与返回值\n- 追踪某个 XHR/Fetch/WebSocket 的触发点\n- 把页面证据带回 Node 做本地复现与补环境\n\n如果目标是二进制、APK、PE、ELF、DLL、SO，请改用 `ida-reverse`、`radare2` 或 `reverse-engineering`。\n\n## 当前环境默认工具映射\n\n本 skill 不假设存在裸工具名，而是默认绑定当前客户端环境里可用的 `js-reverse_*` 工具。\n\n如果当前任务明确提到 `jshookmcp`、`JS hook`、`CDP`、浏览器断点、网络拦截、SourceMap 或 AST 去混淆，也仍然走本 skill；只是把底层 MCP 面切到 `jshookmcp`，而不是把它当成一个新的总入口。\n\n前提条件：`jshookmcp` 不是本地裸命令工具，而是一个要先下载、显式注册并启用的 MCP server。只有在所选客户端（Claude、Codex 等）的 MCP 配置里接入并启用后，相关工具面才真的可调用。\n\n常用映射：\n\n- `list_scripts` -> `js-reverse_list_scripts`\n- `get_script_source` -> `js-reverse_get_script_source`\n- `search_in_sources` -> `js-reverse_search_in_sources`\n- `break_on_xhr` -> `js-reverse_break_on_xhr`\n- `evaluate_script` -> `js-reverse_evaluate_script`\n- `get_paused_info` -> `js-reverse_get_paused_info`\n- `set_breakpoint_on_text` -> `js-reverse_set_breakpoint_on_text`\n- `list_network_requests` -> `js-reverse_list_network_requests`\n- `get_request_initiator` -> `js-reverse_get_request_initiator`\n- `get_websocket_messages` -> `js-reverse_get_websocket_messages`\n- `take_screenshot` -> `js-reverse_take_screenshot`\n- `new_page` -> `js-reverse_new_page`\n- `navigate_page` -> `js-reverse_navigate_page`\n- `select_page` -> `js-reverse_select_page`\n- `select_frame` -> `js-reverse_select_frame`\n- `pause/resume` -> `js-reverse_pause_or_resume`\n\n如果未来工具名前缀变化，先更新本节，不要在执行时临时猜测。\n\n### jshookmcp 的定位\n\n- 角色：`js-reverse` 的增强执行面，不是独立总控\n- 适合：浏览器自动化、CDP 调试、JS Hook、网络拦截、SourceMap 重建、AST 辅助理解\n- 调用前提：先把 `@jshookmcp/jshook` 下载并注册到 MCP 客户端配置里，然后确保该 server 已启用\n- 建议入口：仍然按 `Observe → Capture → Rebuild` 执行，只是在 `Observe/Capture` 阶段优先调用 jshookmcp 的浏览器与 Hook 能力\n- 与 anything-analyzer 关系：两者都能做浏览器/网络侧取证；anything-analyzer 更偏抓包与 HTTP 分析，jshookmcp 更偏 JS 运行时、CDP、Hook 和源码理解\n\n## 核心原则\n\n- `Observe-first`\n- `Hook-preferred`\n- `Breakpoint-last`\n- `Rebuild-oriented`\n- `Evidence-first`\n\n先页面观察，再最小化采样，再做本地补环境，不要跳过取证直接猜环境。\n\n## 五阶段工作流\n\n### 1. Observe\n\n目标：先确认目标请求、相关脚本、候选函数，不猜环境。\n\n默认动作：\n\n- 用 `js-reverse_new_page` 或 `js-reverse_navigate_page` 打开目标页面\n- 用 `js-reverse_list_network_requests` 找目标请求\n- 用 `js-reverse_get_request_initiator` 回溯调用来源\n- 用 `js-reverse_list_scripts`、`js-reverse_search_in_sources` 缩小脚本范围\n\n必须产出：\n\n- 目标请求 URL 或特征\n- initiator 线索\n- 可疑脚本 URL\n- 初始任务记录\n\n### 2. Capture\n\n目标：对目标请求做最小侵入采样，拿到参数样例、调用顺序、运行时证据。\n\n规则：\n\n- 优先 `js-reverse_break_on_xhr`\n- 优先 `js-reverse_evaluate_script` 做轻量运行时观察\n- 命中后先看 `js-reverse_get_paused_info`\n- 必要时再用 `js-reverse_set_breakpoint_on_text`\n\n### 3. Rebuild\n\n目标：把页面证据整理成本地可迭代的 Node 复现材料。\n\n规则：\n\n- 本地补环境必须以页面观测证据为依据\n- 不允许空想式补 `window/document/navigator/crypto/storage`\n- 每次只记录一个最小因果补丁决策\n\n### 4. Patch\n\n目标：按报错和 first divergence 驱动补环境，直到本地脚本稳定跑出目标参数。\n\n规则：\n\n- 先看缺什么，再补什么\n- 一次只做一个最小补丁决策\n- 每次补丁后立即复测\n- 每次补丁都写入任务记录\n\n### 5. DeepDive\n\n目标：本地跑通后，再做去混淆、控制流还原、业务逻辑提纯。\n\n规则：\n\n- 如果当前任务只是出签名，这一阶段可以降级\n- 如果要长期复用算法链路，这一阶段必须做\n- Issue #65 混淆旁路（U–AV §4）：JSVMP（AD）→ `E-js-vmp`；CFF+字符串数组（AE）→ `E-js-deobf`；DevTools/debugger 反调试（AF）→ `E-js-anti-debug`。完整触发表见 `../reverse-engineering/references/nonpe-format-cookbook.md`；AST 细节仍用 `references/ast-deobfuscation.md`\n\n## 执行要求\n\n- 所有重要步骤都要写入本地 task artifact\n- 如果无法解释为什么调用某个工具，就不要调用\n- 优先使用 `js-reverse_*` 或 jshookmcp 的现成 MCP 能力直接取证，不要先写脚本重造能力\n- 失败时按 `references/fallbacks.md` 回退\n- 输出遵循 `references/output-contract.md`\n\n## 必读引用\n\n- 自动化入口：`references/automation-entry.md`\n- 参数默认值：`references/tool-defaults.md`\n- 任务输入模板：`references/task-input-template.md`\n- MCP 专用任务编排：`references/mcp-task-template.md`\n- 任务产物：`references/task-artifacts.md`\n- 本地复现：`references/local-rebuild.md`\n- 补环境：`references/env-patching.md`\n- Node 复现：`references/node-env-rebuild.md`\n- 插桩：`references/instrumentation.md`\n- AST 去混淆：`references/ast-deobfuscation.md`\n- 非 PE/JS 混淆菜谱 U–AV：`../reverse-engineering/references/nonpe-format-cookbook.md`（AD/AE/AF）\n- 回退：`references/fallbacks.md`\n- 输出契约：`references/output-contract.md`\n\n---\n\n## 路由上下文\n\n**上游入口**: `skills/SKILL.md`（总控）、`routing.md`\n**上游备选**:\n- anything-analyzer MCP（端口 23816）的浏览器工具可作为替代或补充\n- jshookmcp 可作为更强的浏览器/CDP/Hook/Network/SourceMap/AST 执行面\n- `reverse-engineering/SKILL.md`（如果目标不是前端 JS）\n\n**下游出口**:\n- 需补环境 → `references/env-patching.md`\n- 需本地复现 → `references/local-rebuild.md` / `references/node-env-rebuild.md`\n- 需去混淆 → `references/ast-deobfuscation.md`\n- 走不通时回退 → `references/fallbacks.md`\n\n**同级关联模块**: anything-analyzer MCP（浏览器自动化和 HTTP 捕获能力可以互补）\n\n---\n\n## 按需自举（On-Demand Bootstrap）\n\n本 skill 依赖的 MCP 能力可通过统一自举系统安装；MCP 客户端注册必须显式选择目标，默认不会写任何客户端全局配置。\n\n### 自动化能力边界\n\n| 能力 | 可自动注册 | 方式 | 说明 |\n|------|-----------|------|------|\n| jshookmcp | ✓ | npm-mcp（npx 启动） | 显式选择 Claude / Codex / Both 后注册 |\n| anything-analyzer | ✓ | local-http-mcp | 可自动启动服务；客户端注册须显式选择 |\n| Node.js | ✓ | winget 安装 | 运行时依赖 |\n\n### 自举方式\n\n```powershell\n# 安装并注册 jshookmcp；Codex 可替换为 Claude 或 Both\npowershell -File \"<skill-root>\\scripts\\bootstrap-reverse.ps1\" -Capability @('jshookmcp') -McpHostTarget Codex\n\n# 注册并启动 anything-analyzer\npowershell -File \"<skill-root>\\scripts\\bootstrap-reverse.ps1\" -Capability @('anything-analyzer') -StartServices -McpHostTarget Codex\n```\n\n### 注意事项\n\n- `jshookmcp` 注册后仍需在 AI 客户端中**启用**该 MCP server 才能调用\n- 不传 `-McpHostTarget` 时只安装/准备能力并返回 registration-required，不修改 Claude 或 Codex 配置\n- `anything-analyzer` 需要 pnpm 和项目源码，bootstrap 会自动 clone 并安装依赖\n- 如果 Node.js 未安装，bootstrap 会先通过 winget 安装 Node.js 22\n\n<br><br>## 任务完成自检（声称完成前 MUST 通过）\n\n- [ ] 我是否执行了工作流中的每一步（而不是只阅读）？\n- [ ] 我是否基于 `tool-index` 使用了真实工具路径？\n- [ ] 我是否产出了可复现证据（命令/脚本/截图/报告）？\n- [ ] 我是否完成并回写了 RULES 要求的 Checklist 项？\n\n## Limitations\n\n- Only analyze applications you are authorized to assess.\n- Bundlers/minifiers change constantly; findings are snapshot-specific.\n\n> Adapted from [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill) (MIT).\n"
+    },
+    {
+      "path": "references/ast-deobfuscation.md",
+      "encoding": "utf8",
+      "content": "# AST 去混淆\n\n前提是页面取证和本地复现已经基本跑通。不要在未跑通前就把主要精力放在大规模 AST 清洗上。\n"
+    },
+    {
+      "path": "references/automation-entry.md",
+      "encoding": "utf8",
+      "content": "# 自动化入口\n\n推荐开场顺序：\n\n1. `js-reverse_new_page` 或 `js-reverse_navigate_page` 打开页面\n2. `js-reverse_list_network_requests` 看最近请求\n3. `js-reverse_get_request_initiator` 找调用栈\n4. `js-reverse_list_scripts` 建立脚本范围\n5. `js-reverse_search_in_sources` 搜请求路径、参数名、函数名\n6. 必要时 `js-reverse_break_on_xhr` 或 `js-reverse_set_breakpoint_on_text`\n\n默认不要一上来就猜 `window`、`document`、`navigator` 该怎么补。\n"
+    },
+    {
+      "path": "references/env-patching.md",
+      "encoding": "utf8",
+      "content": "# 补环境规则\n\n- 只补页面证据已经证明需要的对象\n- 一次补一个最小因果单元\n- 先补值，再补函数壳，再补返回对象契约\n- 每次补丁都要重新执行并记录 first divergence 是否前移\n"
+    },
+    {
+      "path": "references/fallbacks.md",
+      "encoding": "utf8",
+      "content": "# 回退策略\n\n当当前路径无进展时按顺序回退：\n\n1. 从断点回退到请求观察\n2. 从源码猜测回退到运行时证据\n3. 从 Node 补环境回退到页面取证\n4. 从深度去混淆回退到最小可复现链路\n"
+    },
+    {
+      "path": "references/instrumentation.md",
+      "encoding": "utf8",
+      "content": "# 插桩\n\n优先轻量观察：\n\n- XHR/Fetch 断点\n- 函数文本断点\n- 暂停后读调用栈与局部变量\n\n只有在轻量观察不够时，才升级为更重的源码改写或本地插桩。\n"
+    },
+    {
+      "path": "references/local-rebuild.md",
+      "encoding": "utf8",
+      "content": "# 本地复现\n\n页面侧确认以下内容后再回到 Node：\n\n- 真实入口函数\n- 调用顺序\n- 参数来源\n- 依赖的浏览器对象\n- 是否依赖时间、随机数、storage、cookie、UA、canvas、crypto\n\n先最小复现，再逐步补环境，不要一次性模拟整浏览器。\n"
+    },
+    {
+      "path": "references/mcp-task-template.md",
+      "encoding": "utf8",
+      "content": "# MCP 任务编排模板\n\n```md\n## Observe\n- 页面：\n- 目标请求：\n- initiator：\n- 可疑脚本：\n\n## Capture\n- 采样方式：\n- 命中位置：\n- 关键入参：\n- 关键返回：\n\n## Rebuild\n- 入口函数：\n- 依赖脚本：\n- 环境缺口：\n\n## Patch\n- first divergence：\n- 本次补丁：\n- 复测结果：\n\n## Output\n- 是否拿到参数：\n- 是否可稳定复现：\n- 剩余风险：\n```\n"
+    },
+    {
+      "path": "references/node-env-rebuild.md",
+      "encoding": "utf8",
+      "content": "# Node 环境复现\n\nNode 侧默认顺序：\n\n1. 导入目标脚本\n2. 最小 shim 宿主对象\n3. 跑入口函数\n4. 记录首个异常或 first divergence\n5. 回到页面证据补齐缺口\n"
+    },
+    {
+      "path": "references/output-contract.md",
+      "encoding": "utf8",
+      "content": "# 输出契约\n\n最终输出至少应包含：\n\n- 目标请求和参数位置\n- 哪个脚本、哪个函数参与生成\n- 证据来源：请求、调用栈、断点、运行时值\n- 当前是否已能稳定复现\n- 若未完成，还差哪一个环境缺口\n"
+    },
+    {
+      "path": "references/task-artifacts.md",
+      "encoding": "utf8",
+      "content": "# 任务产物\n\n建议每个任务至少保留：\n\n- 目标请求样例\n- initiator 调用栈\n- 可疑脚本 URL\n- 关键断点位置\n- 关键函数入参/返回值\n- first divergence 记录\n- 每次补环境补丁说明\n"
+    },
+    {
+      "path": "references/task-input-template.md",
+      "encoding": "utf8",
+      "content": "# 任务输入模板\n\n```md\n目标站点：\n目标页面：\n目标请求：\n关注参数：\n已知线索：\n期望产出：\n是否需要本地复现：是 / 否\n```\n"
+    },
+    {
+      "path": "references/tool-defaults.md",
+      "encoding": "utf8",
+      "content": "# 工具默认值\n\n- `js-reverse_list_network_requests`：先看第一页默认结果，不足再翻页\n- `js-reverse_search_in_sources`：默认 `excludeMinified=true`\n- `js-reverse_get_script_source`：只读小片段，整份源码优先配合 `js-reverse_save_script_source`\n- `js-reverse_break_on_xhr`：只填能稳定命中的 URL 片段\n- `js-reverse_get_paused_info`：默认先看 `frameIndex=0`\n"
+    }
+  ]
+}

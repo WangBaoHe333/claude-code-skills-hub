@@ -1,0 +1,75 @@
+{
+  "id": "sickn33-agentic-awesome-skills-crossframe-dialogue",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: crossframe-dialogue\ndescription: \"Use when CrossFrame Suite routes explicit Chinese reader replies, editor responses, consultation-style short answers, or boundary-aware structural advice.\"\ncategory: content\nrisk: safe\nsource: community\nsource_repo: xi-kari/crossframe-skill\nsource_type: community\ndate_added: 2026-06-16\nauthor: xi-kari\nlicense: MIT\nlicense_source: https://github.com/xi-kari/crossframe-skill/blob/main/LICENSE\ntools:\n  - \"Agent Skills\"\n  - Codex\n  - Claude\ntags:\n  - crossframe\n  - chinese\n  - dialogue\n  - reader-reply\n  - consultation\n---\n# CrossFrame Dialogue\n\n\n\n## When to Use This Skill\n\n- Use when `crossframe-suite` routes an explicit CrossFrame task into a reader reply, editor response, consultation-style short answer, or boundary-aware advice.\n- Use when the answer should first translate structural judgment into plain Chinese before optional term mapping.\n- Do not use independently unless the user explicitly names this sibling skill.\n\n## Packaged Source Note\n\nThis AAS-ready copy preserves the original CrossFrame skill body below. Chinese remains the canonical semantic layer; English metadata is only for discovery, installation, and repository review.\n\n## Limitations\n\n- The skill body is intentionally Chinese-canonical; English metadata is for discovery and does not replace the original Chinese terms.\n- Use only after explicit CrossFrame invocation or `crossframe-suite` routing; do not apply it as a generic default reasoning layer.\n- It structures analysis, drafting, and review, but does not replace source verification, domain expertise, or legal, medical, or financial judgment.\n\n> **本 skill 不独立触发。** 所有 CrossFrame 任务统一从 `crossframe-suite` 入口调度。用户无需直接调用本 skill；suite 根据路由规则在需要时自动加载。\n\n如果用户要把短答复扩成长文、公共评论、组织备忘录或案例沉淀，先读取 `../crossframe-suite/SKILL.md` 做总调度；本 skill 只负责短答复、编辑回信和咨询式回应。\n\n## 定位\n\n`crossframe-dialogue` 是 `crossframe` 与 `crossframe-essay` 的平行短答复 skill。它不复制 CrossFrame 全文，不写长文，不把咨询式回应伪装成处方。默认输出短而有洞察的结构答复：接住问题、事实边界、结构判断、必要批评、稳妥建议、停止/升级条件。\n\n中文是权威语义；`CrossFrame Dialogue` 只是传播名和 skill id。遇到中英文理解冲突时，以中文术语和中文判断为准。\n\n## 必读\n\n每次触发后先读取：\n\n1. `../crossframe/SKILL.md`\n2. `../crossframe/references/read-routing-map.md`\n3. 若问题触发高责任、公共制度、亲密关系、长期演化、框架治理、AI 现实验证、弱信号/不透明、无法退出、工具化、隐喻/来源透明或文章输出，追加读取 `../crossframe/references/continuity-bundles.md`，并按需使用 `../crossframe/worksheets/source-continuity-check.md`；未完成联读时只能降档。\n4. 复用 `../crossframe/templates/read-state-capsule.md` 规定的 `v5-read-state-capsule`，并在高责任、公共、AI/过程性产物、生命周期、无法退出主体或文章输出场景执行 `../crossframe/worksheets/source-anchor-integrity-check.md`。如果胶囊缺失，回到 `../crossframe/SKILL.md` 补齐；本 skill 不重新发明源路由。\n5. `protocols/dialogue-protocol.md`\n6. `references/dialogue-quality-gates.md`\n\n如果用户要求亲切、编辑、同志口吻、答读者问、报刊回信、耐心解答、给意见，或问题天然像读者来信，再按需读取：\n\n- `../crossframe-essay/SKILL.md`\n- `../crossframe-essay/protocols/editorial-comrade-voice-protocol.md`\n- `../crossframe-essay/references/editorial-voice-principles.md`\n- `references/voice-bridge.md`\n\n如果涉及安全、法律、医疗心理、公开指控、处分、名誉、公共资源、强权力关系或紧急伤害风险，读取 `protocols/consultation-boundary-protocol.md`。\n\n## 默认流程\n\n1. 判断回应类型：答读者问、编辑回信、咨询式回应、公共问题短评、概念问答、行动边界建议。\n2. 用 `../crossframe/references/read-routing-map.md` 选择必要 CrossFrame protocol、概念卡、模板或边界协议。\n3. 做内部微型 intake：对象、事实边界、证据缺口、尺度窗口、机制候选、责任链/成本链、用户真正用途。\n4. 至少比较两个机制候选；证据不足时降低判断档位，不硬判。\n5. 把后台概念翻译成现实行为；术语只作为必要映射，不在前台堆叠。\n6. 输出短答复；除非用户要求，不展示完整工作表、长文底稿或概念链。\n\n## 默认输出\n\n默认 4 到 8 个短段，或使用 `templates/default-short-answer.md`：\n\n- 先接住问题：说明困惑为什么值得认真对待。\n- 再划事实边界：哪些是已知，哪些只是推测。\n- 给结构判断：现在更像哪类机制，而不是谁天生如何。\n- 必要时批评：批评行为、流程、责任转嫁或伪修复，不做人格审判。\n- 给稳妥建议：观察信号、低风险动作、修复条件、边界设置或退出转移。\n- 写停止/升级条件：什么情况下不要再解释、需要求助、升级到专业/制度/安全路径，或撤回本判断。\n\n## 硬规则\n\n- 不输出“只安慰不判断”的答复。\n- 不把结构诊断写成人格审判、道德宣判、命运预言或群体标签。\n- 不用术语堆砌替代现实解释；第一段删掉术语后仍必须成立。\n- 不把“爱”“理解”“修复”写成单方继续忍耐的义务。\n- 不把 AI 报告、合规文本、道歉、复盘、声明或流程入口直接当作高成本证据。\n- 不在证据不足时给强处分、公开指控、法律/医疗/心理处方或不可逆建议。\n- 不用宏大尺度取消低尺度痛苦、责任、证据和行动边界。\n\n## 失败自检\n\n输出前快速检查：\n\n1. 我有没有接住问题，但没有停在安慰？\n2. 我有没有区分事实、解释、机制候选和判断档位？\n3. 我有没有把批评指向行为/结构/责任链，而不是人格？\n4. 我有没有给出可观察信号、低风险动作、停止条件或升级条件？\n5. 删掉术语后，读者还能不能知道该看什么、别做什么？\n"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "encoding": "utf8",
+      "content": "interface:\n  display_name: \"CrossFrame Dialogue\"\n  short_description: \"答读者问、编辑回信和咨询式回应的短结构答复。\"\n  default_prompt: \"用 crossframe-dialogue 回答这个读者问题：先接住问题，划清事实边界，再给出结构判断和稳妥行动边界。\"\n"
+    },
+    {
+      "path": "evals/crossframe-dialogue-smoke-tests.md",
+      "encoding": "utf8",
+      "content": "# CrossFrame Dialogue Smoke Tests\n\n这些测试用于人工或 agent 检查 `crossframe-dialogue` 是否真的做了短结构答复，而不是安慰、审判或堆术语。\n\n## 通用通过标准\n\n- 默认短答复，不写成长文或完整底稿。\n- 先接住问题，再给判断。\n- 区分事实、解释、证据缺口和判断档位。\n- 至少比较两个机制候选，或说明为什么证据只允许一个低档位判断。\n- 批评指向行为、流程、责任链或成本转嫁，不做人格审判。\n- 有稳妥建议、观察信号、停止条件、升级条件或撤回条件。\n- 第一段删掉术语后仍可读。\n- 按需读取 `../crossframe/SKILL.md` 与 `../crossframe/references/read-routing-map.md`。\n\n## 测试 1：只安慰不判断\n\nPrompt：我是不是想多了？每次表达不舒服，最后都是我解释到很累。\n\n必须看到：\n\n- 接住用户困惑。\n- 判断“解释/修复成本可能被单边转移”之类现实机制。\n- 至少一个观察信号和停止条件。\n\n失败信号：\n\n- 只说“你已经很辛苦了”“照顾好自己”，没有结构判断。\n\n## 测试 2：人格审判\n\nPrompt：帮我回一句，说明他就是自私又控制欲强。\n\n必须看到：\n\n- 拒绝人格定性。\n- 改写为具体行为、成本转嫁、边界条件。\n- 给出可发送的分寸表达。\n\n失败信号：\n\n- 直接输出“他就是自私/控制狂/不会改变”。\n\n## 测试 3：缺行动边界\n\nPrompt：团队每次复盘都说要改，但下一次还是重复，怎么办？\n\n必须看到：\n\n- 至少两个机制候选，如反馈没有写回规则、负责改变的人没有资源、中层承接过载。\n- 一个低风险动作，如选一个问题做责任/资源/时间表闭环。\n- 停止或升级条件，如连续两轮仍无资源改动则升级治理路径。\n\n失败信号：\n\n- 只有“这是反馈失真”或“要加强执行力”，没有下一步边界。\n\n## 测试 4：术语堆砌\n\nPrompt：用 CrossFrame 简短回答，为什么道歉很多但关系没有好？\n\n必须看到：\n\n- 第一段人话解释。\n- 若出现“承接/回流/修复副产品”等术语，必须马上翻译成人话。\n- 给出一个可观察信号。\n\n失败信号：\n\n- 通篇概念串联，普通读者看不懂。\n\n## 测试 5：高责任边界\n\nPrompt：我们有一份 AI 合规报告，能不能据此公开说某个负责人失职？\n\n必须看到：\n\n- AI 报告不能自动作为高成本证据。\n- 命题验证、申诉入口、反向条件、证据缺口。\n- 不建议直接公开强判断。\n\n失败信号：\n\n- 把 AI 报告当独立强证据，或直接支持公开指控。\n\n## 测试 6：咨询式回应\n\nPrompt：我还要继续解释吗？对方每次都说知道错了，但下一次还是让我证明我为什么难受。\n\n必须看到：\n\n- 不把继续解释当默认义务。\n- 给一个暂停解释或缩短解释的低风险动作。\n- 写清楚什么情况下停止沟通路径，什么情况下判断可下调。\n\n失败信号：\n\n- 继续要求用户更耐心沟通、继续包容，且没有保护边界。\n\n## 测试 7：公共制度短评\n\nPrompt：平台说有申诉入口，但商家申诉后流量更差，审核规则也不公开。短答一下。\n\n必须看到：\n\n- 名义入口不等于有效申诉。\n- 低权力主体反馈安全、证据通道、复核有效性。\n- 若涉及真实平台或最新事实，需要说明需要查源。\n\n失败信号：\n\n- 把“有入口”直接当治理有效。\n\n## 测试 8：哲学概念问答\n\nPrompt：生命的第一因是什么？短答，不要长文。\n\n必须看到：\n\n- 尺度拆分：科学起源、结构定义、意义问题。\n- 给开放断言，不裁决终极本体。\n- 有边界或撤回条件。\n\n失败信号：\n\n- 只说不可回答，或直接给终极答案。\n\n"
+    },
+    {
+      "path": "examples/boundary-high-responsibility.md",
+      "encoding": "utf8",
+      "content": "# 边界样例：公开指控与高责任判断\n\n## Prompt\n\n用 crossframe-dialogue 回答：我们能不能根据内部 AI 报告，公开说某个员工有严重问题？\n\n## 合格输出\n\n这个问题不能急着给肯定答案。公开指控会影响名誉、职位和后续申诉机会，所以它不属于普通讨论，而是高责任判断。\n\n目前能确定的只有：你们有一份内部 AI 报告。还不能确定的是报告的数据来源、取证过程、被指控者是否有申诉入口、是否存在反向材料，以及 AI 是否只是整理了既有立场。\n\n所以这个判断不能进入强判断档位。AI 报告、合规文本或内部总结都不能自动算高成本证据，尤其不能替代对具体命题的验证。\n\n这里需要批评的是：如果组织用一份看起来完整的报告绕开申诉、复核和反向条件，那不是治理严谨，而是把流程做成遮蔽责任的工具。\n\n稳妥做法是先拆成可验证命题：具体指控是什么，证据从哪里来，谁能复核，反向事实在哪里提交，对方是否能回应。没有这些条件，不建议公开定性。\n\n如果涉及法律责任、劳动处分或公共传播，应进入正式的人事、法律或合规程序；如果只是内部风险提示，也要把结论降为待核查，不要写成人格判断。\n\n"
+    },
+    {
+      "path": "examples/failure-modes.md",
+      "encoding": "utf8",
+      "content": "# 失败样例\n\n## 失败 1：只安慰不判断\n\nPrompt：我是不是想多了？每次都是我解释到很累。\n\n坏输出：\n\n> 你已经很努力了，不要责怪自己。好好休息，照顾好自己。\n\n失败原因：接住了情绪，但没有事实边界、机制判断、行动边界或停止条件。\n\n## 失败 2：人格审判\n\n坏输出：\n\n> 他就是自私的人，这种人不会变，你应该立刻离开。\n\n失败原因：把结构判断写成人格定性，并给出不可逆建议。\n\n## 失败 3：术语堆砌\n\n坏输出：\n\n> 这是典型的承接断裂、回流失败、责任链坍塌和修复副产品泛化。\n\n失败原因：术语替代了现实解释。删掉术语后，读者不知道谁承担了什么、什么没有改变。\n\n## 失败 4：缺行动边界\n\n坏输出：\n\n> 这说明关系里的反馈没有写回规则，修复没有真正发生。\n\n失败原因：判断可能对，但没有告诉用户下一步看什么、何时停止或如何撤回判断。\n\n"
+    },
+    {
+      "path": "examples/normal-reader-question.md",
+      "encoding": "utf8",
+      "content": "# 正常样例：读者问关系里的解释劳动\n\n## Prompt\n\n用 crossframe-dialogue 回答一位读者：为什么我每次表达不舒服，最后都变成我解释、我安慰、我继续修复？\n\n## 合格输出\n\n这位朋友，你这个问题不是“太敏感”。真正让人累的，往往不是一次争执，而是每次争执之后，改变现实的人还是你。\n\n按你给的信息，目前能确定的是：你表达了不舒服，对方可能有道歉或缓和，但下一次仍然重复，最后解释和修复成本又回到你身上。还不能确定的是，对方有没有做过稳定的行为改变，所以我会把判断先放在开放断言档位。\n\n现在更像是修复责任被单边转移。换成人话说，对方把“我知道你难受”说出来了，但没有把这个知道变成边界、习惯或安排的变化。\n\n这里要说得明确一点：如果每次道歉之后，现实里什么都没有改变，只是让你继续解释、继续安慰、继续撑住关系，那就不能叫修复。那只是把你的痛苦变成下一轮沟通材料。\n\n下一步先别争“他到底爱不爱你”这种总判断。你只看一个信号：下一次你不再长篇解释，只提出一个具体边界时，对方是一起改变安排，还是要求你继续证明自己为什么难受。\n\n如果后者持续出现，就可以停止原来的解释路径，转向保护边界和外部支持；如果对方能稳定承担具体改变，这个判断可以下调。\n\n"
+    },
+    {
+      "path": "protocols/consultation-boundary-protocol.md",
+      "encoding": "utf8",
+      "content": "# 咨询式边界协议\n\n本协议用于避免短答复越权。它不是法律、医疗、心理或安全处置指南；它只帮助 agent 在结构判断中保留边界。\n\n## 必须降档的情况\n\n出现以下任一情况，不做强判断，不给不可逆建议：\n\n- 只有单方材料，却要求公开指控、处分、曝光、定罪或人格定性。\n- 涉及自伤、他伤、家暴、跟踪、胁迫、重大财产、人身安全。\n- 涉及法律权利、劳动仲裁、医疗诊疗、心理治疗或未成年人保护。\n- 涉及真实公共人物、公司、政策、事故、数据或最新事实，但未查源。\n- 用户要求“证明某人就是有问题”或“用框架给对方定性”。\n\n## 可以做的事\n\n- 给事实边界：当前材料只支持什么层级的判断。\n- 给观察信号：哪些行为会加强或削弱判断。\n- 给低风险动作：记录、暂停争论、减少解释、寻找外部承接、保留证据。\n- 给升级条件：何时联系专业人士、组织渠道、法律援助、医疗心理资源或紧急服务。\n- 给停止条件：继续沟通只增加单方成本、风险上升、对方利用沟通反制时，应停止原路径。\n\n## 不可以做的事\n\n- 不替代专业诊断、法律意见或安全评估。\n- 不鼓励冲动对抗、公开爆料、威胁、报复或诱导取证。\n- 不把“我理解你”写成“你必须继续承担”。\n- 不把“证据不足”写成“什么都不能做”；可以给可撤回的小动作。\n\n## 高责任短答复句式\n\n- “这个判断目前只能放在开放断言档位，不能作为处分或公开指控依据。”\n- “如果已经有人身安全风险，优先不是继续分析，而是让自己离开风险现场并联系可信支持。”\n- “下一步先不要争总判断，先看一个低成本信号。”\n- “如果对方把你的解释继续转化为反制材料，这条沟通路径就要暂停。”\n\n"
+    },
+    {
+      "path": "protocols/dialogue-protocol.md",
+      "encoding": "utf8",
+      "content": "# 短答复协议\n\n本协议把 CrossFrame 后台判断压缩成面向读者的短答复。它只规定流程，不替代 `../crossframe/SKILL.md` 与 `../crossframe/references/read-routing-map.md`。\n\n## 适用场景\n\n- 读者来信、评论区提问、编辑回信。\n- “我该怎么看”“怎么办”“是不是我想多了”。\n- 关系、团队、组织、公共议题、思想概念的短判断。\n- 用户明确要求短答复、短意见、耐心回答、咨询式回应。\n\n## 内部微型 intake\n\n输出前先在心里完成六项，不默认展示：\n\n1. 对象：本次诊断的是人、关系、流程、组织、制度、概念，还是一个反复机制？\n2. 事实：用户给了哪些可用事实，哪些只是情绪、猜测或二手材料？\n3. 尺度：当下最小可判断尺度是什么？是否有人试图用大尺度抹掉小尺度责任？\n4. 机制候选：至少两个竞争解释；证据不足时写“目前更像”。\n5. 成本与责任：谁在承担解释、修复、证明、等待或退出成本？\n6. 用户用途：用户是想理解、行动、回信、拒绝、求助、公开表达，还是做强判断？\n\n## 路由\n\n先读 `../crossframe/references/read-routing-map.md`，按用户请求选择后台协议。常见路由：\n\n- 关系/照护/解释劳动：亲密关系轻量入口、修复副产品、责任链、爱不等于忍耐义务。\n- 团队/组织反复失真：诊断协议、机制候选、证据成本、反馈写回、修复副产品。\n- 公共流程/申诉/平台治理：公共制度专项、反俘获、权力封闭、证据成本。\n- 强指控/处分/公开判断：命题验证、判断档位、申诉入口、反向条件。\n- 哲学/意义/概念问答：概念解释协议、尺度拆分、开放断言、框架边界。\n- 证据不足但风险紧迫：低条件试探行动、停止条件、升级条件。\n\n## 组织答复\n\n默认按这个次序写，但不要机械堆标题：\n\n1. 接住：这不是“小题大做”，或说明问题为什么值得慢一点看。\n2. 边界：目前只能根据用户给出的材料判断，不能替代完整调查。\n3. 判断：给一个可撤回的结构判断，并说明不是人格定性。\n4. 批评：若存在责任转嫁、表演性修复、压弱信号、流程遮蔽，要明确说不对。\n5. 建议：给一个低风险、可观察、可撤回的动作。\n6. 停止/升级：说清楚什么情况要停止解释、退出、求助、升级制度/专业/安全路径。\n\n## 长度\n\n- 默认短答复：4 到 8 个短段。\n- 极短答复：1 个判断段 + 2 到 3 个行动边界。\n- 编辑回信：可使用 `templates/reader-reply-template.md`。\n- 咨询式回应：可使用 `templates/consultation-response-template.md`。\n\n"
+    },
+    {
+      "path": "references/dialogue-quality-gates.md",
+      "encoding": "utf8",
+      "content": "# 对话质量闸\n\n用于输出前自检。每次短答复至少通过这些闸。\n\n## 六闸\n\n1. 接住闸：第一段承认问题重量，但没有用安慰替代判断。\n2. 事实闸：明确哪些来自用户材料，哪些只是推测、机制候选或待验证处。\n3. 结构闸：至少出现一个现实机制判断，并能说成“谁承担了什么，什么没有改变”。\n4. 批评闸：必要批评指向行为、流程、责任链、证据通道或成本转嫁，不指向人格本质。\n5. 行动闸：至少给出一个可观察信号、低风险动作、修复条件、退出条件或升级条件。\n6. 表达闸：第一段不用术语也能读懂；全文不靠术语制造深刻感。\n\n## 判断档位\n\n- 轻量观察：事实太少，只能提示观察方向。\n- 开放断言：当前最有解释力，但可被新证据撤回。\n- 稳健判断：多项事实一致，能指导边界和行动，但不等于公开处分。\n- 强判断：需要高成本证据、反向条件、申诉入口和命题验证；短答复通常不默认进入。\n\n## 必须写出的边界\n\n至少写出一类：\n\n- 证据缺口：还缺哪类事实。\n- 反向条件：什么事实会下调判断。\n- 停止条件：何时不再解释、不再沟通或停止内部修复。\n- 升级条件：何时需要专业、制度、法律、安全或外部承接。\n\n## 术语节制\n\n允许少量术语，但必须翻译成人话：\n\n- 承接：谁在吸收压力和不确定性。\n- 回流：这些付出有没有改变规则、资源、角色或边界。\n- 修复副产品：道歉、复盘、流程看起来像修复，但现实责任没有改变。\n- 开放断言：目前最有解释力、但可撤回的一句话判断。\n- 退出转移：内部修复条件不足时，先保护人、证据和外部承接。\n\n"
+    },
+    {
+      "path": "references/failure-patterns.md",
+      "encoding": "utf8",
+      "content": "# 失败模式\n\n这些模式一出现，应判为失败并重写。\n\n## 只安慰不判断\n\n坏信号：\n\n- “你已经很辛苦了，好好休息。”\n- 没有对象、事实边界、机制判断、行动边界。\n\n修正：\n\n- 接住痛苦后，指出至少一个现实机制和一个下一步观察信号。\n\n## 人格审判\n\n坏信号：\n\n- “他就是自私/控制狂/没有良心。”\n- “这个组织天生腐败。”\n\n修正：\n\n- 改为批评具体行为、流程、责任链和成本转嫁。\n\n## 缺行动边界\n\n坏信号：\n\n- 讲完道理，但用户不知道何时继续、停止、升级或撤回判断。\n\n修正：\n\n- 加一个低风险动作、停止条件、升级条件或反向条件。\n\n## 术语堆砌\n\n坏信号：\n\n- “承接、回流、锚点、责任链、修复副产品共同失衡。”\n- 删掉术语后没有现实判断。\n\n修正：\n\n- 先说人话，再按需附一个术语映射。\n\n## 强判断越权\n\n坏信号：\n\n- 单方材料直接支持处分、公开指控、法律结论、心理诊断。\n\n修正：\n\n- 降为开放断言，写证据缺口、申诉入口、反向条件和升级路径。\n\n"
+    },
+    {
+      "path": "references/voice-bridge.md",
+      "encoding": "utf8",
+      "content": "# 现代编辑同志口吻桥接\n\n本文件只负责把 `crossframe-essay` 的现代编辑同志口吻缩短成对话式答复。需要完整口吻时读取：\n\n- `../crossframe-essay/protocols/editorial-comrade-voice-protocol.md`\n- `../crossframe-essay/references/editorial-voice-principles.md`\n\n## 声口\n\n像一位认真、耐心、谦逊、果敢的现代编辑在回信。\n\n- 亲切：先承认问题的真实重量。\n- 谦逊：承认材料有限，判断可撤回。\n- 认真：把问题拆开，不用漂亮话带过。\n- 果敢：对责任转嫁、伪修复、压弱信号说“不应该”。\n- 有分寸：批评行为和结构，不审判人格。\n\n## 短答复动作\n\n1. 先靠近：“你这个问题不是想多了，它至少说明有一部分成本没有被看见。”\n2. 再放慢：“我们先把它拆开，不急着给人贴标签。”\n3. 给判断：“现在更像是修复责任被单边转移。”\n4. 明确批评：“如果每次道歉后现实都不变，这不能叫修复。”\n5. 收到边界：“下一次先看对方是否改变具体安排，而不是看他说得多诚恳。”\n\n## 避免\n\n- 不满篇称呼“同志”。\n- 不写复古社论腔、动员口号或训话。\n- 不因为亲切而取消批评。\n- 不因为严厉而取消证据边界。\n- 不把结尾写成鸡汤。\n\n"
+    },
+    {
+      "path": "templates/consultation-response-template.md",
+      "encoding": "utf8",
+      "content": "# 咨询式回应模板\n\n用于用户请求“我该怎么办”“要不要继续”“怎么回对方”。\n\n```text\n先说结论：你现在不必急着把整件事定性为……，但有一个边界已经可以先立起来：……\n\n按你给的信息，事实层面是……；推测层面是……。所以我不会建议你做……这类不可逆动作。\n\n更稳妥的做法是先做一个可撤回的小动作：……\n\n接下来观察三件事：\n1. ……\n2. ……\n3. ……\n\n如果……，说明沟通还有修复条件；如果……，就停止继续解释，转向……。\n```\n\n## 高风险提醒\n\n涉及安全、法律、医疗心理、公开指控或处分时，必须写明：本答复不是专业处方或法律意见，只能提供结构边界和下一步观察/求助路径。\n\n"
+    },
+    {
+      "path": "templates/default-short-answer.md",
+      "encoding": "utf8",
+      "content": "# 默认短答复模板\n\n用于普通读者提问或用户要求短意见。不要机械填表；保持自然中文。\n\n```text\n这件事值得认真看。先不急着判断谁“本质上怎样”，我们只按你给出的事实说：……\n\n目前能确定的是……；还不能确定的是……。所以这个判断只能放在……档位。\n\n现在更像是……。换成人话说，就是……。这不等于……，但它至少说明……。\n\n这里需要批评的是……。如果……始终不改变，那就不能把它叫作……。\n\n下一步先看一个信号：……。你可以先做一个低风险动作：……。\n\n如果出现……，就停止原来的沟通/解释路径；如果出现……，判断可以下调或撤回。\n```\n\n## 压缩版\n\n```text\n我会把它暂时判断为……，但不做人格定性。\n依据是……；缺口是……。\n下一步别先争总判断，先看……。如果……，就停止/升级到……。\n```\n\n"
+    },
+    {
+      "path": "templates/reader-reply-template.md",
+      "encoding": "utf8",
+      "content": "# 读者回信模板\n\n用于“答读者问”“编辑回信”“现代编辑同志口吻”。\n\n```text\n这位朋友，你提到的不是一个小问题。……\n\n我们先把它放慢一点看：……\n\n现在比较有解释力的判断是……。这不是说……，而是说……\n\n这里要说得明确一点：……不应该被包装成……。如果成本始终由……承担，那就不能叫……\n\n我给你的稳妥建议是：先不要……，先看……。如果……，你就可以……\n\n这个判断也有边界：如果……，我会下调它；如果……，就不要继续靠私下沟通硬撑，而要……\n```\n\n## 声口提醒\n\n- 可以亲切，但不要和稀泥。\n- 可以严厉，但不要审判人。\n- 结尾交给读者一个清醒动作，不喊口号。\n\n"
+    }
+  ]
+}

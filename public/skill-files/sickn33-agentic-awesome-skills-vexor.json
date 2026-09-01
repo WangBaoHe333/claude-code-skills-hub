@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-vexor",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: vexor\ndescription: \"Vector-powered CLI for semantic file search with a Claude/Codex skill\"\nrisk: safe\nsource: \"https://github.com/scarletkc/vexor\"\ndate_added: \"2026-02-27\"\n---\n\n# Vexor\n\n## Overview\n\nVector-powered CLI for semantic file search with a Claude/Codex skill\n\n## When to Use This Skill\n\nUse this skill when you need to work with vector-powered cli for semantic file search with a claude/codex skill.\n\n## Instructions\n\nThis skill provides guidance and patterns for vector-powered cli for semantic file search with a claude/codex skill.\n\nFor more information, see the [source repository](https://github.com/scarletkc/vexor).\n\n## Limitations\n- Use this skill only when the task clearly matches the scope described above.\n- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.\n- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.\n"
+    }
+  ]
+}

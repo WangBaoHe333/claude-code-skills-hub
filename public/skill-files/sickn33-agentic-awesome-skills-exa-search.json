@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-exa-search",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: exa-search\ndescription: \"Semantic search, similar content discovery, and structured research using Exa API. Use when you need semantic/embeddings-based search, finding similar content, or searching by category (company, people, research papers, etc.).\"\nrisk: critical\nsource: community\ndate_added: \"2026-02-27\"\n---\n\n# exa-search\n\n## Overview\nSemantic search, similar content discovery, and structured research using Exa API\n\n## When to Use\n- When you need semantic/embeddings-based search\n- When finding similar content\n- When searching by category (company, people, research papers, etc.)\n\n## Installation\n```bash\nnpx skills add -g BenedictKing/exa-search\n```\n\n## Step-by-Step Guide\n1. Install the skill using the command above\n2. Configure Exa API key\n3. Use naturally in Claude Code conversations\n\n## Examples\nSee [GitHub Repository](https://github.com/BenedictKing/exa-search) for examples.\n\n## Best Practices\n- Configure API keys via environment variables\n\n## Troubleshooting\nSee the GitHub repository for troubleshooting guides.\n\n## Related Skills\n- context7-auto-research, tavily-web, firecrawl-scraper, codex-review\n\n## Limitations\n- Use this skill only when the task clearly matches the scope described above.\n- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.\n- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.\n"
+    }
+  ]
+}

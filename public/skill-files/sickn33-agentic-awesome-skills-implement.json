@@ -1,0 +1,10 @@
+{
+  "id": "sickn33-agentic-awesome-skills-implement",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: implement\ndescription: Implement a piece of work based on a PRD or set of issues.\nrisk: critical\nsource: https://github.com/mattpocock/skills/tree/main/skills/engineering/implement\nsource_repo: mattpocock/skills\nsource_type: community\ndate_added: 2026-07-01\nlicense: MIT\nlicense_source: https://github.com/mattpocock/skills/blob/main/LICENSE\n---\n\n\n## When to Use\n\nUse this skill when you need implement a piece of work based on a PRD or set of issues.\n\nImplement the work described by the user in the PRD or issues.\n\nUse /tdd where possible, at pre-agreed seams.\n\nRun typechecking regularly, single test files regularly, and the full test suite once at the end.\n\nOnce done, use /review to review the work.\n\nCommit your work to the current branch.\n\n## Limitations\n\n- Use this skill only when the task clearly matches its upstream source and local project context.\n- Verify commands, generated code, dependencies, credentials, and external service behavior before applying changes.\n- Do not treat examples as a substitute for environment-specific tests, security review, or user approval for destructive or costly actions.\n"
+    }
+  ]
+}

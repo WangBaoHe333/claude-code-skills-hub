@@ -1,0 +1,10 @@
+{
+  "id": "openclaw-openclaw-discord",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: discord\ndescription: \"Discord messaging workflows through OpenClaw's message tool.\"\nmetadata: { \"openclaw\": { \"emoji\": \"🎮\", \"requires\": { \"config\": [\"channels.discord\"] } } }\nallowed-tools: [\"message\"]\n---\n\n# Discord\n\nUse the `message` tool with `channel: \"discord\"`. The tool schema lists the actions enabled by the current account's `channels.discord.actions.*` gates; do not assume unavailable actions.\n\n## Workflow\n\n- Prefer stable `guildId`, `channelId`, `messageId`, and `userId` values from context. Pass `accountId` when more than one Discord account could apply.\n- Resolve the exact message before editing, deleting, pinning, moderating, or reacting when the user's reference is ambiguous.\n- Keep thread replies in their existing thread. A forum parent cannot receive components; send components to the created forum thread instead.\n- Confirm destructive or moderation actions unless the user already specified the exact target and action.\n\n## Interactive components\n\n`components` must be a structured object or native component array, never a placeholder string. Do not combine components v2 with legacy `embeds`.\n\n```json\n{\n  \"action\": \"send\",\n  \"channel\": \"discord\",\n  \"to\": \"channel:123\",\n  \"message\": \"Choose an option\",\n  \"components\": {\n    \"blocks\": [\n      {\n        \"type\": \"actions\",\n        \"buttons\": [\n          { \"label\": \"Approve\", \"style\": \"success\", \"callbackData\": \"approve\" },\n          { \"label\": \"Decline\", \"style\": \"danger\", \"callbackData\": \"decline\" }\n        ]\n      }\n    ]\n  }\n}\n```\n\nDiscord mention syntax, component availability, and form hints are injected automatically. Follow the current hints and tool schema rather than a duplicated action catalog.\n"
+    }
+  ]
+}

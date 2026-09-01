@@ -1,0 +1,15 @@
+{
+  "id": "sickn33-agentic-awesome-skills-tier-1-simple",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: tier-1-simple\ndescription: \"When to use Tier 1 (Simple) skill architecture.\"\n---\n\n# tier 1 simple\n\nWhen to use Tier 1 (Simple) skill architecture.\n\n## 中文说明\n\nTier 1 Simple 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Tier 1 Simple 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "---\ndescription: When to use Tier 1 (Simple) skill architecture.\nmetadata:\n  tags: [tier-1, simple, single-file]\n---\n\n# Tier 1: Simple Skills\n\nSingle-file skills for focused, specific purposes.\n\n## When to Use\n\n- **Single concept**: One technique, one pattern, one reference\n- **Under 200 lines**: Can fit comfortably in one file\n- **No complex decision logic**: User knows exactly what they need\n- **Frequently loaded**: Needs minimal token footprint\n\n## Structure\n\n```\nmy-skill/\n└── SKILL.md          # Everything in one file\n```\n\n## Example\n\n```yaml\n---\nname: flatten-with-flags\ndescription: Use when simplifying deeply nested conditionals.\nmetadata:\n  category: pattern\n  triggers: nested if, complex conditionals, early return\n---\n\n# Flatten with Flags\n\n## When to Use\n- Code has 3+ levels of nesting\n- Conditions are hard to follow\n\n## The Pattern\nReplace nested conditions with early returns and flag variables.\n\n## Before\n```javascript\nfunction process(data) {\n  if (data) {\n    if (data.valid) {\n      if (data.ready) {\n        return doWork(data);\n      }\n    }\n  }\n  return null;\n}\n```\n\n## After\n```javascript\nfunction process(data) {\n  if (!data) return null;\n  if (!data.valid) return null;\n  if (!data.ready) return null;\n  return doWork(data);\n}\n```\n```\n\n## Checklist\n\n- [ ] Fits in <200 lines\n- [ ] Single focused purpose\n- [ ] No need for `references/` directory\n- [ ] Description uses \"Use when...\" pattern\n"
+    }
+  ]
+}

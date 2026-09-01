@@ -107,11 +107,6 @@
       "content": "#!/usr/bin/env node\nimport { argv, stderr } from \"node:process\";\n\nimport { disposeDefaultLspManager } from \"./lsp/manager.js\";\nimport { runMcpStdioServer } from \"./mcp.js\";\n\nasync function main(): Promise<void> {\n\tconst [command = \"mcp\"] = argv.slice(2);\n\n\ttry {\n\t\tif (command === \"mcp\") {\n\t\t\tawait runMcpStdioServer();\n\t\t\treturn;\n\t\t}\n\n\t\tstderr.write(\"Usage: omo-lsp [mcp]\\n\");\n\t\tprocess.exitCode = 2;\n\t} finally {\n\t\tawait disposeDefaultLspManager();\n\t}\n}\n\nmain().catch(async (error: unknown) => {\n\tstderr.write(`${error instanceof Error ? (error.stack ?? error.message) : String(error)}\\n`);\n\tawait disposeDefaultLspManager();\n\tprocess.exitCode = 1;\n});\n"
     },
     {
-      "path": "src/lsp/cleanup-errors.ts",
-      "encoding": "utf8",
-      "content": "export * from \"@oh-my-opencode/lsp-core/lsp/cleanup-errors\";\n"
-    },
-    {
       "path": "src/lsp/client-wrapper.ts",
       "encoding": "utf8",
       "content": "export * from \"@oh-my-opencode/lsp-core/lsp/client-wrapper\";\n"
@@ -130,11 +125,6 @@
       "path": "src/lsp/connection.ts",
       "encoding": "utf8",
       "content": "export * from \"@oh-my-opencode/lsp-core/lsp/connection\";\n"
-    },
-    {
-      "path": "src/lsp/constants.ts",
-      "encoding": "utf8",
-      "content": "export * from \"@oh-my-opencode/lsp-core/lsp/constants\";\n"
     },
     {
       "path": "src/lsp/directory-diagnostics.ts",
@@ -167,19 +157,9 @@
       "content": "export * from \"@oh-my-opencode/lsp-core/lsp/json-rpc-connection\";\n"
     },
     {
-      "path": "src/lsp/language-mappings.ts",
-      "encoding": "utf8",
-      "content": "export * from \"@oh-my-opencode/lsp-core/lsp/language-mappings\";\n"
-    },
-    {
       "path": "src/lsp/manager.ts",
       "encoding": "utf8",
       "content": "export * from \"@oh-my-opencode/lsp-core/lsp/manager\";\n"
-    },
-    {
-      "path": "src/lsp/process-signal-cleanup.ts",
-      "encoding": "utf8",
-      "content": "export * from \"@oh-my-opencode/lsp-core/lsp/process-signal-cleanup\";\n"
     },
     {
       "path": "src/lsp/process.ts",
@@ -235,11 +215,6 @@
       "path": "src/mcp.ts",
       "encoding": "utf8",
       "content": "export * from \"@oh-my-opencode/lsp-core/mcp\";\n"
-    },
-    {
-      "path": "src/missing-dependency-result.ts",
-      "encoding": "utf8",
-      "content": "export * from \"@oh-my-opencode/lsp-core/missing-dependency-result\";\n"
     },
     {
       "path": "src/request-context.ts",
