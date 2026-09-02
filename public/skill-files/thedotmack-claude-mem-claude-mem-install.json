@@ -1,0 +1,10 @@
+{
+  "id": "thedotmack-claude-mem-claude-mem-install",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: claude-mem-install\ndescription: >-\n  Use this when setting up claude-mem on Grok Bot: local worker plus CMEM Pro\n  observer (default), optional host-login observer, or remote cmem.ai. No Cursor\n  required.\n---\n# Install claude-mem on Grok Bot\n\nIndependent of Cursor. Grok Bot has no session-start / file-read / tool-use hooks.\n\n## Local worker + CMEM Pro observer (default)\n\n```\nnpx claude-mem install --ide grok-bot\n```\n\nDo **not** pass `--provider host` unless you want the loopback shim. With no `--provider`, this is the CMEM Pro path:\n\n- Worker on `127.0.0.1:<port>` (default `37700 + uid%100`). Do not restart if healthy.\n- Transcript watcher per Grok Bot agent (`platformSource=grok-bot`)\n- Observer via CMEM Pro: `CLAUDE_MEM_PROVIDER=openrouter`, `CLAUDE_MEM_OPENROUTER_BASE_URL=https://cmem.ai/api/inference/v1`, `CLAUDE_MEM_OPENROUTER_MODEL=cmem-observer`, API key from installer OAuth (`cm_pro` memory key)\n- Interactive installer pre-selects CMEM Pro\n- MCP `session_start_context` at the start of a real task\n\nNo xAI key. No Claude CLI.\n\n## Optional: local host-login observer\n\nExplicit opt-in only. Not the user default.\n\n```\nnpx claude-mem install --ide grok-bot --provider host\n```\n\nLoopback OpenAI-compatible shim on a **free** loopback port (not the worker port). Idle replies are `<skip_summary />`; finished units are one `<observation>`. This Grok login fulfills inbox jobs (skill host-observer).\n\n## Remote worker / remote observer\n\nSet plugin variable `CLAUDE_MEM_MCP_TOKEN` and use MCP `claude-mem-remote`.\n\n```\nnpx claude-mem install --ide grok-bot --runtime server --server-url https://cmem.ai\n```\n"
+    }
+  ]
+}

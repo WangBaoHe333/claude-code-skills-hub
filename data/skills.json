@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T22:46:35.654Z",
+  "generatedAt": "2026-09-02T22:49:45.450Z",
   "sources": [
     "ComposioHQ/awesome-claude-skills",
     "JimLiu/baoyu-skills",
@@ -12716,7 +12716,7 @@
     {
       "id": "sickn33-agentic-awesome-skills-agents-md",
       "name": "agents-md",
-      "summary": "This skill should be used when the user asks to \"create AGENTS.md\", \"update AGENTS.md\", \"maintain agent docs\", \"set up CLAUDE.md\", or needs to keep agent instructions concise. Enf…",
+      "summary": "Create, revise, or audit AGENTS.md files from repository evidence, verified commands, and correctly scoped instructions without overwriting maintainer intent.",
       "summaryZh": "Agents Md 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "capabilityZh": "Agents Md 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
       "audience": "需要使用 Agents Md 处理具体工作流的 Claude Code 用户。",
@@ -12736,7 +12736,6 @@
       "category": "代码 / Agent 开发",
       "tags": [
         "skill",
-        "documents",
         "api"
       ],
       "install": {
@@ -59083,6 +59082,78 @@
       "packageUrl": "/skill-files/thedotmack-claude-mem-claude-mem.json"
     },
     {
+      "id": "thedotmack-claude-mem-claude-mem-cursor",
+      "name": "claude mem cursor",
+      "summary": "Install from the Cursor or Grok Bot plugin store as **claude-mem-cursor**. Does not install Grok Bot.",
+      "summaryZh": "Claude Mem Cursor 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Claude Mem Cursor 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Claude Mem Cursor 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Claude Mem Cursor 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Claude Mem Cursor 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Claude Mem Cursor 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Claude Mem Cursor”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Claude Mem Cursor”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/claude-mem-cursor' \"$HOME/.claude/skills/claude-mem-cursor\"\nrm -rf '/tmp/thedotmack__claude-mem'"
+      },
+      "source": {
+        "repo": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "path": "claude-mem-cursor",
+        "type": "auto-promoted-high-star",
+        "stars": 82253
+      },
+      "packageUrl": "/skill-files/thedotmack-claude-mem-claude-mem-cursor.json"
+    },
+    {
+      "id": "thedotmack-claude-mem-claude-mem-grok-bot",
+      "name": "claude mem grok bot",
+      "summary": "Install from the Grok Bot or Cursor plugin store as **claude-mem-grok-bot**. Does not install Cursor.",
+      "summaryZh": "Claude Mem Grok Bot 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Claude Mem Grok Bot 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Claude Mem Grok Bot 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Claude Mem Grok Bot 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Claude Mem Grok Bot 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Claude Mem Grok Bot 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Claude Mem Grok Bot”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Claude Mem Grok Bot”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/claude-mem-grok-bot' \"$HOME/.claude/skills/claude-mem-grok-bot\"\nrm -rf '/tmp/thedotmack__claude-mem'"
+      },
+      "source": {
+        "repo": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "path": "claude-mem-grok-bot",
+        "type": "auto-promoted-high-star",
+        "stars": 82253
+      },
+      "packageUrl": "/skill-files/thedotmack-claude-mem-claude-mem-grok-bot.json"
+    },
+    {
       "id": "storybookjs-storybook-claude-plugin",
       "name": "claude plugin",
       "summary": "You can use Storybook's plugin in Claude Code or Claude Desktop to connect agents to your Storybook. Agents can then use the plugin's skills and tools to generate UI, run tests, a…",
@@ -59633,6 +59704,42 @@
         "stars": 45705
       },
       "packageUrl": "/skill-files/sickn33-agentic-awesome-skills-claude-in-chrome-troubleshooting.json"
+    },
+    {
+      "id": "thedotmack-claude-mem-claude-mem-install",
+      "name": "claude-mem-install",
+      "summary": ">-",
+      "summaryZh": "Claude Mem Install 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Claude Mem Install 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Claude Mem Install 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Claude Mem Install 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Claude Mem Install 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Claude Mem Install 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Claude Mem Install”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Claude Mem Install”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/claude-mem-cursor/skills/install' \"$HOME/.claude/skills/claude-mem-install\"\nrm -rf '/tmp/thedotmack__claude-mem'"
+      },
+      "source": {
+        "repo": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "path": "claude-mem-cursor/skills/install",
+        "type": "auto-promoted-high-star",
+        "stars": 82253
+      },
+      "packageUrl": "/skill-files/thedotmack-claude-mem-claude-mem-install.json"
     },
     {
       "id": "sickn33-agentic-awesome-skills-claude-monitor",
@@ -107308,6 +107415,44 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-email-marketing-command-center.json"
     },
     {
+      "id": "sickn33-agentic-awesome-skills-email-issue-fixer",
+      "name": "email-issue-fixer",
+      "summary": "Fix small email mistakes without touching the writer's voice, and strip tracking parameters from links on request. Always returns the corrected draft plus a change list.",
+      "summaryZh": "Email Issue Fixer 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "capabilityZh": "Email Issue Fixer 面向开发者，用来创建、调试或使用 Claude Code 相关的 API、Agent、技能和工程工作流。",
+      "audience": "需要使用 Email Issue Fixer 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Email Issue Fixer 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "scenariosZh": [
+        "生成或修改 Claude Code skill",
+        "整理 Agent/API 使用说明和开发步骤",
+        "把工程任务拆成可执行的代码工作流"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Email Issue Fixer”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Email Issue Fixer”，再给出文件、链接或要完成的任务。",
+      "category": "代码 / Agent 开发",
+      "tags": [
+        "skill",
+        "email",
+        "api"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/sickn33__agentic-awesome-skills'\ngit clone --depth 1 'https://github.com/sickn33/agentic-awesome-skills.git' '/tmp/sickn33__agentic-awesome-skills'\ncp -R '/tmp/sickn33__agentic-awesome-skills/plugins/agentic-awesome-skills/skills/email-issue-fixer' \"$HOME/.claude/skills/email-issue-fixer\"\nrm -rf '/tmp/sickn33__agentic-awesome-skills'"
+      },
+      "source": {
+        "repo": "sickn33/agentic-awesome-skills",
+        "url": "https://github.com/sickn33/agentic-awesome-skills",
+        "path": "plugins/agentic-awesome-skills/skills/email-issue-fixer",
+        "type": "auto-promoted-high-star",
+        "stars": 45705
+      },
+      "packageUrl": "/skill-files/sickn33-agentic-awesome-skills-email-issue-fixer.json"
+    },
+    {
       "id": "leoyeai-openclaw-master-skills-email-manager",
       "name": "email-manager",
       "summary": "When user asks to write email, draft reply, manage inbox, email template, follow up email, cold email, professional email, email subject line, thank you email, apology email, meet…",
@@ -147690,6 +147835,42 @@
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-horoscope-daily.json"
     },
     {
+      "id": "thedotmack-claude-mem-host-observer",
+      "name": "host-observer",
+      "summary": ">-",
+      "summaryZh": "Host Observer 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "capabilityZh": "Host Observer 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
+      "audience": "需要使用 Host Observer 处理具体工作流的 Claude Code 用户。",
+      "audienceZh": "需要使用 Host Observer 处理具体工作流的 Claude Code 用户。",
+      "scenarios": [
+        "使用 Host Observer 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "scenariosZh": [
+        "使用 Host Observer 完成相关任务",
+        "减少手工复制、整理和重复操作",
+        "把固定流程交给 Claude Code 执行"
+      ],
+      "usage": "安装后在 Claude Code 中明确说“使用 Host Observer”，再给出文件、链接或要完成的任务。",
+      "usageZh": "安装后在 Claude Code 中明确说“使用 Host Observer”，再给出文件、链接或要完成的任务。",
+      "category": "通用工具",
+      "tags": [
+        "skill"
+      ],
+      "install": {
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/claude-mem-grok-bot/skills/host-observer' \"$HOME/.claude/skills/host-observer\"\nrm -rf '/tmp/thedotmack__claude-mem'"
+      },
+      "source": {
+        "repo": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "path": "claude-mem-grok-bot/skills/host-observer",
+        "type": "auto-promoted-high-star",
+        "stars": 82253
+      },
+      "packageUrl": "/skill-files/thedotmack-claude-mem-host-observer.json"
+    },
+    {
       "id": "sickn33-agentic-awesome-skills-hosted-agents",
       "name": "hosted-agents",
       "summary": "Build background agents in sandboxed environments. Use for hosted coding agents, sandboxed VMs, Modal sandboxes, and remote coding environments.",
@@ -184648,7 +184829,7 @@
     {
       "id": "thedotmack-claude-mem-mem-search",
       "name": "mem-search",
-      "summary": ">",
+      "summary": ">-",
       "summaryZh": "Mem Search 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "capabilityZh": "Mem Search 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
       "audience": "需要使用 Mem Search 处理具体工作流的 Claude Code 用户。",
@@ -184670,12 +184851,12 @@
         "skill"
       ],
       "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/cowork/skills/mem-search' \"$HOME/.claude/skills/mem-search\"\nrm -rf '/tmp/thedotmack__claude-mem'"
+        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/thedotmack__claude-mem'\ngit clone --depth 1 'https://github.com/thedotmack/claude-mem.git' '/tmp/thedotmack__claude-mem'\ncp -R '/tmp/thedotmack__claude-mem/claude-mem-cursor/skills/mem-search' \"$HOME/.claude/skills/mem-search\"\nrm -rf '/tmp/thedotmack__claude-mem'"
       },
       "source": {
         "repo": "thedotmack/claude-mem",
         "url": "https://github.com/thedotmack/claude-mem",
-        "path": "cowork/skills/mem-search",
+        "path": "claude-mem-cursor/skills/mem-search",
         "type": "auto-promoted-high-star",
         "stars": 82253
       },
@@ -263793,42 +263974,6 @@
         "stars": 2050
       },
       "packageUrl": "/skill-files/leoyeai-openclaw-master-skills-session-logs.json"
-    },
-    {
-      "id": "openclaw-openclaw-session-logs",
-      "name": "session-logs",
-      "summary": "Search and analyze your own session logs (older/parent conversations) using jq.",
-      "summaryZh": "Session Logs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "capabilityZh": "Session Logs 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。",
-      "audience": "需要使用 Session Logs 处理具体工作流的 Claude Code 用户。",
-      "audienceZh": "需要使用 Session Logs 处理具体工作流的 Claude Code 用户。",
-      "scenarios": [
-        "使用 Session Logs 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "scenariosZh": [
-        "使用 Session Logs 完成相关任务",
-        "减少手工复制、整理和重复操作",
-        "把固定流程交给 Claude Code 执行"
-      ],
-      "usage": "安装后在 Claude Code 中明确说“使用 Session Logs”，再给出文件、链接或要完成的任务。",
-      "usageZh": "安装后在 Claude Code 中明确说“使用 Session Logs”，再给出文件、链接或要完成的任务。",
-      "category": "通用工具",
-      "tags": [
-        "skill"
-      ],
-      "install": {
-        "command": "mkdir -p \"$HOME/.claude/skills\"\nrm -rf '/tmp/openclaw__openclaw'\ngit clone --depth 1 'https://github.com/openclaw/openclaw.git' '/tmp/openclaw__openclaw'\ncp -R '/tmp/openclaw__openclaw/skills/session-logs' \"$HOME/.claude/skills/session-logs\"\nrm -rf '/tmp/openclaw__openclaw'"
-      },
-      "source": {
-        "repo": "openclaw/openclaw",
-        "url": "https://github.com/openclaw/openclaw",
-        "path": "skills/session-logs",
-        "type": "auto-promoted-high-star",
-        "stars": 388089
-      },
-      "packageUrl": "/skill-files/openclaw-openclaw-session-logs.json"
     },
     {
       "id": "ruvnet-ruflo-session-persist",

@@ -1,0 +1,40 @@
+{
+  "id": "thedotmack-claude-mem-claude-mem-cursor",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: claude-mem-cursor\ndescription: \"Install from the Cursor or Grok Bot plugin store as **claude-mem-cursor**. Does not install Grok Bot.\"\n---\n\n# claude mem cursor\n\nInstall from the Cursor or Grok Bot plugin store as **claude-mem-cursor**. Does not install Grok Bot.\n\n## 中文说明\n\nClaude Mem Cursor 是 Claude Code 的能力扩展，用来处理对应领域里的文件、网页、数据或自动化流程。\n\n## 典型场景\n- 使用 Claude Mem Cursor 完成相关任务\n- 减少手工复制、整理和重复操作\n- 把固定流程交给 Claude Code 执行"
+    },
+    {
+      "path": ".cursor-plugin/plugin.json",
+      "encoding": "utf8",
+      "content": "{\n  \"name\": \"claude-mem-cursor\",\n  \"version\": \"13.23.1\",\n  \"description\": \"Persistent memory for Cursor. Hooks ingest tool use; MCP searches past sessions. Works with a local worker or a remote cmem.ai worker, and a local host-login observer or remote inference.\",\n  \"author\": { \"name\": \"Alex Newman\" },\n  \"homepage\": \"https://github.com/thedotmack/claude-mem\",\n  \"repository\": \"https://github.com/thedotmack/claude-mem\",\n  \"license\": \"Apache-2.0\",\n  \"keywords\": [\"claude-mem\", \"memory\", \"cursor\", \"mcp\", \"cmem\"],\n  \"category\": \"MCP\",\n  \"skills\": \"./skills/\",\n  \"hooks\": \"./hooks/hooks.json\",\n  \"mcpServers\": \"./mcp.json\",\n  \"variables\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"CLAUDE_MEM_MCP_URL\": {\n        \"type\": \"string\",\n        \"title\": \"Remote MCP URL\",\n        \"description\": \"Leave empty for a local worker (stdio). Set to https://cmem.ai/api/mcp (or your server) for remote.\"\n      },\n      \"CLAUDE_MEM_MCP_TOKEN\": {\n        \"type\": \"string\",\n        \"title\": \"Remote MCP token\",\n        \"description\": \"Bearer token for remote MCP. Unused for local worker.\"\n      }\n    },\n    \"required\": []\n  }\n}\n"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf8",
+      "content": "# claude-mem for Cursor\n\nInstall from the Cursor or Grok Bot plugin store as **claude-mem-cursor**. Does not install Grok Bot.\n\nAfter install: `npx claude-mem install --ide cursor` for a local worker, or set `CLAUDE_MEM_MCP_TOKEN` for remote MCP.\n"
+    },
+    {
+      "path": "hooks/hooks.json",
+      "encoding": "utf8",
+      "content": "{\n  \"version\": 1,\n  \"hooks\": {\n    \"beforeSubmitPrompt\": [\n      { \"command\": \"npx -y claude-mem hook cursor session-init\" },\n      { \"command\": \"npx -y claude-mem hook cursor context\" }\n    ],\n    \"afterMCPExecution\": [\n      { \"command\": \"npx -y claude-mem hook cursor observation\" }\n    ],\n    \"afterShellExecution\": [\n      { \"command\": \"npx -y claude-mem hook cursor observation\" }\n    ],\n    \"afterFileEdit\": [\n      { \"command\": \"npx -y claude-mem hook cursor file-edit\" }\n    ],\n    \"stop\": [\n      { \"command\": \"npx -y claude-mem hook cursor summarize\" }\n    ]\n  }\n}\n"
+    },
+    {
+      "path": "mcp.json",
+      "encoding": "utf8",
+      "content": "{\n  \"mcpServers\": {\n    \"claude-mem-local\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"claude-mem\",\n        \"mcp\"\n      ]\n    },\n    \"claude-mem-remote\": {\n      \"url\": \"https://cmem.ai/api/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer ${CLAUDE_MEM_MCP_TOKEN}\"\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "path": "skills/install/SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: claude-mem-install\ndescription: >-\n  Use this when setting up claude-mem on Cursor: local or remote worker,\n  local host-login observer or remote cmem.ai inference.\n---\n# Install claude-mem on Cursor\n\nIndependent of Grok Bot. Do not require the other IDE.\n\n## Local worker (default)\n\n```\nnpx claude-mem install --ide cursor\n```\n\nStarts the local worker. Hooks already ship with this plugin. MCP `claude-mem-local` talks to it.\n\nObserver:\n\n- Remote inference (typical): leave provider as openrouter / cmem.ai (`CLAUDE_MEM_OPENROUTER_BASE_URL=https://cmem.ai/api/inference/v1`)\n- Local host-login: `--provider host` (loopback shim; never bind the worker port — on macOS the worker is often 37777, so the shim uses 37778)\n\n## Remote worker\n\n```\nnpx claude-mem install --ide cursor --runtime server --server-url https://YOUR_HOST\n```\n\nSet plugin variable `CLAUDE_MEM_MCP_TOKEN` for `claude-mem-remote` (`https://cmem.ai/api/mcp` or your server).\n\nNever restart a healthy worker (RAM queue). No Claude CLI required for host/openrouter.\n"
+    },
+    {
+      "path": "skills/mem-search/SKILL.md",
+      "encoding": "utf8",
+      "content": "---\nname: mem-search\ndescription: >-\n  Use this when the user asks to search memory, \"did we already solve this?\",\n  \"how did we do X last time?\", or wants work from previous sessions.\n---\n# mem-search\n\n3-layer workflow. Do not dump full observations until IDs are filtered.\n\n1. `search(query)` — index with IDs\n2. `timeline(anchor=ID)` — nearby context\n3. `get_observations(ids=[...])` — full details for those IDs only\n\nStamp `platformSource` as `cursor` or `grok-bot` on writes for this host. When reading, do not drop the other host unless asked.\n\nIf MCP is missing, run the install skill first (`npx claude-mem install --ide <host>`).\n"
+    }
+  ]
+}
