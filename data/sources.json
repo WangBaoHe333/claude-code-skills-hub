@@ -795,6 +795,70 @@
       "stars": 70505,
       "discoveredAt": "2026-08-30T22:55:14.128Z",
       "reason": "70505 stars, 4 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "paperclipai/paperclip",
+      "url": "https://github.com/paperclipai/paperclip.git",
+      "type": "auto-promoted-high-star",
+      "stars": 80108,
+      "discoveredAt": "2026-09-06T22:17:25.961Z",
+      "reason": "80108 stars, 52 SKILL.md, 2 skill README hints, has skills directory"
+    },
+    {
+      "repo": "SpaceZephyr/creator-buddy",
+      "url": "https://github.com/SpaceZephyr/creator-buddy.git",
+      "type": "auto-promoted-high-star",
+      "stars": 1170,
+      "discoveredAt": "2026-09-06T22:17:25.961Z",
+      "reason": "1170 stars, 33 SKILL.md, 5 skill README hints, has skills directory"
+    },
+    {
+      "repo": "Q00/ouroboros",
+      "url": "https://github.com/Q00/ouroboros.git",
+      "type": "auto-promoted-high-star",
+      "stars": 5782,
+      "discoveredAt": "2026-09-06T22:17:25.961Z",
+      "reason": "5782 stars, 23 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "career-ops-hq/career-ops",
+      "url": "https://github.com/career-ops-hq/career-ops.git",
+      "type": "auto-promoted-high-star",
+      "stars": 70331,
+      "discoveredAt": "2026-09-06T22:17:25.961Z",
+      "reason": "70331 stars, 13 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "usestrix/strix",
+      "url": "https://github.com/usestrix/strix.git",
+      "type": "auto-promoted-high-star",
+      "stars": 60930,
+      "discoveredAt": "2026-09-06T22:17:25.961Z",
+      "reason": "60930 stars, 9 SKILL.md, 1 skill README hints, has skills directory"
+    },
+    {
+      "repo": "addyosmani/web-quality-skills",
+      "url": "https://github.com/addyosmani/web-quality-skills.git",
+      "type": "auto-promoted-high-star",
+      "stars": 2757,
+      "discoveredAt": "2026-09-06T22:17:25.961Z",
+      "reason": "2757 stars, 6 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "RyanCodrai/turbovec",
+      "url": "https://github.com/RyanCodrai/turbovec.git",
+      "type": "auto-promoted-high-star",
+      "stars": 16678,
+      "discoveredAt": "2026-09-06T22:17:25.961Z",
+      "reason": "16678 stars, 1 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "NevaMind-AI/memU",
+      "url": "https://github.com/NevaMind-AI/memU.git",
+      "type": "auto-promoted-high-star",
+      "stars": 14386,
+      "discoveredAt": "2026-09-06T22:17:25.961Z",
+      "reason": "14386 stars, 1 SKILL.md"
     }
   ]
 }
