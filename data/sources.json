@@ -859,6 +859,14 @@
       "stars": 14386,
       "discoveredAt": "2026-09-06T22:17:25.961Z",
       "reason": "14386 stars, 1 SKILL.md"
+    },
+    {
+      "repo": "tt-a1i/archify",
+      "url": "https://github.com/tt-a1i/archify.git",
+      "type": "auto-promoted-high-star",
+      "stars": 68219,
+      "discoveredAt": "2026-09-20T22:39:58.471Z",
+      "reason": "68219 stars, 2 SKILL.md, has skills directory"
     }
   ]
 }
