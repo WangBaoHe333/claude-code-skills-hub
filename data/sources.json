@@ -867,6 +867,14 @@
       "stars": 68219,
       "discoveredAt": "2026-09-20T22:39:58.471Z",
       "reason": "68219 stars, 2 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "TencentEdgeOne/edgeone-makers-tools",
+      "url": "https://github.com/TencentEdgeOne/edgeone-makers-tools.git",
+      "type": "auto-promoted-high-star",
+      "stars": 1893,
+      "discoveredAt": "2026-09-27T23:22:54.160Z",
+      "reason": "1893 stars, 12 SKILL.md, has skills directory"
     }
   ]
 }
