@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T22:33:49.283Z",
+  "generatedAt": "2026-10-25T22:46:16.574Z",
   "queries": [
     "claude code skills",
     "claude skills",
@@ -16,60 +16,60 @@
   "errors": [
     {
       "query": "filename:SKILL.md \"Claude Code\"",
-      "error": "GitHub API 429: {\"message\":\"try again in 216.715025072s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
+      "error": "GitHub API 429: {\"message\":\"try again in 16.751386567s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
     },
     {
       "query": "filename:SKILL.md \"Claude\"",
-      "error": "GitHub API 429: {\"message\":\"try again in 216.587495927s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
+      "error": "GitHub API 429: {\"message\":\"try again in 16.599810525s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
     },
     {
       "query": "path:.claude/skills filename:SKILL.md",
-      "error": "GitHub API 429: {\"message\":\"try again in 216.43033493s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
+      "error": "GitHub API 429: {\"message\":\"try again in 16.411408587s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
     },
     {
       "query": "path:skills filename:SKILL.md \"Claude\"",
-      "error": "GitHub API 429: {\"message\":\"try again in 216.275336865s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
+      "error": "GitHub API 429: {\"message\":\"try again in 16.267916604s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
     }
   ],
   "autoPromote": {
     "enabled": true,
     "minStars": 1000,
     "promoted": [
-      "morluto/rea",
-      "ultraworkers/claw-code"
+      "NousResearch/hermes-agent",
+      "hugohe3/ppt-master"
     ]
   },
   "count": 2,
   "candidates": [
     {
-      "repo": "morluto/rea",
-      "url": "https://github.com/morluto/rea.git",
-      "stars": 321428,
-      "forks": 81466,
-      "pushedAt": "2026-10-18T22:33:10Z",
-      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-      "skillFileCount": 5,
-      "readmeSkillHintCount": 0,
+      "repo": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent.git",
+      "stars": 257044,
+      "forks": 56300,
+      "pushedAt": "2026-10-25T22:40:36Z",
+      "description": "The agent that grows with you",
+      "skillFileCount": 211,
+      "readmeSkillHintCount": 12,
       "hasSkillsDir": true,
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
-      "score": 885,
-      "reason": "321428 stars, 5 SKILL.md, has skills directory"
+      "score": 8181,
+      "reason": "257044 stars, 211 SKILL.md, 12 skill README hints, has skills directory"
     },
     {
-      "repo": "ultraworkers/claw-code",
-      "url": "https://github.com/ultraworkers/claw-code.git",
-      "stars": 194912,
-      "forks": 107914,
-      "pushedAt": "2026-10-13T08:57:11Z",
-      "description": "An agent-managed museum exhibit, built in Rust with Gajae-Code / LazyCodex — developed and maintained with no human intervention.",
-      "skillFileCount": 2,
-      "readmeSkillHintCount": 0,
+      "repo": "hugohe3/ppt-master",
+      "url": "https://github.com/hugohe3/ppt-master.git",
+      "stars": 68074,
+      "forks": 5315,
+      "pushedAt": "2026-10-24T15:39:09Z",
+      "description": "AI turns documents or topics into real, native PowerPoint decks—with native shapes, transitions and animations, data-backed charts and tables on demand, audio narration from speaker notes, and support for your own .pptx templates. · by Hugo He",
+      "skillFileCount": 1,
+      "readmeSkillHintCount": 11,
       "hasSkillsDir": true,
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
-      "score": 754,
-      "reason": "194912 stars, 2 SKILL.md, has skills directory"
+      "score": 765,
+      "reason": "68074 stars, 1 SKILL.md, 11 skill README hints, has skills directory"
     }
   ]
 }
