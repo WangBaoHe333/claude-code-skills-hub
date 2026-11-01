@@ -907,6 +907,38 @@
       "stars": 68074,
       "discoveredAt": "2026-10-25T22:46:16.573Z",
       "reason": "68074 stars, 1 SKILL.md, 11 skill README hints, has skills directory"
+    },
+    {
+      "repo": "ai-job-search-dev/ai-job-search",
+      "url": "https://github.com/ai-job-search-dev/ai-job-search.git",
+      "type": "auto-promoted-high-star",
+      "stars": 68729,
+      "discoveredAt": "2026-11-01T23:50:46.377Z",
+      "reason": "68729 stars, 9 SKILL.md, 7 skill README hints, has skills directory"
+    },
+    {
+      "repo": "f/prompts.chat",
+      "url": "https://github.com/f/prompts.chat.git",
+      "type": "auto-promoted-high-star",
+      "stars": 175526,
+      "discoveredAt": "2026-11-01T23:50:46.377Z",
+      "reason": "175526 stars, 4 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "butterbase-ai/butterbase",
+      "url": "https://github.com/butterbase-ai/butterbase.git",
+      "type": "auto-promoted-high-star",
+      "stars": 3034,
+      "discoveredAt": "2026-11-01T23:50:46.377Z",
+      "reason": "3034 stars, 1 SKILL.md"
+    },
+    {
+      "repo": "alchaincyf/darwin-skill",
+      "url": "https://github.com/alchaincyf/darwin-skill.git",
+      "type": "auto-promoted-high-star",
+      "stars": 6745,
+      "discoveredAt": "2026-11-01T23:50:46.377Z",
+      "reason": "6745 stars, 1 SKILL.md"
     }
   ]
 }
