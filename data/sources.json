@@ -939,6 +939,30 @@
       "stars": 6745,
       "discoveredAt": "2026-11-01T23:50:46.377Z",
       "reason": "6745 stars, 1 SKILL.md"
+    },
+    {
+      "repo": "lobehub/lobehub",
+      "url": "https://github.com/lobehub/lobehub.git",
+      "type": "auto-promoted-high-star",
+      "stars": 84426,
+      "discoveredAt": "2026-11-08T23:58:27.600Z",
+      "reason": "84426 stars, 58 SKILL.md, 2 skill README hints, has skills directory"
+    },
+    {
+      "repo": "kokiainet/anti-distill",
+      "url": "https://github.com/kokiainet/anti-distill.git",
+      "type": "auto-promoted-high-star",
+      "stars": 2482,
+      "discoveredAt": "2026-11-08T23:58:27.600Z",
+      "reason": "2482 stars, 1 SKILL.md"
+    },
+    {
+      "repo": "tenfoldmarc/llm-council-skill",
+      "url": "https://github.com/tenfoldmarc/llm-council-skill.git",
+      "type": "auto-promoted-high-star",
+      "stars": 1023,
+      "discoveredAt": "2026-11-08T23:58:27.600Z",
+      "reason": "1023 stars, 1 SKILL.md"
     }
   ]
 }

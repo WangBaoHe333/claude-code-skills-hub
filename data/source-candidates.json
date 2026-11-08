@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T23:50:46.378Z",
+  "generatedAt": "2026-11-08T23:58:27.601Z",
   "queries": [
     "claude code skills",
     "claude skills",
@@ -16,29 +16,43 @@
   "errors": [
     {
       "query": "filename:SKILL.md \"Claude\"",
-      "error": "GitHub API 429: {\"message\":\"try again in 66.935551702s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
+      "error": "GitHub API 429: {\"message\":\"try again in 66.751284912s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
     },
     {
       "query": "path:.claude/skills filename:SKILL.md",
-      "error": "GitHub API 429: {\"message\":\"try again in 66.81004864s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
+      "error": "GitHub API 429: {\"message\":\"try again in 66.60488899s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
     },
     {
       "query": "path:skills filename:SKILL.md \"Claude\"",
-      "error": "GitHub API 429: {\"message\":\"try again in 66.683404744s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
+      "error": "GitHub API 429: {\"message\":\"try again in 66.471733882s\",\"documentation_url\":\"https://docs.github.com/rest/search/search#search-code\",\"status\":\"429\"}"
     }
   ],
   "autoPromote": {
     "enabled": true,
     "minStars": 1000,
     "promoted": [
-      "ai-job-search-dev/ai-job-search",
-      "f/prompts.chat",
-      "butterbase-ai/butterbase",
-      "alchaincyf/darwin-skill"
+      "lobehub/lobehub",
+      "kokiainet/anti-distill",
+      "tenfoldmarc/llm-council-skill"
     ]
   },
-  "count": 22,
+  "count": 23,
   "candidates": [
+    {
+      "repo": "lobehub/lobehub",
+      "url": "https://github.com/lobehub/lobehub.git",
+      "stars": 84426,
+      "forks": 16148,
+      "pushedAt": "2026-11-08T23:44:28Z",
+      "description": "🤯 LobeHub - Super-Agents on Your Team. Add super-agents to the chats your team already uses.They take on work by themselves and get better every week.",
+      "skillFileCount": 58,
+      "readmeSkillHintCount": 2,
+      "hasSkillsDir": true,
+      "hasClaudeSkillsPath": true,
+      "claudeSignal": true,
+      "score": 2698,
+      "reason": "84426 stars, 58 SKILL.md, 2 skill README hints, has skills directory"
+    },
     {
       "repo": "AICreator-Wind/gstack-openclaw-skills",
       "url": "https://github.com/AICreator-Wind/gstack-openclaw-skills.git",
@@ -55,24 +69,9 @@
       "reason": "44 stars, 24 SKILL.md, has skills directory"
     },
     {
-      "repo": "ai-job-search-dev/ai-job-search",
-      "url": "https://github.com/ai-job-search-dev/ai-job-search.git",
-      "stars": 68729,
-      "forks": 21924,
-      "pushedAt": "2026-10-31T13:28:19Z",
-      "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
-      "skillFileCount": 9,
-      "readmeSkillHintCount": 7,
-      "hasSkillsDir": true,
-      "hasClaudeSkillsPath": true,
-      "claudeSignal": true,
-      "score": 1014,
-      "reason": "68729 stars, 9 SKILL.md, 7 skill README hints, has skills directory"
-    },
-    {
       "repo": "xwtro0tk1t-cloud/harness",
       "url": "https://github.com/xwtro0tk1t-cloud/harness.git",
-      "stars": 265,
+      "stars": 264,
       "forks": 25,
       "pushedAt": "2026-05-04T13:52:05Z",
       "description": "Harness is an AI Agent development guardrail Meta-Skill that establishes four layers of defense for any project in one command: knowledge management, architecture constraints, feedback loops, and entropy management.",
@@ -82,59 +81,14 @@
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
       "score": 1006,
-      "reason": "265 stars, 20 SKILL.md, 3 skill README hints, has skills directory"
-    },
-    {
-      "repo": "f/prompts.chat",
-      "url": "https://github.com/f/prompts.chat.git",
-      "stars": 175526,
-      "forks": 22401,
-      "pushedAt": "2026-11-01T23:09:32Z",
-      "description": "f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy.",
-      "skillFileCount": 4,
-      "readmeSkillHintCount": 0,
-      "hasSkillsDir": true,
-      "hasClaudeSkillsPath": false,
-      "claudeSignal": true,
-      "score": 823,
-      "reason": "175526 stars, 4 SKILL.md, has skills directory"
-    },
-    {
-      "repo": "butterbase-ai/butterbase",
-      "url": "https://github.com/butterbase-ai/butterbase.git",
-      "stars": 3034,
-      "forks": 166,
-      "pushedAt": "2026-11-01T05:17:49Z",
-      "description": "Open-source backend-as-a-service. Postgres, auth, storage, functions, AI gateway, MCP.",
-      "skillFileCount": 1,
-      "readmeSkillHintCount": 0,
-      "hasSkillsDir": false,
-      "hasClaudeSkillsPath": false,
-      "claudeSignal": true,
-      "score": 502,
-      "reason": "3034 stars, 1 SKILL.md"
-    },
-    {
-      "repo": "alchaincyf/darwin-skill",
-      "url": "https://github.com/alchaincyf/darwin-skill.git",
-      "stars": 6745,
-      "forks": 696,
-      "pushedAt": "2026-09-18T13:16:41Z",
-      "description": "达尔文.skill —— 一个让你的Skill无限进化的系统：评估→改进→测试→保留或回滚 | Autoresearch-inspired autonomous skill optimization for Claude Code. Evaluate, improve, test, keep or revert.",
-      "skillFileCount": 1,
-      "readmeSkillHintCount": 0,
-      "hasSkillsDir": false,
-      "hasClaudeSkillsPath": false,
-      "claudeSignal": true,
-      "score": 494,
-      "reason": "6745 stars, 1 SKILL.md"
+      "reason": "264 stars, 20 SKILL.md, 3 skill README hints, has skills directory"
     },
     {
       "repo": "edvardgrishin27/nativeprompt",
       "url": "https://github.com/edvardgrishin27/nativeprompt.git",
       "stars": 128,
       "forks": 13,
-      "pushedAt": "2026-10-26T12:14:53Z",
+      "pushedAt": "2026-11-02T14:44:44Z",
       "description": "Переписывает промпт под правила модели, где вы работаете (Claude Opus 5.5, Fable 5.1, GPT-6 Astra/Sol/Luna, Codex), и подсказывает, на каком уровне усилий её запускать. Каждый совет со ссылкой на официальную документацию. Без API-ключей, без зависимостей, офлайн.",
       "skillFileCount": 3,
       "readmeSkillHintCount": 0,
@@ -147,7 +101,7 @@
     {
       "repo": "handsomeZR-netizen/mathmodel-skill",
       "url": "https://github.com/handsomeZR-netizen/mathmodel-skill.git",
-      "stars": 295,
+      "stars": 296,
       "forks": 10,
       "pushedAt": "2026-09-26T01:26:11Z",
       "description": "三竞赛 (CUMCM/MCM/电工杯) 数学建模 skill — harness-agnostic, 同时支持 Claude Code 与 Codex CLI, 全程问答式 (Friendly Mode), 10 阶段 + 4 反馈层 + per-Qi 加权聚合 + 题型 dim 加权 + empirical 实测分位锚定",
@@ -156,14 +110,44 @@
       "hasSkillsDir": true,
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
-      "score": 441,
-      "reason": "295 stars, 2 SKILL.md, has skills directory"
+      "score": 434,
+      "reason": "296 stars, 2 SKILL.md, has skills directory"
+    },
+    {
+      "repo": "gaixianggeng/mimi-remote",
+      "url": "https://github.com/gaixianggeng/mimi-remote.git",
+      "stars": 111,
+      "forks": 17,
+      "pushedAt": "2026-11-08T13:51:06Z",
+      "description": "Remote control for Codex and Claude Code from your iPhone and iPad — watch progress, approve actions, review diffs. Open source, self-hosted, no cloud account.",
+      "skillFileCount": 2,
+      "readmeSkillHintCount": 0,
+      "hasSkillsDir": false,
+      "hasClaudeSkillsPath": false,
+      "claudeSignal": true,
+      "score": 394,
+      "reason": "111 stars, 2 SKILL.md"
+    },
+    {
+      "repo": "kokiainet/anti-distill",
+      "url": "https://github.com/kokiainet/anti-distill.git",
+      "stars": 2482,
+      "forks": 290,
+      "pushedAt": "2026-07-02T23:09:50Z",
+      "description": "反蒸馏 Skill：清洗你被迫写的 Skill 文件，看起来完整，核心知识留给自己。Anti-distillation for employee Skills.",
+      "skillFileCount": 1,
+      "readmeSkillHintCount": 0,
+      "hasSkillsDir": false,
+      "hasClaudeSkillsPath": false,
+      "claudeSignal": true,
+      "score": 374,
+      "reason": "2482 stars, 1 SKILL.md"
     },
     {
       "repo": "pattern-ai-labs/agentcall",
       "url": "https://github.com/pattern-ai-labs/agentcall.git",
-      "stars": 176,
-      "forks": 23,
+      "stars": 184,
+      "forks": 24,
       "pushedAt": "2026-10-24T06:17:27Z",
       "description": "AgentCall lets AI Agents join meetings with voice, video & screen-share to build together. Supports Google Meet, Teams, Zoom (Beta)",
       "skillFileCount": 1,
@@ -171,14 +155,14 @@
       "hasSkillsDir": false,
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
-      "score": 372,
-      "reason": "176 stars, 1 SKILL.md"
+      "score": 367,
+      "reason": "184 stars, 1 SKILL.md"
     },
     {
       "repo": "Hung2124/codex-multi-profile",
       "url": "https://github.com/Hung2124/codex-multi-profile.git",
-      "stars": 93,
-      "forks": 78,
+      "stars": 94,
+      "forks": 77,
       "pushedAt": "2026-10-28T02:57:49Z",
       "description": "Multi-workspace profile router, MCP server isolation auditor, and CLAUDE.md <-> AGENTS.md instruction bridge for Claude Code and OpenAI Codex.",
       "skillFileCount": 1,
@@ -186,14 +170,14 @@
       "hasSkillsDir": false,
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
-      "score": 348,
-      "reason": "93 stars, 1 SKILL.md"
+      "score": 342,
+      "reason": "94 stars, 1 SKILL.md"
     },
     {
       "repo": "tenfoldmarc/llm-council-skill",
       "url": "https://github.com/tenfoldmarc/llm-council-skill.git",
-      "stars": 994,
-      "forks": 181,
+      "stars": 1023,
+      "forks": 187,
       "pushedAt": "2026-04-18T18:30:27Z",
       "description": "",
       "skillFileCount": 1,
@@ -201,8 +185,8 @@
       "hasSkillsDir": false,
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
-      "score": 335,
-      "reason": "994 stars, 1 SKILL.md"
+      "score": 336,
+      "reason": "1023 stars, 1 SKILL.md"
     },
     {
       "repo": "DenisSergeevitch/repo-task-proof-loop",
@@ -220,9 +204,24 @@
       "reason": "726 stars, 1 SKILL.md"
     },
     {
+      "repo": "Wechat-ggGitHub/wechat-claude-code",
+      "url": "https://github.com/Wechat-ggGitHub/wechat-claude-code.git",
+      "stars": 691,
+      "forks": 153,
+      "pushedAt": "2026-06-27T13:53:59Z",
+      "description": "Chat with Claude Code from WeChat - a Claude Code Skill",
+      "skillFileCount": 1,
+      "readmeSkillHintCount": 0,
+      "hasSkillsDir": false,
+      "hasClaudeSkillsPath": false,
+      "claudeSignal": true,
+      "score": 319,
+      "reason": "691 stars, 1 SKILL.md"
+    },
+    {
       "repo": "ksimback/tech-debt-skill",
       "url": "https://github.com/ksimback/tech-debt-skill.git",
-      "stars": 626,
+      "stars": 627,
       "forks": 38,
       "pushedAt": "2026-04-25T22:17:13Z",
       "description": "Claude Code skill that produces a thorough, file-cited tech debt audit of an entire codebase",
@@ -232,12 +231,12 @@
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
       "score": 315,
-      "reason": "626 stars, 1 SKILL.md"
+      "reason": "627 stars, 1 SKILL.md"
     },
     {
       "repo": "op7418/Document-illustrator-skill",
       "url": "https://github.com/op7418/Document-illustrator-skill.git",
-      "stars": 607,
+      "stars": 609,
       "forks": 67,
       "pushedAt": "2026-01-21T09:47:26Z",
       "description": "帮你从文档生成对应的多张配图，内置了歸藏精心探索的图片风格，支持 16:9 和 3:4 两种比例，方便发小红书以及推特。",
@@ -246,8 +245,8 @@
       "hasSkillsDir": false,
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
-      "score": 313,
-      "reason": "607 stars, 1 SKILL.md"
+      "score": 314,
+      "reason": "609 stars, 1 SKILL.md"
     },
     {
       "repo": "gugug168/cute-claude-hooks",
@@ -261,23 +260,8 @@
       "hasSkillsDir": false,
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
-      "score": 308,
+      "score": 301,
       "reason": "205 stars, 1 SKILL.md"
-    },
-    {
-      "repo": "paraschopra/make-pages-interactive",
-      "url": "https://github.com/paraschopra/make-pages-interactive.git",
-      "stars": 484,
-      "forks": 56,
-      "pushedAt": "2026-06-18T07:25:25Z",
-      "description": "",
-      "skillFileCount": 1,
-      "readmeSkillHintCount": 0,
-      "hasSkillsDir": false,
-      "hasClaudeSkillsPath": false,
-      "claudeSignal": true,
-      "score": 304,
-      "reason": "484 stars, 1 SKILL.md"
     },
     {
       "repo": "axtonliu/ai-pair",
@@ -306,13 +290,13 @@
       "hasSkillsDir": false,
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
-      "score": 272,
+      "score": 265,
       "reason": "191 stars, 1 SKILL.md"
     },
     {
       "repo": "gonta223/humanizer-ja",
       "url": "https://github.com/gonta223/humanizer-ja.git",
-      "stars": 161,
+      "stars": 164,
       "forks": 9,
       "pushedAt": "2026-03-23T10:35:44Z",
       "description": "AIくさい日本語を人間が書いた文章に変換するClaude Codeスキル。20パターンのチェックリスト+書き換えガイド。",
@@ -321,23 +305,23 @@
       "hasSkillsDir": false,
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
-      "score": 256,
-      "reason": "161 stars, 1 SKILL.md"
+      "score": 257,
+      "reason": "164 stars, 1 SKILL.md"
     },
     {
-      "repo": "Apeironics/prompt-refine-skill",
-      "url": "https://github.com/Apeironics/prompt-refine-skill.git",
-      "stars": 53,
-      "forks": 6,
-      "pushedAt": "2026-07-23T13:29:30Z",
-      "description": "Agent Skill that silently refines prompts for the currently running model",
+      "repo": "XiaoYiWeio/deepsafe-scan",
+      "url": "https://github.com/XiaoYiWeio/deepsafe-scan.git",
+      "stars": 78,
+      "forks": 11,
+      "pushedAt": "2026-05-29T08:20:24Z",
+      "description": "Universal preflight security scanner for AI coding agents — Detects hooks injection, credential exfiltration & backdoors in .cursorrules, CLAUDE.md, AGENTS.md and more.",
       "skillFileCount": 1,
       "readmeSkillHintCount": 0,
       "hasSkillsDir": false,
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
-      "score": 227,
-      "reason": "53 stars, 1 SKILL.md"
+      "score": 225,
+      "reason": "78 stars, 1 SKILL.md"
     },
     {
       "repo": "wbelk/claude-qmd-sessions",
@@ -357,7 +341,7 @@
     {
       "repo": "zxc123aa/cc-proxy-detector",
       "url": "https://github.com/zxc123aa/cc-proxy-detector.git",
-      "stars": 47,
+      "stars": 49,
       "forks": 3,
       "pushedAt": "2026-02-10T14:43:03Z",
       "description": " Detect Claude Code proxy backend origin (Anthropic / Bedrock Kiro / Vertex AI) | 检测 Claude Code 中转站真实后端来源，多维指纹 + ratelimit 动态验证 + 防伪装识别",
@@ -366,8 +350,38 @@
       "hasSkillsDir": false,
       "hasClaudeSkillsPath": false,
       "claudeSignal": true,
-      "score": 203,
-      "reason": "47 stars, 1 SKILL.md"
+      "score": 205,
+      "reason": "49 stars, 1 SKILL.md"
+    },
+    {
+      "repo": "cth9191/cloneify",
+      "url": "https://github.com/cth9191/cloneify.git",
+      "stars": 42,
+      "forks": 5,
+      "pushedAt": "2026-07-03T21:12:20Z",
+      "description": "Claude Code skill: turn 'I want to clone X' into a paste-ready build prompt via a gated scope→research→grilled+Codex-reviewed-plan→handoff pipeline.",
+      "skillFileCount": 1,
+      "readmeSkillHintCount": 0,
+      "hasSkillsDir": false,
+      "hasClaudeSkillsPath": false,
+      "claudeSignal": true,
+      "score": 198,
+      "reason": "42 stars, 1 SKILL.md"
+    },
+    {
+      "repo": "ZhenHuangLab/collaborating-with-claude-code",
+      "url": "https://github.com/ZhenHuangLab/collaborating-with-claude-code.git",
+      "stars": 40,
+      "forks": 4,
+      "pushedAt": "2026-02-15T06:14:36Z",
+      "description": "Let codex (main agent) collaborate with claude code Through codex skills",
+      "skillFileCount": 1,
+      "readmeSkillHintCount": 0,
+      "hasSkillsDir": false,
+      "hasClaudeSkillsPath": false,
+      "claudeSignal": true,
+      "score": 196,
+      "reason": "40 stars, 1 SKILL.md"
     }
   ]
 }
